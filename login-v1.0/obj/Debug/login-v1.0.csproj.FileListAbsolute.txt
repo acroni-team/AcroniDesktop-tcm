@@ -1,0 +1,10 @@
+C:\Users\Filipe\Desktop\login-v1.0\login-v1.0\bin\Debug\login-v1.0.exe.config
+C:\Users\Filipe\Desktop\login-v1.0\login-v1.0\bin\Debug\login-v1.0.exe
+C:\Users\Filipe\Desktop\login-v1.0\login-v1.0\bin\Debug\login-v1.0.pdb
+C:\Users\Filipe\Desktop\login-v1.0\login-v1.0\obj\Debug\login-v1.0.csprojResolveAssemblyReference.cache
+C:\Users\Filipe\Desktop\login-v1.0\login-v1.0\obj\Debug\login_v1._0.FrmLogin.resources
+C:\Users\Filipe\Desktop\login-v1.0\login-v1.0\obj\Debug\login_v1._0.Properties.Resources.resources
+C:\Users\Filipe\Desktop\login-v1.0\login-v1.0\obj\Debug\login-v1.0.csproj.GenerateResource.cache
+C:\Users\Filipe\Desktop\login-v1.0\login-v1.0\obj\Debug\login-v1.0.csproj.CoreCompileInputs.cache
+C:\Users\Filipe\Desktop\login-v1.0\login-v1.0\obj\Debug\login-v1.0.exe
+C:\Users\Filipe\Desktop\login-v1.0\login-v1.0\obj\Debug\login-v1.0.pdb
