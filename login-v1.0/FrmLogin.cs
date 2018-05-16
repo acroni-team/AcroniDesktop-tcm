@@ -78,5 +78,25 @@ namespace login_v1._0
         {
             Application.Exit();
         }
+
+        private void lblFund_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
+        }
+
+
     }
 }
