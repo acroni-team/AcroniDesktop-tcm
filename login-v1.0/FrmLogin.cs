@@ -47,24 +47,12 @@ namespace login_v1._0
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            if (textBox1.Visible == false)
+            if(txt1.Text == "Filipe" && txt2.Text == "filipe")
             {
-                if (txt1.Text == "Filipe" && txt2.Text == "filipe")
-                {
-                    Application.Exit();
-                }
-                else
-                {
-                    txt2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-                    txt1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-                }
-            }
-            else
-            {
-                panel3.Visible = false;
-                panel3.Location = new System.Drawing.Point(14, 12);
-                btnEntrar.Location = new System.Drawing.Point(536, 339);
-                btnSair.Location = new System.Drawing.Point(691, 339);
+                Application.Exit();
+            } else{
+                txt2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+                txt1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
             }
         }
 
@@ -75,11 +63,6 @@ namespace login_v1._0
                 txt1.Text = "";
             }
             txt1.ForeColor = Color.Gray;
-            if(txt1.Text == "Usuário")
-            {
-                txt1.Text = "";
-            }
-            panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         }
 
         private void txt2_Enter(object sender, EventArgs e)
@@ -88,28 +71,12 @@ namespace login_v1._0
             {
                 txt2.Text = "";
             }
-
             txt2.ForeColor = Color.Gray;
-            if (txt2.Text == "Senha")
-            {
-                txt2.Text = "";
-                txt2.PasswordChar = '•';
-            }
-            panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         }
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            
-            panel3.Visible = true;
-            panel3.Location = new System.Drawing.Point(536, 339);
-            btnEntrar.Location = new System.Drawing.Point(536, 406);
-            btnSair.Location = new System.Drawing.Point(691, 406);
-
-            
-            
-            
-            
+            Application.Exit();
         }
 
         private void lblFund_Paint(object sender, PaintEventArgs e)
@@ -130,66 +97,6 @@ namespace login_v1._0
 
         }
 
-        private void FrmLogin_Load(object sender, EventArgs e)
-        {
-            PrivateFontCollection pfc = new PrivateFontCollection();
-            pfc.AddFontFile("C:/Users/Filipe/Desktop/Projetos/Qanelas Soft/Fontes/TTF/Qanelas-Bold.ttf");
-            pfc.AddFontFile("C:\\Users\\Filipe\\Desktop\\Projetos\\Sites\\.COWFFEE NEW\\FONTES\\openregular.ttf");
 
-            label3.Font = new Font(pfc.Families[1], 21, FontStyle.Regular);
-            label4.Font = new Font(pfc.Families[0], 9, FontStyle.Regular);
-            btnEntrar.Font = new Font(pfc.Families[0], 11, FontStyle.Regular);
-            btnSair.Font = new Font(pfc.Families[0], 11, FontStyle.Regular);
-        }
-
-        private void txt1_Leave(object sender, EventArgs e)
-        {
-            panel1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            if(txt1.Text == "")
-            {
-                txt1.Text = "Usuário";
-            }
-        }
-
-        private void txt2_Leave(object sender, EventArgs e)
-        {
-            panel2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            if (txt2.Text == "")
-            {
-                txt2.Text = "Senha";
-                txt2.PasswordChar = '\0';
-            }
-            
-        }
-
-        private void textBox1_Enter(object sender, EventArgs e)
-        {
-            if (textBox1.ForeColor == System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(76)))), ((int)(((byte)(76))))))
-            {
-                textBox1.Text = "";
-            }
-            textBox1.ForeColor = Color.Gray;
-            if (textBox1.Text == "Confirmar senha")
-            {
-                textBox1.Text = "";
-                textBox1.PasswordChar = '•';
-            }
-            panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            if(txt1.Text != "Usuário")
-            {
-                txt1.Text = "Usuário";
-                txt1.ForeColor = Color.Gray;
-            }
-        }
-
-        private void textBox1_Leave(object sender, EventArgs e)
-        {
-            panel3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            if (textBox1.Text == "")
-            {
-                textBox1.Text = "Confirmar senha";
-                textBox1.PasswordChar = '\0';
-            }
-        }
     }
 }
