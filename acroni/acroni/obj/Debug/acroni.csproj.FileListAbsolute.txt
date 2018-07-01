@@ -1,0 +1,13 @@
+C:\Users\gmininsk\Desktop\c\csharp\acroni\acroni\bin\Debug\acroni.exe.config
+C:\Users\gmininsk\Desktop\c\csharp\acroni\acroni\bin\Debug\acroni.exe
+C:\Users\gmininsk\Desktop\c\csharp\acroni\acroni\bin\Debug\acroni.pdb
+C:\Users\gmininsk\Desktop\c\csharp\acroni\acroni\bin\Debug\MaterialSkin.dll
+C:\Users\gmininsk\Desktop\c\csharp\acroni\acroni\bin\Debug\Microsoft.AnalysisServices.dll
+C:\Users\gmininsk\Desktop\c\csharp\acroni\acroni\obj\Debug\acroni.Acroni.resources
+C:\Users\gmininsk\Desktop\c\csharp\acroni\acroni\obj\Debug\acroni.Properties.Resources.resources
+C:\Users\gmininsk\Desktop\c\csharp\acroni\acroni\obj\Debug\acroni.csproj.GenerateResource.cache
+C:\Users\gmininsk\Desktop\c\csharp\acroni\acroni\obj\Debug\acroni.csproj.CoreCompileInputs.cache
+C:\Users\gmininsk\Desktop\c\csharp\acroni\acroni\obj\Debug\acroni.csproj.CopyComplete
+C:\Users\gmininsk\Desktop\c\csharp\acroni\acroni\obj\Debug\acroni.exe
+C:\Users\gmininsk\Desktop\c\csharp\acroni\acroni\obj\Debug\acroni.pdb
+C:\Users\gmininsk\Desktop\c\csharp\acroni\acroni\obj\Debug\acroni.csprojResolveAssemblyReference.cache
