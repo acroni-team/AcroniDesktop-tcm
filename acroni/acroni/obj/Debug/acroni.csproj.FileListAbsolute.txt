@@ -11,3 +11,4 @@ C:\Users\gmininsk\Desktop\c\csharp\acroni\acroni\obj\Debug\acroni.csproj.CopyCom
 C:\Users\gmininsk\Desktop\c\csharp\acroni\acroni\obj\Debug\acroni.exe
 C:\Users\gmininsk\Desktop\c\csharp\acroni\acroni\obj\Debug\acroni.pdb
 C:\Users\gmininsk\Desktop\c\csharp\acroni\acroni\obj\Debug\acroni.csprojResolveAssemblyReference.cache
+C:\Users\gmininsk\Desktop\c\csharp\acroni\acroni\bin\Debug\Bunifu_UI_v1.5.4.dll
