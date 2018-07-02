@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -19,9 +20,10 @@ namespace ColorPicker
         {
             InitializeComponent();
         }
-
+        bool naofez = true;
         public Color Colorpicker { get; set; }
         List<string> IE = new List<string>();
+        List<object> Fonte = new List<object>();
 
         private void pictureBox2_MouseClick(object sender, MouseEventArgs e)
         {
@@ -81,12 +83,25 @@ namespace ColorPicker
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
             using (InstalledFontCollection col = new InstalledFontCollection())
             {
                 foreach (FontFamily fa in col.Families)
                 {
                     cmbFont.Items.Add(fa.Name);
+                    if (naofez)
+                    {
+                        Fonte.Add(fa.Name);
+                    }
                 }
+                naofez = false;
+            }
+        }
+        private void removeCmbBox()
+        {
+            foreach(string c in Fonte)
+            {
+                cmbFont.Items.Remove(c);
             }
         }
 
@@ -103,14 +118,19 @@ namespace ColorPicker
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            
-            foreach (var c in cmbFont.Items)
+            Regex a = new Regex(textBox1.Text,RegexOptions.IgnoreCase);
+            removeCmbBox();
+            Form1_Load(sender, e);
+            if (textBox1.Text != "")
             {
-                if (!(Convert.ToString(c).Contains(textBox1.Text)))
+                foreach (string c in Fonte)
                 {
-                    cmbFont.Items.Remove(c);
+                    if (!(a.IsMatch(c)))
+                    {
+                        cmbFont.Items.Remove(c);
+                    }
+
                 }
-               
             }
         }
     }
