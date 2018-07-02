@@ -40,6 +40,7 @@
             this.cmbFont = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnFontePersonalizada = new System.Windows.Forms.Button();
             this.btnM = new btnColor();
             this.btnCedilha = new btnColor();
             this.btnL = new btnColor();
@@ -67,6 +68,7 @@
             this.btnZ = new btnColor();
             this.btnA = new btnColor();
             this.btnQ = new btnColor();
+            this.MudarFonte = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -177,6 +179,16 @@
             this.label2.Size = new System.Drawing.Size(39, 13);
             this.label2.TabIndex = 47;
             this.label2.Text = "Fontes";
+            // 
+            // btnFontePersonalizada
+            // 
+            this.btnFontePersonalizada.Location = new System.Drawing.Point(705, 54);
+            this.btnFontePersonalizada.Name = "btnFontePersonalizada";
+            this.btnFontePersonalizada.Size = new System.Drawing.Size(115, 23);
+            this.btnFontePersonalizada.TabIndex = 48;
+            this.btnFontePersonalizada.Text = "Adicionar mais fontes";
+            this.btnFontePersonalizada.UseVisualStyleBackColor = true;
+            this.btnFontePersonalizada.Click += new System.EventHandler(this.btnFontePersonalizada_Click);
             // 
             // btnM
             // 
@@ -637,11 +649,16 @@
             this.btnQ.UseVisualStyleBackColor = false;
             this.btnQ.Click += new System.EventHandler(this.btnAbstractus_Click);
             // 
+            // MudarFonte
+            // 
+            this.MudarFonte.FileName = "openFileDialog1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 562);
+            this.Controls.Add(this.btnFontePersonalizada);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.cmbFont);
@@ -732,6 +749,8 @@
         private System.Windows.Forms.ComboBox cmbFont;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnFontePersonalizada;
+        private System.Windows.Forms.OpenFileDialog MudarFonte;
     }
 }
 

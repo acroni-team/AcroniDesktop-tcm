@@ -99,7 +99,7 @@ namespace ColorPicker
         }
         private void removeCmbBox()
         {
-            foreach(string c in Fonte)
+            foreach (string c in Fonte)
             {
                 cmbFont.Items.Remove(c);
             }
@@ -118,7 +118,7 @@ namespace ColorPicker
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            Regex a = new Regex(textBox1.Text,RegexOptions.IgnoreCase);
+            Regex a = new Regex(textBox1.Text, RegexOptions.IgnoreCase);
             removeCmbBox();
             Form1_Load(sender, e);
             if (textBox1.Text != "")
@@ -133,5 +133,31 @@ namespace ColorPicker
                 }
             }
         }
+      
+        private void btnFontePersonalizada_Click(object sender, EventArgs e)
+        {
+            MudarFonte.CheckPathExists = true;
+            MudarFonte.CheckFileExists = true;
+            MudarFonte.ReadOnlyChecked = true;
+            MudarFonte.Filter = "ttf files (*.ttf)|*.ttf";
+            MudarFonte.Title = "Selecionar fonte";
+            MudarFonte.ShowDialog();
+            if (MudarFonte.ShowDialog() == DialogResult.OK)
+            {
+                string path = MudarFonte.FileName;
+                PrivateFontCollection pfc = new PrivateFontCollection();
+                pfc.AddFontFile(path);
+                foreach (Control c in this.Controls)
+                {
+                    if (c is btnColor)
+                    {
+                        c.Font = new Font(pfc.Families[0], 15, FontStyle.Regular);
+                    }
+                }       
+
+            }
+        }
+        
     }
 }
+    
