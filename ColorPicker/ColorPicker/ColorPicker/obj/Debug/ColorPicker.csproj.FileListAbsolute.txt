@@ -17,3 +17,13 @@ C:\Users\zeusm\Downloads\provisorios-master\ColorPicker\ColorPicker\obj\Debug\Co
 C:\Users\zeusm\Downloads\provisorios-master\ColorPicker\ColorPicker\obj\Debug\ColorPicker.Form1.resources
 C:\Users\zeusm\Downloads\provisorios-master\ColorPicker\ColorPicker\obj\Debug\ColorPicker.Properties.Resources.resources
 C:\Users\zeusm\Downloads\provisorios-master\ColorPicker\ColorPicker\obj\Debug\ColorPicker.csproj.GenerateResource.Cache
+C:\Users\gui_m\Desktop\csharp\ColorPicker\ColorPicker\ColorPicker\bin\Debug\ColorPicker.exe.config
+C:\Users\gui_m\Desktop\csharp\ColorPicker\ColorPicker\ColorPicker\bin\Debug\ColorPicker.exe
+C:\Users\gui_m\Desktop\csharp\ColorPicker\ColorPicker\ColorPicker\bin\Debug\ColorPicker.pdb
+C:\Users\gui_m\Desktop\csharp\ColorPicker\ColorPicker\ColorPicker\obj\Debug\ColorPicker.csprojResolveAssemblyReference.cache
+C:\Users\gui_m\Desktop\csharp\ColorPicker\ColorPicker\ColorPicker\obj\Debug\ColorPicker.Form1.resources
+C:\Users\gui_m\Desktop\csharp\ColorPicker\ColorPicker\ColorPicker\obj\Debug\ColorPicker.Properties.Resources.resources
+C:\Users\gui_m\Desktop\csharp\ColorPicker\ColorPicker\ColorPicker\obj\Debug\ColorPicker.csproj.GenerateResource.cache
+C:\Users\gui_m\Desktop\csharp\ColorPicker\ColorPicker\ColorPicker\obj\Debug\ColorPicker.csproj.CoreCompileInputs.cache
+C:\Users\gui_m\Desktop\csharp\ColorPicker\ColorPicker\ColorPicker\obj\Debug\ColorPicker.exe
+C:\Users\gui_m\Desktop\csharp\ColorPicker\ColorPicker\ColorPicker\obj\Debug\ColorPicker.pdb
