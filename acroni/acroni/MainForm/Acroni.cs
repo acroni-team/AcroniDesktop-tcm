@@ -22,7 +22,7 @@ namespace acroni
 
         private void btnColorChosen_Click(object sender, EventArgs e)
         {
-            SetColorpickerVisibility a = new SetColorpickerVisibility(ref pnlColorpicker, ref btnHist1, ref btnHist1, ref btnHist1); 
+            SetColorpickerVisibility a = new SetColorpickerVisibility(ref pnlColorpicker, ref btnHist1, ref btnHist2, ref btnHist3, ref pnlHistorico); 
         }
 
         /// <summary>
@@ -32,7 +32,7 @@ namespace acroni
         private void btnGetSelctedColor(object sender, EventArgs e)
         {
             Button btnCol = (Button)sender;
-            GetSelectedColor a = new GetSelectedColor(ref pnlColorpicker, ref btnCol, ref btnColorChosen, ref btnHist1, ref btnHist2, ref btnHist3);
+            GetSelectedColor a = new GetSelectedColor(ref pnlColorpicker, ref btnCol, ref btnColorChosen, ref btnHist1, ref btnHist2, ref btnHist3, ref pnlHistorico);
         }
     }
 }

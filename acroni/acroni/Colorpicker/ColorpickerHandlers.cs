@@ -8,7 +8,7 @@ namespace acroni.Colorpicker
 {
     class ColorpickerHandlers
     {
-        internal int NoOfColorsVisibleOnDisplay { get; set; }
-        internal bool IsChosen { get; set; } = true;
+        internal static int NoOfColorsVisibleOnDisplay { get; set; }
+        internal static bool IsChosen { get; set; } = true;
     }
 }
