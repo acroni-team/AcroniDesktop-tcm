@@ -58,7 +58,7 @@
             this.lblCor = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.pnlColorpicker = new System.Windows.Forms.Panel();
             this.button25 = new System.Windows.Forms.Button();
             this.button26 = new System.Windows.Forms.Button();
             this.button27 = new System.Windows.Forms.Button();
@@ -96,7 +96,7 @@
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnlHistorico.SuspendLayout();
-            this.panel5.SuspendLayout();
+            this.pnlColorpicker.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -355,7 +355,7 @@
             this.panel3.Controls.Add(this.lblCor);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.panel5);
+            this.panel3.Controls.Add(this.pnlColorpicker);
             this.panel3.Location = new System.Drawing.Point(1028, 109);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(252, 610);
@@ -370,7 +370,6 @@
             this.pnlHistorico.Name = "pnlHistorico";
             this.pnlHistorico.Size = new System.Drawing.Size(32, 100);
             this.pnlHistorico.TabIndex = 7;
-            this.pnlHistorico.Visible = false;
             // 
             // btnHist3
             // 
@@ -512,43 +511,43 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Tamanho";
             // 
-            // panel5
+            // pnlColorpicker
             // 
-            this.panel5.Controls.Add(this.button25);
-            this.panel5.Controls.Add(this.button26);
-            this.panel5.Controls.Add(this.button27);
-            this.panel5.Controls.Add(this.button28);
-            this.panel5.Controls.Add(this.button29);
-            this.panel5.Controls.Add(this.button20);
-            this.panel5.Controls.Add(this.button21);
-            this.panel5.Controls.Add(this.button22);
-            this.panel5.Controls.Add(this.button23);
-            this.panel5.Controls.Add(this.button24);
-            this.panel5.Controls.Add(this.button15);
-            this.panel5.Controls.Add(this.button16);
-            this.panel5.Controls.Add(this.button17);
-            this.panel5.Controls.Add(this.button19);
-            this.panel5.Controls.Add(this.button10);
-            this.panel5.Controls.Add(this.button11);
-            this.panel5.Controls.Add(this.button12);
-            this.panel5.Controls.Add(this.button13);
-            this.panel5.Controls.Add(this.button14);
-            this.panel5.Controls.Add(this.button7);
-            this.panel5.Controls.Add(this.button8);
-            this.panel5.Controls.Add(this.button9);
-            this.panel5.Controls.Add(this.button30);
-            this.panel5.Controls.Add(this.button31);
-            this.panel5.Controls.Add(this.button32);
-            this.panel5.Controls.Add(this.button33);
-            this.panel5.Controls.Add(this.button34);
-            this.panel5.Controls.Add(this.button35);
-            this.panel5.Controls.Add(this.button36);
-            this.panel5.Controls.Add(this.button18);
-            this.panel5.Location = new System.Drawing.Point(70, 19);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(163, 183);
-            this.panel5.TabIndex = 7;
-            this.panel5.Visible = false;
+            this.pnlColorpicker.Controls.Add(this.button25);
+            this.pnlColorpicker.Controls.Add(this.button26);
+            this.pnlColorpicker.Controls.Add(this.button27);
+            this.pnlColorpicker.Controls.Add(this.button28);
+            this.pnlColorpicker.Controls.Add(this.button29);
+            this.pnlColorpicker.Controls.Add(this.button20);
+            this.pnlColorpicker.Controls.Add(this.button21);
+            this.pnlColorpicker.Controls.Add(this.button22);
+            this.pnlColorpicker.Controls.Add(this.button23);
+            this.pnlColorpicker.Controls.Add(this.button24);
+            this.pnlColorpicker.Controls.Add(this.button15);
+            this.pnlColorpicker.Controls.Add(this.button16);
+            this.pnlColorpicker.Controls.Add(this.button17);
+            this.pnlColorpicker.Controls.Add(this.button19);
+            this.pnlColorpicker.Controls.Add(this.button10);
+            this.pnlColorpicker.Controls.Add(this.button11);
+            this.pnlColorpicker.Controls.Add(this.button12);
+            this.pnlColorpicker.Controls.Add(this.button13);
+            this.pnlColorpicker.Controls.Add(this.button14);
+            this.pnlColorpicker.Controls.Add(this.button7);
+            this.pnlColorpicker.Controls.Add(this.button8);
+            this.pnlColorpicker.Controls.Add(this.button9);
+            this.pnlColorpicker.Controls.Add(this.button30);
+            this.pnlColorpicker.Controls.Add(this.button31);
+            this.pnlColorpicker.Controls.Add(this.button32);
+            this.pnlColorpicker.Controls.Add(this.button33);
+            this.pnlColorpicker.Controls.Add(this.button34);
+            this.pnlColorpicker.Controls.Add(this.button35);
+            this.pnlColorpicker.Controls.Add(this.button36);
+            this.pnlColorpicker.Controls.Add(this.button18);
+            this.pnlColorpicker.Location = new System.Drawing.Point(70, 19);
+            this.pnlColorpicker.Name = "pnlColorpicker";
+            this.pnlColorpicker.Size = new System.Drawing.Size(163, 183);
+            this.pnlColorpicker.TabIndex = 7;
+            this.pnlColorpicker.Visible = false;
             // 
             // button25
             // 
@@ -993,7 +992,7 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.pnlHistorico.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
+            this.pnlColorpicker.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.ResumeLayout(false);
@@ -1027,7 +1026,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnColorChosen;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel pnlColorpicker;
         private System.Windows.Forms.Button button25;
         private System.Windows.Forms.Button button26;
         private System.Windows.Forms.Button button27;
