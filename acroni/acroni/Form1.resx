@@ -124,15 +124,6 @@
     <value>40</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="bunifuThinButton26.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAFkAAAAqCAYAAADYvffAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACoSURBVGhD7dohDgAhDAXRPQ0IQHH/s3VTSVi1gVEjnmmq
-        Rv+nlBK6y8gAIwOMDDAywMgAIwOWyK21GGPogGxZa10j995jzqmDsukSOet/Peq/bGrky4wMMDLAyAAj
-        A4wMMDLAyAAjA4wMMDLAyAAjA4wMMDLAyAAjA4wMMDLAyAAjA4wMMDLAyIAtsgui87bIudvKo87ZtnC6
-        x8gAIwOMDDAywMjXlXgBOqF48zVkWT0AAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="bunifuThinButton25.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAMUAAAAtCAYAAAAeL68fAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8

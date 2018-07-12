@@ -50,6 +50,14 @@
             this.btnHist3 = new System.Windows.Forms.Button();
             this.btnHist2 = new System.Windows.Forms.Button();
             this.btnHist1 = new System.Windows.Forms.Button();
+            this.btnColorChosen = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.lblCor = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.button25 = new System.Windows.Forms.Button();
             this.button26 = new System.Windows.Forms.Button();
@@ -64,7 +72,6 @@
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
@@ -81,15 +88,7 @@
             this.button34 = new System.Windows.Forms.Button();
             this.button35 = new System.Windows.Forms.Button();
             this.button36 = new System.Windows.Forms.Button();
-            this.btnColorSelector = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.bunifuThinButton26 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.button18 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -130,7 +129,7 @@
             this.label9.Font = new System.Drawing.Font("Open Sans", 25.25F, System.Drawing.FontStyle.Bold);
             this.label9.Location = new System.Drawing.Point(345, 557);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(174, 46);
+            this.label9.Size = new System.Drawing.Size(172, 46);
             this.label9.TabIndex = 4;
             this.label9.Text = "CT430-FX";
             // 
@@ -140,7 +139,7 @@
             this.label3.Font = new System.Drawing.Font("Open Sans", 35.25F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(53, 61);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(174, 64);
+            this.label3.Size = new System.Drawing.Size(179, 64);
             this.label3.TabIndex = 4;
             this.label3.Text = "Acroni";
             // 
@@ -348,16 +347,15 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.panel3.Controls.Add(this.pnlHistorico);
-            this.panel3.Controls.Add(this.panel5);
-            this.panel3.Controls.Add(this.btnColorSelector);
+            this.panel3.Controls.Add(this.btnColorChosen);
             this.panel3.Controls.Add(this.button6);
             this.panel3.Controls.Add(this.button5);
             this.panel3.Controls.Add(this.button4);
             this.panel3.Controls.Add(this.button3);
+            this.panel3.Controls.Add(this.lblCor);
             this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.bunifuThinButton26);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.panel5);
             this.panel3.Location = new System.Drawing.Point(1028, 109);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(252, 610);
@@ -416,6 +414,104 @@
             this.btnHist1.Visible = false;
             this.btnHist1.Click += new System.EventHandler(this.btnGetSelctedColor);
             // 
+            // btnColorChosen
+            // 
+            this.btnColorChosen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.btnColorChosen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnColorChosen.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(110)))), ((int)(((byte)(143)))));
+            this.btnColorChosen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnColorChosen.Font = new System.Drawing.Font("Open Sans", 9F);
+            this.btnColorChosen.Location = new System.Drawing.Point(19, 53);
+            this.btnColorChosen.Name = "btnColorChosen";
+            this.btnColorChosen.Size = new System.Drawing.Size(32, 32);
+            this.btnColorChosen.TabIndex = 3;
+            this.btnColorChosen.UseVisualStyleBackColor = false;
+            this.btnColorChosen.Click += new System.EventHandler(this.btnColorChosen_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(110)))), ((int)(((byte)(143)))));
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Open Sans", 9F);
+            this.button6.Location = new System.Drawing.Point(49, 386);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(84, 75);
+            this.button6.TabIndex = 1;
+            this.button6.Text = "Extendido";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(110)))), ((int)(((byte)(143)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Open Sans", 9F);
+            this.button5.Location = new System.Drawing.Point(139, 386);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(87, 75);
+            this.button5.TabIndex = 1;
+            this.button5.Text = "Super compacto";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(110)))), ((int)(((byte)(143)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Open Sans", 9F);
+            this.button4.Location = new System.Drawing.Point(49, 310);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(84, 70);
+            this.button4.TabIndex = 1;
+            this.button4.Text = "Compacto";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(110)))), ((int)(((byte)(143)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Open Sans", 9F);
+            this.button3.Location = new System.Drawing.Point(139, 310);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(87, 70);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Padrão";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // lblCor
+            // 
+            this.lblCor.AutoSize = true;
+            this.lblCor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lblCor.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblCor.Location = new System.Drawing.Point(124, 217);
+            this.lblCor.Name = "lblCor";
+            this.lblCor.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
+            this.lblCor.Size = new System.Drawing.Size(84, 38);
+            this.lblCor.TabIndex = 0;
+            this.lblCor.Text = "#0093ff";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Open Sans", 11.25F);
+            this.label7.Location = new System.Drawing.Point(31, 506);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(55, 20);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Fontes";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Open Sans", 11.25F);
+            this.label6.Location = new System.Drawing.Point(31, 275);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(74, 20);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Tamanho";
+            // 
             // panel5
             // 
             this.panel5.Controls.Add(this.button25);
@@ -431,7 +527,6 @@
             this.panel5.Controls.Add(this.button15);
             this.panel5.Controls.Add(this.button16);
             this.panel5.Controls.Add(this.button17);
-            this.panel5.Controls.Add(this.button18);
             this.panel5.Controls.Add(this.button19);
             this.panel5.Controls.Add(this.button10);
             this.panel5.Controls.Add(this.button11);
@@ -448,6 +543,7 @@
             this.panel5.Controls.Add(this.button34);
             this.panel5.Controls.Add(this.button35);
             this.panel5.Controls.Add(this.button36);
+            this.panel5.Controls.Add(this.button18);
             this.panel5.Location = new System.Drawing.Point(70, 19);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(163, 183);
@@ -622,19 +718,6 @@
             this.button17.TabIndex = 51;
             this.button17.UseVisualStyleBackColor = false;
             this.button17.Click += new System.EventHandler(this.btnGetSelctedColor);
-            // 
-            // button18
-            // 
-            this.button18.BackColor = System.Drawing.Color.Yellow;
-            this.button18.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(110)))), ((int)(((byte)(143)))));
-            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button18.Font = new System.Drawing.Font("Open Sans", 9F);
-            this.button18.Location = new System.Drawing.Point(41, 67);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(22, 21);
-            this.button18.TabIndex = 50;
-            this.button18.UseVisualStyleBackColor = false;
-            this.button18.Click += new System.EventHandler(this.btnGetSelctedColor);
             // 
             // button19
             // 
@@ -844,125 +927,18 @@
             this.button36.UseVisualStyleBackColor = false;
             this.button36.Click += new System.EventHandler(this.btnGetSelctedColor);
             // 
-            // btnColorSelector
+            // button18
             // 
-            this.btnColorSelector.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
-            this.btnColorSelector.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(110)))), ((int)(((byte)(143)))));
-            this.btnColorSelector.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnColorSelector.Font = new System.Drawing.Font("Open Sans", 9F);
-            this.btnColorSelector.Location = new System.Drawing.Point(19, 53);
-            this.btnColorSelector.Name = "btnColorSelector";
-            this.btnColorSelector.Size = new System.Drawing.Size(32, 32);
-            this.btnColorSelector.TabIndex = 3;
-            this.btnColorSelector.UseVisualStyleBackColor = false;
-            this.btnColorSelector.Click += new System.EventHandler(this.btnColorSelector_Click);
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(110)))), ((int)(((byte)(143)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Open Sans", 9F);
-            this.button6.Location = new System.Drawing.Point(40, 316);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(84, 75);
-            this.button6.TabIndex = 1;
-            this.button6.Text = "Extendido";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(110)))), ((int)(((byte)(143)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Open Sans", 9F);
-            this.button5.Location = new System.Drawing.Point(130, 316);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(87, 75);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "Super compacto";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(110)))), ((int)(((byte)(143)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Open Sans", 9F);
-            this.button4.Location = new System.Drawing.Point(40, 240);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(84, 70);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "Compacto";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(110)))), ((int)(((byte)(143)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Open Sans", 9F);
-            this.button3.Location = new System.Drawing.Point(130, 240);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(87, 70);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Padrão";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Open Sans", 11.25F);
-            this.label7.Location = new System.Drawing.Point(22, 436);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 20);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Fontes";
-            // 
-            // bunifuThinButton26
-            // 
-            this.bunifuThinButton26.ActiveBorderThickness = 1;
-            this.bunifuThinButton26.ActiveCornerRadius = 20;
-            this.bunifuThinButton26.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.bunifuThinButton26.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton26.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.bunifuThinButton26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.bunifuThinButton26.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton26.BackgroundImage")));
-            this.bunifuThinButton26.ButtonText = "#0093ff";
-            this.bunifuThinButton26.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton26.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton26.ForeColor = System.Drawing.Color.White;
-            this.bunifuThinButton26.IdleBorderThickness = 2;
-            this.bunifuThinButton26.IdleCornerRadius = 2;
-            this.bunifuThinButton26.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.bunifuThinButton26.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton26.IdleLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton26.Location = new System.Drawing.Point(116, 76);
-            this.bunifuThinButton26.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.bunifuThinButton26.Name = "bunifuThinButton26";
-            this.bunifuThinButton26.Size = new System.Drawing.Size(89, 42);
-            this.bunifuThinButton26.TabIndex = 2;
-            this.bunifuThinButton26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Open Sans", 11.25F);
-            this.label6.Location = new System.Drawing.Point(22, 205);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 20);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Tamanho";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Open Sans", 11.25F);
-            this.label5.Location = new System.Drawing.Point(12, 20);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 20);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Cores";
+            this.button18.BackColor = System.Drawing.Color.Yellow;
+            this.button18.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(110)))), ((int)(((byte)(143)))));
+            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button18.Font = new System.Drawing.Font("Open Sans", 9F);
+            this.button18.Location = new System.Drawing.Point(41, 67);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(22, 21);
+            this.button18.TabIndex = 50;
+            this.button18.UseVisualStyleBackColor = false;
+            this.button18.Click += new System.EventHandler(this.btnGetSelctedColor);
             // 
             // panel4
             // 
@@ -980,7 +956,7 @@
             this.label8.Font = new System.Drawing.Font("Open Sans", 25.25F, System.Drawing.FontStyle.Bold);
             this.label8.Location = new System.Drawing.Point(29, 29);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(174, 46);
+            this.label8.Size = new System.Drawing.Size(172, 46);
             this.label8.TabIndex = 4;
             this.label8.Text = "CT430-FX";
             // 
@@ -1041,7 +1017,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
@@ -1050,9 +1025,8 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton26;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btnColorSelector;
+        private System.Windows.Forms.Button btnColorChosen;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button button25;
         private System.Windows.Forms.Button button26;
@@ -1088,6 +1062,7 @@
         private System.Windows.Forms.Button btnHist3;
         private System.Windows.Forms.Button btnHist2;
         private System.Windows.Forms.Button btnHist1;
+        private System.Windows.Forms.Label lblCor;
     }
 }
 

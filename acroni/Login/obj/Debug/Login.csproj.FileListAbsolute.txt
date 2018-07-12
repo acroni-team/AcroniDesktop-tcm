@@ -1,0 +1,5 @@
+C:\Users\gmininsk\Desktop\c\csharp\acroni\Login\obj\Debug\Login.csprojAssemblyReference.cache
+C:\Users\gmininsk\Desktop\c\csharp\acroni\Login\obj\Debug\prjTCM1.FrmLogin.resources
+C:\Users\gmininsk\Desktop\c\csharp\acroni\Login\obj\Debug\Login.Properties.Resources.resources
+C:\Users\gmininsk\Desktop\c\csharp\acroni\Login\obj\Debug\Login.csproj.GenerateResource.cache
+C:\Users\gmininsk\Desktop\c\csharp\acroni\Login\obj\Debug\Login.csproj.CoreCompileInputs.cache
