@@ -1,6 +1,6 @@
-﻿using static Forms.Design.FormDrag;
+﻿using static FormsDesign.FormDrag;
 
-namespace acroni
+namespace acroni.Login
 {
     partial class FrmLogin
     {

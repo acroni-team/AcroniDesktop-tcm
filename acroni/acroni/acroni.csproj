@@ -37,8 +37,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
-    <Reference Include="Forms.Design">
-      <HintPath>..\Forms.Design\bin\Debug\Forms.Design.dll</HintPath>
+    <Reference Include="FormsDesign">
+      <HintPath>..\FormsDesign\bin\Debug\FormsDesign.dll</HintPath>
     </Reference>
     <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialSkin.Updated.0.2.2\lib\MaterialSkin.dll</HintPath>
@@ -63,6 +63,18 @@
     <Compile Include="Colorpicker\ColorpickerHandlers.cs" />
     <Compile Include="Colorpicker\GetSelectedColor.cs" />
     <Compile Include="Colorpicker\SetColorpickerVisibility.cs" />
+    <Compile Include="Galeria\Galeria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Galeria\Galeria.Designer.cs">
+      <DependentUpon>Galeria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout_Master\LayoutMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout_Master\LayoutMaster.Designer.cs">
+      <DependentUpon>LayoutMaster.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +89,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Galeria\Galeria.resx">
+      <DependentUpon>Galeria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout_Master\LayoutMaster.resx">
+      <DependentUpon>LayoutMaster.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -109,5 +127,6 @@
   <ItemGroup>
     <None Include="MainForm\App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

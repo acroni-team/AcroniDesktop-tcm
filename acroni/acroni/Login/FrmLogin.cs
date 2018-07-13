@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using static Forms.Design.FormDrag;
 
-
-namespace acroni
+namespace acroni.Login
 {
     public partial class FrmLogin : Form
     {

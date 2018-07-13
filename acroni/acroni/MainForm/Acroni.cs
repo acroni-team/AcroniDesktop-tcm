@@ -1,27 +1,23 @@
 ﻿using System;
 using System.Windows.Forms;
 using acroni.Colorpicker;
-using acroni;
+using acroni.Layout_Master;
+using acroni.Login;
 
 namespace acroni
 {
-    public partial class Acroni : Form
+    public partial class Acroni : LayoutMaster
     {
         public Acroni()
         {
-            InitializeComponent();
             FrmLogin frmLogin = new FrmLogin();
             frmLogin.ShowDialog();
+            InitializeComponent();
         }
 
         /// <summary>
         /// Label que sai da aplicação. 
         /// </summary>
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
 
         private void btnColorChosen_Click(object sender, EventArgs e)
         {

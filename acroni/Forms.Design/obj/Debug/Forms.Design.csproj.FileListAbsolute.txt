@@ -1,6 +1,0 @@
-C:\Users\gmininsk\Desktop\c\csharp\acroni\Forms.Design\bin\Debug\Forms.Design.dll
-C:\Users\gmininsk\Desktop\c\csharp\acroni\Forms.Design\bin\Debug\Forms.Design.pdb
-C:\Users\gmininsk\Desktop\c\csharp\acroni\Forms.Design\obj\Debug\Forms.Design.csproj.CoreCompileInputs.cache
-C:\Users\gmininsk\Desktop\c\csharp\acroni\Forms.Design\obj\Debug\Forms.Design.dll
-C:\Users\gmininsk\Desktop\c\csharp\acroni\Forms.Design\obj\Debug\Forms.Design.pdb
-C:\Users\gmininsk\Desktop\c\csharp\acroni\Forms.Design\obj\Debug\Forms.Design.csprojAssemblyReference.cache
