@@ -164,81 +164,29 @@
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>370, 384</value>
   </data>
-  <data name="txtSenmha.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 9.75pt</value>
+  <data name="&gt;&gt;txtSenha.Name" xml:space="preserve">
+    <value>txtSenha</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="txtSenmha.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>Off</value>
-  </data>
-  <data name="txtSenmha.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 169</value>
-  </data>
-  <data name="txtSenmha.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="txtSenmha.Size" type="System.Drawing.Size, System.Drawing">
-    <value>318, 44</value>
-  </data>
-  <data name="txtSenmha.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;txtSenmha.Name" xml:space="preserve">
-    <value>txtSenmha</value>
-  </data>
-  <data name="&gt;&gt;txtSenmha.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtSenha.Type" xml:space="preserve">
     <value>Bunifu.Framework.UI.BunifuMaterialTextbox, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;txtSenmha.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtSenha.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;txtSenmha.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtSenha.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="txtEntra.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 9.75pt</value>
+  <data name="&gt;&gt;txtEntrar.Name" xml:space="preserve">
+    <value>txtEntrar</value>
   </data>
-  <data name="txtEntra.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 97</value>
-  </data>
-  <data name="txtEntra.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="txtEntra.Size" type="System.Drawing.Size, System.Drawing">
-    <value>318, 44</value>
-  </data>
-  <data name="txtEntra.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;txtEntra.Name" xml:space="preserve">
-    <value>txtEntra</value>
-  </data>
-  <data name="&gt;&gt;txtEntra.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtEntrar.Type" xml:space="preserve">
     <value>Bunifu.Framework.UI.BunifuMaterialTextbox, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;txtEntra.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtEntrar.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;txtEntra.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtEntrar.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="btnSair.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnSair.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 11pt, style=Bold</value>
-  </data>
-  <data name="btnSair.Location" type="System.Drawing.Point, System.Drawing">
-    <value>46, 307</value>
-  </data>
-  <data name="btnSair.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 42</value>
-  </data>
-  <data name="btnSair.TabIndex" type="System.Int32, mscorlib">
-    <value>59</value>
-  </data>
-  <data name="btnSair.Text" xml:space="preserve">
-    <value>Sair</value>
   </data>
   <data name="&gt;&gt;btnSair.Name" xml:space="preserve">
     <value>btnSair</value>
@@ -252,27 +200,6 @@
   <data name="&gt;&gt;btnSair.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="btnEntrar.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
-  </data>
-  <data name="btnEntrar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="btnEntrar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>223, 307</value>
-  </data>
-  <data name="btnEntrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="btnEntrar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 42</value>
-  </data>
-  <data name="btnEntrar.TabIndex" type="System.Int32, mscorlib">
-    <value>58</value>
-  </data>
-  <data name="btnEntrar.Text" xml:space="preserve">
-    <value>Entrar</value>
-  </data>
   <data name="&gt;&gt;btnEntrar.Name" xml:space="preserve">
     <value>btnEntrar</value>
   </data>
@@ -284,6 +211,37 @@
   </data>
   <data name="&gt;&gt;btnEntrar.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="&gt;&gt;label16.Name" xml:space="preserve">
+    <value>label16</value>
+  </data>
+  <data name="&gt;&gt;label16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label16.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="&gt;&gt;bunifuElipse1.Name" xml:space="preserve">
+    <value>bunifuElipse1</value>
+  </data>
+  <data name="&gt;&gt;bunifuElipse1.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuElipse, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FrmLogin</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label16.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -318,22 +276,124 @@
   <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterParent</value>
+  <data name="btnEntrar.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Login</value>
+  <data name="btnEntrar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
-  <data name="&gt;&gt;bunifuElipse1.Name" xml:space="preserve">
-    <value>bunifuElipse1</value>
+  <data name="btnEntrar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>223, 307</value>
   </data>
-  <data name="&gt;&gt;bunifuElipse1.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuElipse, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="btnEntrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>FrmLogin</value>
+  <data name="btnEntrar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 42</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="btnEntrar.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="btnEntrar.Text" xml:space="preserve">
+    <value>Entrar</value>
+  </data>
+  <data name="&gt;&gt;btnEntrar.Name" xml:space="preserve">
+    <value>btnEntrar</value>
+  </data>
+  <data name="&gt;&gt;btnEntrar.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnEntrar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnEntrar.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnSair.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnSair.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 11pt, style=Bold</value>
+  </data>
+  <data name="btnSair.Location" type="System.Drawing.Point, System.Drawing">
+    <value>46, 307</value>
+  </data>
+  <data name="btnSair.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 42</value>
+  </data>
+  <data name="btnSair.TabIndex" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="btnSair.Text" xml:space="preserve">
+    <value>Sair</value>
+  </data>
+  <data name="&gt;&gt;btnSair.Name" xml:space="preserve">
+    <value>btnSair</value>
+  </data>
+  <data name="&gt;&gt;btnSair.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSair.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnSair.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="txtEntrar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 9.75pt</value>
+  </data>
+  <data name="txtEntrar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 97</value>
+  </data>
+  <data name="txtEntrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="txtEntrar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>318, 44</value>
+  </data>
+  <data name="txtEntrar.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtEntrar.Name" xml:space="preserve">
+    <value>txtEntrar</value>
+  </data>
+  <data name="&gt;&gt;txtEntrar.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuMaterialTextbox, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtEntrar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtEntrar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtSenha.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 9.75pt</value>
+  </data>
+  <data name="txtSenha.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Off</value>
+  </data>
+  <data name="txtSenha.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 169</value>
+  </data>
+  <data name="txtSenha.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="txtSenha.Size" type="System.Drawing.Size, System.Drawing">
+    <value>318, 44</value>
+  </data>
+  <data name="txtSenha.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;txtSenha.Name" xml:space="preserve">
+    <value>txtSenha</value>
+  </data>
+  <data name="&gt;&gt;txtSenha.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuMaterialTextbox, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtSenha.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtSenha.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
 </root>

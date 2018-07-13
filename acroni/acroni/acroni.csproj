@@ -59,6 +59,12 @@
     <Compile Include="Colorpicker\ColorpickerHandlers.cs" />
     <Compile Include="Colorpicker\GetSelectedColor.cs" />
     <Compile Include="Colorpicker\SetColorpickerVisibility.cs" />
+    <Compile Include="Login\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\FrmLogin.designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm\Acroni.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +73,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Login\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm\Acroni.resx">
       <DependentUpon>Acroni.cs</DependentUpon>
     </EmbeddedResource>
@@ -95,6 +104,5 @@
   <ItemGroup>
     <None Include="MainForm\App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

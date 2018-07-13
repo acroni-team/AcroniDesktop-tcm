@@ -6,10 +6,10 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Bunifu
+using Bunifu.Framework.UI;
 using System.Windows.Forms;
 
-namespace prjTCM1
+namespace acroni
 {
     public partial class FrmLogin : Form
     {
@@ -42,7 +42,7 @@ namespace prjTCM1
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            Application.Exit();
         }
 
         private void btnSair_MouseLeave(object sender, EventArgs e)
@@ -52,7 +52,7 @@ namespace prjTCM1
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            if (txtEntra.Text.Equals("1") && txtSenmha.Text.Equals("1"))
+            if (txtEntrar.Text.Equals("1") && txtSenha.Text.Equals("1"))
             {
                 this.Close();
             }
@@ -62,9 +62,9 @@ namespace prjTCM1
             }
         }
 
-        private void txtSenmha_OnValueChanged(object sender, EventArgs e)
+        private void txtSenha_OnValueChanged(object sender, EventArgs e)
         {
-            txtSenmha.isPassword = true;
+            txtSenha.isPassword = true;
         }
     }
 }

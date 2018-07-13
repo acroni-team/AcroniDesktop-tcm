@@ -1,4 +1,4 @@
-﻿namespace prjTCM1
+﻿namespace acroni
 {
     partial class FrmLogin
     {
@@ -35,8 +35,8 @@
             this.label16 = new System.Windows.Forms.Label();
             this.btnEntrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnSair = new System.Windows.Forms.Button();
-            this.txtEntra = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtSenmha = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtEntrar = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtSenha = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.SuspendLayout();
             // 
             // lblAviso
@@ -103,40 +103,40 @@
             this.btnSair.MouseLeave += new System.EventHandler(this.btnSair_MouseLeave);
             this.btnSair.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnSair_MouseMove);
             // 
-            // txtEntra
+            // txtEntrar
             // 
-            this.txtEntra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtEntra.Cursor = System.Windows.Forms.Cursors.IBeam;
-            resources.ApplyResources(this.txtEntra, "txtEntra");
-            this.txtEntra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.txtEntra.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.txtEntra.HintText = "Usuário";
-            this.txtEntra.isPassword = false;
-            this.txtEntra.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
-            this.txtEntra.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtEntra.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(116)))), ((int)(((byte)(219)))));
-            this.txtEntra.LineThickness = 3;
-            this.txtEntra.Name = "txtEntra";
-            this.txtEntra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtEntrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtEntrar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            resources.ApplyResources(this.txtEntrar, "txtEntrar");
+            this.txtEntrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.txtEntrar.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.txtEntrar.HintText = "Usuário";
+            this.txtEntrar.isPassword = false;
+            this.txtEntrar.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.txtEntrar.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtEntrar.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(116)))), ((int)(((byte)(219)))));
+            this.txtEntrar.LineThickness = 3;
+            this.txtEntrar.Name = "txtEntrar";
+            this.txtEntrar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // txtSenmha
+            // txtSenha
             // 
-            this.txtSenmha.AllowDrop = true;
-            this.txtSenmha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtSenmha.Cursor = System.Windows.Forms.Cursors.IBeam;
-            resources.ApplyResources(this.txtSenmha, "txtSenmha");
-            this.txtSenmha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.txtSenmha.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.txtSenmha.HintText = "Senha";
-            this.txtSenmha.isPassword = false;
-            this.txtSenmha.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
-            this.txtSenmha.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtSenmha.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(116)))), ((int)(((byte)(219)))));
-            this.txtSenmha.LineThickness = 3;
-            this.txtSenmha.Name = "txtSenmha";
-            this.txtSenmha.TabStop = false;
-            this.txtSenmha.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtSenmha.OnValueChanged += new System.EventHandler(this.txtSenmha_OnValueChanged);
+            this.txtSenha.AllowDrop = true;
+            this.txtSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtSenha.Cursor = System.Windows.Forms.Cursors.IBeam;
+            resources.ApplyResources(this.txtSenha, "txtSenha");
+            this.txtSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.txtSenha.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.txtSenha.HintText = "Senha";
+            this.txtSenha.isPassword = false;
+            this.txtSenha.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.txtSenha.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtSenha.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(116)))), ((int)(((byte)(219)))));
+            this.txtSenha.LineThickness = 3;
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.TabStop = false;
+            this.txtSenha.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtSenha.OnValueChanged += new System.EventHandler(this.txtSenha_OnValueChanged);
             // 
             // FrmLogin
             // 
@@ -144,8 +144,8 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.Controls.Add(this.txtSenmha);
-            this.Controls.Add(this.txtEntra);
+            this.Controls.Add(this.txtSenha);
+            this.Controls.Add(this.txtEntrar);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.label16);
@@ -167,8 +167,8 @@
         private System.Windows.Forms.Label label16;
         protected Bunifu.Framework.UI.BunifuFlatButton btnEntrar;
         private System.Windows.Forms.Button btnSair;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtEntra;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtSenmha;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtEntrar;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtSenha;
     }
 }
 

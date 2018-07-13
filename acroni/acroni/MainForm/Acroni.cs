@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using acroni.Colorpicker;
+using acroni;
 
 namespace acroni
 {
@@ -9,12 +10,14 @@ namespace acroni
         public Acroni()
         {
             InitializeComponent();
+            FrmLogin frmLogin = new FrmLogin();
+            frmLogin.ShowDialog();
         }
 
         /// <summary>
         /// Label que sai da aplicação. 
         /// </summary>
-        /// 
+
         private void label4_Click(object sender, EventArgs e)
         {
             Application.Exit();
