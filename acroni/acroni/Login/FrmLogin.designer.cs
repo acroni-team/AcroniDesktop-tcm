@@ -1,4 +1,6 @@
-﻿namespace acroni
+﻿using static Forms.Design.FormDrag;
+
+namespace acroni
 {
     partial class FrmLogin
     {
@@ -154,8 +156,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmLogin";
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FrmLogin_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmLogin_MouseMove);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(Form_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(Form_MouseMove);
             this.ResumeLayout(false);
             this.PerformLayout();
 

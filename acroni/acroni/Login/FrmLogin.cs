@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Bunifu.Framework.UI;
 using System.Windows.Forms;
+using static Forms.Design.FormDrag;
+
 
 namespace acroni
 {
@@ -16,23 +11,6 @@ namespace acroni
         public FrmLogin()
         {
             InitializeComponent();
-        }
-
-        private Point MouseDownLocation;
-
-        private void FrmLogin_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == System.Windows.Forms.MouseButtons.Left)
-                MouseDownLocation = e.Location;
-        }
-
-        private void FrmLogin_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.Button == System.Windows.Forms.MouseButtons.Left)
-            {
-                this.Left = e.X + this.Left - MouseDownLocation.X;
-                this.Top = e.Y + this.Top - MouseDownLocation.Y;
-            }
         }
 
         private void btnSair_MouseMove(object sender, MouseEventArgs e)

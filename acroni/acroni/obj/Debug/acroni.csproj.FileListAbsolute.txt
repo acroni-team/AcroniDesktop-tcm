@@ -39,3 +39,5 @@ C:\Users\gmininsk\Desktop\c\csharp\acroni\acroni\obj\Debug\acroni.exe
 C:\Users\gmininsk\Desktop\c\csharp\acroni\acroni\obj\Debug\acroni.pdb
 C:\Users\gmininsk\Desktop\c\csharp\acroni\acroni\obj\Debug\acroni.csprojAssemblyReference.cache
 C:\Users\gmininsk\Desktop\c\csharp\acroni\acroni\obj\Debug\acroni.FrmLogin.resources
+C:\Users\gmininsk\Desktop\c\csharp\acroni\acroni\bin\Debug\Forms.Design.dll
+C:\Users\gmininsk\Desktop\c\csharp\acroni\acroni\bin\Debug\Forms.Design.pdb

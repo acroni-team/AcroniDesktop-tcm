@@ -1,4 +1,6 @@
-﻿namespace acroni
+﻿using static Forms.Design.FormDrag;
+
+namespace acroni
 {
     partial class Acroni
     {
@@ -996,6 +998,8 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.ResumeLayout(false);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(Form_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(Form_MouseMove);
 
         }
 
