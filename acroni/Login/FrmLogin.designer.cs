@@ -40,6 +40,8 @@ namespace acroni.Login
             this.btnSair = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnCadastrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnEntrar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.lnklblEsqueceuSenha = new System.Windows.Forms.LinkLabel();
+            this.lnklblEsqueceuUsuario = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // lblAviso
@@ -91,7 +93,6 @@ namespace acroni.Login
             this.txtSenha.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(116)))), ((int)(((byte)(219)))));
             this.txtSenha.LineThickness = 3;
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.TabStop = false;
             this.txtSenha.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtSenha.OnValueChanged += new System.EventHandler(this.txtSenha_OnValueChanged);
             // 
@@ -188,12 +189,30 @@ namespace acroni.Login
             this.btnEntrar.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
+            // lnklblEsqueceuSenha
+            // 
+            resources.ApplyResources(this.lnklblEsqueceuSenha, "lnklblEsqueceuSenha");
+            this.lnklblEsqueceuSenha.LinkColor = System.Drawing.Color.Lime;
+            this.lnklblEsqueceuSenha.Name = "lnklblEsqueceuSenha";
+            this.lnklblEsqueceuSenha.TabStop = true;
+            this.lnklblEsqueceuSenha.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnklblEsqueceuSenha_LinkClicked);
+            // 
+            // lnklblEsqueceuUsuario
+            // 
+            resources.ApplyResources(this.lnklblEsqueceuUsuario, "lnklblEsqueceuUsuario");
+            this.lnklblEsqueceuUsuario.LinkColor = System.Drawing.Color.Lime;
+            this.lnklblEsqueceuUsuario.Name = "lnklblEsqueceuUsuario";
+            this.lnklblEsqueceuUsuario.TabStop = true;
+            this.lnklblEsqueceuUsuario.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnklblEsqueceuUsuario_LinkClicked);
+            // 
             // FrmLogin
             // 
             this.AllowDrop = true;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.Controls.Add(this.lnklblEsqueceuUsuario);
+            this.Controls.Add(this.lnklblEsqueceuSenha);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.btnEntrar);
@@ -219,6 +238,8 @@ namespace acroni.Login
         protected Bunifu.Framework.UI.BunifuFlatButton btnSair;
         protected Bunifu.Framework.UI.BunifuFlatButton btnCadastrar;
         protected Bunifu.Framework.UI.BunifuFlatButton btnEntrar;
+        private System.Windows.Forms.LinkLabel lnklblEsqueceuSenha;
+        private System.Windows.Forms.LinkLabel lnklblEsqueceuUsuario;
     }
 }
 

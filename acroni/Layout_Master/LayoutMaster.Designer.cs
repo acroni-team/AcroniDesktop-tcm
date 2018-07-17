@@ -42,7 +42,7 @@ namespace acroni.Layout_Master
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblNomeUsuario = new System.Windows.Forms.Label();
             this.bunifuThinButton25 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton24 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -133,7 +133,7 @@ namespace acroni.Layout_Master
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lblNomeUsuario);
             this.panel1.Controls.Add(this.bunifuThinButton25);
             this.panel1.Controls.Add(this.bunifuThinButton24);
             this.panel1.Controls.Add(this.bunifuThinButton23);
@@ -151,7 +151,7 @@ namespace acroni.Layout_Master
             this.label9.Font = new System.Drawing.Font("Open Sans", 25.25F, System.Drawing.FontStyle.Bold);
             this.label9.Location = new System.Drawing.Point(345, 557);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(172, 46);
+            this.label9.Size = new System.Drawing.Size(174, 46);
             this.label9.TabIndex = 4;
             this.label9.Text = "CT430-FX";
             // 
@@ -162,7 +162,7 @@ namespace acroni.Layout_Master
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(53, 61);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(179, 64);
+            this.label3.Size = new System.Drawing.Size(174, 64);
             this.label3.TabIndex = 4;
             this.label3.Text = "Acroni";
             // 
@@ -177,16 +177,16 @@ namespace acroni.Layout_Master
             this.label2.TabIndex = 3;
             this.label2.Text = "Seja bem-vindo!";
             // 
-            // label1
+            // lblNomeUsuario
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Open Sans", 13.25F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(110, 524);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 24);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Kleber";
+            this.lblNomeUsuario.AutoSize = true;
+            this.lblNomeUsuario.Font = new System.Drawing.Font("Open Sans", 13.25F);
+            this.lblNomeUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblNomeUsuario.Location = new System.Drawing.Point(106, 524);
+            this.lblNomeUsuario.Name = "lblNomeUsuario";
+            this.lblNomeUsuario.Size = new System.Drawing.Size(76, 24);
+            this.lblNomeUsuario.TabIndex = 3;
+            this.lblNomeUsuario.Text = "Usuario";
             // 
             // bunifuThinButton25
             // 
@@ -325,8 +325,8 @@ namespace acroni.Layout_Master
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LayoutMaster";
             this.Text = "LayoutMaster";
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(Form_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(Form_MouseMove);
+            //this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_MouseDown);
+            //this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form_MouseMove);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -347,7 +347,7 @@ namespace acroni.Layout_Master
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblNomeUsuario;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton25;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton24;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton23;

@@ -28,7 +28,7 @@ namespace acroni.Login
             btnSair.Font = new System.Drawing.Font("Century Gothic", 11F, FontStyle.Bold);
         }
         //Por favor, criar esse usário no computador de vocês (Usuário: Acroni, Senha: Acroni7)
-        SqlConnection conexão_SQL = new SqlConnection("Data Source =" + Environment.MachineName + "\\SQLEXPRESS; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7");
+        SqlConnection conexão_SQL = new SqlConnection(Colorpicker.ColorpickerHandlers.nome_conexao);
         SqlCommand comando_SQL;
 
         private void btnEntrar_Click(object sender, EventArgs e)
@@ -54,6 +54,7 @@ namespace acroni.Login
                     if (resposta[0].ToString().Equals(txtSenha.Text))
                     {
                         this.Close();
+                        Colorpicker.ColorpickerHandlers.nome_usuario = txtEntrar.Text;
                     }
                     else
                     {
@@ -79,7 +80,6 @@ namespace acroni.Login
         {
             txtSenha.isPassword = true;
         }
-
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -91,6 +91,27 @@ namespace acroni.Login
                 this.Close();
         }
 
+        private void lnklblEsqueceuUsuario_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            Atualizadores.FrmUsuario frmAt = new Atualizadores.FrmUsuario();
+            frmAt.ShowDialog();
+            if (!Atualizadores.FrmUsuario.atualizacao_SUCCESS)
+                this.Show();
+            else
+                this.Close();
+        }
+
+        private void lnklblEsqueceuSenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            Atualizadores.FrmSenha frmAt = new Atualizadores.FrmSenha();
+            frmAt.ShowDialog();
+            if (!Atualizadores.FrmSenha.atualizacao_SUCCESS)
+                this.Show();
+            else
+                this.Close();
+        }
     }
 }
 

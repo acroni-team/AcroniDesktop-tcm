@@ -19,6 +19,7 @@ namespace acroni
             FrmLogin frmLogin = new FrmLogin();
             frmLogin.ShowDialog();
             InitializeComponent();
+            trocar_nome_usuario(ColorpickerHandlers.nome_usuario);
         }
 
         /// <summary>

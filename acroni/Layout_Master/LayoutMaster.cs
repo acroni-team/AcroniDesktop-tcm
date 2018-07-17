@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace acroni.Layout_Master
 {
@@ -23,6 +25,11 @@ namespace acroni.Layout_Master
         protected virtual void btnAbrirAcroni_Click(object sender, EventArgs e)
         {
             // Isso também não.
+        }
+        
+        public void trocar_nome_usuario(String usuario)
+        {
+            lblNomeUsuario.Text = usuario;
         }
     }
 }
