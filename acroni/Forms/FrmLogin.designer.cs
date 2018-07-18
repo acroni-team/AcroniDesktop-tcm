@@ -38,9 +38,9 @@ namespace acroni.Login
             this.txtEntrar = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtSenha = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.btnSair = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnCadastrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnEntrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.lnklblEsqueceuSenha = new System.Windows.Forms.LinkLabel();
+            this.btnCadastrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.SuspendLayout();
             // 
             // lblAviso
@@ -126,37 +126,6 @@ namespace acroni.Login
             this.btnSair.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.Activecolor = System.Drawing.Color.DodgerBlue;
-            this.btnCadastrar.BackColor = System.Drawing.Color.DodgerBlue;
-            resources.ApplyResources(this.btnCadastrar, "btnCadastrar");
-            this.btnCadastrar.BorderRadius = 5;
-            this.btnCadastrar.ButtonText = "Cadastrar";
-            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadastrar.DisabledColor = System.Drawing.Color.Gray;
-            this.btnCadastrar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnCadastrar.Iconimage = null;
-            this.btnCadastrar.Iconimage_right = null;
-            this.btnCadastrar.Iconimage_right_Selected = null;
-            this.btnCadastrar.Iconimage_Selected = null;
-            this.btnCadastrar.IconMarginLeft = 0;
-            this.btnCadastrar.IconMarginRight = 0;
-            this.btnCadastrar.IconRightVisible = true;
-            this.btnCadastrar.IconRightZoom = 0D;
-            this.btnCadastrar.IconVisible = true;
-            this.btnCadastrar.IconZoom = 90D;
-            this.btnCadastrar.IsTab = false;
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnCadastrar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(255)))));
-            this.btnCadastrar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnCadastrar.selected = false;
-            this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnCadastrar.Textcolor = System.Drawing.Color.White;
-            this.btnCadastrar.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
-            // 
             // btnEntrar
             // 
             this.btnEntrar.Activecolor = System.Drawing.Color.DodgerBlue;
@@ -196,6 +165,37 @@ namespace acroni.Login
             this.lnklblEsqueceuSenha.TabStop = true;
             this.lnklblEsqueceuSenha.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnklblEsqueceuSenha_LinkClicked);
             // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.Activecolor = System.Drawing.Color.DodgerBlue;
+            this.btnCadastrar.BackColor = System.Drawing.Color.DodgerBlue;
+            resources.ApplyResources(this.btnCadastrar, "btnCadastrar");
+            this.btnCadastrar.BorderRadius = 5;
+            this.btnCadastrar.ButtonText = "Cadastrar";
+            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrar.DisabledColor = System.Drawing.Color.Gray;
+            this.btnCadastrar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnCadastrar.Iconimage = null;
+            this.btnCadastrar.Iconimage_right = null;
+            this.btnCadastrar.Iconimage_right_Selected = null;
+            this.btnCadastrar.Iconimage_Selected = null;
+            this.btnCadastrar.IconMarginLeft = 0;
+            this.btnCadastrar.IconMarginRight = 0;
+            this.btnCadastrar.IconRightVisible = true;
+            this.btnCadastrar.IconRightZoom = 0D;
+            this.btnCadastrar.IconVisible = true;
+            this.btnCadastrar.IconZoom = 90D;
+            this.btnCadastrar.IsTab = false;
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Normalcolor = System.Drawing.Color.DodgerBlue;
+            this.btnCadastrar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(255)))));
+            this.btnCadastrar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnCadastrar.selected = false;
+            this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCadastrar.Textcolor = System.Drawing.Color.White;
+            this.btnCadastrar.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            // 
             // FrmLogin
             // 
             this.AllowDrop = true;
@@ -226,9 +226,9 @@ namespace acroni.Login
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtEntrar;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtSenha;
         protected Bunifu.Framework.UI.BunifuFlatButton btnSair;
-        protected Bunifu.Framework.UI.BunifuFlatButton btnCadastrar;
         protected Bunifu.Framework.UI.BunifuFlatButton btnEntrar;
         private System.Windows.Forms.LinkLabel lnklblEsqueceuSenha;
+        protected Bunifu.Framework.UI.BunifuFlatButton btnCadastrar;
     }
 }
 

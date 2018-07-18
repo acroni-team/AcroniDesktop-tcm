@@ -52,7 +52,7 @@ namespace acroni.Atualizadores
                             {
 
                                 MessageBox.Show("Atualização concluida");
-                                Colorpicker.ColorpickerHandlers.nome_usuario = txtUsuario.Text;
+                                acroni.Classes_internas.Conexao.nome_usuario = txtUsuario.Text;
                                 Cadastro.FrmConfirmarEmail frm = new Cadastro.FrmConfirmarEmail(txtUsuario.Text, txtSenha.Text, txtEmail.Text, "senha");
                                 this.Hide();
                                 frm.ShowDialog();

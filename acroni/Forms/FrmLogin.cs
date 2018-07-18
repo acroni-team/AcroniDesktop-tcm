@@ -13,6 +13,13 @@ namespace acroni.Login
             InitializeComponent();
         }
 
+        #region Objetos do banco
+        //Usuário para lançar o script do banco: (Usuário: Acroni, Senha: Acroni7)
+        SqlConnection conexão_SQL = new SqlConnection(Colorpicker.ColorpickerHandlers.nome_conexao);
+        SqlCommand comando_SQL;
+        #endregion
+        
+        #region Métodos para o botão 'sair'
         private void btnSair_MouseMove(object sender, MouseEventArgs e)
         {
             btnSair.Font = new System.Drawing.Font("Century Gothic", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
@@ -27,9 +34,8 @@ namespace acroni.Login
         {
             btnSair.Font = new System.Drawing.Font("Century Gothic", 11F, FontStyle.Bold);
         }
-        //Por favor, criar esse usário no computador de vocês (Usuário: Acroni, Senha: Acroni7)
-        SqlConnection conexão_SQL = new SqlConnection(Colorpicker.ColorpickerHandlers.nome_conexao);
-        SqlCommand comando_SQL;
+
+        #endregion
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
@@ -80,6 +86,7 @@ namespace acroni.Login
         {
             txtSenha.isPassword = true;
         }
+
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             this.Hide();

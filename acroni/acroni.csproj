@@ -60,83 +60,84 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Atualizadores\FrmSenha.cs">
+    <Compile Include="Classes internas\Conexao.cs" />
+    <Compile Include="Forms\Atualizadores\FrmSenha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Atualizadores\FrmSenha.Designer.cs">
+    <Compile Include="Forms\Atualizadores\FrmSenha.Designer.cs">
       <DependentUpon>FrmSenha.cs</DependentUpon>
     </Compile>
-    <Compile Include="Atualizadores\FrmUsuario.cs">
+    <Compile Include="Forms\Atualizadores\FrmUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Atualizadores\FrmUsuario.Designer.cs">
+    <Compile Include="Forms\Atualizadores\FrmUsuario.Designer.cs">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cadastro\FrmCadastro.cs">
+    <Compile Include="Forms\Cadastro\FrmCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cadastro\FrmCadastro.Designer.cs">
+    <Compile Include="Forms\Cadastro\FrmCadastro.Designer.cs">
       <DependentUpon>FrmCadastro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cadastro\FrmConfirmarEmail.cs">
+    <Compile Include="Forms\Cadastro\FrmConfirmarEmail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cadastro\FrmConfirmarEmail.Designer.cs">
+    <Compile Include="Forms\Cadastro\FrmConfirmarEmail.Designer.cs">
       <DependentUpon>FrmConfirmarEmail.cs</DependentUpon>
     </Compile>
-    <Compile Include="Colorpicker\ColorpickerHandlers.cs" />
-    <Compile Include="Colorpicker\SetHistColors.cs" />
-    <Compile Include="Colorpicker\SetColorpickerVisibility.cs" />
-    <Compile Include="Fontes\LoadFontes.cs" />
-    <Compile Include="Fontes\Textbox.cs" />
-    <Compile Include="Galeria\Galeria.cs">
+    <Compile Include="Classes FrmMain\Colorpicker\ColorpickerHandlers.cs" />
+    <Compile Include="Classes FrmMain\Colorpicker\SetHistColors.cs" />
+    <Compile Include="Classes FrmMain\Colorpicker\SetColorpickerVisibility.cs" />
+    <Compile Include="Classes FrmMain\Fontes\LoadFontes.cs" />
+    <Compile Include="Classes FrmMain\Fontes\Textbox.cs" />
+    <Compile Include="Forms\Customização\Galeria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Galeria\Galeria.Designer.cs">
+    <Compile Include="Forms\Customização\Galeria.Designer.cs">
       <DependentUpon>Galeria.cs</DependentUpon>
     </Compile>
-    <Compile Include="Layout_Master\LayoutMaster.cs">
+    <Compile Include="Forms\Customização\LayoutMaster.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Layout_Master\LayoutMaster.Designer.cs">
+    <Compile Include="Forms\Customização\LayoutMaster.Designer.cs">
       <DependentUpon>LayoutMaster.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login\FrmLogin.cs">
+    <Compile Include="Forms\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login\FrmLogin.designer.cs">
+    <Compile Include="Forms\FrmLogin.designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm\Acroni.cs">
+    <Compile Include="Forms\Customização\Acroni.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm\Acroni.Designer.cs">
+    <Compile Include="Forms\Customização\Acroni.Designer.cs">
       <DependentUpon>Acroni.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Classes internas\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Atualizadores\FrmSenha.resx">
+    <EmbeddedResource Include="Forms\Atualizadores\FrmSenha.resx">
       <DependentUpon>FrmSenha.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Atualizadores\FrmUsuario.resx">
+    <EmbeddedResource Include="Forms\Atualizadores\FrmUsuario.resx">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cadastro\FrmCadastro.resx">
+    <EmbeddedResource Include="Forms\Cadastro\FrmCadastro.resx">
       <DependentUpon>FrmCadastro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cadastro\FrmConfirmarEmail.resx">
+    <EmbeddedResource Include="Forms\Cadastro\FrmConfirmarEmail.resx">
       <DependentUpon>FrmConfirmarEmail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Galeria\Galeria.resx">
+    <EmbeddedResource Include="Forms\Customização\Galeria.resx">
       <DependentUpon>Galeria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Layout_Master\LayoutMaster.resx">
+    <EmbeddedResource Include="Forms\Customização\LayoutMaster.resx">
       <DependentUpon>LayoutMaster.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login\FrmLogin.resx">
+    <EmbeddedResource Include="Forms\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm\Acroni.resx">
+    <EmbeddedResource Include="Forms\Customização\Acroni.resx">
       <DependentUpon>Acroni.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -150,7 +151,6 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
-    <None Include="MainForm\packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -161,11 +161,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="MainForm\App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Teclado\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

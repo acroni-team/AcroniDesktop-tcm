@@ -8,7 +8,8 @@ namespace acroni.Cadastro
 {
     public partial class FrmConfirmarEmail : Form
     {
-        String email_public, senha_public, usuario_public, tipo_public;
+
+        private String email_public, senha_public, usuario_public, tipo_public;
         public FrmConfirmarEmail(String usuario, String senha, String email, String tipo)
         {
             InitializeComponent();
