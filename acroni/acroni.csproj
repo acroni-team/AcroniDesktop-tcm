@@ -78,6 +78,12 @@
     <Compile Include="Cadastro\FrmCadastro.Designer.cs">
       <DependentUpon>FrmCadastro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cadastro\FrmConfirmarEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro\FrmConfirmarEmail.Designer.cs">
+      <DependentUpon>FrmConfirmarEmail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Colorpicker\ColorpickerHandlers.cs" />
     <Compile Include="Colorpicker\SetHistColors.cs" />
     <Compile Include="Colorpicker\SetColorpickerVisibility.cs" />
@@ -117,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cadastro\FrmCadastro.resx">
       <DependentUpon>FrmCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro\FrmConfirmarEmail.resx">
+      <DependentUpon>FrmConfirmarEmail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Galeria\Galeria.resx">
       <DependentUpon>Galeria.cs</DependentUpon>

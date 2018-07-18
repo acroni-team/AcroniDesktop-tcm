@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
@@ -40,52 +34,34 @@ namespace acroni.Atualizadores
                         conexao_SQL.Open();
 
                     //--Inicializando um comando SELECT para ver se aquele nome já existe
-                    String select = "SELECT usuario FROM tblCliente WHERE usuario IN ('" + txtUsuario.Text + "')";
+                    String select = "SELECT senha FROM tblCliente WHERE senha IN ('" + txtSenha.Text + "')";
                     comando_SQL = new SqlCommand(select, conexao_SQL);
-                    SqlDataReader tem_usuario = comando_SQL.ExecuteReader();
+                    SqlDataReader tem_senha = comando_SQL.ExecuteReader();
 
                     //--Lendo a resposta
-                    tem_usuario.Read();
+                    tem_senha.Read();
 
                     //-- ".HasRows" é uma propriedade que mostra se teve alguma resposta
-                    if (!tem_usuario.HasRows)
+                    if (!tem_senha.HasRows)
                     {
                         //--Fechando o SELECT para poder reutilizar
-                        tem_usuario.Close();
+                        tem_senha.Close();
                         if (validacao_email.IsMatch(txtEmail.Text))
                         {
                             if (txtSenha.Text.Equals(txtRepetirSenha.Text))
                             {
-                                try
-                                {
-                                    //--Abrindo a conexão
-                                    if (conexao_SQL.State != ConnectionState.Open)
-                                        conexao_SQL.Open();
 
-                                    //--Inicializando um comando UPDATE e execuntando
-                                    String update = "UPDATE tblCliente SET usuario = '" + txtUsuario.Text + "',senha = '" + txtSenha.Text + "' WHERE email = '" + txtEmail.Text + "'";
-                                    comando_SQL = new SqlCommand(update, conexao_SQL);
-                                    //--Para executar, utilizo ExecuteNonQuery(), pois ele retorna apenas o numero de linhas afetadas
-                                    int n_linhas_afetadas = comando_SQL.ExecuteNonQuery();
-
-                                    if (n_linhas_afetadas > 0)
-                                    {
-                                        MessageBox.Show("Atualização concluida");
-                                        Colorpicker.ColorpickerHandlers.nome_usuario = txtUsuario.Text;
-                                        atualizacao_SUCCESS = true;
-                                        this.Close();
-                                    }
-                                    else
-                                    {
-                                        MessageBox.Show("Atualização não foi concluida com SUCCESSO");
-                                        txtEmail.ResetText(); txtRepetirSenha.ResetText(); txtSenha.ResetText(); txtUsuario.ResetText();
-                                    }
-                                    //--Fechando a conexão (NÃO ESQUECER!)
-                                    conexao_SQL.Close();
-                                }
-                                catch (Exception ex)
+                                MessageBox.Show("Atualização concluida");
+                                Colorpicker.ColorpickerHandlers.nome_usuario = txtUsuario.Text;
+                                Cadastro.FrmConfirmarEmail frm = new Cadastro.FrmConfirmarEmail(txtUsuario.Text, txtSenha.Text, txtEmail.Text, "senha");
+                                this.Hide();
+                                frm.ShowDialog();
+                                if (Cadastro.FrmConfirmarEmail.atualizacao_SUCCESS)
+                                    this.Close();
+                                else
                                 {
-                                    MessageBox.Show(ex.Message);
+                                    this.Show();
+                                    txtEmail.ResetText(); txtRepetirSenha.ResetText(); txtSenha.ResetText(); txtUsuario.ResetText();
                                 }
                             }
                             else
@@ -102,7 +78,7 @@ namespace acroni.Atualizadores
                     }
                     else
                     {
-                        lblAviso.Text = "Não se repete o nome dos usuários";
+                        lblAviso.Text = "Não se repete a mesma senha que esqueceu";
                         lblAviso.Visible = true;
                     }
                 }

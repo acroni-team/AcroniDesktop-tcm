@@ -91,23 +91,12 @@ namespace acroni.Login
                 this.Close();
         }
 
-        private void lnklblEsqueceuUsuario_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void lnklblEsqueceuSenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
             Atualizadores.FrmUsuario frmAt = new Atualizadores.FrmUsuario();
             frmAt.ShowDialog();
-            if (!Atualizadores.FrmUsuario.atualizacao_SUCCESS)
-                this.Show();
-            else
-                this.Close();
-        }
-
-        private void lnklblEsqueceuSenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            this.Hide();
-            Atualizadores.FrmSenha frmAt = new Atualizadores.FrmSenha();
-            frmAt.ShowDialog();
-            if (!Atualizadores.FrmSenha.atualizacao_SUCCESS)
+            if (Cadastro.FrmConfirmarEmail.atualizacao_SUCCESS)
                 this.Show();
             else
                 this.Close();

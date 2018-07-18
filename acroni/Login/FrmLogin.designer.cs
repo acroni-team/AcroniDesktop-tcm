@@ -41,7 +41,6 @@ namespace acroni.Login
             this.btnCadastrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnEntrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.lnklblEsqueceuSenha = new System.Windows.Forms.LinkLabel();
-            this.lnklblEsqueceuUsuario = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // lblAviso
@@ -197,21 +196,12 @@ namespace acroni.Login
             this.lnklblEsqueceuSenha.TabStop = true;
             this.lnklblEsqueceuSenha.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnklblEsqueceuSenha_LinkClicked);
             // 
-            // lnklblEsqueceuUsuario
-            // 
-            resources.ApplyResources(this.lnklblEsqueceuUsuario, "lnklblEsqueceuUsuario");
-            this.lnklblEsqueceuUsuario.LinkColor = System.Drawing.Color.Lime;
-            this.lnklblEsqueceuUsuario.Name = "lnklblEsqueceuUsuario";
-            this.lnklblEsqueceuUsuario.TabStop = true;
-            this.lnklblEsqueceuUsuario.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnklblEsqueceuUsuario_LinkClicked);
-            // 
             // FrmLogin
             // 
             this.AllowDrop = true;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.Controls.Add(this.lnklblEsqueceuUsuario);
             this.Controls.Add(this.lnklblEsqueceuSenha);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnCadastrar);
@@ -239,7 +229,6 @@ namespace acroni.Login
         protected Bunifu.Framework.UI.BunifuFlatButton btnCadastrar;
         protected Bunifu.Framework.UI.BunifuFlatButton btnEntrar;
         private System.Windows.Forms.LinkLabel lnklblEsqueceuSenha;
-        private System.Windows.Forms.LinkLabel lnklblEsqueceuUsuario;
     }
 }
 
