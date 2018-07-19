@@ -60,7 +60,7 @@ namespace acroni.Cadastro
                     update();
             }else
             {
-                MessageBox.Show(tipo_public.Equals("cadastro") ? "Cadastro concluido" : "Atualização concluida");
+                MessageBox.Show(tipo_public.Equals("cadastro") ? "Cadastro não concluido" : "Atualização não concluida");
                 atualizacao_SUCCESS = false;
                 this.Close();
             }
@@ -149,15 +149,18 @@ namespace acroni.Cadastro
                 String select = "SELECT usuario FROM tblCliente WHERE email = '"+ email_public +"'";
                 comando_SQL = new SqlCommand(select, conexao_SQL);
                 SqlDataReader resposta = comando_SQL.ExecuteReader();
-
+                
                 resposta.Read();
                 String usuario = resposta[0].ToString();
                 resposta.Close();
+                conexao_SQL.Close();
                 return usuario;
             }catch(Exception ex)
             {
                 //MessageBox.Show(ex.Message);
+                conexao_SQL.Close();
                 return usuario_public;
+                
             }
         }
     }
