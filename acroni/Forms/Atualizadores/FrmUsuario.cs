@@ -19,7 +19,7 @@ namespace acroni.Atualizadores
         }
 
         public static bool atualizacao_SUCCESS { get; set; } = false;
-        SqlConnection conexao_SQL = new SqlConnection(Colorpicker.ColorpickerHandlers.nome_conexao);
+        SqlConnection conexao_SQL = new SqlConnection(Classes_internas.Conexao.nome_conexao);
         SqlCommand comando_SQL;
         Regex validacao_email = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
 
@@ -48,26 +48,41 @@ namespace acroni.Atualizadores
                         tem_senha.Close();
                         if (validacao_email.IsMatch(txtEmail.Text))
                         {
-                            if (txtSenha.Text.Equals(txtRepetirSenha.Text))
+                            try
                             {
+                                String select_email = "SELECT email FROM tblCliente WHERE email IN ('"+txtEmail.Text+"')";
+                                comando_SQL = new SqlCommand(select_email, conexao_SQL);
+                                SqlDataReader email_existente = comando_SQL.ExecuteReader();
 
-                                MessageBox.Show("Atualização concluida");
-                                acroni.Classes_internas.Conexao.nome_usuario = txtUsuario.Text;
-                                Cadastro.FrmConfirmarEmail frm = new Cadastro.FrmConfirmarEmail(txtUsuario.Text, txtSenha.Text, txtEmail.Text, "senha");
-                                this.Hide();
-                                frm.ShowDialog();
-                                if (Cadastro.FrmConfirmarEmail.atualizacao_SUCCESS)
-                                    this.Close();
-                                else
+                                if (email_existente.HasRows)
                                 {
-                                    this.Show();
-                                    txtEmail.ResetText(); txtRepetirSenha.ResetText(); txtSenha.ResetText(); txtUsuario.ResetText();
+                                    if (txtSenha.Text.Equals(txtRepetirSenha.Text))
+                                    {
+                                        Cadastro.FrmConfirmarEmail frm = new Cadastro.FrmConfirmarEmail("não_possui", txtSenha.Text, txtEmail.Text, "senha");
+                                        this.Hide();
+                                        frm.ShowDialog();
+                                        if (Cadastro.FrmConfirmarEmail.atualizacao_SUCCESS)
+                                            this.Close();
+                                        else
+                                        {
+                                            this.Show();
+                                            txtEmail.ResetText(); txtRepetirSenha.ResetText(); txtSenha.ResetText();
+                                        }
+                                    }
+                                    else
+                                    {
+                                        lblAviso.Text = "As senhas não são iguais";
+                                        lblAviso.Visible = true;
+                                    }
+                                }else
+                                {
+                                    lblAviso.Text = "Este email não existe";
+                                    lblAviso.Visible = true;
                                 }
                             }
-                            else
+                            catch (Exception ex)
                             {
-                                lblAviso.Text = "As senhas não são iguais";
-                                lblAviso.Visible = true;
+
                             }
                         }
                         else

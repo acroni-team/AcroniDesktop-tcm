@@ -38,7 +38,6 @@
             this.txtRepetirSenha = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtSenha = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtEmail = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtUsuario = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.lblAviso = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -221,7 +220,7 @@
             this.txtSenha.LineIdleColor = System.Drawing.Color.Gray;
             this.txtSenha.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(116)))), ((int)(((byte)(219)))));
             this.txtSenha.LineThickness = 3;
-            this.txtSenha.Location = new System.Drawing.Point(372, 103);
+            this.txtSenha.Location = new System.Drawing.Point(24, 175);
             this.txtSenha.Margin = new System.Windows.Forms.Padding(4);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(318, 44);
@@ -244,7 +243,7 @@
             this.txtEmail.LineIdleColor = System.Drawing.Color.Gray;
             this.txtEmail.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(116)))), ((int)(((byte)(219)))));
             this.txtEmail.LineThickness = 3;
-            this.txtEmail.Location = new System.Drawing.Point(26, 175);
+            this.txtEmail.Location = new System.Drawing.Point(24, 103);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(318, 44);
@@ -252,33 +251,13 @@
             this.txtEmail.TabStop = false;
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // txtUsuario
-            // 
-            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.txtUsuario.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.txtUsuario.HintText = "Usuário";
-            this.txtUsuario.isPassword = false;
-            this.txtUsuario.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
-            this.txtUsuario.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtUsuario.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(116)))), ((int)(((byte)(219)))));
-            this.txtUsuario.LineThickness = 3;
-            this.txtUsuario.Location = new System.Drawing.Point(26, 103);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(318, 44);
-            this.txtUsuario.TabIndex = 70;
-            this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // lblAviso
             // 
             this.lblAviso.AutoSize = true;
             this.lblAviso.Font = new System.Drawing.Font("Century Gothic", 11.25F);
             this.lblAviso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.lblAviso.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblAviso.Location = new System.Drawing.Point(254, 151);
+            this.lblAviso.Location = new System.Drawing.Point(429, 113);
             this.lblAviso.Name = "lblAviso";
             this.lblAviso.Size = new System.Drawing.Size(202, 20);
             this.lblAviso.TabIndex = 74;
@@ -295,7 +274,6 @@
             this.Controls.Add(this.txtRepetirSenha);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.btnVoltar);
@@ -321,7 +299,6 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtRepetirSenha;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtSenha;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtEmail;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtUsuario;
         private System.Windows.Forms.Label lblAviso;
     }
 }

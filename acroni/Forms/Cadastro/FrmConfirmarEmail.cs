@@ -40,6 +40,9 @@ namespace acroni.Cadastro
             //--Enviando o numero para o email da pessoa
             object c = null; EventArgs e = null;
             btnReenviar_Click(c, e);
+
+            //--Mudando o nome do label de acordo com a necessidade
+            lblTitulo.Text = tipo.Equals("cadastro")?"Cadastrando o seu usuário":"Atualizando a sua senha";
         }
         int numero_certo;
         public static bool atualizacao_SUCCESS;
@@ -48,17 +51,16 @@ namespace acroni.Cadastro
             Bunifu.Framework.UI.BunifuFlatButton b = (Bunifu.Framework.UI.BunifuFlatButton)sender;
             if (b.Text.Equals(numero_certo.ToString()))
             {
-                MessageBox.Show("Cadastro concluido");
+                MessageBox.Show(tipo_public.Equals("cadastro") ? "Cadastro concluido" : "Atualização concluida");
                 atualizacao_SUCCESS = true;
                 this.Close();
-                MessageBox.Show(atualizacao_SUCCESS.ToString());
                 if (tipo_public.Equals("cadastro"))
                     insert();
                 else if (tipo_public.Equals("senha"))
                     update();
             }else
             {
-                MessageBox.Show("Cadastro cancelado");
+                MessageBox.Show(tipo_public.Equals("cadastro") ? "Cadastro concluido" : "Atualização concluida");
                 atualizacao_SUCCESS = false;
                 this.Close();
             }
@@ -68,7 +70,7 @@ namespace acroni.Cadastro
         {
             //--Lembrem-se disso como se fosse Excel -> Se () ? então se VERDADEIRO : se FALSO 
             String titulo = (tipo_public.Equals("cadastro")?"Fazendo o seu cadastro":(tipo_public.Equals("senha")?"Atualização de senha":"--Unknown--"));
-            String mensagem = "Olá " + usuario_public + ". O número certo é " + numero_certo;
+            String mensagem = "Olá " + select_usuario() + ". O número certo é " + numero_certo;
             try
             {
                 MailMessage objeto_mail = new MailMessage("acroni.acroni7@gmail.com", email_public, titulo, mensagem);
@@ -80,14 +82,14 @@ namespace acroni.Cadastro
             }
             catch (Exception ex)
             {
-                MessageBox.Show("O email não existe");
+                MessageBox.Show("O email não foi encontrado ou não existe");
                 Application.Exit();
             }
 
         }
 
         //--Inicializando uma conexão e um COMANDO
-        SqlConnection conexao_SQL = new SqlConnection(Colorpicker.ColorpickerHandlers.nome_conexao);
+        SqlConnection conexao_SQL = new SqlConnection(Classes_internas.Conexao.nome_conexao);
         SqlCommand comando_SQL;
 
         private void update()
@@ -99,7 +101,7 @@ namespace acroni.Cadastro
                     conexao_SQL.Open();
 
                 //--Inicializando um comando UPDATE e execuntando
-                String update = "UPDATE tblCliente SET usuario = '" + usuario_public + "',senha = '" + senha_public + "' WHERE email = '" + email_public + "'";
+                String update = "UPDATE tblCliente SET senha = '" + senha_public + "' WHERE email = '" + email_public + "'";
                 comando_SQL = new SqlCommand(update, conexao_SQL);
                 //--Para executar, utilizo ExecuteNonQuery(), pois ele retorna apenas o numero de linhas afetadas
                 int n_linhas_afetadas = comando_SQL.ExecuteNonQuery();
@@ -134,6 +136,28 @@ namespace acroni.Cadastro
             {
                 MessageBox.Show(ex.Message);
                 conexao_SQL.Close();
+            }
+        }
+
+        private String select_usuario()
+        {
+            try
+            {
+                if (conexao_SQL.State == ConnectionState.Closed)
+                    conexao_SQL.Open();
+
+                String select = "SELECT usuario FROM tblCliente WHERE email = '"+ email_public +"'";
+                comando_SQL = new SqlCommand(select, conexao_SQL);
+                SqlDataReader resposta = comando_SQL.ExecuteReader();
+
+                resposta.Read();
+                String usuario = resposta[0].ToString();
+                resposta.Close();
+                return usuario;
+            }catch(Exception ex)
+            {
+                //MessageBox.Show(ex.Message);
+                return usuario_public;
             }
         }
     }

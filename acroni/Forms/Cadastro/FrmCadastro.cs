@@ -26,7 +26,7 @@ namespace acroni.Cadastro
         public static bool cadastro_SUCCESS = false;
 
         //--Inicializando uma conexão e um COMANDO
-        SqlConnection conexao_SQL = new SqlConnection(Colorpicker.ColorpickerHandlers.nome_conexao);
+        SqlConnection conexao_SQL = new SqlConnection(Classes_internas.Conexao.nome_conexao);
         SqlCommand comando_SQL;
         Regex validacao_email = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
         private void btnCadastrar_Click(object sender, EventArgs e)
@@ -61,7 +61,7 @@ namespace acroni.Cadastro
 
                             //--Inicializando um comando SELECT para ver se aquele nome já existe
                             String select_usuario = "SELECT usuario FROM tblCliente WHERE usuario IN ('" + txtUsuario.Text + "')";
-                            comando_SQL = new SqlCommand(select, conexao_SQL);
+                            comando_SQL = new SqlCommand(select_usuario, conexao_SQL);
                             SqlDataReader tem_usuario = comando_SQL.ExecuteReader();
 
                             //--Lendo a resposta
@@ -76,7 +76,7 @@ namespace acroni.Cadastro
                                 if (txtSenha.Text.Equals(txtRepetirSenha.Text))
                                 {
                                     cadastro_SUCCESS = true;
-                                    Colorpicker.ColorpickerHandlers.nome_usuario = txtUsuario.Text;
+                                    Classes_internas.Conexao.nome_usuario = txtUsuario.Text;
                                     this.Hide();
                                     FrmConfirmarEmail frm = new FrmConfirmarEmail(txtUsuario.Text, txtSenha.Text, txtEmail.Text, "cadastro");
                                     frm.ShowDialog();

@@ -37,7 +37,7 @@
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.btnReenviar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.SuspendLayout();
             // 
@@ -185,18 +185,18 @@
             this.label1.Text = "Um número foi enviado para o email da sua conta. Por favor, selecione o número re" +
     "cebido";
             // 
-            // label16
+            // lblTitulo
             // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Century Gothic", 12.25F, System.Drawing.FontStyle.Bold);
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.label16.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label16.Location = new System.Drawing.Point(20, 35);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(220, 19);
-            this.label16.TabIndex = 72;
-            this.label16.Text = "Atualizando o seu usuário";
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitulo.Font = new System.Drawing.Font("Century Gothic", 12.25F, System.Drawing.FontStyle.Bold);
+            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.lblTitulo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblTitulo.Location = new System.Drawing.Point(20, 35);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(220, 19);
+            this.lblTitulo.TabIndex = 72;
+            this.lblTitulo.Text = "Atualizando o seu usuário";
             // 
             // btnReenviar
             // 
@@ -243,12 +243,13 @@
             this.ClientSize = new System.Drawing.Size(437, 256);
             this.Controls.Add(this.btnReenviar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label16);
+            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnOption3);
             this.Controls.Add(this.btnOption2);
             this.Controls.Add(this.btnOption1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmConfirmarEmail";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmConfirmarEmail";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -265,7 +266,7 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lblTitulo;
         protected Bunifu.Framework.UI.BunifuFlatButton btnReenviar;
     }
 }

@@ -62,7 +62,6 @@ C:\Users\gui_m\Desktop\Projetos\csharp\acroni\obj\Debug\acroni.csproj.CopyComple
 C:\Users\gui_m\Desktop\Projetos\csharp\acroni\obj\Debug\acroni.exe
 C:\Users\gui_m\Desktop\Projetos\csharp\acroni\obj\Debug\acroni.pdb
 C:\Users\gui_m\Desktop\Projetos\csharp\acroni\obj\Debug\acroni.Atualizadores.FrmUsuario.resources
-C:\Users\gui_m\Desktop\Projetos\csharp\acroni\obj\Debug\acroni.Atualizadores.FrmSenha.resources
 C:\Users\gui_m\Desktop\Projetos\csharp\acroni\obj\Debug\acroni.Cadastro.FrmConfirmarEmail.resources
 C:\Users\gmininsk\Desktop\c\csharp\acroni\bin\Debug\acroni.exe.config
 C:\Users\gmininsk\Desktop\c\csharp\acroni\bin\Debug\acroni.exe

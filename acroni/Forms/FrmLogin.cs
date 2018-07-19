@@ -15,7 +15,7 @@ namespace acroni.Login
 
         #region Objetos do banco
         //Usuário para lançar o script do banco: (Usuário: Acroni, Senha: Acroni7)
-        SqlConnection conexão_SQL = new SqlConnection(Colorpicker.ColorpickerHandlers.nome_conexao);
+        SqlConnection conexão_SQL = new SqlConnection(Classes_internas.Conexao.nome_conexao);
         SqlCommand comando_SQL;
         #endregion
         
@@ -60,7 +60,7 @@ namespace acroni.Login
                     if (resposta[0].ToString().Equals(txtSenha.Text))
                     {
                         this.Close();
-                        Colorpicker.ColorpickerHandlers.nome_usuario = txtEntrar.Text;
+                        Classes_internas.Conexao.nome_usuario = txtEntrar.Text;
                     }
                     else
                     {

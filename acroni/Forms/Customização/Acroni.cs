@@ -20,7 +20,7 @@ namespace acroni
             FrmLogin frmLogin = new FrmLogin();
             frmLogin.ShowDialog();
             InitializeComponent();
-            trocar_nome_usuario(ColorpickerHandlers.nome_usuario);
+            trocar_nome_usuario(Classes_internas.Conexao.nome_usuario);
         }
 
         #region Métodos do colorpicker
