@@ -33,11 +33,6 @@ namespace acroni.Layout_Master
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LayoutMaster));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.btnAbrirAcroni = new System.Windows.Forms.Button();
-            this.btnAbrirGaleria = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lblFecharForm = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,84 +43,17 @@ namespace acroni.Layout_Master
             this.bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.panel2.SuspendLayout();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuElipse1
             // 
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
-            // 
-            // btnAbrirAcroni
-            // 
-            this.btnAbrirAcroni.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.btnAbrirAcroni.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAbrirAcroni.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnAbrirAcroni.FlatAppearance.BorderSize = 0;
-            this.btnAbrirAcroni.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAbrirAcroni.Font = new System.Drawing.Font("Open Sans", 12.25F);
-            this.btnAbrirAcroni.Location = new System.Drawing.Point(800, 50);
-            this.btnAbrirAcroni.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAbrirAcroni.Name = "btnAbrirAcroni";
-            this.btnAbrirAcroni.Size = new System.Drawing.Size(500, 59);
-            this.btnAbrirAcroni.TabIndex = 6;
-            this.btnAbrirAcroni.Text = "Customizar";
-            this.btnAbrirAcroni.UseVisualStyleBackColor = false;
-            this.btnAbrirAcroni.Click += new System.EventHandler(this.btnAbrirAcroni_Click);
-            // 
-            // btnAbrirGaleria
-            // 
-            this.btnAbrirGaleria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
-            this.btnAbrirGaleria.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAbrirGaleria.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnAbrirGaleria.FlatAppearance.BorderSize = 0;
-            this.btnAbrirGaleria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAbrirGaleria.Font = new System.Drawing.Font("Open Sans", 12.25F);
-            this.btnAbrirGaleria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.btnAbrirGaleria.Location = new System.Drawing.Point(314, 50);
-            this.btnAbrirGaleria.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAbrirGaleria.Name = "btnAbrirGaleria";
-            this.btnAbrirGaleria.Size = new System.Drawing.Size(486, 59);
-            this.btnAbrirGaleria.TabIndex = 5;
-            this.btnAbrirGaleria.Text = "Minha galeria";
-            this.btnAbrirGaleria.UseVisualStyleBackColor = false;
-            this.btnAbrirGaleria.Click += new System.EventHandler(this.btnAbrirGaleria_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.panel2.Controls.Add(this.lblFecharForm);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1300, 50);
-            this.panel2.TabIndex = 7;
-            // 
-            // lblFecharForm
-            // 
-            this.lblFecharForm.AutoSize = true;
-            this.lblFecharForm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblFecharForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecharForm.ForeColor = System.Drawing.Color.White;
-            this.lblFecharForm.Location = new System.Drawing.Point(1235, 13);
-            this.lblFecharForm.Name = "lblFecharForm";
-            this.lblFecharForm.Size = new System.Drawing.Size(26, 25);
-            this.lblFecharForm.TabIndex = 8;
-            this.lblFecharForm.Text = "X";
-            this.lblFecharForm.Click += new System.EventHandler(this.lblFecharForm_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1235, 13);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(26, 25);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "X";
             // 
             // panel1
             // 
@@ -140,9 +68,9 @@ namespace acroni.Layout_Master
             this.panel1.Controls.Add(this.bunifuThinButton22);
             this.panel1.Controls.Add(this.bunifuThinButton21);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 50);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(321, 670);
+            this.panel1.Size = new System.Drawing.Size(321, 720);
             this.panel1.TabIndex = 8;
             // 
             // label9
@@ -151,7 +79,7 @@ namespace acroni.Layout_Master
             this.label9.Font = new System.Drawing.Font("Open Sans", 25.25F, System.Drawing.FontStyle.Bold);
             this.label9.Location = new System.Drawing.Point(345, 557);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(174, 46);
+            this.label9.Size = new System.Drawing.Size(172, 46);
             this.label9.TabIndex = 4;
             this.label9.Text = "CT430-FX";
             // 
@@ -162,7 +90,7 @@ namespace acroni.Layout_Master
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(53, 61);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(174, 64);
+            this.label3.Size = new System.Drawing.Size(179, 64);
             this.label3.TabIndex = 4;
             this.label3.Text = "Acroni";
             // 
@@ -313,24 +241,61 @@ namespace acroni.Layout_Master
             this.bunifuThinButton21.TabIndex = 2;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.Location = new System.Drawing.Point(1204, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(36, 23);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "-";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.Location = new System.Drawing.Point(1236, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(46, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1299, 37);
+            this.panel2.TabIndex = 10;
+            // 
             // LayoutMaster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1300, 720);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.btnAbrirAcroni);
-            this.Controls.Add(this.btnAbrirGaleria);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LayoutMaster";
             this.Text = "LayoutMaster";
-            //this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_MouseDown);
-            //this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form_MouseMove);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -338,11 +303,6 @@ namespace acroni.Layout_Master
         #endregion
 
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private System.Windows.Forms.Button btnAbrirAcroni;
-        private System.Windows.Forms.Button btnAbrirGaleria;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lblFecharForm;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label3;
@@ -353,5 +313,8 @@ namespace acroni.Layout_Master
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton23;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton22;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

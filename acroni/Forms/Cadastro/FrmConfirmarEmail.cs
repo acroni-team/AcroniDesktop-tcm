@@ -80,7 +80,7 @@ namespace acroni.Cadastro
                 client.EnableSsl = true;
                 client.Send(objeto_mail);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("O email não foi encontrado ou não existe");
                 Application.Exit();
@@ -155,7 +155,8 @@ namespace acroni.Cadastro
                 resposta.Close();
                 conexao_SQL.Close();
                 return usuario;
-            }catch(Exception ex)
+            }
+            catch (Exception)
             {
                 //MessageBox.Show(ex.Message);
                 conexao_SQL.Close();

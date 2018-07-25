@@ -80,7 +80,7 @@ namespace acroni.Atualizadores
                                     lblAviso.Visible = true;
                                 }
                             }
-                            catch (Exception ex)
+                            catch (Exception)
                             {
 
                             }

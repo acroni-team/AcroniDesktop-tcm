@@ -70,7 +70,6 @@ C:\Users\gmininsk\Desktop\c\csharp\acroni\bin\Debug\FormsDesign.dll
 C:\Users\gmininsk\Desktop\c\csharp\acroni\bin\Debug\Microsoft.AnalysisServices.dll
 C:\Users\gmininsk\Desktop\c\csharp\acroni\bin\Debug\FormsDesign.pdb
 C:\Users\gmininsk\Desktop\c\csharp\acroni\obj\Debug\acroni.csprojAssemblyReference.cache
-C:\Users\gmininsk\Desktop\c\csharp\acroni\obj\Debug\acroni.Atualizadores.FrmSenha.resources
 C:\Users\gmininsk\Desktop\c\csharp\acroni\obj\Debug\acroni.Atualizadores.FrmUsuario.resources
 C:\Users\gmininsk\Desktop\c\csharp\acroni\obj\Debug\acroni.Cadastro.FrmCadastro.resources
 C:\Users\gmininsk\Desktop\c\csharp\acroni\obj\Debug\acroni.Cadastro.FrmConfirmarEmail.resources
