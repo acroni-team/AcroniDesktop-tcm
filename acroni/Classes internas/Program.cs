@@ -16,7 +16,7 @@ namespace acroni
        {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Acroni());
+            Application.Run(new Layout_Master.LayoutMaster());
         }
     }
 }

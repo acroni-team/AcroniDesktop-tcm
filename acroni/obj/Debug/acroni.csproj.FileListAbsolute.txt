@@ -63,13 +63,10 @@ C:\Users\gui_m\Desktop\Projetos\csharp\acroni\obj\Debug\acroni.exe
 C:\Users\gui_m\Desktop\Projetos\csharp\acroni\obj\Debug\acroni.pdb
 C:\Users\gui_m\Desktop\Projetos\csharp\acroni\obj\Debug\acroni.Atualizadores.FrmUsuario.resources
 C:\Users\gui_m\Desktop\Projetos\csharp\acroni\obj\Debug\acroni.Cadastro.FrmConfirmarEmail.resources
-C:\Users\gmininsk\Desktop\c\csharp\acroni\bin\Debug\acroni.exe.config
 C:\Users\gmininsk\Desktop\c\csharp\acroni\bin\Debug\acroni.exe
-C:\Users\gmininsk\Desktop\c\csharp\acroni\bin\Debug\acroni.pdb
 C:\Users\gmininsk\Desktop\c\csharp\acroni\bin\Debug\FormsDesign.dll
+C:\Users\gmininsk\Desktop\c\csharp\acroni\bin\Debug\acroni.exe.config
 C:\Users\gmininsk\Desktop\c\csharp\acroni\bin\Debug\Microsoft.AnalysisServices.dll
-C:\Users\gmininsk\Desktop\c\csharp\acroni\bin\Debug\FormsDesign.pdb
-C:\Users\gmininsk\Desktop\c\csharp\acroni\obj\Debug\acroni.csprojAssemblyReference.cache
 C:\Users\gmininsk\Desktop\c\csharp\acroni\obj\Debug\acroni.Atualizadores.FrmUsuario.resources
 C:\Users\gmininsk\Desktop\c\csharp\acroni\obj\Debug\acroni.Cadastro.FrmCadastro.resources
 C:\Users\gmininsk\Desktop\c\csharp\acroni\obj\Debug\acroni.Cadastro.FrmConfirmarEmail.resources
@@ -83,3 +80,5 @@ C:\Users\gmininsk\Desktop\c\csharp\acroni\obj\Debug\acroni.csproj.CoreCompileInp
 C:\Users\gmininsk\Desktop\c\csharp\acroni\obj\Debug\acroni.csproj.CopyComplete
 C:\Users\gmininsk\Desktop\c\csharp\acroni\obj\Debug\acroni.exe
 C:\Users\gmininsk\Desktop\c\csharp\acroni\obj\Debug\acroni.pdb
+C:\Users\gmininsk\Desktop\c\csharp\acroni\bin\Debug\FormsDesign.pdb
+C:\Users\gmininsk\Desktop\c\csharp\acroni\bin\Debug\acroni.pdb
