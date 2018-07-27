@@ -3,13 +3,18 @@ using System.Windows.Forms;
 using System.Net.Mail;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.IO;
 
 namespace acroni.Cadastro
 {
     public partial class FrmConfirmarEmail : Form
     {
 
-        private String email_public, senha_public, usuario_public, tipo_public;
+        private String email_public, senha_public, usuario_public, tipo_public, localizacao_img_public;
+        private Image imagem_cliente_public;
+
+        #region Construtor em mudança de senha
         public FrmConfirmarEmail(String usuario, String senha, String email, String tipo)
         {
             InitializeComponent();
@@ -44,8 +49,50 @@ namespace acroni.Cadastro
             //--Mudando o nome do label de acordo com a necessidade
             lblTitulo.Text = tipo.Equals("cadastro")?"Cadastrando o seu usuário":"Atualizando a sua senha";
         }
+        #endregion
+
+        #region Construtor em cadastro
+        public FrmConfirmarEmail(String usuario, String senha, String email, String tipo, Image imagem_cliente, String localizacao_img)
+        {
+            InitializeComponent();
+            //--Gerando os números para se colocar nos botões
+            Random numero = new Random();
+            int[] numeros = new int[3];
+            numeros[0] = numero.Next(1, 100);
+            for (int i = 1; i < 3; i++)
+            {
+                int n = numero.Next(1, 100);
+                while (n == numeros[i - 1])
+                    n = numero.Next(1, 100);
+                numeros[i] = n;
+            }
+            btnOption1.Text = numeros[0].ToString();
+            btnOption2.Text = numeros[1].ToString();
+            btnOption3.Text = numeros[2].ToString();
+
+            //--Escolhendo um número aleatório para ser o certo
+            numero_certo = numeros[numero.Next(3)];
+
+            //--Retiranado as variaveis do construtor (já validadas)
+            usuario_public = usuario;
+            senha_public = senha;
+            email_public = email;
+            tipo_public = tipo;
+            imagem_cliente_public = imagem_cliente;
+            localizacao_img_public = localizacao_img;
+
+            //--Enviando o numero para o email da pessoa
+            object c = null; EventArgs e = null;
+            btnReenviar_Click(c, e);
+
+            //--Mudando o nome do label de acordo com a necessidade
+            lblTitulo.Text = tipo.Equals("cadastro") ? "Cadastrando o seu usuário" : "Atualizando a sua senha";
+        }
+        #endregion
+
         int numero_certo;
         public static bool atualizacao_SUCCESS;
+
         private void buttonClicked(object sender, EventArgs e)
         {
             Bunifu.Framework.UI.BunifuFlatButton b = (Bunifu.Framework.UI.BunifuFlatButton)sender;
@@ -124,9 +171,18 @@ namespace acroni.Cadastro
                 if (conexao_SQL.State != ConnectionState.Open)
                     conexao_SQL.Open();
 
+                byte[] img = null;
+
+                //--Lendo a imagem e a convertendo em array binário
+                FileStream leitor_imagem = new FileStream(localizacao_img_public, FileMode.Open, FileAccess.Read);
+                BinaryReader convertedor_binario = new BinaryReader(leitor_imagem);
+                img = convertedor_binario.ReadBytes((int)leitor_imagem.Length);
+
                 //--Inicializando um comando INSERT e execuntando
-                String insert = "INSERT INTO tblCliente VALUES ('" + usuario_public + "','" + senha_public + "','" + email_public + "')";
+                String insert = "INSERT INTO tblCliente VALUES ('" + usuario_public + "','" + senha_public + "','" + email_public + "',@img)";
                 comando_SQL = new SqlCommand(insert, conexao_SQL);
+                comando_SQL.Parameters.AddWithValue("@img", img);
+
                 //--Para executar, utilizo ExecuteNonQuery(), pois ele retorna apenas o numero de linhas afetadas
                 int n_linhas_afetadas = comando_SQL.ExecuteNonQuery();
                 //--Fechando a conexão (NÃO ESQUECER!)

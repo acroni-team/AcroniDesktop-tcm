@@ -78,10 +78,13 @@ namespace acroni.Cadastro
                                     cadastro_SUCCESS = true;
                                     Classes_internas.Conexao.nome_usuario = txtUsuario.Text;
                                     this.Hide();
-                                    FrmConfirmarEmail frm = new FrmConfirmarEmail(txtUsuario.Text, txtSenha.Text, txtEmail.Text, "cadastro");
+                                    FrmConfirmarEmail frm = new FrmConfirmarEmail(txtUsuario.Text, txtSenha.Text, txtEmail.Text, "cadastro", fotoCliente.Image, loc_img);
                                     frm.ShowDialog();
                                     if (FrmConfirmarEmail.atualizacao_SUCCESS)
+                                    {
                                         this.Close();
+                                        Classes_internas.Conexao.imagem_cliente = fotoCliente.Image;
+                                    }
                                     else
                                     {
                                         this.Show();
@@ -159,6 +162,30 @@ namespace acroni.Cadastro
         private void txtRepetirSenha_OnValueChanged(object sender, EventArgs e)
         {
             txtRepetirSenha.isPassword = true;
+        }
+        private String loc_img;
+        private void btnProcurarImagem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //--Abrindo o explorador de arquivos para selecionar uma imagem
+                OpenFileDialog procurador_de_imagens = new OpenFileDialog();
+                procurador_de_imagens.Filter = "Arquivos JPG (*.jpg)|*.jpg|Arquivos GIF (*.gif)|*.gif|Arquivos PNG (*.png)|*.png|Todos arquivos (*.*)|*.*";
+                procurador_de_imagens.Title = "Selecione uma Imagem :D";
+
+                //--Checando se foi selecionado alguma imagem
+                if (procurador_de_imagens.ShowDialog() == DialogResult.OK)
+                {
+                    fotoCliente.ImageLocation = procurador_de_imagens.FileName.ToString();
+                    loc_img = procurador_de_imagens.FileName.ToString();
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

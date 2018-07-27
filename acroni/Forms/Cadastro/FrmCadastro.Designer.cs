@@ -39,6 +39,9 @@
             this.btnSair = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnCadastrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnVoltar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.fotoCliente = new System.Windows.Forms.PictureBox();
+            this.btnProcurarImagem = new Bunifu.Framework.UI.BunifuFlatButton();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoCliente)).BeginInit();
             this.SuspendLayout();
             // 
             // label16
@@ -273,12 +276,61 @@
             this.btnVoltar.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
+            // fotoCliente
+            // 
+            this.fotoCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.fotoCliente.Location = new System.Drawing.Point(716, 26);
+            this.fotoCliente.Name = "fotoCliente";
+            this.fotoCliente.Size = new System.Drawing.Size(100, 115);
+            this.fotoCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.fotoCliente.TabIndex = 67;
+            this.fotoCliente.TabStop = false;
+            // 
+            // btnProcurarImagem
+            // 
+            this.btnProcurarImagem.Activecolor = System.Drawing.Color.DodgerBlue;
+            this.btnProcurarImagem.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnProcurarImagem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnProcurarImagem.BorderRadius = 5;
+            this.btnProcurarImagem.ButtonText = "Procurar imagem";
+            this.btnProcurarImagem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProcurarImagem.DisabledColor = System.Drawing.Color.Gray;
+            this.btnProcurarImagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnProcurarImagem.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnProcurarImagem.Iconimage = null;
+            this.btnProcurarImagem.Iconimage_right = null;
+            this.btnProcurarImagem.Iconimage_right_Selected = null;
+            this.btnProcurarImagem.Iconimage_Selected = null;
+            this.btnProcurarImagem.IconMarginLeft = 0;
+            this.btnProcurarImagem.IconMarginRight = 0;
+            this.btnProcurarImagem.IconRightVisible = true;
+            this.btnProcurarImagem.IconRightZoom = 0D;
+            this.btnProcurarImagem.IconVisible = true;
+            this.btnProcurarImagem.IconZoom = 90D;
+            this.btnProcurarImagem.IsTab = false;
+            this.btnProcurarImagem.Location = new System.Drawing.Point(716, 169);
+            this.btnProcurarImagem.Margin = new System.Windows.Forms.Padding(0);
+            this.btnProcurarImagem.Name = "btnProcurarImagem";
+            this.btnProcurarImagem.Normalcolor = System.Drawing.Color.DodgerBlue;
+            this.btnProcurarImagem.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(255)))));
+            this.btnProcurarImagem.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnProcurarImagem.selected = false;
+            this.btnProcurarImagem.Size = new System.Drawing.Size(100, 44);
+            this.btnProcurarImagem.TabIndex = 68;
+            this.btnProcurarImagem.Text = "Procurar imagem";
+            this.btnProcurarImagem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnProcurarImagem.Textcolor = System.Drawing.Color.White;
+            this.btnProcurarImagem.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProcurarImagem.Click += new System.EventHandler(this.btnProcurarImagem_Click);
+            // 
             // FrmCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(712, 256);
+            this.ClientSize = new System.Drawing.Size(843, 256);
+            this.Controls.Add(this.btnProcurarImagem);
+            this.Controls.Add(this.fotoCliente);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.btnVoltar);
@@ -294,6 +346,7 @@
             this.Name = "FrmCadastro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmCadastro";
+            ((System.ComponentModel.ISupportInitialize)(this.fotoCliente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -311,5 +364,7 @@
         protected Bunifu.Framework.UI.BunifuFlatButton btnSair;
         protected Bunifu.Framework.UI.BunifuFlatButton btnCadastrar;
         protected Bunifu.Framework.UI.BunifuFlatButton btnVoltar;
+        protected Bunifu.Framework.UI.BunifuFlatButton btnProcurarImagem;
+        private System.Windows.Forms.PictureBox fotoCliente;
     }
 }

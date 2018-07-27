@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using static FormsDesign.FormDrag;
 using System.Drawing;
+using System.IO;
 
 namespace acroni.Layout_Master
 {
@@ -23,7 +24,7 @@ namespace acroni.Layout_Master
                 c.MouseDown += new System.Windows.Forms.MouseEventHandler(Form_MouseDown);
                 c.MouseMove += new System.Windows.Forms.MouseEventHandler(Form_MouseMove);
             }
-            #endregion
+            #endregion    
         }
 
         #region Métodos de abrir formulários
@@ -39,10 +40,9 @@ namespace acroni.Layout_Master
         #endregion
 
 
-        public void trocar_nome_usuario(String usuario)
-        {
-            lblNomeUsuario.Text = usuario;
-        }
+        public void trocar_nome_usuario(String usuario) => lblNomeUsuario.Text = usuario;
+
+        public void trocar_imagem_usuario(Image imagem) => fotoUsuario.Image = imagem;
 
         #region Métodos para transição de cores do botão 
         private void bunifuImageButton1_MouseMove(object sender, MouseEventArgs e)
@@ -69,7 +69,7 @@ namespace acroni.Layout_Master
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Application.Exit();
         }
 
         private void bunifuImageButton2_Click(object sender, EventArgs e)

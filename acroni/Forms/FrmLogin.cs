@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace acroni.Login
 {
@@ -61,6 +62,7 @@ namespace acroni.Login
                     {
                         this.Close();
                         Classes_internas.Conexao.nome_usuario = txtEntrar.Text;
+                        
                     }
                     else
                     {
@@ -93,11 +95,13 @@ namespace acroni.Login
             Cadastro.FrmCadastro fc = new Cadastro.FrmCadastro();
             fc.ShowDialog();
             if (!Cadastro.FrmCadastro.cadastro_SUCCESS)
+            {
                 this.Show();
+            }
             else
                 this.Close();
         }
-
+        
         private void lnklblEsqueceuSenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
