@@ -128,7 +128,6 @@ namespace acroni
                     {
                         MemoryStream leitor_memoria = new MemoryStream(img);
                         imagem_retorno = Image.FromStream(leitor_memoria);
-                        MessageBox.Show(imagem_retorno.ToString());
                     }
 
                     //--Fechando a resposta para poder usá-la novamente (NÃO ESQUECER!)

@@ -94,7 +94,7 @@
             this.btnSair.IconVisible = true;
             this.btnSair.IconZoom = 90D;
             this.btnSair.IsTab = false;
-            this.btnSair.Location = new System.Drawing.Point(361, 24);
+            this.btnSair.Location = new System.Drawing.Point(372, 103);
             this.btnSair.Margin = new System.Windows.Forms.Padding(0);
             this.btnSair.Name = "btnSair";
             this.btnSair.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
@@ -131,7 +131,7 @@
             this.btnAtualizar.IconVisible = true;
             this.btnAtualizar.IconZoom = 90D;
             this.btnAtualizar.IsTab = false;
-            this.btnAtualizar.Location = new System.Drawing.Point(470, 24);
+            this.btnAtualizar.Location = new System.Drawing.Point(481, 103);
             this.btnAtualizar.Margin = new System.Windows.Forms.Padding(0);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Normalcolor = System.Drawing.Color.DodgerBlue;
@@ -168,7 +168,7 @@
             this.btnVoltar.IconVisible = true;
             this.btnVoltar.IconZoom = 90D;
             this.btnVoltar.IsTab = false;
-            this.btnVoltar.Location = new System.Drawing.Point(584, 24);
+            this.btnVoltar.Location = new System.Drawing.Point(595, 103);
             this.btnVoltar.Margin = new System.Windows.Forms.Padding(0);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Normalcolor = System.Drawing.Color.DodgerBlue;
@@ -257,7 +257,7 @@
             this.lblAviso.Font = new System.Drawing.Font("Century Gothic", 11.25F);
             this.lblAviso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.lblAviso.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblAviso.Location = new System.Drawing.Point(429, 113);
+            this.lblAviso.Location = new System.Drawing.Point(408, 35);
             this.lblAviso.Name = "lblAviso";
             this.lblAviso.Size = new System.Drawing.Size(202, 20);
             this.lblAviso.TabIndex = 74;
