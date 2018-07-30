@@ -18,29 +18,14 @@ namespace acroni.Cadastro
         public FrmConfirmarEmail(String usuario, String senha, String email, String tipo)
         {
             InitializeComponent();
-            //--Gerando os números para se colocar nos botões
-            Random numero = new Random();
-            int[] numeros = new int[3];
-            numeros[0] = numero.Next(1, 100);
-            for (int i = 1; i < 3; i++)
-            {
-                int n = numero.Next(1,100);
-                while (n == numeros[i - 1])
-                    n = numero.Next(1, 100);
-                numeros[i] = n;
-            }
-            btnOption1.Text = numeros[0].ToString();
-            btnOption2.Text = numeros[1].ToString();
-            btnOption3.Text = numeros[2].ToString();
-
-            //--Escolhendo um número aleatório para ser o certo
-            numero_certo = numeros[numero.Next(3)];
 
             //--Retiranado as variaveis do construtor (já validadas)
             usuario_public = usuario;
             senha_public = senha;
             email_public = email;
             tipo_public = tipo;
+            
+            gerar_string_confirmacao();
 
             //--Enviando o numero para o email da pessoa
             object c = null; EventArgs e = null;
@@ -55,24 +40,7 @@ namespace acroni.Cadastro
         public FrmConfirmarEmail(String usuario, String senha, String email, String tipo, Image imagem_cliente, String localizacao_img)
         {
             InitializeComponent();
-            //--Gerando os números para se colocar nos botões
-            Random numero = new Random();
-            int[] numeros = new int[3];
-            numeros[0] = numero.Next(1, 100);
-            for (int i = 1; i < 3; i++)
-            {
-                int n = numero.Next(1, 100);
-                while (n == numeros[i - 1])
-                    n = numero.Next(1, 100);
-                numeros[i] = n;
-            }
-            btnOption1.Text = numeros[0].ToString();
-            btnOption2.Text = numeros[1].ToString();
-            btnOption3.Text = numeros[2].ToString();
-
-            //--Escolhendo um número aleatório para ser o certo
-            numero_certo = numeros[numero.Next(3)];
-
+            
             //--Retiranado as variaveis do construtor (já validadas)
             usuario_public = usuario;
             senha_public = senha;
@@ -80,6 +48,8 @@ namespace acroni.Cadastro
             tipo_public = tipo;
             imagem_cliente_public = imagem_cliente;
             localizacao_img_public = localizacao_img;
+
+            gerar_string_confirmacao();
 
             //--Enviando o numero para o email da pessoa
             object c = null; EventArgs e = null;
@@ -90,46 +60,29 @@ namespace acroni.Cadastro
         }
         #endregion
 
-        int numero_certo;
+        
         public static bool atualizacao_SUCCESS;
-
-        private void buttonClicked(object sender, EventArgs e)
-        {
-            Bunifu.Framework.UI.BunifuFlatButton b = (Bunifu.Framework.UI.BunifuFlatButton)sender;
-            if (b.Text.Equals(numero_certo.ToString()))
-            {
-                MessageBox.Show(tipo_public.Equals("cadastro") ? "Cadastro concluido" : "Atualização concluida");
-                atualizacao_SUCCESS = true;
-                this.Close();
-                if (tipo_public.Equals("cadastro"))
-                    insert();
-                else if (tipo_public.Equals("senha"))
-                    update();
-            }else
-            {
-                MessageBox.Show(tipo_public.Equals("cadastro") ? "Cadastro não concluido" : "Atualização não concluida");
-                atualizacao_SUCCESS = false;
-                this.Close();
-            }
-        }
         
         private void btnReenviar_Click(object sender, EventArgs e)
         {
             //--Lembrem-se disso como se fosse Excel -> Se () ? então se VERDADEIRO : se FALSO 
             String titulo = (tipo_public.Equals("cadastro")?"Fazendo o seu cadastro":(tipo_public.Equals("senha")?"Atualização de senha":"--Unknown--"));
-            String mensagem = "Olá " + select_usuario() + ". O número certo é " + numero_certo;
+            //String mensagem = "Olá " + select_usuario() + ". O número certo é " + numero_certo;
+            String mensagem = "Olá " + select_usuario() + ".\nInsira o código para confirmar " + (tipo_public.Equals("cadastro")? "o seu cadastro." : "a sua atualização de senha.") + "\n\n" + String_de_confirmacao;
             try
             {
                 MailMessage objeto_mail = new MailMessage("acroni.acroni7@gmail.com", email_public, titulo, mensagem);
                 SmtpClient client = new SmtpClient("smtp.gmail.com");
                 client.Port = 587;
+                //client.Credentials = new System.Net.NetworkCredential("noreply@acroni.rf.gd", "facilbaba1234");
                 client.Credentials = new System.Net.NetworkCredential("acroni.acroni7@gmail.com", "acroni77");
                 client.EnableSsl = true;
                 client.Send(objeto_mail);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("O email não foi encontrado ou não existe");
+                MessageBox.Show("Você nâo está conectado à internet neste momento \nTente novamente mais tarde");
+                //MessageBox.Show("O email não foi encontrado ou não existe");
                 Application.Exit();
             }
 
@@ -161,6 +114,26 @@ namespace acroni.Cadastro
                 conexao_SQL.Close();
             }
 
+        }
+
+        private void btnEnviar_Click(object sender, EventArgs e)
+        {
+            if (txtCodigo.Text.Equals(String_de_confirmacao))
+            {
+                MessageBox.Show(tipo_public.Equals("cadastro") ? "Cadastro concluido" : "Atualização concluida");
+                atualizacao_SUCCESS = true;
+                this.Close();
+                if (tipo_public.Equals("cadastro"))
+                    insert();
+                else if (tipo_public.Equals("senha"))
+                    update();
+            }
+            else
+            {
+                MessageBox.Show(tipo_public.Equals("cadastro") ? "Cadastro não concluido" : "Atualização não concluida");
+                atualizacao_SUCCESS = false;
+                this.Close();
+            }
         }
 
         private void insert()
@@ -218,6 +191,24 @@ namespace acroni.Cadastro
                 conexao_SQL.Close();
                 return usuario_public;
                 
+            }
+        }
+        String String_de_confirmacao = "";
+        private void gerar_string_confirmacao()
+        {
+            //--Continuar mudança
+            char[] alfabeto = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
+            Random r = new Random();
+            for (int i = 0; i < 7; i++) {
+                if (r.Next(2) == 0)
+                {
+                    //alfabeto
+                    String_de_confirmacao += alfabeto[r.Next(26)];
+                }else
+                {
+                    //numero
+                    String_de_confirmacao += r.Next(10);
+                }
             }
         }
     }
