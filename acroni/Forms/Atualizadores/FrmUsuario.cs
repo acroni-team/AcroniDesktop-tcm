@@ -58,9 +58,11 @@ namespace acroni.Atualizadores
                                 {
                                     if (txtSenha.Text.Equals(txtRepetirSenha.Text))
                                     {
-                                        Cadastro.FrmConfirmarEmail frm = new Cadastro.FrmConfirmarEmail("não_possui", txtSenha.Text, txtEmail.Text, "senha");
                                         this.Hide();
+                                        Cadastro.FrmConfirmarEmail frm = new Cadastro.FrmConfirmarEmail("não_possui", txtSenha.Text, txtEmail.Text, "senha");
+                                        
                                         frm.ShowDialog();
+                                        
                                         if (Cadastro.FrmConfirmarEmail.atualizacao_SUCCESS)
                                             this.Close();
                                         else

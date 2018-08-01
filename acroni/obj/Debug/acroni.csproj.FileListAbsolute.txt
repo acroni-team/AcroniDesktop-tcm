@@ -102,3 +102,4 @@ C:\Users\gui_m\Desktop\Projetos\TCM - 2\csharp\acroni\obj\Debug\acroni.csproj.Co
 C:\Users\gui_m\Desktop\Projetos\TCM - 2\csharp\acroni\obj\Debug\acroni.csproj.CopyComplete
 C:\Users\gui_m\Desktop\Projetos\TCM - 2\csharp\acroni\obj\Debug\acroni.exe
 C:\Users\gui_m\Desktop\Projetos\TCM - 2\csharp\acroni\obj\Debug\acroni.pdb
+C:\Users\gui_m\Desktop\Projetos\TCM - 2\csharp\acroni\obj\Debug\acroni.SplashEscrita.resources

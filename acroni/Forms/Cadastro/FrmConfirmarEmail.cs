@@ -5,20 +5,30 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
+using System.Threading;
 
 namespace acroni.Cadastro
 {
+    
     public partial class FrmConfirmarEmail : Form
     {
+        private void Start_SplashScreen()
+        {
+            Application.Run(new SplashEscrita());
+        }
 
-        private String email_public, senha_public, usuario_public, tipo_public, localizacao_img_public;
+        private String email_public, senha_public, usuario_public, tipo_public, localizacao_img_public, String_de_confirmacao = "";
         private Image imagem_cliente_public;
+        public static bool atualizacao_SUCCESS;
 
         #region Construtor em mudança de senha
         public FrmConfirmarEmail(String usuario, String senha, String email, String tipo)
         {
-            InitializeComponent();
+            Thread t_splash = new Thread(new ThreadStart(Start_SplashScreen));
+            t_splash.Start();
 
+            InitializeComponent();
+            
             //--Retiranado as variaveis do construtor (já validadas)
             usuario_public = usuario;
             senha_public = senha;
@@ -33,12 +43,15 @@ namespace acroni.Cadastro
 
             //--Mudando o nome do label de acordo com a necessidade
             lblTitulo.Text = tipo.Equals("cadastro")?"Cadastrando o seu usuário":"Atualizando a sua senha";
+            t_splash.Abort();
         }
         #endregion
 
         #region Construtor em cadastro
         public FrmConfirmarEmail(String usuario, String senha, String email, String tipo, Image imagem_cliente, String localizacao_img)
         {
+            Thread t_splash = new Thread(new ThreadStart(Start_SplashScreen));
+            t_splash.Start();
             InitializeComponent();
             
             //--Retiranado as variaveis do construtor (já validadas)
@@ -57,11 +70,9 @@ namespace acroni.Cadastro
 
             //--Mudando o nome do label de acordo com a necessidade
             lblTitulo.Text = tipo.Equals("cadastro") ? "Cadastrando o seu usuário" : "Atualizando a sua senha";
+            t_splash.Abort();
         }
         #endregion
-
-        
-        public static bool atualizacao_SUCCESS;
         
         private void btnReenviar_Click(object sender, EventArgs e)
         {
@@ -193,7 +204,7 @@ namespace acroni.Cadastro
                 
             }
         }
-        String String_de_confirmacao = "";
+
         private void gerar_string_confirmacao()
         {
             //--Continuar mudança

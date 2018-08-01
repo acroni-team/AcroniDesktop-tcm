@@ -10,7 +10,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
-
+using System.Threading;
 namespace acroni
 {
     public partial class Acroni : LayoutMaster
@@ -18,11 +18,20 @@ namespace acroni
         /// <summary>
         /// Construtor que carrega o login. 
         /// </summary>
+
+            public void initialize_Splash()
+            {
+            Application.Run(new SplashEscrita());
+            }
+
         public Acroni()
         {
+            Thread t_splash = new Thread(new ThreadStart(initialize_Splash));
+            t_splash.Start();
             FrmLogin frmLogin = new FrmLogin();
-            frmLogin.ShowDialog();
             InitializeComponent();
+            t_splash.Abort();
+            frmLogin.ShowDialog();
             trocar_nome_usuario(Classes_internas.Conexao.nome_usuario);
             trocar_imagem_usuario(selecionar_imagem_cliente());
         }

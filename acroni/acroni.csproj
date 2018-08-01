@@ -125,6 +125,12 @@
       <DependentUpon>Acroni.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes internas\Program.cs" />
+    <Compile Include="Forms\Splashy\SplashEscrita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Splashy\SplashEscrita.designer.cs">
+      <DependentUpon>SplashEscrita.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Atualizadores\FrmUsuario.resx">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
@@ -146,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Customização\Acroni.resx">
       <DependentUpon>Acroni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Splashy\SplashEscrita.resx">
+      <DependentUpon>SplashEscrita.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
