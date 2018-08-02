@@ -133,5 +133,15 @@ namespace acroni.Atualizadores
         {
             this.Close();
         }
+
+        private void txtSenha_OnValueChanged(object sender, EventArgs e)
+        {
+            txtSenha.isPassword = true;
+        }
+
+        private void txtRepetirSenha_OnValueChanged(object sender, EventArgs e)
+        {
+            txtRepetirSenha.isPassword = true;
+        }
     }
 }

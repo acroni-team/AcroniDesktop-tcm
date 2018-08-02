@@ -79,7 +79,7 @@
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(318, 44);
-            this.txtUsuario.TabIndex = 59;
+            this.txtUsuario.TabIndex = 1;
             this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtEmail
@@ -97,12 +97,11 @@
             this.txtEmail.LineIdleColor = System.Drawing.Color.Gray;
             this.txtEmail.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(116)))), ((int)(((byte)(219)))));
             this.txtEmail.LineThickness = 3;
-            this.txtEmail.Location = new System.Drawing.Point(24, 169);
+            this.txtEmail.Location = new System.Drawing.Point(370, 97);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(318, 44);
-            this.txtEmail.TabIndex = 60;
-            this.txtEmail.TabStop = false;
+            this.txtEmail.TabIndex = 2;
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtRepetirSenha
@@ -113,7 +112,7 @@
             this.txtRepetirSenha.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtRepetirSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.txtRepetirSenha.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.txtRepetirSenha.HintText = "Senha";
+            this.txtRepetirSenha.HintText = "Repetir Senha";
             this.txtRepetirSenha.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.txtRepetirSenha.isPassword = false;
             this.txtRepetirSenha.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
@@ -124,9 +123,7 @@
             this.txtRepetirSenha.Margin = new System.Windows.Forms.Padding(4);
             this.txtRepetirSenha.Name = "txtRepetirSenha";
             this.txtRepetirSenha.Size = new System.Drawing.Size(318, 44);
-            this.txtRepetirSenha.TabIndex = 62;
-            this.txtRepetirSenha.TabStop = false;
-            this.txtRepetirSenha.Text = "Repetir Senha";
+            this.txtRepetirSenha.TabIndex = 4;
             this.txtRepetirSenha.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtRepetirSenha.OnValueChanged += new System.EventHandler(this.txtRepetirSenha_OnValueChanged);
             // 
@@ -137,18 +134,17 @@
             this.txtSenha.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.txtSenha.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.txtSenha.HintText = "Usuário";
+            this.txtSenha.HintText = "Senha";
             this.txtSenha.isPassword = false;
             this.txtSenha.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
             this.txtSenha.LineIdleColor = System.Drawing.Color.Gray;
             this.txtSenha.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(116)))), ((int)(((byte)(219)))));
             this.txtSenha.LineThickness = 3;
-            this.txtSenha.Location = new System.Drawing.Point(370, 97);
+            this.txtSenha.Location = new System.Drawing.Point(24, 169);
             this.txtSenha.Margin = new System.Windows.Forms.Padding(4);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(318, 44);
-            this.txtSenha.TabIndex = 61;
-            this.txtSenha.Text = "Senha";
+            this.txtSenha.TabIndex = 3;
             this.txtSenha.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtSenha.OnValueChanged += new System.EventHandler(this.txtSenha_OnValueChanged);
             // 
@@ -195,7 +191,7 @@
             this.btnSair.OnHoverTextColor = System.Drawing.Color.White;
             this.btnSair.selected = false;
             this.btnSair.Size = new System.Drawing.Size(95, 42);
-            this.btnSair.TabIndex = 66;
+            this.btnSair.TabIndex = 6;
             this.btnSair.Text = "Sair";
             this.btnSair.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSair.Textcolor = System.Drawing.Color.White;
@@ -232,7 +228,7 @@
             this.btnCadastrar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnCadastrar.selected = false;
             this.btnCadastrar.Size = new System.Drawing.Size(100, 42);
-            this.btnCadastrar.TabIndex = 65;
+            this.btnCadastrar.TabIndex = 7;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCadastrar.Textcolor = System.Drawing.Color.White;
@@ -269,7 +265,7 @@
             this.btnVoltar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnVoltar.selected = false;
             this.btnVoltar.Size = new System.Drawing.Size(95, 42);
-            this.btnVoltar.TabIndex = 64;
+            this.btnVoltar.TabIndex = 8;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnVoltar.Textcolor = System.Drawing.Color.White;
@@ -316,7 +312,7 @@
             this.btnProcurarImagem.OnHoverTextColor = System.Drawing.Color.White;
             this.btnProcurarImagem.selected = false;
             this.btnProcurarImagem.Size = new System.Drawing.Size(100, 44);
-            this.btnProcurarImagem.TabIndex = 68;
+            this.btnProcurarImagem.TabIndex = 5;
             this.btnProcurarImagem.Text = "Procurar imagem";
             this.btnProcurarImagem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnProcurarImagem.Textcolor = System.Drawing.Color.White;

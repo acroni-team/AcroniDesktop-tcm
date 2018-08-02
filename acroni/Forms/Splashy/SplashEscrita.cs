@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+﻿using System.Drawing;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -69,17 +63,16 @@ namespace acroni
         }
 
         private async void piscSlash()
-        {  for (int ps = 0; ps < 2; ps++)
-            {
-                
+        {
+            for (int ps = 0; ps < 2; ps++)
+            {    
                 //MessageBox.Show(lblAcroni.GetNextControl(new Label(), true).GetType().ToString());
                 (lblAcroni.GetNextControl(new Label(), true) as Panel).Visible = false;
                 await Task.Delay(500);
                 
                 (lblAcroni.GetNextControl(new Label(), true) as Panel).Visible = true;
                 await Task.Delay(500);
-            }
-            
+            }   
         }
         //private async void fadeIn()
         //{

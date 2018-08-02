@@ -19,18 +19,18 @@ namespace acroni
         /// Construtor que carrega o login. 
         /// </summary>
 
-            public void initialize_Splash()
-            {
-            Application.Run(new SplashEscrita());
-            }
+            //public void initialize_Splash()
+            //{
+            //Application.Run(new SplashEscrita());
+            //}
 
         public Acroni()
         {
-            Thread t_splash = new Thread(new ThreadStart(initialize_Splash));
-            t_splash.Start();
+            //Thread t_splash = new Thread(new ThreadStart(initialize_Splash));
+            //t_splash.Start();
             FrmLogin frmLogin = new FrmLogin();
             InitializeComponent();
-            t_splash.Abort();
+            //t_splash.Abort();
             frmLogin.ShowDialog();
             trocar_nome_usuario(Classes_internas.Conexao.nome_usuario);
             trocar_imagem_usuario(selecionar_imagem_cliente());

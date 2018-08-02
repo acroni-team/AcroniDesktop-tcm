@@ -94,7 +94,7 @@
             this.btnSair.IconVisible = true;
             this.btnSair.IconZoom = 90D;
             this.btnSair.IsTab = false;
-            this.btnSair.Location = new System.Drawing.Point(372, 103);
+            this.btnSair.Location = new System.Drawing.Point(361, 25);
             this.btnSair.Margin = new System.Windows.Forms.Padding(0);
             this.btnSair.Name = "btnSair";
             this.btnSair.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
@@ -102,7 +102,7 @@
             this.btnSair.OnHoverTextColor = System.Drawing.Color.White;
             this.btnSair.selected = false;
             this.btnSair.Size = new System.Drawing.Size(95, 42);
-            this.btnSair.TabIndex = 69;
+            this.btnSair.TabIndex = 6;
             this.btnSair.Text = "Sair";
             this.btnSair.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSair.Textcolor = System.Drawing.Color.White;
@@ -131,7 +131,7 @@
             this.btnAtualizar.IconVisible = true;
             this.btnAtualizar.IconZoom = 90D;
             this.btnAtualizar.IsTab = false;
-            this.btnAtualizar.Location = new System.Drawing.Point(481, 103);
+            this.btnAtualizar.Location = new System.Drawing.Point(470, 25);
             this.btnAtualizar.Margin = new System.Windows.Forms.Padding(0);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Normalcolor = System.Drawing.Color.DodgerBlue;
@@ -139,7 +139,7 @@
             this.btnAtualizar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnAtualizar.selected = false;
             this.btnAtualizar.Size = new System.Drawing.Size(100, 42);
-            this.btnAtualizar.TabIndex = 68;
+            this.btnAtualizar.TabIndex = 4;
             this.btnAtualizar.Text = "Atualizar";
             this.btnAtualizar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAtualizar.Textcolor = System.Drawing.Color.White;
@@ -168,7 +168,7 @@
             this.btnVoltar.IconVisible = true;
             this.btnVoltar.IconZoom = 90D;
             this.btnVoltar.IsTab = false;
-            this.btnVoltar.Location = new System.Drawing.Point(595, 103);
+            this.btnVoltar.Location = new System.Drawing.Point(584, 25);
             this.btnVoltar.Margin = new System.Windows.Forms.Padding(0);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Normalcolor = System.Drawing.Color.DodgerBlue;
@@ -176,7 +176,7 @@
             this.btnVoltar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnVoltar.selected = false;
             this.btnVoltar.Size = new System.Drawing.Size(95, 42);
-            this.btnVoltar.TabIndex = 67;
+            this.btnVoltar.TabIndex = 5;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnVoltar.Textcolor = System.Drawing.Color.White;
@@ -191,7 +191,7 @@
             this.txtRepetirSenha.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtRepetirSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.txtRepetirSenha.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.txtRepetirSenha.HintText = "Senha";
+            this.txtRepetirSenha.HintText = "Repetir Senha";
             this.txtRepetirSenha.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.txtRepetirSenha.isPassword = false;
             this.txtRepetirSenha.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
@@ -202,10 +202,9 @@
             this.txtRepetirSenha.Margin = new System.Windows.Forms.Padding(4);
             this.txtRepetirSenha.Name = "txtRepetirSenha";
             this.txtRepetirSenha.Size = new System.Drawing.Size(318, 44);
-            this.txtRepetirSenha.TabIndex = 73;
-            this.txtRepetirSenha.TabStop = false;
-            this.txtRepetirSenha.Text = "Repetir Senha";
+            this.txtRepetirSenha.TabIndex = 3;
             this.txtRepetirSenha.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtRepetirSenha.OnValueChanged += new System.EventHandler(this.txtRepetirSenha_OnValueChanged);
             // 
             // txtSenha
             // 
@@ -214,7 +213,7 @@
             this.txtSenha.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.txtSenha.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.txtSenha.HintText = "Usuário";
+            this.txtSenha.HintText = "Senha";
             this.txtSenha.isPassword = false;
             this.txtSenha.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
             this.txtSenha.LineIdleColor = System.Drawing.Color.Gray;
@@ -224,9 +223,9 @@
             this.txtSenha.Margin = new System.Windows.Forms.Padding(4);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(318, 44);
-            this.txtSenha.TabIndex = 72;
-            this.txtSenha.Text = "Senha";
+            this.txtSenha.TabIndex = 2;
             this.txtSenha.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtSenha.OnValueChanged += new System.EventHandler(this.txtSenha_OnValueChanged);
             // 
             // txtEmail
             // 
@@ -247,7 +246,7 @@
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(318, 44);
-            this.txtEmail.TabIndex = 71;
+            this.txtEmail.TabIndex = 1;
             this.txtEmail.TabStop = false;
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -257,7 +256,7 @@
             this.lblAviso.Font = new System.Drawing.Font("Century Gothic", 11.25F);
             this.lblAviso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.lblAviso.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblAviso.Location = new System.Drawing.Point(408, 35);
+            this.lblAviso.Location = new System.Drawing.Point(433, 110);
             this.lblAviso.Name = "lblAviso";
             this.lblAviso.Size = new System.Drawing.Size(202, 20);
             this.lblAviso.TabIndex = 74;
