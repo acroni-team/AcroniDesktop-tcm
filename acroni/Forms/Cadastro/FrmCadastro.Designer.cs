@@ -41,6 +41,7 @@
             this.btnVoltar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.fotoCliente = new System.Windows.Forms.PictureBox();
             this.btnProcurarImagem = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnImaginario = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.fotoCliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -319,12 +320,23 @@
             this.btnProcurarImagem.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProcurarImagem.Click += new System.EventHandler(this.btnProcurarImagem_Click);
             // 
+            // btnImaginario
+            // 
+            this.btnImaginario.Location = new System.Drawing.Point(356, 154);
+            this.btnImaginario.Name = "btnImaginario";
+            this.btnImaginario.Size = new System.Drawing.Size(0, 0);
+            this.btnImaginario.TabIndex = 68;
+            this.btnImaginario.UseVisualStyleBackColor = true;
+            this.btnImaginario.Click += new System.EventHandler(this.btnCadastrar_Click);
+            // 
             // FrmCadastro
             // 
+            this.AcceptButton = this.btnImaginario;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(843, 256);
+            this.Controls.Add(this.btnImaginario);
             this.Controls.Add(this.btnProcurarImagem);
             this.Controls.Add(this.fotoCliente);
             this.Controls.Add(this.btnSair);
@@ -362,5 +374,6 @@
         protected Bunifu.Framework.UI.BunifuFlatButton btnVoltar;
         protected Bunifu.Framework.UI.BunifuFlatButton btnProcurarImagem;
         private System.Windows.Forms.PictureBox fotoCliente;
+        private System.Windows.Forms.Button btnImaginario;
     }
 }

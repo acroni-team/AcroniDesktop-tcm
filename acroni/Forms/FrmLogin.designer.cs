@@ -41,6 +41,7 @@ namespace acroni.Login
             this.btnEntrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.lnklblEsqueceuSenha = new System.Windows.Forms.LinkLabel();
             this.btnCadastrar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnImaginario = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblAviso
@@ -196,12 +197,21 @@ namespace acroni.Login
             this.btnCadastrar.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
+            // btnImaginario
+            // 
+            resources.ApplyResources(this.btnImaginario, "btnImaginario");
+            this.btnImaginario.Name = "btnImaginario";
+            this.btnImaginario.UseVisualStyleBackColor = true;
+            this.btnImaginario.Click += new System.EventHandler(this.btnEntrar_Click);
+            // 
             // FrmLogin
             // 
+            this.AcceptButton = this.btnImaginario;
             this.AllowDrop = true;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.Controls.Add(this.btnImaginario);
             this.Controls.Add(this.lnklblEsqueceuSenha);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnCadastrar);
@@ -229,6 +239,7 @@ namespace acroni.Login
         protected Bunifu.Framework.UI.BunifuFlatButton btnEntrar;
         private System.Windows.Forms.LinkLabel lnklblEsqueceuSenha;
         protected Bunifu.Framework.UI.BunifuFlatButton btnCadastrar;
+        private System.Windows.Forms.Button btnImaginario;
     }
 }
 

@@ -39,6 +39,7 @@
             this.txtSenha = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtEmail = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.lblAviso = new System.Windows.Forms.Label();
+            this.btnImaginario = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -263,12 +264,23 @@
             this.lblAviso.Text = "Usuário ou senha inválidos";
             this.lblAviso.Visible = false;
             // 
+            // btnImaginario
+            // 
+            this.btnImaginario.Location = new System.Drawing.Point(358, 159);
+            this.btnImaginario.Name = "btnImaginario";
+            this.btnImaginario.Size = new System.Drawing.Size(0, 0);
+            this.btnImaginario.TabIndex = 75;
+            this.btnImaginario.UseVisualStyleBackColor = true;
+            this.btnImaginario.Click += new System.EventHandler(this.btnAtualizar_Click);
+            // 
             // FrmUsuario
             // 
+            this.AcceptButton = this.btnImaginario;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(712, 256);
+            this.Controls.Add(this.btnImaginario);
             this.Controls.Add(this.lblAviso);
             this.Controls.Add(this.txtRepetirSenha);
             this.Controls.Add(this.txtSenha);
@@ -299,5 +311,6 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtSenha;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtEmail;
         private System.Windows.Forms.Label lblAviso;
+        private System.Windows.Forms.Button btnImaginario;
     }
 }

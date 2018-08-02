@@ -140,7 +140,7 @@ namespace acroni.Cadastro
                     update();
             }
             else
-            {
+            { 
                 MessageBox.Show(tipo_public.Equals("cadastro") ? "Cadastro não concluido" : "Atualização não concluida");
                 atualizacao_SUCCESS = false;
                 this.Close();

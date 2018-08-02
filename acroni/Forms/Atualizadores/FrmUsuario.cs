@@ -78,6 +78,7 @@ namespace acroni.Atualizadores
                                     }
                                 }else
                                 {
+                                    email_existente.Close();
                                     lblAviso.Text = "Este email não existe";
                                     lblAviso.Visible = true;
                                 }
@@ -95,6 +96,7 @@ namespace acroni.Atualizadores
                     }
                     else
                     {
+                        tem_senha.Close();
                         lblAviso.Text = "Não se repete a mesma senha que esqueceu";
                         lblAviso.Visible = true;
                     }
