@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< HEAD:acroni/Forms/Customizacao/Compacto.Designer.cs
             this.components = new System.ComponentModel.Container();
+=======
+>>>>>>> 8a77b57f7efeb3af93650277e76aa1b2849fcdf3:acroni/Forms/Customizacao/Compacto.Designer.cs
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Compacto));
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtSelectFont = new System.Windows.Forms.TextBox();
@@ -82,6 +85,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+<<<<<<< HEAD:acroni/Forms/Customizacao/Compacto.Designer.cs
             this.pnlCorEscolhida = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.lblNomeCor = new System.Windows.Forms.Label();
@@ -112,13 +116,18 @@
             this.pnlColor = new System.Windows.Forms.Panel();
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+=======
+>>>>>>> 8a77b57f7efeb3af93650277e76aa1b2849fcdf3:acroni/Forms/Customizacao/Compacto.Designer.cs
             this.panel3.SuspendLayout();
             this.pnlHistorico.SuspendLayout();
             this.pnlColorpicker.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+<<<<<<< HEAD:acroni/Forms/Customizacao/Compacto.Designer.cs
             this.pnlCorEscolhida.SuspendLayout();
             this.panel7.SuspendLayout();
+=======
+>>>>>>> 8a77b57f7efeb3af93650277e76aa1b2849fcdf3:acroni/Forms/Customizacao/Compacto.Designer.cs
             this.SuspendLayout();
             // 
             // panel3
@@ -804,6 +813,7 @@
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
+<<<<<<< HEAD:acroni/Forms/Customizacao/Compacto.Designer.cs
             // pnlCorEscolhida
             // 
             this.pnlCorEscolhida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
@@ -1097,12 +1107,17 @@
             this.bunifuElipse2.ElipseRadius = 10;
             this.bunifuElipse2.TargetControl = this.pnlCorEscolhida;
             // 
+=======
+>>>>>>> 8a77b57f7efeb3af93650277e76aa1b2849fcdf3:acroni/Forms/Customizacao/Compacto.Designer.cs
             // Compacto
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1300, 720);
+<<<<<<< HEAD:acroni/Forms/Customizacao/Compacto.Designer.cs
             this.Controls.Add(this.pnlCorEscolhida);
+=======
+>>>>>>> 8a77b57f7efeb3af93650277e76aa1b2849fcdf3:acroni/Forms/Customizacao/Compacto.Designer.cs
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel4);
             this.ForeColor = System.Drawing.Color.White;
@@ -1110,7 +1125,10 @@
             this.Load += new System.EventHandler(this.Acroni_Load);
             this.Controls.SetChildIndex(this.panel4, 0);
             this.Controls.SetChildIndex(this.pictureBox1, 0);
+<<<<<<< HEAD:acroni/Forms/Customizacao/Compacto.Designer.cs
             this.Controls.SetChildIndex(this.pnlCorEscolhida, 0);
+=======
+>>>>>>> 8a77b57f7efeb3af93650277e76aa1b2849fcdf3:acroni/Forms/Customizacao/Compacto.Designer.cs
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.pnlHistorico.ResumeLayout(false);
@@ -1118,9 +1136,12 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+<<<<<<< HEAD:acroni/Forms/Customizacao/Compacto.Designer.cs
             this.pnlCorEscolhida.ResumeLayout(false);
             this.pnlCorEscolhida.PerformLayout();
             this.panel7.ResumeLayout(false);
+=======
+>>>>>>> 8a77b57f7efeb3af93650277e76aa1b2849fcdf3:acroni/Forms/Customizacao/Compacto.Designer.cs
             this.ResumeLayout(false);
 
         }
@@ -1178,6 +1199,7 @@
         private System.Windows.Forms.ComboBox cmbFonts;
         private System.Windows.Forms.Label lblDefinirParaTodasAsTeclas;
         private System.Windows.Forms.PictureBox pictureBox1;
+<<<<<<< HEAD:acroni/Forms/Customizacao/Compacto.Designer.cs
         private System.Windows.Forms.Panel pnlCorEscolhida;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label lblNomeCor;
@@ -1208,6 +1230,8 @@
         private System.Windows.Forms.Panel pnlColor;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
+=======
+>>>>>>> 8a77b57f7efeb3af93650277e76aa1b2849fcdf3:acroni/Forms/Customizacao/Compacto.Designer.cs
     }
 }
 
