@@ -53,7 +53,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
-    <Reference Include="FormsDesign">
+    <Reference Include="FormsDesign, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\FormsDesign\bin\Debug\FormsDesign.dll</HintPath>
     </Reference>
     <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -77,10 +78,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes internas\Conexao.cs" />
-    <Compile Include="Forms\Atualizadores\FrmUsuario.cs">
+    <Compile Include="Forms\Atualizar cadastro\FrmUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Atualizadores\FrmUsuario.Designer.cs">
+    <Compile Include="Forms\Atualizar cadastro\FrmUsuario.Designer.cs">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Cadastro\FrmCadastro.cs">
@@ -89,27 +90,39 @@
     <Compile Include="Forms\Cadastro\FrmCadastro.Designer.cs">
       <DependentUpon>FrmCadastro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Cadastro\FrmConfirmarEmail.cs">
+    <Compile Include="Forms\Atualizar cadastro\FrmConfirmarEmail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Cadastro\FrmConfirmarEmail.Designer.cs">
+    <Compile Include="Forms\Atualizar cadastro\FrmConfirmarEmail.Designer.cs">
       <DependentUpon>FrmConfirmarEmail.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes FrmMain\Colorpicker\ColorpickerHandlers.cs" />
-    <Compile Include="Classes FrmMain\Colorpicker\SetHistColors.cs" />
-    <Compile Include="Classes FrmMain\Colorpicker\SetColorpickerVisibility.cs" />
-    <Compile Include="Classes FrmMain\Fontes\LoadFontes.cs" />
-    <Compile Include="Classes FrmMain\Fontes\Textbox.cs" />
-    <Compile Include="Forms\Customização\Galeria.cs">
+    <Compile Include="Forms\Customizacao\Fullsize.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Customização\Galeria.Designer.cs">
+    <Compile Include="Forms\Customizacao\Fullsize.Designer.cs">
+      <DependentUpon>Fullsize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customizacao\Tenkeyless.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customizacao\Tenkeyless.Designer.cs">
+      <DependentUpon>Tenkeyless.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Metodos de customizacao\Colorpicker\ColorpickerHandlers.cs" />
+    <Compile Include="Metodos de customizacao\Colorpicker\SetHistColors.cs" />
+    <Compile Include="Metodos de customizacao\Colorpicker\SetColorpickerVisibility.cs" />
+    <Compile Include="Metodos de customizacao\Fontes\LoadFontes.cs" />
+    <Compile Include="Metodos de customizacao\Fontes\Textbox.cs" />
+    <Compile Include="Forms\Customizacao\Galeria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customizacao\Galeria.Designer.cs">
       <DependentUpon>Galeria.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Customização\LayoutMaster.cs">
+    <Compile Include="Forms\LayoutMaster.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Customização\LayoutMaster.Designer.cs">
+    <Compile Include="Forms\LayoutMaster.Designer.cs">
       <DependentUpon>LayoutMaster.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmLogin.cs">
@@ -118,42 +131,51 @@
     <Compile Include="Forms\FrmLogin.designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Customização\Acroni.cs">
+    <Compile Include="Forms\Customizacao\Compacto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Customização\Acroni.Designer.cs">
-      <DependentUpon>Acroni.cs</DependentUpon>
+    <Compile Include="Forms\Customizacao\Compacto.Designer.cs">
+      <DependentUpon>Compacto.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes internas\Program.cs" />
-    <Compile Include="Forms\Splashy\SplashEscrita.cs">
+    <Compile Include="Forms\Selecao do teclado\SelecionarTeclado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Splashy\SplashEscrita.designer.cs">
+    <Compile Include="Forms\Selecao do teclado\SelecionarTeclado.Designer.cs">
+      <DependentUpon>SelecionarTeclado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Splash\SplashEscrita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Splash\SplashEscrita.designer.cs">
       <DependentUpon>SplashEscrita.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\Atualizadores\FrmUsuario.resx">
+    <EmbeddedResource Include="Forms\Atualizar cadastro\FrmUsuario.resx">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Cadastro\FrmCadastro.resx">
       <DependentUpon>FrmCadastro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Cadastro\FrmConfirmarEmail.resx">
+    <EmbeddedResource Include="Forms\Atualizar cadastro\FrmConfirmarEmail.resx">
       <DependentUpon>FrmConfirmarEmail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Customização\Galeria.resx">
+    <EmbeddedResource Include="Forms\Customizacao\Galeria.resx">
       <DependentUpon>Galeria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Customização\LayoutMaster.resx">
+    <EmbeddedResource Include="Forms\LayoutMaster.resx">
       <DependentUpon>LayoutMaster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Customização\Acroni.resx">
-      <DependentUpon>Acroni.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Customizacao\Compacto.resx">
+      <DependentUpon>Compacto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Splashy\SplashEscrita.resx">
+    <EmbeddedResource Include="Forms\Selecao do teclado\SelecionarTeclado.resx">
+      <DependentUpon>SelecionarTeclado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Splash\SplashEscrita.resx">
       <DependentUpon>SplashEscrita.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

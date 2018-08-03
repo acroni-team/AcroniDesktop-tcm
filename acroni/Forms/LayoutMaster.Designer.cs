@@ -1,5 +1,4 @@
 ﻿using System.Windows.Forms;
-using FormsDesign;
 
 namespace acroni.Layout_Master
 {
@@ -38,9 +37,10 @@ namespace acroni.Layout_Master
             this.panel3 = new System.Windows.Forms.Panel();
             this.logo = new System.Windows.Forms.Label();
             this.pnlEsquerdo = new System.Windows.Forms.Panel();
-            this.bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuThinButton24 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnAbrirGaleria = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnAbrirSelecaoDeTeclado = new Bunifu.Framework.UI.BunifuThinButton2();
             this.pnlUsuario = new System.Windows.Forms.Panel();
+            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.fotoUsuario = new System.Windows.Forms.PictureBox();
             this.lblNomeUsuario = new System.Windows.Forms.Label();
             this.pnlSuperior = new System.Windows.Forms.Panel();
@@ -55,7 +55,7 @@ namespace acroni.Layout_Master
             this.ePnlUsuario = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.ePnlEsquerdo = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.eFotoUsuario = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnContinuarCustomizando = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnlEsquerdo.SuspendLayout();
@@ -108,63 +108,66 @@ namespace acroni.Layout_Master
             // pnlEsquerdo
             // 
             this.pnlEsquerdo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.pnlEsquerdo.Controls.Add(this.bunifuThinButton23);
-            this.pnlEsquerdo.Controls.Add(this.bunifuThinButton24);
+            this.pnlEsquerdo.Controls.Add(this.btnAbrirGaleria);
+            this.pnlEsquerdo.Controls.Add(this.btnContinuarCustomizando);
+            this.pnlEsquerdo.Controls.Add(this.btnAbrirSelecaoDeTeclado);
             this.pnlEsquerdo.Location = new System.Drawing.Point(26, 162);
             this.pnlEsquerdo.Margin = new System.Windows.Forms.Padding(0);
             this.pnlEsquerdo.Name = "pnlEsquerdo";
             this.pnlEsquerdo.Size = new System.Drawing.Size(295, 330);
             this.pnlEsquerdo.TabIndex = 6;
             // 
-            // bunifuThinButton23
+            // btnAbrirGaleria
             // 
-            this.bunifuThinButton23.ActiveBorderThickness = 1;
-            this.bunifuThinButton23.ActiveCornerRadius = 20;
-            this.bunifuThinButton23.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.bunifuThinButton23.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton23.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.bunifuThinButton23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.bunifuThinButton23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton23.BackgroundImage")));
-            this.bunifuThinButton23.ButtonText = "Minha galeria";
-            this.bunifuThinButton23.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton23.Font = new System.Drawing.Font("Open Sans", 15.25F);
-            this.bunifuThinButton23.ForeColor = System.Drawing.Color.White;
-            this.bunifuThinButton23.IdleBorderThickness = 2;
-            this.bunifuThinButton23.IdleCornerRadius = 2;
-            this.bunifuThinButton23.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.bunifuThinButton23.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton23.IdleLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton23.Location = new System.Drawing.Point(47, 46);
-            this.bunifuThinButton23.Margin = new System.Windows.Forms.Padding(0);
-            this.bunifuThinButton23.Name = "bunifuThinButton23";
-            this.bunifuThinButton23.Size = new System.Drawing.Size(215, 60);
-            this.bunifuThinButton23.TabIndex = 2;
-            this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAbrirGaleria.ActiveBorderThickness = 1;
+            this.btnAbrirGaleria.ActiveCornerRadius = 20;
+            this.btnAbrirGaleria.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnAbrirGaleria.ActiveForecolor = System.Drawing.Color.White;
+            this.btnAbrirGaleria.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnAbrirGaleria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.btnAbrirGaleria.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAbrirGaleria.BackgroundImage")));
+            this.btnAbrirGaleria.ButtonText = "Minha galeria";
+            this.btnAbrirGaleria.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAbrirGaleria.Font = new System.Drawing.Font("Open Sans", 15.25F);
+            this.btnAbrirGaleria.ForeColor = System.Drawing.Color.White;
+            this.btnAbrirGaleria.IdleBorderThickness = 2;
+            this.btnAbrirGaleria.IdleCornerRadius = 2;
+            this.btnAbrirGaleria.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.btnAbrirGaleria.IdleForecolor = System.Drawing.Color.White;
+            this.btnAbrirGaleria.IdleLineColor = System.Drawing.Color.Transparent;
+            this.btnAbrirGaleria.Location = new System.Drawing.Point(47, 46);
+            this.btnAbrirGaleria.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAbrirGaleria.Name = "btnAbrirGaleria";
+            this.btnAbrirGaleria.Size = new System.Drawing.Size(215, 60);
+            this.btnAbrirGaleria.TabIndex = 2;
+            this.btnAbrirGaleria.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAbrirGaleria.Click += new System.EventHandler(this.btnAbrirGaleria_Click);
             // 
-            // bunifuThinButton24
+            // btnAbrirSelecaoDeTeclado
             // 
-            this.bunifuThinButton24.ActiveBorderThickness = 1;
-            this.bunifuThinButton24.ActiveCornerRadius = 20;
-            this.bunifuThinButton24.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.bunifuThinButton24.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton24.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.bunifuThinButton24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.bunifuThinButton24.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton24.BackgroundImage")));
-            this.bunifuThinButton24.ButtonText = "Criar novo teclado";
-            this.bunifuThinButton24.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton24.Font = new System.Drawing.Font("Open Sans", 15.25F);
-            this.bunifuThinButton24.ForeColor = System.Drawing.Color.White;
-            this.bunifuThinButton24.IdleBorderThickness = 2;
-            this.bunifuThinButton24.IdleCornerRadius = 2;
-            this.bunifuThinButton24.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.bunifuThinButton24.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton24.IdleLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton24.Location = new System.Drawing.Point(47, 122);
-            this.bunifuThinButton24.Margin = new System.Windows.Forms.Padding(0);
-            this.bunifuThinButton24.Name = "bunifuThinButton24";
-            this.bunifuThinButton24.Size = new System.Drawing.Size(215, 60);
-            this.bunifuThinButton24.TabIndex = 2;
-            this.bunifuThinButton24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAbrirSelecaoDeTeclado.ActiveBorderThickness = 1;
+            this.btnAbrirSelecaoDeTeclado.ActiveCornerRadius = 20;
+            this.btnAbrirSelecaoDeTeclado.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnAbrirSelecaoDeTeclado.ActiveForecolor = System.Drawing.Color.White;
+            this.btnAbrirSelecaoDeTeclado.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnAbrirSelecaoDeTeclado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.btnAbrirSelecaoDeTeclado.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAbrirSelecaoDeTeclado.BackgroundImage")));
+            this.btnAbrirSelecaoDeTeclado.ButtonText = "Criar novo teclado";
+            this.btnAbrirSelecaoDeTeclado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAbrirSelecaoDeTeclado.Font = new System.Drawing.Font("Open Sans", 15.25F);
+            this.btnAbrirSelecaoDeTeclado.ForeColor = System.Drawing.Color.White;
+            this.btnAbrirSelecaoDeTeclado.IdleBorderThickness = 2;
+            this.btnAbrirSelecaoDeTeclado.IdleCornerRadius = 2;
+            this.btnAbrirSelecaoDeTeclado.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.btnAbrirSelecaoDeTeclado.IdleForecolor = System.Drawing.Color.White;
+            this.btnAbrirSelecaoDeTeclado.IdleLineColor = System.Drawing.Color.Transparent;
+            this.btnAbrirSelecaoDeTeclado.Location = new System.Drawing.Point(47, 126);
+            this.btnAbrirSelecaoDeTeclado.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAbrirSelecaoDeTeclado.Name = "btnAbrirSelecaoDeTeclado";
+            this.btnAbrirSelecaoDeTeclado.Size = new System.Drawing.Size(215, 60);
+            this.btnAbrirSelecaoDeTeclado.TabIndex = 2;
+            this.btnAbrirSelecaoDeTeclado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAbrirSelecaoDeTeclado.Click += new System.EventHandler(this.btnAbrirSelecaoDeTeclado_Click);
             // 
             // pnlUsuario
             // 
@@ -176,6 +179,31 @@ namespace acroni.Layout_Master
             this.pnlUsuario.Name = "pnlUsuario";
             this.pnlUsuario.Size = new System.Drawing.Size(295, 136);
             this.pnlUsuario.TabIndex = 7;
+            // 
+            // bunifuThinButton21
+            // 
+            this.bunifuThinButton21.ActiveBorderThickness = 1;
+            this.bunifuThinButton21.ActiveCornerRadius = 15;
+            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.bunifuThinButton21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
+            this.bunifuThinButton21.ButtonText = "Sair";
+            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton21.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton21.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.IdleBorderThickness = 1;
+            this.bunifuThinButton21.IdleCornerRadius = 15;
+            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.bunifuThinButton21.Location = new System.Drawing.Point(144, 62);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bunifuThinButton21.Name = "bunifuThinButton21";
+            this.bunifuThinButton21.Size = new System.Drawing.Size(98, 43);
+            this.bunifuThinButton21.TabIndex = 11;
+            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // fotoUsuario
             // 
@@ -218,7 +246,7 @@ namespace acroni.Layout_Master
             this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
             this.btnMinimizar.ImageActive = null;
             this.btnMinimizar.InitialImage = null;
-            this.btnMinimizar.Location = new System.Drawing.Point(1200, -2);
+            this.btnMinimizar.Location = new System.Drawing.Point(1201, -2);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(36, 24);
             this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -248,7 +276,7 @@ namespace acroni.Layout_Master
             this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
             this.btnFechar.ImageActive = null;
             this.btnFechar.InitialImage = null;
-            this.btnFechar.Location = new System.Drawing.Point(1236, -2);
+            this.btnFechar.Location = new System.Drawing.Point(1235, -2);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(50, 24);
             this.btnFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -317,30 +345,32 @@ namespace acroni.Layout_Master
             this.eFotoUsuario.ElipseRadius = 7;
             this.eFotoUsuario.TargetControl = this.fotoUsuario;
             // 
-            // bunifuThinButton21
+            // btnContinuarCustomizando
             // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 15;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.bunifuThinButton21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "Sair";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.IdleBorderThickness = 1;
-            this.bunifuThinButton21.IdleCornerRadius = 15;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.bunifuThinButton21.Location = new System.Drawing.Point(144, 62);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(98, 43);
-            this.bunifuThinButton21.TabIndex = 11;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnContinuarCustomizando.ActiveBorderThickness = 1;
+            this.btnContinuarCustomizando.ActiveCornerRadius = 20;
+            this.btnContinuarCustomizando.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnContinuarCustomizando.ActiveForecolor = System.Drawing.Color.White;
+            this.btnContinuarCustomizando.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnContinuarCustomizando.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.btnContinuarCustomizando.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnContinuarCustomizando.BackgroundImage")));
+            this.btnContinuarCustomizando.ButtonText = "Continuar Customizando";
+            this.btnContinuarCustomizando.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnContinuarCustomizando.Font = new System.Drawing.Font("Open Sans", 15.25F);
+            this.btnContinuarCustomizando.ForeColor = System.Drawing.Color.White;
+            this.btnContinuarCustomizando.IdleBorderThickness = 2;
+            this.btnContinuarCustomizando.IdleCornerRadius = 2;
+            this.btnContinuarCustomizando.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.btnContinuarCustomizando.IdleForecolor = System.Drawing.Color.White;
+            this.btnContinuarCustomizando.IdleLineColor = System.Drawing.Color.Transparent;
+            this.btnContinuarCustomizando.Location = new System.Drawing.Point(47, 206);
+            this.btnContinuarCustomizando.Margin = new System.Windows.Forms.Padding(0);
+            this.btnContinuarCustomizando.Name = "btnContinuarCustomizando";
+            this.btnContinuarCustomizando.Size = new System.Drawing.Size(215, 60);
+            this.btnContinuarCustomizando.TabIndex = 2;
+            this.btnContinuarCustomizando.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnContinuarCustomizando.Visible = false;
+            this.btnContinuarCustomizando.Click += new System.EventHandler(this.btnContinuarCustomizando_Click);
             // 
             // LayoutMaster
             // 
@@ -375,8 +405,8 @@ namespace acroni.Layout_Master
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label logo;
         private System.Windows.Forms.Label lblNomeUsuario;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton24;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton23;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnAbrirSelecaoDeTeclado;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnAbrirGaleria;
         private System.Windows.Forms.Panel pnlSuperior;
         private Bunifu.Framework.UI.BunifuImageButton btnFechar;
         private Bunifu.Framework.UI.BunifuElipse eBtnFechar;
@@ -394,5 +424,6 @@ namespace acroni.Layout_Master
         private Bunifu.Framework.UI.BunifuElipse ePnlEsquerdo;
         private Bunifu.Framework.UI.BunifuElipse eFotoUsuario;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnContinuarCustomizando;
     }
 }

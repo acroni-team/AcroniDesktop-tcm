@@ -17,10 +17,6 @@ namespace acroni
             p.BackColor = Color.FromArgb(242,242,242);
             lblAcroni.Controls.Add(p);
             #endregion
-
-            #region Inicialização do Panel-transversal
-            
-            #endregion
             writeScript();
         }
 
@@ -29,10 +25,9 @@ namespace acroni
             piscSlash();
             await Task.Delay(1900);
             lblAcroni.Text = "";
-            char[] letras = {'A','c','r','o','n','i'};
-            for (int i = 0; i < 6; i++)
-            {
-                lblAcroni.Text += letras[i];
+            foreach (char c in "Acroni")
+            { 
+                lblAcroni.Text = lblAcroni.Text + c;
                 await Task.Delay(150);
             }
             //for (int p = 0; p < 3;p++)

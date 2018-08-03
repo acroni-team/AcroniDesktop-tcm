@@ -1,6 +1,6 @@
 ﻿namespace acroni
 {
-    partial class Acroni
+    partial class Compacto
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Compacto));
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtSelectFont = new System.Windows.Forms.TextBox();
             this.cmbFonts = new System.Windows.Forms.ComboBox();
@@ -81,16 +80,13 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
             this.pnlHistorico.SuspendLayout();
             this.pnlColorpicker.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 5;
-            this.bunifuElipse1.TargetControl = this;
             // 
             // panel3
             // 
@@ -109,9 +105,9 @@
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.pnlColorpicker);
-            this.panel3.Location = new System.Drawing.Point(1028, 109);
+            this.panel3.Location = new System.Drawing.Point(1028, 37);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(272, 610);
+            this.panel3.Size = new System.Drawing.Size(272, 683);
             this.panel3.TabIndex = 5;
             // 
             // txtSelectFont
@@ -739,9 +735,9 @@
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.label10);
-            this.panel4.Location = new System.Drawing.Point(320, 584);
+            this.panel4.Location = new System.Drawing.Point(346, 584);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(709, 135);
+            this.panel4.Size = new System.Drawing.Size(684, 135);
             this.panel4.TabIndex = 6;
             // 
             // label8
@@ -766,30 +762,39 @@
             this.label10.TabIndex = 3;
             this.label10.Text = "Um teclado mecânico para jogos. Inclui teclado numérico.";
             // 
-            // Acroni
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(346, 114);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(933, 449);
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Compacto
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1300, 720);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
             this.ForeColor = System.Drawing.Color.White;
-            this.Name = "Acroni";
+            this.Name = "Compacto";
             this.Load += new System.EventHandler(this.Acroni_Load);
-            this.Controls.SetChildIndex(this.panel3, 0);
             this.Controls.SetChildIndex(this.panel4, 0);
+            this.Controls.SetChildIndex(this.pictureBox1, 0);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.pnlHistorico.ResumeLayout(false);
             this.pnlColorpicker.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button6;
@@ -841,6 +846,7 @@
         private System.Windows.Forms.TextBox txtSelectFont;
         private System.Windows.Forms.ComboBox cmbFonts;
         private System.Windows.Forms.Label lblDefinirParaTodasAsTeclas;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
