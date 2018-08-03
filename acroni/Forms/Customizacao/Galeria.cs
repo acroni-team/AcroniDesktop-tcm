@@ -7,7 +7,6 @@ namespace acroni.Galeria
         public Galeria()
         {
             InitializeComponent();
-
         }
     }
 }

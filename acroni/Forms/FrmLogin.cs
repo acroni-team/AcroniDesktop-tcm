@@ -3,7 +3,8 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
-using System.IO;
+using acroni.Forms.Seleção_do_teclado;
+using acroni.Layout_Master;
 
 namespace acroni.Login
 {
@@ -15,11 +16,11 @@ namespace acroni.Login
         }
 
         #region Objetos do banco
-        //Usuário para lançar o script do banco: (Usuário: Acroni, Senha: Acroni7)
+        //Usuário para lançar o script do banco: (Usuário: Acroni, Senha: acroni7)
         SqlConnection conexão_SQL = new SqlConnection(Classes_internas.Conexao.nome_conexao);
         SqlCommand comando_SQL;
         #endregion
-        
+
         #region Métodos para o botão 'sair'
         private void btnSair_MouseMove(object sender, MouseEventArgs e)
         {
@@ -38,6 +39,8 @@ namespace acroni.Login
 
         #endregion
 
+        SelecionarTeclado selecionarTeclado;
+
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             try
@@ -51,64 +54,66 @@ namespace acroni.Login
                 comando_SQL = new SqlCommand(select_usuario, conexão_SQL);
                 SqlDataReader resposta_usuario = comando_SQL.ExecuteReader();
 
-                    //--Checando se houve algum valor que retornou
-                    if (resposta_usuario.HasRows)
-                    {
+                //--Checando se houve algum valor que retornou
+                if (resposta_usuario.HasRows)
+                {
                     resposta_usuario.Close();
                     try
+                    {
+                        //--Abrindo a conexão
+                        if (conexão_SQL.State != ConnectionState.Open)
+                            conexão_SQL.Open();
+
+                        //--Criando um comando SELECT e chamando sua resposta
+                        String select = "SELECT senha FROM tblCliente WHERE usuario='" + txtEntrar.Text + "'";
+                        comando_SQL = new SqlCommand(select, conexão_SQL);
+                        SqlDataReader resposta = comando_SQL.ExecuteReader();
+
+                        //--Checando se houve algum valor que retornou
+                        if (resposta.HasRows)
                         {
-                            //--Abrindo a conexão
-                            if (conexão_SQL.State != ConnectionState.Open)
-                                conexão_SQL.Open();
+                            //--Lendo a resposta
+                            resposta.Read();
 
-                            //--Criando um comando SELECT e chamando sua resposta
-                            String select = "SELECT senha FROM tblCliente WHERE usuario='" + txtEntrar.Text + "'";
-                            comando_SQL = new SqlCommand(select, conexão_SQL);
-                            SqlDataReader resposta = comando_SQL.ExecuteReader();
-
-                            //--Checando se houve algum valor que retornou
-                            if (resposta.HasRows)
+                            //Para pegar os valores, trate a resposta como uma Array
+                            if (resposta[0].ToString().Equals(txtSenha.Text))
                             {
-                                //--Lendo a resposta
-                                resposta.Read();
-
-                                //Para pegar os valores, trate a resposta como uma Array
-                                if (resposta[0].ToString().Equals(txtSenha.Text))
-                                {
-                                    this.Close();
-                                    Classes_internas.Conexao.nome_usuario = txtEntrar.Text;
-
-                                }
-                                else
-                                {
-                                lblAviso.Text = "Senha está incorreta";
-                                lblAviso.Visible = true;
-                                resposta.Close();
-                            }
+                                Classes_internas.Conexao.nome_usuario = txtEntrar.Text;
+                                selecionarTeclado = new SelecionarTeclado();
+                                selecionarTeclado.Show();
                             }
                             else
                             {
-                                lblAviso.Text = "Senha está incorreta";
+                                lblAviso.Text = "A senha está incorreta";
                                 lblAviso.Visible = true;
-                            resposta.Close();
+                                resposta.Close();
                             }
-
-                            //--Fechando a conexão
-                            conexão_SQL.Close();
-
                         }
-                        catch (Exception ex)
+                        else
                         {
-                            MessageBox.Show(ex.Message);
-                        conexão_SQL.Close();
+                            lblAviso.Text = "A senha está incorreta";
+                            lblAviso.Visible = true;
+                            resposta.Close();
                         }
-                    }else
+
+                        //--Fechando a conexão
+                        conexão_SQL.Close();
+
+                    }
+                    catch (Exception ex)
                     {
-                        lblAviso.Text = "Este usuário não existe";
-                        lblAviso.Visible = true;
+                        MessageBox.Show(ex.Message);
+                        conexão_SQL.Close();
+                    }
+                }
+                else
+                {
+                    lblAviso.Text = "Este usuário não existe";
+                    lblAviso.Visible = true;
                     resposta_usuario.Close();
                 }
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 conexão_SQL.Close();
@@ -125,23 +130,25 @@ namespace acroni.Login
             this.Hide();
             Cadastro.FrmCadastro fc = new Cadastro.FrmCadastro();
             fc.ShowDialog();
-            if (!Cadastro.FrmCadastro.cadastro_SUCCESS)
+            if (Cadastro.FrmCadastro.cadastro_SUCCESS)
+            {
+                this.Close();
+            }
+            else
             {
                 this.Show();
             }
-            else
-                this.Close();
         }
-        
+
         private void lnklblEsqueceuSenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
             Atualizadores.FrmUsuario frmAt = new Atualizadores.FrmUsuario();
             frmAt.ShowDialog();
             //if (!Cadastro.FrmConfirmarEmail.atualizacao_SUCCESS)
-                this.Show();
+            this.Show();
             //else
-                //this.Close();
+            //this.Close();
         }
     }
 }

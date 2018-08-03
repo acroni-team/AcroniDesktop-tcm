@@ -92,7 +92,7 @@ namespace acroni.Cadastro
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Você nâo está conectado à internet neste momento \nTente novamente mais tarde");
+                MessageBox.Show("Você nâo está conectado à internet neste momento \nTente novamente mais tarde" + ex);
                 //MessageBox.Show("O email não foi encontrado ou não existe");
                 Application.Exit();
             }
