@@ -105,11 +105,8 @@ C:\Users\gmininsk\Desktop\c\csharp\acroni\obj\Debug\acroni.csprojAssemblyReferen
 C:\Users\gmininsk\Desktop\c\csharp\acroni\obj\Debug\acroni.csproj.CopyComplete
 C:\Users\gmininsk\Desktop\c\csharp\acroni\obj\Debug\acroni.exe
 C:\Users\gmininsk\Desktop\c\csharp\acroni\obj\Debug\acroni.pdb
-<<<<<<< HEAD
 C:\Users\gui_m\Desktop\Projetos\TCM - 2\csharp\acroni\obj\Debug\acroni.Compacto.resources
 C:\Users\gui_m\Desktop\Projetos\TCM - 2\csharp\acroni\obj\Debug\acroni.Forms.Seleção_do_teclado.SelecionarTeclado.resources
 C:\Users\gui_m\Desktop\Projetos\TCM - 2\csharp\acroni\bin\Debug\Transitions.dll
 C:\Users\gui_m\Desktop\Projetos\TCM - 2\csharp\acroni\bin\Debug\Transitions.pdb
 C:\Users\gui_m\Desktop\Projetos\TCM - 2\csharp\acroni\obj\Debug\acroni.Acroni.resources
-=======
->>>>>>> 8a77b57f7efeb3af93650277e76aa1b2849fcdf3

@@ -4,10 +4,7 @@ using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
 using acroni.Forms.Seleção_do_teclado;
-<<<<<<< HEAD
 using acroni.Layout_Master;
-=======
->>>>>>> 8a77b57f7efeb3af93650277e76aa1b2849fcdf3
 
 namespace acroni.Login
 {
@@ -42,11 +39,7 @@ namespace acroni.Login
 
         #endregion
 
-<<<<<<< HEAD
         SelecionarTeclado selecionarTeclado;
-=======
-        SelecionarTeclado selecionarTeclado = new SelecionarTeclado();
->>>>>>> 8a77b57f7efeb3af93650277e76aa1b2849fcdf3
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
@@ -85,15 +78,9 @@ namespace acroni.Login
                             //Para pegar os valores, trate a resposta como uma Array
                             if (resposta[0].ToString().Equals(txtSenha.Text))
                             {
-<<<<<<< HEAD
                                 Classes_internas.Conexao.nome_usuario = txtEntrar.Text;
                                 selecionarTeclado = new SelecionarTeclado();
                                 selecionarTeclado.Show();
-=======
-                                selecionarTeclado.Show();
-                                Classes_internas.Conexao.nome_usuario = txtEntrar.Text;
-
->>>>>>> 8a77b57f7efeb3af93650277e76aa1b2849fcdf3
                             }
                             else
                             {

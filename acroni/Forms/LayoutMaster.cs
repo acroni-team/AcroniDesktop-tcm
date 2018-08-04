@@ -68,17 +68,10 @@ namespace acroni.Layout_Master
                         imagem_retorno = Image.FromStream(leitor_memoria);
                     }
 
-<<<<<<< HEAD
                 }
                 //--Fechando a resposta para poder usá-la novamente (NÃO ESQUECER!)
                 resposta.Close();
                 conexão_SQL.Close();
-=======
-                    //--Fechando a resposta para poder usá-la novamente (NÃO ESQUECER!)
-                    resposta.Close();
-                    conexão_SQL.Close();
-                }
->>>>>>> 8a77b57f7efeb3af93650277e76aa1b2849fcdf3
                 return imagem_retorno;
             }
             catch (Exception ex)

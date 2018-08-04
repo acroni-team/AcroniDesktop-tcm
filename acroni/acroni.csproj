@@ -81,15 +81,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes internas\Conexao.cs" />
-<<<<<<< HEAD
     <Compile Include="Forms\Acroni.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Acroni.designer.cs">
       <DependentUpon>Acroni.cs</DependentUpon>
     </Compile>
-=======
->>>>>>> 8a77b57f7efeb3af93650277e76aa1b2849fcdf3
     <Compile Include="Forms\Atualizar cadastro\FrmUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,7 +112,6 @@
       <DependentUpon>Fullsize.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Customizacao\Tenkeyless.cs">
-<<<<<<< HEAD
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Customizacao\Tenkeyless.Designer.cs">
@@ -129,21 +125,6 @@
     <Compile Include="Forms\Customizacao\Galeria.cs">
       <SubType>Form</SubType>
     </Compile>
-=======
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Customizacao\Tenkeyless.Designer.cs">
-      <DependentUpon>Tenkeyless.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Metodos de customizacao\Colorpicker\ColorpickerHandlers.cs" />
-    <Compile Include="Metodos de customizacao\Colorpicker\SetHistColors.cs" />
-    <Compile Include="Metodos de customizacao\Colorpicker\SetColorpickerVisibility.cs" />
-    <Compile Include="Metodos de customizacao\Fontes\LoadFontes.cs" />
-    <Compile Include="Metodos de customizacao\Fontes\Textbox.cs" />
-    <Compile Include="Forms\Customizacao\Galeria.cs">
-      <SubType>Form</SubType>
-    </Compile>
->>>>>>> 8a77b57f7efeb3af93650277e76aa1b2849fcdf3
     <Compile Include="Forms\Customizacao\Galeria.Designer.cs">
       <DependentUpon>Galeria.cs</DependentUpon>
     </Compile>
@@ -167,7 +148,6 @@
     </Compile>
     <Compile Include="Classes internas\Program.cs" />
     <Compile Include="Forms\Selecao do teclado\SelecionarTeclado.cs">
-<<<<<<< HEAD
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Selecao do teclado\SelecionarTeclado.Designer.cs">
@@ -176,26 +156,13 @@
     <Compile Include="Forms\Splash\SplashEscrita.cs">
       <SubType>Form</SubType>
     </Compile>
-=======
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Selecao do teclado\SelecionarTeclado.Designer.cs">
-      <DependentUpon>SelecionarTeclado.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Splash\SplashEscrita.cs">
-      <SubType>Form</SubType>
-    </Compile>
->>>>>>> 8a77b57f7efeb3af93650277e76aa1b2849fcdf3
     <Compile Include="Forms\Splash\SplashEscrita.designer.cs">
       <DependentUpon>SplashEscrita.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-<<<<<<< HEAD
     <EmbeddedResource Include="Forms\Acroni.resx">
       <DependentUpon>Acroni.cs</DependentUpon>
     </EmbeddedResource>
-=======
->>>>>>> 8a77b57f7efeb3af93650277e76aa1b2849fcdf3
     <EmbeddedResource Include="Forms\Atualizar cadastro\FrmUsuario.resx">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
     </EmbeddedResource>
