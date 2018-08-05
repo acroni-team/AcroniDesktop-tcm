@@ -44,10 +44,22 @@ namespace acroni.Layout_Master
             this.eBtnMinimizar = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.ePnlUsuario = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.eFotoUsuario = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtBuscarFontes = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.cmbEstilizacaoDaFonte = new System.Windows.Forms.ComboBox();
+            this.cmbFontes = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlSuperior
@@ -174,21 +186,132 @@ namespace acroni.Layout_Master
             this.eFotoUsuario.ElipseRadius = 7;
             this.eFotoUsuario.TargetControl = this;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.panel2.Controls.Add(this.txtBuscarFontes);
+            this.panel2.Controls.Add(this.bunifuImageButton3);
+            this.panel2.Controls.Add(this.bunifuImageButton2);
+            this.panel2.Controls.Add(this.bunifuImageButton1);
+            this.panel2.Controls.Add(this.cmbEstilizacaoDaFonte);
+            this.panel2.Controls.Add(this.cmbFontes);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Location = new System.Drawing.Point(1440, 50);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(480, 1030);
+            this.panel2.TabIndex = 14;
+            // 
+            // txtBuscarFontes
+            // 
+            this.txtBuscarFontes.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBuscarFontes.Font = new System.Drawing.Font("Open Sans", 10.75F);
+            this.txtBuscarFontes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtBuscarFontes.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtBuscarFontes.HintText = "Digite uma fonte...";
+            this.txtBuscarFontes.isPassword = false;
+            this.txtBuscarFontes.LineFocusedColor = System.Drawing.Color.Blue;
+            this.txtBuscarFontes.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtBuscarFontes.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.txtBuscarFontes.LineThickness = 3;
+            this.txtBuscarFontes.Location = new System.Drawing.Point(32, 78);
+            this.txtBuscarFontes.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBuscarFontes.Name = "txtBuscarFontes";
+            this.txtBuscarFontes.Size = new System.Drawing.Size(324, 47);
+            this.txtBuscarFontes.TabIndex = 3;
+            this.txtBuscarFontes.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtBuscarFontes.OnValueChanged += new System.EventHandler(this.txtBuscarFontes_OnValueChanged);
+            // 
+            // bunifuImageButton3
+            // 
+            this.bunifuImageButton3.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.Image")));
+            this.bunifuImageButton3.ImageActive = null;
+            this.bunifuImageButton3.Location = new System.Drawing.Point(333, 201);
+            this.bunifuImageButton3.Name = "bunifuImageButton3";
+            this.bunifuImageButton3.Size = new System.Drawing.Size(24, 24);
+            this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton3.TabIndex = 2;
+            this.bunifuImageButton3.TabStop = false;
+            this.bunifuImageButton3.Zoom = 10;
+            // 
+            // bunifuImageButton2
+            // 
+            this.bunifuImageButton2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
+            this.bunifuImageButton2.ImageActive = null;
+            this.bunifuImageButton2.Location = new System.Drawing.Point(281, 201);
+            this.bunifuImageButton2.Name = "bunifuImageButton2";
+            this.bunifuImageButton2.Size = new System.Drawing.Size(24, 24);
+            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton2.TabIndex = 2;
+            this.bunifuImageButton2.TabStop = false;
+            this.bunifuImageButton2.Zoom = 10;
+            // 
+            // bunifuImageButton1
+            // 
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(229, 201);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(24, 24);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 2;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 10;
+            // 
+            // cmbEstilizacaoDaFonte
+            // 
+            this.cmbEstilizacaoDaFonte.FormattingEnabled = true;
+            this.cmbEstilizacaoDaFonte.Items.AddRange(new object[] {
+            "Itálico"});
+            this.cmbEstilizacaoDaFonte.Location = new System.Drawing.Point(35, 204);
+            this.cmbEstilizacaoDaFonte.Name = "cmbEstilizacaoDaFonte";
+            this.cmbEstilizacaoDaFonte.Size = new System.Drawing.Size(144, 21);
+            this.cmbEstilizacaoDaFonte.TabIndex = 1;
+            // 
+            // cmbFontes
+            // 
+            this.cmbFontes.FormattingEnabled = true;
+            this.cmbFontes.Location = new System.Drawing.Point(35, 150);
+            this.cmbFontes.Name = "cmbFontes";
+            this.cmbFontes.Size = new System.Drawing.Size(317, 21);
+            this.cmbFontes.TabIndex = 1;
+            this.cmbFontes.SelectedIndexChanged += new System.EventHandler(this.cmbFontes_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Open Sans", 15.25F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(27, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 28);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Fontes";
+            // 
             // LayoutMaster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlSuperior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LayoutMaster";
             this.Text = "LayoutMaster";
+            this.Load += new System.EventHandler(this.LayoutMaster_Load);
             this.pnlSuperior.ResumeLayout(false);
             this.pnlSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -206,5 +329,13 @@ namespace acroni.Layout_Master
         private ToolStripMenuItem faleConoscoToolStripMenuItem;
         private Bunifu.Framework.UI.BunifuElipse eFotoUsuario;
         private ToolStripMenuItem ajudaToolStripMenuItem;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton3;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        private ComboBox cmbEstilizacaoDaFonte;
+        private ComboBox cmbFontes;
+        private Label label1;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtBuscarFontes;
+        protected Panel panel2;
     }
 }

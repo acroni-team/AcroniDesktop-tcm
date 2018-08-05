@@ -12,14 +12,14 @@ namespace acroni
         public LayoutMasterComMenu()
         {
             InitializeComponent();
-            //trocar_nome_usuario($"{Classes_internas.Conexao.nome_usuario}!");
-            //trocar_imagem_usuario(selecionar_imagem_cliente());
+            trocar_nome_usuario($"{Classes_internas.Conexao.nome_usuario}!");
+            trocar_imagem_usuario(selecionar_imagem_cliente());
         }
 
         #region Obter informações do cliente pelo banco
-        //public void trocar_nome_usuario(String usuario) => lblNomeUsuario.Text = usuario;
+        public void trocar_nome_usuario(String usuario) => lblNomeUsuario.Text = usuario;
 
-        //public void trocar_imagem_usuario(Image imagem) => fotoUsuario.Image = imagem;
+        public void trocar_imagem_usuario(Image imagem) => fotoUsuario.Image = imagem;
 
         SqlConnection conexão_SQL = new SqlConnection(Classes_internas.Conexao.nome_conexao);
         SqlCommand comando_SQL;

@@ -128,24 +128,24 @@ namespace acroni
         /// <summary>
         // Essa parte do programa é destinada para o funcionamento das fontes personalizadas.
         /// </summary>
-        List<object> Fonte = new List<object>();
+        List<object> Fontes = new List<object>();
 
         private void Acroni_Load(object sender, EventArgs e)
         {
-            LoadFontes a = new LoadFontes(ref cmbFonts, ref Fonte);
+            new CarregarFontes(ref cmbFonts, ref Fontes);
         }
 
         private void txtSelectFont_TextChanged(object sender, EventArgs e)
         {
             Regex a = new Regex(txtSelectFont.Text, RegexOptions.IgnoreCase);
-            foreach (string c in Fonte)
+            foreach (string c in Fontes)
             {
                 cmbFonts.Items.Remove(c);
             }
             Acroni_Load(sender, e);
             if (txtSelectFont.Text != "")
             {
-                foreach (string c in Fonte)
+                foreach (string c in Fontes)
                 {
                     if (!(a.IsMatch(c)))
                     {

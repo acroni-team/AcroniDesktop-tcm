@@ -39,15 +39,20 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.pnlUsuario = new System.Windows.Forms.Panel();
+            this.lblNomeUsuario = new System.Windows.Forms.Label();
             this.fotoUsuario = new System.Windows.Forms.PictureBox();
             this.btnDesconectar = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.lblNomeUsuario = new System.Windows.Forms.Label();
+            this.lblBemVindo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.pnlUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fotoUsuario)).BeginInit();
             this.SuspendLayout();
+            // 
+            // panel2
+            // 
+            this.panel2.Visible = false;
             // 
             // panel1
             // 
@@ -238,13 +243,25 @@
             // pnlUsuario
             // 
             this.pnlUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.pnlUsuario.Controls.Add(this.lblNomeUsuario);
             this.pnlUsuario.Controls.Add(this.fotoUsuario);
             this.pnlUsuario.Controls.Add(this.btnDesconectar);
-            this.pnlUsuario.Controls.Add(this.lblNomeUsuario);
+            this.pnlUsuario.Controls.Add(this.lblBemVindo);
             this.pnlUsuario.Location = new System.Drawing.Point(0, 882);
             this.pnlUsuario.Name = "pnlUsuario";
             this.pnlUsuario.Size = new System.Drawing.Size(400, 147);
             this.pnlUsuario.TabIndex = 7;
+            // 
+            // lblNomeUsuario
+            // 
+            this.lblNomeUsuario.AutoSize = true;
+            this.lblNomeUsuario.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblNomeUsuario.Location = new System.Drawing.Point(281, 50);
+            this.lblNomeUsuario.Name = "lblNomeUsuario";
+            this.lblNomeUsuario.Size = new System.Drawing.Size(61, 22);
+            this.lblNomeUsuario.TabIndex = 3;
+            this.lblNomeUsuario.Text = "Vindo!";
             // 
             // fotoUsuario
             // 
@@ -281,16 +298,16 @@
             this.btnDesconectar.TabIndex = 9;
             this.btnDesconectar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblNomeUsuario
+            // lblBemVindo
             // 
-            this.lblNomeUsuario.AutoSize = true;
-            this.lblNomeUsuario.Font = new System.Drawing.Font("Open Sans", 12.25F);
-            this.lblNomeUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblNomeUsuario.Location = new System.Drawing.Point(210, 41);
-            this.lblNomeUsuario.Name = "lblNomeUsuario";
-            this.lblNomeUsuario.Size = new System.Drawing.Size(151, 23);
-            this.lblNomeUsuario.TabIndex = 3;
-            this.lblNomeUsuario.Text = "Bem vindo, Vindo!";
+            this.lblBemVindo.AutoSize = true;
+            this.lblBemVindo.Font = new System.Drawing.Font("Open Sans", 12.25F);
+            this.lblBemVindo.ForeColor = System.Drawing.Color.White;
+            this.lblBemVindo.Location = new System.Drawing.Point(187, 50);
+            this.lblBemVindo.Name = "lblBemVindo";
+            this.lblBemVindo.Size = new System.Drawing.Size(103, 23);
+            this.lblBemVindo.TabIndex = 3;
+            this.lblBemVindo.Text = "Bem-vindo, ";
             // 
             // LayoutMasterComMenu
             // 
@@ -300,6 +317,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "LayoutMasterComMenu";
             this.Text = "LayoutMasterComMenu";
+            this.Controls.SetChildIndex(this.panel2, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -326,5 +344,6 @@
         private System.Windows.Forms.PictureBox fotoUsuario;
         private Bunifu.Framework.UI.BunifuThinButton2 btnDesconectar;
         private System.Windows.Forms.Label lblNomeUsuario;
+        private System.Windows.Forms.Label lblBemVindo;
     }
 }

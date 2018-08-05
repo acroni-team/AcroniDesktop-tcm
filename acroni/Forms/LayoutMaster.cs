@@ -9,6 +9,9 @@ using System.IO;
 using System.Data;
 using Svg;
 using SVGSample.svg;
+using acroni.Fontes;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace acroni.Layout_Master
 {
@@ -89,6 +92,57 @@ namespace acroni.Layout_Master
         {
             this.WindowState = FormWindowState.Minimized;
         }
+        #endregion
+
+        #region Fontes das teclas
+        /// <summary>
+        // Essa parte do programa é destinada para o funcionamento das fontes personalizadas.
+        /// </summary>
+
+        static List<object> Fontes = new List<object>();
+        static List<object> EstiloDasFontes = new List<object>();
+
+        protected virtual void LayoutMaster_Load(object sender, EventArgs e)
+        {
+            new CarregarFontes(ref cmbFontes, ref Fontes);
+            //foreach (Font fonte in Fontes)
+            //{
+            //    cmbEstilizacaoDaFonte.Items.Add(fonte);
+            //}
+        }
+        
+
+        private void cmbFontes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (Control c in this.Controls)
+            {
+                if (c is Button)
+                {
+                    c.Font = new System.Drawing.Font(cmbFontes.Text, 6.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                }
+            }
+        }
+
+        private void txtBuscarFontes_OnValueChanged(object sender, EventArgs e)
+        {
+            Regex regex = new Regex(txtBuscarFontes.Text, RegexOptions.IgnoreCase);
+            foreach (FontFamily fonte in Fontes)
+            {
+                cmbFontes.Items.Remove(fonte);
+            }
+            LayoutMaster_Load(sender, e);
+            if (txtBuscarFontes.Text != "")
+            {
+                foreach (FontFamily fonte in Fontes)
+                {
+                    if (!(regex.IsMatch(fonte.ToString())))
+                    {
+                        cmbFontes.Items.Remove(fonte);
+                    }
+                }
+            }
+        }
+
         #endregion
     }
 }

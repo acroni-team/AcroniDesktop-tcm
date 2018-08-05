@@ -190,6 +190,27 @@
   <metadata name="ePnlUsuario.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>389, 17</value>
   </metadata>
+  <data name="bunifuImageButton3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAFdJREFUSEvt
+        jzEKwEAMw/LP/P8d7SLIYq4Gdwon0JYIXBeb7n7+lOygjhLJbkdNdyVxRj26ktiEmplIdlBHiWS3o6a7
+        kjijHl1JbELNTCQ7qKNEspcvql7wLnNQHJQXXgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="bunifuImageButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAFhJREFUSEvt
+        k0EKwCAMBPPP5DH9uUVYyGWlwipSycDc4kgOsWIad28rRTZhQ4rI3khEPGzlGftbZMZs/+C/sJUVkU3Y
+        kCKyN1J3cA62siKyCRtSRLb4wuwFrc13sKSWYjQAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="bunifuImageButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAFdJREFUSEvt
+        jzEKwEAMw/LP/P8d7SLIYq4Gdwon0JYIXBeb7n7+lOygjhLJbkLNdCVxRj26ktiOmp5IdlBHiWQ3oWa6
+        kjijHl1JbEdNTyQ7qKNEspcvql6bxHNQpQh8ugAAAABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="eFotoUsuario.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>738, 20</value>
   </metadata>

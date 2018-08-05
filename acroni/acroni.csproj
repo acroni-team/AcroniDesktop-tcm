@@ -129,7 +129,6 @@
     <Compile Include="Metodos de customizacao\Colorpicker\SetHistColors.cs" />
     <Compile Include="Metodos de customizacao\Colorpicker\SetColorpickerVisibility.cs" />
     <Compile Include="Metodos de customizacao\Fontes\LoadFontes.cs" />
-    <Compile Include="Metodos de customizacao\Fontes\Textbox.cs" />
     <Compile Include="Forms\Customizacao\Galeria.cs">
       <SubType>Form</SubType>
     </Compile>

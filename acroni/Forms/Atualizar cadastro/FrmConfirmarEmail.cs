@@ -133,7 +133,7 @@ namespace acroni.Cadastro
             {
                 MessageBox.Show(tipo_public.Equals("cadastro") ? "Cadastro concluido" : "Atualização concluida");
                 atualizacao_SUCCESS = true;
-                this.Close();
+                this.Hide();
                 if (tipo_public.Equals("cadastro"))
                     insert();
                 else if (tipo_public.Equals("senha"))
@@ -143,7 +143,7 @@ namespace acroni.Cadastro
             { 
                 MessageBox.Show(tipo_public.Equals("cadastro") ? "Cadastro não concluido" : "Atualização não concluida");
                 atualizacao_SUCCESS = false;
-                this.Close();
+                this.Hide();
             }
         }
 

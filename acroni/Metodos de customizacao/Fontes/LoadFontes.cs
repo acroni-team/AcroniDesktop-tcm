@@ -9,20 +9,23 @@ using System.Windows.Forms;
 
 namespace acroni.Fontes
 {
-    class LoadFontes
+    class CarregarFontes
     {
         public static bool IsFontAddable { get; set; } = true;
 
-        public LoadFontes(ref ComboBox cmbFonts, ref List<object> Fonte)
+        ///<summary> 
+        ///Esse método serve para obter todas as fontes que o usuário possui em seu computador.
+        ///</summary>
+        public CarregarFontes(ref ComboBox cmbFonts, ref List<object> Fontes)
         {
-            using (InstalledFontCollection col = new InstalledFontCollection())
+            using (InstalledFontCollection collection = new InstalledFontCollection())
             {
-                foreach (FontFamily fa in col.Families)
+                foreach (FontFamily fontFamily in collection.Families)
                 {
-                    cmbFonts.Items.Add(fa.Name);
+                    cmbFonts.Items.Add(fontFamily.Name);
                     if (IsFontAddable)
                     {
-                        Fonte.Add(fa.Name);
+                        Fontes.Add(fontFamily);
                     }
                 }
                 IsFontAddable = false;
