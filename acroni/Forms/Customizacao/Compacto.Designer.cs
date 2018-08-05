@@ -112,6 +112,7 @@
             this.pnlColor = new System.Windows.Forms.Panel();
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             this.pnlHistorico.SuspendLayout();
             this.pnlColorpicker.SuspendLayout();
@@ -768,9 +769,9 @@
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.label10);
-            this.panel4.Location = new System.Drawing.Point(519, 771);
+            this.panel4.Location = new System.Drawing.Point(400, 945);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(684, 135);
+            this.panel4.Size = new System.Drawing.Size(1129, 135);
             this.panel4.TabIndex = 6;
             // 
             // label8
@@ -798,9 +799,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(536, 230);
+            this.pictureBox1.Location = new System.Drawing.Point(406, 308);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(933, 449);
+            this.pictureBox1.Size = new System.Drawing.Size(1087, 393);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
@@ -833,7 +835,7 @@
             this.pnlCorEscolhida.Controls.Add(this.pnlDivisoria1);
             this.pnlCorEscolhida.Controls.Add(this.lblHexaColor);
             this.pnlCorEscolhida.Controls.Add(this.pnlColor);
-            this.pnlCorEscolhida.Location = new System.Drawing.Point(371, 43);
+            this.pnlCorEscolhida.Location = new System.Drawing.Point(800, 66);
             this.pnlCorEscolhida.Name = "pnlCorEscolhida";
             this.pnlCorEscolhida.Size = new System.Drawing.Size(631, 103);
             this.pnlCorEscolhida.TabIndex = 12;
@@ -1097,11 +1099,20 @@
             this.bunifuElipse2.ElipseRadius = 10;
             this.bunifuElipse2.TargetControl = this.pnlCorEscolhida;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.panel2.Location = new System.Drawing.Point(1520, 50);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(400, 1030);
+            this.panel2.TabIndex = 13;
+            // 
             // Compacto
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlCorEscolhida);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel4);
@@ -1111,6 +1122,7 @@
             this.Controls.SetChildIndex(this.panel4, 0);
             this.Controls.SetChildIndex(this.pictureBox1, 0);
             this.Controls.SetChildIndex(this.pnlCorEscolhida, 0);
+            this.Controls.SetChildIndex(this.panel2, 0);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.pnlHistorico.ResumeLayout(false);
@@ -1208,6 +1220,7 @@
         private System.Windows.Forms.Panel pnlColor;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
+        private System.Windows.Forms.Panel panel2;
     }
 }
 

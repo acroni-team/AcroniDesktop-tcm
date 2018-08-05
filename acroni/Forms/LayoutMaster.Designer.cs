@@ -42,9 +42,10 @@ namespace acroni.Layout_Master
             this.panel3 = new System.Windows.Forms.Panel();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.pnlUsuario = new System.Windows.Forms.Panel();
+            this.lblNomeUsuario = new System.Windows.Forms.Label();
+            this.lblBemVindo = new System.Windows.Forms.Label();
             this.fotoUsuario = new System.Windows.Forms.PictureBox();
             this.btnDesconectar = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.lblNomeUsuario = new System.Windows.Forms.Label();
             this.pnlSuperior = new System.Windows.Forms.Panel();
             this.btnMinimizar = new Bunifu.Framework.UI.BunifuImageButton();
             this.lblAcroni = new System.Windows.Forms.Label();
@@ -57,7 +58,6 @@ namespace acroni.Layout_Master
             this.eBtnMinimizar = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.ePnlUsuario = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.eFotoUsuario = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.lblBemVindo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
@@ -84,7 +84,7 @@ namespace acroni.Layout_Master
             this.panel1.Controls.Add(this.pnlUsuario);
             this.panel1.Location = new System.Drawing.Point(0, 50);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(400, 1301);
+            this.panel1.Size = new System.Drawing.Size(400, 1030);
             this.panel1.TabIndex = 8;
             // 
             // btnAbrirGaleria
@@ -243,7 +243,7 @@ namespace acroni.Layout_Master
             this.panel3.Controls.Add(this.picLogo);
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(480, 255);
+            this.panel3.Size = new System.Drawing.Size(400, 255);
             this.panel3.TabIndex = 5;
             // 
             // picLogo
@@ -266,6 +266,28 @@ namespace acroni.Layout_Master
             this.pnlUsuario.Name = "pnlUsuario";
             this.pnlUsuario.Size = new System.Drawing.Size(400, 147);
             this.pnlUsuario.TabIndex = 7;
+            // 
+            // lblNomeUsuario
+            // 
+            this.lblNomeUsuario.AutoSize = true;
+            this.lblNomeUsuario.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblNomeUsuario.Location = new System.Drawing.Point(301, 42);
+            this.lblNomeUsuario.Name = "lblNomeUsuario";
+            this.lblNomeUsuario.Size = new System.Drawing.Size(61, 22);
+            this.lblNomeUsuario.TabIndex = 3;
+            this.lblNomeUsuario.Text = "Vindo!";
+            // 
+            // lblBemVindo
+            // 
+            this.lblBemVindo.AutoSize = true;
+            this.lblBemVindo.Font = new System.Drawing.Font("Open Sans", 12.25F);
+            this.lblBemVindo.ForeColor = System.Drawing.Color.White;
+            this.lblBemVindo.Location = new System.Drawing.Point(210, 42);
+            this.lblBemVindo.Name = "lblBemVindo";
+            this.lblBemVindo.Size = new System.Drawing.Size(102, 23);
+            this.lblBemVindo.TabIndex = 10;
+            this.lblBemVindo.Text = "Bem vindo, ";
             // 
             // fotoUsuario
             // 
@@ -301,17 +323,6 @@ namespace acroni.Layout_Master
             this.btnDesconectar.Size = new System.Drawing.Size(190, 49);
             this.btnDesconectar.TabIndex = 9;
             this.btnDesconectar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblNomeUsuario
-            // 
-            this.lblNomeUsuario.AutoSize = true;
-            this.lblNomeUsuario.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblNomeUsuario.Location = new System.Drawing.Point(301, 42);
-            this.lblNomeUsuario.Name = "lblNomeUsuario";
-            this.lblNomeUsuario.Size = new System.Drawing.Size(61, 22);
-            this.lblNomeUsuario.TabIndex = 3;
-            this.lblNomeUsuario.Text = "Vindo!";
             // 
             // pnlSuperior
             // 
@@ -436,17 +447,6 @@ namespace acroni.Layout_Master
             // 
             this.eFotoUsuario.ElipseRadius = 7;
             this.eFotoUsuario.TargetControl = this.fotoUsuario;
-            // 
-            // lblBemVindo
-            // 
-            this.lblBemVindo.AutoSize = true;
-            this.lblBemVindo.Font = new System.Drawing.Font("Open Sans", 12.25F);
-            this.lblBemVindo.ForeColor = System.Drawing.Color.White;
-            this.lblBemVindo.Location = new System.Drawing.Point(210, 42);
-            this.lblBemVindo.Name = "lblBemVindo";
-            this.lblBemVindo.Size = new System.Drawing.Size(102, 23);
-            this.lblBemVindo.TabIndex = 10;
-            this.lblBemVindo.Text = "Bem vindo, ";
             // 
             // LayoutMaster
             // 
