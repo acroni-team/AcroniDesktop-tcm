@@ -57,6 +57,7 @@ namespace acroni.Layout_Master
             this.eBtnMinimizar = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.ePnlUsuario = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.eFotoUsuario = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.lblBemVindo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
@@ -83,7 +84,7 @@ namespace acroni.Layout_Master
             this.panel1.Controls.Add(this.pnlUsuario);
             this.panel1.Location = new System.Drawing.Point(0, 50);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(480, 1301);
+            this.panel1.Size = new System.Drawing.Size(400, 1301);
             this.panel1.TabIndex = 8;
             // 
             // btnAbrirGaleria
@@ -104,7 +105,7 @@ namespace acroni.Layout_Master
             this.btnAbrirGaleria.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.btnAbrirGaleria.IdleForecolor = System.Drawing.Color.White;
             this.btnAbrirGaleria.IdleLineColor = System.Drawing.Color.Transparent;
-            this.btnAbrirGaleria.Location = new System.Drawing.Point(64, 312);
+            this.btnAbrirGaleria.Location = new System.Drawing.Point(19, 327);
             this.btnAbrirGaleria.Margin = new System.Windows.Forms.Padding(0);
             this.btnAbrirGaleria.Name = "btnAbrirGaleria";
             this.btnAbrirGaleria.Size = new System.Drawing.Size(350, 60);
@@ -129,7 +130,7 @@ namespace acroni.Layout_Master
             this.bunifuThinButton24.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.bunifuThinButton24.IdleForecolor = System.Drawing.Color.White;
             this.bunifuThinButton24.IdleLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton24.Location = new System.Drawing.Point(64, 712);
+            this.bunifuThinButton24.Location = new System.Drawing.Point(19, 727);
             this.bunifuThinButton24.Margin = new System.Windows.Forms.Padding(0);
             this.bunifuThinButton24.Name = "bunifuThinButton24";
             this.bunifuThinButton24.Size = new System.Drawing.Size(350, 60);
@@ -154,7 +155,7 @@ namespace acroni.Layout_Master
             this.btnFaleConosco.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.btnFaleConosco.IdleForecolor = System.Drawing.Color.White;
             this.btnFaleConosco.IdleLineColor = System.Drawing.Color.Transparent;
-            this.btnFaleConosco.Location = new System.Drawing.Point(64, 632);
+            this.btnFaleConosco.Location = new System.Drawing.Point(19, 647);
             this.btnFaleConosco.Margin = new System.Windows.Forms.Padding(0);
             this.btnFaleConosco.Name = "btnFaleConosco";
             this.btnFaleConosco.Size = new System.Drawing.Size(350, 60);
@@ -179,7 +180,7 @@ namespace acroni.Layout_Master
             this.btnBaixarTeclado.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.btnBaixarTeclado.IdleForecolor = System.Drawing.Color.White;
             this.btnBaixarTeclado.IdleLineColor = System.Drawing.Color.Transparent;
-            this.btnBaixarTeclado.Location = new System.Drawing.Point(64, 552);
+            this.btnBaixarTeclado.Location = new System.Drawing.Point(19, 567);
             this.btnBaixarTeclado.Margin = new System.Windows.Forms.Padding(0);
             this.btnBaixarTeclado.Name = "btnBaixarTeclado";
             this.btnBaixarTeclado.Size = new System.Drawing.Size(350, 60);
@@ -204,7 +205,7 @@ namespace acroni.Layout_Master
             this.btnContinuarCustomizando.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.btnContinuarCustomizando.IdleForecolor = System.Drawing.Color.White;
             this.btnContinuarCustomizando.IdleLineColor = System.Drawing.Color.Transparent;
-            this.btnContinuarCustomizando.Location = new System.Drawing.Point(64, 472);
+            this.btnContinuarCustomizando.Location = new System.Drawing.Point(19, 487);
             this.btnContinuarCustomizando.Margin = new System.Windows.Forms.Padding(0);
             this.btnContinuarCustomizando.Name = "btnContinuarCustomizando";
             this.btnContinuarCustomizando.Size = new System.Drawing.Size(350, 60);
@@ -229,7 +230,7 @@ namespace acroni.Layout_Master
             this.btnAbrirSelecaoDeTeclado.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.btnAbrirSelecaoDeTeclado.IdleForecolor = System.Drawing.Color.White;
             this.btnAbrirSelecaoDeTeclado.IdleLineColor = System.Drawing.Color.Transparent;
-            this.btnAbrirSelecaoDeTeclado.Location = new System.Drawing.Point(64, 392);
+            this.btnAbrirSelecaoDeTeclado.Location = new System.Drawing.Point(19, 407);
             this.btnAbrirSelecaoDeTeclado.Margin = new System.Windows.Forms.Padding(0);
             this.btnAbrirSelecaoDeTeclado.Name = "btnAbrirSelecaoDeTeclado";
             this.btnAbrirSelecaoDeTeclado.Size = new System.Drawing.Size(350, 60);
@@ -248,7 +249,7 @@ namespace acroni.Layout_Master
             // picLogo
             // 
             this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
-            this.picLogo.Location = new System.Drawing.Point(47, 16);
+            this.picLogo.Location = new System.Drawing.Point(3, 16);
             this.picLogo.Name = "picLogo";
             this.picLogo.Size = new System.Drawing.Size(391, 221);
             this.picLogo.TabIndex = 0;
@@ -257,12 +258,13 @@ namespace acroni.Layout_Master
             // pnlUsuario
             // 
             this.pnlUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.pnlUsuario.Controls.Add(this.lblNomeUsuario);
+            this.pnlUsuario.Controls.Add(this.lblBemVindo);
             this.pnlUsuario.Controls.Add(this.fotoUsuario);
             this.pnlUsuario.Controls.Add(this.btnDesconectar);
-            this.pnlUsuario.Controls.Add(this.lblNomeUsuario);
-            this.pnlUsuario.Location = new System.Drawing.Point(3, 882);
+            this.pnlUsuario.Location = new System.Drawing.Point(0, 882);
             this.pnlUsuario.Name = "pnlUsuario";
-            this.pnlUsuario.Size = new System.Drawing.Size(474, 147);
+            this.pnlUsuario.Size = new System.Drawing.Size(400, 147);
             this.pnlUsuario.TabIndex = 7;
             // 
             // fotoUsuario
@@ -303,13 +305,13 @@ namespace acroni.Layout_Master
             // lblNomeUsuario
             // 
             this.lblNomeUsuario.AutoSize = true;
-            this.lblNomeUsuario.Font = new System.Drawing.Font("Open Sans", 12.25F);
+            this.lblNomeUsuario.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomeUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblNomeUsuario.Location = new System.Drawing.Point(210, 41);
+            this.lblNomeUsuario.Location = new System.Drawing.Point(301, 42);
             this.lblNomeUsuario.Name = "lblNomeUsuario";
-            this.lblNomeUsuario.Size = new System.Drawing.Size(151, 23);
+            this.lblNomeUsuario.Size = new System.Drawing.Size(61, 22);
             this.lblNomeUsuario.TabIndex = 3;
-            this.lblNomeUsuario.Text = "Bem vindo, Vindo!";
+            this.lblNomeUsuario.Text = "Vindo!";
             // 
             // pnlSuperior
             // 
@@ -435,6 +437,17 @@ namespace acroni.Layout_Master
             this.eFotoUsuario.ElipseRadius = 7;
             this.eFotoUsuario.TargetControl = this.fotoUsuario;
             // 
+            // lblBemVindo
+            // 
+            this.lblBemVindo.AutoSize = true;
+            this.lblBemVindo.Font = new System.Drawing.Font("Open Sans", 12.25F);
+            this.lblBemVindo.ForeColor = System.Drawing.Color.White;
+            this.lblBemVindo.Location = new System.Drawing.Point(210, 42);
+            this.lblBemVindo.Name = "lblBemVindo";
+            this.lblBemVindo.Size = new System.Drawing.Size(102, 23);
+            this.lblBemVindo.TabIndex = 10;
+            this.lblBemVindo.Text = "Bem vindo, ";
+            // 
             // LayoutMaster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -487,5 +500,6 @@ namespace acroni.Layout_Master
         private Bunifu.Framework.UI.BunifuThinButton2 btnDesconectar;
         private ToolStripMenuItem ajudaToolStripMenuItem;
         private PictureBox picLogo;
+        private Label lblBemVindo;
     }
 }

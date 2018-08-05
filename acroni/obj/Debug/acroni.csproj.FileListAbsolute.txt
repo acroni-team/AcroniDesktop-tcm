@@ -112,3 +112,4 @@ C:\Users\gui_m\Desktop\Projetos\TCM - 2\csharp\acroni\obj\Debug\acroni.Acroni.re
 C:\Users\gmininsk\Desktop\c\csharp\acroni\bin\Debug\Transitions.dll
 C:\Users\gmininsk\Desktop\c\csharp\acroni\bin\Debug\Transitions.pdb
 C:\Users\gmininsk\Desktop\c\csharp\acroni\obj\Debug\acroni.Acroni.resources
+C:\Users\gmininsk\Desktop\c\csharp\acroni\obj\Debug\acroni.csprojAssemblyReference.cache

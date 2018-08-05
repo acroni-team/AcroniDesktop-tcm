@@ -768,7 +768,7 @@
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.label10);
-            this.panel4.Location = new System.Drawing.Point(346, 584);
+            this.panel4.Location = new System.Drawing.Point(519, 771);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(684, 135);
             this.panel4.TabIndex = 6;
@@ -798,7 +798,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(346, 114);
+            this.pictureBox1.Location = new System.Drawing.Point(536, 230);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(933, 449);
             this.pictureBox1.TabIndex = 11;
