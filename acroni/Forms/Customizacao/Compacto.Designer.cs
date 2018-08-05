@@ -769,9 +769,9 @@
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.label10);
-            this.panel4.Location = new System.Drawing.Point(400, 945);
+            this.panel4.Location = new System.Drawing.Point(0, 944);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1129, 135);
+            this.panel4.Size = new System.Drawing.Size(1317, 135);
             this.panel4.TabIndex = 6;
             // 
             // label8
@@ -799,7 +799,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(406, 308);
+            this.pictureBox1.Location = new System.Drawing.Point(135, 231);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1087, 393);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

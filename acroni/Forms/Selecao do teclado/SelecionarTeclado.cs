@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace acroni.Forms.Seleção_do_teclado
 {
-    public partial class SelecionarTeclado : Layout_Master.LayoutMaster
+    public partial class SelecionarTeclado : LayoutMasterComMenu
     {
         public SelecionarTeclado()
         {

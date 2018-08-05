@@ -119,6 +119,12 @@
     <Compile Include="Forms\Customizacao\Tenkeyless.Designer.cs">
       <DependentUpon>Tenkeyless.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\LayoutMasterComMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LayoutMasterComMenu.Designer.cs">
+      <DependentUpon>LayoutMasterComMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Metodos de customizacao\Colorpicker\ColorpickerHandlers.cs" />
     <Compile Include="Metodos de customizacao\Colorpicker\SetHistColors.cs" />
     <Compile Include="Metodos de customizacao\Colorpicker\SetColorpickerVisibility.cs" />
@@ -191,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Splash\SplashEscrita.resx">
       <DependentUpon>SplashEscrita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LayoutMasterComMenu.resx">
+      <DependentUpon>LayoutMasterComMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

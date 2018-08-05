@@ -35,8 +35,6 @@ namespace acroni
             pnlCorEscolhida.Size = new Size(243, 103);
             //t_splash.Abort();
             frmLogin.ShowDialog();
-            trocar_nome_usuario("Bem vindo, "+ Classes_internas.Conexao.nome_usuario+"!");
-            trocar_imagem_usuario(selecionar_imagem_cliente());
 
             foreach (Control c_panel in pnlCorEscolhida.Controls)
             {
