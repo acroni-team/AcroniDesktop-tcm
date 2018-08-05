@@ -101,7 +101,6 @@ C:\Users\gmininsk\Desktop\c\csharp\acroni\bin\Debug\acroni.pdb
 C:\Users\gmininsk\Desktop\c\csharp\acroni\bin\Debug\FormsDesign.dll
 C:\Users\gmininsk\Desktop\c\csharp\acroni\bin\Debug\Microsoft.AnalysisServices.dll
 C:\Users\gmininsk\Desktop\c\csharp\acroni\bin\Debug\FormsDesign.pdb
-C:\Users\gmininsk\Desktop\c\csharp\acroni\obj\Debug\acroni.csprojAssemblyReference.cache
 C:\Users\gmininsk\Desktop\c\csharp\acroni\obj\Debug\acroni.csproj.CopyComplete
 C:\Users\gmininsk\Desktop\c\csharp\acroni\obj\Debug\acroni.exe
 C:\Users\gmininsk\Desktop\c\csharp\acroni\obj\Debug\acroni.pdb
@@ -110,3 +109,6 @@ C:\Users\gui_m\Desktop\Projetos\TCM - 2\csharp\acroni\obj\Debug\acroni.Forms.Sel
 C:\Users\gui_m\Desktop\Projetos\TCM - 2\csharp\acroni\bin\Debug\Transitions.dll
 C:\Users\gui_m\Desktop\Projetos\TCM - 2\csharp\acroni\bin\Debug\Transitions.pdb
 C:\Users\gui_m\Desktop\Projetos\TCM - 2\csharp\acroni\obj\Debug\acroni.Acroni.resources
+C:\Users\gmininsk\Desktop\c\csharp\acroni\bin\Debug\Transitions.dll
+C:\Users\gmininsk\Desktop\c\csharp\acroni\bin\Debug\Transitions.pdb
+C:\Users\gmininsk\Desktop\c\csharp\acroni\obj\Debug\acroni.Acroni.resources

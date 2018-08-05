@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Acroni));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtSelectFont = new System.Windows.Forms.TextBox();
@@ -75,10 +76,12 @@
             this.label10 = new System.Windows.Forms.Label();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
             this.pnlCorEscolhida.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -260,7 +263,7 @@
             this.pnlCorEscolhida.Controls.Add(this.pnlDivisoria1);
             this.pnlCorEscolhida.Controls.Add(this.lblHexaColor);
             this.pnlCorEscolhida.Controls.Add(this.pnlColor);
-            this.pnlCorEscolhida.Location = new System.Drawing.Point(357, 75);
+            this.pnlCorEscolhida.Location = new System.Drawing.Point(509, 43);
             this.pnlCorEscolhida.Name = "pnlCorEscolhida";
             this.pnlCorEscolhida.Size = new System.Drawing.Size(631, 103);
             this.pnlCorEscolhida.TabIndex = 11;
@@ -556,11 +559,21 @@
             this.bunifuElipse3.ElipseRadius = 10;
             this.bunifuElipse3.TargetControl = this.pnlColor;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(352, 163);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(933, 449);
+            this.pictureBox1.TabIndex = 115;
+            this.pictureBox1.TabStop = false;
+            // 
             // Acroni
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1300, 720);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pnlCorEscolhida);
             this.Controls.Add(this.panel4);
             this.ForeColor = System.Drawing.Color.White;
@@ -568,6 +581,7 @@
             this.Load += new System.EventHandler(this.Acroni_Load);
             this.Controls.SetChildIndex(this.panel4, 0);
             this.Controls.SetChildIndex(this.pnlCorEscolhida, 0);
+            this.Controls.SetChildIndex(this.pictureBox1, 0);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.pnlCorEscolhida.ResumeLayout(false);
@@ -575,6 +589,7 @@
             this.panel7.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -626,6 +641,7 @@
         private System.Windows.Forms.Panel Azul_Cinzento;
         private System.Windows.Forms.Panel Ambar;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

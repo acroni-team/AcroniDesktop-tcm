@@ -7,15 +7,13 @@ using acroni.Forms.Seleção_do_teclado;
 using System.Data.SqlClient;
 using System.IO;
 using System.Data;
+using Svg;
+using SVGSample.svg;
 
 namespace acroni.Layout_Master
 {
     public partial class LayoutMaster : Form
     {
-        //private void isCustomizando
-        //{
-
-        //}
 
         #region Construtor
         public LayoutMaster()
@@ -23,6 +21,7 @@ namespace acroni.Layout_Master
             InitializeComponent();
             trocar_nome_usuario(Classes_internas.Conexao.nome_usuario);
             trocar_imagem_usuario(selecionar_imagem_cliente());
+
             #region Atribuição de Dragging aos controles e no próprio form 
 
             ///<summary> 
@@ -37,6 +36,11 @@ namespace acroni.Layout_Master
             #endregion    
         }
         #endregion
+
+        #region Obter informações do cliente pelo banco
+        public void trocar_nome_usuario(String usuario) => lblNomeUsuario.Text = usuario;
+
+        public void trocar_imagem_usuario(Image imagem) => fotoUsuario.Image = imagem;
 
         SqlConnection conexão_SQL = new SqlConnection(Classes_internas.Conexao.nome_conexao);
         SqlCommand comando_SQL;
@@ -81,6 +85,7 @@ namespace acroni.Layout_Master
                 return null;
             }
         }
+        #endregion
 
         #region Métodos de abrir formulários
         protected void btnAbrirGaleria_Click(object sender, EventArgs e)
@@ -102,11 +107,9 @@ namespace acroni.Layout_Master
 
         #endregion
 
-        public void trocar_nome_usuario(String usuario) => lblNomeUsuario.Text = usuario;
-
-        public void trocar_imagem_usuario(Image imagem) => fotoUsuario.Image = imagem;
-
         #region Métodos para transição de cores dos botões do menu
+
+        
         private void bunifuImageButton1_MouseMove(object sender, MouseEventArgs e)
         {
             btnFechar.BackColor = Color.FromArgb(244, 134, 134);
@@ -129,7 +132,7 @@ namespace acroni.Layout_Master
 
         #endregion
 
-        #region Ações dos botões do menuStrip e transião de cores
+        #region Ações dos botões do menuStrip e transição de cores
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -139,17 +142,6 @@ namespace acroni.Layout_Master
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
-        private void menuStrip1_MouseMove(object sender, MouseEventArgs e)
-        {
-            Cursor.Current = Cursors.Hand;
-        }
-
-        private void ajudaToolStripMenuItem_MouseMove(object sender, MouseEventArgs e)
-        {
-            Cursor.Current = Cursors.Hand;
-        }
-
         #endregion
     }
 }

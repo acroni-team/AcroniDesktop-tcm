@@ -833,7 +833,7 @@
             this.pnlCorEscolhida.Controls.Add(this.pnlDivisoria1);
             this.pnlCorEscolhida.Controls.Add(this.lblHexaColor);
             this.pnlCorEscolhida.Controls.Add(this.pnlColor);
-            this.pnlCorEscolhida.Location = new System.Drawing.Point(346, 38);
+            this.pnlCorEscolhida.Location = new System.Drawing.Point(371, 43);
             this.pnlCorEscolhida.Name = "pnlCorEscolhida";
             this.pnlCorEscolhida.Size = new System.Drawing.Size(631, 103);
             this.pnlCorEscolhida.TabIndex = 12;
@@ -1101,7 +1101,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1300, 720);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.pnlCorEscolhida);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel4);

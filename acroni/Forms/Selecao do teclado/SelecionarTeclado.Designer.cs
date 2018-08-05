@@ -35,7 +35,7 @@
             // 
             // btnAbrirCompacto
             // 
-            this.btnAbrirCompacto.Location = new System.Drawing.Point(487, 280);
+            this.btnAbrirCompacto.Location = new System.Drawing.Point(755, 381);
             this.btnAbrirCompacto.Name = "btnAbrirCompacto";
             this.btnAbrirCompacto.Size = new System.Drawing.Size(136, 23);
             this.btnAbrirCompacto.TabIndex = 11;
@@ -45,7 +45,7 @@
             // 
             // btnAbrirTenkeyless
             // 
-            this.btnAbrirTenkeyless.Location = new System.Drawing.Point(694, 280);
+            this.btnAbrirTenkeyless.Location = new System.Drawing.Point(962, 381);
             this.btnAbrirTenkeyless.Name = "btnAbrirTenkeyless";
             this.btnAbrirTenkeyless.Size = new System.Drawing.Size(247, 23);
             this.btnAbrirTenkeyless.TabIndex = 11;
@@ -54,7 +54,7 @@
             // 
             // btnAbrirFullsize
             // 
-            this.btnAbrirFullsize.Location = new System.Drawing.Point(1014, 280);
+            this.btnAbrirFullsize.Location = new System.Drawing.Point(1282, 381);
             this.btnAbrirFullsize.Name = "btnAbrirFullsize";
             this.btnAbrirFullsize.Size = new System.Drawing.Size(171, 23);
             this.btnAbrirFullsize.TabIndex = 11;
@@ -65,7 +65,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1300, 720);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.btnAbrirFullsize);
             this.Controls.Add(this.btnAbrirTenkeyless);
             this.Controls.Add(this.btnAbrirCompacto);

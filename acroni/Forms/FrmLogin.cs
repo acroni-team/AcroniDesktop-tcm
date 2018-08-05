@@ -81,6 +81,7 @@ namespace acroni.Login
                                 Classes_internas.Conexao.nome_usuario = txtEntrar.Text;
                                 selecionarTeclado = new SelecionarTeclado();
                                 selecionarTeclado.Show();
+                                this.Hide();
                             }
                             else
                             {

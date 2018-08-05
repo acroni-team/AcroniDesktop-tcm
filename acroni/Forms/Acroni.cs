@@ -97,7 +97,7 @@ namespace acroni
             Panel p = (Panel)sender;
             
             lblHexaColor.Text = "#" + (p.BackColor.R.ToString("X").Length == 1 ? "0" + p.BackColor.R.ToString("X") : p.BackColor.R.ToString("X")) + (p.BackColor.G.ToString("X").Length == 1 ? "0" + p.BackColor.G.ToString("X") : p.BackColor.G.ToString("X")) + (p.BackColor.B.ToString("X").Length == 1 ? "0" + p.BackColor.B.ToString("X") : p.BackColor.B.ToString("X"));
-            lblNomeCor.Text = (!p.Name.Contains("pnl")? p.Name.Replace("_", " "): p.Tag.ToString());
+            lblNomeCor.Text = p.BackColor.Name;
 
             //--Transição para mudar de cor
             Transition t_cor = new Transition(new TransitionType_EaseInEaseOut(200));
@@ -165,52 +165,6 @@ namespace acroni
                 {
                     c.Font = new System.Drawing.Font(cmbFonts.Text, 6.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 }
-            }
-        }
-        #endregion
-
-        #region Selecionador de imagens
-        SqlConnection conexão_SQL = new SqlConnection(Classes_internas.Conexao.nome_conexao);
-        SqlCommand comando_SQL;
-
-        public Image selecionar_imagem_cliente()
-        {
-            try
-            {
-                //--Checando se a conexão está aberta e a abrindo
-                if (conexão_SQL.State != ConnectionState.Open)
-                    conexão_SQL.Open();
-
-                //--Criando o comando SELECT e seleciando no SQL
-                String select = "SELECT imagem FROM tblCliente WHERE usuario IN ('" + Classes_internas.Conexao.nome_usuario + "')";
-
-                comando_SQL = new SqlCommand(select, conexão_SQL);
-                SqlDataReader resposta = comando_SQL.ExecuteReader();
-                Image imagem_retorno = null;
-                //--Checando se tem respostas do SELECT
-                if (resposta.HasRows)
-                {
-                    resposta.Read();
-                    //--Convertendo a variável que está no banco em imagem
-                    byte[] img = (byte[])(resposta[0]);
-
-                    if (img != null)
-                    {
-                        MemoryStream leitor_memoria = new MemoryStream(img);
-                        imagem_retorno = Image.FromStream(leitor_memoria);
-                    }
-
-                    //--Fechando a resposta para poder usá-la novamente (NÃO ESQUECER!)
-                    resposta.Close();
-                    conexão_SQL.Close();
-                }
-                return imagem_retorno;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                conexão_SQL.Close();
-                return null;
             }
         }
         #endregion
