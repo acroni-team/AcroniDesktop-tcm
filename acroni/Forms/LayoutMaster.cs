@@ -19,7 +19,7 @@ namespace acroni.Layout_Master
         public LayoutMaster()
         {
             InitializeComponent();
-            trocar_nome_usuario(Classes_internas.Conexao.nome_usuario);
+            trocar_nome_usuario($"{Classes_internas.Conexao.nome_usuario}!");
             trocar_imagem_usuario(selecionar_imagem_cliente());
 
             #region Atribuição de Dragging aos controles e no próprio form 

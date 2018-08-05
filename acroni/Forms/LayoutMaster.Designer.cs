@@ -32,7 +32,6 @@ namespace acroni.Layout_Master
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LayoutMaster));
-            this.eLayoutMaster = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAbrirGaleria = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton24 = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -41,7 +40,7 @@ namespace acroni.Layout_Master
             this.btnContinuarCustomizando = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnAbrirSelecaoDeTeclado = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picLogo = new System.Windows.Forms.PictureBox();
             this.pnlUsuario = new System.Windows.Forms.Panel();
             this.fotoUsuario = new System.Windows.Forms.PictureBox();
             this.btnDesconectar = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -57,11 +56,10 @@ namespace acroni.Layout_Master
             this.eBtnFechar = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.eBtnMinimizar = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.ePnlUsuario = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.ePnlEsquerdo = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.eFotoUsuario = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.pnlUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fotoUsuario)).BeginInit();
             this.pnlSuperior.SuspendLayout();
@@ -69,11 +67,6 @@ namespace acroni.Layout_Master
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // eLayoutMaster
-            // 
-            this.eLayoutMaster.ElipseRadius = 5;
-            this.eLayoutMaster.TargetControl = this;
             // 
             // panel1
             // 
@@ -246,20 +239,20 @@ namespace acroni.Layout_Master
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Controls.Add(this.picLogo);
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(480, 255);
             this.panel3.TabIndex = 5;
             // 
-            // pictureBox1
+            // picLogo
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(47, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(391, 221);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
+            this.picLogo.Location = new System.Drawing.Point(47, 16);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(391, 221);
+            this.picLogo.TabIndex = 0;
+            this.picLogo.TabStop = false;
             // 
             // pnlUsuario
             // 
@@ -437,11 +430,6 @@ namespace acroni.Layout_Master
             this.ePnlUsuario.ElipseRadius = 7;
             this.ePnlUsuario.TargetControl = this.pnlUsuario;
             // 
-            // ePnlEsquerdo
-            // 
-            this.ePnlEsquerdo.ElipseRadius = 7;
-            this.ePnlEsquerdo.TargetControl = this;
-            // 
             // eFotoUsuario
             // 
             this.eFotoUsuario.ElipseRadius = 7;
@@ -459,7 +447,7 @@ namespace acroni.Layout_Master
             this.Text = "LayoutMaster";
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.pnlUsuario.ResumeLayout(false);
             this.pnlUsuario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fotoUsuario)).EndInit();
@@ -474,8 +462,6 @@ namespace acroni.Layout_Master
         }
 
         #endregion
-
-        private Bunifu.Framework.UI.BunifuElipse eLayoutMaster;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblNomeUsuario;
         private System.Windows.Forms.Panel pnlSuperior;
@@ -491,7 +477,6 @@ namespace acroni.Layout_Master
         private ToolStripMenuItem faleConoscoToolStripMenuItem;
         private Panel pnlUsuario;
         private PictureBox fotoUsuario;
-        private Bunifu.Framework.UI.BunifuElipse ePnlEsquerdo;
         private Bunifu.Framework.UI.BunifuElipse eFotoUsuario;
         private Bunifu.Framework.UI.BunifuThinButton2 btnAbrirGaleria;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton24;
@@ -501,6 +486,6 @@ namespace acroni.Layout_Master
         private Bunifu.Framework.UI.BunifuThinButton2 btnAbrirSelecaoDeTeclado;
         private Bunifu.Framework.UI.BunifuThinButton2 btnDesconectar;
         private ToolStripMenuItem ajudaToolStripMenuItem;
-        private PictureBox pictureBox1;
+        private PictureBox picLogo;
     }
 }

@@ -26,7 +26,6 @@ namespace acroni
             InitializeComponent();
             pnlCorEscolhida.Size = new Size(243, 103);
             
-            trocar_nome_usuario("Bem vindo " + Classes_internas.Conexao.nome_usuario + "!");
             foreach (Control c_panel in pnlCorEscolhida.Controls)
             {
                 if (c_panel is Panel)
