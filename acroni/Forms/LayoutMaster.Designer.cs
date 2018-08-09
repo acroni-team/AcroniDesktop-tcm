@@ -292,9 +292,8 @@ namespace acroni.Layout_Master
             // 
             // LayoutMaster
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(1386, 788);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlSuperior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

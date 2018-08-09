@@ -59,7 +59,7 @@ namespace acroni.Layout_Master
 
         #region Métodos para transição de cores dos botões do menu
 
-        
+
         private void bunifuImageButton1_MouseMove(object sender, MouseEventArgs e)
         {
             btnFechar.BackColor = Color.FromArgb(244, 134, 134);
@@ -87,30 +87,32 @@ namespace acroni.Layout_Master
         {
             Application.Exit();
         }
-        
+
         private void bunifuImageButton2_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
         #endregion
 
-        #region Fontes das teclas
+        #region Fontes das tecla
         /// <summary>
         // Essa parte do programa é destinada para o funcionamento das fontes personalizadas.
         /// </summary>
 
-        static List<object> Fontes = new List<object>();
-        static List<object> EstiloDasFontes = new List<object>();
+        static List<FontFamily> lista_fontFamily = new List<FontFamily>();
+        static List<Font> lista_fonte = new List<Font>();
 
         protected virtual void LayoutMaster_Load(object sender, EventArgs e)
         {
-            new CarregarFontes(ref cmbFontes, ref Fontes);
-            //foreach (Font fonte in Fontes)
-            //{
-            //    cmbEstilizacaoDaFonte.Items.Add(fonte);
-            //}
+            new CarregarFontes(ref cmbFontes, ref lista_fontFamily);
+
+            foreach (FontFamily fonteFamily in lista_fontFamily)
+            {
+                if (fonteFamily.IsStyleAvailable(FontStyle.Bold))
+                    cmbEstilizacaoDaFonte.Items.Add(new Font(fonteFamily,5,FontStyle.Bold).Name);
+            }
         }
-        
+
 
         private void cmbFontes_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -126,14 +128,14 @@ namespace acroni.Layout_Master
         private void txtBuscarFontes_OnValueChanged(object sender, EventArgs e)
         {
             Regex regex = new Regex(txtBuscarFontes.Text, RegexOptions.IgnoreCase);
-            foreach (FontFamily fonte in Fontes)
+            foreach (FontFamily fonte in lista_fontFamily)
             {
                 cmbFontes.Items.Remove(fonte);
             }
             LayoutMaster_Load(sender, e);
             if (txtBuscarFontes.Text != "")
             {
-                foreach (FontFamily fonte in Fontes)
+                foreach (FontFamily fonte in lista_fontFamily)
                 {
                     if (!(regex.IsMatch(fonte.ToString())))
                     {

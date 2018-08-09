@@ -11,21 +11,21 @@ namespace acroni.Fontes
 {
     class CarregarFontes
     {
-        public static bool IsFontAddable { get; set; } = true;
+        public static bool IsFontAddable = true;
 
         ///<summary> 
         ///Esse método serve para obter todas as fontes que o usuário possui em seu computador.
         ///</summary>
-        public CarregarFontes(ref ComboBox cmbFonts, ref List<object> Fontes)
+        public CarregarFontes(ref ComboBox cmbFonts, ref List<FontFamily> Fontes)
         {
             using (InstalledFontCollection collection = new InstalledFontCollection())
             {
-                foreach (FontFamily fontFamily in collection.Families)
+                foreach (FontFamily fonte in collection.Families)
                 {
-                    cmbFonts.Items.Add(fontFamily.Name);
+                    cmbFonts.Items.Add(fonte.Name);
                     if (IsFontAddable)
                     {
-                        Fontes.Add(fontFamily);
+                        Fontes.Add(fonte);
                     }
                 }
                 IsFontAddable = false;

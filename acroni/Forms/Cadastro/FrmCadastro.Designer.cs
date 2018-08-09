@@ -42,6 +42,8 @@
             this.fotoCliente = new System.Windows.Forms.PictureBox();
             this.btnProcurarImagem = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnImaginario = new System.Windows.Forms.Button();
+            this.pnlVisibilidade1 = new System.Windows.Forms.Panel();
+            this.pnlVisibilidade2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.fotoCliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -329,6 +331,32 @@
             this.btnImaginario.UseVisualStyleBackColor = true;
             this.btnImaginario.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
+            // pnlVisibilidade1
+            // 
+            this.pnlVisibilidade1.AutoSize = true;
+            this.pnlVisibilidade1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnlVisibilidade1.BackgroundImage = global::acroni.Properties.Resources.icons8_invisible_30;
+            this.pnlVisibilidade1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pnlVisibilidade1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlVisibilidade1.Location = new System.Drawing.Point(294, 173);
+            this.pnlVisibilidade1.Name = "pnlVisibilidade1";
+            this.pnlVisibilidade1.Size = new System.Drawing.Size(42, 34);
+            this.pnlVisibilidade1.TabIndex = 69;
+            this.pnlVisibilidade1.Click += new System.EventHandler(this.pnlVisibiladade1_Click);
+            // 
+            // pnlVisibilidade2
+            // 
+            this.pnlVisibilidade2.AutoSize = true;
+            this.pnlVisibilidade2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnlVisibilidade2.BackgroundImage = global::acroni.Properties.Resources.icons8_invisible_30;
+            this.pnlVisibilidade2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pnlVisibilidade2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlVisibilidade2.Location = new System.Drawing.Point(640, 172);
+            this.pnlVisibilidade2.Name = "pnlVisibilidade2";
+            this.pnlVisibilidade2.Size = new System.Drawing.Size(42, 34);
+            this.pnlVisibilidade2.TabIndex = 70;
+            this.pnlVisibilidade2.Click += new System.EventHandler(this.pnlVisibilidade2_Click);
+            // 
             // FrmCadastro
             // 
             this.AcceptButton = this.btnImaginario;
@@ -336,6 +364,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(843, 256);
+            this.Controls.Add(this.pnlVisibilidade2);
+            this.Controls.Add(this.pnlVisibilidade1);
             this.Controls.Add(this.btnImaginario);
             this.Controls.Add(this.btnProcurarImagem);
             this.Controls.Add(this.fotoCliente);
@@ -375,5 +405,7 @@
         protected Bunifu.Framework.UI.BunifuFlatButton btnProcurarImagem;
         private System.Windows.Forms.PictureBox fotoCliente;
         private System.Windows.Forms.Button btnImaginario;
+        private System.Windows.Forms.Panel pnlVisibilidade2;
+        private System.Windows.Forms.Panel pnlVisibilidade1;
     }
 }

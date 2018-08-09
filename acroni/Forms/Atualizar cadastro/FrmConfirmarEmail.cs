@@ -40,10 +40,10 @@ namespace acroni.Cadastro
             //--Enviando o numero para o email da pessoa
             object c = null; EventArgs e = null;
             btnReenviar_Click(c, e);
+            t_splash.Abort();
 
             //--Mudando o nome do label de acordo com a necessidade
             lblTitulo.Text = tipo.Equals("cadastro")?"Cadastrando o seu usuário":"Atualizando a sua senha";
-            t_splash.Abort();
         }
         #endregion
 
@@ -67,10 +67,10 @@ namespace acroni.Cadastro
             //--Enviando o numero para o email da pessoa
             object c = null; EventArgs e = null;
             btnReenviar_Click(c, e);
-
+            t_splash.Abort();
             //--Mudando o nome do label de acordo com a necessidade
             lblTitulo.Text = tipo.Equals("cadastro") ? "Cadastrando o seu usuário" : "Atualizando a sua senha";
-            t_splash.Abort();
+            
         }
         #endregion
         
@@ -163,7 +163,7 @@ namespace acroni.Cadastro
                 img = convertedor_binario.ReadBytes((int)leitor_imagem.Length);
 
                 //--Inicializando um comando INSERT e execuntando
-                String insert = "INSERT INTO tblCliente VALUES ('" + usuario_public + "','" + senha_public + "','" + email_public + "',@img)";
+                String insert = "INSERT INTO tblCliente(usuario,senha,email,imagem) VALUES ('" + usuario_public + "','" + senha_public + "','" + email_public + "',@img)";
                 comando_SQL = new SqlCommand(insert, conexao_SQL);
                 comando_SQL.Parameters.AddWithValue("@img", img);
 
@@ -186,10 +186,10 @@ namespace acroni.Cadastro
                 if (conexao_SQL.State == ConnectionState.Closed)
                     conexao_SQL.Open();
 
-                String select = "SELECT usuario FROM tblCliente WHERE email = '"+ email_public +"'";
+                String select = "SELECT usuario FROM tblCliente WHERE email = '" + email_public + "'";
                 comando_SQL = new SqlCommand(select, conexao_SQL);
                 SqlDataReader resposta = comando_SQL.ExecuteReader();
-                
+
                 resposta.Read();
                 String usuario = resposta[0].ToString();
                 resposta.Close();
@@ -201,9 +201,10 @@ namespace acroni.Cadastro
                 //MessageBox.Show(ex.Message);
                 conexao_SQL.Close();
                 return usuario_public;
-                
+
             }
         }
+        
 
         private void gerar_string_confirmacao()
         {

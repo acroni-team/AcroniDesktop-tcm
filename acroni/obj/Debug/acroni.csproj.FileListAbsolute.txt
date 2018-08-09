@@ -114,3 +114,4 @@ C:\Users\gmininsk\Desktop\c\csharp\acroni\obj\Debug\acroni.csproj.CopyComplete
 C:\Users\gmininsk\Desktop\c\csharp\acroni\obj\Debug\acroni.exe
 C:\Users\gmininsk\Desktop\c\csharp\acroni\obj\Debug\acroni.pdb
 C:\Users\gmininsk\Desktop\c\csharp\acroni\obj\Debug\acroni.csprojAssemblyReference.cache
+C:\Users\gui_m\Desktop\Projetos\TCM - 2\csharp\acroni\obj\Debug\acroni.LayoutMasterComMenu.resources

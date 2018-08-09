@@ -143,6 +143,20 @@
             this.panel3.Size = new System.Drawing.Size(272, 683);
             this.panel3.TabIndex = 5;
             // 
+            // txtSelectFont
+            // 
+            this.txtSelectFont.Location = new System.Drawing.Point(0, 0);
+            this.txtSelectFont.Name = "txtSelectFont";
+            this.txtSelectFont.Size = new System.Drawing.Size(100, 20);
+            this.txtSelectFont.TabIndex = 0;
+            // 
+            // cmbFonts
+            // 
+            this.cmbFonts.Location = new System.Drawing.Point(0, 0);
+            this.cmbFonts.Name = "cmbFonts";
+            this.cmbFonts.Size = new System.Drawing.Size(121, 21);
+            this.cmbFonts.TabIndex = 1;
+            // 
             // pnlHistorico
             // 
             this.pnlHistorico.Controls.Add(this.btnHist3);
@@ -877,12 +891,13 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(1386, 788);
             this.Controls.Add(this.pnlCorEscolhida);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel4);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "Compacto";
+            this.Controls.SetChildIndex(this.panel2, 0);
             this.Controls.SetChildIndex(this.panel4, 0);
             this.Controls.SetChildIndex(this.pictureBox1, 0);
             this.Controls.SetChildIndex(this.pnlCorEscolhida, 0);

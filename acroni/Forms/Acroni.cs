@@ -17,6 +17,7 @@ namespace acroni
 {
     public partial class Acroni : LayoutMaster
     {
+       protected FontStyle penis;
         /// <summary>
         /// Construtor que carrega o login. 
         /// </summary>
@@ -128,28 +129,43 @@ namespace acroni
         /// <summary>
         // Essa parte do programa é destinada para o funcionamento das fontes personalizadas.
         /// </summary>
-        List<object> Fontes = new List<object>();
+        List<FontFamily> Fontes = new List<FontFamily>();
 
         private void Acroni_Load(object sender, EventArgs e)
         {
             new CarregarFontes(ref cmbFonts, ref Fontes);
         }
 
+        ComboBox fontestilo = new ComboBox();
+
+        private void Adicionar()
+        {
+            fontestilo.Items.Add(FontStyle.Regular);
+            fontestilo.Items.Add(FontStyle.Italic);
+            fontestilo.Items.Add(FontStyle.Bold);
+        }
+        
+        private void fontestilo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            penis = (FontStyle) fontestilo.SelectedItem;
+            cmbFonts_SelectedIndexChanged(sender, e);
+        }
+
         private void txtSelectFont_TextChanged(object sender, EventArgs e)
         {
             Regex a = new Regex(txtSelectFont.Text, RegexOptions.IgnoreCase);
-            foreach (string c in Fontes)
+            foreach (FontFamily F in Fontes)
             {
-                cmbFonts.Items.Remove(c);
+                cmbFonts.Items.Remove(F);
             }
             Acroni_Load(sender, e);
             if (txtSelectFont.Text != "")
             {
-                foreach (string c in Fontes)
+                foreach (FontFamily FF in Fontes)
                 {
-                    if (!(a.IsMatch(c)))
+                    if (!(a.IsMatch(FF.Name)))
                     {
-                        cmbFonts.Items.Remove(c);
+                        cmbFonts.Items.Remove(FF);
                     }
                 }
             }
@@ -161,7 +177,7 @@ namespace acroni
             {
                 if (c is Button)
                 {
-                    c.Font = new System.Drawing.Font(cmbFonts.Text, 6.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    c.Font = new System.Drawing.Font(cmbFonts.Text, 6.8F, penis, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 }
             }
         }

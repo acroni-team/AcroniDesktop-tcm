@@ -77,6 +77,7 @@
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             this.pnlCorEscolhida.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -568,20 +569,30 @@
             this.pictureBox1.TabIndex = 115;
             this.pictureBox1.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(386, 205);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(672, 398);
+            this.panel1.TabIndex = 116;
+            // 
             // Acroni
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1300, 720);
+            this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pnlCorEscolhida);
             this.Controls.Add(this.panel4);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "Acroni";
             this.Load += new System.EventHandler(this.Acroni_Load);
+            this.Controls.SetChildIndex(this.panel2, 0);
             this.Controls.SetChildIndex(this.panel4, 0);
             this.Controls.SetChildIndex(this.pnlCorEscolhida, 0);
             this.Controls.SetChildIndex(this.pictureBox1, 0);
+            this.Controls.SetChildIndex(this.panel1, 0);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.pnlCorEscolhida.ResumeLayout(false);
@@ -642,6 +653,7 @@
         private System.Windows.Forms.Panel Ambar;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

@@ -125,6 +125,10 @@
   <data name="lblAviso.Font" type="System.Drawing.Font, System.Drawing">
     <value>Century Gothic, 11.25pt</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblAviso.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="lblAviso.Location" type="System.Drawing.Point, System.Drawing">
     <value>140, 34</value>
   </data>
@@ -150,7 +154,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblAviso.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <metadata name="bunifuElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -158,6 +162,9 @@
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="btnImaginario.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="btnImaginario.Location" type="System.Drawing.Point, System.Drawing">
     <value>223, 244</value>
   </data>
@@ -177,7 +184,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnImaginario.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
@@ -185,11 +192,41 @@
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>370, 384</value>
   </data>
+  <data name="pnlVisibiladade.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="pnlVisibiladade.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="pnlVisibiladade.Location" type="System.Drawing.Point, System.Drawing">
+    <value>292, 173</value>
+  </data>
+  <data name="pnlVisibiladade.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 34</value>
+  </data>
+  <data name="pnlVisibiladade.TabIndex" type="System.Int32, mscorlib">
+    <value>67</value>
+  </data>
+  <data name="&gt;&gt;pnlVisibiladade.Name" xml:space="preserve">
+    <value>pnlVisibiladade</value>
+  </data>
+  <data name="&gt;&gt;pnlVisibiladade.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlVisibiladade.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlVisibiladade.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="lnklblEsqueceuSenha.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lnklblEsqueceuSenha.Font" type="System.Drawing.Font, System.Drawing">
     <value>Century Gothic, 8pt</value>
+  </data>
+  <data name="lnklblEsqueceuSenha.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="lnklblEsqueceuSenha.Location" type="System.Drawing.Point, System.Drawing">
     <value>21, 217</value>
@@ -213,9 +250,8 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lnklblEsqueceuSenha.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnSair.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
   </data>
@@ -247,7 +283,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnSair.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="btnCadastrar.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
@@ -280,7 +316,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnCadastrar.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="btnEntrar.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
@@ -313,7 +349,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnEntrar.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="txtSenha.Font" type="System.Drawing.Font, System.Drawing">
     <value>Century Gothic, 9.75pt</value>
@@ -343,7 +379,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtSenha.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="txtEntrar.Font" type="System.Drawing.Font, System.Drawing">
     <value>Century Gothic, 9.75pt</value>
@@ -370,7 +406,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtEntrar.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="label16.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -403,7 +439,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

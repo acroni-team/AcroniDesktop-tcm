@@ -22,6 +22,7 @@ namespace acroni.Cadastro
         {
             Application.Exit();
         }
+
         //--Propriedade para checar se o cadastro foi concluido ou não no form Login
         public static bool cadastro_SUCCESS = false;
 
@@ -156,13 +157,16 @@ namespace acroni.Cadastro
 
         private void txtSenha_OnValueChanged(object sender, EventArgs e)
         {
+            if (!visibilidae_1)
             txtSenha.isPassword = true;
         }
 
         private void txtRepetirSenha_OnValueChanged(object sender, EventArgs e)
         {
+            if (!visibilidae_2)
             txtRepetirSenha.isPassword = true;
         }
+
         private String loc_img;
         private void btnProcurarImagem_Click(object sender, EventArgs e)
         {
@@ -187,6 +191,36 @@ namespace acroni.Cadastro
                 MessageBox.Show(ex.Message);
             }
         }
-        
+        bool visibilidae_1 = false, visibilidae_2 = false;
+        private void pnlVisibiladade1_Click(object sender, EventArgs e)
+        {
+            if (!visibilidae_1)
+            {
+                pnlVisibilidade1.BackgroundImage = acroni.Properties.Resources.icons8_invisible_30;
+                txtSenha.isPassword = false;
+                visibilidae_1 = true;
+            }else
+            {
+                pnlVisibilidade1.BackgroundImage = acroni.Properties.Resources.icons8_eye_30;
+                txtSenha.isPassword = true;
+                visibilidae_1 = false;
+            }
+        }
+
+        private void pnlVisibilidade2_Click(object sender, EventArgs e)
+        {
+            if (!visibilidae_2)
+            {
+                pnlVisibilidade2.BackgroundImage = acroni.Properties.Resources.icons8_invisible_30;
+                txtRepetirSenha.isPassword = false;
+                visibilidae_2 = true;
+            }
+            else
+            {
+                pnlVisibilidade2.BackgroundImage = acroni.Properties.Resources.icons8_eye_30;
+                txtRepetirSenha.isPassword = true;
+                visibilidae_2 = false;
+            }
+        }
     }
 }

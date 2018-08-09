@@ -123,6 +123,7 @@ namespace acroni.Login
 
         private void txtSenha_OnValueChanged(object sender, EventArgs e)
         {
+            if (!visibilidade_senha)
             txtSenha.isPassword = true;
         }
 
@@ -133,7 +134,9 @@ namespace acroni.Login
             fc.ShowDialog();
             if (Cadastro.FrmCadastro.cadastro_SUCCESS)
             {
-                this.Close();
+                this.Hide();
+                selecionarTeclado = new SelecionarTeclado();
+                selecionarTeclado.Show();
             }
             else
             {
@@ -146,10 +149,24 @@ namespace acroni.Login
             this.Hide();
             Atualizadores.FrmUsuario frmAt = new Atualizadores.FrmUsuario();
             frmAt.ShowDialog();
-            //if (!Cadastro.FrmConfirmarEmail.atualizacao_SUCCESS)
             this.Show();
-            //else
-            //this.Close();
+        }
+        bool visibilidade_senha = false;
+
+        private void pnlVisibiladade_Click(object sender, EventArgs e)
+        {
+            if (!visibilidade_senha)
+            {
+                pnlVisibiladade.BackgroundImage = new Bitmap(acroni.Properties.Resources.icons8_invisible_30);
+                txtSenha.isPassword = false;
+                visibilidade_senha = true;
+            }
+            else
+            {
+                pnlVisibiladade.BackgroundImage = new Bitmap(acroni.Properties.Resources.icons8_eye_30);
+                txtSenha.isPassword = true;
+                visibilidade_senha = false;
+            }
         }
     }
 }

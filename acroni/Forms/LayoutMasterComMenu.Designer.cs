@@ -69,7 +69,7 @@
             this.panel1.Controls.Add(this.pnlUsuario);
             this.panel1.Location = new System.Drawing.Point(0, 50);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(400, 1300);
+            this.panel1.Size = new System.Drawing.Size(0, 1300);
             this.panel1.TabIndex = 11;
             // 
             // btnAbrirGaleria
@@ -313,7 +313,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(1386, 788);
             this.Controls.Add(this.panel1);
             this.Name = "LayoutMasterComMenu";
             this.Text = "LayoutMasterComMenu";

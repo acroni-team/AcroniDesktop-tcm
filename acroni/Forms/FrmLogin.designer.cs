@@ -42,6 +42,7 @@ namespace acroni.Login
             this.lnklblEsqueceuSenha = new System.Windows.Forms.LinkLabel();
             this.btnCadastrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnImaginario = new System.Windows.Forms.Button();
+            this.pnlVisibiladade = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // lblAviso
@@ -204,6 +205,15 @@ namespace acroni.Login
             this.btnImaginario.UseVisualStyleBackColor = true;
             this.btnImaginario.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
+            // pnlVisibiladade
+            // 
+            resources.ApplyResources(this.pnlVisibiladade, "pnlVisibiladade");
+            this.pnlVisibiladade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnlVisibiladade.BackgroundImage = global::acroni.Properties.Resources.icons8_eye_30;
+            this.pnlVisibiladade.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlVisibiladade.Name = "pnlVisibiladade";
+            this.pnlVisibiladade.Click += new System.EventHandler(this.pnlVisibiladade_Click);
+            // 
             // FrmLogin
             // 
             this.AcceptButton = this.btnImaginario;
@@ -211,6 +221,7 @@ namespace acroni.Login
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.Controls.Add(this.pnlVisibiladade);
             this.Controls.Add(this.btnImaginario);
             this.Controls.Add(this.lnklblEsqueceuSenha);
             this.Controls.Add(this.btnSair);
@@ -240,6 +251,7 @@ namespace acroni.Login
         private System.Windows.Forms.LinkLabel lnklblEsqueceuSenha;
         protected Bunifu.Framework.UI.BunifuFlatButton btnCadastrar;
         private System.Windows.Forms.Button btnImaginario;
+        private System.Windows.Forms.Panel pnlVisibiladade;
     }
 }
 
