@@ -208,7 +208,7 @@ namespace acroni.Login
             this.lblCadastrar.Name = "lblCadastrar";
             this.lblCadastrar.TabStop = true;
             this.lblCadastrar.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(0)))), ((int)(((byte)(158)))));
-            this.lblCadastrar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnklblEsqueceuSenha_LinkClicked);
+            this.lblCadastrar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnklblCadastrar_Click);
             // 
             // alblAindaNaoTemUmaConta
             // 

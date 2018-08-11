@@ -76,22 +76,27 @@ namespace acroni.Cadastro
 
                                 if (txtSenha.Text.Equals(txtRepetirSenha.Text))
                                 {
-                                    cadastro_SUCCESS = true;
+                                    ControlesAcroni.AcroniMessageBox confirmacao_nulabilidade = new ControlesAcroni.AcroniMessageBox("Desejas tu prosseguir sem colocar uma imagem de perfil?!");
+                                    if (fotoCliente.Image == null)
+                                    {
+                                        confirmacao_nulabilidade.ShowDialog();
+                                    }
+                                    //cadastro_SUCCESS = true;
                                     Classes_internas.Conexao.nome_usuario = txtUsuario.Text;
                                     this.Hide();
-                                    FrmConfirmarEmail frm = new FrmConfirmarEmail(txtUsuario.Text, txtSenha.Text, txtEmail.Text, "cadastro", fotoCliente.Image, loc_img);
-                                    frm.ShowDialog();
-                                    if (FrmConfirmarEmail.atualizacao_SUCCESS)
-                                    {
-                                        this.Close();
-                                        Classes_internas.Conexao.imagem_cliente = fotoCliente.Image;
-                                    }
-                                    else
-                                    {
-                                        this.Show();
-                                        txtEmail.ResetText(); txtRepetirSenha.ResetText(); txtSenha.ResetText(); txtUsuario.ResetText();
-                                    }
-                                }
+                            FrmConfirmarEmail frm = new FrmConfirmarEmail(txtUsuario.Text, txtSenha.Text, txtEmail.Text, "cadastro", (confirmacao_nulabilidade.confirmacao == true ? acroni.Properties.Resources.imagem_padrao_temporaria : fotoCliente.Image), loc_img);
+                            frm.ShowDialog();
+                            if (FrmConfirmarEmail.atualizacao_SUCCESS)
+                            {
+                                this.Close();
+                                        Classes_internas.Conexao.imagem_cliente = (confirmacao_nulabilidade.confirmacao == true ? acroni.Properties.Resources.imagem_padrao_temporaria : fotoCliente.Image);
+                        }
+                        else
+                        {
+                            this.Show();
+                            txtEmail.ResetText(); txtRepetirSenha.ResetText(); txtSenha.ResetText(); txtUsuario.ResetText(); fotoCliente.Image = null;
+                        }
+                    }
                                 else
                                 {
                                     lblAviso.Text = "As senhas não são iguais";
@@ -167,7 +172,7 @@ namespace acroni.Cadastro
             txtRepetirSenha.isPassword = true;
         }
 
-        private String loc_img;
+        private String loc_img = @"..\Proprities\Resources\imagem_padrao_temporaria.png";
         private void btnProcurarImagem_Click(object sender, EventArgs e)
         {
             try

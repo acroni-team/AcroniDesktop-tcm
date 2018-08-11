@@ -146,7 +146,7 @@ namespace acroni.Login
             }
         }
 
-        private void lblCadastrar_Click(object sender, EventArgs e)
+        private void lnklblCadastrar_Click(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
             Cadastro.FrmCadastro fc = new Cadastro.FrmCadastro();

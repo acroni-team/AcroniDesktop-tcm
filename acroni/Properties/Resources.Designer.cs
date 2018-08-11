@@ -73,9 +73,9 @@ namespace acroni.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_eye_30_white {
+        internal static System.Drawing.Bitmap icons8_invisible_30 {
             get {
-                object obj = ResourceManager.GetObject("icons8-eye-30-white", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8-invisible-30", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace acroni.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_invisible_30 {
+        internal static System.Drawing.Bitmap imagem_padrao_temporaria {
             get {
-                object obj = ResourceManager.GetObject("icons8-invisible-30", resourceCulture);
+                object obj = ResourceManager.GetObject("imagem_padrao_temporaria", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -117,3 +117,5 @@ C:\Users\gmininsk\Desktop\c\csharp\acroni\obj\Debug\acroni.csprojAssemblyReferen
 C:\Users\gui_m\Desktop\Projetos\TCM - 2\csharp\acroni\obj\Debug\acroni.LayoutMasterComMenu.resources
 C:\Users\gmininsk\Desktop\c\csharp\acroni\obj\Debug\acroni.Forms.Formulario_de_template.FrmTemplate.resources
 C:\Users\gui_m\Desktop\Projetos\TCM - 2\csharp\acroni\obj\Debug\acroni.Forms.Formulario_de_template.FrmTemplate.resources
+C:\Users\gui_m\Desktop\Projetos\TCM - 2\csharp\acroni\bin\Debug\ControlesAcroni.dll
+C:\Users\gui_m\Desktop\Projetos\TCM - 2\csharp\acroni\bin\Debug\ControlesAcroni.pdb

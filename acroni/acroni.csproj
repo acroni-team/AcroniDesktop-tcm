@@ -252,5 +252,17 @@
   <ItemGroup>
     <None Include="Resources\icons8-eye-30-white.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ControlesAcroni\ControlesAcroni.csproj">
+      <Project>{ad71f170-a186-466c-9f0c-bb976749bd9a}</Project>
+      <Name>ControlesAcroni</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagem_padrao_temporária.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagem_padrao_temporaria.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

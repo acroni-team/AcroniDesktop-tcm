@@ -54,6 +54,7 @@
             this.btnOpcao1.TabStop = false;
             this.btnOpcao1.Text = "Sim!";
             this.btnOpcao1.UseVisualStyleBackColor = true;
+            this.btnOpcao1.Click += new System.EventHandler(this.btnClose);
             // 
             // btnOpcao2
             // 
@@ -74,6 +75,7 @@
             this.btnOpcao2.TabStop = false;
             this.btnOpcao2.Text = "Nop!";
             this.btnOpcao2.UseVisualStyleBackColor = true;
+            this.btnOpcao2.Click += new System.EventHandler(this.btnClose);
             // 
             // apnlMensagem
             // 
@@ -99,6 +101,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(284, 196);
             this.Controls.Add(this.apnlMensagem);
             this.Controls.Add(this.btnOpcao2);
