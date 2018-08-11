@@ -220,7 +220,7 @@
     <value>NoControl</value>
   </data>
   <data name="lnklblEsqueceuSenha.Location" type="System.Drawing.Point, System.Drawing">
-    <value>855, 363</value>
+    <value>856, 363</value>
   </data>
   <data name="lnklblEsqueceuSenha.Size" type="System.Drawing.Size, System.Drawing">
     <value>115, 16</value>
@@ -431,7 +431,7 @@ por teclados?
     <value>True</value>
   </data>
   <data name="alblEntrar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Qanelas Soft DEMO ExtraBold, 15.749999pt, style=Bold</value>
+    <value>Microsoft Sans Serif, 15.749999pt, style=Bold</value>
   </data>
   <data name="alblEntrar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -440,7 +440,7 @@ por teclados?
     <value>850, 160</value>
   </data>
   <data name="alblEntrar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 26</value>
+    <value>76, 25</value>
   </data>
   <data name="alblEntrar.TabIndex" type="System.Int32, mscorlib">
     <value>69</value>
@@ -574,6 +574,9 @@ por teclados?
   <data name="&gt;&gt;pnlVisibiladade.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="btnEntrar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
   <data name="btnEntrar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -585,6 +588,9 @@ por teclados?
   </data>
   <data name="btnEntrar.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 23</value>
+  </data>
+  <data name="btnEntrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="btnEntrar.Size" type="System.Drawing.Size, System.Drawing">
     <value>328, 38</value>
@@ -808,6 +814,9 @@ por teclados?
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1280, 720</value>
   </data>
+  <data name="pnlQueDesce.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
   <data name="pnlQueDesce.Location" type="System.Drawing.Point, System.Drawing">
     <value>854, 416</value>
   </data>
@@ -853,12 +862,6 @@ por teclados?
   <data name="&gt;&gt;eBtnSair.Type" xml:space="preserve">
     <value>Bunifu.Framework.UI.BunifuElipse, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;eBtnEntrar.Name" xml:space="preserve">
-    <value>eBtnEntrar</value>
-  </data>
-  <data name="&gt;&gt;eBtnEntrar.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuElipse, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FrmLogin</value>
   </data>
@@ -870,8 +873,5 @@ por teclados?
   </metadata>
   <metadata name="eBtnSair.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>233, 17</value>
-  </metadata>
-  <metadata name="eBtnEntrar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>329, 17</value>
   </metadata>
 </root>

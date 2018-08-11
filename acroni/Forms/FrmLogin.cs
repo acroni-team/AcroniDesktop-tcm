@@ -13,6 +13,9 @@ namespace acroni.Login
         public FrmLogin()
         {
             InitializeComponent();
+            btnEntrar.FlatAppearance.MouseOverBackColor = Color.FromArgb(0,148,255);
+            btnEntrar.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 148, 255);
+            btnEntrar.FlatAppearance.BorderColor = Color.FromArgb(0, 148, 255);
         }
 
         #region Ações dos botões do menuStrip
@@ -173,21 +176,24 @@ namespace acroni.Login
         {
             if (!visibilidade_senha)
             {
-                pnlVisibiladade.BackgroundImage = new Bitmap(acroni.Properties.Resources.icons8_invisible_30);
-                txtSenha.isPassword = false;
-                visibilidade_senha = true;
+                    pnlVisibiladade.BackgroundImage = new Bitmap(acroni.Properties.Resources.icons8_eye_30);
+                    txtSenha.isPassword = false;
+                    visibilidade_senha = true;   
             }
             else
             {
-                pnlVisibiladade.BackgroundImage = new Bitmap(acroni.Properties.Resources.icons8_eye_30);
-                txtSenha.isPassword = true;
-                visibilidade_senha = false;
+                    pnlVisibiladade.BackgroundImage = new Bitmap(acroni.Properties.Resources.icons8_invisible_30);
+                    txtSenha.isPassword = true;
+                    visibilidade_senha = false;
             }
         }
 
         private void txtBoxesLogin_OnValueChanged(object sender, EventArgs e)
         {
             pnlQueDesce.Location = new Point(854, 416);
+            Bunifu.Framework.UI.BunifuMaterialTextbox b = (Bunifu.Framework.UI.BunifuMaterialTextbox)sender;
+            if (b.Name.Contains("Senha"))
+                txtSenha.isPassword = true;
         }
     }
 }

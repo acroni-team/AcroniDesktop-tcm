@@ -54,7 +54,6 @@ namespace acroni.Login
             this.eForm = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.eBtnMinimizar = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.eBtnSair = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.eBtnEntrar = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnlQueDesce = new System.Windows.Forms.Panel();
             this.apnlEsquerdo.SuspendLayout();
             this.apnlUsuario.SuspendLayout();
@@ -128,6 +127,7 @@ namespace acroni.Login
             this.apnlEsquerdo.Controls.Add(this.alblProcurandoPorTeclados);
             this.apnlEsquerdo.Controls.Add(this.alblAcroni);
             resources.ApplyResources(this.apnlEsquerdo, "apnlEsquerdo");
+            this.apnlEsquerdo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.apnlEsquerdo.Name = "apnlEsquerdo";
             // 
             // alblAGenteTemOQueVocePrecisa
@@ -180,20 +180,20 @@ namespace acroni.Login
             // 
             resources.ApplyResources(this.pnlVisibiladade, "pnlVisibiladade");
             this.pnlVisibiladade.BackColor = System.Drawing.Color.Transparent;
-            this.pnlVisibiladade.BackgroundImage = global::acroni.Properties.Resources.icons8_eye_30;
+            this.pnlVisibiladade.BackgroundImage = global::acroni.Properties.Resources.icons8_invisible_30;
             this.pnlVisibiladade.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlVisibiladade.Name = "pnlVisibiladade";
             this.pnlVisibiladade.Click += new System.EventHandler(this.pnlVisibiladade_Click);
             // 
             // btnEntrar
             // 
+            resources.ApplyResources(this.btnEntrar, "btnEntrar");
             this.btnEntrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEntrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.btnEntrar.FlatAppearance.BorderSize = 0;
             this.btnEntrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnEntrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            resources.ApplyResources(this.btnEntrar, "btnEntrar");
             this.btnEntrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.TabStop = false;
@@ -253,17 +253,12 @@ namespace acroni.Login
             this.eBtnSair.ElipseRadius = 5;
             this.eBtnSair.TargetControl = this.btnSair;
             // 
-            // eBtnEntrar
-            // 
-            this.eBtnEntrar.ElipseRadius = 5;
-            this.eBtnEntrar.TargetControl = this.btnEntrar;
-            // 
             // pnlQueDesce
             // 
+            resources.ApplyResources(this.pnlQueDesce, "pnlQueDesce");
             this.pnlQueDesce.Controls.Add(this.btnEntrar);
             this.pnlQueDesce.Controls.Add(this.alblAindaNaoTemUmaConta);
             this.pnlQueDesce.Controls.Add(this.lblCadastrar);
-            resources.ApplyResources(this.pnlQueDesce, "pnlQueDesce");
             this.pnlQueDesce.Name = "pnlQueDesce";
             // 
             // FrmLogin
@@ -324,7 +319,6 @@ namespace acroni.Login
         protected System.Windows.Forms.Label alblAcroni;
         protected System.Windows.Forms.Label alblAGenteTemOQueVocePrecisa;
         protected System.Windows.Forms.Label alblProcurandoPorTeclados;
-        private Bunifu.Framework.UI.BunifuElipse eBtnEntrar;
         private System.Windows.Forms.Panel pnlQueDesce;
         private System.Windows.Forms.Button btnEntrar;
     }
