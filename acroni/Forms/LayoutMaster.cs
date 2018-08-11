@@ -12,10 +12,10 @@ using SVGSample.svg;
 using acroni.Fontes;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
-
+using acroni.Forms.Formulario_de_template;
 namespace acroni.Layout_Master
 {
-    public partial class LayoutMaster : Form
+    public partial class LayoutMaster : FrmTemplate
     {
 
         #region Construtor
@@ -57,44 +57,7 @@ namespace acroni.Layout_Master
 
         #endregion
 
-        #region Métodos para transição de cores dos botões do menu
-
-
-        private void bunifuImageButton1_MouseMove(object sender, MouseEventArgs e)
-        {
-            btnFechar.BackColor = Color.FromArgb(244, 134, 134);
-        }
-
-        private void bunifuImageButton1_MouseLeave(object sender, EventArgs e)
-        {
-            btnFechar.BackColor = Color.FromArgb(238, 63, 63);
-        }
-
-        private void bunifuImageButton2_MouseMove(object sender, MouseEventArgs e)
-        {
-            btnMinimizar.BackColor = Color.FromArgb(166, 169, 173);
-        }
-
-        private void bunifuImageButton2_MouseLeave(object sender, EventArgs e)
-        {
-            btnMinimizar.BackColor = Color.FromArgb(47, 47, 47);
-        }
-
-        #endregion
-
-        #region Ações dos botões do menuStrip e transição de cores
-        private void bunifuImageButton1_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void bunifuImageButton2_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-        #endregion
-
-        #region Fontes das tecla
+        #region Fontes das teclas
         /// <summary>
         // Essa parte do programa é destinada para o funcionamento das fontes personalizadas.
         /// </summary>

@@ -4,7 +4,7 @@ using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
 using acroni.Forms.Seleção_do_teclado;
-using acroni.Layout_Master;
+using acroni.Forms.Formulario_de_template;
 
 namespace acroni.Login
 {
@@ -15,28 +15,47 @@ namespace acroni.Login
             InitializeComponent();
         }
 
-        #region Objetos do banco
-        //Usuário para lançar o script do banco: (Usuário: Acroni, Senha: acroni7)
-        SqlConnection conexão_SQL = new SqlConnection(Classes_internas.Conexao.nome_conexao);
-        SqlCommand comando_SQL;
-        #endregion
+        #region Ações dos botões do menuStrip
 
-        #region Métodos para o botão 'sair'
-        private void btnSair_MouseMove(object sender, MouseEventArgs e)
+        private void btnMinimizar_Click(object sender, EventArgs e)
         {
-            btnSair.Font = new System.Drawing.Font("Century Gothic", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.WindowState = FormWindowState.Minimized;
         }
-
+        
         private void btnSair_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+        #endregion
+
+        #region Métodos para transição de cores dos botões do menu
+
+        private void btnSair_MouseMove(object sender, MouseEventArgs e)
+        {
+            btnSair.BackColor = Color.FromArgb(244, 134, 134);
+        }
 
         private void btnSair_MouseLeave(object sender, EventArgs e)
         {
-            btnSair.Font = new System.Drawing.Font("Century Gothic", 11F, FontStyle.Bold);
+            btnSair.BackColor = Color.FromArgb(238, 63, 63);
         }
 
+        private void btnMinimizar_MouseMove(object sender, MouseEventArgs e)
+        {
+            btnMinimizar.BackColor = Color.FromArgb(166, 169, 173);
+        }
+
+        private void btnMinimizar_MouseLeave(object sender, EventArgs e)
+        {
+            btnMinimizar.BackColor = Color.FromArgb(47, 47, 47);
+        }
+
+        #endregion
+
+        #region Objetos do banco
+        //Usuário para lançar o script do banco: (Usuário: Acroni, Senha: acroni7)
+        SqlConnection conexão_SQL = new SqlConnection(Classes_internas.Conexao.nome_conexao);
+        SqlCommand comando_SQL;
         #endregion
 
         SelecionarTeclado selecionarTeclado;
@@ -85,14 +104,16 @@ namespace acroni.Login
                             }
                             else
                             {
-                                lblAviso.Text = "A senha está incorreta";
+                                pnlQueDesce.Location = new Point(854, 446);
+                                lblAviso.Text = "A senha está incorreta.";
                                 lblAviso.Visible = true;
                                 resposta.Close();
                             }
                         }
                         else
                         {
-                            lblAviso.Text = "A senha está incorreta";
+                            pnlQueDesce.Location = new Point(854, 446);
+                            lblAviso.Text = "A senha está incorreta.";
                             lblAviso.Visible = true;
                             resposta.Close();
                         }
@@ -109,7 +130,8 @@ namespace acroni.Login
                 }
                 else
                 {
-                    lblAviso.Text = "Este usuário não existe";
+                    pnlQueDesce.Location = new Point(854, 446);
+                    lblAviso.Text = "Este usuário não existe.";
                     lblAviso.Visible = true;
                     resposta_usuario.Close();
                 }
@@ -121,13 +143,7 @@ namespace acroni.Login
             }
         }
 
-        private void txtSenha_OnValueChanged(object sender, EventArgs e)
-        {
-            if (!visibilidade_senha)
-            txtSenha.isPassword = true;
-        }
-
-        private void btnCadastrar_Click(object sender, EventArgs e)
+        private void lblCadastrar_Click(object sender, EventArgs e)
         {
             this.Hide();
             Cadastro.FrmCadastro fc = new Cadastro.FrmCadastro();
@@ -151,8 +167,8 @@ namespace acroni.Login
             frmAt.ShowDialog();
             this.Show();
         }
-        bool visibilidade_senha = false;
 
+        bool visibilidade_senha = false;
         private void pnlVisibiladade_Click(object sender, EventArgs e)
         {
             if (!visibilidade_senha)
@@ -167,6 +183,11 @@ namespace acroni.Login
                 txtSenha.isPassword = true;
                 visibilidade_senha = false;
             }
+        }
+
+        private void txtBoxesLogin_OnValueChanged(object sender, EventArgs e)
+        {
+            pnlQueDesce.Location = new Point(854, 416);
         }
     }
 }

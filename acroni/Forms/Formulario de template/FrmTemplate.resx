@@ -117,38 +117,65 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="eBtnFechar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>141, 17</value>
-  </metadata>
-  <metadata name="eBtnMinimizar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>265, 17</value>
-  </metadata>
-  <metadata name="ePnlUsuario.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>389, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="bunifuImageButton3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnMinimizar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAFdJREFUSEvt
-        jzEKwEAMw/LP/P8d7SLIYq4Gdwon0JYIXBeb7n7+lOygjhLJbkdNdyVxRj26ktiEmplIdlBHiWS3o6a7
-        kjijHl1JbELNTCQ7qKNEspcvql7wLnNQHJQXXgAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wgAADsIBFShKgAAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4yMfEgaZUAAAkASURBVHhe7dUx
+        bhwwEARBv0bf9NNlX96BqI0GqAEq6ZzcP9/f3wDAuIwAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjPDo67+/wK993lC9LfixjPDo8yGZ2e/3eUP1tuDHMsIjB93sNgeds4zwyEE3
+        u81B5ywjPHLQzW5z0DnLCI8cdLPbHHTOMsIjB93sNgeds4zwyEE3u81B5ywjPHLQzW5z0DnLCI8cdLPb
+        HHTOMsIjB93sNgeds4zwyEE3u81B5ywjPHLQzW5z0DnLCI8cdLPbHHTOMsIjB93sNgeds4zwyEE3u81B
+        5ywjPHLQzW5z0DnLCI8cdLPbHHTOMsIjB93sNgeds4zwyEE3u81B5ywjPHLQzW5z0DnLCI8cdLPbHHTO
+        MsIjB93sNgeds4zwyEE3u81B5ywjPHLQzW5z0DnLCI8cdLPbHHTOMsIjB93sNgeds4zwyEE3u81B5ywj
+        PHLQzW5z0DnLCI8cdLPbHHTOMsIjB93sNgeds4zwyEE3u81B5ywjPHLQzW5z0DnLCI8cdLPbHHTOMsIj
+        B93sNgeds4zwyEE3u81B5ywjPHLQzW5z0DnLCI8cdLPbHHTOMsIjB93sNgeds4zwyEE3u81B5ywjPHLQ
+        zW5z0DnLCI8cdLPbHHTOMsKjr/8+HxLwO583VG8LfiwjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAl
+        IwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAl
+        IwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAl
+        IwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAl
+        IwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAl
+        IwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAl
+        IwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAl
+        IwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAl
+        IwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAl
+        IwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAl
+        IwCwJSMAsCUjALDk+88/sDsRrjOSuGUAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="bunifuImageButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnSair.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAFhJREFUSEvt
-        k0EKwCAMBPPP5DH9uUVYyGWlwipSycDc4kgOsWIad28rRTZhQ4rI3khEPGzlGftbZMZs/+C/sJUVkU3Y
-        kCKyN1J3cA62siKyCRtSRLb4wuwFrc13sKSWYjQAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAVJJREFUaEPt2FFPwjAUBeD9EfVJTVCeZBJ4wwH//68IKo/oTc4hqHXt2ru2mPu9
+        jTS352wsjDXGGGNMqP129rjrnu9wqG63mt3vV+0DDnW9d217BCmCj9W8rRdTjD/KXvhYx3l40iwhszD2
+        RK2Eazi9bua3WBZNvpIY94vKSfrYtleY55SySd/JEbI3lqYZo0S28KRZInt40ihRLDyllCgeng7rp2vs
+        6eQqUU14GlLCF15mYWle3hJfjwXVhidfiT7Fw1NMiWrC05AS1YWnkBLVhhdy0yLnn0Z73k8VEp6qKzEk
+        PFVTIiY8FS/hCy83rO/GLlYiJDyWBv1iY2keQ8JTNSViwpO3RDefYOk4UsJTsRIa4Sl7Cc3wlK2EDMJM
+        p5jwlKVE3x+Si3ixJVybpJz5n1xXQuPkfHNeQjM8HV6WNxivH57kkl7s63VjjDH/UNN8AtDuSt3Gcbdx
+        AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="bunifuImageButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAFdJREFUSEvt
-        jzEKwEAMw/LP/P8d7SLIYq4Gdwon0JYIXBeb7n7+lOygjhLJbkLNdCVxRj26ktiOmp5IdlBHiWQ3oWa6
-        kjijHl1JbEdNTyQ7qKNEspcvql6bxHNQpQh8ugAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <metadata name="eFotoUsuario.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>738, 20</value>
+  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
 </root>

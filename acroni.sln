@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "acroni", "acroni\acroni.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormsDesign", "FormsDesign\FormsDesign.csproj", "{8CE2A941-156B-4B3F-9070-41D6EA4046D9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlesAcroni", "ControlesAcroni\ControlesAcroni.csproj", "{AD71F170-A186-466C-9F0C-BB976749BD9A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8CE2A941-156B-4B3F-9070-41D6EA4046D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CE2A941-156B-4B3F-9070-41D6EA4046D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CE2A941-156B-4B3F-9070-41D6EA4046D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD71F170-A186-466C-9F0C-BB976749BD9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD71F170-A186-466C-9F0C-BB976749BD9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD71F170-A186-466C-9F0C-BB976749BD9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD71F170-A186-466C-9F0C-BB976749BD9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

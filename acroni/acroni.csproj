@@ -119,6 +119,12 @@
     <Compile Include="Forms\Customizacao\Tenkeyless.Designer.cs">
       <DependentUpon>Tenkeyless.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Formulario de template\FrmTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Formulario de template\FrmTemplate.Designer.cs">
+      <DependentUpon>FrmTemplate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\LayoutMasterComMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Customizacao\Galeria.resx">
       <DependentUpon>Galeria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Formulario de template\FrmTemplate.resx">
+      <DependentUpon>FrmTemplate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LayoutMaster.resx">
       <DependentUpon>LayoutMaster.cs</DependentUpon>

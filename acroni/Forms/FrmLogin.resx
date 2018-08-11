@@ -123,17 +123,17 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lblAviso.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 11.25pt</value>
+    <value>Open Sans, 11.25pt</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lblAviso.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblAviso.Location" type="System.Drawing.Point, System.Drawing">
-    <value>140, 34</value>
+    <value>854, 416</value>
   </data>
   <data name="lblAviso.Size" type="System.Drawing.Size, System.Drawing">
-    <value>202, 20</value>
+    <value>196, 20</value>
   </data>
   <data name="lblAviso.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -154,19 +154,100 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblAviso.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="txtEntrar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Open Sans, 10.25pt</value>
+  </data>
+  <data name="txtEntrar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="txtEntrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="txtEntrar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>318, 44</value>
+  </data>
+  <data name="txtEntrar.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtEntrar.Name" xml:space="preserve">
+    <value>txtEntrar</value>
+  </data>
+  <data name="&gt;&gt;txtEntrar.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuMaterialTextbox, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtEntrar.Parent" xml:space="preserve">
+    <value>apnlUsuario</value>
+  </data>
+  <data name="&gt;&gt;txtEntrar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtSenha.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Open Sans, 10.25pt</value>
+  </data>
+  <data name="txtSenha.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 4</value>
+  </data>
+  <data name="txtSenha.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="txtSenha.Size" type="System.Drawing.Size, System.Drawing">
+    <value>318, 44</value>
+  </data>
+  <data name="txtSenha.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtSenha.Name" xml:space="preserve">
+    <value>txtSenha</value>
+  </data>
+  <data name="&gt;&gt;txtSenha.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuMaterialTextbox, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtSenha.Parent" xml:space="preserve">
+    <value>apnlSenha</value>
+  </data>
+  <data name="&gt;&gt;txtSenha.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lnklblEsqueceuSenha.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lnklblEsqueceuSenha.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 8pt</value>
+  </data>
+  <data name="lnklblEsqueceuSenha.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lnklblEsqueceuSenha.Location" type="System.Drawing.Point, System.Drawing">
+    <value>855, 363</value>
+  </data>
+  <data name="lnklblEsqueceuSenha.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 16</value>
+  </data>
+  <data name="lnklblEsqueceuSenha.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lnklblEsqueceuSenha.Text" xml:space="preserve">
+    <value>Esqueceu a senha?</value>
+  </data>
+  <data name="&gt;&gt;lnklblEsqueceuSenha.Name" xml:space="preserve">
+    <value>lnklblEsqueceuSenha</value>
+  </data>
+  <data name="&gt;&gt;lnklblEsqueceuSenha.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lnklblEsqueceuSenha.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lnklblEsqueceuSenha.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <metadata name="bunifuElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="btnImaginario.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="btnImaginario.Location" type="System.Drawing.Point, System.Drawing">
-    <value>223, 244</value>
+    <value>1136, 381</value>
   </data>
   <data name="btnImaginario.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 0</value>
@@ -184,13 +265,287 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnImaginario.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;alblAGenteTemOQueVocePrecisa.Name" xml:space="preserve">
+    <value>alblAGenteTemOQueVocePrecisa</value>
+  </data>
+  <data name="&gt;&gt;alblAGenteTemOQueVocePrecisa.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;alblAGenteTemOQueVocePrecisa.Parent" xml:space="preserve">
+    <value>apnlEsquerdo</value>
+  </data>
+  <data name="&gt;&gt;alblAGenteTemOQueVocePrecisa.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;alblProcurandoPorTeclados.Name" xml:space="preserve">
+    <value>alblProcurandoPorTeclados</value>
+  </data>
+  <data name="&gt;&gt;alblProcurandoPorTeclados.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;alblProcurandoPorTeclados.Parent" xml:space="preserve">
+    <value>apnlEsquerdo</value>
+  </data>
+  <data name="&gt;&gt;alblProcurandoPorTeclados.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+  <data name="&gt;&gt;alblAcroni.Name" xml:space="preserve">
+    <value>alblAcroni</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>370, 384</value>
+  <data name="&gt;&gt;alblAcroni.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;alblAcroni.Parent" xml:space="preserve">
+    <value>apnlEsquerdo</value>
+  </data>
+  <data name="&gt;&gt;alblAcroni.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="apnlEsquerdo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="apnlEsquerdo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="apnlEsquerdo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>790, 720</value>
+  </data>
+  <data name="apnlEsquerdo.TabIndex" type="System.Int32, mscorlib">
+    <value>68</value>
+  </data>
+  <data name="&gt;&gt;apnlEsquerdo.Name" xml:space="preserve">
+    <value>apnlEsquerdo</value>
+  </data>
+  <data name="&gt;&gt;apnlEsquerdo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;apnlEsquerdo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;apnlEsquerdo.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="alblAGenteTemOQueVocePrecisa.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="alblAGenteTemOQueVocePrecisa.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Open Sans, 15pt</value>
+  </data>
+  <data name="alblAGenteTemOQueVocePrecisa.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="alblAGenteTemOQueVocePrecisa.Location" type="System.Drawing.Point, System.Drawing">
+    <value>125, 294</value>
+  </data>
+  <data name="alblAGenteTemOQueVocePrecisa.Size" type="System.Drawing.Size, System.Drawing">
+    <value>306, 54</value>
+  </data>
+  <data name="alblAGenteTemOQueVocePrecisa.TabIndex" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="alblAGenteTemOQueVocePrecisa.Text" xml:space="preserve">
+    <value>A gente tem o que você precisa.
+
+</value>
+  </data>
+  <data name="&gt;&gt;alblAGenteTemOQueVocePrecisa.Name" xml:space="preserve">
+    <value>alblAGenteTemOQueVocePrecisa</value>
+  </data>
+  <data name="&gt;&gt;alblAGenteTemOQueVocePrecisa.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;alblAGenteTemOQueVocePrecisa.Parent" xml:space="preserve">
+    <value>apnlEsquerdo</value>
+  </data>
+  <data name="&gt;&gt;alblAGenteTemOQueVocePrecisa.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="alblProcurandoPorTeclados.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="alblProcurandoPorTeclados.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Open Sans ExtraBold, 32.25pt, style=Bold</value>
+  </data>
+  <data name="alblProcurandoPorTeclados.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="alblProcurandoPorTeclados.Location" type="System.Drawing.Point, System.Drawing">
+    <value>120, 156</value>
+  </data>
+  <data name="alblProcurandoPorTeclados.Size" type="System.Drawing.Size, System.Drawing">
+    <value>322, 118</value>
+  </data>
+  <data name="alblProcurandoPorTeclados.TabIndex" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="alblProcurandoPorTeclados.Text" xml:space="preserve">
+    <value>Procurando 
+por teclados?
+</value>
+  </data>
+  <data name="&gt;&gt;alblProcurandoPorTeclados.Name" xml:space="preserve">
+    <value>alblProcurandoPorTeclados</value>
+  </data>
+  <data name="&gt;&gt;alblProcurandoPorTeclados.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;alblProcurandoPorTeclados.Parent" xml:space="preserve">
+    <value>apnlEsquerdo</value>
+  </data>
+  <data name="&gt;&gt;alblProcurandoPorTeclados.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="alblAcroni.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="alblAcroni.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Open Sans ExtraBold, 15.25pt, style=Bold</value>
+  </data>
+  <data name="alblAcroni.Location" type="System.Drawing.Point, System.Drawing">
+    <value>68, 48</value>
+  </data>
+  <data name="alblAcroni.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 28</value>
+  </data>
+  <data name="alblAcroni.TabIndex" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="alblAcroni.Text" xml:space="preserve">
+    <value>Acroni</value>
+  </data>
+  <data name="&gt;&gt;alblAcroni.Name" xml:space="preserve">
+    <value>alblAcroni</value>
+  </data>
+  <data name="&gt;&gt;alblAcroni.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;alblAcroni.Parent" xml:space="preserve">
+    <value>apnlEsquerdo</value>
+  </data>
+  <data name="&gt;&gt;alblAcroni.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="alblEntrar.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="alblEntrar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Qanelas Soft DEMO ExtraBold, 15.749999pt, style=Bold</value>
+  </data>
+  <data name="alblEntrar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="alblEntrar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>850, 160</value>
+  </data>
+  <data name="alblEntrar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 26</value>
+  </data>
+  <data name="alblEntrar.TabIndex" type="System.Int32, mscorlib">
+    <value>69</value>
+  </data>
+  <data name="alblEntrar.Text" xml:space="preserve">
+    <value>Entrar</value>
+  </data>
+  <data name="&gt;&gt;alblEntrar.Name" xml:space="preserve">
+    <value>alblEntrar</value>
+  </data>
+  <data name="&gt;&gt;alblEntrar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;alblEntrar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;alblEntrar.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="alblSejaBemVindo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="alblSejaBemVindo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Open Sans, 10.25pt</value>
+  </data>
+  <data name="alblSejaBemVindo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="alblSejaBemVindo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>850, 191</value>
+  </data>
+  <data name="alblSejaBemVindo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>190, 19</value>
+  </data>
+  <data name="alblSejaBemVindo.TabIndex" type="System.Int32, mscorlib">
+    <value>67</value>
+  </data>
+  <data name="alblSejaBemVindo.Text" xml:space="preserve">
+    <value>Seja bem-vindo(a) de volta!</value>
+  </data>
+  <data name="&gt;&gt;alblSejaBemVindo.Name" xml:space="preserve">
+    <value>alblSejaBemVindo</value>
+  </data>
+  <data name="&gt;&gt;alblSejaBemVindo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;alblSejaBemVindo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;alblSejaBemVindo.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="apnlUsuario.Location" type="System.Drawing.Point, System.Drawing">
+    <value>854, 233</value>
+  </data>
+  <data name="apnlUsuario.Size" type="System.Drawing.Size, System.Drawing">
+    <value>328, 54</value>
+  </data>
+  <data name="apnlUsuario.TabIndex" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="&gt;&gt;apnlUsuario.Name" xml:space="preserve">
+    <value>apnlUsuario</value>
+  </data>
+  <data name="&gt;&gt;apnlUsuario.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;apnlUsuario.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;apnlUsuario.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;pnlVisibiladade.Name" xml:space="preserve">
+    <value>pnlVisibiladade</value>
+  </data>
+  <data name="&gt;&gt;pnlVisibiladade.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlVisibiladade.Parent" xml:space="preserve">
+    <value>apnlSenha</value>
+  </data>
+  <data name="&gt;&gt;pnlVisibiladade.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="apnlSenha.Location" type="System.Drawing.Point, System.Drawing">
+    <value>855, 306</value>
+  </data>
+  <data name="apnlSenha.Size" type="System.Drawing.Size, System.Drawing">
+    <value>328, 54</value>
+  </data>
+  <data name="apnlSenha.TabIndex" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="&gt;&gt;apnlSenha.Name" xml:space="preserve">
+    <value>apnlSenha</value>
+  </data>
+  <data name="&gt;&gt;apnlSenha.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;apnlSenha.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;apnlSenha.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="pnlVisibiladade.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -199,10 +554,10 @@
     <value>Center</value>
   </data>
   <data name="pnlVisibiladade.Location" type="System.Drawing.Point, System.Drawing">
-    <value>292, 173</value>
+    <value>279, 11</value>
   </data>
   <data name="pnlVisibiladade.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 34</value>
+    <value>40, 30</value>
   </data>
   <data name="pnlVisibiladade.TabIndex" type="System.Int32, mscorlib">
     <value>67</value>
@@ -214,246 +569,294 @@
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;pnlVisibiladade.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>apnlSenha</value>
   </data>
   <data name="&gt;&gt;pnlVisibiladade.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="lnklblEsqueceuSenha.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lnklblEsqueceuSenha.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 8pt</value>
-  </data>
-  <data name="lnklblEsqueceuSenha.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lnklblEsqueceuSenha.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 217</value>
-  </data>
-  <data name="lnklblEsqueceuSenha.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 16</value>
-  </data>
-  <data name="lnklblEsqueceuSenha.TabIndex" type="System.Int32, mscorlib">
-    <value>65</value>
-  </data>
-  <data name="lnklblEsqueceuSenha.Text" xml:space="preserve">
-    <value>Esqueceu a senha?</value>
-  </data>
-  <data name="&gt;&gt;lnklblEsqueceuSenha.Name" xml:space="preserve">
-    <value>lnklblEsqueceuSenha</value>
-  </data>
-  <data name="&gt;&gt;lnklblEsqueceuSenha.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lnklblEsqueceuSenha.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lnklblEsqueceuSenha.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="btnSair.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
-  </data>
-  <data name="btnSair.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="btnSair.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 304</value>
-  </data>
-  <data name="btnSair.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="btnSair.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 42</value>
-  </data>
-  <data name="btnSair.TabIndex" type="System.Int32, mscorlib">
-    <value>64</value>
-  </data>
-  <data name="btnSair.Text" xml:space="preserve">
-    <value>Sair</value>
-  </data>
-  <data name="&gt;&gt;btnSair.Name" xml:space="preserve">
-    <value>btnSair</value>
-  </data>
-  <data name="&gt;&gt;btnSair.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;btnSair.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnSair.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="btnCadastrar.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
-  </data>
-  <data name="btnCadastrar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="btnCadastrar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>242, 304</value>
-  </data>
-  <data name="btnCadastrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="btnCadastrar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 42</value>
-  </data>
-  <data name="btnCadastrar.TabIndex" type="System.Int32, mscorlib">
-    <value>63</value>
-  </data>
-  <data name="btnCadastrar.Text" xml:space="preserve">
-    <value>Cadastrar</value>
-  </data>
-  <data name="&gt;&gt;btnCadastrar.Name" xml:space="preserve">
-    <value>btnCadastrar</value>
-  </data>
-  <data name="&gt;&gt;btnCadastrar.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;btnCadastrar.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnCadastrar.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="btnEntrar.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
+  <data name="btnEntrar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
   <data name="btnEntrar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
+    <value>Open Sans, 10.25pt, style=Bold</value>
+  </data>
+  <data name="btnEntrar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="btnEntrar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>127, 304</value>
-  </data>
-  <data name="btnEntrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+    <value>14, 23</value>
   </data>
   <data name="btnEntrar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 42</value>
+    <value>328, 38</value>
   </data>
   <data name="btnEntrar.TabIndex" type="System.Int32, mscorlib">
-    <value>62</value>
+    <value>2</value>
   </data>
   <data name="btnEntrar.Text" xml:space="preserve">
-    <value>Entrar</value>
+    <value>Deixe-me entrar!</value>
   </data>
   <data name="&gt;&gt;btnEntrar.Name" xml:space="preserve">
     <value>btnEntrar</value>
   </data>
   <data name="&gt;&gt;btnEntrar.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnEntrar.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>pnlQueDesce</value>
   </data>
   <data name="&gt;&gt;btnEntrar.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>0</value>
   </data>
-  <data name="txtSenha.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 9.75pt</value>
-  </data>
-  <data name="txtSenha.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>Off</value>
-  </data>
-  <data name="txtSenha.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 169</value>
-  </data>
-  <data name="txtSenha.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="txtSenha.Size" type="System.Drawing.Size, System.Drawing">
-    <value>318, 44</value>
-  </data>
-  <data name="txtSenha.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;txtSenha.Name" xml:space="preserve">
-    <value>txtSenha</value>
-  </data>
-  <data name="&gt;&gt;txtSenha.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuMaterialTextbox, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtSenha.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txtSenha.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="txtEntrar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 9.75pt</value>
-  </data>
-  <data name="txtEntrar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 97</value>
-  </data>
-  <data name="txtEntrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="txtEntrar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>318, 44</value>
-  </data>
-  <data name="txtEntrar.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;txtEntrar.Name" xml:space="preserve">
-    <value>txtEntrar</value>
-  </data>
-  <data name="&gt;&gt;txtEntrar.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuMaterialTextbox, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtEntrar.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txtEntrar.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="label16.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lblCadastrar.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label16.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 12.25pt, style=Bold</value>
+  <data name="lblCadastrar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Open Sans, 8.28pt</value>
   </data>
-  <data name="label16.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="lblCadastrar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 35</value>
+  <data name="lblCadastrar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>235, 82</value>
   </data>
-  <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 19</value>
+  <data name="lblCadastrar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 17</value>
   </data>
-  <data name="label16.TabIndex" type="System.Int32, mscorlib">
-    <value>57</value>
+  <data name="lblCadastrar.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
-  <data name="label16.Text" xml:space="preserve">
-    <value>Login</value>
+  <data name="lblCadastrar.Text" xml:space="preserve">
+    <value>Crie uma!</value>
   </data>
-  <data name="&gt;&gt;label16.Name" xml:space="preserve">
-    <value>label16</value>
+  <data name="&gt;&gt;lblCadastrar.Name" xml:space="preserve">
+    <value>lblCadastrar</value>
   </data>
-  <data name="&gt;&gt;label16.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblCadastrar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblCadastrar.Parent" xml:space="preserve">
+    <value>pnlQueDesce</value>
+  </data>
+  <data name="&gt;&gt;lblCadastrar.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="alblAindaNaoTemUmaConta.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="alblAindaNaoTemUmaConta.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Open Sans, 8.28pt</value>
+  </data>
+  <data name="alblAindaNaoTemUmaConta.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="alblAindaNaoTemUmaConta.Location" type="System.Drawing.Point, System.Drawing">
+    <value>82, 82</value>
+  </data>
+  <data name="alblAindaNaoTemUmaConta.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 17</value>
+  </data>
+  <data name="alblAindaNaoTemUmaConta.TabIndex" type="System.Int32, mscorlib">
+    <value>72</value>
+  </data>
+  <data name="alblAindaNaoTemUmaConta.Text" xml:space="preserve">
+    <value>Ainda não tem uma conta?</value>
+  </data>
+  <data name="&gt;&gt;alblAindaNaoTemUmaConta.Name" xml:space="preserve">
+    <value>alblAindaNaoTemUmaConta</value>
+  </data>
+  <data name="&gt;&gt;alblAindaNaoTemUmaConta.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label16.Parent" xml:space="preserve">
+  <data name="&gt;&gt;alblAindaNaoTemUmaConta.Parent" xml:space="preserve">
+    <value>pnlQueDesce</value>
+  </data>
+  <data name="&gt;&gt;alblAindaNaoTemUmaConta.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnMinimizar.ErrorImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="btnMinimizar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wgAADsIBFShKgAAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4yMfEgaZUAAAkASURBVHhe7dUx
+        bhwwEARBv0bf9NNlX96BqI0GqAEq6ZzcP9/f3wDAuIwAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaMAMCWjADAlowAwJaM
+        AMCWjADAlowAwJaMAMCWjPDo67+/wK993lC9LfixjPDo8yGZ2e/3eUP1tuDHMsIjB93sNgeds4zwyEE3
+        u81B5ywjPHLQzW5z0DnLCI8cdLPbHHTOMsIjB93sNgeds4zwyEE3u81B5ywjPHLQzW5z0DnLCI8cdLPb
+        HHTOMsIjB93sNgeds4zwyEE3u81B5ywjPHLQzW5z0DnLCI8cdLPbHHTOMsIjB93sNgeds4zwyEE3u81B
+        5ywjPHLQzW5z0DnLCI8cdLPbHHTOMsIjB93sNgeds4zwyEE3u81B5ywjPHLQzW5z0DnLCI8cdLPbHHTO
+        MsIjB93sNgeds4zwyEE3u81B5ywjPHLQzW5z0DnLCI8cdLPbHHTOMsIjB93sNgeds4zwyEE3u81B5ywj
+        PHLQzW5z0DnLCI8cdLPbHHTOMsIjB93sNgeds4zwyEE3u81B5ywjPHLQzW5z0DnLCI8cdLPbHHTOMsIj
+        B93sNgeds4zwyEE3u81B5ywjPHLQzW5z0DnLCI8cdLPbHHTOMsIjB93sNgeds4zwyEE3u81B5ywjPHLQ
+        zW5z0DnLCI8cdLPbHHTOMsKjr/8+HxLwO583VG8LfiwjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAl
+        IwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAl
+        IwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAl
+        IwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAl
+        IwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAl
+        IwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAl
+        IwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAl
+        IwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAl
+        IwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAl
+        IwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAlIwCwJSMAsCUjALAl
+        IwCwJSMAsCUjALDk+88/sDsRrjOSuGUAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnMinimizar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnMinimizar.InitialImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="btnMinimizar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1144, -1</value>
+  </data>
+  <data name="btnMinimizar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 30</value>
+  </data>
+  <data name="btnMinimizar.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="btnMinimizar.TabIndex" type="System.Int32, mscorlib">
+    <value>73</value>
+  </data>
+  <data name="&gt;&gt;btnMinimizar.Name" xml:space="preserve">
+    <value>btnMinimizar</value>
+  </data>
+  <data name="&gt;&gt;btnMinimizar.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuImageButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnMinimizar.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
-    <value>8</value>
+  <data name="&gt;&gt;btnMinimizar.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="btnSair.ErrorImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="btnSair.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAVJJREFUaEPt2FFPwjAUBeD9EfVJTVCeZBJ4wwH//68IKo/oTc4hqHXt2ru2mPu9
+        jTS352wsjDXGGGNMqP129rjrnu9wqG63mt3vV+0DDnW9d217BCmCj9W8rRdTjD/KXvhYx3l40iwhszD2
+        RK2Eazi9bua3WBZNvpIY94vKSfrYtleY55SySd/JEbI3lqYZo0S28KRZInt40ihRLDyllCgeng7rp2vs
+        6eQqUU14GlLCF15mYWle3hJfjwXVhidfiT7Fw1NMiWrC05AS1YWnkBLVhhdy0yLnn0Z73k8VEp6qKzEk
+        PFVTIiY8FS/hCy83rO/GLlYiJDyWBv1iY2keQ8JTNSViwpO3RDefYOk4UsJTsRIa4Sl7Cc3wlK2EDMJM
+        p5jwlKVE3x+Si3ixJVybpJz5n1xXQuPkfHNeQjM8HV6WNxivH57kkl7s63VjjDH/UNN8AtDuSt3Gcbdx
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnSair.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="btnSair.InitialImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="btnSair.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1187, -1</value>
+  </data>
+  <data name="btnSair.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 30</value>
+  </data>
+  <data name="btnSair.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="btnSair.TabIndex" type="System.Int32, mscorlib">
+    <value>74</value>
+  </data>
+  <data name="&gt;&gt;btnSair.Name" xml:space="preserve">
+    <value>btnSair</value>
+  </data>
+  <data name="&gt;&gt;btnSair.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuImageButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnSair.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnSair.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="eForm.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1280, 720</value>
+  </data>
+  <data name="pnlQueDesce.Location" type="System.Drawing.Point, System.Drawing">
+    <value>854, 416</value>
+  </data>
+  <data name="pnlQueDesce.Size" type="System.Drawing.Size, System.Drawing">
+    <value>361, 160</value>
+  </data>
+  <data name="pnlQueDesce.TabIndex" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="&gt;&gt;pnlQueDesce.Name" xml:space="preserve">
+    <value>pnlQueDesce</value>
+  </data>
+  <data name="&gt;&gt;pnlQueDesce.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlQueDesce.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlQueDesce.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>s</value>
+    <value>Login</value>
   </data>
-  <data name="&gt;&gt;bunifuElipse1.Name" xml:space="preserve">
-    <value>bunifuElipse1</value>
+  <data name="&gt;&gt;eForm.Name" xml:space="preserve">
+    <value>eForm</value>
   </data>
-  <data name="&gt;&gt;bunifuElipse1.Type" xml:space="preserve">
+  <data name="&gt;&gt;eForm.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuElipse, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;eBtnMinimizar.Name" xml:space="preserve">
+    <value>eBtnMinimizar</value>
+  </data>
+  <data name="&gt;&gt;eBtnMinimizar.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuElipse, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;eBtnSair.Name" xml:space="preserve">
+    <value>eBtnSair</value>
+  </data>
+  <data name="&gt;&gt;eBtnSair.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuElipse, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;eBtnEntrar.Name" xml:space="preserve">
+    <value>eBtnEntrar</value>
+  </data>
+  <data name="&gt;&gt;eBtnEntrar.Type" xml:space="preserve">
     <value>Bunifu.Framework.UI.BunifuElipse, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
@@ -462,4 +865,13 @@
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <metadata name="eBtnMinimizar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>103, 17</value>
+  </metadata>
+  <metadata name="eBtnSair.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>233, 17</value>
+  </metadata>
+  <metadata name="eBtnEntrar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>329, 17</value>
+  </metadata>
 </root>
