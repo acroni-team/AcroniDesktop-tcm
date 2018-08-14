@@ -259,9 +259,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Imagem_padrao_temporária.bmp" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\imagem_padrao_temporaria.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

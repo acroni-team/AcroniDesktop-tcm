@@ -10,7 +10,7 @@ CREATE TABLE tblCliente (
 )
 GO
 --INSERT INTO tblCliente VALUES ('Mota','oi','jota@jot.com')
---SELECT * FROM tblCliente WHERE usuario='Mota'
+SELECT * FROM tblCliente WHERE usuario='Mota'
 
 --UPDATE tblCliente SET usuario = 'Mota',senha = 'oimota' WHERE email = 'oimota@gmail.com'
 

@@ -6,3 +6,11 @@ C:\Users\gui_m\Desktop\Projetos\TCM - 2\csharp\ControlesAcroni\obj\Debug\Control
 C:\Users\gui_m\Desktop\Projetos\TCM - 2\csharp\ControlesAcroni\obj\Debug\ControlesAcroni.csproj.CoreCompileInputs.cache
 C:\Users\gui_m\Desktop\Projetos\TCM - 2\csharp\ControlesAcroni\obj\Debug\ControlesAcroni.dll
 C:\Users\gui_m\Desktop\Projetos\TCM - 2\csharp\ControlesAcroni\obj\Debug\ControlesAcroni.pdb
+C:\Users\gui_m\Desktop\csharp\ControlesAcroni\bin\Debug\ControlesAcroni.dll
+C:\Users\gui_m\Desktop\csharp\ControlesAcroni\bin\Debug\ControlesAcroni.pdb
+C:\Users\gui_m\Desktop\csharp\ControlesAcroni\obj\Debug\ControlesAcroni.csprojAssemblyReference.cache
+C:\Users\gui_m\Desktop\csharp\ControlesAcroni\obj\Debug\ControlesAcroni.AcroniMessageBox.resources
+C:\Users\gui_m\Desktop\csharp\ControlesAcroni\obj\Debug\ControlesAcroni.csproj.GenerateResource.cache
+C:\Users\gui_m\Desktop\csharp\ControlesAcroni\obj\Debug\ControlesAcroni.csproj.CoreCompileInputs.cache
+C:\Users\gui_m\Desktop\csharp\ControlesAcroni\obj\Debug\ControlesAcroni.dll
+C:\Users\gui_m\Desktop\csharp\ControlesAcroni\obj\Debug\ControlesAcroni.pdb

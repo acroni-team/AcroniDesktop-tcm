@@ -9,7 +9,7 @@ namespace acroni.Classes_internas
     {
         internal static String nome_usuario { get; set; }
         internal static SqlConnection conexao = new SqlConnection("Data Source = " + Environment.MachineName + "\\SQLEXPRESS; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7");
-        internal static String nome_conexao = "Data Source = " + Environment.MachineName + "\\SQLEXPRESS; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7";
+        internal static String nome_conexao = "Data Source = " + Environment.MachineName + "; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7";
         internal static Image imagem_cliente;
         public void AbrirConexao()
         {

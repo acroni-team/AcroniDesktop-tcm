@@ -80,6 +80,7 @@ namespace acroni.Cadastro
                                     if (fotoCliente.Image == null)
                                     {
                                         confirmacao_nulabilidade.ShowDialog();
+                                        MessageBox.Show(loc_img);
                                     }
                                     //cadastro_SUCCESS = true;
                                     Classes_internas.Conexao.nome_usuario = txtUsuario.Text;
@@ -172,7 +173,7 @@ namespace acroni.Cadastro
             txtRepetirSenha.isPassword = true;
         }
 
-        private String loc_img = @"..\Proprities\Resources\imagem_padrao_temporaria.png";
+        private String loc_img = Application.StartupPath.Replace(@"bin\Debug",@"Resources\imagem_padrao_temporaria.png");
         private void btnProcurarImagem_Click(object sender, EventArgs e)
         {
             try
