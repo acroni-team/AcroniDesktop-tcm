@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D19978D5-243D-419D-9F05-D75DCCA5FD2D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>AcroniUI</RootNamespace>
+    <AssemblyName>AcroniUI</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="FormsDesign\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="FormsDesign\obj\Debug\FormsDesign.csproj.CoreCompileInputs.cache" />
+    <None Include="FormsDesign\obj\Debug\FormsDesign.csprojAssemblyReference.cache" />
+    <None Include="FormsDesign\obj\Debug\FormsDesign.csprojResolveAssemblyReference.cache" />
+    <None Include="FormsDesign\obj\Release\FormsDesign.csproj.CoreCompileInputs.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormsDesign\FormDrag.cs" />
+    <Compile Include="FormsDesign\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="FormsDesign\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="FormsDesign\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="FormsDesign\Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\Acroni.cs" />
+    <Compile Include="Forms\Acroni.designer.cs">
+      <DependentUpon>Acroni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customizacao\Compacto.cs" />
+    <Compile Include="Forms\Customizacao\Compacto.Designer.cs">
+      <DependentUpon>Compacto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customizacao\Fullsize.cs" />
+    <Compile Include="Forms\Customizacao\Fullsize.Designer.cs">
+      <DependentUpon>Fullsize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customizacao\Galeria.cs" />
+    <Compile Include="Forms\Customizacao\Galeria.Designer.cs">
+      <DependentUpon>Galeria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customizacao\Tenkeyless.cs" />
+    <Compile Include="Forms\Customizacao\Tenkeyless.Designer.cs">
+      <DependentUpon>Tenkeyless.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Formulario de template\FrmTemplate.cs" />
+    <Compile Include="Forms\Formulario de template\FrmTemplate.Designer.cs">
+      <DependentUpon>FrmTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LayoutMaster.cs" />
+    <Compile Include="Forms\LayoutMaster.Designer.cs">
+      <DependentUpon>LayoutMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LayoutMasterComMenu.cs" />
+    <Compile Include="Forms\LayoutMasterComMenu.Designer.cs">
+      <DependentUpon>LayoutMasterComMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login e cadastro\Atualizar cadastro\FrmConfirmarEmail.cs" />
+    <Compile Include="Forms\Login e cadastro\Atualizar cadastro\FrmConfirmarEmail.Designer.cs">
+      <DependentUpon>FrmConfirmarEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login e cadastro\Atualizar cadastro\FrmUsuario.cs" />
+    <Compile Include="Forms\Login e cadastro\Atualizar cadastro\FrmUsuario.Designer.cs">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login e cadastro\Cadastro\FrmCadastro.cs" />
+    <Compile Include="Forms\Login e cadastro\Cadastro\FrmCadastro.Designer.cs">
+      <DependentUpon>FrmCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login e cadastro\FrmLogin.cs" />
+    <Compile Include="Forms\Login e cadastro\FrmLogin.designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Selecao do teclado\SelecionarTeclado.cs" />
+    <Compile Include="Forms\Selecao do teclado\SelecionarTeclado.Designer.cs">
+      <DependentUpon>SelecionarTeclado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Splash\SplashEscrita.cs" />
+    <Compile Include="Forms\Splash\SplashEscrita.designer.cs">
+      <DependentUpon>SplashEscrita.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\Acroni.resx">
+      <DependentUpon>Acroni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customizacao\Compacto.resx">
+      <DependentUpon>Compacto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customizacao\Galeria.resx">
+      <DependentUpon>Galeria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Formulario de template\FrmTemplate.resx">
+      <DependentUpon>FrmTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LayoutMaster.resx">
+      <DependentUpon>LayoutMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LayoutMasterComMenu.resx">
+      <DependentUpon>LayoutMasterComMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login e cadastro\Atualizar cadastro\FrmConfirmarEmail.resx">
+      <DependentUpon>FrmConfirmarEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login e cadastro\Atualizar cadastro\FrmUsuario.resx">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login e cadastro\Cadastro\FrmCadastro.resx">
+      <DependentUpon>FrmCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login e cadastro\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Selecao do teclado\SelecionarTeclado.resx">
+      <DependentUpon>SelecionarTeclado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Splash\SplashEscrita.resx">
+      <DependentUpon>SplashEscrita.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FormsDesign\bin\Debug\FormsDesign.dll" />
+    <Content Include="FormsDesign\bin\Debug\FormsDesign.pdb" />
+    <Content Include="FormsDesign\FormsDesign.csproj" />
+    <Content Include="FormsDesign\FormsDesign.csproj.user" />
+    <Content Include="FormsDesign\obj\Debug\FormsDesign.csproj.FileListAbsolute.txt" />
+    <Content Include="FormsDesign\obj\Debug\FormsDesign.dll" />
+    <Content Include="FormsDesign\obj\Debug\FormsDesign.pdb" />
+    <Content Include="Imagens\Botoes da fonte\center.png" />
+    <Content Include="Imagens\Botoes da fonte\left.png" />
+    <Content Include="Imagens\Botoes da fonte\right.png" />
+    <Content Include="Imagens\c064d12f-1c61-48b9-a5eb-927f5dd2f947.jpg" />
+    <Content Include="Imagens\compacto.png" />
+    <Content Include="Imagens\fullsize.png" />
+    <Content Include="Imagens\logo.svg" />
+    <Content Include="Imagens\slogo.png" />
+    <Content Include="Imagens\tenkeyless.png" />
+    <Content Include="Resources\icons8-eye-30-white.png" />
+    <Content Include="Resources\icons8-eye-30.png" />
+    <Content Include="Resources\icons8-invisible-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="FormsDesign\obj\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

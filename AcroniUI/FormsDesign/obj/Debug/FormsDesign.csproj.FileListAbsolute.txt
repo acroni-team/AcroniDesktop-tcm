@@ -1,0 +1,22 @@
+C:\Users\gmininsk\Desktop\c\csharp\acroni\FormsDesign\bin\Debug\FormsDesign.dll
+C:\Users\gmininsk\Desktop\c\csharp\acroni\FormsDesign\bin\Debug\FormsDesign.pdb
+C:\Users\gmininsk\Desktop\c\csharp\acroni\FormsDesign\obj\Debug\FormsDesign.csproj.CoreCompileInputs.cache
+C:\Users\gmininsk\Desktop\c\csharp\acroni\FormsDesign\obj\Debug\FormsDesign.dll
+C:\Users\gmininsk\Desktop\c\csharp\acroni\FormsDesign\obj\Debug\FormsDesign.pdb
+C:\Users\gmininsk\Desktop\c\csharp\acroni\FormsDesign\obj\Debug\FormsDesign.csprojAssemblyReference.cache
+C:\Users\gui_m\Desktop\Projetos\csharp\FormsDesign\bin\Debug\FormsDesign.dll
+C:\Users\gui_m\Desktop\Projetos\csharp\FormsDesign\bin\Debug\FormsDesign.pdb
+C:\Users\gui_m\Desktop\Projetos\csharp\FormsDesign\obj\Debug\FormsDesign.csproj.CoreCompileInputs.cache
+C:\Users\gui_m\Desktop\Projetos\csharp\FormsDesign\obj\Debug\FormsDesign.dll
+C:\Users\gui_m\Desktop\Projetos\csharp\FormsDesign\obj\Debug\FormsDesign.pdb
+C:\Users\gui_m\Desktop\Projetos\TCM - 2\csharp\FormsDesign\bin\Debug\FormsDesign.dll
+C:\Users\gui_m\Desktop\Projetos\TCM - 2\csharp\FormsDesign\bin\Debug\FormsDesign.pdb
+C:\Users\gui_m\Desktop\Projetos\TCM - 2\csharp\FormsDesign\obj\Debug\FormsDesign.csprojResolveAssemblyReference.cache
+C:\Users\gui_m\Desktop\Projetos\TCM - 2\csharp\FormsDesign\obj\Debug\FormsDesign.csproj.CoreCompileInputs.cache
+C:\Users\gui_m\Desktop\Projetos\TCM - 2\csharp\FormsDesign\obj\Debug\FormsDesign.dll
+C:\Users\gui_m\Desktop\Projetos\TCM - 2\csharp\FormsDesign\obj\Debug\FormsDesign.pdb
+C:\Users\gmininsk\Desktop\c\csharp\FormsDesign\bin\Debug\FormsDesign.dll
+C:\Users\gmininsk\Desktop\c\csharp\FormsDesign\bin\Debug\FormsDesign.pdb
+C:\Users\gmininsk\Desktop\c\csharp\FormsDesign\obj\Debug\FormsDesign.csproj.CoreCompileInputs.cache
+C:\Users\gmininsk\Desktop\c\csharp\FormsDesign\obj\Debug\FormsDesign.dll
+C:\Users\gmininsk\Desktop\c\csharp\FormsDesign\obj\Debug\FormsDesign.pdb
