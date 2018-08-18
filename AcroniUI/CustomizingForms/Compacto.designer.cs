@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Compacto));
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtSelectFont = new System.Windows.Forms.TextBox();
             this.cmbFonts = new System.Windows.Forms.ComboBox();
@@ -591,7 +590,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(8, 270);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(866, 328);

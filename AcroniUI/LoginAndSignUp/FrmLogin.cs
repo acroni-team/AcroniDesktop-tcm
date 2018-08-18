@@ -12,9 +12,6 @@ namespace AcroniUI.LoginAndSignUp
         public FrmLogin()
         {
             InitializeComponent();
-            btnEntrar.FlatAppearance.MouseOverBackColor = Color.FromArgb(96, 0, 255);
-            btnEntrar.FlatAppearance.MouseDownBackColor = Color.FromArgb(96, 0, 255);
-            btnEntrar.FlatAppearance.BorderColor = Color.FromArgb(96, 0, 255);
         }
 
         #region Ações dos botões do menuStrip
@@ -40,16 +37,6 @@ namespace AcroniUI.LoginAndSignUp
         private void btnSair_MouseLeave(object sender, EventArgs e)
         {
             btnSair.BackColor = Color.FromArgb(238, 63, 63);
-        }
-
-        private void btnMinimizar_MouseMove(object sender, MouseEventArgs e)
-        {
-            btnMinimizar.BackColor = Color.FromArgb(166, 169, 173);
-        }
-
-        private void btnMinimizar_MouseLeave(object sender, EventArgs e)
-        {
-            btnMinimizar.BackColor = Color.FromArgb(47, 47, 47);
         }
 
         #endregion
@@ -188,7 +175,7 @@ namespace AcroniUI.LoginAndSignUp
 
         private void txtBoxesLogin_OnValueChanged(object sender, EventArgs e)
         {
-            pnlQueDesce.Location = new Point(854, 416);
+            pnlQueDesce.Location = new Point(854, 426);
             Bunifu.Framework.UI.BunifuMaterialTextbox b = (Bunifu.Framework.UI.BunifuMaterialTextbox)sender;
             if (b.Name.Contains("Senha"))
                 txtSenha.isPassword = true;
