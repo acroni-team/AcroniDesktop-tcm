@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcroniUI", "AcroniUI\AcroniUI.csproj", "{D19978D5-243D-419D-9F05-D75DCCA5FD2D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcroniControls", "AcroniControls\AcroniControls.csproj", "{ADF7371B-02A4-4E2B-B342-348E0F4D8F1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcroniLibrary", "AcroniLibrary\AcroniLibrary.csproj", "{28752632-4CF6-40C7-A0B0-04D2742DC590}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcroniLibrary", "AcroniLibrary\AcroniLibrary.csproj", "{CE52AF0A-B700-4DBF-A004-C7240A6A1CC9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcroniTest", "AcroniTest\AcroniTest.csproj", "{1E5EB0D1-4659-4C25-84FB-A02828CFFA4B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcroniTest", "AcroniTest\AcroniTest.csproj", "{3F48044C-C028-4428-BF13-150222F2B746}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcroniControls", "AcroniControls\AcroniControls.csproj", "{74FEC93E-7D6A-4328-888D-49F2C2BD076C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcroniUI", "AcroniUI\AcroniUI.csproj", "{1DAD0A79-5891-417D-A079-3A31DC905400}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,27 +17,27 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D19978D5-243D-419D-9F05-D75DCCA5FD2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D19978D5-243D-419D-9F05-D75DCCA5FD2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D19978D5-243D-419D-9F05-D75DCCA5FD2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D19978D5-243D-419D-9F05-D75DCCA5FD2D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{28752632-4CF6-40C7-A0B0-04D2742DC590}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{28752632-4CF6-40C7-A0B0-04D2742DC590}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{28752632-4CF6-40C7-A0B0-04D2742DC590}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{28752632-4CF6-40C7-A0B0-04D2742DC590}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1E5EB0D1-4659-4C25-84FB-A02828CFFA4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1E5EB0D1-4659-4C25-84FB-A02828CFFA4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1E5EB0D1-4659-4C25-84FB-A02828CFFA4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1E5EB0D1-4659-4C25-84FB-A02828CFFA4B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{74FEC93E-7D6A-4328-888D-49F2C2BD076C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{74FEC93E-7D6A-4328-888D-49F2C2BD076C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{74FEC93E-7D6A-4328-888D-49F2C2BD076C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{74FEC93E-7D6A-4328-888D-49F2C2BD076C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADF7371B-02A4-4E2B-B342-348E0F4D8F1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADF7371B-02A4-4E2B-B342-348E0F4D8F1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADF7371B-02A4-4E2B-B342-348E0F4D8F1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADF7371B-02A4-4E2B-B342-348E0F4D8F1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE52AF0A-B700-4DBF-A004-C7240A6A1CC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE52AF0A-B700-4DBF-A004-C7240A6A1CC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE52AF0A-B700-4DBF-A004-C7240A6A1CC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE52AF0A-B700-4DBF-A004-C7240A6A1CC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F48044C-C028-4428-BF13-150222F2B746}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F48044C-C028-4428-BF13-150222F2B746}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F48044C-C028-4428-BF13-150222F2B746}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F48044C-C028-4428-BF13-150222F2B746}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DAD0A79-5891-417D-A079-3A31DC905400}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DAD0A79-5891-417D-A079-3A31DC905400}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DAD0A79-5891-417D-A079-3A31DC905400}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DAD0A79-5891-417D-A079-3A31DC905400}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {7C15F800-01A7-4220-A1C6-DA41C1BACFFD}
+		SolutionGuid = {1A95B2E8-183A-48B8-9C98-C6F250E7E881}
 	EndGlobalSection
 EndGlobal

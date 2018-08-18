@@ -1,0 +1,17 @@
+C:\Users\gmininsk\Desktop\c\AcroniDesktop\AcroniTest\obj\Debug\AcroniTest.csprojAssemblyReference.cache
+C:\Users\gmininsk\Desktop\c\AcroniDesktop\AcroniTest\obj\Debug\AcroniTest.Properties.Resources.resources
+C:\Users\gmininsk\Desktop\c\AcroniDesktop\AcroniTest\obj\Debug\AcroniTest.csproj.GenerateResource.cache
+C:\Users\gmininsk\Desktop\c\AcroniDesktop\AcroniTest\obj\Debug\AcroniTest.csproj.CoreCompileInputs.cache
+C:\Users\gmininsk\Desktop\c\AcroniDesktop\AcroniTest\bin\Debug\AcroniTest.exe
+C:\Users\gmininsk\Desktop\c\AcroniDesktop\AcroniTest\bin\Debug\AcroniTest.pdb
+C:\Users\gmininsk\Desktop\c\AcroniDesktop\AcroniTest\bin\Debug\AcroniUI.dll
+C:\Users\gmininsk\Desktop\c\AcroniDesktop\AcroniTest\bin\Debug\Bunifu_UI_v1.52.dll
+C:\Users\gmininsk\Desktop\c\AcroniDesktop\AcroniTest\bin\Debug\Transitions.dll
+C:\Users\gmininsk\Desktop\c\AcroniDesktop\AcroniTest\bin\Debug\AcroniLibrary.dll
+C:\Users\gmininsk\Desktop\c\AcroniDesktop\AcroniTest\bin\Debug\Svg.dll
+C:\Users\gmininsk\Desktop\c\AcroniDesktop\AcroniTest\bin\Debug\AcroniUI.pdb
+C:\Users\gmininsk\Desktop\c\AcroniDesktop\AcroniTest\bin\Debug\Transitions.pdb
+C:\Users\gmininsk\Desktop\c\AcroniDesktop\AcroniTest\bin\Debug\AcroniLibrary.pdb
+C:\Users\gmininsk\Desktop\c\AcroniDesktop\AcroniTest\obj\Debug\AcroniTest.csproj.CopyComplete
+C:\Users\gmininsk\Desktop\c\AcroniDesktop\AcroniTest\obj\Debug\AcroniTest.exe
+C:\Users\gmininsk\Desktop\c\AcroniDesktop\AcroniTest\obj\Debug\AcroniTest.pdb

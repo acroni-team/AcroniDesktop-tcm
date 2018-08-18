@@ -1,0 +1,6 @@
+C:\Users\gmininsk\Desktop\c\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.csproj.CoreCompileInputs.cache
+C:\Users\gmininsk\Desktop\c\AcroniDesktop\AcroniLibrary\bin\Debug\AcroniLibrary.dll
+C:\Users\gmininsk\Desktop\c\AcroniDesktop\AcroniLibrary\bin\Debug\AcroniLibrary.pdb
+C:\Users\gmininsk\Desktop\c\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.csproj.CopyComplete
+C:\Users\gmininsk\Desktop\c\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.dll
+C:\Users\gmininsk\Desktop\c\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.pdb

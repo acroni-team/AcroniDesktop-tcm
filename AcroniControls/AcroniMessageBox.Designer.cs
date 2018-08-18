@@ -1,4 +1,4 @@
-﻿namespace ControlesAcroni
+﻿namespace AcroniControls
 {
     partial class AcroniMessageBox
     {
