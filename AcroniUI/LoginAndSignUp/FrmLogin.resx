@@ -130,7 +130,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblAviso.Location" type="System.Drawing.Point, System.Drawing">
-    <value>854, 426</value>
+    <value>854, 465</value>
   </data>
   <data name="lblAviso.Size" type="System.Drawing.Size, System.Drawing">
     <value>196, 20</value>
@@ -3335,66 +3335,6 @@
         bInRenVGFIG76OnRI6x7RH//2Q==
 </value>
   </data>
-  <data name="&gt;&gt;alblAGenteTemOQueVocePrecisa.Name" xml:space="preserve">
-    <value>alblAGenteTemOQueVocePrecisa</value>
-  </data>
-  <data name="&gt;&gt;alblAGenteTemOQueVocePrecisa.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;alblAGenteTemOQueVocePrecisa.Parent" xml:space="preserve">
-    <value>apnlEsquerdo</value>
-  </data>
-  <data name="&gt;&gt;alblAGenteTemOQueVocePrecisa.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;alblProcurandoPorTeclados.Name" xml:space="preserve">
-    <value>alblProcurandoPorTeclados</value>
-  </data>
-  <data name="&gt;&gt;alblProcurandoPorTeclados.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;alblProcurandoPorTeclados.Parent" xml:space="preserve">
-    <value>apnlEsquerdo</value>
-  </data>
-  <data name="&gt;&gt;alblProcurandoPorTeclados.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;alblAcroni.Name" xml:space="preserve">
-    <value>alblAcroni</value>
-  </data>
-  <data name="&gt;&gt;alblAcroni.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;alblAcroni.Parent" xml:space="preserve">
-    <value>apnlEsquerdo</value>
-  </data>
-  <data name="&gt;&gt;alblAcroni.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="apnlEsquerdo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="apnlEsquerdo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="apnlEsquerdo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>790, 720</value>
-  </data>
-  <data name="apnlEsquerdo.TabIndex" type="System.Int32, mscorlib">
-    <value>68</value>
-  </data>
-  <data name="&gt;&gt;apnlEsquerdo.Name" xml:space="preserve">
-    <value>apnlEsquerdo</value>
-  </data>
-  <data name="&gt;&gt;apnlEsquerdo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;apnlEsquerdo.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;apnlEsquerdo.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
   <data name="alblAGenteTemOQueVocePrecisa.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -3494,6 +3434,30 @@ ou crie o seu.</value>
   <data name="&gt;&gt;alblAcroni.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="apnlEsquerdo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="apnlEsquerdo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="apnlEsquerdo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>790, 720</value>
+  </data>
+  <data name="apnlEsquerdo.TabIndex" type="System.Int32, mscorlib">
+    <value>68</value>
+  </data>
+  <data name="&gt;&gt;apnlEsquerdo.Name" xml:space="preserve">
+    <value>apnlEsquerdo</value>
+  </data>
+  <data name="&gt;&gt;apnlEsquerdo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;apnlEsquerdo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;apnlEsquerdo.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
   <data name="alblEntrar.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -3581,6 +3545,21 @@ ou crie o seu.</value>
   <data name="&gt;&gt;apnlUsuario.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="pnlVisibiladade.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="pnlVisibiladade.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="pnlVisibiladade.Location" type="System.Drawing.Point, System.Drawing">
+    <value>279, 11</value>
+  </data>
+  <data name="pnlVisibiladade.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 30</value>
+  </data>
+  <data name="pnlVisibiladade.TabIndex" type="System.Int32, mscorlib">
+    <value>67</value>
+  </data>
   <data name="&gt;&gt;pnlVisibiladade.Name" xml:space="preserve">
     <value>pnlVisibiladade</value>
   </data>
@@ -3613,33 +3592,6 @@ ou crie o seu.</value>
   </data>
   <data name="&gt;&gt;apnlSenha.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="pnlVisibiladade.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="pnlVisibiladade.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Center</value>
-  </data>
-  <data name="pnlVisibiladade.Location" type="System.Drawing.Point, System.Drawing">
-    <value>279, 11</value>
-  </data>
-  <data name="pnlVisibiladade.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 30</value>
-  </data>
-  <data name="pnlVisibiladade.TabIndex" type="System.Int32, mscorlib">
-    <value>67</value>
-  </data>
-  <data name="&gt;&gt;pnlVisibiladade.Name" xml:space="preserve">
-    <value>pnlVisibiladade</value>
-  </data>
-  <data name="&gt;&gt;pnlVisibiladade.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlVisibiladade.Parent" xml:space="preserve">
-    <value>apnlSenha</value>
-  </data>
-  <data name="&gt;&gt;pnlVisibiladade.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="lblCadastrar.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3816,7 +3768,7 @@ ou crie o seu.</value>
     <value>0</value>
   </data>
   <data name="pnlQueDesce.Location" type="System.Drawing.Point, System.Drawing">
-    <value>854, 426</value>
+    <value>854, 462</value>
   </data>
   <data name="pnlQueDesce.Size" type="System.Drawing.Size, System.Drawing">
     <value>361, 160</value>

@@ -37,6 +37,7 @@ namespace AcroniUI
             this.ePnlUsuario = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.eFotoUsuario = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.txtBuscarFontes = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
@@ -74,6 +75,7 @@ namespace AcroniUI
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.txtBuscarFontes);
             this.panel2.Controls.Add(this.bunifuImageButton3);
             this.panel2.Controls.Add(this.bunifuImageButton2);
@@ -85,6 +87,14 @@ namespace AcroniUI
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(400, 670);
             this.panel2.TabIndex = 14;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.panel1.Location = new System.Drawing.Point(46, 332);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(321, 125);
+            this.panel1.TabIndex = 4;
             // 
             // txtBuscarFontes
             // 
@@ -209,5 +219,6 @@ namespace AcroniUI
         private Label label1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtBuscarFontes;
         private Panel panel2;
+        private Panel panel1;
     }
 }

@@ -197,7 +197,7 @@ namespace AcroniUI.LoginAndSignUp
         {
             if (!visibilidade_1)
             {
-                pnlVisibilidade1.BackgroundImage = AcroniUI.Properties.Resources.olho1;
+                pnlVisibilidade1.BackgroundImage = AcroniUI.Properties.Resources.olho;
                 txtSenha.isPassword = false;
                 visibilidade_1 = true;
             }else
@@ -218,7 +218,7 @@ namespace AcroniUI.LoginAndSignUp
             }
             else
             {
-                pnlVisibilidade2.BackgroundImage = AcroniUI.Properties.Resources.olho1;
+                pnlVisibilidade2.BackgroundImage = AcroniUI.Properties.Resources.olho;
                 txtRepetirSenha.isPassword = true;
                 visibilidae_2 = false;
             }

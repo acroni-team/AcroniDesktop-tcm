@@ -124,7 +124,11 @@
       <DependentUpon>FrmUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
-    <Compile Include="Properties\Resources.Designer.cs" />
+    <Compile Include="Properties\Resources1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="SelecionarTeclado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,7 +171,10 @@
     <EmbeddedResource Include="LoginAndSignUp\FrmUsuario.resx">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="SelecionarTeclado.resx">
       <DependentUpon>SelecionarTeclado.cs</DependentUpon>
     </EmbeddedResource>

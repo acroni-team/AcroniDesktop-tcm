@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Compacto));
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtSelectFont = new System.Windows.Forms.TextBox();
             this.cmbFonts = new System.Windows.Forms.ComboBox();
@@ -111,7 +112,7 @@
             this.pnlColor = new System.Windows.Forms.Panel();
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.button1 = new System.Windows.Forms.Button();
+            this.facilidade = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button37 = new System.Windows.Forms.Button();
             this.button38 = new System.Windows.Forms.Button();
@@ -590,6 +591,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(8, 270);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(866, 328);
@@ -890,19 +892,19 @@
             this.bunifuElipse2.ElipseRadius = 10;
             this.bunifuElipse2.TargetControl = this.pnlCorEscolhida;
             // 
-            // button1
+            // facilidade
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Open Sans", 12.25F);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(115, 353);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(38, 38);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Q";
-            this.button1.UseVisualStyleBackColor = false;
+            this.facilidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.facilidade.FlatAppearance.BorderSize = 0;
+            this.facilidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.facilidade.Font = new System.Drawing.Font("Open Sans", 12.25F);
+            this.facilidade.ForeColor = System.Drawing.Color.White;
+            this.facilidade.Location = new System.Drawing.Point(115, 353);
+            this.facilidade.Name = "facilidade";
+            this.facilidade.Size = new System.Drawing.Size(38, 38);
+            this.facilidade.TabIndex = 15;
+            this.facilidade.Text = "Q";
+            this.facilidade.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -954,7 +956,7 @@
             this.Controls.Add(this.button37);
             this.Controls.Add(this.button38);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.facilidade);
             this.Controls.Add(this.pnlCorEscolhida);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel4);
@@ -963,7 +965,7 @@
             this.Controls.SetChildIndex(this.panel4, 0);
             this.Controls.SetChildIndex(this.pictureBox1, 0);
             this.Controls.SetChildIndex(this.pnlCorEscolhida, 0);
-            this.Controls.SetChildIndex(this.button1, 0);
+            this.Controls.SetChildIndex(this.facilidade, 0);
             this.Controls.SetChildIndex(this.button2, 0);
             this.Controls.SetChildIndex(this.button38, 0);
             this.Controls.SetChildIndex(this.button37, 0);
@@ -1067,7 +1069,7 @@
         private System.Windows.Forms.Panel pnlColor;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button facilidade;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button37;
         private System.Windows.Forms.Button button38;

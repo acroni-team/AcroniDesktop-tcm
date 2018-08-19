@@ -52,10 +52,10 @@ namespace AcroniUI.LoginAndSignUp
             this.eForm = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.eBtnSair = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnlQueDesce = new System.Windows.Forms.Panel();
+            this.btnEntrar = new System.Windows.Forms.Button();
             this.eAPnlUsuario = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.eAPnlSenha = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.eBtnEntrar = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.btnEntrar = new System.Windows.Forms.Button();
             this.apnlEsquerdo.SuspendLayout();
             this.apnlUsuario.SuspendLayout();
             this.apnlSenha.SuspendLayout();
@@ -185,7 +185,7 @@ namespace AcroniUI.LoginAndSignUp
             // 
             resources.ApplyResources(this.pnlVisibiladade, "pnlVisibiladade");
             this.pnlVisibiladade.BackColor = System.Drawing.Color.Transparent;
-            this.pnlVisibiladade.BackgroundImage = global::AcroniUI.Properties.Resources.olho1;
+            this.pnlVisibiladade.BackgroundImage = global::AcroniUI.Properties.Resources.olho;
             this.pnlVisibiladade.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlVisibiladade.Name = "pnlVisibiladade";
             this.pnlVisibiladade.Click += new System.EventHandler(this.pnlVisibiladade_Click);
@@ -238,6 +238,20 @@ namespace AcroniUI.LoginAndSignUp
             this.pnlQueDesce.Controls.Add(this.lblCadastrar);
             this.pnlQueDesce.Name = "pnlQueDesce";
             // 
+            // btnEntrar
+            // 
+            resources.ApplyResources(this.btnEntrar, "btnEntrar");
+            this.btnEntrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEntrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(168)))), ((int)(((byte)(255)))));
+            this.btnEntrar.FlatAppearance.BorderSize = 0;
+            this.btnEntrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(168)))), ((int)(((byte)(255)))));
+            this.btnEntrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(168)))), ((int)(((byte)(255)))));
+            this.btnEntrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.btnEntrar.Name = "btnEntrar";
+            this.btnEntrar.TabStop = false;
+            this.btnEntrar.UseVisualStyleBackColor = false;
+            // 
             // eAPnlUsuario
             // 
             this.eAPnlUsuario.ElipseRadius = 5;
@@ -252,20 +266,6 @@ namespace AcroniUI.LoginAndSignUp
             // 
             this.eBtnEntrar.ElipseRadius = 5;
             this.eBtnEntrar.TargetControl = this.btnEntrar;
-            // 
-            // btnEntrar
-            // 
-            resources.ApplyResources(this.btnEntrar, "btnEntrar");
-            this.btnEntrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEntrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(168)))), ((int)(((byte)(255)))));
-            this.btnEntrar.FlatAppearance.BorderSize = 0;
-            this.btnEntrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(168)))), ((int)(((byte)(255)))));
-            this.btnEntrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(168)))), ((int)(((byte)(255)))));
-            this.btnEntrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.TabStop = false;
-            this.btnEntrar.UseVisualStyleBackColor = false;
             // 
             // FrmLogin
             // 

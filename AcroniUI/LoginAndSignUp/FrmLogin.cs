@@ -93,7 +93,7 @@ namespace AcroniUI.LoginAndSignUp
                             }
                             else
                             {
-                                pnlQueDesce.Location = new Point(854, 446);
+                                pnlQueDesce.Location = new Point(854, 482);
                                 lblAviso.Text = "A senha está incorreta.";
                                 lblAviso.Visible = true;
                                 resposta.Close();
@@ -101,7 +101,7 @@ namespace AcroniUI.LoginAndSignUp
                         }
                         else
                         {
-                            pnlQueDesce.Location = new Point(854, 446);
+                            pnlQueDesce.Location = new Point(854, 482);
                             lblAviso.Text = "A senha está incorreta.";
                             lblAviso.Visible = true;
                             resposta.Close();
@@ -119,7 +119,7 @@ namespace AcroniUI.LoginAndSignUp
                 }
                 else
                 {
-                    pnlQueDesce.Location = new Point(854, 446);
+                    pnlQueDesce.Location = new Point(854, 482);
                     lblAviso.Text = "Este usuário não existe.";
                     lblAviso.Visible = true;
                     resposta_usuario.Close();
@@ -161,7 +161,7 @@ namespace AcroniUI.LoginAndSignUp
         {
             if (!visibilidade_senha)
             {
-                pnlVisibiladade.BackgroundImage = new Bitmap(AcroniUI.Properties.Resources.olho1);
+                pnlVisibiladade.BackgroundImage = new Bitmap(AcroniUI.Properties.Resources.olho);
                     txtSenha.isPassword = false;
                     visibilidade_senha = true;   
             }
@@ -175,7 +175,7 @@ namespace AcroniUI.LoginAndSignUp
 
         private void txtBoxesLogin_OnValueChanged(object sender, EventArgs e)
         {
-            pnlQueDesce.Location = new Point(854, 426);
+            pnlQueDesce.Location = new Point(854, 462);
             Bunifu.Framework.UI.BunifuMaterialTextbox b = (Bunifu.Framework.UI.BunifuMaterialTextbox)sender;
             if (b.Name.Contains("Senha"))
                 txtSenha.isPassword = true;
