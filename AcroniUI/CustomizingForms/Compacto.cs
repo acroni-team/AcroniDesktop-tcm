@@ -3,21 +3,20 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.Threading.Tasks;
 using Transitions;
-using AcroniUI;
+using AcroniControls;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
+using AcroniLibrary.CustomizingMethods.TextFonts;
 
 namespace AcroniUI.CustomizingForms
 {
-    public partial class Compacto : LayoutMaster
+    public partial class Compacto : Template
     {
-        /// <summary>
-        /// Construtor que carrega o login. 
-        /// </summary>
-
         public Compacto()
         {
             InitializeComponent();
             pnlCorEscolhida.Size = new Size(243, 103);
-            
+
             foreach (Control c_panel in pnlCorEscolhida.Controls)
             {
                 if (c_panel is Panel)
@@ -33,7 +32,7 @@ namespace AcroniUI.CustomizingForms
 
         #region Métodos do Color Picker
         bool pnlcolorpickerEstaAberto = false;
-        bool[] disponibilidade_pnlHistorico = { true, false, false};
+        bool[] disponibilidade_pnlHistorico = { true, false, false };
 
         private void pnlColor_Click(object sender, EventArgs e)
         {
@@ -107,35 +106,127 @@ namespace AcroniUI.CustomizingForms
         }
         #endregion
 
-        //#region Métodos do colorpicker
-        ///// <summary>
-        ///// Essa parte do programa está destinada ao funcionamento do colorpicker.
-        ///// </summary>
+        #region Fontes das teclas
 
-        ///// <summary>
-        //// Método que pega a cor selecionada de um botão e atualiza o histórico de cores
-        ///// </summary>
-        //private void btnColorChosen_Click(object sender, EventArgs e)
-        //{
-        //    new SetColorpickerVisibility(ref pnlColorpicker, ref btnHist1, ref btnHist2, ref btnHist3, ref pnlHistorico);
-        //}
+        static List<FontFamily> lista_fontFamily = new List<FontFamily>();
 
-    
-        //private void btnGetSelctedColor(object sender, EventArgs e)
-        //{
-        //    Button btnCol = (Button)sender;
-        //    new SetHistColors(ref pnlColorpicker, ref btnCol, ref btnColorChosen, ref btnHist1, ref btnHist2, ref btnHist3, ref pnlHistorico);
-        //    lblCorRGB.Text = String.Format("R: {0}, G: {1}, B: {2} ", SetHistColors.GetColor.R, SetHistColors.GetColor.G, SetHistColors.GetColor.B);
-        //    if (SetHistColors.GetColor.IsKnownColor)
-        //    {
-        //        lblKnownColorName.Visible = true;
-        //        lblKnownColorName.Text = String.Format("Outro nome: {0}", SetHistColors.GetColor.Name);
-        //    }
-        //    else
-        //        lblKnownColorName.Visible = false;
-        //}
+        private void FormLoad(object sender, EventArgs e)
+        {
+            new LoadFontTypes(ref cmbFontes, ref lista_fontFamily);
+        }
 
-        //#endregion
+        protected float FontSize { get; set; } = 12f;
+        protected FontStyle FontStyle { get; set; } = FontStyle.Regular;
 
+        #region Métodos de selecionar estilo da fonte e tamanho
+        private void btnStyleBold_Click(object sender, EventArgs e)
+        {
+            FontStyle = FontStyle.Bold;
+            AtualizarFontes();
+        }
+
+        private void btnStyleItalic_Click(object sender, EventArgs e)
+        {
+            FontStyle = FontStyle.Italic;
+            AtualizarFontes();
+        }
+
+        private void btnStyleUnderline_Click(object sender, EventArgs e)
+        {
+            FontStyle = FontStyle.Underline;
+            AtualizarFontes();
+        }
+
+        private void btnStyleStrikeout_Click(object sender, EventArgs e)
+        {
+            FontStyle = FontStyle.Strikeout;
+            AtualizarFontes();
+        }
+
+        private void btnSizeBig_Click(object sender, EventArgs e)
+        {
+            FontSize = 14f;
+            AtualizarFontes();
+        }
+
+        private void btnSizeMedium_Click(object sender, EventArgs e)
+        {
+            FontSize = 12f;
+            AtualizarFontes();
+        }
+
+        private void btnSizeSmall_Click(object sender, EventArgs e)
+        {
+            FontSize = 10f;
+            AtualizarFontes();
+        }
+
+        #region Definição dos métodos de alinhamento
+        private void setButtonTextAlignment(ContentAlignment contentAlignment)
+        {
+            foreach (Control c in this.Controls)
+            {
+                if (c is Kbtn)
+                {
+                    (c as Button).TextAlign = contentAlignment;
+                }
+            }
+        }
+
+        private void btnTextAlignLeft_Click(object sender, EventArgs e)
+        {
+            setButtonTextAlignment(ContentAlignment.TopLeft);
+        }
+
+        private void btnTextAlignCenter_Click(object sender, EventArgs e)
+        {
+            setButtonTextAlignment(ContentAlignment.TopCenter);
+        }
+
+        private void btnTextAlignRight_Click(object sender, EventArgs e)
+        {
+            setButtonTextAlignment(ContentAlignment.TopRight);
+        }
+        #endregion
+
+        #endregion
+
+        private void AtualizarFontes()
+        {
+            foreach (Control c in this.Controls)
+            {
+                if (c is Kbtn)
+                {
+                    (c as Button).Font = new Font(cmbFontes.Text, FontSize, FontStyle);
+                }
+            }
+        }
+
+        protected virtual void cmbFontes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AtualizarFontes();
+        }
+
+        private void txtFiltrarFontes_OnValueChanged(object sender, EventArgs e)
+        {
+            Regex regex = new Regex(txtFiltrarFontes.Text, RegexOptions.IgnoreCase);
+            foreach (FontFamily fonte in lista_fontFamily)
+            {
+                cmbFontes.Items.Remove(fonte);
+            }
+            FormLoad(sender, e);
+            if (!txtFiltrarFontes.Text.Equals(""))
+            {
+                foreach (FontFamily fonte in lista_fontFamily)
+                {
+                    if (!(regex.IsMatch(fonte.ToString())))
+                    {
+                        cmbFontes.Items.Remove(fonte);
+                    }
+                }
+            }
+        }
+
+        #endregion
     }
 }

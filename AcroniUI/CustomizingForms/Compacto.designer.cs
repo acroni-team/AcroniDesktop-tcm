@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Compacto));
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtSelectFont = new System.Windows.Forms.TextBox();
-            this.cmbFonts = new System.Windows.Forms.ComboBox();
             this.pnlHistorico = new System.Windows.Forms.Panel();
             this.btnHist3 = new System.Windows.Forms.Button();
             this.btnHist2 = new System.Windows.Forms.Button();
@@ -81,7 +80,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlCorEscolhida = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.lblNomeCor = new System.Windows.Forms.Label();
@@ -112,25 +110,45 @@
             this.pnlColor = new System.Windows.Forms.Panel();
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.facilidade = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button37 = new System.Windows.Forms.Button();
-            this.button38 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.kbtnQ = new AcroniControls.Kbtn();
+            this.kbtnTab = new AcroniControls.Kbtn();
+            this.pnlCustomizingMenu = new System.Windows.Forms.Panel();
+            this.btnSizeSmall = new System.Windows.Forms.Button();
+            this.btnSizeMedium = new System.Windows.Forms.Button();
+            this.btnSizeBig = new System.Windows.Forms.Button();
+            this.btnStyleStrikeout = new System.Windows.Forms.Button();
+            this.btnStyleUnderline = new System.Windows.Forms.Button();
+            this.btnStyleItalic = new System.Windows.Forms.Button();
+            this.btnStyleBold = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.txtFiltrarFontes = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.btnTextAlignRight = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnTextAlignCenter = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnTextAlignLeft = new Bunifu.Framework.UI.BunifuImageButton();
+            this.cmbFontes = new System.Windows.Forms.ComboBox();
             this.pnlSuperior.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnlHistorico.SuspendLayout();
             this.pnlColorpicker.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlCorEscolhida.SuspendLayout();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlCustomizingMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignRight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignCenter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignLeft)).BeginInit();
             this.SuspendLayout();
+            // 
+            // pnlSuperior
+            // 
+            this.pnlSuperior.Location = new System.Drawing.Point(0, 1);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.panel3.Controls.Add(this.txtSelectFont);
-            this.panel3.Controls.Add(this.cmbFonts);
             this.panel3.Controls.Add(this.pnlHistorico);
             this.panel3.Controls.Add(this.btnColorChosen);
             this.panel3.Controls.Add(this.button6);
@@ -154,13 +172,6 @@
             this.txtSelectFont.Name = "txtSelectFont";
             this.txtSelectFont.Size = new System.Drawing.Size(100, 20);
             this.txtSelectFont.TabIndex = 0;
-            // 
-            // cmbFonts
-            // 
-            this.cmbFonts.Location = new System.Drawing.Point(0, 0);
-            this.cmbFonts.Name = "cmbFonts";
-            this.cmbFonts.Size = new System.Drawing.Size(121, 21);
-            this.cmbFonts.TabIndex = 1;
             // 
             // pnlHistorico
             // 
@@ -589,16 +600,6 @@
             this.label10.TabIndex = 3;
             this.label10.Text = "Um teclado mecânico para jogos. Inclui teclado numérico.";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(8, 270);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(866, 328);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            // 
             // pnlCorEscolhida
             // 
             this.pnlCorEscolhida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
@@ -628,7 +629,7 @@
             this.pnlCorEscolhida.Controls.Add(this.pnlDivisoria1);
             this.pnlCorEscolhida.Controls.Add(this.lblHexaColor);
             this.pnlCorEscolhida.Controls.Add(this.pnlColor);
-            this.pnlCorEscolhida.Location = new System.Drawing.Point(170, 68);
+            this.pnlCorEscolhida.Location = new System.Drawing.Point(907, 230);
             this.pnlCorEscolhida.Name = "pnlCorEscolhida";
             this.pnlCorEscolhida.Size = new System.Drawing.Size(631, 103);
             this.pnlCorEscolhida.TabIndex = 12;
@@ -892,84 +893,276 @@
             this.bunifuElipse2.ElipseRadius = 10;
             this.bunifuElipse2.TargetControl = this.pnlCorEscolhida;
             // 
-            // facilidade
+            // pictureBox1
             // 
-            this.facilidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.facilidade.FlatAppearance.BorderSize = 0;
-            this.facilidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.facilidade.Font = new System.Drawing.Font("Open Sans", 12.25F);
-            this.facilidade.ForeColor = System.Drawing.Color.White;
-            this.facilidade.Location = new System.Drawing.Point(115, 353);
-            this.facilidade.Name = "facilidade";
-            this.facilidade.Size = new System.Drawing.Size(38, 38);
-            this.facilidade.TabIndex = 15;
-            this.facilidade.Text = "Q";
-            this.facilidade.UseVisualStyleBackColor = false;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(19, 270);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(866, 328);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
             // 
-            // button2
+            // kbtnQ
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Open Sans", 12.25F);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(170, 353);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(38, 38);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "Q";
-            this.button2.UseVisualStyleBackColor = false;
+            this.kbtnQ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.kbtnQ.FlatAppearance.BorderSize = 0;
+            this.kbtnQ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.kbtnQ.Font = new System.Drawing.Font("Open Sans", 12F);
+            this.kbtnQ.ForeColor = System.Drawing.Color.White;
+            this.kbtnQ.Location = new System.Drawing.Point(126, 353);
+            this.kbtnQ.Name = "kbtnQ";
+            this.kbtnQ.Size = new System.Drawing.Size(38, 40);
+            this.kbtnQ.TabIndex = 15;
+            this.kbtnQ.Text = "Q";
+            this.kbtnQ.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.kbtnQ.UseVisualStyleBackColor = false;
             // 
-            // button37
+            // kbtnTab
             // 
-            this.button37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.button37.FlatAppearance.BorderSize = 0;
-            this.button37.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button37.Font = new System.Drawing.Font("Open Sans", 12.25F);
-            this.button37.ForeColor = System.Drawing.Color.White;
-            this.button37.Location = new System.Drawing.Point(226, 353);
-            this.button37.Name = "button37";
-            this.button37.Size = new System.Drawing.Size(38, 38);
-            this.button37.TabIndex = 15;
-            this.button37.Text = "Q";
-            this.button37.UseVisualStyleBackColor = false;
+            this.kbtnTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.kbtnTab.FlatAppearance.BorderSize = 0;
+            this.kbtnTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.kbtnTab.Font = new System.Drawing.Font("Open Sans", 12F);
+            this.kbtnTab.ForeColor = System.Drawing.Color.White;
+            this.kbtnTab.Location = new System.Drawing.Point(45, 353);
+            this.kbtnTab.Name = "kbtnTab";
+            this.kbtnTab.Size = new System.Drawing.Size(64, 40);
+            this.kbtnTab.TabIndex = 15;
+            this.kbtnTab.Text = "Tab";
+            this.kbtnTab.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.kbtnTab.UseVisualStyleBackColor = false;
             // 
-            // button38
+            // pnlCustomizingMenu
             // 
-            this.button38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.button38.FlatAppearance.BorderSize = 0;
-            this.button38.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button38.Font = new System.Drawing.Font("Open Sans", 12.25F);
-            this.button38.ForeColor = System.Drawing.Color.White;
-            this.button38.Location = new System.Drawing.Point(141, 295);
-            this.button38.Name = "button38";
-            this.button38.Size = new System.Drawing.Size(38, 38);
-            this.button38.TabIndex = 15;
-            this.button38.Text = "2";
-            this.button38.UseVisualStyleBackColor = false;
+            this.pnlCustomizingMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.pnlCustomizingMenu.Controls.Add(this.btnSizeSmall);
+            this.pnlCustomizingMenu.Controls.Add(this.btnSizeMedium);
+            this.pnlCustomizingMenu.Controls.Add(this.btnSizeBig);
+            this.pnlCustomizingMenu.Controls.Add(this.btnStyleStrikeout);
+            this.pnlCustomizingMenu.Controls.Add(this.btnStyleUnderline);
+            this.pnlCustomizingMenu.Controls.Add(this.btnStyleItalic);
+            this.pnlCustomizingMenu.Controls.Add(this.btnStyleBold);
+            this.pnlCustomizingMenu.Controls.Add(this.panel6);
+            this.pnlCustomizingMenu.Controls.Add(this.txtFiltrarFontes);
+            this.pnlCustomizingMenu.Controls.Add(this.btnTextAlignRight);
+            this.pnlCustomizingMenu.Controls.Add(this.btnTextAlignCenter);
+            this.pnlCustomizingMenu.Controls.Add(this.btnTextAlignLeft);
+            this.pnlCustomizingMenu.Controls.Add(this.cmbFontes);
+            this.pnlCustomizingMenu.Location = new System.Drawing.Point(0, 50);
+            this.pnlCustomizingMenu.Name = "pnlCustomizingMenu";
+            this.pnlCustomizingMenu.Size = new System.Drawing.Size(1058, 153);
+            this.pnlCustomizingMenu.TabIndex = 16;
+            // 
+            // btnSizeSmall
+            // 
+            this.btnSizeSmall.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnSizeSmall.FlatAppearance.BorderSize = 0;
+            this.btnSizeSmall.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSizeSmall.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Underline);
+            this.btnSizeSmall.ForeColor = System.Drawing.Color.White;
+            this.btnSizeSmall.Location = new System.Drawing.Point(598, 79);
+            this.btnSizeSmall.Name = "btnSizeSmall";
+            this.btnSizeSmall.Size = new System.Drawing.Size(95, 34);
+            this.btnSizeSmall.TabIndex = 6;
+            this.btnSizeSmall.Text = "Pequeno";
+            this.btnSizeSmall.UseVisualStyleBackColor = false;
+            this.btnSizeSmall.Click += new System.EventHandler(this.btnSizeSmall_Click);
+            // 
+            // btnSizeMedium
+            // 
+            this.btnSizeMedium.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnSizeMedium.FlatAppearance.BorderSize = 0;
+            this.btnSizeMedium.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSizeMedium.Font = new System.Drawing.Font("Open Sans", 12.25F, System.Drawing.FontStyle.Italic);
+            this.btnSizeMedium.ForeColor = System.Drawing.Color.White;
+            this.btnSizeMedium.Location = new System.Drawing.Point(513, 79);
+            this.btnSizeMedium.Name = "btnSizeMedium";
+            this.btnSizeMedium.Size = new System.Drawing.Size(79, 34);
+            this.btnSizeMedium.TabIndex = 7;
+            this.btnSizeMedium.Text = "Médio";
+            this.btnSizeMedium.UseVisualStyleBackColor = false;
+            this.btnSizeMedium.Click += new System.EventHandler(this.btnSizeMedium_Click);
+            // 
+            // btnSizeBig
+            // 
+            this.btnSizeBig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnSizeBig.FlatAppearance.BorderSize = 0;
+            this.btnSizeBig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSizeBig.Font = new System.Drawing.Font("Open Sans", 12.25F, System.Drawing.FontStyle.Bold);
+            this.btnSizeBig.ForeColor = System.Drawing.Color.White;
+            this.btnSizeBig.Location = new System.Drawing.Point(417, 79);
+            this.btnSizeBig.Name = "btnSizeBig";
+            this.btnSizeBig.Size = new System.Drawing.Size(90, 34);
+            this.btnSizeBig.TabIndex = 8;
+            this.btnSizeBig.Text = "Grande";
+            this.btnSizeBig.UseVisualStyleBackColor = false;
+            this.btnSizeBig.Click += new System.EventHandler(this.btnSizeBig_Click);
+            // 
+            // btnStyleStrikeout
+            // 
+            this.btnStyleStrikeout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnStyleStrikeout.FlatAppearance.BorderSize = 0;
+            this.btnStyleStrikeout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStyleStrikeout.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Strikeout, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStyleStrikeout.ForeColor = System.Drawing.Color.White;
+            this.btnStyleStrikeout.Location = new System.Drawing.Point(543, 39);
+            this.btnStyleStrikeout.Name = "btnStyleStrikeout";
+            this.btnStyleStrikeout.Size = new System.Drawing.Size(49, 34);
+            this.btnStyleStrikeout.TabIndex = 5;
+            this.btnStyleStrikeout.Text = "abc";
+            this.btnStyleStrikeout.UseVisualStyleBackColor = false;
+            this.btnStyleStrikeout.Click += new System.EventHandler(this.btnStyleStrikeout_Click);
+            // 
+            // btnStyleUnderline
+            // 
+            this.btnStyleUnderline.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnStyleUnderline.FlatAppearance.BorderSize = 0;
+            this.btnStyleUnderline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStyleUnderline.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Underline);
+            this.btnStyleUnderline.ForeColor = System.Drawing.Color.White;
+            this.btnStyleUnderline.Location = new System.Drawing.Point(501, 39);
+            this.btnStyleUnderline.Name = "btnStyleUnderline";
+            this.btnStyleUnderline.Size = new System.Drawing.Size(36, 34);
+            this.btnStyleUnderline.TabIndex = 5;
+            this.btnStyleUnderline.Text = "S";
+            this.btnStyleUnderline.UseVisualStyleBackColor = false;
+            this.btnStyleUnderline.Click += new System.EventHandler(this.btnStyleUnderline_Click);
+            // 
+            // btnStyleItalic
+            // 
+            this.btnStyleItalic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnStyleItalic.FlatAppearance.BorderSize = 0;
+            this.btnStyleItalic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStyleItalic.Font = new System.Drawing.Font("Open Sans", 12.25F, System.Drawing.FontStyle.Italic);
+            this.btnStyleItalic.ForeColor = System.Drawing.Color.White;
+            this.btnStyleItalic.Location = new System.Drawing.Point(459, 39);
+            this.btnStyleItalic.Name = "btnStyleItalic";
+            this.btnStyleItalic.Size = new System.Drawing.Size(36, 34);
+            this.btnStyleItalic.TabIndex = 5;
+            this.btnStyleItalic.Text = "I";
+            this.btnStyleItalic.UseVisualStyleBackColor = false;
+            this.btnStyleItalic.Click += new System.EventHandler(this.btnStyleItalic_Click);
+            // 
+            // btnStyleBold
+            // 
+            this.btnStyleBold.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnStyleBold.FlatAppearance.BorderSize = 0;
+            this.btnStyleBold.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStyleBold.Font = new System.Drawing.Font("Open Sans", 12.25F, System.Drawing.FontStyle.Bold);
+            this.btnStyleBold.ForeColor = System.Drawing.Color.White;
+            this.btnStyleBold.Location = new System.Drawing.Point(417, 39);
+            this.btnStyleBold.Name = "btnStyleBold";
+            this.btnStyleBold.Size = new System.Drawing.Size(36, 34);
+            this.btnStyleBold.TabIndex = 5;
+            this.btnStyleBold.Text = "N";
+            this.btnStyleBold.UseVisualStyleBackColor = false;
+            this.btnStyleBold.Click += new System.EventHandler(this.btnStyleBold_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.panel6.Location = new System.Drawing.Point(762, 16);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(281, 125);
+            this.panel6.TabIndex = 4;
+            // 
+            // txtFiltrarFontes
+            // 
+            this.txtFiltrarFontes.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFiltrarFontes.Font = new System.Drawing.Font("Open Sans", 10.75F);
+            this.txtFiltrarFontes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtFiltrarFontes.HintForeColor = System.Drawing.Color.White;
+            this.txtFiltrarFontes.HintText = "Digite uma fonte...";
+            this.txtFiltrarFontes.isPassword = false;
+            this.txtFiltrarFontes.LineFocusedColor = System.Drawing.Color.Blue;
+            this.txtFiltrarFontes.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtFiltrarFontes.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.txtFiltrarFontes.LineThickness = 3;
+            this.txtFiltrarFontes.Location = new System.Drawing.Point(109, 16);
+            this.txtFiltrarFontes.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFiltrarFontes.Name = "txtFiltrarFontes";
+            this.txtFiltrarFontes.Size = new System.Drawing.Size(281, 47);
+            this.txtFiltrarFontes.TabIndex = 3;
+            this.txtFiltrarFontes.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtFiltrarFontes.OnValueChanged += new System.EventHandler(this.txtFiltrarFontes_OnValueChanged);
+            // 
+            // btnTextAlignRight
+            // 
+            this.btnTextAlignRight.BackColor = System.Drawing.Color.Transparent;
+            this.btnTextAlignRight.Image = ((System.Drawing.Image)(resources.GetObject("btnTextAlignRight.Image")));
+            this.btnTextAlignRight.ImageActive = null;
+            this.btnTextAlignRight.Location = new System.Drawing.Point(717, 39);
+            this.btnTextAlignRight.Name = "btnTextAlignRight";
+            this.btnTextAlignRight.Size = new System.Drawing.Size(24, 24);
+            this.btnTextAlignRight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnTextAlignRight.TabIndex = 2;
+            this.btnTextAlignRight.TabStop = false;
+            this.btnTextAlignRight.Zoom = 10;
+            this.btnTextAlignRight.Click += new System.EventHandler(this.btnTextAlignRight_Click);
+            // 
+            // btnTextAlignCenter
+            // 
+            this.btnTextAlignCenter.BackColor = System.Drawing.Color.Transparent;
+            this.btnTextAlignCenter.Image = ((System.Drawing.Image)(resources.GetObject("btnTextAlignCenter.Image")));
+            this.btnTextAlignCenter.ImageActive = null;
+            this.btnTextAlignCenter.Location = new System.Drawing.Point(673, 39);
+            this.btnTextAlignCenter.Name = "btnTextAlignCenter";
+            this.btnTextAlignCenter.Size = new System.Drawing.Size(24, 24);
+            this.btnTextAlignCenter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnTextAlignCenter.TabIndex = 2;
+            this.btnTextAlignCenter.TabStop = false;
+            this.btnTextAlignCenter.Zoom = 10;
+            this.btnTextAlignCenter.Click += new System.EventHandler(this.btnTextAlignCenter_Click);
+            // 
+            // btnTextAlignLeft
+            // 
+            this.btnTextAlignLeft.BackColor = System.Drawing.Color.Transparent;
+            this.btnTextAlignLeft.Image = ((System.Drawing.Image)(resources.GetObject("btnTextAlignLeft.Image")));
+            this.btnTextAlignLeft.ImageActive = null;
+            this.btnTextAlignLeft.Location = new System.Drawing.Point(629, 39);
+            this.btnTextAlignLeft.Name = "btnTextAlignLeft";
+            this.btnTextAlignLeft.Size = new System.Drawing.Size(24, 24);
+            this.btnTextAlignLeft.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnTextAlignLeft.TabIndex = 2;
+            this.btnTextAlignLeft.TabStop = false;
+            this.btnTextAlignLeft.Zoom = 10;
+            this.btnTextAlignLeft.Click += new System.EventHandler(this.btnTextAlignLeft_Click);
+            // 
+            // cmbFontes
+            // 
+            this.cmbFontes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.cmbFontes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFontes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbFontes.ForeColor = System.Drawing.Color.White;
+            this.cmbFontes.FormattingEnabled = true;
+            this.cmbFontes.Location = new System.Drawing.Point(109, 88);
+            this.cmbFontes.Name = "cmbFontes";
+            this.cmbFontes.Size = new System.Drawing.Size(277, 21);
+            this.cmbFontes.TabIndex = 1;
+            this.cmbFontes.SelectedIndexChanged += new System.EventHandler(this.cmbFontes_SelectedIndexChanged);
             // 
             // Compacto
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1280, 720);
-            this.Controls.Add(this.button37);
-            this.Controls.Add(this.button38);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.facilidade);
+            this.ClientSize = new System.Drawing.Size(1584, 720);
+            this.Controls.Add(this.pnlCustomizingMenu);
+            this.Controls.Add(this.kbtnTab);
+            this.Controls.Add(this.kbtnQ);
             this.Controls.Add(this.pnlCorEscolhida);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel4);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "Compacto";
+            this.Load += new System.EventHandler(this.FormLoad);
             this.Controls.SetChildIndex(this.panel4, 0);
             this.Controls.SetChildIndex(this.pictureBox1, 0);
             this.Controls.SetChildIndex(this.pnlCorEscolhida, 0);
-            this.Controls.SetChildIndex(this.facilidade, 0);
-            this.Controls.SetChildIndex(this.button2, 0);
-            this.Controls.SetChildIndex(this.button38, 0);
-            this.Controls.SetChildIndex(this.button37, 0);
             this.Controls.SetChildIndex(this.pnlSuperior, 0);
+            this.Controls.SetChildIndex(this.kbtnQ, 0);
+            this.Controls.SetChildIndex(this.kbtnTab, 0);
+            this.Controls.SetChildIndex(this.pnlCustomizingMenu, 0);
             this.pnlSuperior.ResumeLayout(false);
             this.pnlSuperior.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -978,10 +1171,14 @@
             this.pnlColorpicker.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlCorEscolhida.ResumeLayout(false);
             this.pnlCorEscolhida.PerformLayout();
             this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlCustomizingMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignRight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignCenter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignLeft)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1036,9 +1233,7 @@
         private System.Windows.Forms.Label lblCorRGB;
         private System.Windows.Forms.Label lblKnownColorName;
         private System.Windows.Forms.TextBox txtSelectFont;
-        private System.Windows.Forms.ComboBox cmbFonts;
         private System.Windows.Forms.Label lblDefinirParaTodasAsTeclas;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel pnlCorEscolhida;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label lblNomeCor;
@@ -1069,10 +1264,23 @@
         private System.Windows.Forms.Panel pnlColor;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
-        private System.Windows.Forms.Button facilidade;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button37;
-        private System.Windows.Forms.Button button38;
+        private AcroniControls.Kbtn kbtnQ;
+        private AcroniControls.Kbtn kbtnTab;
+        protected System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel pnlCustomizingMenu;
+        private System.Windows.Forms.Button btnStyleStrikeout;
+        private System.Windows.Forms.Button btnStyleUnderline;
+        private System.Windows.Forms.Button btnStyleItalic;
+        private System.Windows.Forms.Button btnStyleBold;
+        private System.Windows.Forms.Panel panel6;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtFiltrarFontes;
+        private Bunifu.Framework.UI.BunifuImageButton btnTextAlignRight;
+        private Bunifu.Framework.UI.BunifuImageButton btnTextAlignCenter;
+        private Bunifu.Framework.UI.BunifuImageButton btnTextAlignLeft;
+        private System.Windows.Forms.ComboBox cmbFontes;
+        private System.Windows.Forms.Button btnSizeSmall;
+        private System.Windows.Forms.Button btnSizeMedium;
+        private System.Windows.Forms.Button btnSizeBig;
     }
 }
 

@@ -50,7 +50,7 @@
             this.pnlSuperior.Controls.Add(this.btnSair);
             this.pnlSuperior.Controls.Add(this.lblAcroni);
             this.pnlSuperior.Controls.Add(this.menuStrip1);
-            this.pnlSuperior.Location = new System.Drawing.Point(0, 0);
+            this.pnlSuperior.Location = new System.Drawing.Point(0, -1);
             this.pnlSuperior.Name = "pnlSuperior";
             this.pnlSuperior.Size = new System.Drawing.Size(1280, 50);
             this.pnlSuperior.TabIndex = 11;

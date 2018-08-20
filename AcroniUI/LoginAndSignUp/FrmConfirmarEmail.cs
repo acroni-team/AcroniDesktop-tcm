@@ -15,7 +15,7 @@ namespace AcroniUI.LoginAndSignUp
     {
         private void Start_SplashScreen()
         {
-            Application.Run(new SplashEscrita());
+            Application.Run(new Splash());
         }
 
         private String email_public, senha_public, usuario_public, tipo_public, localizacao_img_public, String_de_confirmacao = "";

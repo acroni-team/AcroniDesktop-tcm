@@ -251,6 +251,7 @@ namespace AcroniUI.LoginAndSignUp
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.TabStop = false;
             this.btnEntrar.UseVisualStyleBackColor = false;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // eAPnlUsuario
             // 

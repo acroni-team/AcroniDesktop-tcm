@@ -47,7 +47,7 @@ namespace AcroniUI.LoginAndSignUp
         SqlCommand comando_SQL;
         #endregion
 
-        SelecionarTeclado selecionarTeclado;
+        SelectKeyboard selecionarTeclado;
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
@@ -87,7 +87,7 @@ namespace AcroniUI.LoginAndSignUp
                             if (resposta[0].ToString().Equals(txtSenha.Text))
                             {
                                 Conexao.nome_usuario = txtEntrar.Text;
-                                selecionarTeclado = new SelecionarTeclado();
+                                selecionarTeclado = new SelectKeyboard();
                                 selecionarTeclado.Show();
                                 this.Hide();
                             }
@@ -140,7 +140,7 @@ namespace AcroniUI.LoginAndSignUp
             if (FrmCadastro.cadastro_SUCCESS)
             {
                 this.Hide();
-                selecionarTeclado = new SelecionarTeclado();
+                selecionarTeclado = new SelectKeyboard();
                 selecionarTeclado.Show();
             }
             else

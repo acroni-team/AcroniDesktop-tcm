@@ -2,7 +2,7 @@
 
 namespace AcroniUI.CustomizingForms
 {
-    public partial class Galeria : LayoutMaster
+    public partial class Galeria : Template
     {
         public Galeria()
         {

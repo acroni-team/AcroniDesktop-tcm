@@ -34,7 +34,7 @@
   <ItemGroup>
     <Reference Include="AcroniLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\AcroniLibrary.dll</HintPath>
+      <HintPath>..\AcroniLibrary\bin\Debug\AcroniLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -87,17 +87,11 @@
       <DependentUpon>Tenkeyless.cs</DependentUpon>
     </Compile>
     <Compile Include="FormsDesign\FormDrag.cs" />
-    <Compile Include="LayoutMaster.cs">
+    <Compile Include="MenuLayoutMaster.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LayoutMaster.designer.cs">
-      <DependentUpon>LayoutMaster.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LayoutMasterComMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LayoutMasterComMenu.Designer.cs">
-      <DependentUpon>LayoutMasterComMenu.cs</DependentUpon>
+    <Compile Include="MenuLayoutMaster.Designer.cs">
+      <DependentUpon>MenuLayoutMaster.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginAndSignUp\FrmCadastro.cs">
       <SubType>Form</SubType>
@@ -129,17 +123,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="SelecionarTeclado.cs">
+    <Compile Include="SelectKeyboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SelecionarTeclado.designer.cs">
-      <DependentUpon>SelecionarTeclado.cs</DependentUpon>
+    <Compile Include="SelectKeyboard.designer.cs">
+      <DependentUpon>SelectKeyboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="SplashEscrita.cs">
+    <Compile Include="PoupUpForms\Splash.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SplashEscrita.designer.cs">
-      <DependentUpon>SplashEscrita.cs</DependentUpon>
+    <Compile Include="PoupUpForms\Splash.designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
     </Compile>
     <Compile Include="Template.cs">
       <SubType>Form</SubType>
@@ -153,11 +147,11 @@
     <EmbeddedResource Include="CustomizingForms\Galeria.resx">
       <DependentUpon>Galeria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LayoutMaster.resx">
-      <DependentUpon>LayoutMaster.cs</DependentUpon>
+    <EmbeddedResource Include="CustomizingForms\Tenkeyless.resx">
+      <DependentUpon>Tenkeyless.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LayoutMasterComMenu.resx">
-      <DependentUpon>LayoutMasterComMenu.cs</DependentUpon>
+    <EmbeddedResource Include="MenuLayoutMaster.resx">
+      <DependentUpon>MenuLayoutMaster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginAndSignUp\FrmCadastro.resx">
       <DependentUpon>FrmCadastro.cs</DependentUpon>
@@ -175,11 +169,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="SelecionarTeclado.resx">
-      <DependentUpon>SelecionarTeclado.cs</DependentUpon>
+    <EmbeddedResource Include="SelectKeyboard.resx">
+      <DependentUpon>SelectKeyboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SplashEscrita.resx">
-      <DependentUpon>SplashEscrita.cs</DependentUpon>
+    <EmbeddedResource Include="PoupUpForms\Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Template.resx">
       <DependentUpon>Template.cs</DependentUpon>
@@ -201,6 +195,12 @@
     <Content Include="Images\tenkeyless.png" />
     <None Include="Images\olhoblock.png" />
     <None Include="Images\olho.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AcroniControls\AcroniControls.csproj">
+      <Project>{ADF7371B-02A4-4E2B-B342-348E0F4D8F1C}</Project>
+      <Name>AcroniControls</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
