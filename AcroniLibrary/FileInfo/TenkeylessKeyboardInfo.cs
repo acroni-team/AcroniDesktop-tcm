@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace AcroniLibrary.FileInfo
 {
-    interface IKeyboardInfo
+    class TenkeylessKeyboardInfo
     {
-
     }
 }
