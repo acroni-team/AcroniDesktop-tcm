@@ -55,7 +55,8 @@
     <Compile Include="CustomizingMethods\Colorpicker\SetHistColors.cs" />
     <Compile Include="CustomizingMethods\TextFonts\Alignment.cs" />
     <Compile Include="FileInfo\CompactKeyboardInfo.cs" />
-    <Compile Include="FileInfo\IDGenerator.cs" />
+    <Compile Include="FileInfo\IKeyboardInfo.cs" />
+    <Compile Include="FileInfo\KeyboardIDGenerator.cs" />
     <Compile Include="GetNistTime.cs" />
     <Compile Include="CustomizingMethods\TextFonts\LoadFontTypes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -6,3 +6,11 @@ C:\Users\gmininsk\Desktop\c\AcroniDesktop\AcroniControls\obj\Debug\AcroniControl
 C:\Users\gmininsk\Desktop\c\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.csproj.CoreCompileInputs.cache
 C:\Users\gmininsk\Desktop\c\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.dll
 C:\Users\gmininsk\Desktop\c\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.pdb
+E:\Desktop\c\AcroniDesktop\AcroniControls\bin\Debug\AcroniControls.dll
+E:\Desktop\c\AcroniDesktop\AcroniControls\bin\Debug\AcroniControls.pdb
+E:\Desktop\c\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.csprojAssemblyReference.cache
+E:\Desktop\c\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.AcroniMessageBox.resources
+E:\Desktop\c\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.csproj.GenerateResource.cache
+E:\Desktop\c\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.csproj.CoreCompileInputs.cache
+E:\Desktop\c\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.dll
+E:\Desktop\c\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.pdb
