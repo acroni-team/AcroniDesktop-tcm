@@ -78,13 +78,13 @@ namespace AcroniUI.CustomizingForms
             this.btnStyleItalic = new AcroniControls.StyleBtn();
             this.btnStyleBold = new AcroniControls.StyleBtn();
             this.pnlIcons = new System.Windows.Forms.Panel();
-            this.txtFiltrarFontes = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.btnTextAlignRight = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnTextAlignCenter = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnTextAlignLeft = new Bunifu.Framework.UI.BunifuImageButton();
             this.cmbFontes = new System.Windows.Forms.ComboBox();
             this.kbtnTab = new AcroniControls.Kbtn();
             this.kbtnQ = new AcroniControls.Kbtn();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlSuperior.SuspendLayout();
             this.pnlHistorico.SuspendLayout();
             this.pnlCorEscolhida.SuspendLayout();
@@ -459,6 +459,7 @@ namespace AcroniUI.CustomizingForms
             // pnlCustomizingMenu
             // 
             this.pnlCustomizingMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.pnlCustomizingMenu.Controls.Add(this.label1);
             this.pnlCustomizingMenu.Controls.Add(this.lblDefinirParaTodasTeclas);
             this.pnlCustomizingMenu.Controls.Add(this.btnSizeSmall);
             this.pnlCustomizingMenu.Controls.Add(this.btnSizeMedium);
@@ -468,7 +469,6 @@ namespace AcroniUI.CustomizingForms
             this.pnlCustomizingMenu.Controls.Add(this.btnStyleItalic);
             this.pnlCustomizingMenu.Controls.Add(this.btnStyleBold);
             this.pnlCustomizingMenu.Controls.Add(this.pnlIcons);
-            this.pnlCustomizingMenu.Controls.Add(this.txtFiltrarFontes);
             this.pnlCustomizingMenu.Controls.Add(this.btnTextAlignRight);
             this.pnlCustomizingMenu.Controls.Add(this.btnTextAlignCenter);
             this.pnlCustomizingMenu.Controls.Add(this.btnTextAlignLeft);
@@ -481,6 +481,7 @@ namespace AcroniUI.CustomizingForms
             // lblDefinirParaTodasTeclas
             // 
             this.lblDefinirParaTodasTeclas.AutoSize = true;
+            this.lblDefinirParaTodasTeclas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblDefinirParaTodasTeclas.Location = new System.Drawing.Point(459, 16);
             this.lblDefinirParaTodasTeclas.Name = "lblDefinirParaTodasTeclas";
             this.lblDefinirParaTodasTeclas.Size = new System.Drawing.Size(162, 13);
@@ -491,9 +492,12 @@ namespace AcroniUI.CustomizingForms
             // btnSizeSmall
             // 
             this.btnSizeSmall.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnSizeSmall.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSizeSmall.FlatAppearance.BorderSize = 0;
+            this.btnSizeSmall.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnSizeSmall.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnSizeSmall.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSizeSmall.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Underline);
+            this.btnSizeSmall.Font = new System.Drawing.Font("Open Sans", 12F);
             this.btnSizeSmall.ForeColor = System.Drawing.Color.White;
             this.btnSizeSmall.Location = new System.Drawing.Point(598, 79);
             this.btnSizeSmall.Name = "btnSizeSmall";
@@ -501,15 +505,17 @@ namespace AcroniUI.CustomizingForms
             this.btnSizeSmall.TabIndex = 6;
             this.btnSizeSmall.Text = "Pequeno";
             this.btnSizeSmall.UseVisualStyleBackColor = false;
-            this.btnSizeSmall.Click += new System.EventHandler(this.BtnChosen);
             this.btnSizeSmall.Click += new System.EventHandler(this.btnSizeSmall_Click);
             // 
             // btnSizeMedium
             // 
             this.btnSizeMedium.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnSizeMedium.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSizeMedium.FlatAppearance.BorderSize = 0;
+            this.btnSizeMedium.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnSizeMedium.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnSizeMedium.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSizeMedium.Font = new System.Drawing.Font("Open Sans", 12.25F, System.Drawing.FontStyle.Italic);
+            this.btnSizeMedium.Font = new System.Drawing.Font("Open Sans", 12.25F);
             this.btnSizeMedium.ForeColor = System.Drawing.Color.White;
             this.btnSizeMedium.Location = new System.Drawing.Point(513, 79);
             this.btnSizeMedium.Name = "btnSizeMedium";
@@ -517,15 +523,17 @@ namespace AcroniUI.CustomizingForms
             this.btnSizeMedium.TabIndex = 7;
             this.btnSizeMedium.Text = "Médio";
             this.btnSizeMedium.UseVisualStyleBackColor = false;
-            this.btnSizeMedium.Click += new System.EventHandler(this.BtnChosen);
             this.btnSizeMedium.Click += new System.EventHandler(this.btnSizeMedium_Click);
             // 
             // btnSizeBig
             // 
             this.btnSizeBig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnSizeBig.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSizeBig.FlatAppearance.BorderSize = 0;
+            this.btnSizeBig.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnSizeBig.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnSizeBig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSizeBig.Font = new System.Drawing.Font("Open Sans", 12.25F, System.Drawing.FontStyle.Bold);
+            this.btnSizeBig.Font = new System.Drawing.Font("Open Sans", 12.25F);
             this.btnSizeBig.ForeColor = System.Drawing.Color.White;
             this.btnSizeBig.Location = new System.Drawing.Point(417, 79);
             this.btnSizeBig.Name = "btnSizeBig";
@@ -533,13 +541,15 @@ namespace AcroniUI.CustomizingForms
             this.btnSizeBig.TabIndex = 8;
             this.btnSizeBig.Text = "Grande";
             this.btnSizeBig.UseVisualStyleBackColor = false;
-            this.btnSizeBig.Click += new System.EventHandler(this.BtnChosen);
             this.btnSizeBig.Click += new System.EventHandler(this.btnSizeBig_Click);
             // 
             // btnStyleStrikeout
             // 
             this.btnStyleStrikeout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnStyleStrikeout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStyleStrikeout.FlatAppearance.BorderSize = 0;
+            this.btnStyleStrikeout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnStyleStrikeout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnStyleStrikeout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStyleStrikeout.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Strikeout, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStyleStrikeout.ForeColor = System.Drawing.Color.White;
@@ -549,13 +559,15 @@ namespace AcroniUI.CustomizingForms
             this.btnStyleStrikeout.TabIndex = 5;
             this.btnStyleStrikeout.Text = "abc";
             this.btnStyleStrikeout.UseVisualStyleBackColor = false;
-            this.btnStyleStrikeout.Click += new System.EventHandler(this.BtnChosen);
             this.btnStyleStrikeout.Click += new System.EventHandler(this.btnStyleStrikeout_Click);
             // 
             // btnStyleUnderline
             // 
             this.btnStyleUnderline.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnStyleUnderline.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStyleUnderline.FlatAppearance.BorderSize = 0;
+            this.btnStyleUnderline.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnStyleUnderline.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnStyleUnderline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStyleUnderline.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Underline);
             this.btnStyleUnderline.ForeColor = System.Drawing.Color.White;
@@ -565,13 +577,15 @@ namespace AcroniUI.CustomizingForms
             this.btnStyleUnderline.TabIndex = 5;
             this.btnStyleUnderline.Text = "S";
             this.btnStyleUnderline.UseVisualStyleBackColor = false;
-            this.btnStyleUnderline.Click += new System.EventHandler(this.BtnChosen);
             this.btnStyleUnderline.Click += new System.EventHandler(this.btnStyleUnderline_Click);
             // 
             // btnStyleItalic
             // 
             this.btnStyleItalic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnStyleItalic.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStyleItalic.FlatAppearance.BorderSize = 0;
+            this.btnStyleItalic.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnStyleItalic.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnStyleItalic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStyleItalic.Font = new System.Drawing.Font("Open Sans", 12.25F, System.Drawing.FontStyle.Italic);
             this.btnStyleItalic.ForeColor = System.Drawing.Color.White;
@@ -581,13 +595,15 @@ namespace AcroniUI.CustomizingForms
             this.btnStyleItalic.TabIndex = 5;
             this.btnStyleItalic.Text = "I";
             this.btnStyleItalic.UseVisualStyleBackColor = false;
-            this.btnStyleItalic.Click += new System.EventHandler(this.BtnChosen);
             this.btnStyleItalic.Click += new System.EventHandler(this.btnStyleItalic_Click);
             // 
             // btnStyleBold
             // 
             this.btnStyleBold.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnStyleBold.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStyleBold.FlatAppearance.BorderSize = 0;
+            this.btnStyleBold.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnStyleBold.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnStyleBold.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStyleBold.Font = new System.Drawing.Font("Open Sans", 12.25F, System.Drawing.FontStyle.Bold);
             this.btnStyleBold.ForeColor = System.Drawing.Color.White;
@@ -597,9 +613,7 @@ namespace AcroniUI.CustomizingForms
             this.btnStyleBold.TabIndex = 5;
             this.btnStyleBold.Text = "N";
             this.btnStyleBold.UseVisualStyleBackColor = false;
-            this.btnStyleBold.Click += new System.EventHandler(this.BtnChosen);
             this.btnStyleBold.Click += new System.EventHandler(this.btnStyleBold_Click);
-
             // 
             // pnlIcons
             // 
@@ -609,29 +623,10 @@ namespace AcroniUI.CustomizingForms
             this.pnlIcons.Size = new System.Drawing.Size(281, 125);
             this.pnlIcons.TabIndex = 4;
             // 
-            // txtFiltrarFontes
-            // 
-            this.txtFiltrarFontes.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtFiltrarFontes.Font = new System.Drawing.Font("Open Sans", 10.75F);
-            this.txtFiltrarFontes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtFiltrarFontes.HintForeColor = System.Drawing.Color.White;
-            this.txtFiltrarFontes.HintText = "Digite uma fonte...";
-            this.txtFiltrarFontes.isPassword = false;
-            this.txtFiltrarFontes.LineFocusedColor = System.Drawing.Color.Blue;
-            this.txtFiltrarFontes.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtFiltrarFontes.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txtFiltrarFontes.LineThickness = 3;
-            this.txtFiltrarFontes.Location = new System.Drawing.Point(109, 16);
-            this.txtFiltrarFontes.Margin = new System.Windows.Forms.Padding(4);
-            this.txtFiltrarFontes.Name = "txtFiltrarFontes";
-            this.txtFiltrarFontes.Size = new System.Drawing.Size(281, 47);
-            this.txtFiltrarFontes.TabIndex = 3;
-            this.txtFiltrarFontes.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtFiltrarFontes.OnValueChanged += new System.EventHandler(this.txtFiltrarFontes_OnValueChanged);
-            // 
             // btnTextAlignRight
             // 
             this.btnTextAlignRight.BackColor = System.Drawing.Color.Transparent;
+            this.btnTextAlignRight.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTextAlignRight.Image = ((System.Drawing.Image)(resources.GetObject("btnTextAlignRight.Image")));
             this.btnTextAlignRight.ImageActive = null;
             this.btnTextAlignRight.Location = new System.Drawing.Point(717, 39);
@@ -646,6 +641,7 @@ namespace AcroniUI.CustomizingForms
             // btnTextAlignCenter
             // 
             this.btnTextAlignCenter.BackColor = System.Drawing.Color.Transparent;
+            this.btnTextAlignCenter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTextAlignCenter.Image = ((System.Drawing.Image)(resources.GetObject("btnTextAlignCenter.Image")));
             this.btnTextAlignCenter.ImageActive = null;
             this.btnTextAlignCenter.Location = new System.Drawing.Point(673, 39);
@@ -660,6 +656,7 @@ namespace AcroniUI.CustomizingForms
             // btnTextAlignLeft
             // 
             this.btnTextAlignLeft.BackColor = System.Drawing.Color.Transparent;
+            this.btnTextAlignLeft.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTextAlignLeft.Image = ((System.Drawing.Image)(resources.GetObject("btnTextAlignLeft.Image")));
             this.btnTextAlignLeft.ImageActive = null;
             this.btnTextAlignLeft.Location = new System.Drawing.Point(629, 39);
@@ -673,14 +670,16 @@ namespace AcroniUI.CustomizingForms
             // 
             // cmbFontes
             // 
-            this.cmbFontes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.cmbFontes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbFontes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbFontes.ForeColor = System.Drawing.Color.White;
+            this.cmbFontes.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbFontes.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbFontes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.cmbFontes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbFontes.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbFontes.ForeColor = System.Drawing.Color.Transparent;
             this.cmbFontes.FormattingEnabled = true;
-            this.cmbFontes.Location = new System.Drawing.Point(109, 88);
+            this.cmbFontes.Location = new System.Drawing.Point(28, 98);
             this.cmbFontes.Name = "cmbFontes";
-            this.cmbFontes.Size = new System.Drawing.Size(277, 21);
+            this.cmbFontes.Size = new System.Drawing.Size(277, 23);
             this.cmbFontes.TabIndex = 1;
             this.cmbFontes.SelectedIndexChanged += new System.EventHandler(this.cmbFontes_SelectedIndexChanged);
             // 
@@ -688,8 +687,9 @@ namespace AcroniUI.CustomizingForms
             // 
             this.kbtnTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.kbtnTab.FlatAppearance.BorderSize = 0;
+            this.kbtnTab.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.kbtnTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.kbtnTab.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnTab.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnTab.ForeColor = System.Drawing.Color.White;
             this.kbtnTab.Location = new System.Drawing.Point(45, 353);
             this.kbtnTab.Name = "kbtnTab";
@@ -704,8 +704,9 @@ namespace AcroniUI.CustomizingForms
             // 
             this.kbtnQ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.kbtnQ.FlatAppearance.BorderSize = 0;
+            this.kbtnQ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.kbtnQ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.kbtnQ.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnQ.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnQ.ForeColor = System.Drawing.Color.White;
             this.kbtnQ.Location = new System.Drawing.Point(126, 353);
             this.kbtnQ.Name = "kbtnQ";
@@ -715,6 +716,17 @@ namespace AcroniUI.CustomizingForms
             this.kbtnQ.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.kbtnQ.UseVisualStyleBackColor = false;
             this.kbtnQ.Click += new System.EventHandler(this.kbtn_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Open Sans SemiBold", 17F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(22, 63);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 32);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Fontes";
             // 
             // Compacto
             // 
@@ -796,7 +808,6 @@ namespace AcroniUI.CustomizingForms
         private StyleBtn btnStyleItalic;
         private StyleBtn btnStyleBold;
         private System.Windows.Forms.Panel pnlIcons;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtFiltrarFontes;
         private Bunifu.Framework.UI.BunifuImageButton btnTextAlignRight;
         private Bunifu.Framework.UI.BunifuImageButton btnTextAlignCenter;
         private Bunifu.Framework.UI.BunifuImageButton btnTextAlignLeft;
@@ -805,6 +816,7 @@ namespace AcroniUI.CustomizingForms
         private StyleBtn btnSizeMedium;
         private StyleBtn btnSizeBig;
         private System.Windows.Forms.Label lblDefinirParaTodasTeclas;
+        private System.Windows.Forms.Label label1;
     }
 }
 

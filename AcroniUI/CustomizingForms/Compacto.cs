@@ -120,12 +120,6 @@ namespace AcroniUI.CustomizingForms
 
         static List<FontFamily> lista_fontFamily = new List<FontFamily>();
 
-        private void FormLoad(object sender, EventArgs e)
-        {
-            new LoadFontTypes(ref cmbFontes, ref lista_fontFamily);
-            cmbFontes.SelectedIndex = cmbFontes.Items.IndexOf("Tahoma");
-        }
-
         #region clicks dos botões de estilização da fonte
 
         private void btnStyleBold_Click(object sender, EventArgs e)
@@ -194,24 +188,10 @@ namespace AcroniUI.CustomizingForms
         #region ComboBox de FontFace
         protected virtual void cmbFontes_SelectedIndexChanged(object sender, EventArgs e) => FontSender = new Font(cmbFontes.Text, FontSize, FontStyle);
 
-        private void txtFiltrarFontes_OnValueChanged(object sender, EventArgs e)
+        private void FormLoad(object sender, EventArgs e)
         {
-            Regex regex = new Regex(txtFiltrarFontes.Text, RegexOptions.IgnoreCase);
-            foreach (FontFamily fonte in lista_fontFamily)
-            {
-                cmbFontes.Items.Remove(fonte);
-            }
-            FormLoad(sender, e);
-            if (!txtFiltrarFontes.Text.Equals(""))
-            {
-                foreach (FontFamily fonte in lista_fontFamily)
-                {
-                    if (!(regex.IsMatch(fonte.ToString())))
-                    {
-                        cmbFontes.Items.Remove(fonte);
-                    }
-                }
-            }
+            new LoadFontTypes(ref cmbFontes, ref lista_fontFamily);
+            cmbFontes.SelectedIndex = cmbFontes.Items.IndexOf("Open Sans");
         }
 
         #endregion
@@ -260,7 +240,7 @@ namespace AcroniUI.CustomizingForms
 
         #endregion Fim das fontes
 
-        #region active dos botões
+        #region Active dos botões
         private bool isntBtnChosen = true;
         public void BtnChosen(object sender, EventArgs e)
         {

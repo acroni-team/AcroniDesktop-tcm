@@ -33,6 +33,9 @@
     <Reference Include="AcroniUI">
       <HintPath>..\AcroniUI\bin\Debug\AcroniUI.dll</HintPath>
     </Reference>
+    <Reference Include="AcroniXMLControls">
+      <HintPath>..\AcroniXMLControls\bin\Debug\AcroniXMLControls.dll</HintPath>
+    </Reference>
     <Reference Include="Svg, Version=1.5.2.33115, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\Svg.dll</HintPath>

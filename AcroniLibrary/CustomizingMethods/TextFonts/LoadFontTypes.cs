@@ -7,7 +7,7 @@ namespace AcroniLibrary.CustomizingMethods.TextFonts
 {
     public class LoadFontTypes
     {
-        private static bool IsFontAddable = true;
+        private bool IsFontAddable = true;
 
         ///<summary> 
         ///Esse método serve para obter todas as fontes que o usuário possui em seu computador em duas listas, uma de fontefamily e outra de Fonts contendo cada estilo que a fonte possui.
