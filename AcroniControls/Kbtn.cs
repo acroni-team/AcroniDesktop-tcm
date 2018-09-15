@@ -15,19 +15,20 @@ namespace AcroniControls
         public Kbtn()
         {
             InitializeComponent();
-            this.Size = new Size(38, 40);
-            this.BackColor = Color.FromArgb(26, 26, 26);
-            this.ForeColor = Color.White;
-            this.FlatStyle = FlatStyle.Flat;
-            this.TextAlign = ContentAlignment.TopLeft;
-            this.Font = new Font("Open Sans", 12f);
-            this.FlatAppearance.BorderSize = 0;
         }
 
         /// <summary>
         /// <para>Método que muda a cor de um botão.</para>
         /// </summary>
         /// <param name="color"></param>
+
+        public void tyle(Font fontFace, FontStyle fontStyle)
+        {
+            if (this.Font.Style == fontStyle)
+                this.Font = new Font(fontFace, FontStyle.Regular);
+            else
+                this.Font = new Font(fontFace, fontStyle);
+        }
 
         public void SetColor(Color color)
         {

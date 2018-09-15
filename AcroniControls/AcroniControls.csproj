@@ -55,6 +55,12 @@
       <DependentUpon>Kbtn.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StyleBtn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StyleBtn.Designer.cs">
+      <DependentUpon>StyleBtn.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AcroniMessageBox.resx">

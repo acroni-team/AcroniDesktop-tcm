@@ -40,7 +40,6 @@
             this.fotoUsuario = new System.Windows.Forms.PictureBox();
             this.btnDesconectar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.lblBemVindo = new System.Windows.Forms.Label();
-            this.pnlSuperior.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();

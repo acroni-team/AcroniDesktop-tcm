@@ -28,58 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Compacto));
-            this.panel3 = new System.Windows.Forms.Panel();
             this.txtSelectFont = new System.Windows.Forms.TextBox();
             this.pnlHistorico = new System.Windows.Forms.Panel();
             this.btnHist3 = new System.Windows.Forms.Button();
             this.btnHist2 = new System.Windows.Forms.Button();
             this.btnHist1 = new System.Windows.Forms.Button();
             this.btnColorChosen = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.lblKnownColorName = new System.Windows.Forms.Label();
-            this.lblDefinirParaTodasAsTeclas = new System.Windows.Forms.Label();
             this.lblCorRGB = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.pnlColorpicker = new System.Windows.Forms.Panel();
-            this.button25 = new System.Windows.Forms.Button();
-            this.button26 = new System.Windows.Forms.Button();
-            this.button27 = new System.Windows.Forms.Button();
-            this.button28 = new System.Windows.Forms.Button();
-            this.button29 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button30 = new System.Windows.Forms.Button();
-            this.button31 = new System.Windows.Forms.Button();
-            this.button32 = new System.Windows.Forms.Button();
-            this.button33 = new System.Windows.Forms.Button();
-            this.button34 = new System.Windows.Forms.Button();
-            this.button35 = new System.Windows.Forms.Button();
-            this.button36 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.pnlCorEscolhida = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.lblNomeCor = new System.Windows.Forms.Label();
@@ -108,12 +66,9 @@
             this.pnlDivisoria1 = new System.Windows.Forms.Panel();
             this.lblHexaColor = new System.Windows.Forms.Label();
             this.pnlColor = new System.Windows.Forms.Panel();
-            this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.kbtnQ = new AcroniControls.Kbtn();
-            this.kbtnTab = new AcroniControls.Kbtn();
+            this.picBoxKeyboardBackground = new System.Windows.Forms.PictureBox();
             this.pnlCustomizingMenu = new System.Windows.Forms.Panel();
+            this.lblDefinirParaTodasTeclas = new System.Windows.Forms.Label();
             this.btnSizeSmall = new System.Windows.Forms.Button();
             this.btnSizeMedium = new System.Windows.Forms.Button();
             this.btnSizeBig = new System.Windows.Forms.Button();
@@ -121,50 +76,24 @@
             this.btnStyleUnderline = new System.Windows.Forms.Button();
             this.btnStyleItalic = new System.Windows.Forms.Button();
             this.btnStyleBold = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.pnlIcons = new System.Windows.Forms.Panel();
             this.txtFiltrarFontes = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.btnTextAlignRight = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnTextAlignCenter = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnTextAlignLeft = new Bunifu.Framework.UI.BunifuImageButton();
             this.cmbFontes = new System.Windows.Forms.ComboBox();
+            this.kbtnTab = new AcroniControls.Kbtn();
+            this.kbtnQ = new AcroniControls.Kbtn();
             this.pnlSuperior.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.pnlHistorico.SuspendLayout();
-            this.pnlColorpicker.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.pnlCorEscolhida.SuspendLayout();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxKeyboardBackground)).BeginInit();
             this.pnlCustomizingMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignRight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignCenter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignLeft)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pnlSuperior
-            // 
-            this.pnlSuperior.Location = new System.Drawing.Point(0, 1);
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.panel3.Controls.Add(this.txtSelectFont);
-            this.panel3.Controls.Add(this.pnlHistorico);
-            this.panel3.Controls.Add(this.btnColorChosen);
-            this.panel3.Controls.Add(this.button6);
-            this.panel3.Controls.Add(this.button5);
-            this.panel3.Controls.Add(this.button4);
-            this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.lblKnownColorName);
-            this.panel3.Controls.Add(this.lblDefinirParaTodasAsTeclas);
-            this.panel3.Controls.Add(this.lblCorRGB);
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.pnlColorpicker);
-            this.panel3.Location = new System.Drawing.Point(1028, 37);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(272, 683);
-            this.panel3.TabIndex = 5;
             // 
             // txtSelectFont
             // 
@@ -211,58 +140,6 @@
             this.btnColorChosen.Size = new System.Drawing.Size(75, 23);
             this.btnColorChosen.TabIndex = 49;
             // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(110)))), ((int)(((byte)(143)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Open Sans", 9F);
-            this.button6.Location = new System.Drawing.Point(49, 414);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(84, 50);
-            this.button6.TabIndex = 1;
-            this.button6.Text = "Extendido";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(110)))), ((int)(((byte)(143)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Open Sans", 9F);
-            this.button5.Location = new System.Drawing.Point(139, 414);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(87, 50);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "Super compacto";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(110)))), ((int)(((byte)(143)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Open Sans", 9F);
-            this.button4.Location = new System.Drawing.Point(49, 358);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(84, 50);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "Compacto";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(110)))), ((int)(((byte)(143)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Open Sans", 9F);
-            this.button3.Location = new System.Drawing.Point(139, 358);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(87, 50);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Padrão";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
             // lblKnownColorName
             // 
             this.lblKnownColorName.AutoSize = true;
@@ -276,18 +153,6 @@
             this.lblKnownColorName.Text = "Cor em RGB";
             this.lblKnownColorName.Visible = false;
             // 
-            // lblDefinirParaTodasAsTeclas
-            // 
-            this.lblDefinirParaTodasAsTeclas.AutoSize = true;
-            this.lblDefinirParaTodasAsTeclas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lblDefinirParaTodasAsTeclas.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblDefinirParaTodasAsTeclas.Location = new System.Drawing.Point(35, 263);
-            this.lblDefinirParaTodasAsTeclas.Name = "lblDefinirParaTodasAsTeclas";
-            this.lblDefinirParaTodasAsTeclas.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
-            this.lblDefinirParaTodasAsTeclas.Size = new System.Drawing.Size(215, 38);
-            this.lblDefinirParaTodasAsTeclas.TabIndex = 0;
-            this.lblDefinirParaTodasAsTeclas.Text = "Definir para todas as teclas";
-            // 
             // lblCorRGB
             // 
             this.lblCorRGB.AutoSize = true;
@@ -300,305 +165,12 @@
             this.lblCorRGB.TabIndex = 0;
             this.lblCorRGB.Text = "Cor em RGB";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Open Sans", 11.25F);
-            this.label7.Location = new System.Drawing.Point(31, 485);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 20);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Fontes";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Open Sans", 11.25F);
-            this.label6.Location = new System.Drawing.Point(31, 323);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 20);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Tamanho";
-            // 
             // pnlColorpicker
             // 
-            this.pnlColorpicker.Controls.Add(this.button25);
-            this.pnlColorpicker.Controls.Add(this.button26);
-            this.pnlColorpicker.Controls.Add(this.button27);
-            this.pnlColorpicker.Controls.Add(this.button28);
-            this.pnlColorpicker.Controls.Add(this.button29);
-            this.pnlColorpicker.Controls.Add(this.button20);
-            this.pnlColorpicker.Controls.Add(this.button21);
-            this.pnlColorpicker.Controls.Add(this.button22);
-            this.pnlColorpicker.Controls.Add(this.button23);
-            this.pnlColorpicker.Controls.Add(this.button24);
-            this.pnlColorpicker.Controls.Add(this.button15);
-            this.pnlColorpicker.Controls.Add(this.button16);
-            this.pnlColorpicker.Controls.Add(this.button17);
-            this.pnlColorpicker.Controls.Add(this.button19);
-            this.pnlColorpicker.Controls.Add(this.button10);
-            this.pnlColorpicker.Controls.Add(this.button11);
-            this.pnlColorpicker.Controls.Add(this.button12);
-            this.pnlColorpicker.Controls.Add(this.button13);
-            this.pnlColorpicker.Controls.Add(this.button14);
-            this.pnlColorpicker.Controls.Add(this.button7);
-            this.pnlColorpicker.Controls.Add(this.button8);
-            this.pnlColorpicker.Controls.Add(this.button9);
-            this.pnlColorpicker.Controls.Add(this.button30);
-            this.pnlColorpicker.Controls.Add(this.button31);
-            this.pnlColorpicker.Controls.Add(this.button32);
-            this.pnlColorpicker.Controls.Add(this.button33);
-            this.pnlColorpicker.Controls.Add(this.button34);
-            this.pnlColorpicker.Controls.Add(this.button35);
-            this.pnlColorpicker.Controls.Add(this.button36);
-            this.pnlColorpicker.Controls.Add(this.button18);
-            this.pnlColorpicker.Location = new System.Drawing.Point(70, 19);
+            this.pnlColorpicker.Location = new System.Drawing.Point(0, 0);
             this.pnlColorpicker.Name = "pnlColorpicker";
-            this.pnlColorpicker.Size = new System.Drawing.Size(163, 183);
-            this.pnlColorpicker.TabIndex = 7;
-            this.pnlColorpicker.Visible = false;
-            // 
-            // button25
-            // 
-            this.button25.Location = new System.Drawing.Point(0, 0);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(75, 23);
-            this.button25.TabIndex = 0;
-            // 
-            // button26
-            // 
-            this.button26.Location = new System.Drawing.Point(0, 0);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(75, 23);
-            this.button26.TabIndex = 1;
-            // 
-            // button27
-            // 
-            this.button27.Location = new System.Drawing.Point(0, 0);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(75, 23);
-            this.button27.TabIndex = 2;
-            // 
-            // button28
-            // 
-            this.button28.Location = new System.Drawing.Point(0, 0);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(75, 23);
-            this.button28.TabIndex = 3;
-            // 
-            // button29
-            // 
-            this.button29.Location = new System.Drawing.Point(0, 0);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(75, 23);
-            this.button29.TabIndex = 4;
-            // 
-            // button20
-            // 
-            this.button20.Location = new System.Drawing.Point(0, 0);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(75, 23);
-            this.button20.TabIndex = 5;
-            // 
-            // button21
-            // 
-            this.button21.Location = new System.Drawing.Point(0, 0);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(75, 23);
-            this.button21.TabIndex = 6;
-            // 
-            // button22
-            // 
-            this.button22.Location = new System.Drawing.Point(0, 0);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(75, 23);
-            this.button22.TabIndex = 7;
-            // 
-            // button23
-            // 
-            this.button23.Location = new System.Drawing.Point(0, 0);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(75, 23);
-            this.button23.TabIndex = 8;
-            // 
-            // button24
-            // 
-            this.button24.Location = new System.Drawing.Point(0, 0);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(75, 23);
-            this.button24.TabIndex = 9;
-            // 
-            // button15
-            // 
-            this.button15.Location = new System.Drawing.Point(0, 0);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(75, 23);
-            this.button15.TabIndex = 10;
-            // 
-            // button16
-            // 
-            this.button16.Location = new System.Drawing.Point(0, 0);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(75, 23);
-            this.button16.TabIndex = 11;
-            // 
-            // button17
-            // 
-            this.button17.Location = new System.Drawing.Point(0, 0);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(75, 23);
-            this.button17.TabIndex = 12;
-            // 
-            // button19
-            // 
-            this.button19.Location = new System.Drawing.Point(0, 0);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(75, 23);
-            this.button19.TabIndex = 13;
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(0, 0);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 14;
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(0, 0);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 23);
-            this.button11.TabIndex = 15;
-            // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(0, 0);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(75, 23);
-            this.button12.TabIndex = 16;
-            // 
-            // button13
-            // 
-            this.button13.Location = new System.Drawing.Point(0, 0);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(75, 23);
-            this.button13.TabIndex = 17;
-            // 
-            // button14
-            // 
-            this.button14.Location = new System.Drawing.Point(0, 0);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(75, 23);
-            this.button14.TabIndex = 18;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(0, 0);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 19;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(0, 0);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 20;
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(0, 0);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 21;
-            // 
-            // button30
-            // 
-            this.button30.Location = new System.Drawing.Point(0, 0);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(75, 23);
-            this.button30.TabIndex = 22;
-            // 
-            // button31
-            // 
-            this.button31.Location = new System.Drawing.Point(0, 0);
-            this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(75, 23);
-            this.button31.TabIndex = 23;
-            // 
-            // button32
-            // 
-            this.button32.Location = new System.Drawing.Point(0, 0);
-            this.button32.Name = "button32";
-            this.button32.Size = new System.Drawing.Size(75, 23);
-            this.button32.TabIndex = 24;
-            // 
-            // button33
-            // 
-            this.button33.Location = new System.Drawing.Point(0, 0);
-            this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(75, 23);
-            this.button33.TabIndex = 25;
-            // 
-            // button34
-            // 
-            this.button34.Location = new System.Drawing.Point(0, 0);
-            this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(75, 23);
-            this.button34.TabIndex = 26;
-            // 
-            // button35
-            // 
-            this.button35.Location = new System.Drawing.Point(0, 0);
-            this.button35.Name = "button35";
-            this.button35.Size = new System.Drawing.Size(75, 23);
-            this.button35.TabIndex = 27;
-            // 
-            // button36
-            // 
-            this.button36.Location = new System.Drawing.Point(0, 0);
-            this.button36.Name = "button36";
-            this.button36.Size = new System.Drawing.Size(75, 23);
-            this.button36.TabIndex = 28;
-            // 
-            // button18
-            // 
-            this.button18.Location = new System.Drawing.Point(0, 0);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(75, 23);
-            this.button18.TabIndex = 29;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
-            this.panel4.Controls.Add(this.label8);
-            this.panel4.Controls.Add(this.label10);
-            this.panel4.Location = new System.Drawing.Point(0, 944);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1521, 135);
-            this.panel4.TabIndex = 6;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Open Sans", 25.25F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(29, 29);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(172, 46);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "CT430-FX";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Open Sans", 12.25F);
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(175)))), ((int)(((byte)(175)))));
-            this.label10.Location = new System.Drawing.Point(33, 75);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(457, 23);
-            this.label10.TabIndex = 3;
-            this.label10.Text = "Um teclado mecânico para jogos. Inclui teclado numérico.";
+            this.pnlColorpicker.Size = new System.Drawing.Size(200, 100);
+            this.pnlColorpicker.TabIndex = 0;
             // 
             // pnlCorEscolhida
             // 
@@ -629,7 +201,7 @@
             this.pnlCorEscolhida.Controls.Add(this.pnlDivisoria1);
             this.pnlCorEscolhida.Controls.Add(this.lblHexaColor);
             this.pnlCorEscolhida.Controls.Add(this.pnlColor);
-            this.pnlCorEscolhida.Location = new System.Drawing.Point(907, 230);
+            this.pnlCorEscolhida.Location = new System.Drawing.Point(607, 300);
             this.pnlCorEscolhida.Name = "pnlCorEscolhida";
             this.pnlCorEscolhida.Size = new System.Drawing.Size(631, 103);
             this.pnlCorEscolhida.TabIndex = 12;
@@ -883,59 +455,20 @@
             this.pnlColor.TabIndex = 3;
             this.pnlColor.Click += new System.EventHandler(this.pnlColor_Click);
             // 
-            // bunifuElipse3
+            // picBoxKeyboardBackground
             // 
-            this.bunifuElipse3.ElipseRadius = 10;
-            this.bunifuElipse3.TargetControl = this.pnlColor;
-            // 
-            // bunifuElipse2
-            // 
-            this.bunifuElipse2.ElipseRadius = 10;
-            this.bunifuElipse2.TargetControl = this.pnlCorEscolhida;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(19, 270);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(866, 328);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            // 
-            // kbtnQ
-            // 
-            this.kbtnQ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.kbtnQ.FlatAppearance.BorderSize = 0;
-            this.kbtnQ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.kbtnQ.Font = new System.Drawing.Font("Open Sans", 12F);
-            this.kbtnQ.ForeColor = System.Drawing.Color.White;
-            this.kbtnQ.Location = new System.Drawing.Point(126, 353);
-            this.kbtnQ.Name = "kbtnQ";
-            this.kbtnQ.Size = new System.Drawing.Size(38, 40);
-            this.kbtnQ.TabIndex = 15;
-            this.kbtnQ.Text = "Q";
-            this.kbtnQ.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.kbtnQ.UseVisualStyleBackColor = false;
-            // 
-            // kbtnTab
-            // 
-            this.kbtnTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.kbtnTab.FlatAppearance.BorderSize = 0;
-            this.kbtnTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.kbtnTab.Font = new System.Drawing.Font("Open Sans", 12F);
-            this.kbtnTab.ForeColor = System.Drawing.Color.White;
-            this.kbtnTab.Location = new System.Drawing.Point(45, 353);
-            this.kbtnTab.Name = "kbtnTab";
-            this.kbtnTab.Size = new System.Drawing.Size(64, 40);
-            this.kbtnTab.TabIndex = 15;
-            this.kbtnTab.Text = "Tab";
-            this.kbtnTab.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.kbtnTab.UseVisualStyleBackColor = false;
+            this.picBoxKeyboardBackground.Image = ((System.Drawing.Image)(resources.GetObject("picBoxKeyboardBackground.Image")));
+            this.picBoxKeyboardBackground.Location = new System.Drawing.Point(19, 270);
+            this.picBoxKeyboardBackground.Name = "picBoxKeyboardBackground";
+            this.picBoxKeyboardBackground.Size = new System.Drawing.Size(866, 328);
+            this.picBoxKeyboardBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBoxKeyboardBackground.TabIndex = 11;
+            this.picBoxKeyboardBackground.TabStop = false;
             // 
             // pnlCustomizingMenu
             // 
             this.pnlCustomizingMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.pnlCustomizingMenu.Controls.Add(this.lblDefinirParaTodasTeclas);
             this.pnlCustomizingMenu.Controls.Add(this.btnSizeSmall);
             this.pnlCustomizingMenu.Controls.Add(this.btnSizeMedium);
             this.pnlCustomizingMenu.Controls.Add(this.btnSizeBig);
@@ -943,7 +476,7 @@
             this.pnlCustomizingMenu.Controls.Add(this.btnStyleUnderline);
             this.pnlCustomizingMenu.Controls.Add(this.btnStyleItalic);
             this.pnlCustomizingMenu.Controls.Add(this.btnStyleBold);
-            this.pnlCustomizingMenu.Controls.Add(this.panel6);
+            this.pnlCustomizingMenu.Controls.Add(this.pnlIcons);
             this.pnlCustomizingMenu.Controls.Add(this.txtFiltrarFontes);
             this.pnlCustomizingMenu.Controls.Add(this.btnTextAlignRight);
             this.pnlCustomizingMenu.Controls.Add(this.btnTextAlignCenter);
@@ -951,8 +484,18 @@
             this.pnlCustomizingMenu.Controls.Add(this.cmbFontes);
             this.pnlCustomizingMenu.Location = new System.Drawing.Point(0, 50);
             this.pnlCustomizingMenu.Name = "pnlCustomizingMenu";
-            this.pnlCustomizingMenu.Size = new System.Drawing.Size(1058, 153);
+            this.pnlCustomizingMenu.Size = new System.Drawing.Size(1280, 153);
             this.pnlCustomizingMenu.TabIndex = 16;
+            // 
+            // lblDefinirParaTodasTeclas
+            // 
+            this.lblDefinirParaTodasTeclas.AutoSize = true;
+            this.lblDefinirParaTodasTeclas.Location = new System.Drawing.Point(459, 16);
+            this.lblDefinirParaTodasTeclas.Name = "lblDefinirParaTodasTeclas";
+            this.lblDefinirParaTodasTeclas.Size = new System.Drawing.Size(162, 13);
+            this.lblDefinirParaTodasTeclas.TabIndex = 9;
+            this.lblDefinirParaTodasTeclas.Text = "Definir estilo para todas as teclas";
+            this.lblDefinirParaTodasTeclas.Click += new System.EventHandler(this.lblDefinirParaTodasTeclas_Click);
             // 
             // btnSizeSmall
             // 
@@ -968,6 +511,7 @@
             this.btnSizeSmall.Text = "Pequeno";
             this.btnSizeSmall.UseVisualStyleBackColor = false;
             this.btnSizeSmall.Click += new System.EventHandler(this.btnSizeSmall_Click);
+            this.btnSizeSmall.Click += new System.EventHandler(this.btnSize_Click);
             // 
             // btnSizeMedium
             // 
@@ -983,6 +527,7 @@
             this.btnSizeMedium.Text = "Médio";
             this.btnSizeMedium.UseVisualStyleBackColor = false;
             this.btnSizeMedium.Click += new System.EventHandler(this.btnSizeMedium_Click);
+            this.btnSizeMedium.Click += new System.EventHandler(this.btnSize_Click);
             // 
             // btnSizeBig
             // 
@@ -998,6 +543,7 @@
             this.btnSizeBig.Text = "Grande";
             this.btnSizeBig.UseVisualStyleBackColor = false;
             this.btnSizeBig.Click += new System.EventHandler(this.btnSizeBig_Click);
+            this.btnSizeBig.Click += new System.EventHandler(this.btnSize_Click);
             // 
             // btnStyleStrikeout
             // 
@@ -1013,6 +559,7 @@
             this.btnStyleStrikeout.Text = "abc";
             this.btnStyleStrikeout.UseVisualStyleBackColor = false;
             this.btnStyleStrikeout.Click += new System.EventHandler(this.btnStyleStrikeout_Click);
+            this.btnStyleStrikeout.Click += new System.EventHandler(this.btnStyle_Click);
             // 
             // btnStyleUnderline
             // 
@@ -1028,6 +575,7 @@
             this.btnStyleUnderline.Text = "S";
             this.btnStyleUnderline.UseVisualStyleBackColor = false;
             this.btnStyleUnderline.Click += new System.EventHandler(this.btnStyleUnderline_Click);
+            this.btnStyleUnderline.Click += new System.EventHandler(this.btnStyle_Click);
             // 
             // btnStyleItalic
             // 
@@ -1043,6 +591,7 @@
             this.btnStyleItalic.Text = "I";
             this.btnStyleItalic.UseVisualStyleBackColor = false;
             this.btnStyleItalic.Click += new System.EventHandler(this.btnStyleItalic_Click);
+            this.btnStyleItalic.Click += new System.EventHandler(this.btnStyle_Click);
             // 
             // btnStyleBold
             // 
@@ -1058,14 +607,15 @@
             this.btnStyleBold.Text = "N";
             this.btnStyleBold.UseVisualStyleBackColor = false;
             this.btnStyleBold.Click += new System.EventHandler(this.btnStyleBold_Click);
+            this.btnStyleBold.Click += new System.EventHandler(this.btnStyle_Click);
             // 
-            // panel6
+            // pnlIcons
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.panel6.Location = new System.Drawing.Point(762, 16);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(281, 125);
-            this.panel6.TabIndex = 4;
+            this.pnlIcons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.pnlIcons.Location = new System.Drawing.Point(762, 16);
+            this.pnlIcons.Name = "pnlIcons";
+            this.pnlIcons.Size = new System.Drawing.Size(281, 125);
+            this.pnlIcons.TabIndex = 4;
             // 
             // txtFiltrarFontes
             // 
@@ -1142,40 +692,66 @@
             this.cmbFontes.TabIndex = 1;
             this.cmbFontes.SelectedIndexChanged += new System.EventHandler(this.cmbFontes_SelectedIndexChanged);
             // 
+            // kbtnTab
+            // 
+            this.kbtnTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.kbtnTab.FlatAppearance.BorderSize = 0;
+            this.kbtnTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.kbtnTab.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnTab.ForeColor = System.Drawing.Color.White;
+            this.kbtnTab.Location = new System.Drawing.Point(45, 353);
+            this.kbtnTab.Name = "kbtnTab";
+            this.kbtnTab.Size = new System.Drawing.Size(64, 40);
+            this.kbtnTab.TabIndex = 15;
+            this.kbtnTab.Text = "Tab";
+            this.kbtnTab.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.kbtnTab.UseVisualStyleBackColor = false;
+            this.kbtnTab.Click += new System.EventHandler(this.kbtn_Click);
+            // 
+            // kbtnQ
+            // 
+            this.kbtnQ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.kbtnQ.FlatAppearance.BorderSize = 0;
+            this.kbtnQ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.kbtnQ.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnQ.ForeColor = System.Drawing.Color.White;
+            this.kbtnQ.Location = new System.Drawing.Point(126, 353);
+            this.kbtnQ.Name = "kbtnQ";
+            this.kbtnQ.Size = new System.Drawing.Size(38, 40);
+            this.kbtnQ.TabIndex = 15;
+            this.kbtnQ.Text = "Q";
+            this.kbtnQ.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.kbtnQ.UseVisualStyleBackColor = false;
+            this.kbtnQ.Click += new System.EventHandler(this.kbtn_Click);
+            // 
             // Compacto
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1584, 720);
+            this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.pnlCorEscolhida);
             this.Controls.Add(this.pnlCustomizingMenu);
             this.Controls.Add(this.kbtnTab);
             this.Controls.Add(this.kbtnQ);
-            this.Controls.Add(this.pnlCorEscolhida);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.picBoxKeyboardBackground);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "Compacto";
             this.Load += new System.EventHandler(this.FormLoad);
-            this.Controls.SetChildIndex(this.panel4, 0);
-            this.Controls.SetChildIndex(this.pictureBox1, 0);
-            this.Controls.SetChildIndex(this.pnlCorEscolhida, 0);
+            this.Controls.SetChildIndex(this.picBoxKeyboardBackground, 0);
             this.Controls.SetChildIndex(this.pnlSuperior, 0);
             this.Controls.SetChildIndex(this.kbtnQ, 0);
             this.Controls.SetChildIndex(this.kbtnTab, 0);
             this.Controls.SetChildIndex(this.pnlCustomizingMenu, 0);
+            this.Controls.SetChildIndex(this.pnlCorEscolhida, 0);
             this.pnlSuperior.ResumeLayout(false);
             this.pnlSuperior.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.pnlHistorico.ResumeLayout(false);
-            this.pnlColorpicker.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.pnlCorEscolhida.ResumeLayout(false);
             this.pnlCorEscolhida.PerformLayout();
             this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxKeyboardBackground)).EndInit();
             this.pnlCustomizingMenu.ResumeLayout(false);
+            this.pnlCustomizingMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignRight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignCenter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignLeft)).EndInit();
@@ -1184,48 +760,8 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnColorChosen;
         private System.Windows.Forms.Panel pnlColorpicker;
-        private System.Windows.Forms.Button button25;
-        private System.Windows.Forms.Button button26;
-        private System.Windows.Forms.Button button27;
-        private System.Windows.Forms.Button button28;
-        private System.Windows.Forms.Button button29;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button23;
-        private System.Windows.Forms.Button button24;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button30;
-        private System.Windows.Forms.Button button31;
-        private System.Windows.Forms.Button button32;
-        private System.Windows.Forms.Button button33;
-        private System.Windows.Forms.Button button34;
-        private System.Windows.Forms.Button button35;
-        private System.Windows.Forms.Button button36;
         private System.Windows.Forms.Panel pnlHistorico;
         private System.Windows.Forms.Button btnHist3;
         private System.Windows.Forms.Button btnHist2;
@@ -1233,7 +769,6 @@
         private System.Windows.Forms.Label lblCorRGB;
         private System.Windows.Forms.Label lblKnownColorName;
         private System.Windows.Forms.TextBox txtSelectFont;
-        private System.Windows.Forms.Label lblDefinirParaTodasAsTeclas;
         private System.Windows.Forms.Panel pnlCorEscolhida;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label lblNomeCor;
@@ -1262,17 +797,15 @@
         private System.Windows.Forms.Panel pnlDivisoria1;
         private System.Windows.Forms.Label lblHexaColor;
         private System.Windows.Forms.Panel pnlColor;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         private AcroniControls.Kbtn kbtnQ;
         private AcroniControls.Kbtn kbtnTab;
-        protected System.Windows.Forms.PictureBox pictureBox1;
+        protected System.Windows.Forms.PictureBox picBoxKeyboardBackground;
         private System.Windows.Forms.Panel pnlCustomizingMenu;
         private System.Windows.Forms.Button btnStyleStrikeout;
         private System.Windows.Forms.Button btnStyleUnderline;
         private System.Windows.Forms.Button btnStyleItalic;
         private System.Windows.Forms.Button btnStyleBold;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel pnlIcons;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtFiltrarFontes;
         private Bunifu.Framework.UI.BunifuImageButton btnTextAlignRight;
         private Bunifu.Framework.UI.BunifuImageButton btnTextAlignCenter;
@@ -1281,6 +814,7 @@
         private System.Windows.Forms.Button btnSizeSmall;
         private System.Windows.Forms.Button btnSizeMedium;
         private System.Windows.Forms.Button btnSizeBig;
+        private System.Windows.Forms.Label lblDefinirParaTodasTeclas;
     }
 }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using AcroniUI.CustomizingForms;
 using AcroniUI.LoginAndSignUp;
 
 namespace AcroniUI
@@ -14,7 +15,7 @@ namespace AcroniUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmLogin());
+            Application.Run(new Compacto());
         }
     }
 }

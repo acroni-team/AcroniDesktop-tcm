@@ -50,7 +50,7 @@
             this.pnlSuperior.Controls.Add(this.btnSair);
             this.pnlSuperior.Controls.Add(this.lblAcroni);
             this.pnlSuperior.Controls.Add(this.menuStrip1);
-            this.pnlSuperior.Location = new System.Drawing.Point(0, -1);
+            this.pnlSuperior.Location = new System.Drawing.Point(0, 0);
             this.pnlSuperior.Name = "pnlSuperior";
             this.pnlSuperior.Size = new System.Drawing.Size(1280, 50);
             this.pnlSuperior.TabIndex = 11;
@@ -164,12 +164,12 @@
 
         #endregion
         private System.Windows.Forms.ToolStripMenuItem faleConoscoToolStripMenuItem;
-        protected System.Windows.Forms.Panel pnlSuperior;
         protected System.Windows.Forms.Label lblAcroni;
         protected System.Windows.Forms.MenuStrip menuStrip1;
         private Bunifu.Framework.UI.BunifuImageButton btnMinimizar;
         private Bunifu.Framework.UI.BunifuImageButton btnSair;
         protected System.Windows.Forms.ToolStripMenuItem ajudaToolStripMenuItem;
         protected System.Windows.Forms.ToolStripMenuItem arquivoToolStripMenuItem;
+        protected System.Windows.Forms.Panel pnlSuperior;
     }
 }

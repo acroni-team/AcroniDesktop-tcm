@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AcroniUI">
+      <HintPath>..\AcroniUI\bin\Debug\AcroniUI.dll</HintPath>
+    </Reference>
     <Reference Include="Svg, Version=1.5.2.33115, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\Svg.dll</HintPath>
@@ -55,8 +58,9 @@
     <Compile Include="CustomizingMethods\Colorpicker\SetHistColors.cs" />
     <Compile Include="CustomizingMethods\TextFonts\Alignment.cs" />
     <Compile Include="FileInfo\CompactKeyboardInfo.cs" />
-    <Compile Include="FileInfo\IKeyboardInfo.cs" />
+    <Compile Include="FileInfo\FullsizeKeyboardInfo.cs" />
     <Compile Include="FileInfo\KeyboardIDGenerator.cs" />
+    <Compile Include="FileInfo\TenkeylessKeyboardInfo.cs" />
     <Compile Include="GetNistTime.cs" />
     <Compile Include="CustomizingMethods\TextFonts\LoadFontTypes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -12,6 +12,17 @@ namespace AcroniUI.CustomizingForms
 {
     public partial class Compacto : Template
     {
+        // Essas duas propriedades são usadas quando o usuário quiser definir estilo para TODAS as Keycaps.
+        private float FontSize { get; set; } = 12f;
+        public FontStyle FontStyle { get; set; } = FontStyle.Regular;
+        private ContentAlignment ContentAlignment { get; set; } = ContentAlignment.TopLeft;
+
+        // Já essas são-se usadas quando o usuário quer definir apenas para uma Keycap ou um grupo delas. 
+        private char FontStyleSender;
+        private Font FontSender;
+        private bool IsKeycapChosen;
+        private Kbtn kbtn;
+
         public Compacto()
         {
             InitializeComponent();
@@ -113,99 +124,86 @@ namespace AcroniUI.CustomizingForms
         private void FormLoad(object sender, EventArgs e)
         {
             new LoadFontTypes(ref cmbFontes, ref lista_fontFamily);
+            cmbFontes.SelectedIndex = cmbFontes.Items.IndexOf("Tahoma");
         }
 
-        protected float FontSize { get; set; } = 12f;
-        protected FontStyle FontStyle { get; set; } = FontStyle.Regular;
+        #region clicks dos botões de estilização da fonte
+        private void btnStyle_Click(object sender, EventArgs e)
+        {
+            if (IsKeycapChosen)
+                kbtn.Font = new Font(FontSender, FontStyle);
+        }
 
-        #region Métodos de selecionar estilo da fonte e tamanho
         private void btnStyleBold_Click(object sender, EventArgs e)
         {
             FontStyle = FontStyle.Bold;
-            AtualizarFontes();
         }
 
         private void btnStyleItalic_Click(object sender, EventArgs e)
         {
             FontStyle = FontStyle.Italic;
-            AtualizarFontes();
         }
 
         private void btnStyleUnderline_Click(object sender, EventArgs e)
         {
             FontStyle = FontStyle.Underline;
-            AtualizarFontes();
         }
 
         private void btnStyleStrikeout_Click(object sender, EventArgs e)
         {
             FontStyle = FontStyle.Strikeout;
-            AtualizarFontes();
+        }
+        #endregion
+
+        #region clicks dos botões de tamanho da fonte
+        private void btnSize_Click(object sender, EventArgs e)
+        {
+            if (IsKeycapChosen)
+                kbtn.Font = new Font(FontSender.FontFamily, FontSize, FontStyle);
         }
 
         private void btnSizeBig_Click(object sender, EventArgs e)
         {
+            FontStyleSender = '4';
             FontSize = 14f;
-            AtualizarFontes();
         }
 
         private void btnSizeMedium_Click(object sender, EventArgs e)
         {
+            FontStyleSender = '2';
             FontSize = 12f;
-            AtualizarFontes();
         }
 
         private void btnSizeSmall_Click(object sender, EventArgs e)
         {
+            FontStyleSender = '0';
             FontSize = 10f;
-            AtualizarFontes();
         }
+        #endregion
 
         #region Definição dos métodos de alinhamento
-        private void setButtonTextAlignment(ContentAlignment contentAlignment)
-        {
-            foreach (Control c in this.Controls)
-            {
-                if (c is Kbtn)
-                {
-                    (c as Button).TextAlign = contentAlignment;
-                }
-            }
-        }
 
         private void btnTextAlignLeft_Click(object sender, EventArgs e)
         {
-            setButtonTextAlignment(ContentAlignment.TopLeft);
+            FontStyleSender = 'l';
+            ContentAlignment = ContentAlignment.TopLeft;
         }
 
         private void btnTextAlignCenter_Click(object sender, EventArgs e)
         {
-            setButtonTextAlignment(ContentAlignment.TopCenter);
+            FontStyleSender = 'c';
+            ContentAlignment = ContentAlignment.TopCenter;
         }
 
         private void btnTextAlignRight_Click(object sender, EventArgs e)
         {
-            setButtonTextAlignment(ContentAlignment.TopRight);
+            FontStyleSender = 'r';
+            ContentAlignment = ContentAlignment.TopRight;
         }
         #endregion
 
-        #endregion
-
-        private void AtualizarFontes()
-        {
-            foreach (Control c in this.Controls)
-            {
-                if (c is Kbtn)
-                {
-                    (c as Button).Font = new Font(cmbFontes.Text, FontSize, FontStyle);
-                }
-            }
-        }
-
-        protected virtual void cmbFontes_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            AtualizarFontes();
-        }
+        #region ComboBox de FontFace
+        protected virtual void cmbFontes_SelectedIndexChanged(object sender, EventArgs e) => FontSender = new Font(cmbFontes.Text, FontSize, FontStyle);
 
         private void txtFiltrarFontes_OnValueChanged(object sender, EventArgs e)
         {
@@ -228,5 +226,50 @@ namespace AcroniUI.CustomizingForms
         }
 
         #endregion
+
+        private void lblDefinirParaTodasTeclas_Click(object sender, EventArgs e)
+        {
+            foreach (Control c in this.Controls)
+            {
+                if (c is Kbtn)
+                {
+                    (c as Button).Font = new Font(cmbFontes.Text, FontSize, FontStyle);
+                    (c as Button).TextAlign = ContentAlignment;
+                }
+            }
+        }
+
+        private void kbtn_Click(object sender, EventArgs e)
+        {
+            IsKeycapChosen = true;
+            kbtn = (Kbtn)sender;
+            kbtn.tyle(FontSender, FontStyle);
+            switch (FontStyleSender)
+            {
+                case 'r':
+                    kbtn.TextAlign = ContentAlignment.TopRight;
+                    break;
+                case 'c':
+                    kbtn.TextAlign = ContentAlignment.TopCenter;
+                    break;
+                case 'l':
+                    kbtn.TextAlign = ContentAlignment.TopLeft;
+                    break;
+                case '4':
+                    kbtn.Font = new Font(FontSender.FontFamily, 14f, FontStyle);
+                    break;
+                case '2':
+                    kbtn.Font = new Font(FontSender.FontFamily, 12f, FontStyle);
+                    break;
+                case '0':
+                    kbtn.Font = new Font(FontSender.FontFamily, 10f, FontStyle);
+                    break;
+                default:
+                    break;
+
+            }
+        }
+
+        #endregion Fim das fontes
     }
 }
