@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Drawing;
-using System.Windows.Forms;
 
 namespace AcroniControls
 {
-    public partial class StyleBtn : Button
+    public partial class StyleBtnBunifu : Bunifu.Framework.UI.BunifuImageButton
     {
-        public StyleBtn()
+        public StyleBtnBunifu()
         {
             InitializeComponent();
         }

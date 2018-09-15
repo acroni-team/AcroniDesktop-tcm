@@ -22,7 +22,7 @@ namespace AcroniControls
         /// </summary>
         /// <param name="color"></param>
 
-        public void tyle(Font fontFace, FontStyle fontStyle)
+        public void Fontyle(Font fontFace, FontStyle fontStyle)
         {
             if (this.Font.Style == fontStyle)
                 this.Font = new Font(fontFace, FontStyle.Regular);

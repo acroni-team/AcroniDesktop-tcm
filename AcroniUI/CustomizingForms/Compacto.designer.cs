@@ -1,4 +1,6 @@
-﻿namespace AcroniUI.CustomizingForms
+﻿using AcroniControls;
+
+namespace AcroniUI.CustomizingForms
 {
     partial class Compacto
     {
@@ -39,8 +41,6 @@
             this.lblCorRGB = new System.Windows.Forms.Label();
             this.pnlColorpicker = new System.Windows.Forms.Panel();
             this.pnlCorEscolhida = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.lblNomeCor = new System.Windows.Forms.Label();
             this.Azul_Cinzento = new System.Windows.Forms.Panel();
             this.Ambar = new System.Windows.Forms.Panel();
             this.pnlDivisoria2 = new System.Windows.Forms.Panel();
@@ -66,16 +66,17 @@
             this.pnlDivisoria1 = new System.Windows.Forms.Panel();
             this.lblHexaColor = new System.Windows.Forms.Label();
             this.pnlColor = new System.Windows.Forms.Panel();
+            this.lblNomeCor = new System.Windows.Forms.Label();
             this.picBoxKeyboardBackground = new System.Windows.Forms.PictureBox();
             this.pnlCustomizingMenu = new System.Windows.Forms.Panel();
             this.lblDefinirParaTodasTeclas = new System.Windows.Forms.Label();
-            this.btnSizeSmall = new System.Windows.Forms.Button();
-            this.btnSizeMedium = new System.Windows.Forms.Button();
-            this.btnSizeBig = new System.Windows.Forms.Button();
-            this.btnStyleStrikeout = new System.Windows.Forms.Button();
-            this.btnStyleUnderline = new System.Windows.Forms.Button();
-            this.btnStyleItalic = new System.Windows.Forms.Button();
-            this.btnStyleBold = new System.Windows.Forms.Button();
+            this.btnSizeSmall = new AcroniControls.StyleBtn();
+            this.btnSizeMedium = new AcroniControls.StyleBtn();
+            this.btnSizeBig = new AcroniControls.StyleBtn();
+            this.btnStyleStrikeout = new AcroniControls.StyleBtn();
+            this.btnStyleUnderline = new AcroniControls.StyleBtn();
+            this.btnStyleItalic = new AcroniControls.StyleBtn();
+            this.btnStyleBold = new AcroniControls.StyleBtn();
             this.pnlIcons = new System.Windows.Forms.Panel();
             this.txtFiltrarFontes = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.btnTextAlignRight = new Bunifu.Framework.UI.BunifuImageButton();
@@ -87,7 +88,6 @@
             this.pnlSuperior.SuspendLayout();
             this.pnlHistorico.SuspendLayout();
             this.pnlCorEscolhida.SuspendLayout();
-            this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxKeyboardBackground)).BeginInit();
             this.pnlCustomizingMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignRight)).BeginInit();
@@ -175,7 +175,6 @@
             // pnlCorEscolhida
             // 
             this.pnlCorEscolhida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.pnlCorEscolhida.Controls.Add(this.panel7);
             this.pnlCorEscolhida.Controls.Add(this.Azul_Cinzento);
             this.pnlCorEscolhida.Controls.Add(this.Ambar);
             this.pnlCorEscolhida.Controls.Add(this.pnlDivisoria2);
@@ -205,26 +204,6 @@
             this.pnlCorEscolhida.Name = "pnlCorEscolhida";
             this.pnlCorEscolhida.Size = new System.Drawing.Size(631, 103);
             this.pnlCorEscolhida.TabIndex = 12;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.lblNomeCor);
-            this.panel7.Location = new System.Drawing.Point(98, 55);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(137, 30);
-            this.panel7.TabIndex = 114;
-            // 
-            // lblNomeCor
-            // 
-            this.lblNomeCor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblNomeCor.Font = new System.Drawing.Font("Open Sans", 13F);
-            this.lblNomeCor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.lblNomeCor.Location = new System.Drawing.Point(0, 0);
-            this.lblNomeCor.Name = "lblNomeCor";
-            this.lblNomeCor.Size = new System.Drawing.Size(137, 24);
-            this.lblNomeCor.TabIndex = 5;
-            this.lblNomeCor.Text = "Azul";
-            this.lblNomeCor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Azul_Cinzento
             // 
@@ -455,6 +434,18 @@
             this.pnlColor.TabIndex = 3;
             this.pnlColor.Click += new System.EventHandler(this.pnlColor_Click);
             // 
+            // lblNomeCor
+            // 
+            this.lblNomeCor.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblNomeCor.Font = new System.Drawing.Font("Open Sans", 13F);
+            this.lblNomeCor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.lblNomeCor.Location = new System.Drawing.Point(0, 0);
+            this.lblNomeCor.Name = "lblNomeCor";
+            this.lblNomeCor.Size = new System.Drawing.Size(137, 24);
+            this.lblNomeCor.TabIndex = 5;
+            this.lblNomeCor.Text = "Azul";
+            this.lblNomeCor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // picBoxKeyboardBackground
             // 
             this.picBoxKeyboardBackground.Image = ((System.Drawing.Image)(resources.GetObject("picBoxKeyboardBackground.Image")));
@@ -510,8 +501,8 @@
             this.btnSizeSmall.TabIndex = 6;
             this.btnSizeSmall.Text = "Pequeno";
             this.btnSizeSmall.UseVisualStyleBackColor = false;
+            this.btnSizeSmall.Click += new System.EventHandler(this.BtnChosen);
             this.btnSizeSmall.Click += new System.EventHandler(this.btnSizeSmall_Click);
-            this.btnSizeSmall.Click += new System.EventHandler(this.btnSize_Click);
             // 
             // btnSizeMedium
             // 
@@ -526,8 +517,8 @@
             this.btnSizeMedium.TabIndex = 7;
             this.btnSizeMedium.Text = "Médio";
             this.btnSizeMedium.UseVisualStyleBackColor = false;
+            this.btnSizeMedium.Click += new System.EventHandler(this.BtnChosen);
             this.btnSizeMedium.Click += new System.EventHandler(this.btnSizeMedium_Click);
-            this.btnSizeMedium.Click += new System.EventHandler(this.btnSize_Click);
             // 
             // btnSizeBig
             // 
@@ -542,8 +533,8 @@
             this.btnSizeBig.TabIndex = 8;
             this.btnSizeBig.Text = "Grande";
             this.btnSizeBig.UseVisualStyleBackColor = false;
+            this.btnSizeBig.Click += new System.EventHandler(this.BtnChosen);
             this.btnSizeBig.Click += new System.EventHandler(this.btnSizeBig_Click);
-            this.btnSizeBig.Click += new System.EventHandler(this.btnSize_Click);
             // 
             // btnStyleStrikeout
             // 
@@ -558,8 +549,8 @@
             this.btnStyleStrikeout.TabIndex = 5;
             this.btnStyleStrikeout.Text = "abc";
             this.btnStyleStrikeout.UseVisualStyleBackColor = false;
+            this.btnStyleStrikeout.Click += new System.EventHandler(this.BtnChosen);
             this.btnStyleStrikeout.Click += new System.EventHandler(this.btnStyleStrikeout_Click);
-            this.btnStyleStrikeout.Click += new System.EventHandler(this.btnStyle_Click);
             // 
             // btnStyleUnderline
             // 
@@ -574,8 +565,8 @@
             this.btnStyleUnderline.TabIndex = 5;
             this.btnStyleUnderline.Text = "S";
             this.btnStyleUnderline.UseVisualStyleBackColor = false;
+            this.btnStyleUnderline.Click += new System.EventHandler(this.BtnChosen);
             this.btnStyleUnderline.Click += new System.EventHandler(this.btnStyleUnderline_Click);
-            this.btnStyleUnderline.Click += new System.EventHandler(this.btnStyle_Click);
             // 
             // btnStyleItalic
             // 
@@ -590,8 +581,8 @@
             this.btnStyleItalic.TabIndex = 5;
             this.btnStyleItalic.Text = "I";
             this.btnStyleItalic.UseVisualStyleBackColor = false;
+            this.btnStyleItalic.Click += new System.EventHandler(this.BtnChosen);
             this.btnStyleItalic.Click += new System.EventHandler(this.btnStyleItalic_Click);
-            this.btnStyleItalic.Click += new System.EventHandler(this.btnStyle_Click);
             // 
             // btnStyleBold
             // 
@@ -606,8 +597,9 @@
             this.btnStyleBold.TabIndex = 5;
             this.btnStyleBold.Text = "N";
             this.btnStyleBold.UseVisualStyleBackColor = false;
+            this.btnStyleBold.Click += new System.EventHandler(this.BtnChosen);
             this.btnStyleBold.Click += new System.EventHandler(this.btnStyleBold_Click);
-            this.btnStyleBold.Click += new System.EventHandler(this.btnStyle_Click);
+
             // 
             // pnlIcons
             // 
@@ -748,7 +740,6 @@
             this.pnlHistorico.ResumeLayout(false);
             this.pnlCorEscolhida.ResumeLayout(false);
             this.pnlCorEscolhida.PerformLayout();
-            this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxKeyboardBackground)).EndInit();
             this.pnlCustomizingMenu.ResumeLayout(false);
             this.pnlCustomizingMenu.PerformLayout();
@@ -770,7 +761,6 @@
         private System.Windows.Forms.Label lblKnownColorName;
         private System.Windows.Forms.TextBox txtSelectFont;
         private System.Windows.Forms.Panel pnlCorEscolhida;
-        private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label lblNomeCor;
         private System.Windows.Forms.Panel Azul_Cinzento;
         private System.Windows.Forms.Panel Ambar;
@@ -797,23 +787,23 @@
         private System.Windows.Forms.Panel pnlDivisoria1;
         private System.Windows.Forms.Label lblHexaColor;
         private System.Windows.Forms.Panel pnlColor;
-        private AcroniControls.Kbtn kbtnQ;
-        private AcroniControls.Kbtn kbtnTab;
+        private Kbtn kbtnQ;
+        private Kbtn kbtnTab;
         protected System.Windows.Forms.PictureBox picBoxKeyboardBackground;
         private System.Windows.Forms.Panel pnlCustomizingMenu;
-        private System.Windows.Forms.Button btnStyleStrikeout;
-        private System.Windows.Forms.Button btnStyleUnderline;
-        private System.Windows.Forms.Button btnStyleItalic;
-        private System.Windows.Forms.Button btnStyleBold;
+        private StyleBtn btnStyleStrikeout;
+        private StyleBtn btnStyleUnderline;
+        private StyleBtn btnStyleItalic;
+        private StyleBtn btnStyleBold;
         private System.Windows.Forms.Panel pnlIcons;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtFiltrarFontes;
         private Bunifu.Framework.UI.BunifuImageButton btnTextAlignRight;
         private Bunifu.Framework.UI.BunifuImageButton btnTextAlignCenter;
         private Bunifu.Framework.UI.BunifuImageButton btnTextAlignLeft;
         private System.Windows.Forms.ComboBox cmbFontes;
-        private System.Windows.Forms.Button btnSizeSmall;
-        private System.Windows.Forms.Button btnSizeMedium;
-        private System.Windows.Forms.Button btnSizeBig;
+        private StyleBtn btnSizeSmall;
+        private StyleBtn btnSizeMedium;
+        private StyleBtn btnSizeBig;
         private System.Windows.Forms.Label lblDefinirParaTodasTeclas;
     }
 }

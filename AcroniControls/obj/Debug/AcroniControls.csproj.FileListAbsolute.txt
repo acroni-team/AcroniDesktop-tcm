@@ -14,3 +14,5 @@ E:\Desktop\c\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.csproj.Genera
 E:\Desktop\c\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.csproj.CoreCompileInputs.cache
 E:\Desktop\c\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.dll
 E:\Desktop\c\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.pdb
+E:\Desktop\c\AcroniDesktop\AcroniControls\bin\Debug\Bunifu_UI_v1.52.dll
+E:\Desktop\c\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.csproj.CopyComplete

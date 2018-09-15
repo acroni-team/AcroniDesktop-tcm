@@ -14,13 +14,12 @@ namespace AcroniUI.CustomizingForms
     {
         // Essas duas propriedades são usadas quando o usuário quiser definir estilo para TODAS as Keycaps.
         private float FontSize { get; set; } = 12f;
-        public FontStyle FontStyle { get; set; } = FontStyle.Regular;
+        private FontStyle FontStyle { get; set; } = FontStyle.Regular;
         private ContentAlignment ContentAlignment { get; set; } = ContentAlignment.TopLeft;
 
         // Já essas são-se usadas quando o usuário quer definir apenas para uma Keycap ou um grupo delas. 
         private char FontStyleSender;
         private Font FontSender;
-        private bool IsKeycapChosen;
         private Kbtn kbtn;
 
         public Compacto()
@@ -128,11 +127,6 @@ namespace AcroniUI.CustomizingForms
         }
 
         #region clicks dos botões de estilização da fonte
-        private void btnStyle_Click(object sender, EventArgs e)
-        {
-            if (IsKeycapChosen)
-                kbtn.Font = new Font(FontSender, FontStyle);
-        }
 
         private void btnStyleBold_Click(object sender, EventArgs e)
         {
@@ -156,11 +150,6 @@ namespace AcroniUI.CustomizingForms
         #endregion
 
         #region clicks dos botões de tamanho da fonte
-        private void btnSize_Click(object sender, EventArgs e)
-        {
-            if (IsKeycapChosen)
-                kbtn.Font = new Font(FontSender.FontFamily, FontSize, FontStyle);
-        }
 
         private void btnSizeBig_Click(object sender, EventArgs e)
         {
@@ -241,9 +230,8 @@ namespace AcroniUI.CustomizingForms
 
         private void kbtn_Click(object sender, EventArgs e)
         {
-            IsKeycapChosen = true;
             kbtn = (Kbtn)sender;
-            kbtn.tyle(FontSender, FontStyle);
+            kbtn.Fontyle(FontSender, FontStyle);
             switch (FontStyleSender)
             {
                 case 'r':
@@ -271,5 +259,25 @@ namespace AcroniUI.CustomizingForms
         }
 
         #endregion Fim das fontes
+
+        #region active dos botões
+        private bool isntBtnChosen = true;
+        public void BtnChosen(object sender, EventArgs e)
+        {
+            StyleBtn styleBtn = (StyleBtn)sender;
+            if (isntBtnChosen)
+            {
+                styleBtn.BackColor = Color.FromArgb(100, 100, 100);
+                isntBtnChosen = false;
+            }
+
+            else
+            {
+                styleBtn.BackColor = Color.FromArgb(40, 40, 40);
+                isntBtnChosen = true;
+            }
+
+        }
+        #endregion
     }
 }

@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\AcroniUI\bin\Debug\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -60,6 +63,12 @@
     </Compile>
     <Compile Include="StyleBtn.Designer.cs">
       <DependentUpon>StyleBtn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StyleBtnBunifu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StyleBtnBunifu.Designer.cs">
+      <DependentUpon>StyleBtnBunifu.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
