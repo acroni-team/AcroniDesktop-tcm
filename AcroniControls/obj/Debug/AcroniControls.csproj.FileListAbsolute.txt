@@ -17,3 +17,11 @@ E:\Desktop\c\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.pdb
 E:\Desktop\c\AcroniDesktop\AcroniControls\bin\Debug\Bunifu_UI_v1.52.dll
 E:\Desktop\c\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.csproj.CopyComplete
 E:\Desktop\c\AcroniDesktop\AcroniControls\bin\Debug\DotNetKit.Wpf.AutoCompleteComboBox.dll
+C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniControls\bin\Debug\AcroniControls.dll
+C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniControls\bin\Debug\AcroniControls.pdb
+C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniControls\bin\Debug\Bunifu_UI_v1.52.dll
+C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.csprojResolveAssemblyReference.cache
+C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.AcroniMessageBox.resources
+C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.csproj.GenerateResource.Cache
+C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.dll
+C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.pdb

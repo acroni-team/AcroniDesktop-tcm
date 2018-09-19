@@ -2,7 +2,7 @@
 
 namespace AcroniUI
 {
-    public partial class SelectKeyboard : MenuLayoutMaster
+    public partial class SelectKeyboard : Master
     {
         public SelectKeyboard()
         {

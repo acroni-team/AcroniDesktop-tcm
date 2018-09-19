@@ -60,10 +60,15 @@
     <Compile Include="CustomizingMethods\Colorpicker\SetColorpickerVisibility.cs" />
     <Compile Include="CustomizingMethods\Colorpicker\SetHistColors.cs" />
     <Compile Include="CustomizingMethods\TextFonts\Alignment.cs" />
+    <Compile Include="FileInfo\Colecao.cs" />
     <Compile Include="FileInfo\CompactKeyboardInfo.cs" />
+    <Compile Include="FileInfo\CompartilhaObjetosUser.cs" />
     <Compile Include="FileInfo\FullsizeKeyboardInfo.cs" />
     <Compile Include="FileInfo\KeyboardIDGenerator.cs" />
+    <Compile Include="FileInfo\Keycaps.cs" />
+    <Compile Include="FileInfo\Teclado.cs" />
     <Compile Include="FileInfo\TenkeylessKeyboardInfo.cs" />
+    <Compile Include="FileInfo\User.cs" />
     <Compile Include="GetNistTime.cs" />
     <Compile Include="CustomizingMethods\TextFonts\LoadFontTypes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

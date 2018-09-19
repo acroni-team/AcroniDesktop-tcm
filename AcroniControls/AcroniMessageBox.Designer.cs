@@ -114,9 +114,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnOpcao1;
-        private System.Windows.Forms.Button btnOpcao2;
-        private System.Windows.Forms.Panel apnlMensagem;
-        private System.Windows.Forms.Label alblMensagem;
+        protected System.Windows.Forms.Button btnOpcao1;
+        protected System.Windows.Forms.Button btnOpcao2;
+        protected System.Windows.Forms.Panel apnlMensagem;
+        protected System.Windows.Forms.Label alblMensagem;
     }
 }

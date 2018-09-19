@@ -4,6 +4,8 @@ using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
 using AcroniLibrary;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace AcroniUI.LoginAndSignUp
 {
@@ -86,7 +88,17 @@ namespace AcroniUI.LoginAndSignUp
                             //Para pegar os valores, trate a resposta como uma Array
                             if (resposta[0].ToString().Equals(txtSenha.Text))
                             {
+                                
                                 Conexao.nome_usuario = txtEntrar.Text;
+                                // Checa se existe o arquivo, e se não existe, cria - o
+                                if (!File.Exists(Application.StartupPath + "\\" + Conexao.nome_usuario+".acr"))
+                                {
+                                    using (FileStream savearchive = new FileStream(Application.StartupPath + @"\" + Conexao.nome_usuario + ".acr", FileMode.Create))
+                                    {
+                                        BinaryFormatter Serializer = new BinaryFormatter();
+                                        Serializer.Serialize(savearchive, CompartilhaObjetosUser.user);
+                                    }
+                                }
                                 selecionarTeclado = new SelectKeyboard();
                                 selecionarTeclado.Show();
                                 this.Hide();
