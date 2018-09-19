@@ -424,6 +424,7 @@ namespace AcroniUI.CustomizingForms
         {
             Galeria a = new Galeria(false);
             a.Show();
+            Compartilha.editKeyboard = false;
             this.Close();
         }
     }
