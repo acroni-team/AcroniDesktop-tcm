@@ -83,7 +83,18 @@
     <Compile Include="Kbtn.Designer.cs">
       <DependentUpon>Kbtn.cs</DependentUpon>
     </Compile>
+    <Compile Include="MessageBoxSemInternet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageBoxSemInternet.Designer.cs">
+      <DependentUpon>MessageBoxSemInternet.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="SelectColor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +119,13 @@
   <ItemGroup>
     <EmbeddedResource Include="AcroniMessageBox.resx">
       <DependentUpon>AcroniMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageBoxSemInternet.resx">
+      <DependentUpon>MessageBoxSemInternet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -16,7 +16,7 @@ namespace AcroniUI
 {
     public partial class Galeria : Master
     {
-
+        bool isSelectColorOpen = false;
         int contHeighColecao = 0;
         int contWidthTeclado = 0;
         bool modeSelect;
@@ -256,6 +256,7 @@ namespace AcroniUI
                                     {
                                         editarTeclado = new Fullsize();
                                     }
+                                    Compartilha.colecao = tecladoGaleria.collectionNome;
                                     editarTeclado.Show();
                                     this.Close();
                                     break;
@@ -269,29 +270,34 @@ namespace AcroniUI
         public async void Editar(object sender, EventArgs e)
         {
             SelectColor selectColor = new SelectColor();
-            selectColor.Show();
-            while (selectColor.Visible)
+            if (!isSelectColorOpen)
             {
-                await Task.Delay(100);
-                if (Compartilha.colorSelected != Color.Empty)
-                    ((sender as PictureBox).Parent as Panel).BackColor = Compartilha.colorSelected;
-            }
-            foreach (Control c in ((sender as PictureBox).Parent as Panel).Controls)
-            {
-                if (c.Name.Equals("lblColecao1"))
+                selectColor.Show();
+                isSelectColorOpen = true;
+                while (selectColor.Visible)
                 {
-                    foreach (AcroniLibrary.FileInfo.Colecao collection in CompartilhaObjetosUser.user.userCollections)
+                    await Task.Delay(100);
+                    if (Compartilha.colorSelected != Color.Empty)
+                        ((sender as PictureBox).Parent as Panel).BackColor = Compartilha.colorSelected;
+                }
+                foreach (Control c in ((sender as PictureBox).Parent as Panel).Controls)
+                {
+                    if (c.Name.Equals("lblColecao1"))
                     {
-                        if (collection.collectionNome.Equals(c.Text))
+                        foreach (AcroniLibrary.FileInfo.Colecao collection in CompartilhaObjetosUser.user.userCollections)
                         {
-                            collection.backColor = Compartilha.colorSelected;
-                            break;
+                            if (collection.collectionNome.Equals(c.Text))
+                            {
+                                collection.backColor = Compartilha.colorSelected;
+                                break;
+                            }
                         }
                     }
                 }
+                Compartilha.colorSelected = Color.Empty;
+                isSelectColorOpen = false;
+                passarParaArquivo();
             }
-            Compartilha.colorSelected = Color.Empty;
-            passarParaArquivo();
 
         }
     }

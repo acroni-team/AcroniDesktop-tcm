@@ -324,59 +324,107 @@ namespace AcroniUI.CustomizingForms
 
         private async void btnSalvar_Click(object sender, EventArgs e)
         {
-            AcroniMessageBoxInput nameteclado = new AcroniMessageBoxInput("Insira o nome de seu teclado");
-            nameteclado.Show();
-            while (nameteclado.Visible)
+            if (!Compartilha.editKeyboard)
             {
-                await Task.Delay(100);
-            }
-            saveTeclado();
-            #endregion
-        }
-        private async void saveTeclado()
-        {
-            if (SetNames.teclado != null)
-            {
-                Galeria selectGaleria = new Galeria(true);
-                selectGaleria.Show();
-                while (selectGaleria.Visible)
+                AcroniMessageBoxInput nameteclado = new AcroniMessageBoxInput("Insira o nome de seu teclado");
+                nameteclado.Show();
+                while (nameteclado.Visible)
                 {
                     await Task.Delay(100);
                 }
-                if (SetNames.colecao != null)
+            }
+          saveTeclado();
+
+            #endregion
+        }
+        private async void saveTeclado()
+         {
+            if (!Compartilha.editKeyboard)
+            {
+                if (SetNames.teclado != null)
                 {
-                    keyboard.Name = "FX-4370";
-                    keyboard.NickName = SetNames.teclado;
-                    keyboard.Material = "Madeira";
-                    keyboard.isMechanicalKeyboard = true;
-                    keyboard.hasRestPads = false;
-                    keyboard.BackgroundImage = picBoxKeyboardBackground.Image;
-                    keyboard.BackgroundModeSize = picBoxKeyboardBackground.SizeMode;
-                    keyboard.ID = "ID";
-                    keyboard.tipoTeclado = this.Name;
-                    foreach (Control tecla in this.Controls)
-                        if (tecla is Kbtn)
-                        {
-                            {
-                                keyboard.Keycaps.Add(new Keycaps { ID = tecla.Name, Text = tecla.Text, Font = tecla.Font, Color = tecla.BackColor });
-                            }
-                        }
-                    foreach (AcroniLibrary.FileInfo.Colecao c in CompartilhaObjetosUser.user.userCollections)
+                    Galeria selectGaleria = new Galeria(true);
+                    selectGaleria.Show();
+                    while (selectGaleria.Visible)
                     {
-                        if (c.collectionNome.Equals(SetNames.colecao))
-                        {
-                            c.collection.Add(keyboard);
-                            break;
-                        }
+                        await Task.Delay(100);
                     }
-                    using (FileStream savearchive = new FileStream(Application.StartupPath + @"\" + Conexao.nome_usuario + ".acr", FileMode.OpenOrCreate))
+                    if (SetNames.colecao != null)
                     {
-                        BinaryFormatter Serializer = new BinaryFormatter();
-                        Serializer.Serialize(savearchive, CompartilhaObjetosUser.user);
+                        setPropriedadesTeclado();
                     }
                 }
             }
-            MessageBox.Show("Teclado adicionado com sucesso!");
+            else
+            {
+                    foreach (AcroniLibrary.FileInfo.Colecao c in CompartilhaObjetosUser.user.userCollections)
+                    {
+                        if (Compartilha.colecao.Equals(c.collectionNome))
+                        {
+                            c.collection.Remove(CompartilhaObjetosUser.teclado);
+
+                        }
+                    }
+                setPropriedadesTeclado();
+
+
+            }
+
+
+            MessageBox.Show("Teclado adicionado/salvo com sucesso!");
+        }
+        private void setPropriedadesTeclado()
+        {
+            keyboard.Name = "FX-4370";
+            if(Compartilha.editKeyboard)
+            keyboard.NickName = CompartilhaObjetosUser.teclado.NickName;
+            else
+            keyboard.NickName = SetNames.teclado;
+            keyboard.Material = "Madeira";
+            keyboard.isMechanicalKeyboard = true;
+            keyboard.hasRestPads = false;
+            keyboard.BackgroundImage = picBoxKeyboardBackground.Image;
+            keyboard.BackgroundModeSize = picBoxKeyboardBackground.SizeMode;
+            keyboard.ID = "ID";
+            keyboard.tipoTeclado = this.Name;
+            foreach (Control tecla in this.Controls)
+                if (tecla is Kbtn)
+                {
+                    {
+                        keyboard.Keycaps.Add(new Keycaps { ID = tecla.Name, Text = tecla.Text, Font = tecla.Font, Color = tecla.BackColor });
+                    }
+                }
+            if(!Compartilha.editKeyboard)
+            foreach (AcroniLibrary.FileInfo.Colecao c in CompartilhaObjetosUser.user.userCollections)
+            {
+                if (c.collectionNome.Equals(SetNames.colecao))
+                {
+                    c.collection.Add(keyboard);
+                    break;
+                }
+            }
+            else
+                foreach (AcroniLibrary.FileInfo.Colecao c in CompartilhaObjetosUser.user.userCollections)
+                {
+                    if (c.collectionNome.Equals(Compartilha.colecao))
+                    {
+                        c.collection.Add(keyboard);
+                        break;
+                    }
+                }
+            
+            using (FileStream savearchive = new FileStream(Application.StartupPath + @"\" + Conexao.nome_usuario + ".acr", FileMode.OpenOrCreate))
+            {
+                BinaryFormatter Serializer = new BinaryFormatter();
+                Serializer.Serialize(savearchive, CompartilhaObjetosUser.user);
+            }
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            Galeria a = new Galeria(false);
+            a.Show();
+            this.Close();
         }
     }
 }

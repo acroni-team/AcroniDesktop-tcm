@@ -148,6 +148,7 @@ namespace AcroniUI.CustomizingForms
             this.btnTextAlignLeft = new Bunifu.Framework.UI.BunifuImageButton();
             this.cmbFontes = new System.Windows.Forms.ComboBox();
             this.pnlWithKeycaps = new System.Windows.Forms.Panel();
+            this.btnVoltar = new System.Windows.Forms.Button();
             this.pnlSuperior.SuspendLayout();
             this.pnlHistorico.SuspendLayout();
             this.pnlCorEscolhida.SuspendLayout();
@@ -1214,7 +1215,7 @@ namespace AcroniUI.CustomizingForms
             // 
             this.lblKnownColorName.AutoSize = true;
             this.lblKnownColorName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lblKnownColorName.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblKnownColorName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblKnownColorName.Location = new System.Drawing.Point(141, 216);
             this.lblKnownColorName.Name = "lblKnownColorName";
             this.lblKnownColorName.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
@@ -1227,7 +1228,7 @@ namespace AcroniUI.CustomizingForms
             // 
             this.lblCorRGB.AutoSize = true;
             this.lblCorRGB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lblCorRGB.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblCorRGB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblCorRGB.Location = new System.Drawing.Point(21, 216);
             this.lblCorRGB.Name = "lblCorRGB";
             this.lblCorRGB.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
@@ -1487,11 +1488,11 @@ namespace AcroniUI.CustomizingForms
             // lblHexaColor
             // 
             this.lblHexaColor.AutoSize = true;
-            this.lblHexaColor.Font = new System.Drawing.Font("Open Sans SemiBold", 17F, System.Drawing.FontStyle.Bold);
+            this.lblHexaColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
             this.lblHexaColor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
             this.lblHexaColor.Location = new System.Drawing.Point(109, 25);
             this.lblHexaColor.Name = "lblHexaColor";
-            this.lblHexaColor.Size = new System.Drawing.Size(107, 32);
+            this.lblHexaColor.Size = new System.Drawing.Size(113, 29);
             this.lblHexaColor.TabIndex = 4;
             this.lblHexaColor.Text = "#2196F3";
             // 
@@ -1509,7 +1510,7 @@ namespace AcroniUI.CustomizingForms
             this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.btnSalvar.FlatAppearance.BorderSize = 0;
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.Font = new System.Drawing.Font("Open Sans", 12.25F, System.Drawing.FontStyle.Bold);
+            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
             this.btnSalvar.ForeColor = System.Drawing.Color.White;
             this.btnSalvar.Location = new System.Drawing.Point(23, 69);
             this.btnSalvar.Name = "btnSalvar";
@@ -1522,7 +1523,7 @@ namespace AcroniUI.CustomizingForms
             // lblNomeCor
             // 
             this.lblNomeCor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblNomeCor.Font = new System.Drawing.Font("Open Sans", 13F);
+            this.lblNomeCor.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.lblNomeCor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
             this.lblNomeCor.Location = new System.Drawing.Point(0, 0);
             this.lblNomeCor.Name = "lblNomeCor";
@@ -1544,6 +1545,7 @@ namespace AcroniUI.CustomizingForms
             // pnlCustomizingMenu
             // 
             this.pnlCustomizingMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.pnlCustomizingMenu.Controls.Add(this.btnVoltar);
             this.pnlCustomizingMenu.Controls.Add(this.btnSalvar);
             this.pnlCustomizingMenu.Controls.Add(this.pnlCorEscolhida);
             this.pnlCustomizingMenu.Controls.Add(this.label1);
@@ -1568,11 +1570,11 @@ namespace AcroniUI.CustomizingForms
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Open Sans SemiBold", 17F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(17, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 32);
+            this.label1.Size = new System.Drawing.Size(93, 29);
             this.label1.TabIndex = 10;
             this.label1.Text = "Fontes";
             // 
@@ -1595,7 +1597,7 @@ namespace AcroniUI.CustomizingForms
             this.btnSizeSmall.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnSizeSmall.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnSizeSmall.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSizeSmall.Font = new System.Drawing.Font("Open Sans", 12F);
+            this.btnSizeSmall.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnSizeSmall.ForeColor = System.Drawing.Color.White;
             this.btnSizeSmall.Location = new System.Drawing.Point(598, 79);
             this.btnSizeSmall.Name = "btnSizeSmall";
@@ -1613,7 +1615,7 @@ namespace AcroniUI.CustomizingForms
             this.btnSizeMedium.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnSizeMedium.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnSizeMedium.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSizeMedium.Font = new System.Drawing.Font("Open Sans", 12.25F);
+            this.btnSizeMedium.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.btnSizeMedium.ForeColor = System.Drawing.Color.White;
             this.btnSizeMedium.Location = new System.Drawing.Point(513, 79);
             this.btnSizeMedium.Name = "btnSizeMedium";
@@ -1631,7 +1633,7 @@ namespace AcroniUI.CustomizingForms
             this.btnSizeBig.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnSizeBig.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnSizeBig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSizeBig.Font = new System.Drawing.Font("Open Sans", 12.25F);
+            this.btnSizeBig.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.btnSizeBig.ForeColor = System.Drawing.Color.White;
             this.btnSizeBig.Location = new System.Drawing.Point(417, 79);
             this.btnSizeBig.Name = "btnSizeBig";
@@ -1649,7 +1651,7 @@ namespace AcroniUI.CustomizingForms
             this.btnStyleStrikeout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnStyleStrikeout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnStyleStrikeout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStyleStrikeout.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Strikeout, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStyleStrikeout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Strikeout, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStyleStrikeout.ForeColor = System.Drawing.Color.White;
             this.btnStyleStrikeout.Location = new System.Drawing.Point(543, 39);
             this.btnStyleStrikeout.Name = "btnStyleStrikeout";
@@ -1667,7 +1669,7 @@ namespace AcroniUI.CustomizingForms
             this.btnStyleUnderline.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnStyleUnderline.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnStyleUnderline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStyleUnderline.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Underline);
+            this.btnStyleUnderline.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline);
             this.btnStyleUnderline.ForeColor = System.Drawing.Color.White;
             this.btnStyleUnderline.Location = new System.Drawing.Point(501, 39);
             this.btnStyleUnderline.Name = "btnStyleUnderline";
@@ -1685,7 +1687,7 @@ namespace AcroniUI.CustomizingForms
             this.btnStyleItalic.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnStyleItalic.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnStyleItalic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStyleItalic.Font = new System.Drawing.Font("Open Sans", 12.25F, System.Drawing.FontStyle.Italic);
+            this.btnStyleItalic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Italic);
             this.btnStyleItalic.ForeColor = System.Drawing.Color.White;
             this.btnStyleItalic.Location = new System.Drawing.Point(459, 39);
             this.btnStyleItalic.Name = "btnStyleItalic";
@@ -1703,7 +1705,7 @@ namespace AcroniUI.CustomizingForms
             this.btnStyleBold.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnStyleBold.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnStyleBold.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStyleBold.Font = new System.Drawing.Font("Open Sans", 12.25F, System.Drawing.FontStyle.Bold);
+            this.btnStyleBold.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
             this.btnStyleBold.ForeColor = System.Drawing.Color.White;
             this.btnStyleBold.Location = new System.Drawing.Point(417, 39);
             this.btnStyleBold.Name = "btnStyleBold";
@@ -1772,12 +1774,12 @@ namespace AcroniUI.CustomizingForms
             this.cmbFontes.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbFontes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.cmbFontes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmbFontes.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbFontes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbFontes.ForeColor = System.Drawing.Color.Transparent;
             this.cmbFontes.FormattingEnabled = true;
             this.cmbFontes.Location = new System.Drawing.Point(23, 38);
             this.cmbFontes.Name = "cmbFontes";
-            this.cmbFontes.Size = new System.Drawing.Size(277, 23);
+            this.cmbFontes.Size = new System.Drawing.Size(277, 21);
             this.cmbFontes.TabIndex = 1;
             this.cmbFontes.SelectedIndexChanged += new System.EventHandler(this.cmbFontes_SelectedIndexChanged);
             // 
@@ -1787,6 +1789,28 @@ namespace AcroniUI.CustomizingForms
             this.pnlWithKeycaps.Name = "pnlWithKeycaps";
             this.pnlWithKeycaps.Size = new System.Drawing.Size(898, 367);
             this.pnlWithKeycaps.TabIndex = 81;
+            // 
+            // btnVoltar
+            // 
+            this.btnVoltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnVoltar.FlatAppearance.BorderSize = 0;
+            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
+            this.btnVoltar.ForeColor = System.Drawing.Color.White;
+            this.btnVoltar.Location = new System.Drawing.Point(134, 69);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(99, 67);
+            this.btnVoltar.TabIndex = 14;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
+            // Compacto
+            // 
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(46)))), ((int)(((byte)(47)))));
+            this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.pnlCustomizingMenu);
             this.Controls.Add(this.Cb1s);
             this.Controls.Add(this.Cb2);
             this.Controls.Add(this.Ca14s);
@@ -1849,14 +1873,6 @@ namespace AcroniUI.CustomizingForms
             this.Controls.Add(this.Cb5);
             this.Controls.Add(this.Cb4);
             this.Controls.Add(this.Cb3);
-            // 
-            // Compacto
-            // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(46)))), ((int)(((byte)(47)))));
-            this.ClientSize = new System.Drawing.Size(1280, 720);
-            this.Controls.Add(this.pnlCustomizingMenu);
-
             this.Controls.Add(this.picBoxKeyboardBackground);
             this.Controls.Add(this.pnlWithKeycaps);
             this.ForeColor = System.Drawing.Color.White;
@@ -2061,6 +2077,7 @@ namespace AcroniUI.CustomizingForms
         private System.Windows.Forms.Label lblDefinirParaTodasTeclas;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlWithKeycaps;
+        private System.Windows.Forms.Button btnVoltar;
     }
 }
 
