@@ -32,7 +32,7 @@ namespace AcroniUI.CustomizingForms
         private ContentAlignment ContentAlignment { get; set; } = ContentAlignment.TopLeft;
 
         // Esse membro serve para pegar o ícone selecionado e botá-lo na fila de ícones.
-        private Image icon { get; set;}
+        private Image icon { get; set; }
         private static List<FontFamily> lista_fontFamily = new List<FontFamily>();
 
         Teclado keyboard = new Teclado();
@@ -339,87 +339,132 @@ namespace AcroniUI.CustomizingForms
         //    }
         //}
 
-        private async void btnSalvar_Click(object sender, EventArgs e)
+        //private async void btnSalvar_Click(object sender, EventArgs e)
+        //{
+        //    MessageBoxInput nameteclado = new MessageBoxInput("Insira o nome de seu teclado");
+        //    this.Hide();
+        //    nameteclado.ShowDialog();
+        //    this.Show();
+        //    while (nameteclado.Visible)
+        //    if (!Compartilha.editKeyboard)
+        //  saveTeclado();
+
+        //    #endregion
+        //}
+        //private async void saveTeclado()
+        //{
+        //    if (!Compartilha.editKeyboard)
+        //    {
+        //        if (SetNames.teclado != null)
+        //        {
+        //            Galeria selectGaleria = new Galeria(true);
+        //            selectGaleria.Show();
+        //            while (selectGaleria.Visible)
+        //            {
+        //                await Task.Delay(100);
+        //            }
+        //            if (SetNames.colecao != null)
+        //            {
+        //                setPropriedadesTeclado();
+        //            }
+        //        }
+        //    }
+        //    else
+        //    {
+        //        foreach (AcroniLibrary.FileInfo.Colecao c in CompartilhaObjetosUser.user.userCollections)
+        //        {
+        //            if (Compartilha.colecao.Equals(c.collectionNome))
+        //            {
+        //                c.collection.Remove(CompartilhaObjetosUser.teclado);
+
+        //            }
+        //        }
+        //        setPropriedadesTeclado();
+
+
+        //    }
+
+
+        //    MessageBox.Show("Teclado adicionado/salvo com sucesso!");
+        //}
+        private void setPropriedadesTeclado()
         {
-            MessageBoxInput nameteclado = new MessageBoxInput("Insira o nome de seu teclado");
-            this.Hide();
-            nameteclado.ShowDialog();
-            this.Show();
-            while (nameteclado.Visible)
-            {
-                await Task.Delay(100);
-            }
-            saveTeclado();
-        }
-        private async void saveTeclado()
-        {
-            if (SetNames.teclado != null)
-            {
-                Galeria selectGaleria = new Galeria(true);
-                selectGaleria.Show();
-                while (selectGaleria.Visible)
+            keyboard.Name = "FX-4370";
+            if (Compartilha.editKeyboard)
+                keyboard.NickName = CompartilhaObjetosUser.teclado.NickName;
+            else
+                keyboard.NickName = SetNames.teclado;
+            keyboard.Material = "Madeira";
+            keyboard.isMechanicalKeyboard = true;
+            keyboard.hasRestPads = false;
+            keyboard.BackgroundImage = picBoxKeyboardBackground.Image;
+            keyboard.BackgroundModeSize = picBoxKeyboardBackground.SizeMode;
+            keyboard.ID = "ID";
+            keyboard.tipoTeclado = this.Name;
+            foreach (Control tecla in this.Controls)
+                if (tecla is Kbtn)
                 {
-                    await Task.Delay(100);
-                }
-                if (SetNames.colecao != null)
-                {
-                    keyboard.Name = "FX-4370";
-                    keyboard.NickName = SetNames.teclado;
-                    keyboard.Material = "Madeira";
-                    keyboard.isMechanicalKeyboard = true;
-                    keyboard.hasRestPads = false;
-                    keyboard.BackgroundImage = picBoxKeyboardBackground.Image;
-                    keyboard.BackgroundModeSize = picBoxKeyboardBackground.SizeMode;
-                    keyboard.ID = "ID";
-                    keyboard.tipoTeclado = this.Name;
-                    foreach (Control tecla in this.Controls)
-                        if (tecla is Kbtn)
-                        {
-                            {
-                                keyboard.Keycaps.Add(new Keycaps { ID = tecla.Name, Text = tecla.Text, Font = tecla.Font, Color = tecla.BackColor });
-                            }
-                        }
-                    foreach (AcroniLibrary.FileInfo.Colecao c in CompartilhaObjetosUser.user.userCollections)
                     {
-                        if (c.collectionNome.Equals(SetNames.colecao))
-                        {
-                            c.collection.Add(keyboard);
-                            break;
-                        }
-                    }
-                    using (FileStream savearchive = new FileStream(Application.StartupPath + @"\" + Conexao.nome_usuario + ".acr", FileMode.OpenOrCreate))
-                    {
-                        BinaryFormatter Serializer = new BinaryFormatter();
-                        Serializer.Serialize(savearchive, CompartilhaObjetosUser.user);
+                        keyboard.Keycaps.Add(new Keycaps { ID = tecla.Name, Text = tecla.Text, Font = tecla.Font, Color = tecla.BackColor });
                     }
                 }
-            }
+            if (!Compartilha.editKeyboard)
+                foreach (AcroniLibrary.FileInfo.Colecao c in CompartilhaObjetosUser.user.userCollections)
+                {
+                    if (c.collectionNome.Equals(SetNames.colecao))
+                    {
+                        c.collection.Add(keyboard);
+                        break;
+                    }
+                }
             MessageBox.Show("Teclado adicionado com sucesso!");
             #endregion
         }
 
         private List<PictureBox> iconsBoxes = new List<PictureBox>();
-        
-        private void btnIcons_Click(object sender, EventArgs e)
-        {
-            //foreach (Control c in this.Controls)
-            //    iconsBoxes.Add(iconsBoxes.Where(c.Name.Contains("picBoxIcon")).ToList());
 
-            using (OpenFileDialog dlg = new OpenFileDialog())
-            {
-                dlg.Title = "Carregar ícone";
-                dlg.Filter = "Arquivos de imagem |*.bmp; *.png; *.jpg";
+        //private void btnIcons_Click(object sender, EventArgs e)
+        //{
+        //    foreach (Control c in this.Controls)
+        //        iconsBoxes.Add(iconsBoxes.Where(c.Name.Contains("picBoxIcon")).ToList());
 
-                if (dlg.ShowDialog() == DialogResult.OK)
-                {
-                    IconsQueue.AttPanel(Image.FromFile(dlg.FileName));
-                    foreach (PictureBox pb in iconsBoxes)
-                    {
-                        if (pb == null || pb.Image == null)
-                            pb.Image = IconsQueue.Images.Peek();
-                    }
-                }
-            }
-        }
+        //    using (OpenFileDialog dlg = new OpenFileDialog())
+        //    {
+        //        dlg.Title = "Carregar ícone";
+        //        dlg.Filter = "Arquivos de imagem |*.bmp; *.png; *.jpg";
+
+        //        if (dlg.ShowDialog() == DialogResult.OK)
+        //        {
+        //            IconsQueue.AttPanel(Image.FromFile(dlg.FileName));
+        //            foreach (PictureBox pb in iconsBoxes)
+        //            {
+        //                if (pb == null || pb.Image == null)
+        //                    pb.Image = IconsQueue.Images.Peek();
+        //            }
+        //        }
+        //    }
+        //    foreach (AcroniLibrary.FileInfo.Colecao c in CompartilhaObjetosUser.user.userCollections)
+        //        {
+        //            if (c.collectionNome.Equals(Compartilha.colecao))
+        //            {
+        //                c.collection.Add(keyboard);
+        //                break;
+        //            }
+        //        }
+            
+        //    using (FileStream savearchive = new FileStream(Application.StartupPath + @"\" + Conexao.nome_usuario + ".acr", FileMode.OpenOrCreate))
+        //    {
+        //        BinaryFormatter Serializer = new BinaryFormatter();
+        //        Serializer.Serialize(savearchive, CompartilhaObjetosUser.user);
+        //    }
+        //}
+
+        //private void btnVoltar_Click(object sender, EventArgs e)
+        //{
+        //    Galeria a = new Galeria(false);
+        //    a.Show();
+        //    Compartilha.editKeyboard = false;
+        //    this.Close();
+        //}
     }
 }

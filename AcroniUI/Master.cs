@@ -92,7 +92,9 @@ namespace AcroniUI
             trocar_nome_usuario($"{Conexao.nome_usuario}");
             trocar_imagem_usuario(selecionar_imagem_cliente());
             //trocar_plano_usuario($"{Conexao.plano_usuario}!");
+            #region Verificar conectividade com internet
 
+            #endregion
         }
         #region Obter informações do cliente pelo banco
         public void trocar_nome_usuario(String usuario) => lblNomeUsu.Text = Conexao.nome_usuario;
@@ -177,9 +179,9 @@ namespace AcroniUI
         }
         private void btnAbrirGaleria_Click(object sender, EventArgs e)
         {
-            Galeria galeria = new Galeria(false);
-            galeria.Show();
-            this.Close();
+            //Galeria galeria = new Galeria(false);
+            //galeria.Show();
+            //this.Close();
         }
 
         private void btnSelectKeyboard_Click(object sender, EventArgs e)

@@ -144,10 +144,10 @@
     <Compile Include="SelectKeyboard.designer.cs">
       <DependentUpon>SelectKeyboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="PoupUpForms\Splash.cs">
+    <Compile Include="Images\PoupUpForms\Splash.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PoupUpForms\Splash.designer.cs">
+    <Compile Include="Images\PoupUpForms\Splash.designer.cs">
       <DependentUpon>Splash.cs</DependentUpon>
     </Compile>
     <Compile Include="Template.cs">
@@ -187,7 +187,7 @@
     <EmbeddedResource Include="SelectKeyboard.resx">
       <DependentUpon>SelectKeyboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PoupUpForms\Splash.resx">
+    <EmbeddedResource Include="Images\PoupUpForms\Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Template.resx">

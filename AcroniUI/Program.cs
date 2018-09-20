@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using AcroniUI.CustomizingForms;
 using AcroniUI.LoginAndSignUp;
 using System.Threading;
+using AcroniControls;
 
 namespace AcroniUI
 {
