@@ -15,6 +15,7 @@ namespace AcroniControls
         public Kbtn()
         {
             InitializeComponent();
+            this.Cursor = Cursors.Hand;
         }
 
         /// <summary>
@@ -22,20 +23,12 @@ namespace AcroniControls
         /// </summary>
         /// <param name="color"></param>
 
-        public void Fontyle(Font fontFace, FontStyle fontStyle)
-        {
-            if (this.Font.Style == fontStyle)
-                this.Font = new Font(fontFace, FontStyle.Regular);
-            else
-                this.Font = new Font(fontFace, fontStyle);
-        }
-
-        public void SetColor(Color color)
+        public Color SetColor(Color color)
         {
             if (this.BackColor == color)
-                this.BackColor = Color.Transparent;
+                return Color.FromArgb(26, 26, 26);
             else
-                this.BackColor = color;
+                return color;
         }
     }
 }

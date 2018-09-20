@@ -52,18 +52,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AcroniMessageBox.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AcroniMessageBox.designer.cs">
-      <DependentUpon>AcroniMessageBox.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AcroniMessageBoxInput.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AcroniMessageBoxInput.Designer.cs">
-      <DependentUpon>AcroniMessageBoxInput.cs</DependentUpon>
-    </Compile>
     <Compile Include="Compartilha.cs" />
     <Compile Include="Colecao.cs">
       <SubType>Component</SubType>
@@ -82,6 +70,12 @@
     </Compile>
     <Compile Include="Kbtn.Designer.cs">
       <DependentUpon>Kbtn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBoxInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageBoxInput.Designer.cs">
+      <DependentUpon>MessageBoxInput.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SelectColor.cs">
@@ -106,8 +100,8 @@
     <Compile Include="Teclados_Colecoes.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AcroniMessageBox.resx">
-      <DependentUpon>AcroniMessageBox.cs</DependentUpon>
+    <EmbeddedResource Include="MessageBoxInput.resx">
+      <DependentUpon>MessageBoxInput.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

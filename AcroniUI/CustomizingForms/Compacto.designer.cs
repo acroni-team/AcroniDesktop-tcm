@@ -141,8 +141,12 @@ namespace AcroniUI.CustomizingForms
             this.btnStyleStrikeout = new AcroniControls.StyleBtn();
             this.btnStyleUnderline = new AcroniControls.StyleBtn();
             this.btnStyleItalic = new AcroniControls.StyleBtn();
+            this.btnIcons = new AcroniControls.StyleBtn();
             this.btnStyleBold = new AcroniControls.StyleBtn();
             this.pnlIcons = new System.Windows.Forms.Panel();
+            this.picBoxIcon3 = new System.Windows.Forms.PictureBox();
+            this.picBoxIcon2 = new System.Windows.Forms.PictureBox();
+            this.picBoxIcon1 = new System.Windows.Forms.PictureBox();
             this.btnTextAlignRight = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnTextAlignCenter = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnTextAlignLeft = new Bunifu.Framework.UI.BunifuImageButton();
@@ -153,6 +157,10 @@ namespace AcroniUI.CustomizingForms
             this.pnlCorEscolhida.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxKeyboardBackground)).BeginInit();
             this.pnlCustomizingMenu.SuspendLayout();
+            this.pnlIcons.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxIcon3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxIcon2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxIcon1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignRight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignCenter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignLeft)).BeginInit();
@@ -161,6 +169,7 @@ namespace AcroniUI.CustomizingForms
             // Cb1
             // 
             this.Cb1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cb1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cb1.FlatAppearance.BorderSize = 0;
             this.Cb1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cb1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -176,15 +185,16 @@ namespace AcroniUI.CustomizingForms
             // Cb3
             // 
             this.Cb3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cb3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cb3.FlatAppearance.BorderSize = 0;
             this.Cb3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cb3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cb3.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cb3.ForeColor = System.Drawing.Color.White;
             this.Cb3.Location = new System.Drawing.Point(183, 353);
             this.Cb3.Name = "Cb3";
             this.Cb3.Size = new System.Drawing.Size(38, 40);
             this.Cb3.TabIndex = 17;
-            this.Cb3.Text = "Q";
+            this.Cb3.Text = "W";
             this.Cb3.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cb3.UseVisualStyleBackColor = false;
             this.Cb3.Click += new System.EventHandler(this.kbtn_Click);
@@ -192,15 +202,16 @@ namespace AcroniUI.CustomizingForms
             // Cb4
             // 
             this.Cb4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cb4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cb4.FlatAppearance.BorderSize = 0;
             this.Cb4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cb4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cb4.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cb4.ForeColor = System.Drawing.Color.White;
             this.Cb4.Location = new System.Drawing.Point(237, 353);
             this.Cb4.Name = "Cb4";
             this.Cb4.Size = new System.Drawing.Size(38, 40);
             this.Cb4.TabIndex = 18;
-            this.Cb4.Text = "Q";
+            this.Cb4.Text = "E";
             this.Cb4.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cb4.UseVisualStyleBackColor = false;
             this.Cb4.Click += new System.EventHandler(this.kbtn_Click);
@@ -208,15 +219,16 @@ namespace AcroniUI.CustomizingForms
             // Cb5
             // 
             this.Cb5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cb5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cb5.FlatAppearance.BorderSize = 0;
             this.Cb5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cb5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cb5.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cb5.ForeColor = System.Drawing.Color.White;
             this.Cb5.Location = new System.Drawing.Point(293, 353);
             this.Cb5.Name = "Cb5";
             this.Cb5.Size = new System.Drawing.Size(38, 40);
             this.Cb5.TabIndex = 19;
-            this.Cb5.Text = "Q";
+            this.Cb5.Text = "R";
             this.Cb5.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cb5.UseVisualStyleBackColor = false;
             this.Cb5.Click += new System.EventHandler(this.kbtn_Click);
@@ -224,15 +236,16 @@ namespace AcroniUI.CustomizingForms
             // Cb6
             // 
             this.Cb6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cb6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cb6.FlatAppearance.BorderSize = 0;
             this.Cb6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cb6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cb6.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cb6.ForeColor = System.Drawing.Color.White;
             this.Cb6.Location = new System.Drawing.Point(348, 353);
             this.Cb6.Name = "Cb6";
             this.Cb6.Size = new System.Drawing.Size(38, 40);
             this.Cb6.TabIndex = 20;
-            this.Cb6.Text = "Q";
+            this.Cb6.Text = "T";
             this.Cb6.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cb6.UseVisualStyleBackColor = false;
             this.Cb6.Click += new System.EventHandler(this.kbtn_Click);
@@ -240,15 +253,16 @@ namespace AcroniUI.CustomizingForms
             // Cb7
             // 
             this.Cb7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cb7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cb7.FlatAppearance.BorderSize = 0;
             this.Cb7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cb7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cb7.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cb7.ForeColor = System.Drawing.Color.White;
             this.Cb7.Location = new System.Drawing.Point(404, 353);
             this.Cb7.Name = "Cb7";
             this.Cb7.Size = new System.Drawing.Size(38, 40);
             this.Cb7.TabIndex = 21;
-            this.Cb7.Text = "Q";
+            this.Cb7.Text = "Y";
             this.Cb7.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cb7.UseVisualStyleBackColor = false;
             this.Cb7.Click += new System.EventHandler(this.kbtn_Click);
@@ -256,9 +270,10 @@ namespace AcroniUI.CustomizingForms
             // Cb8
             // 
             this.Cb8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cb8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cb8.FlatAppearance.BorderSize = 0;
             this.Cb8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cb8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cb8.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cb8.ForeColor = System.Drawing.Color.White;
             this.Cb8.Location = new System.Drawing.Point(458, 353);
             this.Cb8.Name = "Cb8";
@@ -272,9 +287,10 @@ namespace AcroniUI.CustomizingForms
             // Cb9
             // 
             this.Cb9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cb9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cb9.FlatAppearance.BorderSize = 0;
             this.Cb9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cb9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cb9.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cb9.ForeColor = System.Drawing.Color.White;
             this.Cb9.Location = new System.Drawing.Point(514, 352);
             this.Cb9.Name = "Cb9";
@@ -288,9 +304,10 @@ namespace AcroniUI.CustomizingForms
             // Cb10
             // 
             this.Cb10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cb10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cb10.FlatAppearance.BorderSize = 0;
             this.Cb10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cb10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cb10.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cb10.ForeColor = System.Drawing.Color.White;
             this.Cb10.Location = new System.Drawing.Point(571, 353);
             this.Cb10.Name = "Cb10";
@@ -304,9 +321,10 @@ namespace AcroniUI.CustomizingForms
             // Cb11
             // 
             this.Cb11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cb11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cb11.FlatAppearance.BorderSize = 0;
             this.Cb11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cb11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cb11.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cb11.ForeColor = System.Drawing.Color.White;
             this.Cb11.Location = new System.Drawing.Point(626, 353);
             this.Cb11.Name = "Cb11";
@@ -320,9 +338,10 @@ namespace AcroniUI.CustomizingForms
             // Cb12
             // 
             this.Cb12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cb12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cb12.FlatAppearance.BorderSize = 0;
             this.Cb12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cb12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cb12.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cb12.ForeColor = System.Drawing.Color.White;
             this.Cb12.Location = new System.Drawing.Point(682, 353);
             this.Cb12.Name = "Cb12";
@@ -336,9 +355,10 @@ namespace AcroniUI.CustomizingForms
             // Cb13
             // 
             this.Cb13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cb13.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cb13.FlatAppearance.BorderSize = 0;
             this.Cb13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cb13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cb13.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cb13.ForeColor = System.Drawing.Color.White;
             this.Cb13.Location = new System.Drawing.Point(737, 353);
             this.Cb13.Name = "Cb13";
@@ -352,9 +372,10 @@ namespace AcroniUI.CustomizingForms
             // Cc2
             // 
             this.Cc2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cc2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cc2.FlatAppearance.BorderSize = 0;
             this.Cc2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cc2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cc2.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cc2.ForeColor = System.Drawing.Color.White;
             this.Cc2.Location = new System.Drawing.Point(139, 412);
             this.Cc2.Name = "Cc2";
@@ -368,9 +389,10 @@ namespace AcroniUI.CustomizingForms
             // Cc3
             // 
             this.Cc3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cc3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cc3.FlatAppearance.BorderSize = 0;
             this.Cc3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cc3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cc3.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cc3.ForeColor = System.Drawing.Color.White;
             this.Cc3.Location = new System.Drawing.Point(195, 412);
             this.Cc3.Name = "Cc3";
@@ -384,9 +406,10 @@ namespace AcroniUI.CustomizingForms
             // Cc4
             // 
             this.Cc4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cc4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cc4.FlatAppearance.BorderSize = 0;
             this.Cc4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cc4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cc4.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cc4.ForeColor = System.Drawing.Color.White;
             this.Cc4.Location = new System.Drawing.Point(250, 412);
             this.Cc4.Name = "Cc4";
@@ -400,9 +423,10 @@ namespace AcroniUI.CustomizingForms
             // Cc5
             // 
             this.Cc5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cc5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cc5.FlatAppearance.BorderSize = 0;
             this.Cc5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cc5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cc5.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cc5.ForeColor = System.Drawing.Color.White;
             this.Cc5.Location = new System.Drawing.Point(306, 412);
             this.Cc5.Name = "Cc5";
@@ -416,9 +440,10 @@ namespace AcroniUI.CustomizingForms
             // Cc6
             // 
             this.Cc6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cc6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cc6.FlatAppearance.BorderSize = 0;
             this.Cc6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cc6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cc6.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cc6.ForeColor = System.Drawing.Color.White;
             this.Cc6.Location = new System.Drawing.Point(361, 412);
             this.Cc6.Name = "Cc6";
@@ -432,9 +457,10 @@ namespace AcroniUI.CustomizingForms
             // Cc7
             // 
             this.Cc7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cc7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cc7.FlatAppearance.BorderSize = 0;
             this.Cc7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cc7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cc7.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cc7.ForeColor = System.Drawing.Color.White;
             this.Cc7.Location = new System.Drawing.Point(417, 412);
             this.Cc7.Name = "Cc7";
@@ -448,9 +474,10 @@ namespace AcroniUI.CustomizingForms
             // Cc8
             // 
             this.Cc8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cc8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cc8.FlatAppearance.BorderSize = 0;
             this.Cc8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cc8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cc8.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cc8.ForeColor = System.Drawing.Color.White;
             this.Cc8.Location = new System.Drawing.Point(472, 412);
             this.Cc8.Name = "Cc8";
@@ -464,9 +491,10 @@ namespace AcroniUI.CustomizingForms
             // Cc9
             // 
             this.Cc9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cc9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cc9.FlatAppearance.BorderSize = 0;
             this.Cc9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cc9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cc9.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cc9.ForeColor = System.Drawing.Color.White;
             this.Cc9.Location = new System.Drawing.Point(528, 412);
             this.Cc9.Name = "Cc9";
@@ -480,9 +508,10 @@ namespace AcroniUI.CustomizingForms
             // Cc10
             // 
             this.Cc10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cc10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cc10.FlatAppearance.BorderSize = 0;
             this.Cc10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cc10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cc10.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cc10.ForeColor = System.Drawing.Color.White;
             this.Cc10.Location = new System.Drawing.Point(583, 412);
             this.Cc10.Name = "Cc10";
@@ -496,9 +525,10 @@ namespace AcroniUI.CustomizingForms
             // Cc11
             // 
             this.Cc11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cc11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cc11.FlatAppearance.BorderSize = 0;
             this.Cc11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cc11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cc11.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cc11.ForeColor = System.Drawing.Color.White;
             this.Cc11.Location = new System.Drawing.Point(639, 412);
             this.Cc11.Name = "Cc11";
@@ -512,9 +542,10 @@ namespace AcroniUI.CustomizingForms
             // Cc12
             // 
             this.Cc12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cc12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cc12.FlatAppearance.BorderSize = 0;
             this.Cc12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cc12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cc12.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cc12.ForeColor = System.Drawing.Color.White;
             this.Cc12.Location = new System.Drawing.Point(694, 412);
             this.Cc12.Name = "Cc12";
@@ -528,9 +559,10 @@ namespace AcroniUI.CustomizingForms
             // Cc13
             // 
             this.Cc13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cc13.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cc13.FlatAppearance.BorderSize = 0;
             this.Cc13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cc13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cc13.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cc13.ForeColor = System.Drawing.Color.White;
             this.Cc13.Location = new System.Drawing.Point(749, 412);
             this.Cc13.Name = "Cc13";
@@ -544,9 +576,10 @@ namespace AcroniUI.CustomizingForms
             // Cd2
             // 
             this.Cd2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cd2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cd2.FlatAppearance.BorderSize = 0;
             this.Cd2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cd2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cd2.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cd2.ForeColor = System.Drawing.Color.White;
             this.Cd2.Location = new System.Drawing.Point(110, 470);
             this.Cd2.Name = "Cd2";
@@ -560,9 +593,10 @@ namespace AcroniUI.CustomizingForms
             // Cd3
             // 
             this.Cd3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cd3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cd3.FlatAppearance.BorderSize = 0;
             this.Cd3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cd3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cd3.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cd3.ForeColor = System.Drawing.Color.White;
             this.Cd3.Location = new System.Drawing.Point(165, 470);
             this.Cd3.Name = "Cd3";
@@ -576,9 +610,10 @@ namespace AcroniUI.CustomizingForms
             // Cd4
             // 
             this.Cd4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cd4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cd4.FlatAppearance.BorderSize = 0;
             this.Cd4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cd4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cd4.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cd4.ForeColor = System.Drawing.Color.White;
             this.Cd4.Location = new System.Drawing.Point(221, 470);
             this.Cd4.Name = "Cd4";
@@ -592,9 +627,10 @@ namespace AcroniUI.CustomizingForms
             // Cd5
             // 
             this.Cd5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cd5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cd5.FlatAppearance.BorderSize = 0;
             this.Cd5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cd5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cd5.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cd5.ForeColor = System.Drawing.Color.White;
             this.Cd5.Location = new System.Drawing.Point(277, 470);
             this.Cd5.Name = "Cd5";
@@ -608,9 +644,10 @@ namespace AcroniUI.CustomizingForms
             // Cd6
             // 
             this.Cd6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cd6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cd6.FlatAppearance.BorderSize = 0;
             this.Cd6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cd6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cd6.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cd6.ForeColor = System.Drawing.Color.White;
             this.Cd6.Location = new System.Drawing.Point(332, 470);
             this.Cd6.Name = "Cd6";
@@ -624,9 +661,10 @@ namespace AcroniUI.CustomizingForms
             // Cd7
             // 
             this.Cd7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cd7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cd7.FlatAppearance.BorderSize = 0;
             this.Cd7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cd7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cd7.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cd7.ForeColor = System.Drawing.Color.White;
             this.Cd7.Location = new System.Drawing.Point(387, 470);
             this.Cd7.Name = "Cd7";
@@ -640,9 +678,10 @@ namespace AcroniUI.CustomizingForms
             // Cd8
             // 
             this.Cd8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cd8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cd8.FlatAppearance.BorderSize = 0;
             this.Cd8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cd8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cd8.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cd8.ForeColor = System.Drawing.Color.White;
             this.Cd8.Location = new System.Drawing.Point(443, 470);
             this.Cd8.Name = "Cd8";
@@ -656,9 +695,10 @@ namespace AcroniUI.CustomizingForms
             // Cd9
             // 
             this.Cd9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cd9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cd9.FlatAppearance.BorderSize = 0;
             this.Cd9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cd9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cd9.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cd9.ForeColor = System.Drawing.Color.White;
             this.Cd9.Location = new System.Drawing.Point(499, 470);
             this.Cd9.Name = "Cd9";
@@ -672,9 +712,10 @@ namespace AcroniUI.CustomizingForms
             // Cd10
             // 
             this.Cd10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cd10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cd10.FlatAppearance.BorderSize = 0;
             this.Cd10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cd10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cd10.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cd10.ForeColor = System.Drawing.Color.White;
             this.Cd10.Location = new System.Drawing.Point(554, 470);
             this.Cd10.Name = "Cd10";
@@ -688,9 +729,10 @@ namespace AcroniUI.CustomizingForms
             // Cd11
             // 
             this.Cd11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cd11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cd11.FlatAppearance.BorderSize = 0;
             this.Cd11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cd11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cd11.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cd11.ForeColor = System.Drawing.Color.White;
             this.Cd11.Location = new System.Drawing.Point(610, 470);
             this.Cd11.Name = "Cd11";
@@ -704,9 +746,10 @@ namespace AcroniUI.CustomizingForms
             // Cd12
             // 
             this.Cd12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cd12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cd12.FlatAppearance.BorderSize = 0;
             this.Cd12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cd12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cd12.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cd12.ForeColor = System.Drawing.Color.White;
             this.Cd12.Location = new System.Drawing.Point(666, 470);
             this.Cd12.Name = "Cd12";
@@ -720,9 +763,10 @@ namespace AcroniUI.CustomizingForms
             // Cd13
             // 
             this.Cd13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cd13.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cd13.FlatAppearance.BorderSize = 0;
             this.Cd13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cd13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cd13.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cd13.ForeColor = System.Drawing.Color.White;
             this.Cd13.Location = new System.Drawing.Point(721, 470);
             this.Cd13.Name = "Cd13";
@@ -736,9 +780,10 @@ namespace AcroniUI.CustomizingForms
             // Cc1
             // 
             this.Cc1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cc1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cc1.FlatAppearance.BorderSize = 0;
             this.Cc1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cc1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cc1.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cc1.ForeColor = System.Drawing.Color.White;
             this.Cc1.Location = new System.Drawing.Point(43, 412);
             this.Cc1.Name = "Cc1";
@@ -752,9 +797,10 @@ namespace AcroniUI.CustomizingForms
             // Cd1s
             // 
             this.Cd1s.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cd1s.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cd1s.FlatAppearance.BorderSize = 0;
             this.Cd1s.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cd1s.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cd1s.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cd1s.ForeColor = System.Drawing.Color.White;
             this.Cd1s.Location = new System.Drawing.Point(42, 470);
             this.Cd1s.Name = "Cd1s";
@@ -768,9 +814,10 @@ namespace AcroniUI.CustomizingForms
             // Ce1
             // 
             this.Ce1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Ce1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Ce1.FlatAppearance.BorderSize = 0;
             this.Ce1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ce1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Ce1.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ce1.ForeColor = System.Drawing.Color.White;
             this.Ce1.Location = new System.Drawing.Point(42, 528);
             this.Ce1.Name = "Ce1";
@@ -784,9 +831,10 @@ namespace AcroniUI.CustomizingForms
             // Ce2s
             // 
             this.Ce2s.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Ce2s.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Ce2s.FlatAppearance.BorderSize = 0;
             this.Ce2s.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ce2s.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Ce2s.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ce2s.ForeColor = System.Drawing.Color.White;
             this.Ce2s.Location = new System.Drawing.Point(123, 528);
             this.Ce2s.Name = "Ce2s";
@@ -800,9 +848,10 @@ namespace AcroniUI.CustomizingForms
             // Ce4
             // 
             this.Ce4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Ce4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Ce4.FlatAppearance.BorderSize = 0;
             this.Ce4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ce4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Ce4.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ce4.ForeColor = System.Drawing.Color.White;
             this.Ce4.Location = new System.Drawing.Point(264, 528);
             this.Ce4.Name = "Ce4";
@@ -816,9 +865,10 @@ namespace AcroniUI.CustomizingForms
             // Ce6
             // 
             this.Ce6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Ce6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Ce6.FlatAppearance.BorderSize = 0;
             this.Ce6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ce6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Ce6.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ce6.ForeColor = System.Drawing.Color.White;
             this.Ce6.Location = new System.Drawing.Point(655, 528);
             this.Ce6.Name = "Ce6";
@@ -832,9 +882,10 @@ namespace AcroniUI.CustomizingForms
             // Ce5
             // 
             this.Ce5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Ce5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Ce5.FlatAppearance.BorderSize = 0;
             this.Ce5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ce5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Ce5.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ce5.ForeColor = System.Drawing.Color.White;
             this.Ce5.Location = new System.Drawing.Point(586, 528);
             this.Ce5.Name = "Ce5";
@@ -848,9 +899,10 @@ namespace AcroniUI.CustomizingForms
             // Ce3
             // 
             this.Ce3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Ce3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Ce3.FlatAppearance.BorderSize = 0;
             this.Ce3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ce3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Ce3.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ce3.ForeColor = System.Drawing.Color.White;
             this.Ce3.Location = new System.Drawing.Point(194, 528);
             this.Ce3.Name = "Ce3";
@@ -864,9 +916,10 @@ namespace AcroniUI.CustomizingForms
             // Ce7
             // 
             this.Ce7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Ce7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Ce7.FlatAppearance.BorderSize = 0;
             this.Ce7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ce7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Ce7.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ce7.ForeColor = System.Drawing.Color.White;
             this.Ce7.Location = new System.Drawing.Point(725, 528);
             this.Ce7.Name = "Ce7";
@@ -880,9 +933,10 @@ namespace AcroniUI.CustomizingForms
             // Ce8
             // 
             this.Ce8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Ce8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Ce8.FlatAppearance.BorderSize = 0;
             this.Ce8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ce8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Ce8.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ce8.ForeColor = System.Drawing.Color.White;
             this.Ce8.Location = new System.Drawing.Point(794, 528);
             this.Ce8.Name = "Ce8";
@@ -896,9 +950,10 @@ namespace AcroniUI.CustomizingForms
             // Cd14
             // 
             this.Cd14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cd14.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cd14.FlatAppearance.BorderSize = 0;
             this.Cd14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cd14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cd14.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cd14.ForeColor = System.Drawing.Color.White;
             this.Cd14.Location = new System.Drawing.Point(777, 470);
             this.Cd14.Name = "Cd14";
@@ -912,9 +967,10 @@ namespace AcroniUI.CustomizingForms
             // Ca1
             // 
             this.Ca1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Ca1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Ca1.FlatAppearance.BorderSize = 0;
             this.Ca1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ca1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Ca1.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca1.ForeColor = System.Drawing.Color.White;
             this.Ca1.Location = new System.Drawing.Point(43, 295);
             this.Ca1.Name = "Ca1";
@@ -928,9 +984,10 @@ namespace AcroniUI.CustomizingForms
             // Ca2
             // 
             this.Ca2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Ca2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Ca2.FlatAppearance.BorderSize = 0;
             this.Ca2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ca2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Ca2.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca2.ForeColor = System.Drawing.Color.White;
             this.Ca2.Location = new System.Drawing.Point(98, 295);
             this.Ca2.Name = "Ca2";
@@ -944,9 +1001,10 @@ namespace AcroniUI.CustomizingForms
             // Ca3
             // 
             this.Ca3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Ca3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Ca3.FlatAppearance.BorderSize = 0;
             this.Ca3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ca3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Ca3.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca3.ForeColor = System.Drawing.Color.White;
             this.Ca3.Location = new System.Drawing.Point(154, 295);
             this.Ca3.Name = "Ca3";
@@ -960,9 +1018,10 @@ namespace AcroniUI.CustomizingForms
             // Ca4
             // 
             this.Ca4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Ca4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Ca4.FlatAppearance.BorderSize = 0;
             this.Ca4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ca4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Ca4.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca4.ForeColor = System.Drawing.Color.White;
             this.Ca4.Location = new System.Drawing.Point(209, 295);
             this.Ca4.Name = "Ca4";
@@ -976,9 +1035,10 @@ namespace AcroniUI.CustomizingForms
             // Ca5
             // 
             this.Ca5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Ca5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Ca5.FlatAppearance.BorderSize = 0;
             this.Ca5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ca5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Ca5.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca5.ForeColor = System.Drawing.Color.White;
             this.Ca5.Location = new System.Drawing.Point(265, 295);
             this.Ca5.Name = "Ca5";
@@ -992,9 +1052,10 @@ namespace AcroniUI.CustomizingForms
             // Ca6
             // 
             this.Ca6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Ca6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Ca6.FlatAppearance.BorderSize = 0;
             this.Ca6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ca6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Ca6.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca6.ForeColor = System.Drawing.Color.White;
             this.Ca6.Location = new System.Drawing.Point(320, 295);
             this.Ca6.Name = "Ca6";
@@ -1008,9 +1069,10 @@ namespace AcroniUI.CustomizingForms
             // Ca7
             // 
             this.Ca7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Ca7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Ca7.FlatAppearance.BorderSize = 0;
             this.Ca7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ca7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Ca7.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca7.ForeColor = System.Drawing.Color.White;
             this.Ca7.Location = new System.Drawing.Point(376, 295);
             this.Ca7.Name = "Ca7";
@@ -1024,9 +1086,10 @@ namespace AcroniUI.CustomizingForms
             // Ca8
             // 
             this.Ca8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Ca8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Ca8.FlatAppearance.BorderSize = 0;
             this.Ca8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ca8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Ca8.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca8.ForeColor = System.Drawing.Color.White;
             this.Ca8.Location = new System.Drawing.Point(432, 295);
             this.Ca8.Name = "Ca8";
@@ -1040,9 +1103,10 @@ namespace AcroniUI.CustomizingForms
             // Ca9
             // 
             this.Ca9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Ca9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Ca9.FlatAppearance.BorderSize = 0;
             this.Ca9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ca9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Ca9.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca9.ForeColor = System.Drawing.Color.White;
             this.Ca9.Location = new System.Drawing.Point(487, 295);
             this.Ca9.Name = "Ca9";
@@ -1056,9 +1120,10 @@ namespace AcroniUI.CustomizingForms
             // Ca10
             // 
             this.Ca10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Ca10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Ca10.FlatAppearance.BorderSize = 0;
             this.Ca10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ca10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Ca10.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca10.ForeColor = System.Drawing.Color.White;
             this.Ca10.Location = new System.Drawing.Point(543, 295);
             this.Ca10.Name = "Ca10";
@@ -1072,9 +1137,10 @@ namespace AcroniUI.CustomizingForms
             // Ca11
             // 
             this.Ca11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Ca11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Ca11.FlatAppearance.BorderSize = 0;
             this.Ca11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ca11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Ca11.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca11.ForeColor = System.Drawing.Color.White;
             this.Ca11.Location = new System.Drawing.Point(599, 295);
             this.Ca11.Name = "Ca11";
@@ -1088,9 +1154,10 @@ namespace AcroniUI.CustomizingForms
             // Ca12
             // 
             this.Ca12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Ca12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Ca12.FlatAppearance.BorderSize = 0;
             this.Ca12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ca12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Ca12.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca12.ForeColor = System.Drawing.Color.White;
             this.Ca12.Location = new System.Drawing.Point(654, 295);
             this.Ca12.Name = "Ca12";
@@ -1104,9 +1171,10 @@ namespace AcroniUI.CustomizingForms
             // Ca13
             // 
             this.Ca13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Ca13.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Ca13.FlatAppearance.BorderSize = 0;
             this.Ca13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ca13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Ca13.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca13.ForeColor = System.Drawing.Color.White;
             this.Ca13.Location = new System.Drawing.Point(709, 295);
             this.Ca13.Name = "Ca13";
@@ -1120,9 +1188,10 @@ namespace AcroniUI.CustomizingForms
             // Ca14s
             // 
             this.Ca14s.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Ca14s.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Ca14s.FlatAppearance.BorderSize = 0;
             this.Ca14s.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ca14s.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Ca14s.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca14s.ForeColor = System.Drawing.Color.White;
             this.Ca14s.Location = new System.Drawing.Point(764, 294);
             this.Ca14s.Name = "Ca14s";
@@ -1136,9 +1205,10 @@ namespace AcroniUI.CustomizingForms
             // Cb2
             // 
             this.Cb2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cb2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cb2.FlatAppearance.BorderSize = 0;
             this.Cb2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cb2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cb2.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cb2.ForeColor = System.Drawing.Color.White;
             this.Cb2.Location = new System.Drawing.Point(126, 353);
             this.Cb2.Name = "Cb2";
@@ -1152,9 +1222,10 @@ namespace AcroniUI.CustomizingForms
             // Cb1s
             // 
             this.Cb1s.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Cb1s.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cb1s.FlatAppearance.BorderSize = 0;
             this.Cb1s.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cb1s.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Cb1s.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cb1s.ForeColor = System.Drawing.Color.White;
             this.Cb1s.Location = new System.Drawing.Point(44, 352);
             this.Cb1s.Name = "Cb1s";
@@ -1270,7 +1341,7 @@ namespace AcroniUI.CustomizingForms
             this.pnlCorEscolhida.Controls.Add(this.pnlDivisoria1);
             this.pnlCorEscolhida.Controls.Add(this.lblHexaColor);
             this.pnlCorEscolhida.Controls.Add(this.pnlColor);
-            this.pnlCorEscolhida.Location = new System.Drawing.Point(725, 92);
+            this.pnlCorEscolhida.Location = new System.Drawing.Point(948, 352);
             this.pnlCorEscolhida.Name = "pnlCorEscolhida";
             this.pnlCorEscolhida.Size = new System.Drawing.Size(631, 103);
             this.pnlCorEscolhida.TabIndex = 12;
@@ -1545,7 +1616,6 @@ namespace AcroniUI.CustomizingForms
             // 
             this.pnlCustomizingMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.pnlCustomizingMenu.Controls.Add(this.btnSalvar);
-            this.pnlCustomizingMenu.Controls.Add(this.pnlCorEscolhida);
             this.pnlCustomizingMenu.Controls.Add(this.label1);
             this.pnlCustomizingMenu.Controls.Add(this.lblDefinirParaTodasTeclas);
             this.pnlCustomizingMenu.Controls.Add(this.btnSizeSmall);
@@ -1554,6 +1624,7 @@ namespace AcroniUI.CustomizingForms
             this.pnlCustomizingMenu.Controls.Add(this.btnStyleStrikeout);
             this.pnlCustomizingMenu.Controls.Add(this.btnStyleUnderline);
             this.pnlCustomizingMenu.Controls.Add(this.btnStyleItalic);
+            this.pnlCustomizingMenu.Controls.Add(this.btnIcons);
             this.pnlCustomizingMenu.Controls.Add(this.btnStyleBold);
             this.pnlCustomizingMenu.Controls.Add(this.pnlIcons);
             this.pnlCustomizingMenu.Controls.Add(this.btnTextAlignRight);
@@ -1580,7 +1651,7 @@ namespace AcroniUI.CustomizingForms
             // 
             this.lblDefinirParaTodasTeclas.AutoSize = true;
             this.lblDefinirParaTodasTeclas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblDefinirParaTodasTeclas.Location = new System.Drawing.Point(459, 16);
+            this.lblDefinirParaTodasTeclas.Location = new System.Drawing.Point(335, 129);
             this.lblDefinirParaTodasTeclas.Name = "lblDefinirParaTodasTeclas";
             this.lblDefinirParaTodasTeclas.Size = new System.Drawing.Size(162, 13);
             this.lblDefinirParaTodasTeclas.TabIndex = 9;
@@ -1597,7 +1668,7 @@ namespace AcroniUI.CustomizingForms
             this.btnSizeSmall.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSizeSmall.Font = new System.Drawing.Font("Open Sans", 12F);
             this.btnSizeSmall.ForeColor = System.Drawing.Color.White;
-            this.btnSizeSmall.Location = new System.Drawing.Point(598, 79);
+            this.btnSizeSmall.Location = new System.Drawing.Point(514, 85);
             this.btnSizeSmall.Name = "btnSizeSmall";
             this.btnSizeSmall.Size = new System.Drawing.Size(95, 34);
             this.btnSizeSmall.TabIndex = 6;
@@ -1615,7 +1686,7 @@ namespace AcroniUI.CustomizingForms
             this.btnSizeMedium.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSizeMedium.Font = new System.Drawing.Font("Open Sans", 12.25F);
             this.btnSizeMedium.ForeColor = System.Drawing.Color.White;
-            this.btnSizeMedium.Location = new System.Drawing.Point(513, 79);
+            this.btnSizeMedium.Location = new System.Drawing.Point(429, 85);
             this.btnSizeMedium.Name = "btnSizeMedium";
             this.btnSizeMedium.Size = new System.Drawing.Size(79, 34);
             this.btnSizeMedium.TabIndex = 7;
@@ -1633,7 +1704,7 @@ namespace AcroniUI.CustomizingForms
             this.btnSizeBig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSizeBig.Font = new System.Drawing.Font("Open Sans", 12.25F);
             this.btnSizeBig.ForeColor = System.Drawing.Color.White;
-            this.btnSizeBig.Location = new System.Drawing.Point(417, 79);
+            this.btnSizeBig.Location = new System.Drawing.Point(333, 85);
             this.btnSizeBig.Name = "btnSizeBig";
             this.btnSizeBig.Size = new System.Drawing.Size(90, 34);
             this.btnSizeBig.TabIndex = 8;
@@ -1651,7 +1722,7 @@ namespace AcroniUI.CustomizingForms
             this.btnStyleStrikeout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStyleStrikeout.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Strikeout, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStyleStrikeout.ForeColor = System.Drawing.Color.White;
-            this.btnStyleStrikeout.Location = new System.Drawing.Point(543, 39);
+            this.btnStyleStrikeout.Location = new System.Drawing.Point(459, 45);
             this.btnStyleStrikeout.Name = "btnStyleStrikeout";
             this.btnStyleStrikeout.Size = new System.Drawing.Size(49, 34);
             this.btnStyleStrikeout.TabIndex = 5;
@@ -1669,7 +1740,7 @@ namespace AcroniUI.CustomizingForms
             this.btnStyleUnderline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStyleUnderline.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Underline);
             this.btnStyleUnderline.ForeColor = System.Drawing.Color.White;
-            this.btnStyleUnderline.Location = new System.Drawing.Point(501, 39);
+            this.btnStyleUnderline.Location = new System.Drawing.Point(417, 45);
             this.btnStyleUnderline.Name = "btnStyleUnderline";
             this.btnStyleUnderline.Size = new System.Drawing.Size(36, 34);
             this.btnStyleUnderline.TabIndex = 5;
@@ -1687,13 +1758,31 @@ namespace AcroniUI.CustomizingForms
             this.btnStyleItalic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStyleItalic.Font = new System.Drawing.Font("Open Sans", 12.25F, System.Drawing.FontStyle.Italic);
             this.btnStyleItalic.ForeColor = System.Drawing.Color.White;
-            this.btnStyleItalic.Location = new System.Drawing.Point(459, 39);
+            this.btnStyleItalic.Location = new System.Drawing.Point(375, 45);
             this.btnStyleItalic.Name = "btnStyleItalic";
             this.btnStyleItalic.Size = new System.Drawing.Size(36, 34);
             this.btnStyleItalic.TabIndex = 5;
             this.btnStyleItalic.Text = "I";
             this.btnStyleItalic.UseVisualStyleBackColor = false;
             this.btnStyleItalic.Click += new System.EventHandler(this.btnStyleItalic_Click);
+            // 
+            // btnIcons
+            // 
+            this.btnIcons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnIcons.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnIcons.FlatAppearance.BorderSize = 0;
+            this.btnIcons.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnIcons.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnIcons.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIcons.Font = new System.Drawing.Font("Open Sans", 12.25F, System.Drawing.FontStyle.Bold);
+            this.btnIcons.ForeColor = System.Drawing.Color.White;
+            this.btnIcons.Location = new System.Drawing.Point(1049, 16);
+            this.btnIcons.Name = "btnIcons";
+            this.btnIcons.Size = new System.Drawing.Size(82, 125);
+            this.btnIcons.TabIndex = 5;
+            this.btnIcons.Text = "Novo!";
+            this.btnIcons.UseVisualStyleBackColor = false;
+            this.btnIcons.Click += new System.EventHandler(this.btnIcons_Click);
             // 
             // btnStyleBold
             // 
@@ -1705,7 +1794,7 @@ namespace AcroniUI.CustomizingForms
             this.btnStyleBold.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStyleBold.Font = new System.Drawing.Font("Open Sans", 12.25F, System.Drawing.FontStyle.Bold);
             this.btnStyleBold.ForeColor = System.Drawing.Color.White;
-            this.btnStyleBold.Location = new System.Drawing.Point(417, 39);
+            this.btnStyleBold.Location = new System.Drawing.Point(333, 45);
             this.btnStyleBold.Name = "btnStyleBold";
             this.btnStyleBold.Size = new System.Drawing.Size(36, 34);
             this.btnStyleBold.TabIndex = 5;
@@ -1716,10 +1805,37 @@ namespace AcroniUI.CustomizingForms
             // pnlIcons
             // 
             this.pnlIcons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.pnlIcons.Controls.Add(this.picBoxIcon3);
+            this.pnlIcons.Controls.Add(this.picBoxIcon2);
+            this.pnlIcons.Controls.Add(this.picBoxIcon1);
             this.pnlIcons.Location = new System.Drawing.Point(762, 16);
             this.pnlIcons.Name = "pnlIcons";
             this.pnlIcons.Size = new System.Drawing.Size(281, 125);
             this.pnlIcons.TabIndex = 4;
+            // 
+            // picBoxIcon3
+            // 
+            this.picBoxIcon3.Location = new System.Drawing.Point(127, 13);
+            this.picBoxIcon3.Name = "picBoxIcon3";
+            this.picBoxIcon3.Size = new System.Drawing.Size(40, 40);
+            this.picBoxIcon3.TabIndex = 0;
+            this.picBoxIcon3.TabStop = false;
+            // 
+            // picBoxIcon2
+            // 
+            this.picBoxIcon2.Location = new System.Drawing.Point(69, 13);
+            this.picBoxIcon2.Name = "picBoxIcon2";
+            this.picBoxIcon2.Size = new System.Drawing.Size(40, 40);
+            this.picBoxIcon2.TabIndex = 1;
+            this.picBoxIcon2.TabStop = false;
+            // 
+            // picBoxIcon1
+            // 
+            this.picBoxIcon1.Location = new System.Drawing.Point(15, 13);
+            this.picBoxIcon1.Name = "picBoxIcon1";
+            this.picBoxIcon1.Size = new System.Drawing.Size(40, 40);
+            this.picBoxIcon1.TabIndex = 2;
+            this.picBoxIcon1.TabStop = false;
             // 
             // btnTextAlignRight
             // 
@@ -1727,7 +1843,7 @@ namespace AcroniUI.CustomizingForms
             this.btnTextAlignRight.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTextAlignRight.Image = ((System.Drawing.Image)(resources.GetObject("btnTextAlignRight.Image")));
             this.btnTextAlignRight.ImageActive = null;
-            this.btnTextAlignRight.Location = new System.Drawing.Point(717, 39);
+            this.btnTextAlignRight.Location = new System.Drawing.Point(633, 45);
             this.btnTextAlignRight.Name = "btnTextAlignRight";
             this.btnTextAlignRight.Size = new System.Drawing.Size(24, 24);
             this.btnTextAlignRight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1742,7 +1858,7 @@ namespace AcroniUI.CustomizingForms
             this.btnTextAlignCenter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTextAlignCenter.Image = ((System.Drawing.Image)(resources.GetObject("btnTextAlignCenter.Image")));
             this.btnTextAlignCenter.ImageActive = null;
-            this.btnTextAlignCenter.Location = new System.Drawing.Point(673, 39);
+            this.btnTextAlignCenter.Location = new System.Drawing.Point(589, 45);
             this.btnTextAlignCenter.Name = "btnTextAlignCenter";
             this.btnTextAlignCenter.Size = new System.Drawing.Size(24, 24);
             this.btnTextAlignCenter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1757,7 +1873,7 @@ namespace AcroniUI.CustomizingForms
             this.btnTextAlignLeft.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTextAlignLeft.Image = ((System.Drawing.Image)(resources.GetObject("btnTextAlignLeft.Image")));
             this.btnTextAlignLeft.ImageActive = null;
-            this.btnTextAlignLeft.Location = new System.Drawing.Point(629, 39);
+            this.btnTextAlignLeft.Location = new System.Drawing.Point(545, 45);
             this.btnTextAlignLeft.Name = "btnTextAlignLeft";
             this.btnTextAlignLeft.Size = new System.Drawing.Size(24, 24);
             this.btnTextAlignLeft.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1787,6 +1903,14 @@ namespace AcroniUI.CustomizingForms
             this.pnlWithKeycaps.Name = "pnlWithKeycaps";
             this.pnlWithKeycaps.Size = new System.Drawing.Size(898, 367);
             this.pnlWithKeycaps.TabIndex = 81;
+            // 
+            // Compacto
+            // 
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(46)))), ((int)(((byte)(47)))));
+            this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.pnlCorEscolhida);
+            this.Controls.Add(this.pnlCustomizingMenu);
             this.Controls.Add(this.Cb1s);
             this.Controls.Add(this.Cb2);
             this.Controls.Add(this.Ca14s);
@@ -1849,14 +1973,6 @@ namespace AcroniUI.CustomizingForms
             this.Controls.Add(this.Cb5);
             this.Controls.Add(this.Cb4);
             this.Controls.Add(this.Cb3);
-            // 
-            // Compacto
-            // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(46)))), ((int)(((byte)(47)))));
-            this.ClientSize = new System.Drawing.Size(1280, 720);
-            this.Controls.Add(this.pnlCustomizingMenu);
-
             this.Controls.Add(this.picBoxKeyboardBackground);
             this.Controls.Add(this.pnlWithKeycaps);
             this.ForeColor = System.Drawing.Color.White;
@@ -1926,8 +2042,9 @@ namespace AcroniUI.CustomizingForms
             this.Controls.SetChildIndex(this.Ca14s, 0);
             this.Controls.SetChildIndex(this.Cb2, 0);
             this.Controls.SetChildIndex(this.Cb1s, 0);
-            this.Controls.SetChildIndex(this.pnlSuperior, 0);
             this.Controls.SetChildIndex(this.pnlCustomizingMenu, 0);
+            this.Controls.SetChildIndex(this.pnlSuperior, 0);
+            this.Controls.SetChildIndex(this.pnlCorEscolhida, 0);
             this.pnlSuperior.ResumeLayout(false);
             this.pnlSuperior.PerformLayout();
             this.pnlHistorico.ResumeLayout(false);
@@ -1936,6 +2053,10 @@ namespace AcroniUI.CustomizingForms
             ((System.ComponentModel.ISupportInitialize)(this.picBoxKeyboardBackground)).EndInit();
             this.pnlCustomizingMenu.ResumeLayout(false);
             this.pnlCustomizingMenu.PerformLayout();
+            this.pnlIcons.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxIcon3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxIcon2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxIcon1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignRight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignCenter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignLeft)).EndInit();
@@ -2061,6 +2182,10 @@ namespace AcroniUI.CustomizingForms
         private System.Windows.Forms.Label lblDefinirParaTodasTeclas;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlWithKeycaps;
+        private StyleBtn btnIcons;
+        private System.Windows.Forms.PictureBox picBoxIcon3;
+        private System.Windows.Forms.PictureBox picBoxIcon2;
+        private System.Windows.Forms.PictureBox picBoxIcon1;
     }
 }
 

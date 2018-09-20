@@ -33,9 +33,6 @@
     <Reference Include="AcroniUI">
       <HintPath>..\AcroniUI\bin\Debug\AcroniUI.dll</HintPath>
     </Reference>
-    <Reference Include="AcroniXMLControls">
-      <HintPath>..\AcroniXMLControls\bin\Debug\AcroniXMLControls.dll</HintPath>
-    </Reference>
     <Reference Include="Svg, Version=1.5.2.33115, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\Svg.dll</HintPath>
@@ -59,6 +56,7 @@
     <Compile Include="CustomizingMethods\Colorpicker\ColorpickerHandlers.cs" />
     <Compile Include="CustomizingMethods\Colorpicker\SetColorpickerVisibility.cs" />
     <Compile Include="CustomizingMethods\Colorpicker\SetHistColors.cs" />
+    <Compile Include="CustomizingMethods\IconsQueue.cs" />
     <Compile Include="CustomizingMethods\TextFonts\Alignment.cs" />
     <Compile Include="FileInfo\Colecao.cs" />
     <Compile Include="FileInfo\CompactKeyboardInfo.cs" />

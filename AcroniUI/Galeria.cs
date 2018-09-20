@@ -153,7 +153,7 @@ namespace AcroniUI
         private async void btnAdicionarGaleria_Click(object sender, EventArgs e)
         {
 
-            AcroniMessageBoxInput nameteclado = new AcroniMessageBoxInput("Insira o nome de sua coleção");
+            MessageBoxInput nameteclado = new MessageBoxInput("Insira o nome de sua coleção");
             nameteclado.Show();
             while (nameteclado.Visible)
             {

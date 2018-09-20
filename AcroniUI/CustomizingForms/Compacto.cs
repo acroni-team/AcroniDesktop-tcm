@@ -5,27 +5,45 @@ using System.Threading.Tasks;
 using Transitions;
 using AcroniControls;
 using System.Collections.Generic;
-using System.Text.RegularExpressions;
 using AcroniLibrary.CustomizingMethods.TextFonts;
 using AcroniLibrary;
 using AcroniLibrary.FileInfo;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using AcroniLibrary.CustomizingMethods;
+using System.Linq;
 
 namespace AcroniUI.CustomizingForms
 {
     public partial class Compacto : Template
     {
-        AcroniLibrary.FileInfo.Teclado keyboard = new AcroniLibrary.FileInfo.Teclado();
-        // Essas duas propriedades são usadas quando o usuário quiser definir estilo para TODAS as Keycaps.
+
+
+        // Keycap genérica que serve para aplicar propriedades de estilo às keycaps através de um sender.
+        private Kbtn kbtn;
+
+        // Membro que definirá a cor do teclado no método de escolher a cor do colorpicker. 
+        private Color Color { get; set; } = Color.FromArgb(26, 26, 26);
+
+        // Essas propriedades são usadas no kbtn acima:
         private float FontSize { get; set; } = 12f;
+        private Font FontSender { get; set; } = SystemFonts.GetFontByName("Open Sans");
         private FontStyle FontStyle { get; set; } = FontStyle.Regular;
         private ContentAlignment ContentAlignment { get; set; } = ContentAlignment.TopLeft;
 
-        // Já essas são-se usadas quando o usuário quer definir apenas para uma Keycap ou um grupo delas. 
-        private char FontStyleSender;
-        private Font FontSender;
-        private Kbtn kbtn;
+        // Esse membro serve para pegar o ícone selecionado e botá-lo na fila de ícones.
+        private Image icon { get; set;}
+        private static List<FontFamily> lista_fontFamily = new List<FontFamily>();
+
+        Teclado keyboard = new Teclado();
+
+        private void kbtn_Click(object sender, EventArgs e)
+        {
+            kbtn = (Kbtn)sender;
+            kbtn.Font = new Font(FontSender.FontFamily, FontSize, FontStyle);
+            kbtn.TextAlign = ContentAlignment;
+            kbtn.BackColor = kbtn.SetColor(Color);
+        }
 
         public Compacto()
         {
@@ -44,34 +62,11 @@ namespace AcroniUI.CustomizingForms
                 }
             }
             if (Compartilha.editKeyboard)
-            {
                 carregaTeclado();
-            }
         }
-        #region Carrega Teclado
-        private void carregaTeclado()
-        {
-            picBoxKeyboardBackground.Image = CompartilhaObjetosUser.teclado.BackgroundImage;
-            picBoxKeyboardBackground.SizeMode = (PictureBoxSizeMode)CompartilhaObjetosUser.teclado.BackgroundModeSize;
-            foreach (Control tecla in this.Controls)
-            {
-                if (tecla is Kbtn)
-                {
-                    foreach (Keycaps keycap in CompartilhaObjetosUser.teclado.Keycaps)
-                    {
-                        if (tecla.Name.Equals(keycap.ID))
-                        {
-                            tecla.Font = keycap.Font;
-                            tecla.BackColor = keycap.Color;
-                            tecla.Text = keycap.Text;
-                            break;
-                        }
-                    }
-                }
-            }
-        }
-        #endregion
+
         #region Métodos do Color Picker
+
         bool pnlcolorpickerEstaAberto = false;
         bool[] disponibilidade_pnlHistorico = { true, false, false };
 
@@ -126,6 +121,8 @@ namespace AcroniUI.CustomizingForms
             desaparece_colorpicker();
             pnlcolorpickerEstaAberto = false;
 
+            Color = p.BackColor;
+
             if (disponibilidade_pnlHistorico[0])
             {
                 pnlHistorico1.BackColor = p.BackColor;
@@ -149,49 +146,90 @@ namespace AcroniUI.CustomizingForms
 
         #region Fontes das teclas
 
-        static List<FontFamily> lista_fontFamily = new List<FontFamily>();
-
         #region clicks dos botões de estilização da fonte
 
         private void btnStyleBold_Click(object sender, EventArgs e)
         {
-            FontStyle = FontStyle.Bold;
+            if (FontStyle != FontStyle.Bold)
+            {
+                FontStyle = FontStyle.Bold;
+                btnStyleBold.BackColor = Color.FromArgb(90, 90, 90);
+            }
+            else
+            {
+                FontStyle = FontStyle.Regular;
+                btnStyleBold.BackColor = Color.FromArgb(40, 40, 40);
+            }
         }
 
         private void btnStyleItalic_Click(object sender, EventArgs e)
         {
-            FontStyle = FontStyle.Italic;
+            if (FontStyle != FontStyle.Italic)
+            {
+                FontStyle = FontStyle.Italic;
+                btnStyleItalic.BackColor = Color.FromArgb(90, 90, 90);
+            }
+            else
+            {
+                FontStyle = FontStyle.Regular;
+                btnStyleItalic.BackColor = Color.FromArgb(40, 40, 40);
+            }
         }
 
         private void btnStyleUnderline_Click(object sender, EventArgs e)
         {
-            FontStyle = FontStyle.Underline;
+            if (FontStyle != FontStyle.Underline)
+            {
+                FontStyle = FontStyle.Underline;
+                btnStyleUnderline.BackColor = Color.FromArgb(90, 90, 90);
+            }
+            else
+                FontStyle = FontStyle.Regular;
         }
 
         private void btnStyleStrikeout_Click(object sender, EventArgs e)
         {
-            FontStyle = FontStyle.Strikeout;
+            if (FontStyle != FontStyle.Strikeout)
+            {
+                FontStyle = FontStyle.Strikeout;
+                btnStyleStrikeout.BackColor = Color.FromArgb(90, 90, 90);
+            }
+            else
+                FontStyle = FontStyle.Regular;
         }
-        #endregion
-
-        #region clicks dos botões de tamanho da fonte
 
         private void btnSizeBig_Click(object sender, EventArgs e)
         {
-            FontStyleSender = '4';
-            FontSize = 14f;
+            if (FontSize != 14f)
+            {
+                FontSize = 14f;
+                btnSizeBig.BackColor = Color.FromArgb(90, 90, 90);
+            }
+            else
+            {
+                FontSize = 12f;
+            }
         }
 
         private void btnSizeMedium_Click(object sender, EventArgs e)
         {
-            FontStyleSender = '2';
-            FontSize = 12f;
+            if (FontSize != 12f)
+            {
+                FontSize = 12f;
+                btnSizeMedium.BackColor = Color.FromArgb(90, 90, 90);
+            }
+            else
+            {
+                btnSizeMedium.BackColor = Color.FromArgb(90, 90, 90);
+            }
         }
 
         private void btnSizeSmall_Click(object sender, EventArgs e)
         {
-            FontStyleSender = '0';
-            FontSize = 10f;
+            if (FontSize != 10f)
+                FontSize = 10f;
+            else
+                FontSize = 12f;
         }
         #endregion
 
@@ -199,20 +237,23 @@ namespace AcroniUI.CustomizingForms
 
         private void btnTextAlignLeft_Click(object sender, EventArgs e)
         {
-            FontStyleSender = 'l';
             ContentAlignment = ContentAlignment.TopLeft;
         }
 
         private void btnTextAlignCenter_Click(object sender, EventArgs e)
         {
-            FontStyleSender = 'c';
-            ContentAlignment = ContentAlignment.TopCenter;
+            if (ContentAlignment == ContentAlignment.TopCenter)
+                ContentAlignment = ContentAlignment.TopLeft;
+            else
+                ContentAlignment = ContentAlignment.TopCenter;
         }
 
         private void btnTextAlignRight_Click(object sender, EventArgs e)
         {
-            FontStyleSender = 'r';
-            ContentAlignment = ContentAlignment.TopRight;
+            if (ContentAlignment == ContentAlignment.TopRight)
+                ContentAlignment = ContentAlignment.TopLeft;
+            else
+                ContentAlignment = ContentAlignment.TopRight;
         }
         #endregion
 
@@ -235,61 +276,37 @@ namespace AcroniUI.CustomizingForms
                 {
                     (c as Button).Font = new Font(cmbFontes.Text, FontSize, FontStyle);
                     (c as Button).TextAlign = ContentAlignment;
+                    (c as Button).BackColor = Color;
                 }
-            }
-        }
-
-        private void kbtn_Click(object sender, EventArgs e)
-        {
-            kbtn = (Kbtn)sender;
-            kbtn.Fontyle(FontSender, FontStyle);
-            switch (FontStyleSender)
-            {
-                case 'r':
-                    kbtn.TextAlign = ContentAlignment.TopRight;
-                    break;
-                case 'c':
-                    kbtn.TextAlign = ContentAlignment.TopCenter;
-                    break;
-                case 'l':
-                    kbtn.TextAlign = ContentAlignment.TopLeft;
-                    break;
-                case '4':
-                    kbtn.Font = new Font(FontSender.FontFamily, 14f, FontStyle);
-                    break;
-                case '2':
-                    kbtn.Font = new Font(FontSender.FontFamily, 12f, FontStyle);
-                    break;
-                case '0':
-                    kbtn.Font = new Font(FontSender.FontFamily, 10f, FontStyle);
-                    break;
-                default:
-                    break;
-
             }
         }
 
         #endregion Fim das fontes
 
-        #region Active dos botões
-        private bool isntBtnChosen = true;
-        public void BtnChosen(object sender, EventArgs e)
+        #region Carrega Teclado
+        private void carregaTeclado()
         {
-            StyleBtn styleBtn = (StyleBtn)sender;
-            if (isntBtnChosen)
+            picBoxKeyboardBackground.Image = CompartilhaObjetosUser.teclado.BackgroundImage;
+            picBoxKeyboardBackground.SizeMode = (PictureBoxSizeMode)CompartilhaObjetosUser.teclado.BackgroundModeSize;
+            foreach (Control tecla in this.Controls)
             {
-                styleBtn.BackColor = Color.FromArgb(100, 100, 100);
-                isntBtnChosen = false;
+                if (tecla is Kbtn)
+                {
+                    foreach (Keycaps keycap in CompartilhaObjetosUser.teclado.Keycaps)
+                    {
+                        if (tecla.Name.Equals(keycap.ID))
+                        {
+                            tecla.Font = keycap.Font;
+                            tecla.BackColor = keycap.Color;
+                            tecla.Text = keycap.Text;
+                            break;
+                        }
+                    }
+                }
             }
-
-            else
-            {
-                styleBtn.BackColor = Color.FromArgb(40, 40, 40);
-                isntBtnChosen = true;
-            }
-
         }
         #endregion
+
         #region Salvamento e Carregamento teclados
 
         //private void btnLer_Click(object sender, EventArgs e)
@@ -324,14 +341,15 @@ namespace AcroniUI.CustomizingForms
 
         private async void btnSalvar_Click(object sender, EventArgs e)
         {
-            AcroniMessageBoxInput nameteclado = new AcroniMessageBoxInput("Insira o nome de seu teclado");
-            nameteclado.Show();
+            MessageBoxInput nameteclado = new MessageBoxInput("Insira o nome de seu teclado");
+            this.Hide();
+            nameteclado.ShowDialog();
+            this.Show();
             while (nameteclado.Visible)
             {
                 await Task.Delay(100);
             }
             saveTeclado();
-            #endregion
         }
         private async void saveTeclado()
         {
@@ -377,6 +395,31 @@ namespace AcroniUI.CustomizingForms
                 }
             }
             MessageBox.Show("Teclado adicionado com sucesso!");
+            #endregion
+        }
+
+        private List<PictureBox> iconsBoxes = new List<PictureBox>();
+        
+        private void btnIcons_Click(object sender, EventArgs e)
+        {
+            //foreach (Control c in this.Controls)
+            //    iconsBoxes.Add(iconsBoxes.Where(c.Name.Contains("picBoxIcon")).ToList());
+
+            using (OpenFileDialog dlg = new OpenFileDialog())
+            {
+                dlg.Title = "Carregar ícone";
+                dlg.Filter = "Arquivos de imagem |*.bmp; *.png; *.jpg";
+
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    IconsQueue.AttPanel(Image.FromFile(dlg.FileName));
+                    foreach (PictureBox pb in iconsBoxes)
+                    {
+                        if (pb == null || pb.Image == null)
+                            pb.Image = IconsQueue.Images.Peek();
+                    }
+                }
+            }
         }
     }
 }
