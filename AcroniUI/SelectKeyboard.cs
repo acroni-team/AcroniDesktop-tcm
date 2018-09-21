@@ -10,11 +10,11 @@ namespace AcroniUI
         }
 
         #region Inicializar todos os tipos de teclados
-        Compacto compacto = new Compacto();
         #endregion
 
         private void btnAbrirCompacto_Click(object sender, System.EventArgs e)
         {
+            Compacto compacto = new Compacto();
             compacto.Show();
             this.Close();
         }

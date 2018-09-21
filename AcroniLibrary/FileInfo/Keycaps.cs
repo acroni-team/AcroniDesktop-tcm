@@ -15,5 +15,6 @@ namespace AcroniLibrary.FileInfo
         public string Text { get; set; }
         public System.Drawing.Image Icon { get; set; }
         public System.Drawing.Font Font { get; set; }
+        public object ContentAlignment { get; set; }
     }
 }

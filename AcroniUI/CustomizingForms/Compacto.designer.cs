@@ -1,4 +1,5 @@
-﻿using AcroniControls;
+﻿using System;
+using AcroniControls;
 
 namespace AcroniUI.CustomizingForms
 {
@@ -133,6 +134,7 @@ namespace AcroniUI.CustomizingForms
             this.lblNomeCor = new System.Windows.Forms.Label();
             this.picBoxKeyboardBackground = new System.Windows.Forms.PictureBox();
             this.pnlCustomizingMenu = new System.Windows.Forms.Panel();
+            this.btnVoltar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblDefinirParaTodasTeclas = new System.Windows.Forms.Label();
             this.btnSizeSmall = new AcroniControls.StyleBtn();
@@ -152,7 +154,6 @@ namespace AcroniUI.CustomizingForms
             this.btnTextAlignLeft = new Bunifu.Framework.UI.BunifuImageButton();
             this.cmbFontes = new System.Windows.Forms.ComboBox();
             this.pnlWithKeycaps = new System.Windows.Forms.Panel();
-            this.btnVoltar = new System.Windows.Forms.Button();
             this.pnlSuperior.SuspendLayout();
             this.pnlHistorico.SuspendLayout();
             this.pnlCorEscolhida.SuspendLayout();
@@ -1589,6 +1590,7 @@ namespace AcroniUI.CustomizingForms
             this.btnSalvar.TabIndex = 13;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // lblNomeCor
             // 
@@ -1636,6 +1638,21 @@ namespace AcroniUI.CustomizingForms
             this.pnlCustomizingMenu.Name = "pnlCustomizingMenu";
             this.pnlCustomizingMenu.Size = new System.Drawing.Size(1280, 153);
             this.pnlCustomizingMenu.TabIndex = 16;
+            // 
+            // btnVoltar
+            // 
+            this.btnVoltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnVoltar.FlatAppearance.BorderSize = 0;
+            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
+            this.btnVoltar.ForeColor = System.Drawing.Color.White;
+            this.btnVoltar.Location = new System.Drawing.Point(134, 69);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(99, 67);
+            this.btnVoltar.TabIndex = 14;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // label1
             // 
@@ -1905,21 +1922,6 @@ namespace AcroniUI.CustomizingForms
             this.pnlWithKeycaps.Size = new System.Drawing.Size(898, 367);
             this.pnlWithKeycaps.TabIndex = 81;
             // 
-            // btnVoltar
-            // 
-            this.btnVoltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnVoltar.FlatAppearance.BorderSize = 0;
-            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
-            this.btnVoltar.ForeColor = System.Drawing.Color.White;
-            this.btnVoltar.Location = new System.Drawing.Point(134, 69);
-            this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(99, 67);
-            this.btnVoltar.TabIndex = 14;
-            this.btnVoltar.Text = "Voltar";
-            this.btnVoltar.UseVisualStyleBackColor = false;
-            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
-            // 
             // Compacto
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -2078,6 +2080,11 @@ namespace AcroniUI.CustomizingForms
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignLeft)).EndInit();
             this.ResumeLayout(false);
 
+        }
+
+        private void btnIcons_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

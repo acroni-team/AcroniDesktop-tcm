@@ -19,6 +19,7 @@ namespace AcroniControls
             ellipse.ApplyElipse(this, 15);
             btnEntendi.Cursor = Cursors.Hand;
             lblEntendi.Cursor = Cursors.Hand;
+
         }
 
         private void btnEntendi_Click(object sender, EventArgs e)

@@ -21,7 +21,7 @@ namespace AcroniUI.CustomizingForms
 
         // Keycap genérica que serve para aplicar propriedades de estilo às keycaps através de um sender.
         private Kbtn kbtn;
-
+        bool settedKeyboardProperties = false;
         // Membro que definirá a cor do teclado no método de escolher a cor do colorpicker. 
         private Color Color { get; set; } = Color.FromArgb(26, 26, 26);
 
@@ -299,6 +299,7 @@ namespace AcroniUI.CustomizingForms
                             tecla.Font = keycap.Font;
                             tecla.BackColor = keycap.Color;
                             tecla.Text = keycap.Text;
+                            (tecla as Button).TextAlign = (ContentAlignment)keycap.ContentAlignment;
                             break;
                         }
                     }
@@ -339,54 +340,65 @@ namespace AcroniUI.CustomizingForms
         //    }
         //}
 
-        //private async void btnSalvar_Click(object sender, EventArgs e)
-        //{
-        //    MessageBoxInput nameteclado = new MessageBoxInput("Insira o nome de seu teclado");
-        //    this.Hide();
-        //    nameteclado.ShowDialog();
-        //    this.Show();
-        //    while (nameteclado.Visible)
-        //    if (!Compartilha.editKeyboard)
-        //  saveTeclado();
+        private async void btnSalvar_Click(object sender, EventArgs e)
+        {
+            if (!Compartilha.editKeyboard)
+            {
+                AcroniMessageBoxInput nameteclado = new AcroniMessageBoxInput("Insira o nome de seu teclado");
+                nameteclado.Show();
+                while (nameteclado.Visible)
+                {
+                    await Task.Delay(100);
+                }
+            }
+            saveTeclado();
 
-        //    #endregion
-        //}
-        //private async void saveTeclado()
-        //{
-        //    if (!Compartilha.editKeyboard)
-        //    {
-        //        if (SetNames.teclado != null)
-        //        {
-        //            Galeria selectGaleria = new Galeria(true);
-        //            selectGaleria.Show();
-        //            while (selectGaleria.Visible)
-        //            {
-        //                await Task.Delay(100);
-        //            }
-        //            if (SetNames.colecao != null)
-        //            {
-        //                setPropriedadesTeclado();
-        //            }
-        //        }
-        //    }
-        //    else
-        //    {
-        //        foreach (AcroniLibrary.FileInfo.Colecao c in CompartilhaObjetosUser.user.userCollections)
-        //        {
-        //            if (Compartilha.colecao.Equals(c.collectionNome))
-        //            {
-        //                c.collection.Remove(CompartilhaObjetosUser.teclado);
+            #endregion
+        }
+        private async void saveTeclado()
+        {
+            if (!Compartilha.editKeyboard)
+            {
+                if (SetNames.teclado != null)
+                {
+                    Galeria selectGaleria = new Galeria(true);
+                    selectGaleria.Show();
+                    while (selectGaleria.Visible)
+                    {
+                        await Task.Delay(100);
+                    }
+                    if (SetNames.colecao != null)
+                    {
+                        setPropriedadesTeclado();
+                    }
+                }
+            }
+            else
+            {
+                foreach (AcroniLibrary.FileInfo.Colecao c in CompartilhaObjetosUser.user.userCollections)
+                {
+                    if (Compartilha.colecao.Equals(c.collectionNome))
+                    {
+                        c.collection.Remove(CompartilhaObjetosUser.teclado);
 
-        //            }
-        //        }
-        //        setPropriedadesTeclado();
-
-
-        //    }
+                    }
+                }
+                setPropriedadesTeclado();
 
 
-        //    MessageBox.Show("Teclado adicionado/salvo com sucesso!");
-        //}
+            }
+            
+            if (SetNames.colecao != null && SetNames.teclado!=null|| settedKeyboardProperties)
+            {
+                System.Windows.MessageBox.Show("Teclado adicionado/salvo com sucesso!");
+                Compartilha.editKeyboard = true;
+                CompartilhaObjetosUser.teclado = keyboard;
+            }
+            else
+                System.Windows.MessageBox.Show("Teclado não foi salvo! Você ser lix");
+            SetNames.colecao = null;
+            SetNames.teclado = null;
+        }
         private void setPropriedadesTeclado()
         {
             keyboard.Name = "FX-4370";
@@ -405,7 +417,7 @@ namespace AcroniUI.CustomizingForms
                 if (tecla is Kbtn)
                 {
                     {
-                        keyboard.Keycaps.Add(new Keycaps { ID = tecla.Name, Text = tecla.Text, Font = tecla.Font, Color = tecla.BackColor });
+                        keyboard.Keycaps.Add(new Keycaps { ID = tecla.Name, Text = tecla.Text, Font = tecla.Font, Color = tecla.BackColor,ContentAlignment = (tecla as Button).TextAlign});
                     }
                 }
             if (!Compartilha.editKeyboard)
@@ -417,8 +429,22 @@ namespace AcroniUI.CustomizingForms
                         break;
                     }
                 }
-            MessageBox.Show("Teclado adicionado com sucesso!");
-            #endregion
+            else
+                foreach (AcroniLibrary.FileInfo.Colecao c in CompartilhaObjetosUser.user.userCollections)
+                {
+                    if (c.collectionNome.Equals(Compartilha.colecao))
+                    {
+                        c.collection.Add(keyboard);
+                        break;
+                    }
+                }
+
+            using (FileStream savearchive = new FileStream(Application.StartupPath + @"\" + Conexao.nome_usuario + ".acr", FileMode.OpenOrCreate))
+            {
+                BinaryFormatter Serializer = new BinaryFormatter();
+                Serializer.Serialize(savearchive, CompartilhaObjetosUser.user);
+            }
+            settedKeyboardProperties = true;
         }
 
         private List<PictureBox> iconsBoxes = new List<PictureBox>();
@@ -444,14 +470,14 @@ namespace AcroniUI.CustomizingForms
         //        }
         //    }
         //    foreach (AcroniLibrary.FileInfo.Colecao c in CompartilhaObjetosUser.user.userCollections)
+        //    {
+        //        if (c.collectionNome.Equals(Compartilha.colecao))
         //        {
-        //            if (c.collectionNome.Equals(Compartilha.colecao))
-        //            {
-        //                c.collection.Add(keyboard);
-        //                break;
-        //            }
+        //            c.collection.Add(keyboard);
+        //            break;
         //        }
-            
+        //    }
+
         //    using (FileStream savearchive = new FileStream(Application.StartupPath + @"\" + Conexao.nome_usuario + ".acr", FileMode.OpenOrCreate))
         //    {
         //        BinaryFormatter Serializer = new BinaryFormatter();
@@ -459,12 +485,14 @@ namespace AcroniUI.CustomizingForms
         //    }
         //}
 
-        //private void btnVoltar_Click(object sender, EventArgs e)
-        //{
-        //    Galeria a = new Galeria(false);
-        //    a.Show();
-        //    Compartilha.editKeyboard = false;
-        //    this.Close();
-        //}
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            Galeria a = new Galeria(false);
+            a.Show();
+            Compartilha.editKeyboard = false;
+            this.Close();
+        }
+
+        
     }
 }

@@ -179,16 +179,24 @@ namespace AcroniUI
         }
         private void btnAbrirGaleria_Click(object sender, EventArgs e)
         {
-            //Galeria galeria = new Galeria(false);
-            //galeria.Show();
-            //this.Close();
+            Galeria galeria = new Galeria(false);
+            galeria.Show();
+            fechaForms();
+        }
+        private void fechaForms()
+        {
+            for(int i = 0; i < Application.OpenForms.Count; i++)
+            {
+                if(!Application.OpenForms[i].Name.Equals("FrmLogin"))
+                    Application.OpenForms[i].Close();
+            }
         }
 
         private void btnSelectKeyboard_Click(object sender, EventArgs e)
         {
             SelectKeyboard selectKeyboard = new SelectKeyboard();
             selectKeyboard.Show();
-            this.Close();
+            fechaForms();
         }
     }
 }
