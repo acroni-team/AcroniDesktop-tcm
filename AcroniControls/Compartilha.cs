@@ -16,5 +16,7 @@ namespace AcroniControls
         public static int numTeclados = 0;
         public static System.Drawing.Color colorSelected;
         public static bool editKeyboard;
+        public static string nomeUsu;
+        public static Color collectionColor;
     }
 }

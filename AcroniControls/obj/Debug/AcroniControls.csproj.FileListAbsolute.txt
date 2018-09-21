@@ -8,3 +8,4 @@ C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniControls\obj\Debug\AcroniCon
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.csproj.GenerateResource.Cache
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.dll
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.pdb
+C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.csprojResolveAssemblyReference.cache

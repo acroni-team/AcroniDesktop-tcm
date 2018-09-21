@@ -87,6 +87,7 @@ namespace AcroniUI
                         Teclados_Colecoes.teclados.Add(controlTeclado);
                         contWidthTeclado += 83;
                     }
+                    Compartilha.collectionColor = userCollection.backColor;
                     Compartilha.colecao = userCollection.collectionNome;
                     AcroniControls.Colecao collection = new AcroniControls.Colecao();
                     if (modeSelect)
@@ -97,7 +98,6 @@ namespace AcroniUI
                     }
                     collection.Click += new EventHandler(colecao_Click);
                     collection.Location = new Point(16, 8 + contHeighColecao);
-                    collection.BackColor = userCollection.backColor;
                     pnlScroll.Controls.Add(collection);
                     Compartilha.numTeclados = 0;
                     Compartilha.colecao = "";
