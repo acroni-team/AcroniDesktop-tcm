@@ -76,6 +76,24 @@
     <Compile Include="Galeria.Designer.cs">
       <DependentUpon>Galeria.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginAndSignUp\FrmConfirmarEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginAndSignUp\FrmConfirmarEmail.designer.cs">
+      <DependentUpon>FrmConfirmarEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginAndSignUp\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginAndSignUp\FrmLogin.designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginAndSignUp\FrmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginAndSignUp\FrmUsuario.designer.cs">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Master.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,30 +126,6 @@
     <Compile Include="MenuLayoutMaster.Designer.cs">
       <DependentUpon>MenuLayoutMaster.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginAndSignUp\FrmCadastro.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LoginAndSignUp\FrmCadastro.designer.cs">
-      <DependentUpon>FrmCadastro.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LoginAndSignUp\FrmConfirmarEmail.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LoginAndSignUp\FrmConfirmarEmail.designer.cs">
-      <DependentUpon>FrmConfirmarEmail.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LoginAndSignUp\FrmLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LoginAndSignUp\FrmLogin.designer.cs">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LoginAndSignUp\FrmUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LoginAndSignUp\FrmUsuario.Designer.cs">
-      <DependentUpon>FrmUsuario.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\Resources1.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -162,15 +156,6 @@
     <EmbeddedResource Include="CustomizingForms\Tenkeyless.resx">
       <DependentUpon>Tenkeyless.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Master.resx">
-      <DependentUpon>Master.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MenuLayoutMaster.resx">
-      <DependentUpon>MenuLayoutMaster.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LoginAndSignUp\FrmCadastro.resx">
-      <DependentUpon>FrmCadastro.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="LoginAndSignUp\FrmConfirmarEmail.resx">
       <DependentUpon>FrmConfirmarEmail.cs</DependentUpon>
     </EmbeddedResource>
@@ -179,6 +164,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginAndSignUp\FrmUsuario.resx">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master.resx">
+      <DependentUpon>Master.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuLayoutMaster.resx">
+      <DependentUpon>MenuLayoutMaster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

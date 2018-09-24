@@ -35,6 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnEntendi = new System.Windows.Forms.PictureBox();
             this.lblEntendi = new System.Windows.Forms.Label();
+            this.btnOnClick = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEntendi)).BeginInit();
@@ -53,11 +54,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Open Sans SemiBold", 23F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
             this.label1.Location = new System.Drawing.Point(94, 205);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(222, 42);
+            this.label1.Size = new System.Drawing.Size(212, 35);
             this.label1.TabIndex = 1;
             this.label1.Text = "Sem Internet!";
             // 
@@ -73,7 +74,7 @@
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Open Sans SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(81, 317);
             this.label2.Name = "label2";
@@ -98,14 +99,22 @@
             // 
             this.lblEntendi.AutoSize = true;
             this.lblEntendi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(59)))), ((int)(((byte)(60)))));
-            this.lblEntendi.Font = new System.Drawing.Font("Open Sans SemiBold", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEntendi.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEntendi.ForeColor = System.Drawing.SystemColors.Control;
             this.lblEntendi.Location = new System.Drawing.Point(153, 448);
             this.lblEntendi.Name = "lblEntendi";
-            this.lblEntendi.Size = new System.Drawing.Size(95, 30);
+            this.lblEntendi.Size = new System.Drawing.Size(93, 26);
             this.lblEntendi.TabIndex = 2;
             this.lblEntendi.Text = "Entendi";
             this.lblEntendi.Click += new System.EventHandler(this.lblEntendi_Click);
+            // 
+            // btnOnClick
+            // 
+            this.btnOnClick.Location = new System.Drawing.Point(361, 317);
+            this.btnOnClick.Name = "btnOnClick";
+            this.btnOnClick.Size = new System.Drawing.Size(0, 0);
+            this.btnOnClick.TabIndex = 5;
+            this.btnOnClick.UseVisualStyleBackColor = true;
             // 
             // MessageBoxSemInternet
             // 
@@ -113,12 +122,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(54)))), ((int)(((byte)(63)))));
             this.ClientSize = new System.Drawing.Size(413, 527);
+            this.Controls.Add(this.btnOnClick);
             this.Controls.Add(this.lblEntendi);
             this.Controls.Add(this.btnEntendi);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MessageBoxSemInternet";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MessageBoxSemInternet";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -137,5 +148,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox btnEntendi;
         private System.Windows.Forms.Label lblEntendi;
+        private System.Windows.Forms.Button btnOnClick;
     }
 }

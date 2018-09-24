@@ -18,8 +18,8 @@ namespace AcroniUI.LoginAndSignUp
             Application.Run(new Splash());
         }
 
-        private String email_public, senha_public, usuario_public, tipo_public, localizacao_img_public, String_de_confirmacao = "";
-        private Image imagem_cliente_public;
+        private String email_public, senha_public, usuario_public, nome_public,tipo_public, localizacao_img_public, String_de_confirmacao = "",cpf_public;
+        
         public static bool atualizacao_SUCCESS;
 
         #region Construtor em mudança de senha
@@ -39,8 +39,7 @@ namespace AcroniUI.LoginAndSignUp
             gerar_string_confirmacao();
 
             //--Enviando o numero para o email da pessoa
-            object c = null; EventArgs e = null;
-            btnReenviar_Click(c, e);
+            btnReenviar_Click(default(object), default(LinkLabelLinkClickedEventArgs));
             t_splash.Abort();
 
             //--Mudando o nome do label de acordo com a necessidade
@@ -49,9 +48,10 @@ namespace AcroniUI.LoginAndSignUp
         #endregion
 
         #region Construtor em cadastro
-        public FrmConfirmarEmail(String usuario, String senha, String email, String tipo, Image imagem_cliente, String localizacao_img)
+        Thread t_splash;
+        public FrmConfirmarEmail(String nome, String usuario, String senha, String email, String cpf, String tipo)
         {
-            Thread t_splash = new Thread(new ThreadStart(Start_SplashScreen));
+            t_splash = new Thread(new ThreadStart(Start_SplashScreen));
             t_splash.Start();
             InitializeComponent();
             
@@ -60,13 +60,13 @@ namespace AcroniUI.LoginAndSignUp
             senha_public = senha;
             email_public = email;
             tipo_public = tipo;
-            imagem_cliente_public = imagem_cliente;
-            localizacao_img_public = localizacao_img;
+            cpf = cpf_public;
+            nome_public = nome;
 
             gerar_string_confirmacao();
 
             //--Enviando o numero para o email da pessoa
-            object c = null; EventArgs e = null;
+            object c = null; LinkLabelLinkClickedEventArgs e = null;
             btnReenviar_Click(c, e);
             t_splash.Abort();
             //--Mudando o nome do label de acordo com a necessidade
@@ -75,7 +75,7 @@ namespace AcroniUI.LoginAndSignUp
         }
         #endregion
         
-        private void btnReenviar_Click(object sender, EventArgs e)
+        private void btnReenviar_Click(object sender, LinkLabelLinkClickedEventArgs e)
         {
             //--Lembrem-se disso como se fosse Excel -> Se () ? então se VERDADEIRO : se FALSO 
             String titulo = (tipo_public.Equals("cadastro")?"Fazendo o seu cadastro":(tipo_public.Equals("senha")?"Atualização de senha":"--Unknown--"));
@@ -93,12 +93,25 @@ namespace AcroniUI.LoginAndSignUp
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Você nâo está conectado à internet neste momento \nTente novamente mais tarde" + ex);
-                //MessageBox.Show("O email não foi encontrado ou não existe");
-                Application.Exit();
+                t_splash.Abort();
+                (new AcroniControls.MessageBoxSemInternet()).ShowDialog();
+                this.Close();
             }
-
         }
+
+        private void btnEnviar_MouseEnter(object sender, EventArgs e)
+        {
+            pnlSquareLeftBorderBtnEnviar.BackColor = Color.FromArgb(0, 180, 255);
+            btnEnviar.BackColor = Color.FromArgb(0, 180, 255);
+            //MessageBox.Show($"{btnEnviar.BackColor}");
+        }
+
+        private void btnEnviar_MouseLeave(object sender, EventArgs e)
+        {
+            pnlSquareLeftBorderBtnEnviar.BackColor = Color.DodgerBlue;
+            btnEnviar.BackColor = Color.DodgerBlue;
+        }
+
 
         //--Inicializando uma conexão e um COMANDO
         SqlConnection conexao_SQL = new SqlConnection(Conexao.nome_conexao);
@@ -129,20 +142,24 @@ namespace AcroniUI.LoginAndSignUp
         }
 
         private void btnEnviar_Click(object sender, EventArgs e)
-        {
+        {            
             if (txtCodigo.Text.Equals(String_de_confirmacao))
             {
-                MessageBox.Show(tipo_public.Equals("cadastro") ? "Cadastro concluido" : "Atualização concluida");
+                FileStream leitor_imagem = new FileStream($@"{Application.StartupPath}\Images\imagemPadrao.jpg", FileMode.Open, FileAccess.Read);
+                BinaryReader convertedor_binario = new BinaryReader(leitor_imagem);
+                byte[] img = convertedor_binario.ReadBytes((int)leitor_imagem.Length);
+
+                //MessageBox.Show(tipo_public.Equals("cadastro") ? "Cadastro concluido" : "Atualização concluida");
                 atualizacao_SUCCESS = true;
                 this.Hide();
                 if (tipo_public.Equals("cadastro"))
-                    insert();
+                    SQLMethods.INSERT_INTO($"INSERT INTO tblCliente(nome,usuario,senha,email,cpf,imagem) VALUES ('{nome_public}','{usuario_public}','{senha_public}','{email_public}','{cpf_public}',@image)", img);
                 else if (tipo_public.Equals("senha"))
                     update();
             }
             else
             { 
-                MessageBox.Show(tipo_public.Equals("cadastro") ? "Cadastro não concluido" : "Atualização não concluida");
+                //MessageBox.Show(tipo_public.Equals("cadastro") ? "Cadastro não concluido" : "Atualização não concluida");
                 atualizacao_SUCCESS = false;
                 this.Hide();
             }
@@ -159,14 +176,14 @@ namespace AcroniUI.LoginAndSignUp
                 byte[] img = null;
 
                 //--Lendo a imagem e a convertendo em array binário
-                FileStream leitor_imagem = new FileStream(localizacao_img_public, FileMode.Open, FileAccess.Read);
-                BinaryReader convertedor_binario = new BinaryReader(leitor_imagem);
-                img = convertedor_binario.ReadBytes((int)leitor_imagem.Length);
+                //FileStream leitor_imagem = new FileStream(localizacao_img_public, FileMode.Open, FileAccess.Read);
+                //BinaryReader convertedor_binario = new BinaryReader(leitor_imagem);
+                //img = convertedor_binario.ReadBytes((int)leitor_imagem.Length);
 
                 //--Inicializando um comando INSERT e execuntando
-                String insert = "INSERT INTO tblCliente(usuario,senha,email,imagem) VALUES ('" + usuario_public + "','" + senha_public + "','" + email_public + "',@img)";
+                String insert = "INSERT INTO tblCliente(usuario,senha,email) VALUES ('" + usuario_public + "','" + senha_public + "','" + email_public + "')";
                 comando_SQL = new SqlCommand(insert, conexao_SQL);
-                comando_SQL.Parameters.AddWithValue("@img", img);
+                //comando_SQL.Parameters.AddWithValue("@img", img);
 
                 //--Para executar, utilizo ExecuteNonQuery(), pois ele retorna apenas o numero de linhas afetadas
                 int n_linhas_afetadas = comando_SQL.ExecuteNonQuery();
@@ -202,7 +219,6 @@ namespace AcroniUI.LoginAndSignUp
                 //MessageBox.Show(ex.Message);
                 conexao_SQL.Close();
                 return usuario_public;
-
             }
         }
         

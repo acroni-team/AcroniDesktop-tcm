@@ -31,12 +31,15 @@
             this.components = new System.ComponentModel.Container();
             this.form_arred = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.botao_redondo = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.btnEnviar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.btnReenviar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtCodigo = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.btnImaginario = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textbox_redonda = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.pnlSquareLeftBorderBtnEnviar = new System.Windows.Forms.Panel();
+            this.btnEnviar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // form_arred
@@ -49,146 +52,135 @@
             this.botao_redondo.ElipseRadius = 10;
             this.botao_redondo.TargetControl = this.btnEnviar;
             // 
-            // btnEnviar
-            // 
-            this.btnEnviar.Activecolor = System.Drawing.Color.DodgerBlue;
-            this.btnEnviar.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnEnviar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEnviar.BorderRadius = 5;
-            this.btnEnviar.ButtonText = "Enviar";
-            this.btnEnviar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEnviar.DisabledColor = System.Drawing.Color.Gray;
-            this.btnEnviar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.btnEnviar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnEnviar.Iconimage = null;
-            this.btnEnviar.Iconimage_right = null;
-            this.btnEnviar.Iconimage_right_Selected = null;
-            this.btnEnviar.Iconimage_Selected = null;
-            this.btnEnviar.IconMarginLeft = 0;
-            this.btnEnviar.IconMarginRight = 0;
-            this.btnEnviar.IconRightVisible = true;
-            this.btnEnviar.IconRightZoom = 0D;
-            this.btnEnviar.IconVisible = true;
-            this.btnEnviar.IconZoom = 90D;
-            this.btnEnviar.IsTab = false;
-            this.btnEnviar.Location = new System.Drawing.Point(21, 181);
-            this.btnEnviar.Margin = new System.Windows.Forms.Padding(0);
-            this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnEnviar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(255)))));
-            this.btnEnviar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnEnviar.selected = false;
-            this.btnEnviar.Size = new System.Drawing.Size(100, 42);
-            this.btnEnviar.TabIndex = 76;
-            this.btnEnviar.Text = "Enviar";
-            this.btnEnviar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnEnviar.Textcolor = System.Drawing.Color.White;
-            this.btnEnviar.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
-            // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(18, 63);
+            this.label1.Location = new System.Drawing.Point(22, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(232, 33);
+            this.label1.Size = new System.Drawing.Size(480, 33);
             this.label1.TabIndex = 73;
             this.label1.Text = "Um código foi enviado para o email da sua conta. Por favor, escreva o código rece" +
     "bido";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblTitulo
             // 
-            this.lblTitulo.AutoSize = true;
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.Font = new System.Drawing.Font("Century Gothic", 12.25F, System.Drawing.FontStyle.Bold);
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.lblTitulo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblTitulo.Location = new System.Drawing.Point(20, 35);
+            this.lblTitulo.Location = new System.Drawing.Point(24, 23);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(220, 19);
+            this.lblTitulo.Size = new System.Drawing.Size(478, 19);
             this.lblTitulo.TabIndex = 72;
             this.lblTitulo.Text = "Atualizando o seu usuário";
-            // 
-            // btnReenviar
-            // 
-            this.btnReenviar.Activecolor = System.Drawing.Color.DodgerBlue;
-            this.btnReenviar.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnReenviar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnReenviar.BorderRadius = 5;
-            this.btnReenviar.ButtonText = "Reenviar";
-            this.btnReenviar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReenviar.DisabledColor = System.Drawing.Color.Gray;
-            this.btnReenviar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.btnReenviar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnReenviar.Iconimage = null;
-            this.btnReenviar.Iconimage_right = null;
-            this.btnReenviar.Iconimage_right_Selected = null;
-            this.btnReenviar.Iconimage_Selected = null;
-            this.btnReenviar.IconMarginLeft = 0;
-            this.btnReenviar.IconMarginRight = 0;
-            this.btnReenviar.IconRightVisible = true;
-            this.btnReenviar.IconRightZoom = 0D;
-            this.btnReenviar.IconVisible = true;
-            this.btnReenviar.IconZoom = 90D;
-            this.btnReenviar.IsTab = false;
-            this.btnReenviar.Location = new System.Drawing.Point(140, 181);
-            this.btnReenviar.Margin = new System.Windows.Forms.Padding(0);
-            this.btnReenviar.Name = "btnReenviar";
-            this.btnReenviar.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnReenviar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(255)))));
-            this.btnReenviar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnReenviar.selected = false;
-            this.btnReenviar.Size = new System.Drawing.Size(100, 42);
-            this.btnReenviar.TabIndex = 74;
-            this.btnReenviar.Text = "Reenviar";
-            this.btnReenviar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnReenviar.Textcolor = System.Drawing.Color.White;
-            this.btnReenviar.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReenviar.Click += new System.EventHandler(this.btnReenviar_Click);
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtCodigo
             // 
-            this.txtCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
             this.txtCodigo.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCodigo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.txtCodigo.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.txtCodigo.HintText = "Código";
             this.txtCodigo.isPassword = false;
-            this.txtCodigo.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
-            this.txtCodigo.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtCodigo.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(116)))), ((int)(((byte)(219)))));
+            this.txtCodigo.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.txtCodigo.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.txtCodigo.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
             this.txtCodigo.LineThickness = 3;
-            this.txtCodigo.Location = new System.Drawing.Point(21, 116);
+            this.txtCodigo.Location = new System.Drawing.Point(24, 109);
             this.txtCodigo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(219, 44);
+            this.txtCodigo.Size = new System.Drawing.Size(480, 44);
             this.txtCodigo.TabIndex = 75;
             this.txtCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // btnImaginario
             // 
-            this.btnImaginario.Location = new System.Drawing.Point(250, 20);
+            this.btnImaginario.Location = new System.Drawing.Point(254, 20);
             this.btnImaginario.Name = "btnImaginario";
             this.btnImaginario.Size = new System.Drawing.Size(0, 0);
             this.btnImaginario.TabIndex = 77;
             this.btnImaginario.UseVisualStyleBackColor = true;
             this.btnImaginario.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold);
+            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.linkLabel1.Location = new System.Drawing.Point(106, 78);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(112, 15);
+            this.linkLabel1.TabIndex = 78;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Solicite um reenvio!";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.btnReenviar_Click);
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label2.Location = new System.Drawing.Point(24, 77);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(149, 19);
+            this.label2.TabIndex = 79;
+            this.label2.Text = "Não recebeu?";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // textbox_redonda
+            // 
+            this.textbox_redonda.ElipseRadius = 10;
+            this.textbox_redonda.TargetControl = this.txtCodigo;
+            // 
+            // pnlSquareLeftBorderBtnEnviar
+            // 
+            this.pnlSquareLeftBorderBtnEnviar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.pnlSquareLeftBorderBtnEnviar.Location = new System.Drawing.Point(394, 109);
+            this.pnlSquareLeftBorderBtnEnviar.Name = "pnlSquareLeftBorderBtnEnviar";
+            this.pnlSquareLeftBorderBtnEnviar.Size = new System.Drawing.Size(12, 43);
+            this.pnlSquareLeftBorderBtnEnviar.TabIndex = 80;
+            this.pnlSquareLeftBorderBtnEnviar.MouseEnter += new System.EventHandler(this.btnEnviar_MouseEnter);
+            this.pnlSquareLeftBorderBtnEnviar.MouseLeave += new System.EventHandler(this.btnEnviar_MouseLeave);
+            // 
+            // btnEnviar
+            // 
+            this.btnEnviar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEnviar.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnEnviar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEnviar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(255)))));
+            this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnviar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnEnviar.ForeColor = System.Drawing.Color.White;
+            this.btnEnviar.Location = new System.Drawing.Point(398, 109);
+            this.btnEnviar.Name = "btnEnviar";
+            this.btnEnviar.Size = new System.Drawing.Size(106, 44);
+            this.btnEnviar.TabIndex = 81;
+            this.btnEnviar.Text = "Enviar";
+            this.btnEnviar.UseVisualStyleBackColor = false;
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
+            this.btnEnviar.MouseEnter += new System.EventHandler(this.btnEnviar_MouseEnter);
+            this.btnEnviar.MouseLeave += new System.EventHandler(this.btnEnviar_MouseLeave);
+            // 
             // FrmConfirmarEmail
             // 
             this.AcceptButton = this.btnImaginario;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(272, 250);
-            this.Controls.Add(this.btnImaginario);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(61)))));
+            this.ClientSize = new System.Drawing.Size(530, 180);
+            this.Controls.Add(this.pnlSquareLeftBorderBtnEnviar);
             this.Controls.Add(this.btnEnviar);
+            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnImaginario);
             this.Controls.Add(this.txtCodigo);
-            this.Controls.Add(this.btnReenviar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -206,9 +198,12 @@
         private Bunifu.Framework.UI.BunifuElipse botao_redondo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTitulo;
-        protected Bunifu.Framework.UI.BunifuFlatButton btnReenviar;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtCodigo;
-        protected Bunifu.Framework.UI.BunifuFlatButton btnEnviar;
         private System.Windows.Forms.Button btnImaginario;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label label2;
+        private Bunifu.Framework.UI.BunifuElipse textbox_redonda;
+        private System.Windows.Forms.Panel pnlSquareLeftBorderBtnEnviar;
+        private System.Windows.Forms.Button btnEnviar;
     }
 }

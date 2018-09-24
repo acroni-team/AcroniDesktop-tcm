@@ -22,3 +22,29 @@ C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Templa
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.csproj.GenerateResource.Cache
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.exe
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.pdb
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\Tentativa 02\AcroniDesktop\AcroniUI\bin\Debug\AcroniUI.exe
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\Tentativa 02\AcroniDesktop\AcroniUI\bin\Debug\AcroniUI.pdb
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\Tentativa 02\AcroniDesktop\AcroniUI\bin\Debug\AcroniControls.dll
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\Tentativa 02\AcroniDesktop\AcroniUI\bin\Debug\AcroniLibrary.dll
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\Tentativa 02\AcroniDesktop\AcroniUI\bin\Debug\DotNetKit.Wpf.AutoCompleteComboBox.dll
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\Tentativa 02\AcroniDesktop\AcroniUI\bin\Debug\AcroniUI.dll
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\Tentativa 02\AcroniDesktop\AcroniUI\bin\Debug\AcroniControls.pdb
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\Tentativa 02\AcroniDesktop\AcroniUI\bin\Debug\AcroniLibrary.pdb
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\Tentativa 02\AcroniDesktop\AcroniUI\bin\Debug\AcroniUI.exe.config
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\Tentativa 02\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.csprojAssemblyReference.cache
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\Tentativa 02\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.CustomizingForms.Compacto.resources
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\Tentativa 02\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.CustomizingForms.Tenkeyless.resources
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\Tentativa 02\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Master.resources
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\Tentativa 02\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.MenuLayoutMaster.resources
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\Tentativa 02\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.LoginAndSignUp.FrmConfirmarEmail.resources
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\Tentativa 02\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.LoginAndSignUp.FrmLogin.resources
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\Tentativa 02\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.LoginAndSignUp.FrmUsuario.resources
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\Tentativa 02\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Properties.Resources.resources
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\Tentativa 02\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.SelectKeyboard.resources
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\Tentativa 02\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Splash.resources
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\Tentativa 02\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Template.resources
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\Tentativa 02\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.csproj.GenerateResource.cache
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\Tentativa 02\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.csproj.CoreCompileInputs.cache
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\Tentativa 02\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.csproj.CopyComplete
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\Tentativa 02\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.exe
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\Tentativa 02\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.pdb
