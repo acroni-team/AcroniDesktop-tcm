@@ -6,6 +6,8 @@ using System.Data.SqlClient;
 using AcroniLibrary;
 using System.Text.RegularExpressions;
 using System.Drawing.Imaging;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace AcroniUI.LoginAndSignUp
 {
@@ -344,8 +346,18 @@ namespace AcroniUI.LoginAndSignUp
                                     confirm.ShowDialog();
                                     if (FrmConfirmarEmail.atualizacao_SUCCESS)
                                     {
+                                        if (!File.Exists(Application.StartupPath + "\\" + Conexao.nome_usuario + ".acr"))
+                                        {
+                                            using (FileStream savearchive = new FileStream(Application.StartupPath + @"\" + Conexao.nome_usuario + ".acr", FileMode.Create))
+                                            {
+                                                BinaryFormatter Serializer = new BinaryFormatter();
+                                                Serializer.Serialize(savearchive, CompartilhaObjetosUser.user);
+                                            }
+                                        }
                                         (new SelectKeyboard()).Show();
                                         this.Hide();
+                                        Conexao.nome_usuario = txtEntrar.Text;
+                                        // Checa se existe o arquivo, e se não existe, cria - o
                                     } else
                                     {
                                         TimerFade.Start();

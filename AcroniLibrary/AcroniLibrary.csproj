@@ -69,6 +69,7 @@
     <Compile Include="FileInfo\User.cs" />
     <Compile Include="GetNistTime.cs" />
     <Compile Include="CustomizingMethods\TextFonts\LoadFontTypes.cs" />
+    <Compile Include="ImageManipulator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLMethods.cs" />
     <Compile Include="SVGClass\SVGParser.cs" />
