@@ -141,6 +141,8 @@ namespace AcroniUI.LoginAndSignUp
 
         }
 
+
+
         private void btnEnviar_Click(object sender, EventArgs e)
         {            
             if (txtCodigo.Text.Equals(String_de_confirmacao))
@@ -151,7 +153,6 @@ namespace AcroniUI.LoginAndSignUp
 
                 //MessageBox.Show(tipo_public.Equals("cadastro") ? "Cadastro concluido" : "Atualização concluida");
                 atualizacao_SUCCESS = true;
-                this.Hide();
                 if (tipo_public.Equals("cadastro"))
                     SQLMethods.INSERT_INTO($"INSERT INTO tblCliente(nome,usuario,senha,email,cpf,imagem) VALUES ('{nome_public}','{usuario_public}','{senha_public}','{email_public}','{cpf_public}',@image)", img);
                 else if (tipo_public.Equals("senha"))
@@ -161,7 +162,7 @@ namespace AcroniUI.LoginAndSignUp
             { 
                 //MessageBox.Show(tipo_public.Equals("cadastro") ? "Cadastro não concluido" : "Atualização não concluida");
                 atualizacao_SUCCESS = false;
-                this.Hide();
+                this.Close();
             }
         }
 

@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.form_arred = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.botao_redondo = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.btnEnviar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.txtCodigo = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -39,7 +40,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textbox_redonda = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnlSquareLeftBorderBtnEnviar = new System.Windows.Forms.Panel();
-            this.btnEnviar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // form_arred
@@ -51,6 +51,25 @@
             // 
             this.botao_redondo.ElipseRadius = 10;
             this.botao_redondo.TargetControl = this.btnEnviar;
+            // 
+            // btnEnviar
+            // 
+            this.btnEnviar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEnviar.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnEnviar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEnviar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(255)))));
+            this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnviar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnEnviar.ForeColor = System.Drawing.Color.White;
+            this.btnEnviar.Location = new System.Drawing.Point(398, 109);
+            this.btnEnviar.Name = "btnEnviar";
+            this.btnEnviar.Size = new System.Drawing.Size(106, 44);
+            this.btnEnviar.TabIndex = 81;
+            this.btnEnviar.Text = "Enviar";
+            this.btnEnviar.UseVisualStyleBackColor = false;
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
+            this.btnEnviar.MouseEnter += new System.EventHandler(this.btnEnviar_MouseEnter);
+            this.btnEnviar.MouseLeave += new System.EventHandler(this.btnEnviar_MouseLeave);
             // 
             // label1
             // 
@@ -148,25 +167,6 @@
             this.pnlSquareLeftBorderBtnEnviar.TabIndex = 80;
             this.pnlSquareLeftBorderBtnEnviar.MouseEnter += new System.EventHandler(this.btnEnviar_MouseEnter);
             this.pnlSquareLeftBorderBtnEnviar.MouseLeave += new System.EventHandler(this.btnEnviar_MouseLeave);
-            // 
-            // btnEnviar
-            // 
-            this.btnEnviar.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnEnviar.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnEnviar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnEnviar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(255)))));
-            this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnviar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnEnviar.ForeColor = System.Drawing.Color.White;
-            this.btnEnviar.Location = new System.Drawing.Point(398, 109);
-            this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Size = new System.Drawing.Size(106, 44);
-            this.btnEnviar.TabIndex = 81;
-            this.btnEnviar.Text = "Enviar";
-            this.btnEnviar.UseVisualStyleBackColor = false;
-            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
-            this.btnEnviar.MouseEnter += new System.EventHandler(this.btnEnviar_MouseEnter);
-            this.btnEnviar.MouseLeave += new System.EventHandler(this.btnEnviar_MouseLeave);
             // 
             // FrmConfirmarEmail
             // 

@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using FormsDesign;
 using System.Drawing.Text;
+using System.Threading.Tasks;
 
 namespace AcroniUI
 {
@@ -29,21 +30,6 @@ namespace AcroniUI
             }
             #endregion    
         }
-
-
-
-        #region Métodos para o botão 'sair'
-        private void btnSair_MouseMove(object sender, MouseEventArgs e)
-        {
-            btnSair.Font = new System.Drawing.Font("Century Gothic", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-        }
-
-        private void btnSair_MouseLeave(object sender, EventArgs e)
-        {
-            btnSair.Font = new System.Drawing.Font("Century Gothic", 11F, FontStyle.Bold);
-        }
-
-        #endregion
 
         #region Métodos para transição de cores dos botões do menu
 
@@ -97,6 +83,27 @@ namespace AcroniUI
             e.Graphics.DrawRectangle(new Pen(new SolidBrush(Color.FromArgb(38, 39, 41)), 3), formBorda);
         }
 
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            timerFade.Start();
+        }
 
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void timerFade_Tick(object sender, EventArgs e)
+        {
+            if (this.Opacity > 0.0)
+            {
+                this.Opacity -= 0.1;
+            }
+            else
+            {
+                timerFade.Stop();
+                Application.Exit();
+            }
+        }
     }
 }

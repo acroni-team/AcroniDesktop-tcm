@@ -5,36 +5,33 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace AcroniControls
 {
-    public partial class AcroniMessageBoxInput : MessageBox
+    public partial class AcroniMessageBoxInput : Form
     {
-        public AcroniMessageBoxInput(string msg)
+        public AcroniMessageBoxInput(string message)
         {
             InitializeComponent();
-            this.alblMensagem.Text = msg;
+            Bunifu.Framework.UI.BunifuElipse ellipse = new Bunifu.Framework.UI.BunifuElipse();
+            ellipse.ApplyElipse(this, 15);
+            ellipse.ApplyElipse();
+            btnEnviar.Cursor = Cursors.Hand;
+            apnlTextbox.Cursor = Cursors.IBeam;
+            alblMessage1.Text = message;
         }
-        public void btnConfirma_Click(object sender, EventArgs e)
-        {
-            if (txtTeclado.Text != "")
-            {
-                if (alblMensagem.Text.Contains("teclado"))
-                    SetNames.teclado = txtTeclado.Text;
-                else
-                    SetNames.colecao = txtTeclado.Text;
-                this.Hide();
-            }
-        }
-        public void cancelar_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
-        public AcroniMessageBoxInput(IContainer container)
-        {
-            container.Add(this);
 
+        public AcroniMessageBoxInput(string message, string message2)
+        {
             InitializeComponent();
+            Bunifu.Framework.UI.BunifuElipse ellipse = new Bunifu.Framework.UI.BunifuElipse();
+            ellipse.ApplyElipse(this, 15);
+            ellipse.ApplyElipse();
+            btnEnviar.Cursor = Cursors.Hand;
+            apnlTextbox.Cursor = Cursors.IBeam;
+            alblMessage1.Text = message;
+            alblMessage2.Text = message2;
         }
     }
 }

@@ -29,7 +29,7 @@ namespace AcroniUI.LoginAndSignUp
         
         private void btnSair_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            timerFadeOut.Start();
         }
         #endregion
 
@@ -127,6 +127,24 @@ namespace AcroniUI.LoginAndSignUp
             }                      
         }
 
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void timerFadeOut_Tick(object sender, EventArgs e)
+        {
+            if (this.Opacity > 0.0)
+            {
+                this.Opacity -= 0.1;
+            }
+            else
+            {
+                timerFadeOut.Stop();
+                Application.Exit();
+            }
+        }
+
 
         private void TimerFade_Tick(object sender, EventArgs e)
         {
@@ -193,7 +211,7 @@ namespace AcroniUI.LoginAndSignUp
                                 SQLConnection.nome_usuario = txtEntrar.Text;
                                 selecionarTeclado = new SelectKeyboard();
                                 selecionarTeclado.Show();
-                                this.Hide();
+                                Hide();
                             }
                             else
                             {

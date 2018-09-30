@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 namespace AcroniUI
 {
-    public partial class Galeria : Master
+    public partial class Galeria : TemplateMenu
     {
         SelectColor selectColor = new SelectColor();
         bool isSelectColorOpen = false;

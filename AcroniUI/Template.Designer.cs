@@ -28,67 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Template));
-            this.btnMinimizar = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnSair = new Bunifu.Framework.UI.BunifuImageButton();
             this.pnlSuperior = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.PictureBox();
+            this.btnMinimize = new System.Windows.Forms.PictureBox();
             this.lblAcroni = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.faleConoscoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSair)).BeginInit();
+            this.timerFade = new System.Windows.Forms.Timer(this.components);
             this.pnlSuperior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnMinimizar
-            // 
-            this.btnMinimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(47)))));
-            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinimizar.ErrorImage = null;
-            this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
-            this.btnMinimizar.ImageActive = null;
-            this.btnMinimizar.InitialImage = null;
-            this.btnMinimizar.Location = new System.Drawing.Point(1168, 0);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(36, 26);
-            this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnMinimizar.TabIndex = 3;
-            this.btnMinimizar.TabStop = false;
-            this.btnMinimizar.Zoom = 0;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
-            // 
-            // btnSair
-            // 
-            this.btnSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
-            this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSair.ErrorImage = null;
-            this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
-            this.btnSair.ImageActive = null;
-            this.btnSair.InitialImage = null;
-            this.btnSair.Location = new System.Drawing.Point(1202, -4);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(59, 30);
-            this.btnSair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnSair.TabIndex = 11;
-            this.btnSair.TabStop = false;
-            this.btnSair.Zoom = 0;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
-            // 
             // pnlSuperior
             // 
-            this.pnlSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(47)))));
-            this.pnlSuperior.Controls.Add(this.btnMinimizar);
-            this.pnlSuperior.Controls.Add(this.btnSair);
+            this.pnlSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(41)))), ((int)(((byte)(46)))));
+            this.pnlSuperior.Controls.Add(this.btnClose);
+            this.pnlSuperior.Controls.Add(this.btnMinimize);
             this.pnlSuperior.Controls.Add(this.lblAcroni);
             this.pnlSuperior.Controls.Add(this.menuStrip1);
-            this.pnlSuperior.Location = new System.Drawing.Point(-1, -1);
+            this.pnlSuperior.Location = new System.Drawing.Point(0, 0);
             this.pnlSuperior.Name = "pnlSuperior";
-            this.pnlSuperior.Size = new System.Drawing.Size(1285, 40);
+            this.pnlSuperior.Size = new System.Drawing.Size(1280, 40);
             this.pnlSuperior.TabIndex = 11;
             this.pnlSuperior.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlSuperior_Paint);
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.Location = new System.Drawing.Point(1143, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(80, 30);
+            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnClose.TabIndex = 12;
+            this.btnClose.TabStop = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
+            this.btnMinimize.Location = new System.Drawing.Point(1103, 0);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(40, 30);
+            this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnMinimize.TabIndex = 12;
+            this.btnMinimize.TabStop = false;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
             // lblAcroni
             // 
@@ -144,6 +135,10 @@
             this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(65, 26);
             this.ajudaToolStripMenuItem.Text = "Ajuda";
             // 
+            // timerFade
+            // 
+            this.timerFade.Tick += new System.EventHandler(this.timerFade_Tick);
+            // 
             // Template
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -154,10 +149,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Template";
             this.Text = "FrmTemplate";
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSair)).EndInit();
             this.pnlSuperior.ResumeLayout(false);
             this.pnlSuperior.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -166,12 +161,15 @@
 
         #endregion
         private System.Windows.Forms.ToolStripMenuItem faleConoscoToolStripMenuItem;
-        private Bunifu.Framework.UI.BunifuImageButton btnMinimizar;
-        private Bunifu.Framework.UI.BunifuImageButton btnSair;
         protected System.Windows.Forms.Panel pnlSuperior;
         protected System.Windows.Forms.Label lblAcroni;
         protected System.Windows.Forms.MenuStrip menuStrip1;
         protected System.Windows.Forms.ToolStripMenuItem ajudaToolStripMenuItem;
         protected System.Windows.Forms.ToolStripMenuItem arquivoToolStripMenuItem;
+        private System.Windows.Forms.PictureBox btnMinimize;
+        private Bunifu.Framework.UI.BunifuImageButton btnSair;
+        private Bunifu.Framework.UI.BunifuImageButton btnMinimizar;
+        private System.Windows.Forms.PictureBox btnClose;
+        private System.Windows.Forms.Timer timerFade;
     }
 }

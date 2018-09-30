@@ -52,12 +52,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MessageBox.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MessageBox.Designer.cs">
-      <DependentUpon>MessageBox.cs</DependentUpon>
-    </Compile>
     <Compile Include="AcroniMessageBoxInput.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,8 +111,8 @@
     <Compile Include="Teclados_Colecoes.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="MessageBox.resx">
-      <DependentUpon>MessageBox.cs</DependentUpon>
+    <EmbeddedResource Include="AcroniMessageBoxInput.resx">
+      <DependentUpon>AcroniMessageBoxInput.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MessageBoxSemInternet.resx">
       <DependentUpon>MessageBoxSemInternet.cs</DependentUpon>

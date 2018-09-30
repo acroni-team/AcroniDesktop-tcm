@@ -89,6 +89,7 @@ namespace AcroniUI.LoginAndSignUp
             this.alblAGenteTemOQueVocePrecisa = new System.Windows.Forms.Label();
             this.alblProcurandoPorTeclados = new System.Windows.Forms.Label();
             this.alblAcroni = new System.Windows.Forms.Label();
+            this.timerFadeOut = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.btnSair)).BeginInit();
             this.pnlLogin.SuspendLayout();
             this.apnlSenha.SuspendLayout();
@@ -271,6 +272,7 @@ namespace AcroniUI.LoginAndSignUp
             resources.ApplyResources(this.btnEntrar, "btnEntrar");
             this.btnEntrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEntrar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnEntrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(168)))), ((int)(((byte)(255)))));
             this.btnEntrar.FlatAppearance.BorderSize = 0;
             this.btnEntrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(168)))), ((int)(((byte)(255)))));
@@ -649,6 +651,10 @@ namespace AcroniUI.LoginAndSignUp
             this.alblAcroni.ForeColor = System.Drawing.Color.White;
             this.alblAcroni.Name = "alblAcroni";
             // 
+            // timerFadeOut
+            // 
+            this.timerFadeOut.Tick += new System.EventHandler(this.timerFadeOut_Tick);
+            // 
             // FrmLogin
             // 
             this.AcceptButton = this.btnEntrar;
@@ -748,6 +754,7 @@ namespace AcroniUI.LoginAndSignUp
         private System.Windows.Forms.Timer TimerFade;
         private System.Windows.Forms.Panel pnlLogoCad;
         private System.Windows.Forms.Label lblAvisoCad;
+        private System.Windows.Forms.Timer timerFadeOut;
     }
 }
 

@@ -16,7 +16,7 @@ namespace AcroniUI.LoginAndSignUp
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Close();
         }
 
         public static bool atualizacao_SUCCESS { get; set; } = false;
@@ -63,9 +63,9 @@ namespace AcroniUI.LoginAndSignUp
                                         FrmConfirmarEmail frm = new FrmConfirmarEmail("não_possui", txtSenha.Text, txtEmail.Text, "senha");
                                         
                                         frm.ShowDialog();
-                                        
+
                                         if (FrmConfirmarEmail.atualizacao_SUCCESS)
-                                            this.Close();
+                                            Close();
                                         else
                                         {
                                             this.Show();
