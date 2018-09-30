@@ -52,6 +52,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AcroniMessageBoxConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AcroniMessageBoxConfirm.Designer.cs">
+      <DependentUpon>AcroniMessageBoxConfirm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AcroniMessageBoxInput.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     <Compile Include="Teclados_Colecoes.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AcroniMessageBoxConfirm.resx">
+      <DependentUpon>AcroniMessageBoxConfirm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AcroniMessageBoxInput.resx">
       <DependentUpon>AcroniMessageBoxInput.cs</DependentUpon>
     </EmbeddedResource>

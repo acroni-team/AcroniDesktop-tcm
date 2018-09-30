@@ -47,3 +47,4 @@ E:\Desktop\c\AcroniDesktop\AcroniControls\bin\Debug\AcroniControls.pdb
 E:\Desktop\c\AcroniDesktop\AcroniControls\bin\Debug\Bunifu_UI_v1.52.dll
 E:\Desktop\c\AcroniDesktop\AcroniControls\bin\Debug\DotNetKit.Wpf.AutoCompleteComboBox.dll
 E:\Desktop\c\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.csproj.CopyComplete
+E:\Desktop\c\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.AcroniMessageBoxConfirm.resources

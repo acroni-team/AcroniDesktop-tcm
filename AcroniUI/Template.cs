@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using FormsDesign;
 using System.Drawing.Text;
 using System.Threading.Tasks;
+using AcroniControls;
 
 namespace AcroniUI
 {
@@ -83,21 +84,27 @@ namespace AcroniUI
             e.Graphics.DrawRectangle(new Pen(new SolidBrush(Color.FromArgb(38, 39, 41)), 3), formBorda);
         }
 
+        #region Sair e minimizar
         private void btnClose_Click(object sender, EventArgs e)
         {
-            timerFade.Start();
+            AcroniMessageBoxConfirm ambc = new AcroniMessageBoxConfirm("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "Você quer mesmo sair? Não se esqueça de salvar o seu teclado ;)");
+            ambc.ShowDialog();
+            if (ambc.DialogResult == DialogResult.Yes)
+                timerFade.Start();
+            else
+                ambc.Dispose();
+
         }
 
-        private void btnMinimize_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
+        private void btnMinimize_Click(object sender, EventArgs e) => WindowState = FormWindowState.Minimized;
 
+        #endregion
+        #region Timers
         private void timerFade_Tick(object sender, EventArgs e)
         {
-            if (this.Opacity > 0.0)
+            if (Opacity > 0.0)
             {
-                this.Opacity -= 0.1;
+                Opacity -= 0.1;
             }
             else
             {
@@ -105,5 +112,6 @@ namespace AcroniUI
                 Application.Exit();
             }
         }
+        #endregion
     }
 }

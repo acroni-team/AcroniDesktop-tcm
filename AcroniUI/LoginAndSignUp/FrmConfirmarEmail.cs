@@ -91,7 +91,7 @@ namespace AcroniUI.LoginAndSignUp
                 client.EnableSsl = true;
                 client.Send(objeto_mail);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 t_splash.Abort();
                 (new AcroniControls.MessageBoxSemInternet()).ShowDialog();
