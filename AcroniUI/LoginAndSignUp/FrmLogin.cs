@@ -49,7 +49,7 @@ namespace AcroniUI.LoginAndSignUp
 
         #region Objetos do banco
         //Usuário para lançar o script do banco: (Usuário: Acroni, Senha: acroni7)
-        SqlConnection conexão_SQL = new SqlConnection(Conexao.nome_conexao);
+        SqlConnection conexão_SQL = new SqlConnection(SQLConnection.nome_conexao);
         SqlCommand comando_SQL;
         #endregion
 
@@ -190,7 +190,7 @@ namespace AcroniUI.LoginAndSignUp
                             //Para pegar os valores, trate a resposta como uma Array
                             if (resposta[0].ToString().Equals(txtSenha.Text))
                             {
-                                Conexao.nome_usuario = txtEntrar.Text;
+                                SQLConnection.nome_usuario = txtEntrar.Text;
                                 selecionarTeclado = new SelectKeyboard();
                                 selecionarTeclado.Show();
                                 this.Hide();
@@ -346,9 +346,9 @@ namespace AcroniUI.LoginAndSignUp
                                     confirm.ShowDialog();
                                     if (FrmConfirmarEmail.atualizacao_SUCCESS)
                                     {
-                                        if (!File.Exists(Application.StartupPath + "\\" + Conexao.nome_usuario + ".acr"))
+                                        if (!File.Exists(Application.StartupPath + "\\" + SQLConnection.nome_usuario + ".acr"))
                                         {
-                                            using (FileStream savearchive = new FileStream(Application.StartupPath + @"\" + Conexao.nome_usuario + ".acr", FileMode.Create))
+                                            using (FileStream savearchive = new FileStream(Application.StartupPath + @"\" + SQLConnection.nome_usuario + ".acr", FileMode.Create))
                                             {
                                                 BinaryFormatter Serializer = new BinaryFormatter();
                                                 Serializer.Serialize(savearchive, CompartilhaObjetosUser.user);
@@ -356,7 +356,7 @@ namespace AcroniUI.LoginAndSignUp
                                         }
                                         (new SelectKeyboard()).Show();
                                         this.Hide();
-                                        Conexao.nome_usuario = txtEntrar.Text;
+                                        SQLConnection.nome_usuario = txtEntrar.Text;
                                         // Checa se existe o arquivo, e se não existe, cria - o
                                     } else
                                     {

@@ -439,7 +439,7 @@ namespace AcroniUI.CustomizingForms
                     }
                 }
 
-            using (FileStream savearchive = new FileStream(Application.StartupPath + @"\" + Conexao.nome_usuario + ".acr", FileMode.OpenOrCreate))
+            using (FileStream savearchive = new FileStream(Application.StartupPath + @"\" + SQLConnection.nome_usuario + ".acr", FileMode.OpenOrCreate))
             {
                 BinaryFormatter Serializer = new BinaryFormatter();
                 Serializer.Serialize(savearchive, CompartilhaObjetosUser.user);

@@ -62,11 +62,11 @@ namespace AcroniUI
 
             #endregion
         }
-        public void BoasVindas() => lblNomeUsuBoasVindas.Text = Conexao.nome_usuario + "!";
+        public void BoasVindas() => lblNomeUsuBoasVindas.Text = SQLConnection.nome_usuario + "!";
         #region Carregar Coleções
         private void CarregaColecoes()
         {
-            using (FileStream openarchive = new FileStream(Application.StartupPath + @"\" + Conexao.nome_usuario + ".acr", FileMode.Open))
+            using (FileStream openarchive = new FileStream(Application.StartupPath + @"\" + SQLConnection.nome_usuario + ".acr", FileMode.Open))
             {
                 BinaryFormatter ofByteArrayToObject = new BinaryFormatter();
                 CompartilhaObjetosUser.user = (User)ofByteArrayToObject.Deserialize(openarchive);
@@ -199,7 +199,7 @@ namespace AcroniUI
         }
         private void passarParaArquivo()
         {
-            using (FileStream savearchive = new FileStream(Application.StartupPath + @"\" + Conexao.nome_usuario + ".acr", FileMode.Open))
+            using (FileStream savearchive = new FileStream(Application.StartupPath + @"\" + SQLConnection.nome_usuario + ".acr", FileMode.Open))
             {
                 BinaryFormatter objectToByteArray = new BinaryFormatter();
                 objectToByteArray.Serialize(savearchive, CompartilhaObjetosUser.user);

@@ -13,7 +13,7 @@ namespace AcroniUI
         public MenuLayoutMaster()
         {
             InitializeComponent();
-            trocar_nome_usuario($"{Conexao.nome_usuario}!");
+            trocar_nome_usuario($"{SQLConnection.nome_usuario}!");
             trocar_imagem_usuario(selecionar_imagem_cliente());
         }
 
@@ -22,7 +22,7 @@ namespace AcroniUI
 
         public void trocar_imagem_usuario(Image imagem) => fotoUsuario.Image = imagem;
 
-        SqlConnection conexão_SQL = new SqlConnection(Conexao.nome_conexao);
+        SqlConnection conexão_SQL = new SqlConnection(SQLConnection.nome_conexao);
         SqlCommand comando_SQL;
 
         public Image selecionar_imagem_cliente()
@@ -34,7 +34,7 @@ namespace AcroniUI
                     conexão_SQL.Open();
 
                 //--Criando o comando SELECT e seleciando no SQL
-                String select = "SELECT imagem FROM tblCliente WHERE usuario IN ('" + Conexao.nome_usuario + "')";
+                String select = "SELECT imagem FROM tblCliente WHERE usuario IN ('" + SQLConnection.nome_usuario + "')";
 
                 comando_SQL = new SqlCommand(select, conexão_SQL);
                 SqlDataReader resposta = comando_SQL.ExecuteReader();

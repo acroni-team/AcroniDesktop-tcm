@@ -5,7 +5,7 @@ namespace FormsDesign
 {
     public class FormDrag
     {
-        public static Point MouseDownLocation;
+        static Point MouseDownLocation;
 
         public static void Form_MouseDown(object sender, MouseEventArgs e)
         {

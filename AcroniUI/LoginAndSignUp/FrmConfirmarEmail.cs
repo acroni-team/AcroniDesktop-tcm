@@ -114,7 +114,7 @@ namespace AcroniUI.LoginAndSignUp
 
 
         //--Inicializando uma conexão e um COMANDO
-        SqlConnection conexao_SQL = new SqlConnection(Conexao.nome_conexao);
+        SqlConnection conexao_SQL = new SqlConnection(SQLConnection.nome_conexao);
         SqlCommand comando_SQL;
 
         private void update()

@@ -20,7 +20,7 @@ namespace AcroniUI.LoginAndSignUp
         }
 
         public static bool atualizacao_SUCCESS { get; set; } = false;
-        SqlConnection conexao_SQL = new SqlConnection(Conexao.nome_conexao);
+        SqlConnection conexao_SQL = new SqlConnection(SQLConnection.nome_conexao);
         SqlCommand comando_SQL;
         Regex validacao_email = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
 

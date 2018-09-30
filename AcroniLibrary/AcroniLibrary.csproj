@@ -52,7 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conexao.cs" />
+    <Compile Include="SQLConnection.cs" />
     <Compile Include="CustomizingMethods\Colorpicker\ColorpickerHandlers.cs" />
     <Compile Include="CustomizingMethods\Colorpicker\SetColorpickerVisibility.cs" />
     <Compile Include="CustomizingMethods\Colorpicker\SetHistColors.cs" />
@@ -67,7 +67,6 @@
     <Compile Include="FileInfo\Teclado.cs" />
     <Compile Include="FileInfo\TenkeylessKeyboardInfo.cs" />
     <Compile Include="FileInfo\User.cs" />
-    <Compile Include="GetNistTime.cs" />
     <Compile Include="CustomizingMethods\TextFonts\LoadFontTypes.cs" />
     <Compile Include="ImageManipulator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

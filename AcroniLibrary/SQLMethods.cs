@@ -7,7 +7,7 @@ namespace AcroniLibrary
     {
         public static bool SELECT_HASROWS(String commandSELECT)
         {
-            using (SqlConnection newConnection = new SqlConnection(Conexao.nome_conexao))
+            using (SqlConnection newConnection = new SqlConnection(SQLConnection.nome_conexao))
             {
                 newConnection.Open();
                 using (SqlCommand select = new SqlCommand(commandSELECT, newConnection))
@@ -21,7 +21,7 @@ namespace AcroniLibrary
         }
         public static int INSERT_INTO(String commandINSERT)
         {
-            using (SqlConnection newConnection = new SqlConnection(Conexao.nome_conexao))
+            using (SqlConnection newConnection = new SqlConnection(SQLConnection.nome_conexao))
             {
                 newConnection.Open();
                 using (SqlCommand insert = new SqlCommand(commandINSERT, newConnection))
@@ -32,7 +32,7 @@ namespace AcroniLibrary
         }
         public static int INSERT_INTO(String commandINSERT,byte[] parameter)
         {
-            using (SqlConnection newConnection = new SqlConnection(Conexao.nome_conexao))
+            using (SqlConnection newConnection = new SqlConnection(SQLConnection.nome_conexao))
             {
                 newConnection.Open();
                 using (SqlCommand insert = new SqlCommand(commandINSERT, newConnection))

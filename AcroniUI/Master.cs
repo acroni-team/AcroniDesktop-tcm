@@ -90,7 +90,7 @@ namespace AcroniUI
             }
             ImgUsu.SizeMode = PictureBoxSizeMode.Zoom;
             lblQtdGasta.Text = Convert.ToString(contTeclados);
-            trocar_nome_usuario($"{Conexao.nome_usuario}");
+            trocar_nome_usuario($"{SQLConnection.nome_usuario}");
             trocar_imagem_usuario(selecionar_imagem_cliente());
             Compartilha.nomeUsu = lblNomeUsu.Text;
             //trocar_plano_usuario($"{Conexao.plano_usuario}!");
@@ -99,11 +99,11 @@ namespace AcroniUI
             #endregion
         }
         #region Obter informações do cliente pelo banco
-        public void trocar_nome_usuario(String usuario) => lblNomeUsu.Text = Conexao.nome_usuario;
+        public void trocar_nome_usuario(String usuario) => lblNomeUsu.Text = SQLConnection.nome_usuario;
         //public void trocar_plano_usuario(String plano) => lblPlanoUsu.Text += plano;
 
         public void trocar_imagem_usuario(Image imagem) => ImgUsu.Image = imagem;
-        SqlConnection conexão_SQL = new SqlConnection(Conexao.nome_conexao);
+        SqlConnection conexão_SQL = new SqlConnection(SQLConnection.nome_conexao);
         SqlCommand comando_SQL;
 
         public Image selecionar_imagem_cliente()
@@ -115,7 +115,7 @@ namespace AcroniUI
                     conexão_SQL.Open();
 
                 //--Criando o comando SELECT e seleciando no SQL
-                String select = "SELECT imagem FROM tblCliente WHERE usuario IN ('" + Conexao.nome_usuario + "')";
+                String select = "SELECT imagem FROM tblCliente WHERE usuario IN ('" + SQLConnection.nome_usuario + "')";
                 comando_SQL = new SqlCommand(select, conexão_SQL);
                 SqlDataReader resposta = comando_SQL.ExecuteReader();
                 Image imagem_retorno = (Image)resources.GetObject("ImgUsu.Image");

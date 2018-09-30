@@ -13,7 +13,7 @@ namespace AcroniLibrary.FileInfo
         public string nome { get; set; }
         public User()
         {
-            nome = Conexao.nome_usuario;
+            nome = SQLConnection.nome_usuario;
         }
     }
 }
