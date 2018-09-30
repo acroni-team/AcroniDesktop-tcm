@@ -154,6 +154,7 @@ namespace AcroniUI.CustomizingForms
             this.btnTextAlignLeft = new Bunifu.Framework.UI.BunifuImageButton();
             this.cmbFontes = new System.Windows.Forms.ComboBox();
             this.pnlWithKeycaps = new System.Windows.Forms.Panel();
+            this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.pnlSuperior.SuspendLayout();
             this.pnlHistorico.SuspendLayout();
             this.pnlCorEscolhida.SuspendLayout();
@@ -1657,11 +1658,11 @@ namespace AcroniUI.CustomizingForms
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Open Sans", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(17, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 29);
+            this.label1.Size = new System.Drawing.Size(92, 32);
             this.label1.TabIndex = 10;
             this.label1.Text = "Fontes";
             // 
@@ -1692,7 +1693,6 @@ namespace AcroniUI.CustomizingForms
             this.btnSizeSmall.TabIndex = 6;
             this.btnSizeSmall.Text = "Pequeno";
             this.btnSizeSmall.UseVisualStyleBackColor = false;
-            this.btnSizeSmall.Click += new System.EventHandler(this.btnSizeSmall_Click);
             // 
             // btnSizeMedium
             // 
@@ -1710,7 +1710,6 @@ namespace AcroniUI.CustomizingForms
             this.btnSizeMedium.TabIndex = 7;
             this.btnSizeMedium.Text = "Médio";
             this.btnSizeMedium.UseVisualStyleBackColor = false;
-            this.btnSizeMedium.Click += new System.EventHandler(this.btnSizeMedium_Click);
             // 
             // btnSizeBig
             // 
@@ -1728,7 +1727,6 @@ namespace AcroniUI.CustomizingForms
             this.btnSizeBig.TabIndex = 8;
             this.btnSizeBig.Text = "Grande";
             this.btnSizeBig.UseVisualStyleBackColor = false;
-            this.btnSizeBig.Click += new System.EventHandler(this.btnSizeBig_Click);
             // 
             // btnStyleStrikeout
             // 
@@ -1746,7 +1744,6 @@ namespace AcroniUI.CustomizingForms
             this.btnStyleStrikeout.TabIndex = 5;
             this.btnStyleStrikeout.Text = "abc";
             this.btnStyleStrikeout.UseVisualStyleBackColor = false;
-            this.btnStyleStrikeout.Click += new System.EventHandler(this.btnStyleStrikeout_Click);
             // 
             // btnStyleUnderline
             // 
@@ -1764,7 +1761,6 @@ namespace AcroniUI.CustomizingForms
             this.btnStyleUnderline.TabIndex = 5;
             this.btnStyleUnderline.Text = "S";
             this.btnStyleUnderline.UseVisualStyleBackColor = false;
-            this.btnStyleUnderline.Click += new System.EventHandler(this.btnStyleUnderline_Click);
             // 
             // btnStyleItalic
             // 
@@ -1782,7 +1778,6 @@ namespace AcroniUI.CustomizingForms
             this.btnStyleItalic.TabIndex = 5;
             this.btnStyleItalic.Text = "I";
             this.btnStyleItalic.UseVisualStyleBackColor = false;
-            this.btnStyleItalic.Click += new System.EventHandler(this.btnStyleItalic_Click);
             // 
             // btnIcons
             // 
@@ -1800,7 +1795,6 @@ namespace AcroniUI.CustomizingForms
             this.btnIcons.TabIndex = 5;
             this.btnIcons.Text = "Novo!";
             this.btnIcons.UseVisualStyleBackColor = false;
-            this.btnIcons.Click += new System.EventHandler(this.btnIcons_Click);
             // 
             // btnStyleBold
             // 
@@ -1913,7 +1907,6 @@ namespace AcroniUI.CustomizingForms
             this.cmbFontes.Name = "cmbFontes";
             this.cmbFontes.Size = new System.Drawing.Size(277, 21);
             this.cmbFontes.TabIndex = 1;
-            this.cmbFontes.SelectedIndexChanged += new System.EventHandler(this.cmbFontes_SelectedIndexChanged);
             // 
             // pnlWithKeycaps
             // 
@@ -1995,6 +1988,7 @@ namespace AcroniUI.CustomizingForms
             this.Controls.Add(this.pnlWithKeycaps);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "Compacto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FormLoad);
             this.Controls.SetChildIndex(this.pnlWithKeycaps, 0);
             this.Controls.SetChildIndex(this.picBoxKeyboardBackground, 0);
@@ -2080,11 +2074,6 @@ namespace AcroniUI.CustomizingForms
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignLeft)).EndInit();
             this.ResumeLayout(false);
 
-        }
-
-        private void btnIcons_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
         }
 
         #endregion
@@ -2210,6 +2199,7 @@ namespace AcroniUI.CustomizingForms
         private System.Windows.Forms.PictureBox picBoxIcon2;
         private System.Windows.Forms.PictureBox picBoxIcon1;
         private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.FontDialog fontDialog1;
     }
 }
 

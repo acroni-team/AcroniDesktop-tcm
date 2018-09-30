@@ -18,31 +18,23 @@ namespace AcroniUI.CustomizingForms
     public partial class Compacto : Template
     {
 
+        // Definição das propriedades de salvamento
+        private bool SettedKeyboardProperties = false;
+        Teclado keyboard = new Teclado();
 
-        // Keycap genérica que serve para aplicar propriedades de estilo às keycaps através de um sender.
-        private Kbtn kbtn;
-        bool settedKeyboardProperties = false;
-        // Membro que definirá a cor do teclado no método de escolher a cor do colorpicker. 
-        private Color Color { get; set; } = Color.FromArgb(26, 26, 26);
-
-        // Essas propriedades são usadas no kbtn acima:
-        private float FontSize { get; set; } = 12f;
-        private Font FontSender { get; set; } = SystemFonts.GetFontByName("Open Sans");
-        private FontStyle FontStyle { get; set; } = FontStyle.Regular;
-        private ContentAlignment ContentAlignment { get; set; } = ContentAlignment.TopLeft;
+        //Definição das propriedades das fontes
+        ContentAlignment ContentAlignment { get; set; }
 
         // Esse membro serve para pegar o ícone selecionado e botá-lo na fila de ícones.
         private Image icon { get; set; }
+
         private static List<FontFamily> lista_fontFamily = new List<FontFamily>();
 
-        Teclado keyboard = new Teclado();
-
+        // Definição das propriedades do colorpicker 
+        private Color Color { get; set; }
         private void kbtn_Click(object sender, EventArgs e)
         {
-            kbtn = (Kbtn)sender;
-            kbtn.Font = new Font(FontSender.FontFamily, FontSize, FontStyle);
-            kbtn.TextAlign = ContentAlignment;
-            kbtn.BackColor = kbtn.SetColor(Color);
+
         }
 
         public Compacto()
@@ -146,93 +138,6 @@ namespace AcroniUI.CustomizingForms
 
         #region Fontes das teclas
 
-        #region clicks dos botões de estilização da fonte
-
-        private void btnStyleBold_Click(object sender, EventArgs e)
-        {
-            if (FontStyle != FontStyle.Bold)
-            {
-                FontStyle = FontStyle.Bold;
-                btnStyleBold.BackColor = Color.FromArgb(90, 90, 90);
-            }
-            else
-            {
-                FontStyle = FontStyle.Regular;
-                btnStyleBold.BackColor = Color.FromArgb(40, 40, 40);
-            }
-        }
-
-        private void btnStyleItalic_Click(object sender, EventArgs e)
-        {
-            if (FontStyle != FontStyle.Italic)
-            {
-                FontStyle = FontStyle.Italic;
-                btnStyleItalic.BackColor = Color.FromArgb(90, 90, 90);
-            }
-            else
-            {
-                FontStyle = FontStyle.Regular;
-                btnStyleItalic.BackColor = Color.FromArgb(40, 40, 40);
-            }
-        }
-
-        private void btnStyleUnderline_Click(object sender, EventArgs e)
-        {
-            if (FontStyle != FontStyle.Underline)
-            {
-                FontStyle = FontStyle.Underline;
-                btnStyleUnderline.BackColor = Color.FromArgb(90, 90, 90);
-            }
-            else
-                FontStyle = FontStyle.Regular;
-        }
-
-        private void btnStyleStrikeout_Click(object sender, EventArgs e)
-        {
-            if (FontStyle != FontStyle.Strikeout)
-            {
-                FontStyle = FontStyle.Strikeout;
-                btnStyleStrikeout.BackColor = Color.FromArgb(90, 90, 90);
-            }
-            else
-                FontStyle = FontStyle.Regular;
-        }
-
-        private void btnSizeBig_Click(object sender, EventArgs e)
-        {
-            if (FontSize != 14f)
-            {
-                FontSize = 14f;
-                btnSizeBig.BackColor = Color.FromArgb(90, 90, 90);
-            }
-            else
-            {
-                FontSize = 12f;
-            }
-        }
-
-        private void btnSizeMedium_Click(object sender, EventArgs e)
-        {
-            if (FontSize != 12f)
-            {
-                FontSize = 12f;
-                btnSizeMedium.BackColor = Color.FromArgb(90, 90, 90);
-            }
-            else
-            {
-                btnSizeMedium.BackColor = Color.FromArgb(90, 90, 90);
-            }
-        }
-
-        private void btnSizeSmall_Click(object sender, EventArgs e)
-        {
-            if (FontSize != 10f)
-                FontSize = 10f;
-            else
-                FontSize = 12f;
-        }
-        #endregion
-
         #region Definição dos métodos de alinhamento
 
         private void btnTextAlignLeft_Click(object sender, EventArgs e)
@@ -257,8 +162,8 @@ namespace AcroniUI.CustomizingForms
         }
         #endregion
 
-        #region ComboBox de FontFace
-        protected virtual void cmbFontes_SelectedIndexChanged(object sender, EventArgs e) => FontSender = new Font(cmbFontes.Text, FontSize, FontStyle);
+        //#region ComboBox de FontFace
+        //protected virtual void cmbFontes_SelectedIndexChanged(object sender, EventArgs e) => FontSender = new Font(cmbFontes.Text, FontSize, FontStyle);
 
         private void FormLoad(object sender, EventArgs e)
         {
@@ -266,19 +171,9 @@ namespace AcroniUI.CustomizingForms
             cmbFontes.SelectedIndex = cmbFontes.Items.IndexOf("Open Sans");
         }
 
-        #endregion
-
         private void lblDefinirParaTodasTeclas_Click(object sender, EventArgs e)
         {
-            foreach (Control c in this.Controls)
-            {
-                if (c is Kbtn)
-                {
-                    (c as Button).Font = new Font(cmbFontes.Text, FontSize, FontStyle);
-                    (c as Button).TextAlign = ContentAlignment;
-                    (c as Button).BackColor = Color;
-                }
-            }
+
         }
 
         #endregion Fim das fontes
@@ -353,7 +248,7 @@ namespace AcroniUI.CustomizingForms
             }
             saveTeclado();
 
-            #endregion
+
         }
         private async void saveTeclado()
         {
@@ -388,7 +283,7 @@ namespace AcroniUI.CustomizingForms
 
             }
             
-            if (SetNames.colecao != null && SetNames.teclado!=null|| settedKeyboardProperties)
+            if (SetNames.colecao != null && SetNames.teclado!=null|| SettedKeyboardProperties)
             {
                 System.Windows.MessageBox.Show("Teclado adicionado/salvo com sucesso!");
                 Compartilha.editKeyboard = true;
@@ -444,8 +339,9 @@ namespace AcroniUI.CustomizingForms
                 BinaryFormatter Serializer = new BinaryFormatter();
                 Serializer.Serialize(savearchive, CompartilhaObjetosUser.user);
             }
-            settedKeyboardProperties = true;
+            SettedKeyboardProperties = true;
         }
+        #endregion
 
         private List<PictureBox> iconsBoxes = new List<PictureBox>();
 
@@ -493,6 +389,9 @@ namespace AcroniUI.CustomizingForms
             this.Close();
         }
 
-        
+        private void btnStyleBold_Click(object sender, EventArgs e)
+        {
+            fontDialog1.ShowDialog();
+        }
     }
 }

@@ -15,9 +15,7 @@ namespace AcroniUI
             InitializeComponent();
             Bunifu.Framework.UI.BunifuElipse ellipse = new Bunifu.Framework.UI.BunifuElipse();
             ellipse.ApplyElipse(btnSair, 9);
-            #region Atribuição de fontes definidas (open sans, qanelas) ao layout 
 
-            #endregion
             #region Atribuição de Dragging aos controles e no próprio form 
 
             ///<summary> 
