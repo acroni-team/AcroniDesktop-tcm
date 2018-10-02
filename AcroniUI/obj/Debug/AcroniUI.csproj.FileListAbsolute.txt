@@ -51,7 +51,6 @@ C:\Users\gui_m\Documents\Visual Studio 2017\Projects\Tentativa 02\AcroniDesktop\
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniUI\bin\Debug\AcroniUI.exe
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniUI\bin\Debug\AcroniUI.pdb
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniUI\bin\Debug\AcroniControls.dll
-C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniUI\bin\Debug\AcroniLibrary.dll
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniUI\bin\Debug\DotNetKit.Wpf.AutoCompleteComboBox.dll
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniUI\bin\Debug\AcroniUI.dll
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniUI\bin\Debug\AcroniControls.pdb
@@ -63,7 +62,6 @@ C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\Acroni
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.LoginAndSignUp.FrmConfirmarEmail.resources
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.LoginAndSignUp.FrmLogin.resources
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.LoginAndSignUp.FrmUsuario.resources
-C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Master.resources
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.MenuLayoutMaster.resources
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Properties.Resources.resources
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.SelectKeyboard.resources
@@ -100,3 +98,5 @@ E:\Desktop\c\AcroniDesktop\AcroniUI\bin\Debug\AcroniLibrary.pdb
 E:\Desktop\c\AcroniDesktop\AcroniUI\bin\Debug\AcroniUI.exe.config
 E:\Desktop\c\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.csproj.CopyComplete
 E:\Desktop\c\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.TemplateMenu.resources
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.TemplateMenu.resources
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniUI\bin\Debug\AcroniLibrary.dll

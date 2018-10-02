@@ -200,5 +200,30 @@ namespace AcroniUI
             selectKeyboard.Show();
             fechaForms();
         }
+
+        private void btnDesconectar_Click(object sender, EventArgs e)
+        {
+            AcroniMessageBoxConfirm confirmExit =  new AcroniControls.AcroniMessageBoxConfirm("Saindo daqui", "Deseja realmente deslogar?", "OK");
+            confirmExit.ShowDialog();
+            if (confirmExit.ButtonClicked == AcceptButtons.OK)
+            {
+                foreach (Form form in Application.OpenForms)
+                {
+                    if (form is AcroniUI.LoginAndSignUp.FrmLogin)
+                    {
+                        (form as LoginAndSignUp.FrmLogin).CleanAllTextbox();
+                        form.Show();
+                        break;
+                    }
+                    else
+                    {
+                        LoginAndSignUp.FrmLogin login = new AcroniUI.LoginAndSignUp.FrmLogin();
+                        login.CleanAllTextbox();
+                        login.Show();
+                    }
+                }
+                this.Close();
+            }            
+        }
     }
 }
