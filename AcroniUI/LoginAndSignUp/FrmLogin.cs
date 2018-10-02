@@ -364,6 +364,7 @@ namespace AcroniUI.LoginAndSignUp
                                     confirm.ShowDialog();
                                     if (FrmConfirmarEmail.atualizacao_SUCCESS)
                                     {
+                                        (new AcroniControls.AcroniMessageBoxConfirm("Cadastro concluido!")).Show();
                                         if (!File.Exists(Application.StartupPath + "\\" + SQLConnection.nome_usuario + ".acr"))
                                         {
                                             using (FileStream savearchive = new FileStream(Application.StartupPath + @"\" + SQLConnection.nome_usuario + ".acr", FileMode.Create))
@@ -432,6 +433,21 @@ namespace AcroniUI.LoginAndSignUp
                 }
             }
 
+        }
+        public void CleanAllTextbox()
+        {
+            foreach (Control control in pnlLogin.Controls)
+            {
+                foreach (Control controlInside in control.Controls)
+                    if (controlInside is Bunifu.Framework.UI.BunifuMaterialTextbox)
+                        controlInside.ResetText();       
+            }
+            foreach (Control control in pnlCadastro.Controls)
+            {
+                foreach (Control controlInside in control.Controls)
+                    if (controlInside is Bunifu.Framework.UI.BunifuMaterialTextbox)
+                        controlInside.ResetText();
+            }
         }
     }
 }
