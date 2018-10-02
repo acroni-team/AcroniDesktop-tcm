@@ -145,7 +145,7 @@ namespace AcroniUI.LoginAndSignUp
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {            
-            if (txtCodigo.Text.Equals(String_de_confirmacao))
+            if (txtCodigo.Text.ToUpper().Equals(String_de_confirmacao))
             {
                 FileStream leitor_imagem = new FileStream($@"{Application.StartupPath}\Images\imagemPadrao.jpg", FileMode.Open, FileAccess.Read);
                 BinaryReader convertedor_binario = new BinaryReader(leitor_imagem);

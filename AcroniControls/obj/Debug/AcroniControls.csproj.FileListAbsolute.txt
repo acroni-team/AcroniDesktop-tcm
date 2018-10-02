@@ -62,3 +62,14 @@ E:\Desktop\c\AcroniDesktop\AcroniControls\bin\Debug\AcroniUI.exe.config
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.AcroniMessageBoxConfirm.resources
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.AcroniMessageBoxInput.resources
 >>>>>>> 0dcdf6d3c30621dd2dc808585628e765711d7149
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniControls\bin\Debug\AcroniLibrary.dll
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniControls\bin\Debug\Svg.dll
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniControls\bin\Debug\AcroniUI.dll
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniControls\bin\Debug\Transitions.dll
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniControls\bin\Debug\AcroniLibrary.pdb
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniControls\bin\Debug\AcroniUI.pdb
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniControls\bin\Debug\AcroniUI.exe.config
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.csprojAssemblyReference.cache
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniControls\obj\Debug\TheKhanSoftsWatermarkTextbox.TextboxWithPlaceholder.resources
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.CustomizingModules.KeycapParentModule.resources
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.CustomizingModules.KeycapTextModule.resources
