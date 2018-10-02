@@ -5,6 +5,7 @@ using FormsDesign;
 using System.Drawing.Text;
 using System.Threading.Tasks;
 using AcroniControls;
+using AcroniLibrary;
 
 namespace AcroniUI
 {
@@ -88,10 +89,11 @@ namespace AcroniUI
             AcroniMessageBoxConfirm ambc = new AcroniMessageBoxConfirm("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "Você quer mesmo sair? Não se esqueça de salvar o seu teclado ;)");
             ambc.ShowDialog();
             if (ambc.DialogResult == DialogResult.Yes)
-                timerFade.Start();
-            else
-                ambc.Dispose();
-
+            {
+                Fade.FadeOut(this);
+                Close();
+            }
+                
         }
 
         private void btnMinimize_Click(object sender, EventArgs e) => WindowState = FormWindowState.Minimized;

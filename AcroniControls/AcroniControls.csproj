@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AcroniControls</RootNamespace>
     <AssemblyName>AcroniControls</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AcroniLibrary">
+      <HintPath>..\AcroniLibrary\bin\Debug\AcroniLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu_UI_v1.52">
       <HintPath>..\AcroniUI\bin\Debug\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
@@ -64,6 +68,12 @@
     <Compile Include="AcroniMessageBoxInput.Designer.cs">
       <DependentUpon>AcroniMessageBoxInput.cs</DependentUpon>
     </Compile>
+    <Compile Include="TextboxWithPlaceholder.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TextboxWithPlaceholder.designer.cs">
+      <DependentUpon>TextboxWithPlaceholder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Compartilha.cs" />
     <Compile Include="Colecao.cs">
       <SubType>Component</SubType>
@@ -77,11 +87,23 @@
     <Compile Include="ControlTeclado.Designer.cs">
       <DependentUpon>ControlTeclado.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomizingModules\KeycapTextModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomizingModules\KeycapTextModule.Designer.cs">
+      <DependentUpon>KeycapTextModule.cs</DependentUpon>
+    </Compile>
     <Compile Include="Kbtn.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Kbtn.Designer.cs">
       <DependentUpon>Kbtn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomizingModules\KeycapParentModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomizingModules\KeycapParentModule.Designer.cs">
+      <DependentUpon>KeycapParentModule.cs</DependentUpon>
     </Compile>
     <Compile Include="MessageBoxSemInternet.cs">
       <SubType>Form</SubType>
@@ -122,6 +144,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AcroniMessageBoxInput.resx">
       <DependentUpon>AcroniMessageBoxInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TextboxWithPlaceholder.resx">
+      <DependentUpon>TextboxWithPlaceholder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizingModules\KeycapParentModule.resx">
+      <DependentUpon>KeycapParentModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizingModules\KeycapTextModule.resx">
+      <DependentUpon>KeycapTextModule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MessageBoxSemInternet.resx">
       <DependentUpon>MessageBoxSemInternet.cs</DependentUpon>

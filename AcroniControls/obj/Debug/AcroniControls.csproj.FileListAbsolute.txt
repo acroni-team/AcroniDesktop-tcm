@@ -34,7 +34,6 @@ C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\Acroni
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.csproj.CopyComplete
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.dll
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.pdb
-E:\Desktop\c\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.csprojAssemblyReference.cache
 E:\Desktop\c\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.AcroniMessageBoxInput.resources
 E:\Desktop\c\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.MessageBoxSemInternet.resources
 E:\Desktop\c\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.Properties.Resources.resources
@@ -48,3 +47,14 @@ E:\Desktop\c\AcroniDesktop\AcroniControls\bin\Debug\Bunifu_UI_v1.52.dll
 E:\Desktop\c\AcroniDesktop\AcroniControls\bin\Debug\DotNetKit.Wpf.AutoCompleteComboBox.dll
 E:\Desktop\c\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.csproj.CopyComplete
 E:\Desktop\c\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.AcroniMessageBoxConfirm.resources
+E:\Desktop\c\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.CustomizingModules.KeycapParentModule.resources
+E:\Desktop\c\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.CustomizingModules.KeycapTextModule.resources
+E:\Desktop\c\AcroniDesktop\AcroniControls\obj\Debug\TheKhanSoftsWatermarkTextbox.TextboxWithPlaceholder.resources
+E:\Desktop\c\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.csprojAssemblyReference.cache
+E:\Desktop\c\AcroniDesktop\AcroniControls\bin\Debug\AcroniLibrary.dll
+E:\Desktop\c\AcroniDesktop\AcroniControls\bin\Debug\Svg.dll
+E:\Desktop\c\AcroniDesktop\AcroniControls\bin\Debug\AcroniUI.dll
+E:\Desktop\c\AcroniDesktop\AcroniControls\bin\Debug\Transitions.dll
+E:\Desktop\c\AcroniDesktop\AcroniControls\bin\Debug\AcroniLibrary.pdb
+E:\Desktop\c\AcroniDesktop\AcroniControls\bin\Debug\AcroniUI.pdb
+E:\Desktop\c\AcroniDesktop\AcroniControls\bin\Debug\AcroniUI.exe.config

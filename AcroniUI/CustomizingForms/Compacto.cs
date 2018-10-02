@@ -4,19 +4,20 @@ using System.Drawing;
 using System.Threading.Tasks;
 using Transitions;
 using AcroniControls;
+using AcroniControls.CustomizingModules;
 using System.Collections.Generic;
 using AcroniLibrary.CustomizingMethods.TextFonts;
 using AcroniLibrary;
 using AcroniLibrary.FileInfo;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
-using AcroniLibrary.CustomizingMethods;
-using System.Linq;
 
 namespace AcroniUI.CustomizingForms
 {
     public partial class Compacto : Template
     {
+        // Definição da kbtn genérica
+        Kbtn keybutton = new Kbtn();
 
         // Definição das propriedades de salvamento
         private bool SettedKeyboardProperties = false;
@@ -24,17 +25,18 @@ namespace AcroniUI.CustomizingForms
 
         //Definição das propriedades das fontes
         ContentAlignment ContentAlignment { get; set; }
+        private static List<FontFamily> lista_fontFamily = new List<FontFamily>();
 
         // Esse membro serve para pegar o ícone selecionado e botá-lo na fila de ícones.
         private Image icon { get; set; }
 
-        private static List<FontFamily> lista_fontFamily = new List<FontFamily>();
-
         // Definição das propriedades do colorpicker 
         private Color Color { get; set; }
+
         private void kbtn_Click(object sender, EventArgs e)
         {
-
+            keybutton = (Kbtn)sender;
+            keybutton.BackColor = keybutton.SetColor(Color);
         }
 
         public Compacto()
@@ -42,6 +44,7 @@ namespace AcroniUI.CustomizingForms
             InitializeComponent();
             pnlCorEscolhida.Size = new Size(243, 103);
 
+            //Foreach para arredondar cores do colorpicker
             foreach (Control c_panel in pnlCorEscolhida.Controls)
             {
                 if (c_panel is Panel)
@@ -53,8 +56,19 @@ namespace AcroniUI.CustomizingForms
                     }
                 }
             }
+
             if (Compartilha.editKeyboard)
                 carregaTeclado();
+        }
+
+        private void SetKeycapText(object sender, EventArgs e)
+        {
+            MessageBox.Show("Eu putefro a alma do senhor.");
+            //KeycapTextModule keycapTextModule = new KeycapTextModule();
+            //Opacity = 0.1;
+            //keycapTextModule.ShowDialog();
+            //Kbtn kbtn = (Kbtn)sender;
+            //kbtn.Text = keycapTextModule.Maintext;
         }
 
         #region Métodos do Color Picker
@@ -167,7 +181,12 @@ namespace AcroniUI.CustomizingForms
 
         private void FormLoad(object sender, EventArgs e)
         {
+            Fade.FadeIn(this);
+
+            //Carregar todas as fontes que o usuário possui na máquina
             new LoadFontTypes(ref cmbFontes, ref lista_fontFamily);
+
+            //Index padrão da combobox
             cmbFontes.SelectedIndex = cmbFontes.Items.IndexOf("Open Sans");
         }
 
@@ -343,6 +362,7 @@ namespace AcroniUI.CustomizingForms
         }
         #endregion
 
+        #region Ícones
         private List<PictureBox> iconsBoxes = new List<PictureBox>();
 
         //private void btnIcons_Click(object sender, EventArgs e)
@@ -380,6 +400,7 @@ namespace AcroniUI.CustomizingForms
         //        Serializer.Serialize(savearchive, CompartilhaObjetosUser.user);
         //    }
         //}
+        #endregion
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
@@ -387,11 +408,6 @@ namespace AcroniUI.CustomizingForms
             a.Show();
             Compartilha.editKeyboard = false;
             this.Close();
-        }
-
-        private void btnStyleBold_Click(object sender, EventArgs e)
-        {
-            fontDialog1.ShowDialog();
         }
     }
 }
