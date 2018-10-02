@@ -85,6 +85,7 @@
             this.btnOk.TabIndex = 3;
             this.btnOk.Text = "Saia agora";
             this.btnOk.UseVisualStyleBackColor = false;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // btnCancela
             // 
@@ -102,6 +103,7 @@
             this.btnCancela.TabIndex = 3;
             this.btnCancela.Text = "Cancela";
             this.btnCancela.UseVisualStyleBackColor = false;
+            this.btnCancela.Click += new System.EventHandler(this.btnCancela_Click);
             this.btnCancela.MouseLeave += new System.EventHandler(this.btnCancela_MouseLeave);
             this.btnCancela.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCancela_MouseMove);
             // 

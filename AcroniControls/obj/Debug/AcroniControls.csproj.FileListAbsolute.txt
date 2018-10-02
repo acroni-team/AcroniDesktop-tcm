@@ -26,7 +26,6 @@ C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\Acroni
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniControls\bin\Debug\AcroniControls.pdb
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniControls\bin\Debug\Bunifu_UI_v1.52.dll
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniControls\bin\Debug\DotNetKit.Wpf.AutoCompleteComboBox.dll
-C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.MessageBox.resources
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.MessageBoxSemInternet.resources
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.Properties.Resources.resources
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.csproj.GenerateResource.cache
@@ -48,3 +47,5 @@ E:\Desktop\c\AcroniDesktop\AcroniControls\bin\Debug\Bunifu_UI_v1.52.dll
 E:\Desktop\c\AcroniDesktop\AcroniControls\bin\Debug\DotNetKit.Wpf.AutoCompleteComboBox.dll
 E:\Desktop\c\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.csproj.CopyComplete
 E:\Desktop\c\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.AcroniMessageBoxConfirm.resources
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.AcroniMessageBoxConfirm.resources
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.AcroniMessageBoxInput.resources

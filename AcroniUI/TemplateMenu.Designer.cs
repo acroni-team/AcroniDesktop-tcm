@@ -176,9 +176,9 @@
             // btnConfig
             // 
             this.btnConfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.btnConfig.Image = ((System.Drawing.Image)(resources.GetObject("btnConfig.Image")));
             this.btnConfig.Location = new System.Drawing.Point(179, 86);
             this.btnConfig.Name = "btnConfig";
-            this.btnConfig.Image = ((System.Drawing.Image)(resources.GetObject("btnConfig.Image")));
             this.btnConfig.Size = new System.Drawing.Size(20, 20);
             this.btnConfig.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnConfig.TabIndex = 2;
@@ -188,9 +188,9 @@
             // ImgUsu
             // 
             this.ImgUsu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(54)))), ((int)(((byte)(63)))));
+            this.ImgUsu.Image = ((System.Drawing.Image)(resources.GetObject("ImgUsu.Image")));
             this.ImgUsu.Location = new System.Drawing.Point(118, 24);
             this.ImgUsu.Name = "ImgUsu";
-            this.ImgUsu.Image = ((System.Drawing.Image)(resources.GetObject("ImgUsu.Image")));
             this.ImgUsu.Size = new System.Drawing.Size(82, 82);
             this.ImgUsu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ImgUsu.TabIndex = 0;
@@ -237,6 +237,7 @@
             this.btnDesconectar.TabIndex = 5;
             this.btnDesconectar.Text = "Desconectar";
             this.btnDesconectar.UseVisualStyleBackColor = true;
+            this.btnDesconectar.Click += new System.EventHandler(this.btnDesconectar_Click);
             this.btnDesconectar.MouseEnter += new System.EventHandler(this.CursorHand);
             // 
             // btnQuemSomos
@@ -321,7 +322,7 @@
             this.btnAbrirGaleria.Click += new System.EventHandler(this.btnAbrirGaleria_Click);
             this.btnAbrirGaleria.MouseEnter += new System.EventHandler(this.CursorHand);
             // 
-            // Master
+            // TemplateMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -329,7 +330,7 @@
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.pnlOptions);
             this.Controls.Add(this.pnlAreaUsu);
-            this.Name = "Master";
+            this.Name = "TemplateMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Master";
             this.Controls.SetChildIndex(this.pnlAreaUsu, 0);

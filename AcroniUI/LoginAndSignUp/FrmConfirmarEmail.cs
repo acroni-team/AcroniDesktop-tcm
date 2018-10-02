@@ -150,13 +150,14 @@ namespace AcroniUI.LoginAndSignUp
                 FileStream leitor_imagem = new FileStream($@"{Application.StartupPath}\Images\imagemPadrao.jpg", FileMode.Open, FileAccess.Read);
                 BinaryReader convertedor_binario = new BinaryReader(leitor_imagem);
                 byte[] img = convertedor_binario.ReadBytes((int)leitor_imagem.Length);
-
+                AcroniLibrary.SQLConnection.nome_usuario = usuario_public;
                 //MessageBox.Show(tipo_public.Equals("cadastro") ? "Cadastro concluido" : "Atualização concluida");
                 atualizacao_SUCCESS = true;
                 if (tipo_public.Equals("cadastro"))
                     SQLMethods.INSERT_INTO($"INSERT INTO tblCliente(nome,usuario,senha,email,cpf,imagem) VALUES ('{nome_public}','{usuario_public}','{senha_public}','{email_public}','{cpf_public}',@image)", img);
                 else if (tipo_public.Equals("senha"))
                     update();
+                Close();
             }
             else
             { 
