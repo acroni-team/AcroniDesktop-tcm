@@ -78,6 +78,7 @@
     <Compile Include="ValidationOF.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="AcroniLibrary.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

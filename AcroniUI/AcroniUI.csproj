@@ -197,6 +197,7 @@
     <Content Include="Images\logo.svg" />
     <Content Include="Images\slogo.png" />
     <Content Include="Images\tenkeyless.png" />
+    <None Include="AcroniUI.cd" />
     <None Include="app.config" />
     <None Include="Images\olhoblock.png" />
     <None Include="Images\olho.png" />
