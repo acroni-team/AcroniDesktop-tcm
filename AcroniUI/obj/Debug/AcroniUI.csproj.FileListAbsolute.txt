@@ -100,3 +100,4 @@ E:\Desktop\c\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.csproj.CopyComplete
 E:\Desktop\c\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.TemplateMenu.resources
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.TemplateMenu.resources
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniUI\bin\Debug\AcroniLibrary.dll
+C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\bin\Debug\AcroniUI.exe.config
