@@ -34,7 +34,7 @@ namespace AcroniUI
                     conexão_SQL.Open();
 
                 //--Criando o comando SELECT e seleciando no SQL
-                String select = "SELECT imagem FROM tblCliente WHERE usuario IN ('" + SQLConnection.nome_usuario + "')";
+                String select = "SELECT imagem_cliente FROM tblCliente WHERE usuario IN ('" + SQLConnection.nome_usuario + "')";
 
                 comando_SQL = new SqlCommand(select, conexão_SQL);
                 SqlDataReader resposta = comando_SQL.ExecuteReader();

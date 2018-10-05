@@ -175,8 +175,6 @@ namespace AcroniUI.LoginAndSignUp
                 if (conexao_SQL.State != ConnectionState.Open)
                     conexao_SQL.Open();
 
-                byte[] img = null;
-
                 //--Lendo a imagem e a convertendo em array binário
                 //FileStream leitor_imagem = new FileStream(localizacao_img_public, FileMode.Open, FileAccess.Read);
                 //BinaryReader convertedor_binario = new BinaryReader(leitor_imagem);

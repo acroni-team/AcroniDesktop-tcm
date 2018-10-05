@@ -28,7 +28,7 @@ namespace AcroniUI.CustomizingForms
         private static List<FontFamily> lista_fontFamily = new List<FontFamily>();
 
         // Esse membro serve para pegar o ícone selecionado e botá-lo na fila de ícones.
-        private Image icon { get; set; }
+        private Image SelectedIcon { get; set; }
 
         // Definição das propriedades do colorpicker 
         private Color Color { get; set; }
@@ -37,6 +37,15 @@ namespace AcroniUI.CustomizingForms
         {
             keybutton = (Kbtn)sender;
             keybutton.BackColor = keybutton.SetColor(Color);
+            keybutton.Image = SelectedIcon;
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            SelectKeyboard __selectKeyboard = new SelectKeyboard();
+            __selectKeyboard.ShowDialog();
+            Compartilha.editKeyboard = false;
+            this.Close();
         }
 
         public Compacto()
@@ -63,7 +72,6 @@ namespace AcroniUI.CustomizingForms
 
         private void SetKeycapText(object sender, EventArgs e)
         {
-            MessageBox.Show("Eu putefro a alma do senhor.");
             //KeycapTextModule keycapTextModule = new KeycapTextModule();
             //Opacity = 0.1;
             //keycapTextModule.ShowDialog();
@@ -301,8 +309,8 @@ namespace AcroniUI.CustomizingForms
 
 
             }
-            
-            if (SetNames.colecao != null && SetNames.teclado!=null|| SettedKeyboardProperties)
+
+            if (SetNames.colecao != null && SetNames.teclado != null || SettedKeyboardProperties)
             {
                 System.Windows.MessageBox.Show("Teclado adicionado/salvo com sucesso!");
                 Compartilha.editKeyboard = true;
@@ -331,7 +339,7 @@ namespace AcroniUI.CustomizingForms
                 if (tecla is Kbtn)
                 {
                     {
-                        keyboard.Keycaps.Add(new Keycaps { ID = tecla.Name, Text = tecla.Text, Font = tecla.Font, Color = tecla.BackColor,ContentAlignment = (tecla as Button).TextAlign});
+                        keyboard.Keycaps.Add(new Keycaps { ID = tecla.Name, Text = tecla.Text, Font = tecla.Font, Color = tecla.BackColor, ContentAlignment = (tecla as Button).TextAlign });
                     }
                 }
             if (!Compartilha.editKeyboard)
@@ -363,51 +371,43 @@ namespace AcroniUI.CustomizingForms
         #endregion
 
         #region Ícones
-        private List<PictureBox> iconsBoxes = new List<PictureBox>();
 
-        //private void btnIcons_Click(object sender, EventArgs e)
-        //{
-        //    foreach (Control c in this.Controls)
-        //        iconsBoxes.Add(iconsBoxes.Where(c.Name.Contains("picBoxIcon")).ToList());
+        private Queue<Image> ImageQueue = new Queue<Image>();
 
-        //    using (OpenFileDialog dlg = new OpenFileDialog())
-        //    {
-        //        dlg.Title = "Carregar ícone";
-        //        dlg.Filter = "Arquivos de imagem |*.bmp; *.png; *.jpg";
-
-        //        if (dlg.ShowDialog() == DialogResult.OK)
-        //        {
-        //            IconsQueue.AttPanel(Image.FromFile(dlg.FileName));
-        //            foreach (PictureBox pb in iconsBoxes)
-        //            {
-        //                if (pb == null || pb.Image == null)
-        //                    pb.Image = IconsQueue.Images.Peek();
-        //            }
-        //        }
-        //    }
-        //    foreach (AcroniLibrary.FileInfo.Colecao c in CompartilhaObjetosUser.user.userCollections)
-        //    {
-        //        if (c.collectionNome.Equals(Compartilha.colecao))
-        //        {
-        //            c.collection.Add(keyboard);
-        //            break;
-        //        }
-        //    }
-
-        //    using (FileStream savearchive = new FileStream(Application.StartupPath + @"\" + Conexao.nome_usuario + ".acr", FileMode.OpenOrCreate))
-        //    {
-        //        BinaryFormatter Serializer = new BinaryFormatter();
-        //        Serializer.Serialize(savearchive, CompartilhaObjetosUser.user);
-        //    }
-        //}
-        #endregion
-
-        private void btnVoltar_Click(object sender, EventArgs e)
+        private void btnIcons_Click(object sender, EventArgs e)
         {
-            Galeria a = new Galeria(false);
-            a.Show();
-            Compartilha.editKeyboard = false;
-            this.Close();
+            List<Image> insertableArray = new List<Image> { };
+            using (OpenFileDialog iconGetter = new OpenFileDialog())
+            {
+                iconGetter.InitialDirectory = @"C:\";
+                iconGetter.Title = "Qual o ícone que deseja adicionar?";
+                iconGetter.Filter = "Todos os tipos de imagem | *jpg; *.jpeg; *.bmp; *.png |BMP | *.bmp | JPG | *.jpg; *.jpeg | PNG | *.png ";
+                iconGetter.Multiselect = true;
+                if (iconGetter.ShowDialog() == DialogResult.OK)
+                {
+                    foreach (String fileDirectory in iconGetter.FileNames)
+                        ImageQueue.Enqueue(Image.FromFile(fileDirectory));
+
+                    while (ImageQueue.Count > 10)
+                        ImageQueue.Dequeue();
+                }
+                for (int aux = ImageQueue.Count - 1; aux >= 0; aux--)
+                {
+                    insertableArray.Add(ImageQueue.ToArray()[aux]);
+                }
+            }
+            for (int i = 0; i < ImageQueue.Count; i++)
+                (pnlIcons.Controls[$"picBoxIcon{i + 1}"] as PictureBox).Image = insertableArray[i];
         }
+
+        private void picIcons_Click(object sender, EventArgs e)
+        {
+            if (sender != null)
+            {
+                PictureBox __icon = (PictureBox)sender;
+                SelectedIcon = __icon.Image;
+            }
+        }
+        #endregion
     }
 }

@@ -91,7 +91,7 @@ namespace AcroniUI
             if (ambc.DialogResult == DialogResult.Yes)
             {
                 Fade.FadeOut(this);
-                Close();
+                Application.Exit();
             }
                 
         }
