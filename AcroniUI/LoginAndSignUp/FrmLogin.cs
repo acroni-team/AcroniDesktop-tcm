@@ -57,6 +57,7 @@ namespace AcroniUI.LoginAndSignUp
         static Form layerFadeForm = new Form();
         private Form GetLayerForm()
         {
+            layerFadeForm.Name = "LayerFadeForm";
             layerFadeForm.Dock = DockStyle.Fill;
             layerFadeForm.Size = new Size(1280, 720);
             layerFadeForm.FormBorderStyle = FormBorderStyle.None;
@@ -362,9 +363,10 @@ namespace AcroniUI.LoginAndSignUp
                                     TimerFade.Start();
                                 else {
                                     confirm.ShowDialog();
+                                    Application.OpenForms["LayerFadeForm"].Close();
                                     if (FrmConfirmarEmail.atualizacao_SUCCESS)
                                     {
-                                        (new AcroniControls.AcroniMessageBoxConfirm("Cadastro concluido!")).Show();
+                                        //(new AcroniControls.AcroniMessageBoxConfirm("Cadastro concluido!")).Show();
                                         if (!File.Exists(Application.StartupPath + "\\" + SQLConnection.nome_usuario + ".acr"))
                                         {
                                             using (FileStream savearchive = new FileStream(Application.StartupPath + @"\" + SQLConnection.nome_usuario + ".acr", FileMode.Create))
