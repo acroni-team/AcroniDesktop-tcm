@@ -71,6 +71,24 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomizingForms\CustomizingModules\KeycapIconModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomizingForms\CustomizingModules\KeycapIconModule.Designer.cs">
+      <DependentUpon>KeycapIconModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomizingForms\CustomizingModules\KeycapParentModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomizingForms\CustomizingModules\KeycapParentModule.Designer.cs">
+      <DependentUpon>KeycapParentModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomizingForms\CustomizingModules\KeycapTextModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomizingForms\CustomizingModules\KeycapTextModule.Designer.cs">
+      <DependentUpon>KeycapTextModule.cs</DependentUpon>
+    </Compile>
     <Compile Include="Galeria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +172,15 @@
     <EmbeddedResource Include="CustomizingForms\Compacto.resx">
       <DependentUpon>Compacto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomizingForms\CustomizingModules\KeycapIconModule.resx">
+      <DependentUpon>KeycapIconModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizingForms\CustomizingModules\KeycapParentModule.resx">
+      <DependentUpon>KeycapParentModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizingForms\CustomizingModules\KeycapTextModule.resx">
+      <DependentUpon>KeycapTextModule.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomizingForms\Tenkeyless.resx">
       <DependentUpon>Tenkeyless.cs</DependentUpon>
     </EmbeddedResource>
@@ -187,6 +214,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\back.png" />
     <Content Include="Images\Botoes da fonte\center.png" />
     <Content Include="Images\Botoes da fonte\left.png" />
     <Content Include="Images\Botoes da fonte\right.png" />

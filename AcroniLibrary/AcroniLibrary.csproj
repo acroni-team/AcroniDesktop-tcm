@@ -54,7 +54,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomizingMethods\FormManipulator.cs" />
-    <Compile Include="Darknen.cs" />
     <Compile Include="Fade.cs" />
     <Compile Include="SQLConnection.cs" />
     <Compile Include="CustomizingMethods\Colorpicker\ColorpickerHandlers.cs" />

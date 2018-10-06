@@ -127,3 +127,6 @@ C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop\AcroniUI\obj\
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.csproj.CopyComplete
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.exe
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.pdb
+E:\Desktop\c\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.CustomizingForms.CustomizingModules.KeycapParentModule.resources
+E:\Desktop\c\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.CustomizingForms.CustomizingModules.KeycapTextModule.resources
+E:\Desktop\c\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.CustomizingForms.CustomizingModules.KeycapIconModule.resources
