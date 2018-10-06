@@ -3101,6 +3101,10 @@ namespace AcroniUI.CustomizingForms
         private System.Windows.Forms.Label lblDefinirParaTodasTeclas;
         private StyleBtn btnOpenModuleSwitch;
         private System.Windows.Forms.Button btnVoltar;
+<<<<<<< HEAD
+//<<<<<<< HEAD
+=======
+>>>>>>> 6085eb0e9043626e0c90ad911655a391e0a53c58
         private System.Windows.Forms.Panel fundoCa1;
         private System.Windows.Forms.Panel fundoCa2;
         private System.Windows.Forms.Panel fundoCa3;
@@ -3156,12 +3160,40 @@ namespace AcroniUI.CustomizingForms
         private System.Windows.Forms.Panel fundoCe7;
         private System.Windows.Forms.Panel fundoCe2s;
         private System.Windows.Forms.Panel fundoCe3;
+<<<<<<< HEAD
         private Bunifu.Framework.UI.BunifuElipse eBtnOpenModuleSwitch;
+=======
+<<<<<<< HEAD
+//=======
+=======
+>>>>>>> 6085eb0e9043626e0c90ad911655a391e0a53c58
+        private System.Windows.Forms.PictureBox picBoxIcon10;
+        private System.Windows.Forms.PictureBox picBoxIcon9;
+        private System.Windows.Forms.PictureBox picBoxIcon8;
+        private System.Windows.Forms.PictureBox picBoxIcon7;
+        private System.Windows.Forms.PictureBox picBoxIcon6;
+        private System.Windows.Forms.PictureBox picBoxIcon5;
+        private System.Windows.Forms.PictureBox picBoxIcon4;
+<<<<<<< HEAD
+//>>>>>>> Ícones
+=======
+        private Bunifu.Framework.UI.BunifuElipse eColorpickerTrigger;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse4;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse5;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse6;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse7;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse8;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse9;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse10;
+>>>>>>> 91ab273f55e42b47276ae0758298a216221759b2
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlHeadColorpicker;
         private System.Windows.Forms.Label lblColorName;
         private System.Windows.Forms.Panel pnlColor;
         private System.Windows.Forms.Label lblHexaColor;
+<<<<<<< HEAD
         private System.Windows.Forms.Panel pnlCorEscolhida;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button btnLime;
@@ -3214,6 +3246,10 @@ namespace AcroniUI.CustomizingForms
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.ComboBox comboBox1;
+=======
+        private System.Windows.Forms.Label lblEscolherCores;
+>>>>>>> 6085eb0e9043626e0c90ad911655a391e0a53c58
+>>>>>>> 91ab273f55e42b47276ae0758298a216221759b2
     }
 }
 

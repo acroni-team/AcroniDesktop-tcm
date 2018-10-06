@@ -18,7 +18,6 @@ namespace AcroniUI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Thread.CurrentThread.SetApartmentState(ApartmentState.Unknown);
-            Application.Run(new Compacto());
         }
     }
 }

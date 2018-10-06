@@ -54,7 +54,7 @@
             this.alblMessage1.ForeColor = System.Drawing.Color.White;
             this.alblMessage1.Location = new System.Drawing.Point(246, 52);
             this.alblMessage1.Name = "alblMessage1";
-            this.alblMessage1.Size = new System.Drawing.Size(235, 34);
+            this.alblMessage1.Size = new System.Drawing.Size(240, 34);
             this.alblMessage1.TabIndex = 0;
             this.alblMessage1.Text = "Estamos quase lá.";
             // 
@@ -86,7 +86,7 @@
             this.txtUserInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(47)))), ((int)(((byte)(56)))));
             this.txtUserInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUserInput.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserInput.Location = new System.Drawing.Point(0, 20);
+            this.txtUserInput.Location = new System.Drawing.Point(0, 19);
             this.txtUserInput.Name = "txtUserInput";
             this.txtUserInput.Size = new System.Drawing.Size(365, 22);
             this.txtUserInput.TabIndex = 2;
@@ -96,7 +96,7 @@
             // 
             this.apnlTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(47)))), ((int)(((byte)(56)))));
             this.apnlTextbox.Controls.Add(this.txtUserInput);
-            this.apnlTextbox.Location = new System.Drawing.Point(175, 190);
+            this.apnlTextbox.Location = new System.Drawing.Point(157, 190);
             this.apnlTextbox.Name = "apnlTextbox";
             this.apnlTextbox.Size = new System.Drawing.Size(365, 60);
             this.apnlTextbox.TabIndex = 3;
@@ -109,9 +109,10 @@
             this.btnEnviar.ForeColor = System.Drawing.Color.White;
             this.btnEnviar.Location = new System.Drawing.Point(327, 290);
             this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Size = new System.Drawing.Size(72, 26);
+            this.btnEnviar.Size = new System.Drawing.Size(75, 26);
             this.btnEnviar.TabIndex = 0;
             this.btnEnviar.Text = "Enviar";
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
             // button1
             // 

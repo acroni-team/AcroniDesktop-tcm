@@ -4,6 +4,7 @@ using AcroniLibrary.FileInfo;
 using AcroniUI.CustomizingForms;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Text;
 using System.IO;
@@ -16,7 +17,8 @@ namespace AcroniUI
 {
     public partial class Galeria : TemplateMenu
     {
-        SelectColor selectColor = new SelectColor();
+        SelectColor selectColor;
+        bool wasBtnEditarGaleriaClicked = false;
         bool isSelectColorOpen = false;
         int contHeighColecao = 0;
         int contWidthTeclado = 0;
@@ -66,10 +68,13 @@ namespace AcroniUI
         #region Carregar Coleções
         private void CarregaColecoes()
         {
-            using (FileStream openarchive = new FileStream(Application.StartupPath + @"\" + SQLConnection.nome_usuario + ".acr", FileMode.Open))
+            using (FileStream openarchive = new FileStream(Application.StartupPath + @"\" + SQLConnection.nome_usuario + ".acr", FileMode.OpenOrCreate))
             {
-                BinaryFormatter ofByteArrayToObject = new BinaryFormatter();
-                CompartilhaObjetosUser.user = (User)ofByteArrayToObject.Deserialize(openarchive);
+                try {
+                    BinaryFormatter ofByteArrayToObject = new BinaryFormatter();
+                    CompartilhaObjetosUser.user = (User)ofByteArrayToObject.Deserialize(openarchive);
+                }
+                catch (Exception) { CompartilhaObjetosUser.user = new User(); }
             }
             int contColecao = 0;
             try
@@ -159,7 +164,7 @@ namespace AcroniUI
             {
                 await Task.Delay(100);
             }
-            if (SetNames.colecao != null)
+            if (SetNames.colecao != "")
             {
                 AcroniLibrary.FileInfo.Colecao newCollection = new AcroniLibrary.FileInfo.Colecao();
                 newCollection.collectionNome = SetNames.colecao;
@@ -199,7 +204,7 @@ namespace AcroniUI
         }
         private void passarParaArquivo()
         {
-            using (FileStream savearchive = new FileStream(Application.StartupPath + @"\" + SQLConnection.nome_usuario + ".acr", FileMode.Open))
+            using (FileStream savearchive = new FileStream(Application.StartupPath + @"\" + SQLConnection.nome_usuario + ".acr", FileMode.OpenOrCreate))
             {
                 BinaryFormatter objectToByteArray = new BinaryFormatter();
                 objectToByteArray.Serialize(savearchive, CompartilhaObjetosUser.user);
@@ -273,15 +278,17 @@ namespace AcroniUI
             if (isSelectColorOpen)
             {
                 selectColor.Close();
+                Compartilha.colorSelected = Color.Empty;
             }
             selectColor = new SelectColor();
             selectColor.Show();
                 isSelectColorOpen = true;
                 while (selectColor.Visible)
                 {
-                    await Task.Delay(100);
+                    await Task.Delay(10);
                     if (Compartilha.colorSelected != Color.Empty)
                         ((sender as PictureBox).Parent as Panel).BackColor = Compartilha.colorSelected;
+              
                 }
                 if (Compartilha.colorSelected != Color.Empty)
                 {

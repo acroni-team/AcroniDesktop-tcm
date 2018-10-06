@@ -33,5 +33,11 @@ namespace AcroniControls
             alblMessage1.Text = message;
             alblMessage2.Text = message2;
         }
+
+        private void btnEnviar_Click(object sender, EventArgs e)
+        {
+            SetNames.colecao = txtUserInput.Text;
+            this.Close();
+        }
     }
 }
