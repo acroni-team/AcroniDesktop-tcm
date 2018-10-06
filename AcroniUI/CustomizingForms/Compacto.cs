@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Threading.Tasks;
 using Transitions;
 using AcroniControls;
-using AcroniControls.CustomizingModules;
+using AcroniUI.CustomizingForms.CustomizingModules;
 using System.Collections.Generic;
 using AcroniLibrary.CustomizingMethods.TextFonts;
 using AcroniLibrary;
@@ -16,8 +16,12 @@ namespace AcroniUI.CustomizingForms
 {
     public partial class Compacto : Template
     {
+<<<<<<< HEAD
         
         // Definição da kbtn genérica
+=======
+        // Definição do botão de teclado genérico (kbtn)
+>>>>>>> a4d93412ca3f8ded539e3ecdebfd04b256d24464
         Kbtn keybutton = new Kbtn();
 
         // Definição das propriedades de salvamento
@@ -35,16 +39,21 @@ namespace AcroniUI.CustomizingForms
         // Definição das propriedades do colorpicker 
         private Color Color { get; set; }
 
+        //Ao clicar num botão do teclado
         private void kbtn_Click(object sender, EventArgs e)
         {
             keybutton = (Kbtn)sender;
             keybutton.BackColor = keybutton.SetColor(Color);
-            if(HasChosenAIcon)
+            if (HasChosenAIcon)
                 keybutton.Image = SelectedIcon;
 
         }
 
+<<<<<<< HEAD
 
+=======
+        //Ao clicar no botão de fechar
+>>>>>>> a4d93412ca3f8ded539e3ecdebfd04b256d24464
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             SelectKeyboard __selectKeyboard = new SelectKeyboard();
@@ -57,20 +66,19 @@ namespace AcroniUI.CustomizingForms
         {
             InitializeComponent();
 
-            pnlCorEscolhida.Size = new Size(0, 0);
             //Foreach para arredondar cores do colorpicker
             foreach (Control c_panel in pnlCorEscolhida.Controls)
             {
                 if (c_panel is Panel)
                 {
-                    if (!c_panel.Name.Contains("Divi"))
-                    {
-                        Bunifu.Framework.UI.BunifuElipse elipse = new Bunifu.Framework.UI.BunifuElipse();
-                        elipse.ApplyElipse(c_panel, 5);
-                    }
+                    Bunifu.Framework.UI.BunifuElipse elipse = new Bunifu.Framework.UI.BunifuElipse();
+                    elipse.ApplyElipse(c_panel, 5);
                 }
             }
+<<<<<<< HEAD
             pnlHeadColorpicker.Size = new Size(90, 100);
+=======
+>>>>>>> a4d93412ca3f8ded539e3ecdebfd04b256d24464
 
             if (Compartilha.editKeyboard)
                 carregaTeclado();
@@ -90,6 +98,7 @@ namespace AcroniUI.CustomizingForms
                 }
             }
         }
+<<<<<<< HEAD
         private void SetKeycapText(object sender, EventArgs e)
         {
             //KeycapTextModule keycapTextModule = new KeycapTextModule();
@@ -98,108 +107,12 @@ namespace AcroniUI.CustomizingForms
             //Kbtn kbtn = (Kbtn)sender;
             //kbtn.Text = keycapTextModule.Maintext;
         }
+=======
+>>>>>>> a4d93412ca3f8ded539e3ecdebfd04b256d24464
 
         #region Métodos do Color Picker
 
         private bool[] __disponibilidade_pnlHistorico { get; set; } = { true, false, false };
-
-        // Esse campo determina se deve-se exibir ou esconder o colorpicker através da lógica de verificar se é um número ímpar ou par
-        private int __checkIfHideOrShow { get; set; } = 0;
-
-        private void pnlColor_Click(object sender, EventArgs e)
-        {
-            if (__checkIfHideOrShow % 2 == 0)
-            {
-                ShowColorpickerHeader();
-                ShowHorizontallyColorpickerBody();
-                ShowVerticallyColorpickerBody();
-            }
-
-            else
-            {
-                HideColorpickerHeader();
-                HideHorizontallyColorpickerBody();
-                HideVerticallyColorpickerBody();
-            }
-
-            __checkIfHideOrShow++;
-        }
-
-        //Mostra o header
-        private async void ShowColorpickerHeader()
-        {
-            for (int x = 90; x < 313; x += 20)
-            {
-                await Task.Delay(1);
-                pnlHeadColorpicker.Width = x;
-            }
-            pnlHeadColorpicker.Width = 313;
-            pnlHeadColorpicker.BackColor = Color.FromArgb(43, 48, 54);
-        }
-
-        //Mostra verticalmente o body do colorpicker
-        private async void ShowVerticallyColorpickerBody()
-        {
-            int y = 0;
-            while (y < 267)
-            {
-                await Task.Delay(1);
-                pnlCorEscolhida.Height = y;
-                y += 20;
-            }
-            pnlCorEscolhida.Height = 267;
-        }
-
-        //Mostra horizontalmente o body do colorpicker
-        private async void ShowHorizontallyColorpickerBody()
-        {
-            int x = 0;
-            while (x < 313)
-            {
-                await Task.Delay(1);
-                pnlCorEscolhida.Width = x;
-                x += 20;
-            }
-            pnlCorEscolhida.Width = 313;
-        }
-
-        //Esconde o header
-        private async void HideColorpickerHeader()
-        {
-            for (int x = 313; x > 90; x -= 20)
-            {
-                await Task.Delay(1);
-                pnlHeadColorpicker.Width = x;
-            }
-            pnlHeadColorpicker.Width = 90;
-            pnlHeadColorpicker.BackColor = Color.Transparent;
-        }
-
-        //Esconde verticalmente o body do colorpicker
-        private async void HideVerticallyColorpickerBody()
-        {
-            int y = 267;
-            while (y > 0)
-            {
-                await Task.Delay(1);
-                pnlCorEscolhida.Height = y;
-                y -= 20;
-            }
-            pnlCorEscolhida.Height = 0;
-        }
-
-        //Esconde verticalmente o body do colorpicker
-        private async void HideHorizontallyColorpickerBody()
-        {
-            int x = 313;
-            while (x > 0)
-            {
-                await Task.Delay(1);
-                pnlCorEscolhida.Width = x;
-                x -= 20;
-            }
-            pnlCorEscolhida.Width = 0;
-        }
 
         //Clicks que ocorrem ao selecionar uma cor
         private void escolhe_cor(object sender, EventArgs e)
@@ -213,10 +126,8 @@ namespace AcroniUI.CustomizingForms
             t_cor.add(pnlColor, "BackColor", p.BackColor);
             t_cor.run();
 
-            //desaparece_colorpicker();
-            __checkIfHideOrShow = 0;
-
             Color = p.BackColor;
+            //Será usado no kbtn_click
 
             if (__disponibilidade_pnlHistorico[0])
             {
@@ -238,9 +149,9 @@ namespace AcroniUI.CustomizingForms
             }
         }
 
-        private Color previousColor;
-        int checkIfItsFirstTime;
+        #region Hover para cada uma das cores do colorpicker
 
+<<<<<<< HEAD
         private void pnlColor_MouseMove(object sender, MouseEventArgs e)
         {
             if (checkIfItsFirstTime == 0)
@@ -253,18 +164,23 @@ namespace AcroniUI.CustomizingForms
             //        c.Visible = false;
             //}
             lblEscolherCores.Visible = true;
-
-        }
-
-        private void pnlColor_MouseLeave(object sender, EventArgs e)
-        {
-            pnlColor.BackColor = previousColor;
-            lblEscolherCores.Visible = false;
-        }
+=======
+        #endregion
+>>>>>>> a4d93412ca3f8ded539e3ecdebfd04b256d24464
 
         #endregion
 
-        #region Fontes das teclas
+        #region Fontes das teclas e texto
+
+        private void SetKeycapText(object sender, EventArgs e)
+        {
+            //KeycapTextModule keycapTextModule = new KeycapTextModule();
+            //Opacity = 0.1;
+            //keycapTextModule.ShowDialog();
+            //Kbtn kbtn = (Kbtn)sender;
+            //kbtn.Text = keycapTextModule.Maintext;
+        }
+
 
         #region Definição dos métodos de alinhamento
 
@@ -507,12 +423,12 @@ namespace AcroniUI.CustomizingForms
                     insertableArray.Add(ImageQueue.ToArray()[aux]);
                 }
             }
-            for (int i = 0; i < ImageQueue.Count; i++)
-                (pnlIcons.Controls[$"picBoxIcon{i + 1}"] as PictureBox).Image = insertableArray[i];
+            //for (int i = 0; i < ImageQueue.Count; i++)
+                //(pnlIcons.Controls[$"picBoxIcon{i + 1}"] as PictureBox).Image = insertableArray[i];
         }
 
         private void picIcons_Click(object sender, EventArgs e)
-        {
+        { 
             if (sender != null)
             {
                 PictureBox __icon = (PictureBox)sender;
@@ -520,8 +436,10 @@ namespace AcroniUI.CustomizingForms
                 HasChosenAIcon = true;
             }
         }
+
         #endregion
 
+<<<<<<< HEAD
         
 
         private void picBoxKeyboardBackground_Click(object sender, EventArgs e)
@@ -535,6 +453,12 @@ namespace AcroniUI.CustomizingForms
                 Controls.Find("fundo" + keybutton.Name, true)[0].BackColor = Color.FromArgb(90, keybutton.BackColor);
             }
             catch (Exception) { }
+=======
+        private void button1_MouseEnter(object sender, EventArgs e)
+        {
+            Button btnColor = (Button)sender;
+            btnColor.Size = new Size(btnColor.Width + 25, btnColor.Height + 25);
+>>>>>>> a4d93412ca3f8ded539e3ecdebfd04b256d24464
         }
     }
 }

@@ -87,23 +87,11 @@
     <Compile Include="ControlTeclado.Designer.cs">
       <DependentUpon>ControlTeclado.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomizingModules\KeycapTextModule.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CustomizingModules\KeycapTextModule.Designer.cs">
-      <DependentUpon>KeycapTextModule.cs</DependentUpon>
-    </Compile>
     <Compile Include="Kbtn.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Kbtn.Designer.cs">
       <DependentUpon>Kbtn.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CustomizingModules\KeycapParentModule.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CustomizingModules\KeycapParentModule.Designer.cs">
-      <DependentUpon>KeycapParentModule.cs</DependentUpon>
     </Compile>
     <Compile Include="MessageBoxSemInternet.cs">
       <SubType>Form</SubType>
@@ -147,12 +135,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TextboxWithPlaceholder.resx">
       <DependentUpon>TextboxWithPlaceholder.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CustomizingModules\KeycapParentModule.resx">
-      <DependentUpon>KeycapParentModule.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CustomizingModules\KeycapTextModule.resx">
-      <DependentUpon>KeycapTextModule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MessageBoxSemInternet.resx">
       <DependentUpon>MessageBoxSemInternet.cs</DependentUpon>

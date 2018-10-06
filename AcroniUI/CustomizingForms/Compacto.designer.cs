@@ -157,94 +157,96 @@ namespace AcroniUI.CustomizingForms
             this.btnHist2 = new System.Windows.Forms.Button();
             this.btnHist1 = new System.Windows.Forms.Button();
             this.btnColorChosen = new System.Windows.Forms.Button();
-            this.pnlCorEscolhida = new System.Windows.Forms.Panel();
-            this.Azul_Cinzento = new System.Windows.Forms.Panel();
-            this.Ambar = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pnlHistorico3 = new System.Windows.Forms.Panel();
-            this.pnlHistorico2 = new System.Windows.Forms.Panel();
-            this.Verde = new System.Windows.Forms.Panel();
-            this.Esmeralda = new System.Windows.Forms.Panel();
-            this.Verde_Claro = new System.Windows.Forms.Panel();
-            this.Cinza = new System.Windows.Forms.Panel();
-            this.Lima = new System.Windows.Forms.Panel();
-            this.Amarelo = new System.Windows.Forms.Panel();
-            this.Ciano = new System.Windows.Forms.Panel();
-            this.Laranja = new System.Windows.Forms.Panel();
-            this.Rosa = new System.Windows.Forms.Panel();
-            this.Roxo = new System.Windows.Forms.Panel();
-            this.Laranja_Escuro = new System.Windows.Forms.Panel();
-            this.Preto = new System.Windows.Forms.Panel();
-            this.Marrom = new System.Windows.Forms.Panel();
-            this.Roxo_Escuro = new System.Windows.Forms.Panel();
-            this.Azul = new System.Windows.Forms.Panel();
-            this.Vermelho = new System.Windows.Forms.Panel();
-            this.pnlHistorico1 = new System.Windows.Forms.Panel();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.picBoxKeyboardBackground = new System.Windows.Forms.PictureBox();
             this.pnlCustomizingMenu = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblDefinirParaTodasTeclas = new System.Windows.Forms.Label();
-            this.btnSizeSmall = new AcroniControls.StyleBtn();
-            this.btnSizeMedium = new AcroniControls.StyleBtn();
-            this.btnSizeBig = new AcroniControls.StyleBtn();
-            this.btnStyleStrikeout = new AcroniControls.StyleBtn();
-            this.btnStyleUnderline = new AcroniControls.StyleBtn();
-            this.btnStyleItalic = new AcroniControls.StyleBtn();
-            this.btnIcons = new AcroniControls.StyleBtn();
-            this.btnStyleBold = new AcroniControls.StyleBtn();
-            this.pnlIcons = new System.Windows.Forms.Panel();
-            this.picBoxIcon10 = new System.Windows.Forms.PictureBox();
-            this.picBoxIcon9 = new System.Windows.Forms.PictureBox();
-            this.picBoxIcon8 = new System.Windows.Forms.PictureBox();
-            this.picBoxIcon7 = new System.Windows.Forms.PictureBox();
-            this.picBoxIcon6 = new System.Windows.Forms.PictureBox();
-            this.picBoxIcon5 = new System.Windows.Forms.PictureBox();
-            this.picBoxIcon4 = new System.Windows.Forms.PictureBox();
-            this.picBoxIcon3 = new System.Windows.Forms.PictureBox();
-            this.picBoxIcon2 = new System.Windows.Forms.PictureBox();
-            this.picBoxIcon1 = new System.Windows.Forms.PictureBox();
             this.btnTextAlignRight = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnTextAlignCenter = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnTextAlignLeft = new Bunifu.Framework.UI.BunifuImageButton();
+            this.lblDefinirParaTodasTeclas = new System.Windows.Forms.Label();
+            this.btnStyleStrikeout = new AcroniControls.StyleBtn();
+            this.btnStyleUnderline = new AcroniControls.StyleBtn();
+            this.btnStyleItalic = new AcroniControls.StyleBtn();
+            this.btnStyleBold = new AcroniControls.StyleBtn();
+            this.btnOpenModuleSwitch = new AcroniControls.StyleBtn();
             this.cmbFontes = new System.Windows.Forms.ComboBox();
-            this.eColorpickerTrigger = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuElipse6 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuElipse7 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuElipse8 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuElipse9 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuElipse10 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.eBtnOpenModuleSwitch = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnOpenModuleBackground = new AcroniControls.StyleBtn();
+            this.btnOpenModuleTextIcons = new AcroniControls.StyleBtn();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.pnlHeadColorpicker = new System.Windows.Forms.Panel();
             this.lblColorName = new System.Windows.Forms.Label();
             this.pnlColor = new System.Windows.Forms.Panel();
             this.lblHexaColor = new System.Windows.Forms.Label();
+<<<<<<< HEAD
+=======
+            this.pnlHistorico1 = new System.Windows.Forms.Panel();
+            this.pnlHistorico2 = new System.Windows.Forms.Panel();
+            this.pnlHistorico3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnColorRed = new System.Windows.Forms.Button();
+            this.btnColorPink = new System.Windows.Forms.Button();
+            this.pnlCorEscolhida = new System.Windows.Forms.Panel();
+            this.button13 = new System.Windows.Forms.Button();
+            this.btnLime = new System.Windows.Forms.Button();
+            this.btnColorLime = new System.Windows.Forms.Button();
+            this.btnColorCloudley = new System.Windows.Forms.Button();
+            this.btnColorPurple = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.btnColorYellowey = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.btnColorBlue = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.btnColorGreen = new System.Windows.Forms.Button();
+            this.btnColorCyan = new System.Windows.Forms.Button();
+            this.btnColorDeepPurple = new System.Windows.Forms.Button();
+            this.ebtnOpenModuleTextIcons = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.ebtnOpenModuleBackground = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse6 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+>>>>>>> a4d93412ca3f8ded539e3ecdebfd04b256d24464
             this.pnlSuperior.SuspendLayout();
             this.pnlHistorico.SuspendLayout();
-            this.pnlCorEscolhida.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxKeyboardBackground)).BeginInit();
             this.pnlCustomizingMenu.SuspendLayout();
-            this.pnlIcons.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxIcon10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxIcon9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxIcon8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxIcon7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxIcon6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxIcon5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxIcon4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxIcon3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxIcon2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxIcon1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignRight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignCenter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignLeft)).BeginInit();
             this.panel1.SuspendLayout();
+<<<<<<< HEAD
+=======
+            this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
+>>>>>>> a4d93412ca3f8ded539e3ecdebfd04b256d24464
             this.pnlHeadColorpicker.SuspendLayout();
+            this.pnlCorEscolhida.SuspendLayout();
             this.SuspendLayout();
             // 
             // Cb1
@@ -271,7 +273,7 @@ namespace AcroniUI.CustomizingForms
             this.Cb3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cb3.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cb3.ForeColor = System.Drawing.Color.White;
-            this.Cb3.Location = new System.Drawing.Point(188, 308);
+            this.Cb3.Location = new System.Drawing.Point(179, 282);
             this.Cb3.Name = "Cb3";
             this.Cb3.Size = new System.Drawing.Size(38, 40);
             this.Cb3.TabIndex = 17;
@@ -289,7 +291,7 @@ namespace AcroniUI.CustomizingForms
             this.Cb4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cb4.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cb4.ForeColor = System.Drawing.Color.White;
-            this.Cb4.Location = new System.Drawing.Point(242, 308);
+            this.Cb4.Location = new System.Drawing.Point(233, 282);
             this.Cb4.Name = "Cb4";
             this.Cb4.Size = new System.Drawing.Size(38, 40);
             this.Cb4.TabIndex = 18;
@@ -307,7 +309,7 @@ namespace AcroniUI.CustomizingForms
             this.Cb5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cb5.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cb5.ForeColor = System.Drawing.Color.White;
-            this.Cb5.Location = new System.Drawing.Point(298, 308);
+            this.Cb5.Location = new System.Drawing.Point(289, 282);
             this.Cb5.Name = "Cb5";
             this.Cb5.Size = new System.Drawing.Size(38, 40);
             this.Cb5.TabIndex = 19;
@@ -325,7 +327,7 @@ namespace AcroniUI.CustomizingForms
             this.Cb6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cb6.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cb6.ForeColor = System.Drawing.Color.White;
-            this.Cb6.Location = new System.Drawing.Point(353, 308);
+            this.Cb6.Location = new System.Drawing.Point(344, 282);
             this.Cb6.Name = "Cb6";
             this.Cb6.Size = new System.Drawing.Size(38, 40);
             this.Cb6.TabIndex = 20;
@@ -343,7 +345,7 @@ namespace AcroniUI.CustomizingForms
             this.Cb7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cb7.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cb7.ForeColor = System.Drawing.Color.White;
-            this.Cb7.Location = new System.Drawing.Point(409, 308);
+            this.Cb7.Location = new System.Drawing.Point(400, 282);
             this.Cb7.Name = "Cb7";
             this.Cb7.Size = new System.Drawing.Size(38, 40);
             this.Cb7.TabIndex = 21;
@@ -361,7 +363,7 @@ namespace AcroniUI.CustomizingForms
             this.Cb8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cb8.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cb8.ForeColor = System.Drawing.Color.White;
-            this.Cb8.Location = new System.Drawing.Point(463, 308);
+            this.Cb8.Location = new System.Drawing.Point(454, 282);
             this.Cb8.Name = "Cb8";
             this.Cb8.Size = new System.Drawing.Size(38, 40);
             this.Cb8.TabIndex = 22;
@@ -379,7 +381,7 @@ namespace AcroniUI.CustomizingForms
             this.Cb9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cb9.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cb9.ForeColor = System.Drawing.Color.White;
-            this.Cb9.Location = new System.Drawing.Point(519, 307);
+            this.Cb9.Location = new System.Drawing.Point(510, 281);
             this.Cb9.Name = "Cb9";
             this.Cb9.Size = new System.Drawing.Size(38, 40);
             this.Cb9.TabIndex = 23;
@@ -397,7 +399,7 @@ namespace AcroniUI.CustomizingForms
             this.Cb10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cb10.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cb10.ForeColor = System.Drawing.Color.White;
-            this.Cb10.Location = new System.Drawing.Point(576, 308);
+            this.Cb10.Location = new System.Drawing.Point(567, 282);
             this.Cb10.Name = "Cb10";
             this.Cb10.Size = new System.Drawing.Size(38, 40);
             this.Cb10.TabIndex = 24;
@@ -415,7 +417,7 @@ namespace AcroniUI.CustomizingForms
             this.Cb11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cb11.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cb11.ForeColor = System.Drawing.Color.White;
-            this.Cb11.Location = new System.Drawing.Point(631, 308);
+            this.Cb11.Location = new System.Drawing.Point(622, 282);
             this.Cb11.Name = "Cb11";
             this.Cb11.Size = new System.Drawing.Size(38, 40);
             this.Cb11.TabIndex = 25;
@@ -433,7 +435,7 @@ namespace AcroniUI.CustomizingForms
             this.Cb12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cb12.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cb12.ForeColor = System.Drawing.Color.White;
-            this.Cb12.Location = new System.Drawing.Point(687, 308);
+            this.Cb12.Location = new System.Drawing.Point(678, 282);
             this.Cb12.Name = "Cb12";
             this.Cb12.Size = new System.Drawing.Size(38, 40);
             this.Cb12.TabIndex = 26;
@@ -451,7 +453,7 @@ namespace AcroniUI.CustomizingForms
             this.Cb13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cb13.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cb13.ForeColor = System.Drawing.Color.White;
-            this.Cb13.Location = new System.Drawing.Point(742, 308);
+            this.Cb13.Location = new System.Drawing.Point(733, 282);
             this.Cb13.Name = "Cb13";
             this.Cb13.Size = new System.Drawing.Size(38, 40);
             this.Cb13.TabIndex = 27;
@@ -469,7 +471,7 @@ namespace AcroniUI.CustomizingForms
             this.Cc2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cc2.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cc2.ForeColor = System.Drawing.Color.White;
-            this.Cc2.Location = new System.Drawing.Point(144, 367);
+            this.Cc2.Location = new System.Drawing.Point(135, 341);
             this.Cc2.Name = "Cc2";
             this.Cc2.Size = new System.Drawing.Size(38, 40);
             this.Cc2.TabIndex = 28;
@@ -487,7 +489,7 @@ namespace AcroniUI.CustomizingForms
             this.Cc3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cc3.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cc3.ForeColor = System.Drawing.Color.White;
-            this.Cc3.Location = new System.Drawing.Point(200, 367);
+            this.Cc3.Location = new System.Drawing.Point(191, 341);
             this.Cc3.Name = "Cc3";
             this.Cc3.Size = new System.Drawing.Size(38, 40);
             this.Cc3.TabIndex = 29;
@@ -505,7 +507,7 @@ namespace AcroniUI.CustomizingForms
             this.Cc4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cc4.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cc4.ForeColor = System.Drawing.Color.White;
-            this.Cc4.Location = new System.Drawing.Point(255, 367);
+            this.Cc4.Location = new System.Drawing.Point(246, 341);
             this.Cc4.Name = "Cc4";
             this.Cc4.Size = new System.Drawing.Size(38, 40);
             this.Cc4.TabIndex = 30;
@@ -523,7 +525,7 @@ namespace AcroniUI.CustomizingForms
             this.Cc5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cc5.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cc5.ForeColor = System.Drawing.Color.White;
-            this.Cc5.Location = new System.Drawing.Point(311, 367);
+            this.Cc5.Location = new System.Drawing.Point(302, 341);
             this.Cc5.Name = "Cc5";
             this.Cc5.Size = new System.Drawing.Size(38, 40);
             this.Cc5.TabIndex = 31;
@@ -541,7 +543,7 @@ namespace AcroniUI.CustomizingForms
             this.Cc6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cc6.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cc6.ForeColor = System.Drawing.Color.White;
-            this.Cc6.Location = new System.Drawing.Point(366, 367);
+            this.Cc6.Location = new System.Drawing.Point(357, 341);
             this.Cc6.Name = "Cc6";
             this.Cc6.Size = new System.Drawing.Size(38, 40);
             this.Cc6.TabIndex = 32;
@@ -559,7 +561,7 @@ namespace AcroniUI.CustomizingForms
             this.Cc7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cc7.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cc7.ForeColor = System.Drawing.Color.White;
-            this.Cc7.Location = new System.Drawing.Point(422, 367);
+            this.Cc7.Location = new System.Drawing.Point(413, 341);
             this.Cc7.Name = "Cc7";
             this.Cc7.Size = new System.Drawing.Size(38, 40);
             this.Cc7.TabIndex = 33;
@@ -577,7 +579,7 @@ namespace AcroniUI.CustomizingForms
             this.Cc8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cc8.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cc8.ForeColor = System.Drawing.Color.White;
-            this.Cc8.Location = new System.Drawing.Point(477, 367);
+            this.Cc8.Location = new System.Drawing.Point(468, 341);
             this.Cc8.Name = "Cc8";
             this.Cc8.Size = new System.Drawing.Size(38, 40);
             this.Cc8.TabIndex = 34;
@@ -595,7 +597,7 @@ namespace AcroniUI.CustomizingForms
             this.Cc9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cc9.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cc9.ForeColor = System.Drawing.Color.White;
-            this.Cc9.Location = new System.Drawing.Point(533, 367);
+            this.Cc9.Location = new System.Drawing.Point(524, 341);
             this.Cc9.Name = "Cc9";
             this.Cc9.Size = new System.Drawing.Size(38, 40);
             this.Cc9.TabIndex = 35;
@@ -613,7 +615,7 @@ namespace AcroniUI.CustomizingForms
             this.Cc10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cc10.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cc10.ForeColor = System.Drawing.Color.White;
-            this.Cc10.Location = new System.Drawing.Point(588, 367);
+            this.Cc10.Location = new System.Drawing.Point(579, 341);
             this.Cc10.Name = "Cc10";
             this.Cc10.Size = new System.Drawing.Size(38, 40);
             this.Cc10.TabIndex = 36;
@@ -631,7 +633,7 @@ namespace AcroniUI.CustomizingForms
             this.Cc11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cc11.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cc11.ForeColor = System.Drawing.Color.White;
-            this.Cc11.Location = new System.Drawing.Point(644, 367);
+            this.Cc11.Location = new System.Drawing.Point(635, 341);
             this.Cc11.Name = "Cc11";
             this.Cc11.Size = new System.Drawing.Size(38, 40);
             this.Cc11.TabIndex = 37;
@@ -649,7 +651,7 @@ namespace AcroniUI.CustomizingForms
             this.Cc12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cc12.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cc12.ForeColor = System.Drawing.Color.White;
-            this.Cc12.Location = new System.Drawing.Point(699, 367);
+            this.Cc12.Location = new System.Drawing.Point(690, 341);
             this.Cc12.Name = "Cc12";
             this.Cc12.Size = new System.Drawing.Size(38, 40);
             this.Cc12.TabIndex = 38;
@@ -667,7 +669,7 @@ namespace AcroniUI.CustomizingForms
             this.Cc13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cc13.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cc13.ForeColor = System.Drawing.Color.White;
-            this.Cc13.Location = new System.Drawing.Point(754, 367);
+            this.Cc13.Location = new System.Drawing.Point(745, 341);
             this.Cc13.Name = "Cc13";
             this.Cc13.Size = new System.Drawing.Size(38, 40);
             this.Cc13.TabIndex = 39;
@@ -685,7 +687,7 @@ namespace AcroniUI.CustomizingForms
             this.Cd2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cd2.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cd2.ForeColor = System.Drawing.Color.White;
-            this.Cd2.Location = new System.Drawing.Point(115, 425);
+            this.Cd2.Location = new System.Drawing.Point(106, 399);
             this.Cd2.Name = "Cd2";
             this.Cd2.Size = new System.Drawing.Size(38, 40);
             this.Cd2.TabIndex = 40;
@@ -703,7 +705,7 @@ namespace AcroniUI.CustomizingForms
             this.Cd3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cd3.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cd3.ForeColor = System.Drawing.Color.White;
-            this.Cd3.Location = new System.Drawing.Point(170, 425);
+            this.Cd3.Location = new System.Drawing.Point(161, 399);
             this.Cd3.Name = "Cd3";
             this.Cd3.Size = new System.Drawing.Size(38, 40);
             this.Cd3.TabIndex = 41;
@@ -721,7 +723,7 @@ namespace AcroniUI.CustomizingForms
             this.Cd4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cd4.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cd4.ForeColor = System.Drawing.Color.White;
-            this.Cd4.Location = new System.Drawing.Point(226, 425);
+            this.Cd4.Location = new System.Drawing.Point(217, 399);
             this.Cd4.Name = "Cd4";
             this.Cd4.Size = new System.Drawing.Size(38, 40);
             this.Cd4.TabIndex = 42;
@@ -739,7 +741,7 @@ namespace AcroniUI.CustomizingForms
             this.Cd5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cd5.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cd5.ForeColor = System.Drawing.Color.White;
-            this.Cd5.Location = new System.Drawing.Point(282, 425);
+            this.Cd5.Location = new System.Drawing.Point(273, 399);
             this.Cd5.Name = "Cd5";
             this.Cd5.Size = new System.Drawing.Size(38, 40);
             this.Cd5.TabIndex = 43;
@@ -757,7 +759,7 @@ namespace AcroniUI.CustomizingForms
             this.Cd6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cd6.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cd6.ForeColor = System.Drawing.Color.White;
-            this.Cd6.Location = new System.Drawing.Point(337, 425);
+            this.Cd6.Location = new System.Drawing.Point(328, 399);
             this.Cd6.Name = "Cd6";
             this.Cd6.Size = new System.Drawing.Size(38, 40);
             this.Cd6.TabIndex = 44;
@@ -775,7 +777,7 @@ namespace AcroniUI.CustomizingForms
             this.Cd7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cd7.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cd7.ForeColor = System.Drawing.Color.White;
-            this.Cd7.Location = new System.Drawing.Point(392, 425);
+            this.Cd7.Location = new System.Drawing.Point(383, 399);
             this.Cd7.Name = "Cd7";
             this.Cd7.Size = new System.Drawing.Size(38, 40);
             this.Cd7.TabIndex = 45;
@@ -793,7 +795,7 @@ namespace AcroniUI.CustomizingForms
             this.Cd8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cd8.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cd8.ForeColor = System.Drawing.Color.White;
-            this.Cd8.Location = new System.Drawing.Point(448, 425);
+            this.Cd8.Location = new System.Drawing.Point(439, 399);
             this.Cd8.Name = "Cd8";
             this.Cd8.Size = new System.Drawing.Size(38, 40);
             this.Cd8.TabIndex = 46;
@@ -811,7 +813,7 @@ namespace AcroniUI.CustomizingForms
             this.Cd9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cd9.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cd9.ForeColor = System.Drawing.Color.White;
-            this.Cd9.Location = new System.Drawing.Point(504, 425);
+            this.Cd9.Location = new System.Drawing.Point(495, 399);
             this.Cd9.Name = "Cd9";
             this.Cd9.Size = new System.Drawing.Size(38, 40);
             this.Cd9.TabIndex = 47;
@@ -829,7 +831,7 @@ namespace AcroniUI.CustomizingForms
             this.Cd10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cd10.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cd10.ForeColor = System.Drawing.Color.White;
-            this.Cd10.Location = new System.Drawing.Point(559, 425);
+            this.Cd10.Location = new System.Drawing.Point(550, 399);
             this.Cd10.Name = "Cd10";
             this.Cd10.Size = new System.Drawing.Size(38, 40);
             this.Cd10.TabIndex = 48;
@@ -847,7 +849,7 @@ namespace AcroniUI.CustomizingForms
             this.Cd11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cd11.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cd11.ForeColor = System.Drawing.Color.White;
-            this.Cd11.Location = new System.Drawing.Point(615, 425);
+            this.Cd11.Location = new System.Drawing.Point(606, 399);
             this.Cd11.Name = "Cd11";
             this.Cd11.Size = new System.Drawing.Size(38, 40);
             this.Cd11.TabIndex = 49;
@@ -865,7 +867,7 @@ namespace AcroniUI.CustomizingForms
             this.Cd12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cd12.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cd12.ForeColor = System.Drawing.Color.White;
-            this.Cd12.Location = new System.Drawing.Point(671, 425);
+            this.Cd12.Location = new System.Drawing.Point(662, 399);
             this.Cd12.Name = "Cd12";
             this.Cd12.Size = new System.Drawing.Size(38, 40);
             this.Cd12.TabIndex = 50;
@@ -883,7 +885,7 @@ namespace AcroniUI.CustomizingForms
             this.Cd13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cd13.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cd13.ForeColor = System.Drawing.Color.White;
-            this.Cd13.Location = new System.Drawing.Point(726, 425);
+            this.Cd13.Location = new System.Drawing.Point(717, 399);
             this.Cd13.Name = "Cd13";
             this.Cd13.Size = new System.Drawing.Size(38, 40);
             this.Cd13.TabIndex = 51;
@@ -901,7 +903,7 @@ namespace AcroniUI.CustomizingForms
             this.Cc1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cc1.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cc1.ForeColor = System.Drawing.Color.White;
-            this.Cc1.Location = new System.Drawing.Point(48, 367);
+            this.Cc1.Location = new System.Drawing.Point(39, 341);
             this.Cc1.Name = "Cc1";
             this.Cc1.Size = new System.Drawing.Size(78, 40);
             this.Cc1.TabIndex = 52;
@@ -919,7 +921,7 @@ namespace AcroniUI.CustomizingForms
             this.Cd1s.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cd1s.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cd1s.ForeColor = System.Drawing.Color.White;
-            this.Cd1s.Location = new System.Drawing.Point(47, 425);
+            this.Cd1s.Location = new System.Drawing.Point(38, 399);
             this.Cd1s.Name = "Cd1s";
             this.Cd1s.Size = new System.Drawing.Size(52, 40);
             this.Cd1s.TabIndex = 53;
@@ -937,7 +939,7 @@ namespace AcroniUI.CustomizingForms
             this.Ce1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ce1.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ce1.ForeColor = System.Drawing.Color.White;
-            this.Ce1.Location = new System.Drawing.Point(47, 483);
+            this.Ce1.Location = new System.Drawing.Point(38, 457);
             this.Ce1.Name = "Ce1";
             this.Ce1.Size = new System.Drawing.Size(64, 42);
             this.Ce1.TabIndex = 54;
@@ -955,7 +957,7 @@ namespace AcroniUI.CustomizingForms
             this.Ce2s.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ce2s.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ce2s.ForeColor = System.Drawing.Color.White;
-            this.Ce2s.Location = new System.Drawing.Point(128, 483);
+            this.Ce2s.Location = new System.Drawing.Point(119, 457);
             this.Ce2s.Name = "Ce2s";
             this.Ce2s.Size = new System.Drawing.Size(54, 42);
             this.Ce2s.TabIndex = 55;
@@ -973,7 +975,7 @@ namespace AcroniUI.CustomizingForms
             this.Ce4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ce4.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ce4.ForeColor = System.Drawing.Color.White;
-            this.Ce4.Location = new System.Drawing.Point(269, 483);
+            this.Ce4.Location = new System.Drawing.Point(260, 457);
             this.Ce4.Name = "Ce4";
             this.Ce4.Size = new System.Drawing.Size(304, 42);
             this.Ce4.TabIndex = 57;
@@ -991,7 +993,7 @@ namespace AcroniUI.CustomizingForms
             this.Ce6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ce6.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ce6.ForeColor = System.Drawing.Color.White;
-            this.Ce6.Location = new System.Drawing.Point(660, 483);
+            this.Ce6.Location = new System.Drawing.Point(651, 457);
             this.Ce6.Name = "Ce6";
             this.Ce6.Size = new System.Drawing.Size(52, 42);
             this.Ce6.TabIndex = 59;
@@ -1009,7 +1011,7 @@ namespace AcroniUI.CustomizingForms
             this.Ce5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ce5.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ce5.ForeColor = System.Drawing.Color.White;
-            this.Ce5.Location = new System.Drawing.Point(591, 483);
+            this.Ce5.Location = new System.Drawing.Point(582, 457);
             this.Ce5.Name = "Ce5";
             this.Ce5.Size = new System.Drawing.Size(52, 42);
             this.Ce5.TabIndex = 60;
@@ -1027,7 +1029,7 @@ namespace AcroniUI.CustomizingForms
             this.Ce3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ce3.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ce3.ForeColor = System.Drawing.Color.White;
-            this.Ce3.Location = new System.Drawing.Point(199, 483);
+            this.Ce3.Location = new System.Drawing.Point(190, 457);
             this.Ce3.Name = "Ce3";
             this.Ce3.Size = new System.Drawing.Size(52, 42);
             this.Ce3.TabIndex = 61;
@@ -1045,7 +1047,7 @@ namespace AcroniUI.CustomizingForms
             this.Ce7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ce7.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ce7.ForeColor = System.Drawing.Color.White;
-            this.Ce7.Location = new System.Drawing.Point(730, 483);
+            this.Ce7.Location = new System.Drawing.Point(721, 457);
             this.Ce7.Name = "Ce7";
             this.Ce7.Size = new System.Drawing.Size(52, 42);
             this.Ce7.TabIndex = 62;
@@ -1063,7 +1065,7 @@ namespace AcroniUI.CustomizingForms
             this.Ce8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ce8.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ce8.ForeColor = System.Drawing.Color.White;
-            this.Ce8.Location = new System.Drawing.Point(799, 483);
+            this.Ce8.Location = new System.Drawing.Point(790, 457);
             this.Ce8.Name = "Ce8";
             this.Ce8.Size = new System.Drawing.Size(64, 42);
             this.Ce8.TabIndex = 63;
@@ -1081,7 +1083,7 @@ namespace AcroniUI.CustomizingForms
             this.Cd14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cd14.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cd14.ForeColor = System.Drawing.Color.White;
-            this.Cd14.Location = new System.Drawing.Point(782, 425);
+            this.Cd14.Location = new System.Drawing.Point(773, 399);
             this.Cd14.Name = "Cd14";
             this.Cd14.Size = new System.Drawing.Size(80, 40);
             this.Cd14.TabIndex = 64;
@@ -1099,7 +1101,7 @@ namespace AcroniUI.CustomizingForms
             this.Ca1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ca1.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca1.ForeColor = System.Drawing.Color.White;
-            this.Ca1.Location = new System.Drawing.Point(48, 250);
+            this.Ca1.Location = new System.Drawing.Point(39, 224);
             this.Ca1.Name = "Ca1";
             this.Ca1.Size = new System.Drawing.Size(38, 40);
             this.Ca1.TabIndex = 65;
@@ -1117,7 +1119,7 @@ namespace AcroniUI.CustomizingForms
             this.Ca2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ca2.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca2.ForeColor = System.Drawing.Color.White;
-            this.Ca2.Location = new System.Drawing.Point(103, 250);
+            this.Ca2.Location = new System.Drawing.Point(94, 224);
             this.Ca2.Name = "Ca2";
             this.Ca2.Size = new System.Drawing.Size(38, 40);
             this.Ca2.TabIndex = 66;
@@ -1135,7 +1137,7 @@ namespace AcroniUI.CustomizingForms
             this.Ca3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ca3.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca3.ForeColor = System.Drawing.Color.White;
-            this.Ca3.Location = new System.Drawing.Point(159, 250);
+            this.Ca3.Location = new System.Drawing.Point(150, 224);
             this.Ca3.Name = "Ca3";
             this.Ca3.Size = new System.Drawing.Size(38, 40);
             this.Ca3.TabIndex = 67;
@@ -1153,7 +1155,7 @@ namespace AcroniUI.CustomizingForms
             this.Ca4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ca4.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca4.ForeColor = System.Drawing.Color.White;
-            this.Ca4.Location = new System.Drawing.Point(214, 250);
+            this.Ca4.Location = new System.Drawing.Point(205, 224);
             this.Ca4.Name = "Ca4";
             this.Ca4.Size = new System.Drawing.Size(38, 40);
             this.Ca4.TabIndex = 68;
@@ -1171,7 +1173,7 @@ namespace AcroniUI.CustomizingForms
             this.Ca5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ca5.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca5.ForeColor = System.Drawing.Color.White;
-            this.Ca5.Location = new System.Drawing.Point(270, 250);
+            this.Ca5.Location = new System.Drawing.Point(261, 224);
             this.Ca5.Name = "Ca5";
             this.Ca5.Size = new System.Drawing.Size(38, 40);
             this.Ca5.TabIndex = 69;
@@ -1189,7 +1191,7 @@ namespace AcroniUI.CustomizingForms
             this.Ca6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ca6.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca6.ForeColor = System.Drawing.Color.White;
-            this.Ca6.Location = new System.Drawing.Point(325, 250);
+            this.Ca6.Location = new System.Drawing.Point(316, 224);
             this.Ca6.Name = "Ca6";
             this.Ca6.Size = new System.Drawing.Size(38, 40);
             this.Ca6.TabIndex = 70;
@@ -1207,7 +1209,7 @@ namespace AcroniUI.CustomizingForms
             this.Ca7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ca7.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca7.ForeColor = System.Drawing.Color.White;
-            this.Ca7.Location = new System.Drawing.Point(381, 250);
+            this.Ca7.Location = new System.Drawing.Point(372, 224);
             this.Ca7.Name = "Ca7";
             this.Ca7.Size = new System.Drawing.Size(38, 40);
             this.Ca7.TabIndex = 71;
@@ -1225,7 +1227,7 @@ namespace AcroniUI.CustomizingForms
             this.Ca8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ca8.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca8.ForeColor = System.Drawing.Color.White;
-            this.Ca8.Location = new System.Drawing.Point(437, 250);
+            this.Ca8.Location = new System.Drawing.Point(428, 224);
             this.Ca8.Name = "Ca8";
             this.Ca8.Size = new System.Drawing.Size(38, 40);
             this.Ca8.TabIndex = 72;
@@ -1243,7 +1245,7 @@ namespace AcroniUI.CustomizingForms
             this.Ca9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ca9.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca9.ForeColor = System.Drawing.Color.White;
-            this.Ca9.Location = new System.Drawing.Point(492, 250);
+            this.Ca9.Location = new System.Drawing.Point(483, 224);
             this.Ca9.Name = "Ca9";
             this.Ca9.Size = new System.Drawing.Size(38, 40);
             this.Ca9.TabIndex = 73;
@@ -1261,7 +1263,7 @@ namespace AcroniUI.CustomizingForms
             this.Ca10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ca10.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca10.ForeColor = System.Drawing.Color.White;
-            this.Ca10.Location = new System.Drawing.Point(548, 250);
+            this.Ca10.Location = new System.Drawing.Point(539, 224);
             this.Ca10.Name = "Ca10";
             this.Ca10.Size = new System.Drawing.Size(38, 40);
             this.Ca10.TabIndex = 74;
@@ -1279,7 +1281,7 @@ namespace AcroniUI.CustomizingForms
             this.Ca11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ca11.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca11.ForeColor = System.Drawing.Color.White;
-            this.Ca11.Location = new System.Drawing.Point(604, 250);
+            this.Ca11.Location = new System.Drawing.Point(595, 224);
             this.Ca11.Name = "Ca11";
             this.Ca11.Size = new System.Drawing.Size(38, 40);
             this.Ca11.TabIndex = 75;
@@ -1297,7 +1299,7 @@ namespace AcroniUI.CustomizingForms
             this.Ca12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ca12.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca12.ForeColor = System.Drawing.Color.White;
-            this.Ca12.Location = new System.Drawing.Point(659, 250);
+            this.Ca12.Location = new System.Drawing.Point(650, 224);
             this.Ca12.Name = "Ca12";
             this.Ca12.Size = new System.Drawing.Size(38, 40);
             this.Ca12.TabIndex = 76;
@@ -1315,7 +1317,7 @@ namespace AcroniUI.CustomizingForms
             this.Ca13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ca13.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca13.ForeColor = System.Drawing.Color.White;
-            this.Ca13.Location = new System.Drawing.Point(714, 250);
+            this.Ca13.Location = new System.Drawing.Point(705, 224);
             this.Ca13.Name = "Ca13";
             this.Ca13.Size = new System.Drawing.Size(38, 40);
             this.Ca13.TabIndex = 77;
@@ -1333,7 +1335,7 @@ namespace AcroniUI.CustomizingForms
             this.Ca14s.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ca14s.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca14s.ForeColor = System.Drawing.Color.White;
-            this.Ca14s.Location = new System.Drawing.Point(769, 249);
+            this.Ca14s.Location = new System.Drawing.Point(760, 223);
             this.Ca14s.Name = "Ca14s";
             this.Ca14s.Size = new System.Drawing.Size(94, 40);
             this.Ca14s.TabIndex = 78;
@@ -1351,7 +1353,7 @@ namespace AcroniUI.CustomizingForms
             this.Cb2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cb2.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cb2.ForeColor = System.Drawing.Color.White;
-            this.Cb2.Location = new System.Drawing.Point(131, 308);
+            this.Cb2.Location = new System.Drawing.Point(122, 282);
             this.Cb2.Name = "Cb2";
             this.Cb2.Size = new System.Drawing.Size(38, 40);
             this.Cb2.TabIndex = 79;
@@ -1369,7 +1371,7 @@ namespace AcroniUI.CustomizingForms
             this.Cb1s.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cb1s.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cb1s.ForeColor = System.Drawing.Color.White;
-            this.Cb1s.Location = new System.Drawing.Point(49, 307);
+            this.Cb1s.Location = new System.Drawing.Point(40, 281);
             this.Cb1s.Name = "Cb1s";
             this.Cb1s.Size = new System.Drawing.Size(64, 42);
             this.Cb1s.TabIndex = 80;
@@ -1382,7 +1384,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCa1
             // 
             this.fundoCa1.BackColor = System.Drawing.Color.Black;
-            this.fundoCa1.Location = new System.Drawing.Point(41, 245);
+            this.fundoCa1.Location = new System.Drawing.Point(32, 219);
             this.fundoCa1.Name = "fundoCa1";
             this.fundoCa1.Size = new System.Drawing.Size(52, 56);
             this.fundoCa1.TabIndex = 0;
@@ -1390,7 +1392,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCa2
             // 
             this.fundoCa2.BackColor = System.Drawing.Color.Black;
-            this.fundoCa2.Location = new System.Drawing.Point(96, 245);
+            this.fundoCa2.Location = new System.Drawing.Point(87, 219);
             this.fundoCa2.Name = "fundoCa2";
             this.fundoCa2.Size = new System.Drawing.Size(52, 56);
             this.fundoCa2.TabIndex = 1;
@@ -1398,7 +1400,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCa3
             // 
             this.fundoCa3.BackColor = System.Drawing.Color.Black;
-            this.fundoCa3.Location = new System.Drawing.Point(152, 245);
+            this.fundoCa3.Location = new System.Drawing.Point(143, 219);
             this.fundoCa3.Name = "fundoCa3";
             this.fundoCa3.Size = new System.Drawing.Size(52, 56);
             this.fundoCa3.TabIndex = 1;
@@ -1406,7 +1408,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCa4
             // 
             this.fundoCa4.BackColor = System.Drawing.Color.Black;
-            this.fundoCa4.Location = new System.Drawing.Point(207, 245);
+            this.fundoCa4.Location = new System.Drawing.Point(198, 219);
             this.fundoCa4.Name = "fundoCa4";
             this.fundoCa4.Size = new System.Drawing.Size(52, 56);
             this.fundoCa4.TabIndex = 2;
@@ -1414,7 +1416,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCa5
             // 
             this.fundoCa5.BackColor = System.Drawing.Color.Black;
-            this.fundoCa5.Location = new System.Drawing.Point(263, 245);
+            this.fundoCa5.Location = new System.Drawing.Point(254, 219);
             this.fundoCa5.Name = "fundoCa5";
             this.fundoCa5.Size = new System.Drawing.Size(52, 56);
             this.fundoCa5.TabIndex = 3;
@@ -1422,7 +1424,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCa6
             // 
             this.fundoCa6.BackColor = System.Drawing.Color.Black;
-            this.fundoCa6.Location = new System.Drawing.Point(318, 245);
+            this.fundoCa6.Location = new System.Drawing.Point(309, 219);
             this.fundoCa6.Name = "fundoCa6";
             this.fundoCa6.Size = new System.Drawing.Size(52, 56);
             this.fundoCa6.TabIndex = 4;
@@ -1430,7 +1432,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCa7
             // 
             this.fundoCa7.BackColor = System.Drawing.Color.Black;
-            this.fundoCa7.Location = new System.Drawing.Point(374, 245);
+            this.fundoCa7.Location = new System.Drawing.Point(365, 219);
             this.fundoCa7.Name = "fundoCa7";
             this.fundoCa7.Size = new System.Drawing.Size(52, 56);
             this.fundoCa7.TabIndex = 2;
@@ -1438,7 +1440,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCa8
             // 
             this.fundoCa8.BackColor = System.Drawing.Color.Black;
-            this.fundoCa8.Location = new System.Drawing.Point(430, 245);
+            this.fundoCa8.Location = new System.Drawing.Point(421, 219);
             this.fundoCa8.Name = "fundoCa8";
             this.fundoCa8.Size = new System.Drawing.Size(52, 56);
             this.fundoCa8.TabIndex = 3;
@@ -1446,7 +1448,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCa9
             // 
             this.fundoCa9.BackColor = System.Drawing.Color.Black;
-            this.fundoCa9.Location = new System.Drawing.Point(485, 245);
+            this.fundoCa9.Location = new System.Drawing.Point(476, 219);
             this.fundoCa9.Name = "fundoCa9";
             this.fundoCa9.Size = new System.Drawing.Size(52, 56);
             this.fundoCa9.TabIndex = 4;
@@ -1454,7 +1456,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCa10
             // 
             this.fundoCa10.BackColor = System.Drawing.Color.Black;
-            this.fundoCa10.Location = new System.Drawing.Point(541, 245);
+            this.fundoCa10.Location = new System.Drawing.Point(532, 219);
             this.fundoCa10.Name = "fundoCa10";
             this.fundoCa10.Size = new System.Drawing.Size(52, 56);
             this.fundoCa10.TabIndex = 5;
@@ -1462,7 +1464,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCa11
             // 
             this.fundoCa11.BackColor = System.Drawing.Color.Black;
-            this.fundoCa11.Location = new System.Drawing.Point(597, 245);
+            this.fundoCa11.Location = new System.Drawing.Point(588, 219);
             this.fundoCa11.Name = "fundoCa11";
             this.fundoCa11.Size = new System.Drawing.Size(52, 56);
             this.fundoCa11.TabIndex = 6;
@@ -1470,7 +1472,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCa12
             // 
             this.fundoCa12.BackColor = System.Drawing.Color.Black;
-            this.fundoCa12.Location = new System.Drawing.Point(652, 245);
+            this.fundoCa12.Location = new System.Drawing.Point(643, 219);
             this.fundoCa12.Name = "fundoCa12";
             this.fundoCa12.Size = new System.Drawing.Size(52, 56);
             this.fundoCa12.TabIndex = 7;
@@ -1478,7 +1480,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCa13
             // 
             this.fundoCa13.BackColor = System.Drawing.Color.Black;
-            this.fundoCa13.Location = new System.Drawing.Point(707, 245);
+            this.fundoCa13.Location = new System.Drawing.Point(698, 219);
             this.fundoCa13.Name = "fundoCa13";
             this.fundoCa13.Size = new System.Drawing.Size(52, 56);
             this.fundoCa13.TabIndex = 8;
@@ -1486,7 +1488,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCb2
             // 
             this.fundoCb2.BackColor = System.Drawing.Color.Black;
-            this.fundoCb2.Location = new System.Drawing.Point(124, 303);
+            this.fundoCb2.Location = new System.Drawing.Point(115, 277);
             this.fundoCb2.Name = "fundoCb2";
             this.fundoCb2.Size = new System.Drawing.Size(52, 56);
             this.fundoCb2.TabIndex = 9;
@@ -1494,7 +1496,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCb3
             // 
             this.fundoCb3.BackColor = System.Drawing.Color.Black;
-            this.fundoCb3.Location = new System.Drawing.Point(181, 303);
+            this.fundoCb3.Location = new System.Drawing.Point(172, 277);
             this.fundoCb3.Name = "fundoCb3";
             this.fundoCb3.Size = new System.Drawing.Size(52, 56);
             this.fundoCb3.TabIndex = 10;
@@ -1502,7 +1504,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCb4
             // 
             this.fundoCb4.BackColor = System.Drawing.Color.Black;
-            this.fundoCb4.Location = new System.Drawing.Point(235, 303);
+            this.fundoCb4.Location = new System.Drawing.Point(226, 277);
             this.fundoCb4.Name = "fundoCb4";
             this.fundoCb4.Size = new System.Drawing.Size(52, 56);
             this.fundoCb4.TabIndex = 11;
@@ -1510,7 +1512,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCb5
             // 
             this.fundoCb5.BackColor = System.Drawing.Color.Black;
-            this.fundoCb5.Location = new System.Drawing.Point(291, 303);
+            this.fundoCb5.Location = new System.Drawing.Point(282, 277);
             this.fundoCb5.Name = "fundoCb5";
             this.fundoCb5.Size = new System.Drawing.Size(52, 56);
             this.fundoCb5.TabIndex = 13;
@@ -1518,7 +1520,11 @@ namespace AcroniUI.CustomizingForms
             // fundoCb6
             // 
             this.fundoCb6.BackColor = System.Drawing.Color.Black;
+<<<<<<< HEAD
             this.fundoCb6.Location = new System.Drawing.Point(346, 303);
+=======
+            this.fundoCb6.Location = new System.Drawing.Point(337, 277);
+>>>>>>> a4d93412ca3f8ded539e3ecdebfd04b256d24464
             this.fundoCb6.Name = "fundoCb6";
             this.fundoCb6.Size = new System.Drawing.Size(52, 56);
             this.fundoCb6.TabIndex = 15;
@@ -1539,7 +1545,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCb7
             // 
             this.fundoCb7.BackColor = System.Drawing.Color.Black;
-            this.fundoCb7.Location = new System.Drawing.Point(402, 303);
+            this.fundoCb7.Location = new System.Drawing.Point(393, 277);
             this.fundoCb7.Name = "fundoCb7";
             this.fundoCb7.Size = new System.Drawing.Size(52, 56);
             this.fundoCb7.TabIndex = 12;
@@ -1547,7 +1553,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCb8
             // 
             this.fundoCb8.BackColor = System.Drawing.Color.Black;
-            this.fundoCb8.Location = new System.Drawing.Point(456, 303);
+            this.fundoCb8.Location = new System.Drawing.Point(447, 277);
             this.fundoCb8.Name = "fundoCb8";
             this.fundoCb8.Size = new System.Drawing.Size(52, 56);
             this.fundoCb8.TabIndex = 14;
@@ -1555,7 +1561,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCb9
             // 
             this.fundoCb9.BackColor = System.Drawing.Color.Black;
-            this.fundoCb9.Location = new System.Drawing.Point(512, 303);
+            this.fundoCb9.Location = new System.Drawing.Point(503, 277);
             this.fundoCb9.Name = "fundoCb9";
             this.fundoCb9.Size = new System.Drawing.Size(52, 56);
             this.fundoCb9.TabIndex = 16;
@@ -1563,7 +1569,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCb10
             // 
             this.fundoCb10.BackColor = System.Drawing.Color.Black;
-            this.fundoCb10.Location = new System.Drawing.Point(569, 303);
+            this.fundoCb10.Location = new System.Drawing.Point(560, 277);
             this.fundoCb10.Name = "fundoCb10";
             this.fundoCb10.Size = new System.Drawing.Size(52, 56);
             this.fundoCb10.TabIndex = 17;
@@ -1571,7 +1577,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCb11
             // 
             this.fundoCb11.BackColor = System.Drawing.Color.Black;
-            this.fundoCb11.Location = new System.Drawing.Point(624, 303);
+            this.fundoCb11.Location = new System.Drawing.Point(615, 277);
             this.fundoCb11.Name = "fundoCb11";
             this.fundoCb11.Size = new System.Drawing.Size(52, 56);
             this.fundoCb11.TabIndex = 18;
@@ -1579,7 +1585,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCb12
             // 
             this.fundoCb12.BackColor = System.Drawing.Color.Black;
-            this.fundoCb12.Location = new System.Drawing.Point(680, 303);
+            this.fundoCb12.Location = new System.Drawing.Point(671, 277);
             this.fundoCb12.Name = "fundoCb12";
             this.fundoCb12.Size = new System.Drawing.Size(52, 56);
             this.fundoCb12.TabIndex = 19;
@@ -1587,7 +1593,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCb13
             // 
             this.fundoCb13.BackColor = System.Drawing.Color.Black;
-            this.fundoCb13.Location = new System.Drawing.Point(735, 303);
+            this.fundoCb13.Location = new System.Drawing.Point(726, 277);
             this.fundoCb13.Name = "fundoCb13";
             this.fundoCb13.Size = new System.Drawing.Size(52, 56);
             this.fundoCb13.TabIndex = 20;
@@ -1595,7 +1601,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCc2
             // 
             this.fundoCc2.BackColor = System.Drawing.Color.Black;
-            this.fundoCc2.Location = new System.Drawing.Point(137, 362);
+            this.fundoCc2.Location = new System.Drawing.Point(128, 336);
             this.fundoCc2.Name = "fundoCc2";
             this.fundoCc2.Size = new System.Drawing.Size(52, 56);
             this.fundoCc2.TabIndex = 21;
@@ -1603,7 +1609,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCc3
             // 
             this.fundoCc3.BackColor = System.Drawing.Color.Black;
-            this.fundoCc3.Location = new System.Drawing.Point(193, 362);
+            this.fundoCc3.Location = new System.Drawing.Point(184, 336);
             this.fundoCc3.Name = "fundoCc3";
             this.fundoCc3.Size = new System.Drawing.Size(52, 56);
             this.fundoCc3.TabIndex = 22;
@@ -1611,7 +1617,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCc4
             // 
             this.fundoCc4.BackColor = System.Drawing.Color.Black;
-            this.fundoCc4.Location = new System.Drawing.Point(248, 362);
+            this.fundoCc4.Location = new System.Drawing.Point(239, 336);
             this.fundoCc4.Name = "fundoCc4";
             this.fundoCc4.Size = new System.Drawing.Size(52, 56);
             this.fundoCc4.TabIndex = 23;
@@ -1619,7 +1625,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCc5
             // 
             this.fundoCc5.BackColor = System.Drawing.Color.Black;
-            this.fundoCc5.Location = new System.Drawing.Point(304, 362);
+            this.fundoCc5.Location = new System.Drawing.Point(295, 336);
             this.fundoCc5.Name = "fundoCc5";
             this.fundoCc5.Size = new System.Drawing.Size(52, 56);
             this.fundoCc5.TabIndex = 25;
@@ -1627,7 +1633,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCc6
             // 
             this.fundoCc6.BackColor = System.Drawing.Color.Black;
-            this.fundoCc6.Location = new System.Drawing.Point(359, 362);
+            this.fundoCc6.Location = new System.Drawing.Point(350, 336);
             this.fundoCc6.Name = "fundoCc6";
             this.fundoCc6.Size = new System.Drawing.Size(52, 56);
             this.fundoCc6.TabIndex = 27;
@@ -1635,7 +1641,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCc7
             // 
             this.fundoCc7.BackColor = System.Drawing.Color.Black;
-            this.fundoCc7.Location = new System.Drawing.Point(415, 362);
+            this.fundoCc7.Location = new System.Drawing.Point(406, 336);
             this.fundoCc7.Name = "fundoCc7";
             this.fundoCc7.Size = new System.Drawing.Size(52, 56);
             this.fundoCc7.TabIndex = 24;
@@ -1643,7 +1649,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCc8
             // 
             this.fundoCc8.BackColor = System.Drawing.Color.Black;
-            this.fundoCc8.Location = new System.Drawing.Point(470, 362);
+            this.fundoCc8.Location = new System.Drawing.Point(461, 336);
             this.fundoCc8.Name = "fundoCc8";
             this.fundoCc8.Size = new System.Drawing.Size(52, 56);
             this.fundoCc8.TabIndex = 26;
@@ -1651,7 +1657,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCc9
             // 
             this.fundoCc9.BackColor = System.Drawing.Color.Black;
-            this.fundoCc9.Location = new System.Drawing.Point(526, 362);
+            this.fundoCc9.Location = new System.Drawing.Point(517, 336);
             this.fundoCc9.Name = "fundoCc9";
             this.fundoCc9.Size = new System.Drawing.Size(52, 56);
             this.fundoCc9.TabIndex = 28;
@@ -1659,7 +1665,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCc10
             // 
             this.fundoCc10.BackColor = System.Drawing.Color.Black;
-            this.fundoCc10.Location = new System.Drawing.Point(581, 362);
+            this.fundoCc10.Location = new System.Drawing.Point(572, 336);
             this.fundoCc10.Name = "fundoCc10";
             this.fundoCc10.Size = new System.Drawing.Size(52, 56);
             this.fundoCc10.TabIndex = 29;
@@ -1667,7 +1673,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCc11
             // 
             this.fundoCc11.BackColor = System.Drawing.Color.Black;
-            this.fundoCc11.Location = new System.Drawing.Point(637, 362);
+            this.fundoCc11.Location = new System.Drawing.Point(628, 336);
             this.fundoCc11.Name = "fundoCc11";
             this.fundoCc11.Size = new System.Drawing.Size(52, 56);
             this.fundoCc11.TabIndex = 30;
@@ -1675,7 +1681,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCc12
             // 
             this.fundoCc12.BackColor = System.Drawing.Color.Black;
-            this.fundoCc12.Location = new System.Drawing.Point(692, 362);
+            this.fundoCc12.Location = new System.Drawing.Point(683, 336);
             this.fundoCc12.Name = "fundoCc12";
             this.fundoCc12.Size = new System.Drawing.Size(52, 56);
             this.fundoCc12.TabIndex = 31;
@@ -1683,7 +1689,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCc13
             // 
             this.fundoCc13.BackColor = System.Drawing.Color.Black;
-            this.fundoCc13.Location = new System.Drawing.Point(747, 362);
+            this.fundoCc13.Location = new System.Drawing.Point(738, 336);
             this.fundoCc13.Name = "fundoCc13";
             this.fundoCc13.Size = new System.Drawing.Size(52, 56);
             this.fundoCc13.TabIndex = 32;
@@ -1691,7 +1697,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCd2
             // 
             this.fundoCd2.BackColor = System.Drawing.Color.Black;
-            this.fundoCd2.Location = new System.Drawing.Point(108, 420);
+            this.fundoCd2.Location = new System.Drawing.Point(99, 394);
             this.fundoCd2.Name = "fundoCd2";
             this.fundoCd2.Size = new System.Drawing.Size(52, 56);
             this.fundoCd2.TabIndex = 33;
@@ -1699,7 +1705,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCd3
             // 
             this.fundoCd3.BackColor = System.Drawing.Color.Black;
-            this.fundoCd3.Location = new System.Drawing.Point(163, 420);
+            this.fundoCd3.Location = new System.Drawing.Point(154, 394);
             this.fundoCd3.Name = "fundoCd3";
             this.fundoCd3.Size = new System.Drawing.Size(52, 56);
             this.fundoCd3.TabIndex = 34;
@@ -1707,7 +1713,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCd4
             // 
             this.fundoCd4.BackColor = System.Drawing.Color.Black;
-            this.fundoCd4.Location = new System.Drawing.Point(219, 420);
+            this.fundoCd4.Location = new System.Drawing.Point(210, 394);
             this.fundoCd4.Name = "fundoCd4";
             this.fundoCd4.Size = new System.Drawing.Size(52, 56);
             this.fundoCd4.TabIndex = 35;
@@ -1715,7 +1721,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCd5
             // 
             this.fundoCd5.BackColor = System.Drawing.Color.Black;
-            this.fundoCd5.Location = new System.Drawing.Point(275, 420);
+            this.fundoCd5.Location = new System.Drawing.Point(266, 394);
             this.fundoCd5.Name = "fundoCd5";
             this.fundoCd5.Size = new System.Drawing.Size(52, 56);
             this.fundoCd5.TabIndex = 37;
@@ -1723,7 +1729,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCd6
             // 
             this.fundoCd6.BackColor = System.Drawing.Color.Black;
-            this.fundoCd6.Location = new System.Drawing.Point(330, 420);
+            this.fundoCd6.Location = new System.Drawing.Point(321, 394);
             this.fundoCd6.Name = "fundoCd6";
             this.fundoCd6.Size = new System.Drawing.Size(52, 56);
             this.fundoCd6.TabIndex = 39;
@@ -1731,7 +1737,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCd7
             // 
             this.fundoCd7.BackColor = System.Drawing.Color.Black;
-            this.fundoCd7.Location = new System.Drawing.Point(385, 420);
+            this.fundoCd7.Location = new System.Drawing.Point(376, 394);
             this.fundoCd7.Name = "fundoCd7";
             this.fundoCd7.Size = new System.Drawing.Size(52, 56);
             this.fundoCd7.TabIndex = 36;
@@ -1739,7 +1745,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCe5
             // 
             this.fundoCe5.BackColor = System.Drawing.Color.Black;
-            this.fundoCe5.Location = new System.Drawing.Point(585, 478);
+            this.fundoCe5.Location = new System.Drawing.Point(576, 452);
             this.fundoCe5.Name = "fundoCe5";
             this.fundoCe5.Size = new System.Drawing.Size(64, 56);
             this.fundoCe5.TabIndex = 48;
@@ -1747,7 +1753,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCd8
             // 
             this.fundoCd8.BackColor = System.Drawing.Color.Black;
-            this.fundoCd8.Location = new System.Drawing.Point(441, 420);
+            this.fundoCd8.Location = new System.Drawing.Point(432, 394);
             this.fundoCd8.Name = "fundoCd8";
             this.fundoCd8.Size = new System.Drawing.Size(52, 56);
             this.fundoCd8.TabIndex = 38;
@@ -1755,7 +1761,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCd9
             // 
             this.fundoCd9.BackColor = System.Drawing.Color.Black;
-            this.fundoCd9.Location = new System.Drawing.Point(497, 420);
+            this.fundoCd9.Location = new System.Drawing.Point(488, 394);
             this.fundoCd9.Name = "fundoCd9";
             this.fundoCd9.Size = new System.Drawing.Size(52, 56);
             this.fundoCd9.TabIndex = 40;
@@ -1763,7 +1769,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCd10
             // 
             this.fundoCd10.BackColor = System.Drawing.Color.Black;
-            this.fundoCd10.Location = new System.Drawing.Point(552, 420);
+            this.fundoCd10.Location = new System.Drawing.Point(543, 394);
             this.fundoCd10.Name = "fundoCd10";
             this.fundoCd10.Size = new System.Drawing.Size(52, 56);
             this.fundoCd10.TabIndex = 41;
@@ -1771,7 +1777,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCd11
             // 
             this.fundoCd11.BackColor = System.Drawing.Color.Black;
-            this.fundoCd11.Location = new System.Drawing.Point(608, 420);
+            this.fundoCd11.Location = new System.Drawing.Point(599, 394);
             this.fundoCd11.Name = "fundoCd11";
             this.fundoCd11.Size = new System.Drawing.Size(52, 56);
             this.fundoCd11.TabIndex = 42;
@@ -1779,7 +1785,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCd12
             // 
             this.fundoCd12.BackColor = System.Drawing.Color.Black;
-            this.fundoCd12.Location = new System.Drawing.Point(664, 420);
+            this.fundoCd12.Location = new System.Drawing.Point(655, 394);
             this.fundoCd12.Name = "fundoCd12";
             this.fundoCd12.Size = new System.Drawing.Size(52, 56);
             this.fundoCd12.TabIndex = 43;
@@ -1787,7 +1793,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCd13
             // 
             this.fundoCd13.BackColor = System.Drawing.Color.Black;
-            this.fundoCd13.Location = new System.Drawing.Point(719, 420);
+            this.fundoCd13.Location = new System.Drawing.Point(710, 394);
             this.fundoCd13.Name = "fundoCd13";
             this.fundoCd13.Size = new System.Drawing.Size(52, 56);
             this.fundoCd13.TabIndex = 44;
@@ -1795,7 +1801,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCe6
             // 
             this.fundoCe6.BackColor = System.Drawing.Color.Black;
-            this.fundoCe6.Location = new System.Drawing.Point(654, 478);
+            this.fundoCe6.Location = new System.Drawing.Point(645, 452);
             this.fundoCe6.Name = "fundoCe6";
             this.fundoCe6.Size = new System.Drawing.Size(64, 56);
             this.fundoCe6.TabIndex = 46;
@@ -1803,7 +1809,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCe7
             // 
             this.fundoCe7.BackColor = System.Drawing.Color.Black;
-            this.fundoCe7.Location = new System.Drawing.Point(724, 478);
+            this.fundoCe7.Location = new System.Drawing.Point(715, 452);
             this.fundoCe7.Name = "fundoCe7";
             this.fundoCe7.Size = new System.Drawing.Size(64, 56);
             this.fundoCe7.TabIndex = 47;
@@ -1811,7 +1817,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCe2s
             // 
             this.fundoCe2s.BackColor = System.Drawing.Color.Black;
-            this.fundoCe2s.Location = new System.Drawing.Point(122, 478);
+            this.fundoCe2s.Location = new System.Drawing.Point(113, 452);
             this.fundoCe2s.Name = "fundoCe2s";
             this.fundoCe2s.Size = new System.Drawing.Size(66, 56);
             this.fundoCe2s.TabIndex = 49;
@@ -1819,7 +1825,7 @@ namespace AcroniUI.CustomizingForms
             // fundoCe3
             // 
             this.fundoCe3.BackColor = System.Drawing.Color.Black;
-            this.fundoCe3.Location = new System.Drawing.Point(192, 478);
+            this.fundoCe3.Location = new System.Drawing.Point(183, 452);
             this.fundoCe3.Name = "fundoCe3";
             this.fundoCe3.Size = new System.Drawing.Size(66, 56);
             this.fundoCe3.TabIndex = 50;
@@ -1869,281 +1875,25 @@ namespace AcroniUI.CustomizingForms
             this.btnColorChosen.Size = new System.Drawing.Size(75, 23);
             this.btnColorChosen.TabIndex = 49;
             // 
-            // pnlCorEscolhida
-            // 
-            this.pnlCorEscolhida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(48)))), ((int)(((byte)(54)))));
-            this.pnlCorEscolhida.Controls.Add(this.Azul_Cinzento);
-            this.pnlCorEscolhida.Controls.Add(this.Ambar);
-            this.pnlCorEscolhida.Controls.Add(this.panel2);
-            this.pnlCorEscolhida.Controls.Add(this.pnlHistorico3);
-            this.pnlCorEscolhida.Controls.Add(this.pnlHistorico2);
-            this.pnlCorEscolhida.Controls.Add(this.Verde);
-            this.pnlCorEscolhida.Controls.Add(this.Esmeralda);
-            this.pnlCorEscolhida.Controls.Add(this.Verde_Claro);
-            this.pnlCorEscolhida.Controls.Add(this.Cinza);
-            this.pnlCorEscolhida.Controls.Add(this.Lima);
-            this.pnlCorEscolhida.Controls.Add(this.Amarelo);
-            this.pnlCorEscolhida.Controls.Add(this.Ciano);
-            this.pnlCorEscolhida.Controls.Add(this.Laranja);
-            this.pnlCorEscolhida.Controls.Add(this.Rosa);
-            this.pnlCorEscolhida.Controls.Add(this.Roxo);
-            this.pnlCorEscolhida.Controls.Add(this.Laranja_Escuro);
-            this.pnlCorEscolhida.Controls.Add(this.Preto);
-            this.pnlCorEscolhida.Controls.Add(this.Marrom);
-            this.pnlCorEscolhida.Controls.Add(this.Roxo_Escuro);
-            this.pnlCorEscolhida.Controls.Add(this.Azul);
-            this.pnlCorEscolhida.Controls.Add(this.Vermelho);
-            this.pnlCorEscolhida.Controls.Add(this.pnlHistorico1);
-            this.pnlCorEscolhida.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlCorEscolhida.Location = new System.Drawing.Point(929, 295);
-            this.pnlCorEscolhida.Name = "pnlCorEscolhida";
-            this.pnlCorEscolhida.Size = new System.Drawing.Size(313, 273);
-            this.pnlCorEscolhida.TabIndex = 12;
-            // 
-            // Azul_Cinzento
-            // 
-            this.Azul_Cinzento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(125)))), ((int)(((byte)(139)))));
-            this.Azul_Cinzento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Azul_Cinzento.Location = new System.Drawing.Point(222, 219);
-            this.Azul_Cinzento.Name = "Azul_Cinzento";
-            this.Azul_Cinzento.Size = new System.Drawing.Size(35, 35);
-            this.Azul_Cinzento.TabIndex = 113;
-            this.Azul_Cinzento.Click += new System.EventHandler(this.escolhe_cor);
-            // 
-            // Ambar
-            // 
-            this.Ambar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
-            this.Ambar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Ambar.Location = new System.Drawing.Point(140, 178);
-            this.Ambar.Name = "Ambar";
-            this.Ambar.Size = new System.Drawing.Size(35, 35);
-            this.Ambar.TabIndex = 112;
-            this.Ambar.Click += new System.EventHandler(this.escolhe_cor);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel2.Location = new System.Drawing.Point(47, 102);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(17, 17);
-            this.panel2.TabIndex = 110;
-            this.panel2.Tag = "Azul";
-            this.panel2.Click += new System.EventHandler(this.escolhe_cor);
-            // 
-            // pnlHistorico3
-            // 
-            this.pnlHistorico3.BackColor = System.Drawing.Color.Transparent;
-            this.pnlHistorico3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlHistorico3.Location = new System.Drawing.Point(47, 71);
-            this.pnlHistorico3.Name = "pnlHistorico3";
-            this.pnlHistorico3.Size = new System.Drawing.Size(17, 17);
-            this.pnlHistorico3.TabIndex = 110;
-            this.pnlHistorico3.Tag = "Azul";
-            this.pnlHistorico3.Click += new System.EventHandler(this.escolhe_cor);
-            // 
-            // pnlHistorico2
-            // 
-            this.pnlHistorico2.BackColor = System.Drawing.Color.Transparent;
-            this.pnlHistorico2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlHistorico2.Location = new System.Drawing.Point(47, 42);
-            this.pnlHistorico2.Name = "pnlHistorico2";
-            this.pnlHistorico2.Size = new System.Drawing.Size(17, 17);
-            this.pnlHistorico2.TabIndex = 109;
-            this.pnlHistorico2.Tag = "Azul";
-            this.pnlHistorico2.Click += new System.EventHandler(this.escolhe_cor);
-            // 
-            // Verde
-            // 
-            this.Verde.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
-            this.Verde.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Verde.Location = new System.Drawing.Point(140, 137);
-            this.Verde.Name = "Verde";
-            this.Verde.Size = new System.Drawing.Size(35, 35);
-            this.Verde.TabIndex = 108;
-            this.Verde.Click += new System.EventHandler(this.escolhe_cor);
-            // 
-            // Esmeralda
-            // 
-            this.Esmeralda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.Esmeralda.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Esmeralda.Location = new System.Drawing.Point(222, 56);
-            this.Esmeralda.Name = "Esmeralda";
-            this.Esmeralda.Size = new System.Drawing.Size(35, 35);
-            this.Esmeralda.TabIndex = 107;
-            this.Esmeralda.Click += new System.EventHandler(this.escolhe_cor);
-            // 
-            // Verde_Claro
-            // 
-            this.Verde_Claro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(195)))), ((int)(((byte)(74)))));
-            this.Verde_Claro.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Verde_Claro.Location = new System.Drawing.Point(222, 97);
-            this.Verde_Claro.Name = "Verde_Claro";
-            this.Verde_Claro.Size = new System.Drawing.Size(35, 35);
-            this.Verde_Claro.TabIndex = 106;
-            this.Verde_Claro.Click += new System.EventHandler(this.escolhe_cor);
-            // 
-            // Cinza
-            // 
-            this.Cinza.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
-            this.Cinza.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Cinza.Location = new System.Drawing.Point(181, 219);
-            this.Cinza.Name = "Cinza";
-            this.Cinza.Size = new System.Drawing.Size(35, 35);
-            this.Cinza.TabIndex = 94;
-            this.Cinza.Click += new System.EventHandler(this.escolhe_cor);
-            // 
-            // Lima
-            // 
-            this.Lima.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(220)))), ((int)(((byte)(57)))));
-            this.Lima.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Lima.Location = new System.Drawing.Point(181, 136);
-            this.Lima.Name = "Lima";
-            this.Lima.Size = new System.Drawing.Size(35, 35);
-            this.Lima.TabIndex = 104;
-            this.Lima.Click += new System.EventHandler(this.escolhe_cor);
-            // 
-            // Amarelo
-            // 
-            this.Amarelo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(59)))));
-            this.Amarelo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Amarelo.Location = new System.Drawing.Point(222, 137);
-            this.Amarelo.Name = "Amarelo";
-            this.Amarelo.Size = new System.Drawing.Size(35, 35);
-            this.Amarelo.TabIndex = 102;
-            this.Amarelo.Click += new System.EventHandler(this.escolhe_cor);
-            // 
-            // Ciano
-            // 
-            this.Ciano.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(188)))), ((int)(((byte)(212)))));
-            this.Ciano.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Ciano.Location = new System.Drawing.Point(140, 97);
-            this.Ciano.Name = "Ciano";
-            this.Ciano.Size = new System.Drawing.Size(35, 35);
-            this.Ciano.TabIndex = 105;
-            this.Ciano.Click += new System.EventHandler(this.escolhe_cor);
-            // 
-            // Laranja
-            // 
-            this.Laranja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
-            this.Laranja.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Laranja.Location = new System.Drawing.Point(181, 178);
-            this.Laranja.Name = "Laranja";
-            this.Laranja.Size = new System.Drawing.Size(35, 35);
-            this.Laranja.TabIndex = 100;
-            this.Laranja.Click += new System.EventHandler(this.escolhe_cor);
-            // 
-            // Rosa
-            // 
-            this.Rosa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(17)))), ((int)(((byte)(99)))));
-            this.Rosa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Rosa.Location = new System.Drawing.Point(181, 15);
-            this.Rosa.Name = "Rosa";
-            this.Rosa.Size = new System.Drawing.Size(35, 35);
-            this.Rosa.TabIndex = 95;
-            this.Rosa.Click += new System.EventHandler(this.escolhe_cor);
-            // 
-            // Roxo
-            // 
-            this.Roxo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(39)))), ((int)(((byte)(176)))));
-            this.Roxo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Roxo.Location = new System.Drawing.Point(222, 14);
-            this.Roxo.Name = "Roxo";
-            this.Roxo.Size = new System.Drawing.Size(35, 35);
-            this.Roxo.TabIndex = 97;
-            this.Roxo.Click += new System.EventHandler(this.escolhe_cor);
-            // 
-            // Laranja_Escuro
-            // 
-            this.Laranja_Escuro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
-            this.Laranja_Escuro.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Laranja_Escuro.Location = new System.Drawing.Point(222, 178);
-            this.Laranja_Escuro.Name = "Laranja_Escuro";
-            this.Laranja_Escuro.Size = new System.Drawing.Size(35, 35);
-            this.Laranja_Escuro.TabIndex = 98;
-            this.Laranja_Escuro.Click += new System.EventHandler(this.escolhe_cor);
-            // 
-            // Preto
-            // 
-            this.Preto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.Preto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Preto.Location = new System.Drawing.Point(181, 97);
-            this.Preto.Name = "Preto";
-            this.Preto.Size = new System.Drawing.Size(35, 35);
-            this.Preto.TabIndex = 103;
-            this.Preto.Click += new System.EventHandler(this.escolhe_cor);
-            // 
-            // Marrom
-            // 
-            this.Marrom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(85)))), ((int)(((byte)(72)))));
-            this.Marrom.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Marrom.Location = new System.Drawing.Point(140, 219);
-            this.Marrom.Name = "Marrom";
-            this.Marrom.Size = new System.Drawing.Size(35, 35);
-            this.Marrom.TabIndex = 96;
-            this.Marrom.Click += new System.EventHandler(this.escolhe_cor);
-            // 
-            // Roxo_Escuro
-            // 
-            this.Roxo_Escuro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
-            this.Roxo_Escuro.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Roxo_Escuro.Location = new System.Drawing.Point(140, 56);
-            this.Roxo_Escuro.Name = "Roxo_Escuro";
-            this.Roxo_Escuro.Size = new System.Drawing.Size(35, 35);
-            this.Roxo_Escuro.TabIndex = 99;
-            this.Roxo_Escuro.Click += new System.EventHandler(this.escolhe_cor);
-            // 
-            // Azul
-            // 
-            this.Azul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
-            this.Azul.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Azul.Location = new System.Drawing.Point(181, 56);
-            this.Azul.Name = "Azul";
-            this.Azul.Size = new System.Drawing.Size(35, 35);
-            this.Azul.TabIndex = 101;
-            this.Azul.Click += new System.EventHandler(this.escolhe_cor);
-            // 
-            // Vermelho
-            // 
-            this.Vermelho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
-            this.Vermelho.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Vermelho.ForeColor = System.Drawing.Color.White;
-            this.Vermelho.Location = new System.Drawing.Point(140, 15);
-            this.Vermelho.Name = "Vermelho";
-            this.Vermelho.Size = new System.Drawing.Size(35, 35);
-            this.Vermelho.TabIndex = 93;
-            this.Vermelho.Click += new System.EventHandler(this.escolhe_cor);
-            // 
-            // pnlHistorico1
-            // 
-            this.pnlHistorico1.BackColor = System.Drawing.Color.Transparent;
-            this.pnlHistorico1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlHistorico1.Location = new System.Drawing.Point(48, 13);
-            this.pnlHistorico1.Name = "pnlHistorico1";
-            this.pnlHistorico1.Size = new System.Drawing.Size(17, 17);
-            this.pnlHistorico1.TabIndex = 91;
-            this.pnlHistorico1.Tag = "Azul";
-            this.pnlHistorico1.Click += new System.EventHandler(this.escolhe_cor);
-            // 
             // btnSalvar
             // 
-            this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(60)))));
             this.btnSalvar.FlatAppearance.BorderSize = 0;
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
+            this.btnSalvar.Font = new System.Drawing.Font("Open Sans", 12.25F, System.Drawing.FontStyle.Bold);
             this.btnSalvar.ForeColor = System.Drawing.Color.White;
-            this.btnSalvar.Location = new System.Drawing.Point(23, 69);
+            this.btnSalvar.Location = new System.Drawing.Point(1100, 35);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(99, 67);
+            this.btnSalvar.Size = new System.Drawing.Size(133, 40);
             this.btnSalvar.TabIndex = 13;
-            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.Text = "Salvar e sair";
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // picBoxKeyboardBackground
             // 
             this.picBoxKeyboardBackground.Image = ((System.Drawing.Image)(resources.GetObject("picBoxKeyboardBackground.Image")));
-            this.picBoxKeyboardBackground.Location = new System.Drawing.Point(23, 223);
+            this.picBoxKeyboardBackground.Location = new System.Drawing.Point(14, 197);
             this.picBoxKeyboardBackground.Name = "picBoxKeyboardBackground";
             this.picBoxKeyboardBackground.Size = new System.Drawing.Size(866, 328);
             this.picBoxKeyboardBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -2153,46 +1903,73 @@ namespace AcroniUI.CustomizingForms
             // 
             // pnlCustomizingMenu
             // 
-            this.pnlCustomizingMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.pnlCustomizingMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(48)))), ((int)(((byte)(54)))));
+            this.pnlCustomizingMenu.Controls.Add(this.label12);
+            this.pnlCustomizingMenu.Controls.Add(this.label11);
+            this.pnlCustomizingMenu.Controls.Add(this.label10);
             this.pnlCustomizingMenu.Controls.Add(this.btnVoltar);
             this.pnlCustomizingMenu.Controls.Add(this.btnSalvar);
-            this.pnlCustomizingMenu.Controls.Add(this.label1);
-            this.pnlCustomizingMenu.Controls.Add(this.lblDefinirParaTodasTeclas);
-            this.pnlCustomizingMenu.Controls.Add(this.btnSizeSmall);
-            this.pnlCustomizingMenu.Controls.Add(this.btnSizeMedium);
-            this.pnlCustomizingMenu.Controls.Add(this.btnSizeBig);
-            this.pnlCustomizingMenu.Controls.Add(this.btnStyleStrikeout);
-            this.pnlCustomizingMenu.Controls.Add(this.btnStyleUnderline);
-            this.pnlCustomizingMenu.Controls.Add(this.btnStyleItalic);
-            this.pnlCustomizingMenu.Controls.Add(this.btnIcons);
-            this.pnlCustomizingMenu.Controls.Add(this.btnStyleBold);
-            this.pnlCustomizingMenu.Controls.Add(this.pnlIcons);
-            this.pnlCustomizingMenu.Controls.Add(this.btnTextAlignRight);
-            this.pnlCustomizingMenu.Controls.Add(this.btnTextAlignCenter);
-            this.pnlCustomizingMenu.Controls.Add(this.btnTextAlignLeft);
-            this.pnlCustomizingMenu.Controls.Add(this.cmbFontes);
             this.pnlCustomizingMenu.Location = new System.Drawing.Point(0, 39);
             this.pnlCustomizingMenu.Name = "pnlCustomizingMenu";
-            this.pnlCustomizingMenu.Size = new System.Drawing.Size(1280, 153);
+            this.pnlCustomizingMenu.Size = new System.Drawing.Size(1280, 116);
             this.pnlCustomizingMenu.TabIndex = 16;
+            // 
+            // label12
+            // 
+            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(48)))), ((int)(((byte)(54)))));
+            this.label12.Font = new System.Drawing.Font("Open Sans", 17.25F, System.Drawing.FontStyle.Bold);
+            this.label12.Location = new System.Drawing.Point(787, 35);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(307, 35);
+            this.label12.TabIndex = 15;
+            this.label12.Text = "• <Nome do teclado>";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Open Sans", 17.25F, System.Drawing.FontStyle.Bold);
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(59)))));
+            this.label11.Location = new System.Drawing.Point(495, 35);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(254, 32);
+            this.label11.TabIndex = 15;
+            this.label11.Text = "• <Nome da coleção>";
+            // 
+            // label10
+            // 
+            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(48)))), ((int)(((byte)(54)))));
+            this.label10.Font = new System.Drawing.Font("Open Sans", 17.25F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
+            this.label10.Location = new System.Drawing.Point(143, 35);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(353, 35);
+            this.label10.TabIndex = 15;
+            this.label10.Text = "Customização";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // btnVoltar
             // 
-            this.btnVoltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnVoltar.BackColor = System.Drawing.Color.Transparent;
             this.btnVoltar.FlatAppearance.BorderSize = 0;
+            this.btnVoltar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnVoltar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
-            this.btnVoltar.ForeColor = System.Drawing.Color.White;
-            this.btnVoltar.Location = new System.Drawing.Point(134, 69);
+            this.btnVoltar.Font = new System.Drawing.Font("Open Sans", 12.25F, System.Drawing.FontStyle.Bold);
+            this.btnVoltar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(127)))));
+            this.btnVoltar.Image = ((System.Drawing.Image)(resources.GetObject("btnVoltar.Image")));
+            this.btnVoltar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVoltar.Location = new System.Drawing.Point(19, 21);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(99, 67);
+            this.btnVoltar.Size = new System.Drawing.Size(118, 67);
             this.btnVoltar.TabIndex = 14;
-            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.Text = "Cancelar";
+            this.btnVoltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVoltar.UseVisualStyleBackColor = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
-            // label1
+            // btnTextAlignRight
             // 
+<<<<<<< HEAD
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Open Sans", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
@@ -2201,280 +1978,12 @@ namespace AcroniUI.CustomizingForms
             this.label1.Size = new System.Drawing.Size(93, 32);
             this.label1.TabIndex = 10;
             this.label1.Text = "Fontes";
-            // 
-            // lblDefinirParaTodasTeclas
-            // 
-            this.lblDefinirParaTodasTeclas.AutoSize = true;
-            this.lblDefinirParaTodasTeclas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblDefinirParaTodasTeclas.Location = new System.Drawing.Point(335, 129);
-            this.lblDefinirParaTodasTeclas.Name = "lblDefinirParaTodasTeclas";
-            this.lblDefinirParaTodasTeclas.Size = new System.Drawing.Size(162, 13);
-            this.lblDefinirParaTodasTeclas.TabIndex = 9;
-            this.lblDefinirParaTodasTeclas.Text = "Definir estilo para todas as teclas";
-            this.lblDefinirParaTodasTeclas.Click += new System.EventHandler(this.lblDefinirParaTodasTeclas_Click);
-            // 
-            // btnSizeSmall
-            // 
-            this.btnSizeSmall.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnSizeSmall.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSizeSmall.FlatAppearance.BorderSize = 0;
-            this.btnSizeSmall.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btnSizeSmall.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btnSizeSmall.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSizeSmall.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnSizeSmall.ForeColor = System.Drawing.Color.White;
-            this.btnSizeSmall.Location = new System.Drawing.Point(514, 85);
-            this.btnSizeSmall.Name = "btnSizeSmall";
-            this.btnSizeSmall.Size = new System.Drawing.Size(95, 34);
-            this.btnSizeSmall.TabIndex = 6;
-            this.btnSizeSmall.Text = "Pequeno";
-            this.btnSizeSmall.UseVisualStyleBackColor = false;
-            // 
-            // btnSizeMedium
-            // 
-            this.btnSizeMedium.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnSizeMedium.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSizeMedium.FlatAppearance.BorderSize = 0;
-            this.btnSizeMedium.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btnSizeMedium.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btnSizeMedium.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSizeMedium.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.btnSizeMedium.ForeColor = System.Drawing.Color.White;
-            this.btnSizeMedium.Location = new System.Drawing.Point(429, 85);
-            this.btnSizeMedium.Name = "btnSizeMedium";
-            this.btnSizeMedium.Size = new System.Drawing.Size(79, 34);
-            this.btnSizeMedium.TabIndex = 7;
-            this.btnSizeMedium.Text = "Médio";
-            this.btnSizeMedium.UseVisualStyleBackColor = false;
-            // 
-            // btnSizeBig
-            // 
-            this.btnSizeBig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnSizeBig.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSizeBig.FlatAppearance.BorderSize = 0;
-            this.btnSizeBig.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btnSizeBig.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btnSizeBig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSizeBig.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.btnSizeBig.ForeColor = System.Drawing.Color.White;
-            this.btnSizeBig.Location = new System.Drawing.Point(333, 85);
-            this.btnSizeBig.Name = "btnSizeBig";
-            this.btnSizeBig.Size = new System.Drawing.Size(90, 34);
-            this.btnSizeBig.TabIndex = 8;
-            this.btnSizeBig.Text = "Grande";
-            this.btnSizeBig.UseVisualStyleBackColor = false;
-            // 
-            // btnStyleStrikeout
-            // 
-            this.btnStyleStrikeout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnStyleStrikeout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnStyleStrikeout.FlatAppearance.BorderSize = 0;
-            this.btnStyleStrikeout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btnStyleStrikeout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btnStyleStrikeout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStyleStrikeout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Strikeout, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStyleStrikeout.ForeColor = System.Drawing.Color.White;
-            this.btnStyleStrikeout.Location = new System.Drawing.Point(459, 45);
-            this.btnStyleStrikeout.Name = "btnStyleStrikeout";
-            this.btnStyleStrikeout.Size = new System.Drawing.Size(49, 34);
-            this.btnStyleStrikeout.TabIndex = 5;
-            this.btnStyleStrikeout.Text = "abc";
-            this.btnStyleStrikeout.UseVisualStyleBackColor = false;
-            // 
-            // btnStyleUnderline
-            // 
-            this.btnStyleUnderline.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnStyleUnderline.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnStyleUnderline.FlatAppearance.BorderSize = 0;
-            this.btnStyleUnderline.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btnStyleUnderline.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btnStyleUnderline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStyleUnderline.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline);
-            this.btnStyleUnderline.ForeColor = System.Drawing.Color.White;
-            this.btnStyleUnderline.Location = new System.Drawing.Point(417, 45);
-            this.btnStyleUnderline.Name = "btnStyleUnderline";
-            this.btnStyleUnderline.Size = new System.Drawing.Size(36, 34);
-            this.btnStyleUnderline.TabIndex = 5;
-            this.btnStyleUnderline.Text = "S";
-            this.btnStyleUnderline.UseVisualStyleBackColor = false;
-            // 
-            // btnStyleItalic
-            // 
-            this.btnStyleItalic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnStyleItalic.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnStyleItalic.FlatAppearance.BorderSize = 0;
-            this.btnStyleItalic.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btnStyleItalic.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btnStyleItalic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStyleItalic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Italic);
-            this.btnStyleItalic.ForeColor = System.Drawing.Color.White;
-            this.btnStyleItalic.Location = new System.Drawing.Point(375, 45);
-            this.btnStyleItalic.Name = "btnStyleItalic";
-            this.btnStyleItalic.Size = new System.Drawing.Size(36, 34);
-            this.btnStyleItalic.TabIndex = 5;
-            this.btnStyleItalic.Text = "I";
-            this.btnStyleItalic.UseVisualStyleBackColor = false;
-            // 
-            // btnIcons
-            // 
-            this.btnIcons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnIcons.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnIcons.FlatAppearance.BorderSize = 0;
-            this.btnIcons.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btnIcons.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btnIcons.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIcons.Font = new System.Drawing.Font("Open Sans", 12.25F, System.Drawing.FontStyle.Bold);
-            this.btnIcons.ForeColor = System.Drawing.Color.White;
-            this.btnIcons.Location = new System.Drawing.Point(1099, 11);
-            this.btnIcons.Name = "btnIcons";
-            this.btnIcons.Size = new System.Drawing.Size(82, 125);
-            this.btnIcons.TabIndex = 5;
-            this.btnIcons.Text = "Novo!";
-            this.btnIcons.UseVisualStyleBackColor = false;
-            this.btnIcons.Click += new System.EventHandler(this.btnIcons_Click);
-            // 
-            // btnStyleBold
-            // 
-            this.btnStyleBold.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnStyleBold.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnStyleBold.FlatAppearance.BorderSize = 0;
-            this.btnStyleBold.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btnStyleBold.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btnStyleBold.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStyleBold.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
-            this.btnStyleBold.ForeColor = System.Drawing.Color.White;
-            this.btnStyleBold.Location = new System.Drawing.Point(333, 45);
-            this.btnStyleBold.Name = "btnStyleBold";
-            this.btnStyleBold.Size = new System.Drawing.Size(36, 34);
-            this.btnStyleBold.TabIndex = 5;
-            this.btnStyleBold.Text = "N";
-            this.btnStyleBold.UseVisualStyleBackColor = false;
-            // 
-            // pnlIcons
-            // 
-            this.pnlIcons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.pnlIcons.Controls.Add(this.picBoxIcon10);
-            this.pnlIcons.Controls.Add(this.picBoxIcon9);
-            this.pnlIcons.Controls.Add(this.picBoxIcon8);
-            this.pnlIcons.Controls.Add(this.picBoxIcon7);
-            this.pnlIcons.Controls.Add(this.picBoxIcon6);
-            this.pnlIcons.Controls.Add(this.picBoxIcon5);
-            this.pnlIcons.Controls.Add(this.picBoxIcon4);
-            this.pnlIcons.Controls.Add(this.picBoxIcon3);
-            this.pnlIcons.Controls.Add(this.picBoxIcon2);
-            this.pnlIcons.Controls.Add(this.picBoxIcon1);
-            this.pnlIcons.Location = new System.Drawing.Point(812, 11);
-            this.pnlIcons.Name = "pnlIcons";
-            this.pnlIcons.Size = new System.Drawing.Size(281, 125);
-            this.pnlIcons.TabIndex = 4;
-            // 
-            // picBoxIcon10
-            // 
-            this.picBoxIcon10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBoxIcon10.Location = new System.Drawing.Point(219, 64);
-            this.picBoxIcon10.Name = "picBoxIcon10";
-            this.picBoxIcon10.Size = new System.Drawing.Size(40, 40);
-            this.picBoxIcon10.TabIndex = 10;
-            this.picBoxIcon10.TabStop = false;
-            this.picBoxIcon10.Click += new System.EventHandler(this.picIcons_Click);
-            // 
-            // picBoxIcon9
-            // 
-            this.picBoxIcon9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBoxIcon9.Location = new System.Drawing.Point(168, 64);
-            this.picBoxIcon9.Name = "picBoxIcon9";
-            this.picBoxIcon9.Size = new System.Drawing.Size(40, 40);
-            this.picBoxIcon9.TabIndex = 9;
-            this.picBoxIcon9.TabStop = false;
-            this.picBoxIcon9.Click += new System.EventHandler(this.picIcons_Click);
-            // 
-            // picBoxIcon8
-            // 
-            this.picBoxIcon8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBoxIcon8.Location = new System.Drawing.Point(117, 64);
-            this.picBoxIcon8.Name = "picBoxIcon8";
-            this.picBoxIcon8.Size = new System.Drawing.Size(40, 40);
-            this.picBoxIcon8.TabIndex = 6;
-            this.picBoxIcon8.TabStop = false;
-            this.picBoxIcon8.Click += new System.EventHandler(this.picIcons_Click);
-            // 
-            // picBoxIcon7
-            // 
-            this.picBoxIcon7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBoxIcon7.Location = new System.Drawing.Point(66, 64);
-            this.picBoxIcon7.Name = "picBoxIcon7";
-            this.picBoxIcon7.Size = new System.Drawing.Size(40, 40);
-            this.picBoxIcon7.TabIndex = 7;
-            this.picBoxIcon7.TabStop = false;
-            this.picBoxIcon7.Click += new System.EventHandler(this.picIcons_Click);
-            // 
-            // picBoxIcon6
-            // 
-            this.picBoxIcon6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBoxIcon6.Location = new System.Drawing.Point(15, 64);
-            this.picBoxIcon6.Name = "picBoxIcon6";
-            this.picBoxIcon6.Size = new System.Drawing.Size(40, 40);
-            this.picBoxIcon6.TabIndex = 8;
-            this.picBoxIcon6.TabStop = false;
-            this.picBoxIcon6.Click += new System.EventHandler(this.picIcons_Click);
-            // 
-            // picBoxIcon5
-            // 
-            this.picBoxIcon5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBoxIcon5.Location = new System.Drawing.Point(219, 13);
-            this.picBoxIcon5.Name = "picBoxIcon5";
-            this.picBoxIcon5.Size = new System.Drawing.Size(40, 40);
-            this.picBoxIcon5.TabIndex = 5;
-            this.picBoxIcon5.TabStop = false;
-            this.picBoxIcon5.Click += new System.EventHandler(this.picIcons_Click);
-            // 
-            // picBoxIcon4
-            // 
-            this.picBoxIcon4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBoxIcon4.Location = new System.Drawing.Point(168, 13);
-            this.picBoxIcon4.Name = "picBoxIcon4";
-            this.picBoxIcon4.Size = new System.Drawing.Size(40, 40);
-            this.picBoxIcon4.TabIndex = 3;
-            this.picBoxIcon4.TabStop = false;
-            this.picBoxIcon4.Click += new System.EventHandler(this.picIcons_Click);
-            // 
-            // picBoxIcon3
-            // 
-            this.picBoxIcon3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBoxIcon3.Location = new System.Drawing.Point(117, 13);
-            this.picBoxIcon3.Name = "picBoxIcon3";
-            this.picBoxIcon3.Size = new System.Drawing.Size(40, 40);
-            this.picBoxIcon3.TabIndex = 0;
-            this.picBoxIcon3.TabStop = false;
-            this.picBoxIcon3.Click += new System.EventHandler(this.picIcons_Click);
-            // 
-            // picBoxIcon2
-            // 
-            this.picBoxIcon2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBoxIcon2.Location = new System.Drawing.Point(66, 13);
-            this.picBoxIcon2.Name = "picBoxIcon2";
-            this.picBoxIcon2.Size = new System.Drawing.Size(40, 40);
-            this.picBoxIcon2.TabIndex = 1;
-            this.picBoxIcon2.TabStop = false;
-            this.picBoxIcon2.Click += new System.EventHandler(this.picIcons_Click);
-            // 
-            // picBoxIcon1
-            // 
-            this.picBoxIcon1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBoxIcon1.Location = new System.Drawing.Point(15, 13);
-            this.picBoxIcon1.Name = "picBoxIcon1";
-            this.picBoxIcon1.Size = new System.Drawing.Size(40, 40);
-            this.picBoxIcon1.TabIndex = 2;
-            this.picBoxIcon1.TabStop = false;
-            this.picBoxIcon1.Click += new System.EventHandler(this.picIcons_Click);
-            // 
-            // btnTextAlignRight
-            // 
+=======
             this.btnTextAlignRight.BackColor = System.Drawing.Color.Transparent;
             this.btnTextAlignRight.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTextAlignRight.Image = ((System.Drawing.Image)(resources.GetObject("btnTextAlignRight.Image")));
             this.btnTextAlignRight.ImageActive = null;
-            this.btnTextAlignRight.Location = new System.Drawing.Point(633, 45);
+            this.btnTextAlignRight.Location = new System.Drawing.Point(323, 93);
             this.btnTextAlignRight.Name = "btnTextAlignRight";
             this.btnTextAlignRight.Size = new System.Drawing.Size(24, 24);
             this.btnTextAlignRight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -2489,7 +1998,7 @@ namespace AcroniUI.CustomizingForms
             this.btnTextAlignCenter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTextAlignCenter.Image = ((System.Drawing.Image)(resources.GetObject("btnTextAlignCenter.Image")));
             this.btnTextAlignCenter.ImageActive = null;
-            this.btnTextAlignCenter.Location = new System.Drawing.Point(589, 45);
+            this.btnTextAlignCenter.Location = new System.Drawing.Point(279, 93);
             this.btnTextAlignCenter.Name = "btnTextAlignCenter";
             this.btnTextAlignCenter.Size = new System.Drawing.Size(24, 24);
             this.btnTextAlignCenter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -2504,7 +2013,7 @@ namespace AcroniUI.CustomizingForms
             this.btnTextAlignLeft.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTextAlignLeft.Image = ((System.Drawing.Image)(resources.GetObject("btnTextAlignLeft.Image")));
             this.btnTextAlignLeft.ImageActive = null;
-            this.btnTextAlignLeft.Location = new System.Drawing.Point(545, 45);
+            this.btnTextAlignLeft.Location = new System.Drawing.Point(235, 93);
             this.btnTextAlignLeft.Name = "btnTextAlignLeft";
             this.btnTextAlignLeft.Size = new System.Drawing.Size(24, 24);
             this.btnTextAlignLeft.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -2512,30 +2021,810 @@ namespace AcroniUI.CustomizingForms
             this.btnTextAlignLeft.TabStop = false;
             this.btnTextAlignLeft.Zoom = 10;
             this.btnTextAlignLeft.Click += new System.EventHandler(this.btnTextAlignLeft_Click);
+>>>>>>> a4d93412ca3f8ded539e3ecdebfd04b256d24464
+            // 
+            // lblDefinirParaTodasTeclas
+            // 
+            this.lblDefinirParaTodasTeclas.AutoSize = true;
+            this.lblDefinirParaTodasTeclas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblDefinirParaTodasTeclas.Location = new System.Drawing.Point(26, 131);
+            this.lblDefinirParaTodasTeclas.Name = "lblDefinirParaTodasTeclas";
+            this.lblDefinirParaTodasTeclas.Size = new System.Drawing.Size(162, 13);
+            this.lblDefinirParaTodasTeclas.TabIndex = 9;
+            this.lblDefinirParaTodasTeclas.Text = "Definir estilo para todas as teclas";
+            this.lblDefinirParaTodasTeclas.Click += new System.EventHandler(this.lblDefinirParaTodasTeclas_Click);
+            // 
+            // btnStyleStrikeout
+            // 
+            this.btnStyleStrikeout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(36)))), ((int)(((byte)(38)))));
+            this.btnStyleStrikeout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStyleStrikeout.FlatAppearance.BorderSize = 0;
+            this.btnStyleStrikeout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnStyleStrikeout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnStyleStrikeout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStyleStrikeout.Font = new System.Drawing.Font("Open Sans", 12.25F);
+            this.btnStyleStrikeout.ForeColor = System.Drawing.Color.White;
+            this.btnStyleStrikeout.Location = new System.Drawing.Point(149, 79);
+            this.btnStyleStrikeout.Name = "btnStyleStrikeout";
+            this.btnStyleStrikeout.Size = new System.Drawing.Size(49, 34);
+            this.btnStyleStrikeout.TabIndex = 5;
+            this.btnStyleStrikeout.Text = "abc";
+            this.btnStyleStrikeout.UseVisualStyleBackColor = false;
+            // 
+            // btnStyleUnderline
+            // 
+            this.btnStyleUnderline.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(36)))), ((int)(((byte)(38)))));
+            this.btnStyleUnderline.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStyleUnderline.FlatAppearance.BorderSize = 0;
+            this.btnStyleUnderline.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnStyleUnderline.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnStyleUnderline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStyleUnderline.Font = new System.Drawing.Font("Open Sans", 12.25F);
+            this.btnStyleUnderline.ForeColor = System.Drawing.Color.White;
+            this.btnStyleUnderline.Location = new System.Drawing.Point(107, 79);
+            this.btnStyleUnderline.Name = "btnStyleUnderline";
+            this.btnStyleUnderline.Size = new System.Drawing.Size(36, 34);
+            this.btnStyleUnderline.TabIndex = 5;
+            this.btnStyleUnderline.Text = "S";
+            this.btnStyleUnderline.UseVisualStyleBackColor = false;
+            // 
+            // btnStyleItalic
+            // 
+            this.btnStyleItalic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(36)))), ((int)(((byte)(38)))));
+            this.btnStyleItalic.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStyleItalic.FlatAppearance.BorderSize = 0;
+            this.btnStyleItalic.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnStyleItalic.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnStyleItalic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStyleItalic.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStyleItalic.ForeColor = System.Drawing.Color.White;
+            this.btnStyleItalic.Location = new System.Drawing.Point(65, 79);
+            this.btnStyleItalic.Name = "btnStyleItalic";
+            this.btnStyleItalic.Size = new System.Drawing.Size(36, 34);
+            this.btnStyleItalic.TabIndex = 5;
+            this.btnStyleItalic.Text = "I";
+            this.btnStyleItalic.UseVisualStyleBackColor = false;
+            // 
+            // btnStyleBold
+            // 
+            this.btnStyleBold.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(36)))), ((int)(((byte)(38)))));
+            this.btnStyleBold.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStyleBold.FlatAppearance.BorderSize = 0;
+            this.btnStyleBold.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnStyleBold.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnStyleBold.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStyleBold.Font = new System.Drawing.Font("Open Sans", 12.25F);
+            this.btnStyleBold.ForeColor = System.Drawing.Color.White;
+            this.btnStyleBold.Location = new System.Drawing.Point(23, 79);
+            this.btnStyleBold.Name = "btnStyleBold";
+            this.btnStyleBold.Size = new System.Drawing.Size(36, 34);
+            this.btnStyleBold.TabIndex = 5;
+            this.btnStyleBold.Text = "N";
+            this.btnStyleBold.UseVisualStyleBackColor = false;
+            // 
+            // btnOpenModuleSwitch
+            // 
+            this.btnOpenModuleSwitch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnOpenModuleSwitch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOpenModuleSwitch.FlatAppearance.BorderSize = 0;
+            this.btnOpenModuleSwitch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnOpenModuleSwitch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnOpenModuleSwitch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpenModuleSwitch.Font = new System.Drawing.Font("Open Sans", 10.25F, System.Drawing.FontStyle.Bold);
+            this.btnOpenModuleSwitch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
+            this.btnOpenModuleSwitch.Location = new System.Drawing.Point(396, 22);
+            this.btnOpenModuleSwitch.Name = "btnOpenModuleSwitch";
+            this.btnOpenModuleSwitch.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.btnOpenModuleSwitch.Size = new System.Drawing.Size(111, 123);
+            this.btnOpenModuleSwitch.TabIndex = 5;
+            this.btnOpenModuleSwitch.Text = "Switch";
+            this.btnOpenModuleSwitch.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnOpenModuleSwitch.UseVisualStyleBackColor = false;
+            this.btnOpenModuleSwitch.Click += new System.EventHandler(this.btnIcons_Click);
             // 
             // cmbFontes
             // 
             this.cmbFontes.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmbFontes.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbFontes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.cmbFontes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbFontes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(36)))), ((int)(((byte)(38)))));
+            this.cmbFontes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbFontes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbFontes.ForeColor = System.Drawing.Color.Transparent;
             this.cmbFontes.FormattingEnabled = true;
-            this.cmbFontes.Location = new System.Drawing.Point(23, 38);
+            this.cmbFontes.Location = new System.Drawing.Point(23, 42);
             this.cmbFontes.Name = "cmbFontes";
-            this.cmbFontes.Size = new System.Drawing.Size(277, 21);
+            this.cmbFontes.Size = new System.Drawing.Size(178, 21);
             this.cmbFontes.TabIndex = 1;
             // 
-            // eColorpickerTrigger
+            // eBtnOpenModuleSwitch
             // 
-            this.eColorpickerTrigger.ElipseRadius = 5;
-            this.eColorpickerTrigger.TargetControl = this;
+            this.eBtnOpenModuleSwitch.ElipseRadius = 10;
+            this.eBtnOpenModuleSwitch.TargetControl = this.btnOpenModuleSwitch;
             // 
-            // bunifuElipse2
+            // panel1
             // 
-            this.bunifuElipse2.ElipseRadius = 5;
-            this.bunifuElipse2.TargetControl = this;
+<<<<<<< HEAD
+            this.panel1.Controls.Add(this.lblEscolherCores);
+=======
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.btnOpenModuleBackground);
+            this.panel1.Controls.Add(this.btnOpenModuleTextIcons);
+            this.panel1.Controls.Add(this.btnOpenModuleSwitch);
+            this.panel1.Controls.Add(this.panel3);
+>>>>>>> a4d93412ca3f8ded539e3ecdebfd04b256d24464
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 563);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1280, 157);
+            this.panel1.TabIndex = 81;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(34)))));
+            this.panel4.Controls.Add(this.label7);
+            this.panel4.Controls.Add(this.label5);
+            this.panel4.Controls.Add(this.label6);
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.label21);
+            this.panel4.Controls.Add(this.label9);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.label20);
+            this.panel4.Controls.Add(this.label8);
+            this.panel4.Controls.Add(this.label19);
+            this.panel4.Controls.Add(this.label18);
+            this.panel4.Controls.Add(this.label17);
+            this.panel4.Controls.Add(this.label16);
+            this.panel4.Controls.Add(this.label15);
+            this.panel4.Controls.Add(this.label14);
+            this.panel4.Controls.Add(this.label13);
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(773, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(507, 157);
+            this.panel4.TabIndex = 7;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label7.Font = new System.Drawing.Font("Open Sans", 9.25F);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
+            this.label7.Location = new System.Drawing.Point(23, 129);
+            this.label7.Margin = new System.Windows.Forms.Padding(0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(100, 18);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Apoio de pulso:";
+            this.label7.Click += new System.EventHandler(this.lblDefinirParaTodasTeclas_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label5.Font = new System.Drawing.Font("Open Sans", 9.25F);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
+            this.label5.Location = new System.Drawing.Point(23, 93);
+            this.label5.Margin = new System.Windows.Forms.Padding(0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(143, 18);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Ícones personalizados:";
+            this.label5.Click += new System.EventHandler(this.lblDefinirParaTodasTeclas_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label6.Font = new System.Drawing.Font("Open Sans", 9.25F);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
+            this.label6.Location = new System.Drawing.Point(23, 111);
+            this.label6.Margin = new System.Windows.Forms.Padding(0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(189, 18);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Plano de fundo personalizado:";
+            this.label6.Click += new System.EventHandler(this.lblDefinirParaTodasTeclas_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label4.Font = new System.Drawing.Font("Open Sans", 9.25F);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
+            this.label4.Location = new System.Drawing.Point(23, 75);
+            this.label4.Margin = new System.Windows.Forms.Padding(0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(155, 18);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Texturas personalizadas:";
+            this.label4.Click += new System.EventHandler(this.lblDefinirParaTodasTeclas_Click);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label21.Font = new System.Drawing.Font("Open Sans", 12.25F, System.Drawing.FontStyle.Bold);
+            this.label21.Location = new System.Drawing.Point(354, 89);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(111, 23);
+            this.label21.TabIndex = 9;
+            this.label21.Text = "Preço atual:\r";
+            this.label21.Click += new System.EventHandler(this.lblDefinirParaTodasTeclas_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label9.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label9.Location = new System.Drawing.Point(350, 105);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(140, 37);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "R$ 284,98";
+            this.label9.Click += new System.EventHandler(this.lblDefinirParaTodasTeclas_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label2.Font = new System.Drawing.Font("Open Sans", 9.25F);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
+            this.label2.Location = new System.Drawing.Point(23, 39);
+            this.label2.Margin = new System.Windows.Forms.Padding(0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(97, 18);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Fontes usadas:";
+            this.label2.Click += new System.EventHandler(this.lblDefinirParaTodasTeclas_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label3.Font = new System.Drawing.Font("Open Sans", 9.25F);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
+            this.label3.Location = new System.Drawing.Point(23, 57);
+            this.label3.Margin = new System.Windows.Forms.Padding(0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(144, 18);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Textos personalizados:";
+            this.label3.Click += new System.EventHandler(this.lblDefinirParaTodasTeclas_Click);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label20.Font = new System.Drawing.Font("Open Sans", 12.25F, System.Drawing.FontStyle.Bold);
+            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
+            this.label20.Location = new System.Drawing.Point(355, 55);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(90, 23);
+            this.label20.TabIndex = 9;
+            this.label20.Text = "R$ 249,99";
+            this.label20.Click += new System.EventHandler(this.lblDefinirParaTodasTeclas_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label8.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
+            this.label8.Location = new System.Drawing.Point(356, 40);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(85, 15);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "Preço original:\r";
+            this.label8.Click += new System.EventHandler(this.lblDefinirParaTodasTeclas_Click);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label19.Font = new System.Drawing.Font("Open Sans", 9.25F);
+            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.Location = new System.Drawing.Point(120, 129);
+            this.label19.Margin = new System.Windows.Forms.Padding(0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(33, 18);
+            this.label19.TabIndex = 9;
+            this.label19.Text = "Não";
+            this.label19.Click += new System.EventHandler(this.lblDefinirParaTodasTeclas_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label18.Font = new System.Drawing.Font("Open Sans", 9.25F);
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(209, 111);
+            this.label18.Margin = new System.Windows.Forms.Padding(0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(33, 18);
+            this.label18.TabIndex = 9;
+            this.label18.Text = "Não";
+            this.label18.Click += new System.EventHandler(this.lblDefinirParaTodasTeclas_Click);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label17.Font = new System.Drawing.Font("Open Sans", 9.25F);
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(163, 93);
+            this.label17.Margin = new System.Windows.Forms.Padding(0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(30, 18);
+            this.label17.TabIndex = 9;
+            this.label17.Text = "Sim";
+            this.label17.Click += new System.EventHandler(this.lblDefinirParaTodasTeclas_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label16.Font = new System.Drawing.Font("Open Sans", 9.25F);
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(175, 75);
+            this.label16.Margin = new System.Windows.Forms.Padding(0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(33, 18);
+            this.label16.TabIndex = 9;
+            this.label16.Text = "Não";
+            this.label16.Click += new System.EventHandler(this.lblDefinirParaTodasTeclas_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label15.Font = new System.Drawing.Font("Open Sans", 9.25F);
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(164, 57);
+            this.label15.Margin = new System.Windows.Forms.Padding(0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(30, 18);
+            this.label15.TabIndex = 9;
+            this.label15.Text = "Sim";
+            this.label15.Click += new System.EventHandler(this.lblDefinirParaTodasTeclas_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label14.Font = new System.Drawing.Font("Open Sans", 9.25F);
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(117, 40);
+            this.label14.Margin = new System.Windows.Forms.Padding(0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(72, 18);
+            this.label14.TabIndex = 9;
+            this.label14.Text = "Open Sans";
+            this.label14.Click += new System.EventHandler(this.lblDefinirParaTodasTeclas_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label13.Font = new System.Drawing.Font("Open Sans", 9.25F);
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(121, 22);
+            this.label13.Margin = new System.Windows.Forms.Padding(0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(22, 18);
+            this.label13.TabIndex = 9;
+            this.label13.Text = "12";
+            this.label13.Click += new System.EventHandler(this.lblDefinirParaTodasTeclas_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label1.Font = new System.Drawing.Font("Open Sans", 9.25F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
+            this.label1.Location = new System.Drawing.Point(23, 22);
+            this.label1.Margin = new System.Windows.Forms.Padding(0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 18);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Teclas pintadas:";
+            this.label1.Click += new System.EventHandler(this.lblDefinirParaTodasTeclas_Click);
+            // 
+            // btnOpenModuleBackground
+            // 
+            this.btnOpenModuleBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnOpenModuleBackground.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOpenModuleBackground.FlatAppearance.BorderSize = 0;
+            this.btnOpenModuleBackground.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnOpenModuleBackground.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnOpenModuleBackground.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpenModuleBackground.Font = new System.Drawing.Font("Open Sans", 10.25F, System.Drawing.FontStyle.Bold);
+            this.btnOpenModuleBackground.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
+            this.btnOpenModuleBackground.Location = new System.Drawing.Point(646, 22);
+            this.btnOpenModuleBackground.Name = "btnOpenModuleBackground";
+            this.btnOpenModuleBackground.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.btnOpenModuleBackground.Size = new System.Drawing.Size(111, 123);
+            this.btnOpenModuleBackground.TabIndex = 5;
+            this.btnOpenModuleBackground.Text = "Planos de fundo";
+            this.btnOpenModuleBackground.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnOpenModuleBackground.UseVisualStyleBackColor = false;
+            this.btnOpenModuleBackground.Click += new System.EventHandler(this.btnIcons_Click);
+            // 
+            // btnOpenModuleTextIcons
+            // 
+            this.btnOpenModuleTextIcons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnOpenModuleTextIcons.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOpenModuleTextIcons.FlatAppearance.BorderSize = 0;
+            this.btnOpenModuleTextIcons.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnOpenModuleTextIcons.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnOpenModuleTextIcons.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpenModuleTextIcons.Font = new System.Drawing.Font("Open Sans", 10.25F, System.Drawing.FontStyle.Bold);
+            this.btnOpenModuleTextIcons.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
+            this.btnOpenModuleTextIcons.Location = new System.Drawing.Point(523, 22);
+            this.btnOpenModuleTextIcons.Name = "btnOpenModuleTextIcons";
+            this.btnOpenModuleTextIcons.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.btnOpenModuleTextIcons.Size = new System.Drawing.Size(111, 123);
+            this.btnOpenModuleTextIcons.TabIndex = 5;
+            this.btnOpenModuleTextIcons.Text = "Textos e\r\nícones";
+            this.btnOpenModuleTextIcons.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnOpenModuleTextIcons.UseVisualStyleBackColor = false;
+            this.btnOpenModuleTextIcons.Click += new System.EventHandler(this.btnIcons_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(34)))));
+            this.panel3.Controls.Add(this.comboBox1);
+            this.panel3.Controls.Add(this.cmbFontes);
+            this.panel3.Controls.Add(this.btnStyleBold);
+            this.panel3.Controls.Add(this.btnTextAlignRight);
+            this.panel3.Controls.Add(this.btnStyleStrikeout);
+            this.panel3.Controls.Add(this.btnTextAlignCenter);
+            this.panel3.Controls.Add(this.lblDefinirParaTodasTeclas);
+            this.panel3.Controls.Add(this.btnTextAlignLeft);
+            this.panel3.Controls.Add(this.btnStyleItalic);
+            this.panel3.Controls.Add(this.btnStyleUnderline);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(373, 157);
+            this.panel3.TabIndex = 6;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(36)))), ((int)(((byte)(38)))));
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.Color.Transparent;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(217, 42);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(74, 21);
+            this.comboBox1.TabIndex = 1;
+            // 
+            // pnlHeadColorpicker
+            // 
+            this.pnlHeadColorpicker.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(48)))), ((int)(((byte)(54)))));
+            this.pnlHeadColorpicker.Controls.Add(this.lblColorName);
+            this.pnlHeadColorpicker.Controls.Add(this.pnlColor);
+            this.pnlHeadColorpicker.Controls.Add(this.lblHexaColor);
+            this.pnlHeadColorpicker.Location = new System.Drawing.Point(915, 197);
+            this.pnlHeadColorpicker.Name = "pnlHeadColorpicker";
+            this.pnlHeadColorpicker.Size = new System.Drawing.Size(330, 78);
+            this.pnlHeadColorpicker.TabIndex = 82;
+            // 
+            // lblColorName
+            // 
+            this.lblColorName.Font = new System.Drawing.Font("Open Sans", 13.25F, System.Drawing.FontStyle.Bold);
+            this.lblColorName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
+            this.lblColorName.Location = new System.Drawing.Point(112, 41);
+            this.lblColorName.Name = "lblColorName";
+            this.lblColorName.Size = new System.Drawing.Size(173, 29);
+            this.lblColorName.TabIndex = 85;
+            this.lblColorName.Text = "Azul";
+            this.lblColorName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pnlColor
+            // 
+            this.pnlColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(150)))), ((int)(((byte)(242)))));
+            this.pnlColor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlColor.Location = new System.Drawing.Point(24, 7);
+            this.pnlColor.Name = "pnlColor";
+            this.pnlColor.Size = new System.Drawing.Size(67, 67);
+            this.pnlColor.TabIndex = 83;
+            // 
+            // lblHexaColor
+            // 
+            this.lblHexaColor.AutoSize = true;
+            this.lblHexaColor.Font = new System.Drawing.Font("Open Sans", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHexaColor.ForeColor = System.Drawing.Color.White;
+            this.lblHexaColor.Location = new System.Drawing.Point(144, 14);
+            this.lblHexaColor.Name = "lblHexaColor";
+            this.lblHexaColor.Size = new System.Drawing.Size(114, 32);
+            this.lblHexaColor.TabIndex = 84;
+            this.lblHexaColor.Text = "#2196F3";
+            this.lblHexaColor.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+<<<<<<< HEAD
+=======
+            // pnlHistorico1
+            // 
+            this.pnlHistorico1.BackColor = System.Drawing.Color.Transparent;
+            this.pnlHistorico1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlHistorico1.Location = new System.Drawing.Point(70, 7);
+            this.pnlHistorico1.Name = "pnlHistorico1";
+            this.pnlHistorico1.Size = new System.Drawing.Size(17, 17);
+            this.pnlHistorico1.TabIndex = 91;
+            this.pnlHistorico1.Tag = "Azul";
+            this.pnlHistorico1.Click += new System.EventHandler(this.escolhe_cor);
+            // 
+            // pnlHistorico2
+            // 
+            this.pnlHistorico2.BackColor = System.Drawing.Color.Transparent;
+            this.pnlHistorico2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlHistorico2.Location = new System.Drawing.Point(69, 36);
+            this.pnlHistorico2.Name = "pnlHistorico2";
+            this.pnlHistorico2.Size = new System.Drawing.Size(17, 17);
+            this.pnlHistorico2.TabIndex = 109;
+            this.pnlHistorico2.Tag = "Azul";
+            this.pnlHistorico2.Click += new System.EventHandler(this.escolhe_cor);
+            // 
+            // pnlHistorico3
+            // 
+            this.pnlHistorico3.BackColor = System.Drawing.Color.Transparent;
+            this.pnlHistorico3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlHistorico3.Location = new System.Drawing.Point(69, 65);
+            this.pnlHistorico3.Name = "pnlHistorico3";
+            this.pnlHistorico3.Size = new System.Drawing.Size(17, 17);
+            this.pnlHistorico3.TabIndex = 110;
+            this.pnlHistorico3.Tag = "Azul";
+            this.pnlHistorico3.Click += new System.EventHandler(this.escolhe_cor);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel2.Location = new System.Drawing.Point(69, 96);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(17, 17);
+            this.panel2.TabIndex = 110;
+            this.panel2.Tag = "Azul";
+            this.panel2.Click += new System.EventHandler(this.escolhe_cor);
+            // 
+            // btnColorRed
+            // 
+            this.btnColorRed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
+            this.btnColorRed.FlatAppearance.BorderSize = 0;
+            this.btnColorRed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnColorRed.ForeColor = System.Drawing.Color.Transparent;
+            this.btnColorRed.Location = new System.Drawing.Point(167, 21);
+            this.btnColorRed.Name = "btnColorRed";
+            this.btnColorRed.Size = new System.Drawing.Size(32, 32);
+            this.btnColorRed.TabIndex = 114;
+            this.btnColorRed.UseVisualStyleBackColor = false;
+            this.btnColorRed.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
+            // 
+            // btnColorPink
+            // 
+            this.btnColorPink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(30)))), ((int)(((byte)(99)))));
+            this.btnColorPink.FlatAppearance.BorderSize = 0;
+            this.btnColorPink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnColorPink.ForeColor = System.Drawing.Color.Transparent;
+            this.btnColorPink.Location = new System.Drawing.Point(205, 21);
+            this.btnColorPink.Name = "btnColorPink";
+            this.btnColorPink.Size = new System.Drawing.Size(32, 32);
+            this.btnColorPink.TabIndex = 114;
+            this.btnColorPink.UseVisualStyleBackColor = false;
+            this.btnColorPink.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
+            // 
+            // pnlCorEscolhida
+            // 
+            this.pnlCorEscolhida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(48)))), ((int)(((byte)(54)))));
+            this.pnlCorEscolhida.Controls.Add(this.button13);
+            this.pnlCorEscolhida.Controls.Add(this.btnLime);
+            this.pnlCorEscolhida.Controls.Add(this.btnColorLime);
+            this.pnlCorEscolhida.Controls.Add(this.btnColorCloudley);
+            this.pnlCorEscolhida.Controls.Add(this.btnColorPurple);
+            this.pnlCorEscolhida.Controls.Add(this.button12);
+            this.pnlCorEscolhida.Controls.Add(this.btnColorYellowey);
+            this.pnlCorEscolhida.Controls.Add(this.button6);
+            this.pnlCorEscolhida.Controls.Add(this.btnColorBlue);
+            this.pnlCorEscolhida.Controls.Add(this.btnColorPink);
+            this.pnlCorEscolhida.Controls.Add(this.button11);
+            this.pnlCorEscolhida.Controls.Add(this.btnColorGreen);
+            this.pnlCorEscolhida.Controls.Add(this.btnColorCyan);
+            this.pnlCorEscolhida.Controls.Add(this.btnColorDeepPurple);
+            this.pnlCorEscolhida.Controls.Add(this.btnColorRed);
+            this.pnlCorEscolhida.Controls.Add(this.panel2);
+            this.pnlCorEscolhida.Controls.Add(this.pnlHistorico3);
+            this.pnlCorEscolhida.Controls.Add(this.pnlHistorico2);
+            this.pnlCorEscolhida.Controls.Add(this.pnlHistorico1);
+            this.pnlCorEscolhida.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pnlCorEscolhida.Location = new System.Drawing.Point(915, 275);
+            this.pnlCorEscolhida.Name = "pnlCorEscolhida";
+            this.pnlCorEscolhida.Size = new System.Drawing.Size(330, 250);
+            this.pnlCorEscolhida.TabIndex = 12;
+            // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(17)))), ((int)(((byte)(99)))));
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.ForeColor = System.Drawing.Color.Transparent;
+            this.button13.Location = new System.Drawing.Point(205, 173);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(32, 32);
+            this.button13.TabIndex = 114;
+            this.button13.UseVisualStyleBackColor = false;
+            this.button13.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
+            // 
+            // btnLime
+            // 
+            this.btnLime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(220)))), ((int)(((byte)(57)))));
+            this.btnLime.FlatAppearance.BorderSize = 0;
+            this.btnLime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLime.ForeColor = System.Drawing.Color.Transparent;
+            this.btnLime.Location = new System.Drawing.Point(167, 135);
+            this.btnLime.Name = "btnLime";
+            this.btnLime.Size = new System.Drawing.Size(32, 32);
+            this.btnLime.TabIndex = 114;
+            this.btnLime.UseVisualStyleBackColor = false;
+            this.btnLime.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
+            // 
+            // btnColorLime
+            // 
+            this.btnColorLime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(195)))), ((int)(((byte)(74)))));
+            this.btnColorLime.FlatAppearance.BorderSize = 0;
+            this.btnColorLime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnColorLime.ForeColor = System.Drawing.Color.Transparent;
+            this.btnColorLime.Location = new System.Drawing.Point(205, 97);
+            this.btnColorLime.Name = "btnColorLime";
+            this.btnColorLime.Size = new System.Drawing.Size(32, 32);
+            this.btnColorLime.TabIndex = 114;
+            this.btnColorLime.UseVisualStyleBackColor = false;
+            this.btnColorLime.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
+            // 
+            // btnColorCloudley
+            // 
+            this.btnColorCloudley.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.btnColorCloudley.FlatAppearance.BorderSize = 0;
+            this.btnColorCloudley.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnColorCloudley.ForeColor = System.Drawing.Color.Transparent;
+            this.btnColorCloudley.Location = new System.Drawing.Point(243, 59);
+            this.btnColorCloudley.Name = "btnColorCloudley";
+            this.btnColorCloudley.Size = new System.Drawing.Size(32, 32);
+            this.btnColorCloudley.TabIndex = 114;
+            this.btnColorCloudley.UseVisualStyleBackColor = false;
+            this.btnColorCloudley.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
+            // 
+            // btnColorPurple
+            // 
+            this.btnColorPurple.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(39)))), ((int)(((byte)(176)))));
+            this.btnColorPurple.FlatAppearance.BorderSize = 0;
+            this.btnColorPurple.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnColorPurple.ForeColor = System.Drawing.Color.Transparent;
+            this.btnColorPurple.Location = new System.Drawing.Point(243, 21);
+            this.btnColorPurple.Name = "btnColorPurple";
+            this.btnColorPurple.Size = new System.Drawing.Size(32, 32);
+            this.btnColorPurple.TabIndex = 114;
+            this.btnColorPurple.UseVisualStyleBackColor = false;
+            this.btnColorPurple.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(17)))), ((int)(((byte)(99)))));
+            this.button12.FlatAppearance.BorderSize = 0;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.ForeColor = System.Drawing.Color.Transparent;
+            this.button12.Location = new System.Drawing.Point(167, 173);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(32, 32);
+            this.button12.TabIndex = 114;
+            this.button12.UseVisualStyleBackColor = false;
+            this.button12.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
+            // 
+            // btnColorYellowey
+            // 
+            this.btnColorYellowey.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(150)))));
+            this.btnColorYellowey.FlatAppearance.BorderSize = 0;
+            this.btnColorYellowey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnColorYellowey.ForeColor = System.Drawing.Color.Transparent;
+            this.btnColorYellowey.Location = new System.Drawing.Point(205, 135);
+            this.btnColorYellowey.Name = "btnColorYellowey";
+            this.btnColorYellowey.Size = new System.Drawing.Size(32, 32);
+            this.btnColorYellowey.TabIndex = 114;
+            this.btnColorYellowey.UseVisualStyleBackColor = false;
+            this.btnColorYellowey.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.ForeColor = System.Drawing.Color.Transparent;
+            this.button6.Location = new System.Drawing.Point(243, 173);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(32, 32);
+            this.button6.TabIndex = 114;
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
+            // 
+            // btnColorBlue
+            // 
+            this.btnColorBlue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnColorBlue.FlatAppearance.BorderSize = 0;
+            this.btnColorBlue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnColorBlue.ForeColor = System.Drawing.Color.Transparent;
+            this.btnColorBlue.Location = new System.Drawing.Point(205, 59);
+            this.btnColorBlue.Name = "btnColorBlue";
+            this.btnColorBlue.Size = new System.Drawing.Size(32, 32);
+            this.btnColorBlue.TabIndex = 114;
+            this.btnColorBlue.UseVisualStyleBackColor = false;
+            this.btnColorBlue.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.ForeColor = System.Drawing.Color.Transparent;
+            this.button11.Location = new System.Drawing.Point(243, 135);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(32, 32);
+            this.button11.TabIndex = 114;
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
+            // 
+            // btnColorGreen
+            // 
+            this.btnColorGreen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
+            this.btnColorGreen.FlatAppearance.BorderSize = 0;
+            this.btnColorGreen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnColorGreen.ForeColor = System.Drawing.Color.Transparent;
+            this.btnColorGreen.Location = new System.Drawing.Point(243, 97);
+            this.btnColorGreen.Name = "btnColorGreen";
+            this.btnColorGreen.Size = new System.Drawing.Size(32, 32);
+            this.btnColorGreen.TabIndex = 114;
+            this.btnColorGreen.UseVisualStyleBackColor = false;
+            this.btnColorGreen.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
+            // 
+            // btnColorCyan
+            // 
+            this.btnColorCyan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(188)))), ((int)(((byte)(212)))));
+            this.btnColorCyan.FlatAppearance.BorderSize = 0;
+            this.btnColorCyan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnColorCyan.ForeColor = System.Drawing.Color.Transparent;
+            this.btnColorCyan.Location = new System.Drawing.Point(167, 97);
+            this.btnColorCyan.Name = "btnColorCyan";
+            this.btnColorCyan.Size = new System.Drawing.Size(32, 32);
+            this.btnColorCyan.TabIndex = 114;
+            this.btnColorCyan.UseVisualStyleBackColor = false;
+            this.btnColorCyan.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
+            // 
+            // btnColorDeepPurple
+            // 
+            this.btnColorDeepPurple.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
+            this.btnColorDeepPurple.FlatAppearance.BorderSize = 0;
+            this.btnColorDeepPurple.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnColorDeepPurple.ForeColor = System.Drawing.Color.Transparent;
+            this.btnColorDeepPurple.Location = new System.Drawing.Point(167, 59);
+            this.btnColorDeepPurple.Name = "btnColorDeepPurple";
+            this.btnColorDeepPurple.Size = new System.Drawing.Size(32, 32);
+            this.btnColorDeepPurple.TabIndex = 114;
+            this.btnColorDeepPurple.UseVisualStyleBackColor = false;
+            this.btnColorDeepPurple.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
+            // 
+            // ebtnOpenModuleTextIcons
+            // 
+            this.ebtnOpenModuleTextIcons.ElipseRadius = 10;
+            this.ebtnOpenModuleTextIcons.TargetControl = this.btnOpenModuleTextIcons;
+            // 
+            // ebtnOpenModuleBackground
+            // 
+            this.ebtnOpenModuleBackground.ElipseRadius = 10;
+            this.ebtnOpenModuleBackground.TargetControl = this.btnOpenModuleBackground;
             // 
             // bunifuElipse3
             // 
@@ -2557,80 +2846,7 @@ namespace AcroniUI.CustomizingForms
             this.bunifuElipse6.ElipseRadius = 5;
             this.bunifuElipse6.TargetControl = this;
             // 
-            // bunifuElipse7
-            // 
-            this.bunifuElipse7.ElipseRadius = 5;
-            this.bunifuElipse7.TargetControl = this;
-            // 
-            // bunifuElipse8
-            // 
-            this.bunifuElipse8.ElipseRadius = 5;
-            this.bunifuElipse8.TargetControl = this;
-            // 
-            // bunifuElipse9
-            // 
-            this.bunifuElipse9.ElipseRadius = 5;
-            this.bunifuElipse9.TargetControl = this;
-            // 
-            // bunifuElipse10
-            // 
-            this.bunifuElipse10.ElipseRadius = 5;
-            this.bunifuElipse10.TargetControl = this;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.lblEscolherCores);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 574);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1280, 146);
-            this.panel1.TabIndex = 81;
-            // 
-            // pnlHeadColorpicker
-            // 
-            this.pnlHeadColorpicker.Controls.Add(this.lblColorName);
-            this.pnlHeadColorpicker.Controls.Add(this.pnlColor);
-            this.pnlHeadColorpicker.Controls.Add(this.lblHexaColor);
-            this.pnlHeadColorpicker.Location = new System.Drawing.Point(929, 203);
-            this.pnlHeadColorpicker.Name = "pnlHeadColorpicker";
-            this.pnlHeadColorpicker.Size = new System.Drawing.Size(313, 92);
-            this.pnlHeadColorpicker.TabIndex = 82;
-            // 
-            // lblColorName
-            // 
-            this.lblColorName.Font = new System.Drawing.Font("Open Sans", 13.25F, System.Drawing.FontStyle.Bold);
-            this.lblColorName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
-            this.lblColorName.Location = new System.Drawing.Point(112, 46);
-            this.lblColorName.Name = "lblColorName";
-            this.lblColorName.Size = new System.Drawing.Size(173, 29);
-            this.lblColorName.TabIndex = 85;
-            this.lblColorName.Text = "Azul";
-            this.lblColorName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pnlColor
-            // 
-            this.pnlColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(150)))), ((int)(((byte)(242)))));
-            this.pnlColor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlColor.Location = new System.Drawing.Point(24, 17);
-            this.pnlColor.Name = "pnlColor";
-            this.pnlColor.Size = new System.Drawing.Size(67, 67);
-            this.pnlColor.TabIndex = 83;
-            this.pnlColor.Click += new System.EventHandler(this.pnlColor_Click);
-            this.pnlColor.MouseLeave += new System.EventHandler(this.pnlColor_MouseLeave);
-            this.pnlColor.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlColor_MouseMove);
-            // 
-            // lblHexaColor
-            // 
-            this.lblHexaColor.AutoSize = true;
-            this.lblHexaColor.Font = new System.Drawing.Font("Open Sans", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHexaColor.ForeColor = System.Drawing.Color.White;
-            this.lblHexaColor.Location = new System.Drawing.Point(144, 19);
-            this.lblHexaColor.Name = "lblHexaColor";
-            this.lblHexaColor.Size = new System.Drawing.Size(114, 32);
-            this.lblHexaColor.TabIndex = 84;
-            this.lblHexaColor.Text = "#2196F3";
-            this.lblHexaColor.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
+>>>>>>> a4d93412ca3f8ded539e3ecdebfd04b256d24464
             // Compacto
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -2759,6 +2975,7 @@ namespace AcroniUI.CustomizingForms
             this.Controls.Add(this.picBoxKeyboardBackground);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "Compacto";
+            this.Opacity = 0D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FormLoad);
             this.Controls.SetChildIndex(this.picBoxKeyboardBackground, 0);
@@ -2886,28 +3103,24 @@ namespace AcroniUI.CustomizingForms
             this.pnlSuperior.ResumeLayout(false);
             this.pnlSuperior.PerformLayout();
             this.pnlHistorico.ResumeLayout(false);
-            this.pnlCorEscolhida.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxKeyboardBackground)).EndInit();
             this.pnlCustomizingMenu.ResumeLayout(false);
             this.pnlCustomizingMenu.PerformLayout();
-            this.pnlIcons.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxIcon10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxIcon9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxIcon8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxIcon7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxIcon6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxIcon5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxIcon4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxIcon3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxIcon2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxIcon1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignRight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignCenter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignLeft)).EndInit();
             this.panel1.ResumeLayout(false);
+<<<<<<< HEAD
             this.panel1.PerformLayout();
+=======
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+>>>>>>> a4d93412ca3f8ded539e3ecdebfd04b256d24464
             this.pnlHeadColorpicker.ResumeLayout(false);
             this.pnlHeadColorpicker.PerformLayout();
+            this.pnlCorEscolhida.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2984,48 +3197,18 @@ namespace AcroniUI.CustomizingForms
         private System.Windows.Forms.Button btnHist2;
         private System.Windows.Forms.Button btnHist1;
         private System.Windows.Forms.TextBox txtSelectFont;
-        private System.Windows.Forms.Panel pnlCorEscolhida;
-        private System.Windows.Forms.Panel Azul_Cinzento;
-        private System.Windows.Forms.Panel Ambar;
-        private System.Windows.Forms.Panel pnlHistorico3;
-        private System.Windows.Forms.Panel pnlHistorico2;
-        private System.Windows.Forms.Panel Verde;
-        private System.Windows.Forms.Panel Esmeralda;
-        private System.Windows.Forms.Panel Verde_Claro;
-        private System.Windows.Forms.Panel Cinza;
-        private System.Windows.Forms.Panel Lima;
-        private System.Windows.Forms.Panel Amarelo;
-        private System.Windows.Forms.Panel Ciano;
-        private System.Windows.Forms.Panel Laranja;
-        private System.Windows.Forms.Panel Rosa;
-        private System.Windows.Forms.Panel Roxo;
-        private System.Windows.Forms.Panel Laranja_Escuro;
-        private System.Windows.Forms.Panel Preto;
-        private System.Windows.Forms.Panel Marrom;
-        private System.Windows.Forms.Panel Roxo_Escuro;
-        private System.Windows.Forms.Panel Azul;
-        private System.Windows.Forms.Panel Vermelho;
-        private System.Windows.Forms.Panel pnlHistorico1;
         protected System.Windows.Forms.PictureBox picBoxKeyboardBackground;
         private System.Windows.Forms.Panel pnlCustomizingMenu;
         private StyleBtn btnStyleStrikeout;
         private StyleBtn btnStyleUnderline;
         private StyleBtn btnStyleItalic;
         private StyleBtn btnStyleBold;
-        private System.Windows.Forms.Panel pnlIcons;
         private Bunifu.Framework.UI.BunifuImageButton btnTextAlignRight;
         private Bunifu.Framework.UI.BunifuImageButton btnTextAlignCenter;
         private Bunifu.Framework.UI.BunifuImageButton btnTextAlignLeft;
         private System.Windows.Forms.ComboBox cmbFontes;
-        private StyleBtn btnSizeSmall;
-        private StyleBtn btnSizeMedium;
-        private StyleBtn btnSizeBig;
         private System.Windows.Forms.Label lblDefinirParaTodasTeclas;
-        private System.Windows.Forms.Label label1;
-        private StyleBtn btnIcons;
-        private System.Windows.Forms.PictureBox picBoxIcon3;
-        private System.Windows.Forms.PictureBox picBoxIcon2;
-        private System.Windows.Forms.PictureBox picBoxIcon1;
+        private StyleBtn btnOpenModuleSwitch;
         private System.Windows.Forms.Button btnVoltar;
 //<<<<<<< HEAD
 ////<<<<<<< HEAD
@@ -3086,8 +3269,15 @@ namespace AcroniUI.CustomizingForms
         private System.Windows.Forms.Panel fundoCe7;
         private System.Windows.Forms.Panel fundoCe2s;
         private System.Windows.Forms.Panel fundoCe3;
+<<<<<<< HEAD
 //<<<<<<< HEAD
 ////=======
+=======
+<<<<<<< HEAD
+        private Bunifu.Framework.UI.BunifuElipse eBtnOpenModuleSwitch;
+=======
+<<<<<<< HEAD
+>>>>>>> a4d93412ca3f8ded539e3ecdebfd04b256d24464
 //=======
 //>>>>>>> 6085eb0e9043626e0c90ad911655a391e0a53c58
         private System.Windows.Forms.PictureBox picBoxIcon10;
@@ -3110,14 +3300,73 @@ namespace AcroniUI.CustomizingForms
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse8;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse9;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse10;
+>>>>>>> 91ab273f55e42b47276ae0758298a216221759b2
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel pnlHeadColorpicker;
         private System.Windows.Forms.Label lblColorName;
         private System.Windows.Forms.Panel pnlColor;
         private System.Windows.Forms.Label lblHexaColor;
+<<<<<<< HEAD
+        private System.Windows.Forms.Panel pnlCorEscolhida;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button btnLime;
+        private System.Windows.Forms.Button btnColorLime;
+        private System.Windows.Forms.Button btnColorCloudley;
+        private System.Windows.Forms.Button btnColorPurple;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button btnColorYellowey;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnColorBlue;
+        private System.Windows.Forms.Button btnColorPink;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button btnColorGreen;
+        private System.Windows.Forms.Button btnColorCyan;
+        private System.Windows.Forms.Button btnColorDeepPurple;
+        private System.Windows.Forms.Button btnColorRed;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlHistorico3;
+        private System.Windows.Forms.Panel pnlHistorico2;
+        private System.Windows.Forms.Panel pnlHistorico1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label1;
+        private StyleBtn btnOpenModuleBackground;
+        private StyleBtn btnOpenModuleTextIcons;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private Bunifu.Framework.UI.BunifuElipse ebtnOpenModuleTextIcons;
+        private Bunifu.Framework.UI.BunifuElipse ebtnOpenModuleBackground;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse4;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse5;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse6;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.ComboBox comboBox1;
+=======
         private System.Windows.Forms.Label lblEscolherCores;
+<<<<<<< HEAD
 //>>>>>>> 6085eb0e9043626e0c90ad911655a391e0a53c58
+=======
+>>>>>>> 6085eb0e9043626e0c90ad911655a391e0a53c58
+>>>>>>> 91ab273f55e42b47276ae0758298a216221759b2
+>>>>>>> a4d93412ca3f8ded539e3ecdebfd04b256d24464
     }
 }
 
