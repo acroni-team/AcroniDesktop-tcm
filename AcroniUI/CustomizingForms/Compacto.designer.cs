@@ -114,6 +114,7 @@ namespace AcroniUI.CustomizingForms
             this.fundoCb4 = new System.Windows.Forms.Panel();
             this.fundoCb5 = new System.Windows.Forms.Panel();
             this.fundoCb6 = new System.Windows.Forms.Panel();
+            this.lblEscolherCores = new System.Windows.Forms.Label();
             this.fundoCb7 = new System.Windows.Forms.Panel();
             this.fundoCb8 = new System.Windows.Forms.Panel();
             this.fundoCb9 = new System.Windows.Forms.Panel();
@@ -223,9 +224,7 @@ namespace AcroniUI.CustomizingForms
             this.lblColorName = new System.Windows.Forms.Label();
             this.pnlColor = new System.Windows.Forms.Panel();
             this.lblHexaColor = new System.Windows.Forms.Label();
-            this.lblEscolherCores = new System.Windows.Forms.Label();
             this.pnlSuperior.SuspendLayout();
-            this.fundoCb6.SuspendLayout();
             this.pnlHistorico.SuspendLayout();
             this.pnlCorEscolhida.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxKeyboardBackground)).BeginInit();
@@ -244,6 +243,7 @@ namespace AcroniUI.CustomizingForms
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignRight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignCenter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignLeft)).BeginInit();
+            this.panel1.SuspendLayout();
             this.pnlHeadColorpicker.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -279,6 +279,7 @@ namespace AcroniUI.CustomizingForms
             this.Cb3.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cb3.UseVisualStyleBackColor = false;
             this.Cb3.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cb3.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Cb4
             // 
@@ -296,6 +297,7 @@ namespace AcroniUI.CustomizingForms
             this.Cb4.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cb4.UseVisualStyleBackColor = false;
             this.Cb4.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cb4.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Cb5
             // 
@@ -313,6 +315,7 @@ namespace AcroniUI.CustomizingForms
             this.Cb5.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cb5.UseVisualStyleBackColor = false;
             this.Cb5.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cb5.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Cb6
             // 
@@ -330,6 +333,7 @@ namespace AcroniUI.CustomizingForms
             this.Cb6.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cb6.UseVisualStyleBackColor = false;
             this.Cb6.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cb6.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Cb7
             // 
@@ -347,6 +351,7 @@ namespace AcroniUI.CustomizingForms
             this.Cb7.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cb7.UseVisualStyleBackColor = false;
             this.Cb7.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cb7.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Cb8
             // 
@@ -364,6 +369,7 @@ namespace AcroniUI.CustomizingForms
             this.Cb8.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cb8.UseVisualStyleBackColor = false;
             this.Cb8.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cb8.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Cb9
             // 
@@ -381,6 +387,7 @@ namespace AcroniUI.CustomizingForms
             this.Cb9.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cb9.UseVisualStyleBackColor = false;
             this.Cb9.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cb9.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Cb10
             // 
@@ -398,6 +405,7 @@ namespace AcroniUI.CustomizingForms
             this.Cb10.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cb10.UseVisualStyleBackColor = false;
             this.Cb10.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cb10.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Cb11
             // 
@@ -415,6 +423,7 @@ namespace AcroniUI.CustomizingForms
             this.Cb11.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cb11.UseVisualStyleBackColor = false;
             this.Cb11.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cb11.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Cb12
             // 
@@ -432,6 +441,7 @@ namespace AcroniUI.CustomizingForms
             this.Cb12.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cb12.UseVisualStyleBackColor = false;
             this.Cb12.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cb12.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Cb13
             // 
@@ -449,6 +459,7 @@ namespace AcroniUI.CustomizingForms
             this.Cb13.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cb13.UseVisualStyleBackColor = false;
             this.Cb13.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cb13.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Cc2
             // 
@@ -466,6 +477,7 @@ namespace AcroniUI.CustomizingForms
             this.Cc2.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cc2.UseVisualStyleBackColor = false;
             this.Cc2.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cc2.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Cc3
             // 
@@ -483,6 +495,7 @@ namespace AcroniUI.CustomizingForms
             this.Cc3.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cc3.UseVisualStyleBackColor = false;
             this.Cc3.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cc3.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Cc4
             // 
@@ -500,6 +513,7 @@ namespace AcroniUI.CustomizingForms
             this.Cc4.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cc4.UseVisualStyleBackColor = false;
             this.Cc4.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cc4.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Cc5
             // 
@@ -517,6 +531,7 @@ namespace AcroniUI.CustomizingForms
             this.Cc5.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cc5.UseVisualStyleBackColor = false;
             this.Cc5.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cc5.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Cc6
             // 
@@ -534,6 +549,7 @@ namespace AcroniUI.CustomizingForms
             this.Cc6.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cc6.UseVisualStyleBackColor = false;
             this.Cc6.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cc6.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Cc7
             // 
@@ -551,6 +567,7 @@ namespace AcroniUI.CustomizingForms
             this.Cc7.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cc7.UseVisualStyleBackColor = false;
             this.Cc7.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cc7.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Cc8
             // 
@@ -568,6 +585,7 @@ namespace AcroniUI.CustomizingForms
             this.Cc8.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cc8.UseVisualStyleBackColor = false;
             this.Cc8.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cc8.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Cc9
             // 
@@ -585,6 +603,7 @@ namespace AcroniUI.CustomizingForms
             this.Cc9.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cc9.UseVisualStyleBackColor = false;
             this.Cc9.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cc9.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Cc10
             // 
@@ -602,6 +621,7 @@ namespace AcroniUI.CustomizingForms
             this.Cc10.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cc10.UseVisualStyleBackColor = false;
             this.Cc10.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cc10.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Cc11
             // 
@@ -619,6 +639,7 @@ namespace AcroniUI.CustomizingForms
             this.Cc11.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cc11.UseVisualStyleBackColor = false;
             this.Cc11.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cc11.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Cc12
             // 
@@ -636,6 +657,7 @@ namespace AcroniUI.CustomizingForms
             this.Cc12.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cc12.UseVisualStyleBackColor = false;
             this.Cc12.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cc12.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Cc13
             // 
@@ -653,6 +675,7 @@ namespace AcroniUI.CustomizingForms
             this.Cc13.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cc13.UseVisualStyleBackColor = false;
             this.Cc13.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cc13.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Cd2
             // 
@@ -670,6 +693,7 @@ namespace AcroniUI.CustomizingForms
             this.Cd2.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cd2.UseVisualStyleBackColor = false;
             this.Cd2.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cd2.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Cd3
             // 
@@ -687,6 +711,7 @@ namespace AcroniUI.CustomizingForms
             this.Cd3.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cd3.UseVisualStyleBackColor = false;
             this.Cd3.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cd3.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Cd4
             // 
@@ -704,6 +729,7 @@ namespace AcroniUI.CustomizingForms
             this.Cd4.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cd4.UseVisualStyleBackColor = false;
             this.Cd4.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cd4.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Cd5
             // 
@@ -721,6 +747,7 @@ namespace AcroniUI.CustomizingForms
             this.Cd5.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cd5.UseVisualStyleBackColor = false;
             this.Cd5.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cd5.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Cd6
             // 
@@ -738,6 +765,7 @@ namespace AcroniUI.CustomizingForms
             this.Cd6.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cd6.UseVisualStyleBackColor = false;
             this.Cd6.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cd6.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Cd7
             // 
@@ -755,6 +783,7 @@ namespace AcroniUI.CustomizingForms
             this.Cd7.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cd7.UseVisualStyleBackColor = false;
             this.Cd7.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cd7.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Cd8
             // 
@@ -772,6 +801,7 @@ namespace AcroniUI.CustomizingForms
             this.Cd8.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cd8.UseVisualStyleBackColor = false;
             this.Cd8.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cd8.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Cd9
             // 
@@ -789,6 +819,7 @@ namespace AcroniUI.CustomizingForms
             this.Cd9.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cd9.UseVisualStyleBackColor = false;
             this.Cd9.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cd9.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Cd10
             // 
@@ -806,6 +837,7 @@ namespace AcroniUI.CustomizingForms
             this.Cd10.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cd10.UseVisualStyleBackColor = false;
             this.Cd10.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cd10.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Cd11
             // 
@@ -823,6 +855,7 @@ namespace AcroniUI.CustomizingForms
             this.Cd11.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cd11.UseVisualStyleBackColor = false;
             this.Cd11.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cd11.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Cd12
             // 
@@ -840,6 +873,7 @@ namespace AcroniUI.CustomizingForms
             this.Cd12.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cd12.UseVisualStyleBackColor = false;
             this.Cd12.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cd12.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Cd13
             // 
@@ -857,6 +891,7 @@ namespace AcroniUI.CustomizingForms
             this.Cd13.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cd13.UseVisualStyleBackColor = false;
             this.Cd13.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cd13.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Cc1
             // 
@@ -874,6 +909,7 @@ namespace AcroniUI.CustomizingForms
             this.Cc1.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cc1.UseVisualStyleBackColor = false;
             this.Cc1.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cc1.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Cd1s
             // 
@@ -891,6 +927,7 @@ namespace AcroniUI.CustomizingForms
             this.Cd1s.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cd1s.UseVisualStyleBackColor = false;
             this.Cd1s.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cd1s.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Ce1
             // 
@@ -908,6 +945,7 @@ namespace AcroniUI.CustomizingForms
             this.Ce1.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Ce1.UseVisualStyleBackColor = false;
             this.Ce1.Click += new System.EventHandler(this.kbtn_Click);
+            this.Ce1.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Ce2s
             // 
@@ -925,6 +963,7 @@ namespace AcroniUI.CustomizingForms
             this.Ce2s.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Ce2s.UseVisualStyleBackColor = false;
             this.Ce2s.Click += new System.EventHandler(this.kbtn_Click);
+            this.Ce2s.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Ce4
             // 
@@ -942,6 +981,7 @@ namespace AcroniUI.CustomizingForms
             this.Ce4.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Ce4.UseVisualStyleBackColor = false;
             this.Ce4.Click += new System.EventHandler(this.kbtn_Click);
+            this.Ce4.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Ce6
             // 
@@ -959,6 +999,7 @@ namespace AcroniUI.CustomizingForms
             this.Ce6.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Ce6.UseVisualStyleBackColor = false;
             this.Ce6.Click += new System.EventHandler(this.kbtn_Click);
+            this.Ce6.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Ce5
             // 
@@ -976,6 +1017,7 @@ namespace AcroniUI.CustomizingForms
             this.Ce5.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Ce5.UseVisualStyleBackColor = false;
             this.Ce5.Click += new System.EventHandler(this.kbtn_Click);
+            this.Ce5.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Ce3
             // 
@@ -993,6 +1035,7 @@ namespace AcroniUI.CustomizingForms
             this.Ce3.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Ce3.UseVisualStyleBackColor = false;
             this.Ce3.Click += new System.EventHandler(this.kbtn_Click);
+            this.Ce3.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Ce7
             // 
@@ -1010,6 +1053,7 @@ namespace AcroniUI.CustomizingForms
             this.Ce7.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Ce7.UseVisualStyleBackColor = false;
             this.Ce7.Click += new System.EventHandler(this.kbtn_Click);
+            this.Ce7.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Ce8
             // 
@@ -1027,6 +1071,7 @@ namespace AcroniUI.CustomizingForms
             this.Ce8.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Ce8.UseVisualStyleBackColor = false;
             this.Ce8.Click += new System.EventHandler(this.kbtn_Click);
+            this.Ce8.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Cd14
             // 
@@ -1044,6 +1089,7 @@ namespace AcroniUI.CustomizingForms
             this.Cd14.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cd14.UseVisualStyleBackColor = false;
             this.Cd14.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cd14.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Ca1
             // 
@@ -1061,6 +1107,7 @@ namespace AcroniUI.CustomizingForms
             this.Ca1.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Ca1.UseVisualStyleBackColor = false;
             this.Ca1.Click += new System.EventHandler(this.kbtn_Click);
+            this.Ca1.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Ca2
             // 
@@ -1078,6 +1125,7 @@ namespace AcroniUI.CustomizingForms
             this.Ca2.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Ca2.UseVisualStyleBackColor = false;
             this.Ca2.Click += new System.EventHandler(this.kbtn_Click);
+            this.Ca2.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Ca3
             // 
@@ -1095,6 +1143,7 @@ namespace AcroniUI.CustomizingForms
             this.Ca3.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Ca3.UseVisualStyleBackColor = false;
             this.Ca3.Click += new System.EventHandler(this.kbtn_Click);
+            this.Ca3.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Ca4
             // 
@@ -1112,6 +1161,7 @@ namespace AcroniUI.CustomizingForms
             this.Ca4.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Ca4.UseVisualStyleBackColor = false;
             this.Ca4.Click += new System.EventHandler(this.kbtn_Click);
+            this.Ca4.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Ca5
             // 
@@ -1129,6 +1179,7 @@ namespace AcroniUI.CustomizingForms
             this.Ca5.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Ca5.UseVisualStyleBackColor = false;
             this.Ca5.Click += new System.EventHandler(this.kbtn_Click);
+            this.Ca5.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Ca6
             // 
@@ -1146,6 +1197,7 @@ namespace AcroniUI.CustomizingForms
             this.Ca6.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Ca6.UseVisualStyleBackColor = false;
             this.Ca6.Click += new System.EventHandler(this.kbtn_Click);
+            this.Ca6.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Ca7
             // 
@@ -1163,6 +1215,7 @@ namespace AcroniUI.CustomizingForms
             this.Ca7.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Ca7.UseVisualStyleBackColor = false;
             this.Ca7.Click += new System.EventHandler(this.kbtn_Click);
+            this.Ca7.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Ca8
             // 
@@ -1180,6 +1233,7 @@ namespace AcroniUI.CustomizingForms
             this.Ca8.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Ca8.UseVisualStyleBackColor = false;
             this.Ca8.Click += new System.EventHandler(this.kbtn_Click);
+            this.Ca8.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Ca9
             // 
@@ -1197,6 +1251,7 @@ namespace AcroniUI.CustomizingForms
             this.Ca9.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Ca9.UseVisualStyleBackColor = false;
             this.Ca9.Click += new System.EventHandler(this.kbtn_Click);
+            this.Ca9.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Ca10
             // 
@@ -1214,6 +1269,7 @@ namespace AcroniUI.CustomizingForms
             this.Ca10.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Ca10.UseVisualStyleBackColor = false;
             this.Ca10.Click += new System.EventHandler(this.kbtn_Click);
+            this.Ca10.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Ca11
             // 
@@ -1231,6 +1287,7 @@ namespace AcroniUI.CustomizingForms
             this.Ca11.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Ca11.UseVisualStyleBackColor = false;
             this.Ca11.Click += new System.EventHandler(this.kbtn_Click);
+            this.Ca11.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Ca12
             // 
@@ -1248,6 +1305,7 @@ namespace AcroniUI.CustomizingForms
             this.Ca12.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Ca12.UseVisualStyleBackColor = false;
             this.Ca12.Click += new System.EventHandler(this.kbtn_Click);
+            this.Ca12.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Ca13
             // 
@@ -1265,6 +1323,7 @@ namespace AcroniUI.CustomizingForms
             this.Ca13.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Ca13.UseVisualStyleBackColor = false;
             this.Ca13.Click += new System.EventHandler(this.kbtn_Click);
+            this.Ca13.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Ca14s
             // 
@@ -1282,6 +1341,7 @@ namespace AcroniUI.CustomizingForms
             this.Ca14s.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Ca14s.UseVisualStyleBackColor = false;
             this.Ca14s.Click += new System.EventHandler(this.kbtn_Click);
+            this.Ca14s.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Cb2
             // 
@@ -1299,6 +1359,7 @@ namespace AcroniUI.CustomizingForms
             this.Cb2.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cb2.UseVisualStyleBackColor = false;
             this.Cb2.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cb2.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // Cb1s
             // 
@@ -1316,6 +1377,7 @@ namespace AcroniUI.CustomizingForms
             this.Cb1s.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Cb1s.UseVisualStyleBackColor = false;
             this.Cb1s.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cb1s.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);
             // 
             // fundoCa1
             // 
@@ -1456,11 +1518,23 @@ namespace AcroniUI.CustomizingForms
             // fundoCb6
             // 
             this.fundoCb6.BackColor = System.Drawing.Color.Black;
-            this.fundoCb6.Controls.Add(this.lblEscolherCores);
             this.fundoCb6.Location = new System.Drawing.Point(346, 303);
             this.fundoCb6.Name = "fundoCb6";
             this.fundoCb6.Size = new System.Drawing.Size(52, 56);
             this.fundoCb6.TabIndex = 15;
+            // 
+            // lblEscolherCores
+            // 
+            this.lblEscolherCores.AutoSize = true;
+            this.lblEscolherCores.Font = new System.Drawing.Font("Open Sans", 45.25F, System.Drawing.FontStyle.Bold);
+            this.lblEscolherCores.ForeColor = System.Drawing.Color.White;
+            this.lblEscolherCores.Location = new System.Drawing.Point(545, 0);
+            this.lblEscolherCores.Name = "lblEscolherCores";
+            this.lblEscolherCores.Size = new System.Drawing.Size(283, 166);
+            this.lblEscolherCores.TabIndex = 84;
+            this.lblEscolherCores.Text = "Escolher\r\ncores";
+            this.lblEscolherCores.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblEscolherCores.Visible = false;
             // 
             // fundoCb7
             // 
@@ -2075,6 +2149,7 @@ namespace AcroniUI.CustomizingForms
             this.picBoxKeyboardBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBoxKeyboardBackground.TabIndex = 11;
             this.picBoxKeyboardBackground.TabStop = false;
+            this.picBoxKeyboardBackground.Click += new System.EventHandler(this.picBoxKeyboardBackground_Click);
             // 
             // pnlCustomizingMenu
             // 
@@ -2123,7 +2198,7 @@ namespace AcroniUI.CustomizingForms
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(17, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 32);
+            this.label1.Size = new System.Drawing.Size(93, 32);
             this.label1.TabIndex = 10;
             this.label1.Text = "Fontes";
             // 
@@ -2504,6 +2579,7 @@ namespace AcroniUI.CustomizingForms
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lblEscolherCores);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 574);
             this.panel1.Name = "panel1";
@@ -2550,23 +2626,10 @@ namespace AcroniUI.CustomizingForms
             this.lblHexaColor.ForeColor = System.Drawing.Color.White;
             this.lblHexaColor.Location = new System.Drawing.Point(144, 19);
             this.lblHexaColor.Name = "lblHexaColor";
-            this.lblHexaColor.Size = new System.Drawing.Size(108, 32);
+            this.lblHexaColor.Size = new System.Drawing.Size(114, 32);
             this.lblHexaColor.TabIndex = 84;
             this.lblHexaColor.Text = "#2196F3";
             this.lblHexaColor.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // lblEscolherCores
-            // 
-            this.lblEscolherCores.AutoSize = true;
-            this.lblEscolherCores.Font = new System.Drawing.Font("Open Sans", 45.25F, System.Drawing.FontStyle.Bold);
-            this.lblEscolherCores.ForeColor = System.Drawing.Color.White;
-            this.lblEscolherCores.Location = new System.Drawing.Point(-36, -8);
-            this.lblEscolherCores.Name = "lblEscolherCores";
-            this.lblEscolherCores.Size = new System.Drawing.Size(291, 166);
-            this.lblEscolherCores.TabIndex = 84;
-            this.lblEscolherCores.Text = "Escolher\r\ncores";
-            this.lblEscolherCores.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblEscolherCores.Visible = false;
             // 
             // Compacto
             // 
@@ -2822,8 +2885,6 @@ namespace AcroniUI.CustomizingForms
             this.Controls.SetChildIndex(this.pnlSuperior, 0);
             this.pnlSuperior.ResumeLayout(false);
             this.pnlSuperior.PerformLayout();
-            this.fundoCb6.ResumeLayout(false);
-            this.fundoCb6.PerformLayout();
             this.pnlHistorico.ResumeLayout(false);
             this.pnlCorEscolhida.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxKeyboardBackground)).EndInit();
@@ -2843,6 +2904,8 @@ namespace AcroniUI.CustomizingForms
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignRight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignCenter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignLeft)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.pnlHeadColorpicker.ResumeLayout(false);
             this.pnlHeadColorpicker.PerformLayout();
             this.ResumeLayout(false);
@@ -2964,10 +3027,10 @@ namespace AcroniUI.CustomizingForms
         private System.Windows.Forms.PictureBox picBoxIcon2;
         private System.Windows.Forms.PictureBox picBoxIcon1;
         private System.Windows.Forms.Button btnVoltar;
-<<<<<<< HEAD
 //<<<<<<< HEAD
-=======
->>>>>>> 6085eb0e9043626e0c90ad911655a391e0a53c58
+////<<<<<<< HEAD
+//=======
+//>>>>>>> 6085eb0e9043626e0c90ad911655a391e0a53c58
         private System.Windows.Forms.Panel fundoCa1;
         private System.Windows.Forms.Panel fundoCa2;
         private System.Windows.Forms.Panel fundoCa3;
@@ -3023,10 +3086,10 @@ namespace AcroniUI.CustomizingForms
         private System.Windows.Forms.Panel fundoCe7;
         private System.Windows.Forms.Panel fundoCe2s;
         private System.Windows.Forms.Panel fundoCe3;
-<<<<<<< HEAD
+//<<<<<<< HEAD
+////=======
 //=======
-=======
->>>>>>> 6085eb0e9043626e0c90ad911655a391e0a53c58
+//>>>>>>> 6085eb0e9043626e0c90ad911655a391e0a53c58
         private System.Windows.Forms.PictureBox picBoxIcon10;
         private System.Windows.Forms.PictureBox picBoxIcon9;
         private System.Windows.Forms.PictureBox picBoxIcon8;
@@ -3034,9 +3097,9 @@ namespace AcroniUI.CustomizingForms
         private System.Windows.Forms.PictureBox picBoxIcon6;
         private System.Windows.Forms.PictureBox picBoxIcon5;
         private System.Windows.Forms.PictureBox picBoxIcon4;
-<<<<<<< HEAD
-//>>>>>>> Ícones
-=======
+//<<<<<<< HEAD
+////>>>>>>> Ícones
+//=======
         private Bunifu.Framework.UI.BunifuElipse eColorpickerTrigger;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
@@ -3054,7 +3117,7 @@ namespace AcroniUI.CustomizingForms
         private System.Windows.Forms.Panel pnlColor;
         private System.Windows.Forms.Label lblHexaColor;
         private System.Windows.Forms.Label lblEscolherCores;
->>>>>>> 6085eb0e9043626e0c90ad911655a391e0a53c58
+//>>>>>>> 6085eb0e9043626e0c90ad911655a391e0a53c58
     }
 }
 

@@ -16,6 +16,7 @@ namespace AcroniUI.CustomizingForms
 {
     public partial class Compacto : Template
     {
+        
         // Definição da kbtn genérica
         Kbtn keybutton = new Kbtn();
 
@@ -40,7 +41,9 @@ namespace AcroniUI.CustomizingForms
             keybutton.BackColor = keybutton.SetColor(Color);
             if(HasChosenAIcon)
                 keybutton.Image = SelectedIcon;
+
         }
+
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
@@ -67,13 +70,26 @@ namespace AcroniUI.CustomizingForms
                     }
                 }
             }
-
             pnlHeadColorpicker.Size = new Size(90, 100);
 
             if (Compartilha.editKeyboard)
                 carregaTeclado();
+            else
+                aplicaFundoTeclas();
         }
-
+        private void aplicaFundoTeclas()
+        {
+            foreach(Control c in this.Controls)
+            {
+                if(c is Kbtn)
+                {
+                    try {
+                        Controls.Find("fundo" + c.Name, true)[0].BackColor = Color.FromArgb(90, c.BackColor);
+                    }
+                    catch (Exception) { }
+                }
+            }
+        }
         private void SetKeycapText(object sender, EventArgs e)
         {
             //KeycapTextModule keycapTextModule = new KeycapTextModule();
@@ -225,17 +241,17 @@ namespace AcroniUI.CustomizingForms
         private Color previousColor;
         int checkIfItsFirstTime;
 
-        private async void pnlColor_MouseMove(object sender, MouseEventArgs e)
+        private void pnlColor_MouseMove(object sender, MouseEventArgs e)
         {
             if (checkIfItsFirstTime == 0)
                 previousColor = pnlColor.BackColor;
             checkIfItsFirstTime++;
             pnlColor.BackColor = Color.FromArgb(20, pnlColor.BackColor);
-            foreach (Control c in this.Controls)
-            {
-                if (!c.Name.Contains("pnlCo") || !c.Name.Equals("pnlHeadColorpicker"))
-                    c.Visible = false;
-            }
+            //foreach (Control c in this.Controls)
+            //{
+            //    if (!c.Name.Contains("pnlCo") || !c.Name.Equals("pnlHeadColorpicker"))
+            //        c.Visible = false;
+            //}
             lblEscolherCores.Visible = true;
 
         }
@@ -311,7 +327,12 @@ namespace AcroniUI.CustomizingForms
                             tecla.Font = keycap.Font;
                             tecla.BackColor = keycap.Color;
                             tecla.Text = keycap.Text;
-                            (tecla as Button).TextAlign = (ContentAlignment)keycap.ContentAlignment;
+                            (tecla as Button).TextAlign = (ContentAlignment) keycap.ContentAlignment;
+                            try
+                            {
+                                Controls.Find("fundo" + tecla.Name, true)[0].BackColor = Color.FromArgb(90, tecla.BackColor);
+                            }
+                            catch (Exception) { }
                             break;
                         }
                     }
@@ -356,7 +377,7 @@ namespace AcroniUI.CustomizingForms
         {
             if (!Compartilha.editKeyboard)
             {
-                AcroniMessageBoxInput nameteclado = new AcroniMessageBoxInput("Insira o nome de seu teclado");
+                AcroniMessageBoxInput nameteclado = new AcroniMessageBoxInput("Insira o nome de seu teclado","");
                 nameteclado.Show();
                 while (nameteclado.Visible)
                 {
@@ -500,5 +521,20 @@ namespace AcroniUI.CustomizingForms
             }
         }
         #endregion
+
+        
+
+        private void picBoxKeyboardBackground_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ChangeColorFundoKbtn(object sender, PaintEventArgs e)
+        {
+            try {
+                Controls.Find("fundo" + keybutton.Name, true)[0].BackColor = Color.FromArgb(90, keybutton.BackColor);
+            }
+            catch (Exception) { }
+        }
     }
 }

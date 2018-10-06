@@ -36,7 +36,10 @@ namespace AcroniControls
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            SetNames.colecao = txtUserInput.Text;
+            if (alblMessage1.Text.Contains("coleção"))
+                SetNames.colecao = txtUserInput.Text;
+            else
+                SetNames.teclado = txtUserInput.Text;
             this.Close();
         }
     }

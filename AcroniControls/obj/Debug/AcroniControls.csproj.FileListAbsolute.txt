@@ -1,6 +1,5 @@
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniControls\bin\Debug\AcroniControls.dll
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniControls\bin\Debug\AcroniControls.pdb
-C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniControls\bin\Debug\AcroniLibrary.dll
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniControls\bin\Debug\Bunifu_UI_v1.52.dll
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniControls\bin\Debug\Svg.dll
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniControls\bin\Debug\AcroniUI.dll
