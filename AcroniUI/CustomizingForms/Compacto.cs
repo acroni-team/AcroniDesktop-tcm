@@ -16,12 +16,10 @@ namespace AcroniUI.CustomizingForms
 {
     public partial class Compacto : Template
     {
-<<<<<<< HEAD
-        
+
         // Definição da kbtn genérica
-=======
+
         // Definição do botão de teclado genérico (kbtn)
->>>>>>> a4d93412ca3f8ded539e3ecdebfd04b256d24464
         Kbtn keybutton = new Kbtn();
 
         // Definição das propriedades de salvamento
@@ -49,11 +47,11 @@ namespace AcroniUI.CustomizingForms
 
         }
 
-<<<<<<< HEAD
 
-=======
+
+
         //Ao clicar no botão de fechar
->>>>>>> a4d93412ca3f8ded539e3ecdebfd04b256d24464
+
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             SelectKeyboard __selectKeyboard = new SelectKeyboard();
@@ -75,10 +73,7 @@ namespace AcroniUI.CustomizingForms
                     elipse.ApplyElipse(c_panel, 5);
                 }
             }
-<<<<<<< HEAD
             pnlHeadColorpicker.Size = new Size(90, 100);
-=======
->>>>>>> a4d93412ca3f8ded539e3ecdebfd04b256d24464
 
             if (Compartilha.editKeyboard)
                 carregaTeclado();
@@ -87,9 +82,9 @@ namespace AcroniUI.CustomizingForms
         }
         private void aplicaFundoTeclas()
         {
-            foreach(Control c in this.Controls)
+            foreach (Control c in this.Controls)
             {
-                if(c is Kbtn)
+                if (c is Kbtn)
                 {
                     try {
                         Controls.Find("fundo" + c.Name, true)[0].BackColor = Color.FromArgb(90, c.BackColor);
@@ -98,7 +93,7 @@ namespace AcroniUI.CustomizingForms
                 }
             }
         }
-<<<<<<< HEAD
+
         private void SetKeycapText(object sender, EventArgs e)
         {
             //KeycapTextModule keycapTextModule = new KeycapTextModule();
@@ -107,8 +102,7 @@ namespace AcroniUI.CustomizingForms
             //Kbtn kbtn = (Kbtn)sender;
             //kbtn.Text = keycapTextModule.Maintext;
         }
-=======
->>>>>>> a4d93412ca3f8ded539e3ecdebfd04b256d24464
+
 
         #region Métodos do Color Picker
 
@@ -151,38 +145,32 @@ namespace AcroniUI.CustomizingForms
 
         #region Hover para cada uma das cores do colorpicker
 
-<<<<<<< HEAD
+
         private void pnlColor_MouseMove(object sender, MouseEventArgs e)
         {
-            if (checkIfItsFirstTime == 0)
-                previousColor = pnlColor.BackColor;
-            checkIfItsFirstTime++;
-            pnlColor.BackColor = Color.FromArgb(20, pnlColor.BackColor);
+            //if (checkIfItsFirstTime == 0)
+            //    previousColor = pnlColor.BackColor;
+            //checkIfItsFirstTime++;
+            //pnlColor.BackColor = Color.FromArgb(20, pnlColor.BackColor);
             //foreach (Control c in this.Controls)
             //{
             //    if (!c.Name.Contains("pnlCo") || !c.Name.Equals("pnlHeadColorpicker"))
             //        c.Visible = false;
             //}
             lblEscolherCores.Visible = true;
-=======
-        #endregion
->>>>>>> a4d93412ca3f8ded539e3ecdebfd04b256d24464
-
-        #endregion
-
-        #region Fontes das teclas e texto
-
-        private void SetKeycapText(object sender, EventArgs e)
-        {
-            //KeycapTextModule keycapTextModule = new KeycapTextModule();
-            //Opacity = 0.1;
-            //keycapTextModule.ShowDialog();
-            //Kbtn kbtn = (Kbtn)sender;
-            //kbtn.Text = keycapTextModule.Maintext;
         }
 
+        #endregion
 
-        #region Definição dos métodos de alinhamento
+
+            #endregion
+
+            #region Fontes das teclas e texto
+
+
+
+
+            #region Definição dos métodos de alinhamento
 
         private void btnTextAlignLeft_Click(object sender, EventArgs e)
         {
@@ -243,7 +231,7 @@ namespace AcroniUI.CustomizingForms
                             tecla.Font = keycap.Font;
                             tecla.BackColor = keycap.Color;
                             tecla.Text = keycap.Text;
-                            (tecla as Button).TextAlign = (ContentAlignment) keycap.ContentAlignment;
+                            (tecla as Button).TextAlign = (ContentAlignment)keycap.ContentAlignment;
                             try
                             {
                                 Controls.Find("fundo" + tecla.Name, true)[0].BackColor = Color.FromArgb(90, tecla.BackColor);
@@ -293,7 +281,7 @@ namespace AcroniUI.CustomizingForms
         {
             if (!Compartilha.editKeyboard)
             {
-                AcroniMessageBoxInput nameteclado = new AcroniMessageBoxInput("Insira o nome de seu teclado","");
+                AcroniMessageBoxInput nameteclado = new AcroniMessageBoxInput("Insira o nome de seu teclado", "");
                 nameteclado.Show();
                 while (nameteclado.Visible)
                 {
@@ -424,11 +412,11 @@ namespace AcroniUI.CustomizingForms
                 }
             }
             //for (int i = 0; i < ImageQueue.Count; i++)
-                //(pnlIcons.Controls[$"picBoxIcon{i + 1}"] as PictureBox).Image = insertableArray[i];
+            //(pnlIcons.Controls[$"picBoxIcon{i + 1}"] as PictureBox).Image = insertableArray[i];
         }
 
         private void picIcons_Click(object sender, EventArgs e)
-        { 
+        {
             if (sender != null)
             {
                 PictureBox __icon = (PictureBox)sender;
@@ -439,8 +427,8 @@ namespace AcroniUI.CustomizingForms
 
         #endregion
 
-<<<<<<< HEAD
-        
+
+
 
         private void picBoxKeyboardBackground_Click(object sender, EventArgs e)
         {
@@ -449,16 +437,18 @@ namespace AcroniUI.CustomizingForms
 
         private void ChangeColorFundoKbtn(object sender, PaintEventArgs e)
         {
-            try {
+            try
+            {
                 Controls.Find("fundo" + keybutton.Name, true)[0].BackColor = Color.FromArgb(90, keybutton.BackColor);
             }
             catch (Exception) { }
-=======
+        }
+
         private void button1_MouseEnter(object sender, EventArgs e)
         {
             Button btnColor = (Button)sender;
             btnColor.Size = new Size(btnColor.Width + 25, btnColor.Height + 25);
->>>>>>> a4d93412ca3f8ded539e3ecdebfd04b256d24464
         }
     }
-}
+    }
+

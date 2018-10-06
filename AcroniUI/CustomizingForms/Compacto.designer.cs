@@ -203,8 +203,7 @@ namespace AcroniUI.CustomizingForms
             this.lblColorName = new System.Windows.Forms.Label();
             this.pnlColor = new System.Windows.Forms.Panel();
             this.lblHexaColor = new System.Windows.Forms.Label();
-<<<<<<< HEAD
-=======
+
             this.pnlHistorico1 = new System.Windows.Forms.Panel();
             this.pnlHistorico2 = new System.Windows.Forms.Panel();
             this.pnlHistorico3 = new System.Windows.Forms.Panel();
@@ -231,7 +230,7 @@ namespace AcroniUI.CustomizingForms
             this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse6 = new Bunifu.Framework.UI.BunifuElipse(this.components);
->>>>>>> a4d93412ca3f8ded539e3ecdebfd04b256d24464
+
             this.pnlSuperior.SuspendLayout();
             this.pnlHistorico.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxKeyboardBackground)).BeginInit();
@@ -240,11 +239,9 @@ namespace AcroniUI.CustomizingForms
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignCenter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignLeft)).BeginInit();
             this.panel1.SuspendLayout();
-<<<<<<< HEAD
-=======
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
->>>>>>> a4d93412ca3f8ded539e3ecdebfd04b256d24464
+
             this.pnlHeadColorpicker.SuspendLayout();
             this.pnlCorEscolhida.SuspendLayout();
             this.SuspendLayout();
@@ -1520,11 +1517,8 @@ namespace AcroniUI.CustomizingForms
             // fundoCb6
             // 
             this.fundoCb6.BackColor = System.Drawing.Color.Black;
-<<<<<<< HEAD
             this.fundoCb6.Location = new System.Drawing.Point(346, 303);
-=======
             this.fundoCb6.Location = new System.Drawing.Point(337, 277);
->>>>>>> a4d93412ca3f8ded539e3ecdebfd04b256d24464
             this.fundoCb6.Name = "fundoCb6";
             this.fundoCb6.Size = new System.Drawing.Size(52, 56);
             this.fundoCb6.TabIndex = 15;
@@ -1969,7 +1963,6 @@ namespace AcroniUI.CustomizingForms
             // 
             // btnTextAlignRight
             // 
-<<<<<<< HEAD
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Open Sans", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
@@ -1978,7 +1971,6 @@ namespace AcroniUI.CustomizingForms
             this.label1.Size = new System.Drawing.Size(93, 32);
             this.label1.TabIndex = 10;
             this.label1.Text = "Fontes";
-=======
             this.btnTextAlignRight.BackColor = System.Drawing.Color.Transparent;
             this.btnTextAlignRight.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTextAlignRight.Image = ((System.Drawing.Image)(resources.GetObject("btnTextAlignRight.Image")));
@@ -2021,7 +2013,6 @@ namespace AcroniUI.CustomizingForms
             this.btnTextAlignLeft.TabStop = false;
             this.btnTextAlignLeft.Zoom = 10;
             this.btnTextAlignLeft.Click += new System.EventHandler(this.btnTextAlignLeft_Click);
->>>>>>> a4d93412ca3f8ded539e3ecdebfd04b256d24464
             // 
             // lblDefinirParaTodasTeclas
             // 
@@ -2143,15 +2134,12 @@ namespace AcroniUI.CustomizingForms
             // 
             // panel1
             // 
-<<<<<<< HEAD
             this.panel1.Controls.Add(this.lblEscolherCores);
-=======
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.btnOpenModuleBackground);
             this.panel1.Controls.Add(this.btnOpenModuleTextIcons);
             this.panel1.Controls.Add(this.btnOpenModuleSwitch);
             this.panel1.Controls.Add(this.panel3);
->>>>>>> a4d93412ca3f8ded539e3ecdebfd04b256d24464
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 563);
             this.panel1.Name = "panel1";
@@ -2547,8 +2535,6 @@ namespace AcroniUI.CustomizingForms
             this.lblHexaColor.Text = "#2196F3";
             this.lblHexaColor.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-<<<<<<< HEAD
-=======
             // pnlHistorico1
             // 
             this.pnlHistorico1.BackColor = System.Drawing.Color.Transparent;
@@ -2846,7 +2832,6 @@ namespace AcroniUI.CustomizingForms
             this.bunifuElipse6.ElipseRadius = 5;
             this.bunifuElipse6.TargetControl = this;
             // 
->>>>>>> a4d93412ca3f8ded539e3ecdebfd04b256d24464
             // Compacto
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -3110,14 +3095,11 @@ namespace AcroniUI.CustomizingForms
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignCenter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignLeft)).EndInit();
             this.panel1.ResumeLayout(false);
-<<<<<<< HEAD
             this.panel1.PerformLayout();
-=======
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
->>>>>>> a4d93412ca3f8ded539e3ecdebfd04b256d24464
             this.pnlHeadColorpicker.ResumeLayout(false);
             this.pnlHeadColorpicker.PerformLayout();
             this.pnlCorEscolhida.ResumeLayout(false);
@@ -3269,17 +3251,7 @@ namespace AcroniUI.CustomizingForms
         private System.Windows.Forms.Panel fundoCe7;
         private System.Windows.Forms.Panel fundoCe2s;
         private System.Windows.Forms.Panel fundoCe3;
-<<<<<<< HEAD
-//<<<<<<< HEAD
-////=======
-=======
-<<<<<<< HEAD
         private Bunifu.Framework.UI.BunifuElipse eBtnOpenModuleSwitch;
-=======
-<<<<<<< HEAD
->>>>>>> a4d93412ca3f8ded539e3ecdebfd04b256d24464
-//=======
-//>>>>>>> 6085eb0e9043626e0c90ad911655a391e0a53c58
         private System.Windows.Forms.PictureBox picBoxIcon10;
         private System.Windows.Forms.PictureBox picBoxIcon9;
         private System.Windows.Forms.PictureBox picBoxIcon8;
@@ -3300,13 +3272,11 @@ namespace AcroniUI.CustomizingForms
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse8;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse9;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse10;
->>>>>>> 91ab273f55e42b47276ae0758298a216221759b2
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlHeadColorpicker;
         private System.Windows.Forms.Label lblColorName;
         private System.Windows.Forms.Panel pnlColor;
         private System.Windows.Forms.Label lblHexaColor;
-<<<<<<< HEAD
         private System.Windows.Forms.Panel pnlCorEscolhida;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button btnLime;
@@ -3352,21 +3322,12 @@ namespace AcroniUI.CustomizingForms
         private System.Windows.Forms.Label label15;
         private Bunifu.Framework.UI.BunifuElipse ebtnOpenModuleTextIcons;
         private Bunifu.Framework.UI.BunifuElipse ebtnOpenModuleBackground;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse4;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse5;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse6;
+
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.ComboBox comboBox1;
-=======
         private System.Windows.Forms.Label lblEscolherCores;
-<<<<<<< HEAD
-//>>>>>>> 6085eb0e9043626e0c90ad911655a391e0a53c58
-=======
->>>>>>> 6085eb0e9043626e0c90ad911655a391e0a53c58
->>>>>>> 91ab273f55e42b47276ae0758298a216221759b2
->>>>>>> a4d93412ca3f8ded539e3ecdebfd04b256d24464
+
     }
 }
 
