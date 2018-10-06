@@ -29,6 +29,7 @@ namespace AcroniUI.CustomizingForms
 
         // Esse membro serve para pegar o ícone selecionado e botá-lo na fila de ícones.
         private Image SelectedIcon { get; set; }
+        private bool HasChosenAIcon { get; set; }
 
         // Definição das propriedades do colorpicker 
         private Color Color { get; set; }
@@ -37,7 +38,8 @@ namespace AcroniUI.CustomizingForms
         {
             keybutton = (Kbtn)sender;
             keybutton.BackColor = keybutton.SetColor(Color);
-            keybutton.Image = SelectedIcon;
+            if(HasChosenAIcon)
+                keybutton.Image = SelectedIcon;
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -51,8 +53,8 @@ namespace AcroniUI.CustomizingForms
         public Compacto()
         {
             InitializeComponent();
-            pnlCorEscolhida.Size = new Size(243, 103);
 
+            pnlCorEscolhida.Size = new Size(0, 0);
             //Foreach para arredondar cores do colorpicker
             foreach (Control c_panel in pnlCorEscolhida.Controls)
             {
@@ -65,6 +67,8 @@ namespace AcroniUI.CustomizingForms
                     }
                 }
             }
+
+            pnlHeadColorpicker.Size = new Size(90, 100);
 
             if (Compartilha.editKeyboard)
                 carregaTeclado();
@@ -81,81 +85,167 @@ namespace AcroniUI.CustomizingForms
 
         #region Métodos do Color Picker
 
-        bool pnlcolorpickerEstaAberto = false;
-        bool[] disponibilidade_pnlHistorico = { true, false, false };
+        private bool[] __disponibilidade_pnlHistorico { get; set; } = { true, false, false };
+
+        // Esse campo determina se deve-se exibir ou esconder o colorpicker através da lógica de verificar se é um número ímpar ou par
+        private int __checkIfHideOrShow { get; set; } = 0;
 
         private void pnlColor_Click(object sender, EventArgs e)
         {
-            if (!pnlcolorpickerEstaAberto)
+            if (__checkIfHideOrShow % 2 == 0)
             {
-                aparece_colorpicker();
-                pnlcolorpickerEstaAberto = true;
+                ShowColorpickerHeader();
+                ShowHorizontallyColorpickerBody();
+                ShowVerticallyColorpickerBody();
             }
+
             else
             {
-                desaparece_colorpicker();
-                pnlcolorpickerEstaAberto = false;
+                HideColorpickerHeader();
+                HideHorizontallyColorpickerBody();
+                HideVerticallyColorpickerBody();
             }
+
+            __checkIfHideOrShow++;
         }
 
-        private async void aparece_colorpicker()
+        //Mostra o header
+        private async void ShowColorpickerHeader()
         {
+            for (int x = 90; x < 313; x += 20)
+            {
+                await Task.Delay(1);
+                pnlHeadColorpicker.Width = x;
+            }
+            pnlHeadColorpicker.Width = 313;
+            pnlHeadColorpicker.BackColor = Color.FromArgb(43, 48, 54);
+        }
 
-            for (int x = 243; x <= 631; x += 20)
+        //Mostra verticalmente o body do colorpicker
+        private async void ShowVerticallyColorpickerBody()
+        {
+            int y = 0;
+            while (y < 267)
+            {
+                await Task.Delay(1);
+                pnlCorEscolhida.Height = y;
+                y += 20;
+            }
+            pnlCorEscolhida.Height = 267;
+        }
+
+        //Mostra horizontalmente o body do colorpicker
+        private async void ShowHorizontallyColorpickerBody()
+        {
+            int x = 0;
+            while (x < 313)
             {
                 await Task.Delay(1);
                 pnlCorEscolhida.Width = x;
+                x += 20;
             }
-            pnlCorEscolhida.Width = 631;
-            await Task.Delay(10);
+            pnlCorEscolhida.Width = 313;
         }
 
-        private async void desaparece_colorpicker()
+        //Esconde o header
+        private async void HideColorpickerHeader()
         {
-            for (int x = 631; x > 243; x -= 20)
+            for (int x = 313; x > 90; x -= 20)
+            {
+                await Task.Delay(1);
+                pnlHeadColorpicker.Width = x;
+            }
+            pnlHeadColorpicker.Width = 90;
+            pnlHeadColorpicker.BackColor = Color.Transparent;
+        }
+
+        //Esconde verticalmente o body do colorpicker
+        private async void HideVerticallyColorpickerBody()
+        {
+            int y = 267;
+            while (y > 0)
+            {
+                await Task.Delay(1);
+                pnlCorEscolhida.Height = y;
+                y -= 20;
+            }
+            pnlCorEscolhida.Height = 0;
+        }
+
+        //Esconde verticalmente o body do colorpicker
+        private async void HideHorizontallyColorpickerBody()
+        {
+            int x = 313;
+            while (x > 0)
             {
                 await Task.Delay(1);
                 pnlCorEscolhida.Width = x;
+                x -= 20;
             }
-            pnlCorEscolhida.Width = 243;
-            await Task.Delay(10);
+            pnlCorEscolhida.Width = 0;
         }
 
+        //Clicks que ocorrem ao selecionar uma cor
         private void escolhe_cor(object sender, EventArgs e)
         {
             Panel p = (Panel)sender;
             lblHexaColor.Text = $"#{p.BackColor.R.ToString("X2")}{p.BackColor.G.ToString("X2")}{p.BackColor.B.ToString("X2")}";
-            lblNomeCor.Text = (!p.Name.Contains("pnl") ? p.Name.Replace("_", " ") : p.Tag.ToString());
+            lblColorName.Text = (!p.Name.Contains("pnl") ? p.Name.Replace("_", " ") : p.Tag.ToString());
 
             //--Transição para mudar de cor
             Transition t_cor = new Transition(new TransitionType_EaseInEaseOut(200));
             t_cor.add(pnlColor, "BackColor", p.BackColor);
             t_cor.run();
 
-            desaparece_colorpicker();
-            pnlcolorpickerEstaAberto = false;
+            //desaparece_colorpicker();
+            __checkIfHideOrShow = 0;
 
             Color = p.BackColor;
 
-            if (disponibilidade_pnlHistorico[0])
+            if (__disponibilidade_pnlHistorico[0])
             {
                 pnlHistorico1.BackColor = p.BackColor;
-                disponibilidade_pnlHistorico[0] = false;
-                disponibilidade_pnlHistorico[1] = true;
+                __disponibilidade_pnlHistorico[0] = false;
+                __disponibilidade_pnlHistorico[1] = true;
             }
-            else if (disponibilidade_pnlHistorico[1])
+            else if (__disponibilidade_pnlHistorico[1])
             {
                 pnlHistorico2.BackColor = p.BackColor;
-                disponibilidade_pnlHistorico[1] = false;
-                disponibilidade_pnlHistorico[2] = true;
+                __disponibilidade_pnlHistorico[1] = false;
+                __disponibilidade_pnlHistorico[2] = true;
             }
-            else if (disponibilidade_pnlHistorico[2])
+            else if (__disponibilidade_pnlHistorico[2])
             {
                 pnlHistorico3.BackColor = p.BackColor;
-                disponibilidade_pnlHistorico[2] = false;
-                disponibilidade_pnlHistorico[0] = true;
+                __disponibilidade_pnlHistorico[2] = false;
+                __disponibilidade_pnlHistorico[0] = true;
             }
         }
+
+        private Color previousColor;
+        int checkIfItsFirstTime;
+
+        private async void pnlColor_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (checkIfItsFirstTime == 0)
+                previousColor = pnlColor.BackColor;
+            checkIfItsFirstTime++;
+            pnlColor.BackColor = Color.FromArgb(20, pnlColor.BackColor);
+            foreach (Control c in this.Controls)
+            {
+                if (!c.Name.Contains("pnlCo") || !c.Name.Equals("pnlHeadColorpicker"))
+                    c.Visible = false;
+            }
+            lblEscolherCores.Visible = true;
+
+        }
+
+        private void pnlColor_MouseLeave(object sender, EventArgs e)
+        {
+            pnlColor.BackColor = previousColor;
+            lblEscolherCores.Visible = false;
+        }
+
         #endregion
 
         #region Fontes das teclas
@@ -406,6 +496,7 @@ namespace AcroniUI.CustomizingForms
             {
                 PictureBox __icon = (PictureBox)sender;
                 SelectedIcon = __icon.Image;
+                HasChosenAIcon = true;
             }
         }
         #endregion
