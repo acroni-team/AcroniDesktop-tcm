@@ -47,9 +47,6 @@ namespace AcroniUI.CustomizingForms
 
         }
 
-
-
-
         //Ao clicar no botão de fechar
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -65,28 +62,29 @@ namespace AcroniUI.CustomizingForms
             InitializeComponent();
 
             //Foreach para arredondar cores do colorpicker
-            foreach (Control c_panel in pnlCorEscolhida.Controls)
+            foreach (Control c in pnlCorEscolhida.Controls)
             {
-                if (c_panel is Panel)
+                if (c is Button)
                 {
                     Bunifu.Framework.UI.BunifuElipse elipse = new Bunifu.Framework.UI.BunifuElipse();
-                    elipse.ApplyElipse(c_panel, 5);
+                    elipse.ApplyElipse(c, 5);
                 }
             }
-            pnlHeadColorpicker.Size = new Size(90, 100);
 
             if (Compartilha.editKeyboard)
                 carregaTeclado();
             else
                 aplicaFundoTeclas();
         }
+
         private void aplicaFundoTeclas()
         {
             foreach (Control c in this.Controls)
             {
                 if (c is Kbtn)
                 {
-                    try {
+                    try
+                    {
                         Controls.Find("fundo" + c.Name, true)[0].BackColor = Color.FromArgb(90, c.BackColor);
                     }
                     catch (Exception) { }
@@ -157,20 +155,19 @@ namespace AcroniUI.CustomizingForms
             //    if (!c.Name.Contains("pnlCo") || !c.Name.Equals("pnlHeadColorpicker"))
             //        c.Visible = false;
             //}
-            lblEscolherCores.Visible = true;
         }
 
         #endregion
 
 
-            #endregion
+        #endregion
 
-            #region Fontes das teclas e texto
-
-
+        #region Fontes das teclas e texto
 
 
-            #region Definição dos métodos de alinhamento
+
+
+        #region Definição dos métodos de alinhamento
 
         private void btnTextAlignLeft_Click(object sender, EventArgs e)
         {
@@ -427,14 +424,6 @@ namespace AcroniUI.CustomizingForms
 
         #endregion
 
-
-
-
-        private void picBoxKeyboardBackground_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void ChangeColorFundoKbtn(object sender, PaintEventArgs e)
         {
             try
@@ -450,5 +439,5 @@ namespace AcroniUI.CustomizingForms
             btnColor.Size = new Size(btnColor.Width + 25, btnColor.Height + 25);
         }
     }
-    }
+}
 

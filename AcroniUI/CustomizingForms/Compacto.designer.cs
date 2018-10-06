@@ -114,7 +114,6 @@ namespace AcroniUI.CustomizingForms
             this.fundoCb4 = new System.Windows.Forms.Panel();
             this.fundoCb5 = new System.Windows.Forms.Panel();
             this.fundoCb6 = new System.Windows.Forms.Panel();
-            this.lblEscolherCores = new System.Windows.Forms.Label();
             this.fundoCb7 = new System.Windows.Forms.Panel();
             this.fundoCb8 = new System.Windows.Forms.Panel();
             this.fundoCb9 = new System.Windows.Forms.Panel();
@@ -203,7 +202,6 @@ namespace AcroniUI.CustomizingForms
             this.lblColorName = new System.Windows.Forms.Label();
             this.pnlColor = new System.Windows.Forms.Panel();
             this.lblHexaColor = new System.Windows.Forms.Label();
-
             this.pnlHistorico1 = new System.Windows.Forms.Panel();
             this.pnlHistorico2 = new System.Windows.Forms.Panel();
             this.pnlHistorico3 = new System.Windows.Forms.Panel();
@@ -230,7 +228,6 @@ namespace AcroniUI.CustomizingForms
             this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse6 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-
             this.pnlSuperior.SuspendLayout();
             this.pnlHistorico.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxKeyboardBackground)).BeginInit();
@@ -241,10 +238,13 @@ namespace AcroniUI.CustomizingForms
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
-
             this.pnlHeadColorpicker.SuspendLayout();
             this.pnlCorEscolhida.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // pnlSuperior
+            // 
+            this.pnlSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(47)))));
             // 
             // Cb1
             // 
@@ -1517,24 +1517,10 @@ namespace AcroniUI.CustomizingForms
             // fundoCb6
             // 
             this.fundoCb6.BackColor = System.Drawing.Color.Black;
-            this.fundoCb6.Location = new System.Drawing.Point(346, 303);
             this.fundoCb6.Location = new System.Drawing.Point(337, 277);
             this.fundoCb6.Name = "fundoCb6";
             this.fundoCb6.Size = new System.Drawing.Size(52, 56);
             this.fundoCb6.TabIndex = 15;
-            // 
-            // lblEscolherCores
-            // 
-            this.lblEscolherCores.AutoSize = true;
-            this.lblEscolherCores.Font = new System.Drawing.Font("Open Sans", 45.25F, System.Drawing.FontStyle.Bold);
-            this.lblEscolherCores.ForeColor = System.Drawing.Color.White;
-            this.lblEscolherCores.Location = new System.Drawing.Point(545, 0);
-            this.lblEscolherCores.Name = "lblEscolherCores";
-            this.lblEscolherCores.Size = new System.Drawing.Size(283, 166);
-            this.lblEscolherCores.TabIndex = 84;
-            this.lblEscolherCores.Text = "Escolher\r\ncores";
-            this.lblEscolherCores.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblEscolherCores.Visible = false;
             // 
             // fundoCb7
             // 
@@ -1893,7 +1879,6 @@ namespace AcroniUI.CustomizingForms
             this.picBoxKeyboardBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBoxKeyboardBackground.TabIndex = 11;
             this.picBoxKeyboardBackground.TabStop = false;
-            this.picBoxKeyboardBackground.Click += new System.EventHandler(this.picBoxKeyboardBackground_Click);
             // 
             // pnlCustomizingMenu
             // 
@@ -1963,14 +1948,6 @@ namespace AcroniUI.CustomizingForms
             // 
             // btnTextAlignRight
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Open Sans", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(17, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 32);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Fontes";
             this.btnTextAlignRight.BackColor = System.Drawing.Color.Transparent;
             this.btnTextAlignRight.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTextAlignRight.Image = ((System.Drawing.Image)(resources.GetObject("btnTextAlignRight.Image")));
@@ -2095,7 +2072,7 @@ namespace AcroniUI.CustomizingForms
             // 
             // btnOpenModuleSwitch
             // 
-            this.btnOpenModuleSwitch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnOpenModuleSwitch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(34)))));
             this.btnOpenModuleSwitch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOpenModuleSwitch.FlatAppearance.BorderSize = 0;
             this.btnOpenModuleSwitch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
@@ -2134,7 +2111,7 @@ namespace AcroniUI.CustomizingForms
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.lblEscolherCores);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(36)))), ((int)(((byte)(38)))));
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.btnOpenModuleBackground);
             this.panel1.Controls.Add(this.btnOpenModuleTextIcons);
@@ -2179,7 +2156,7 @@ namespace AcroniUI.CustomizingForms
             this.label7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label7.Font = new System.Drawing.Font("Open Sans", 9.25F);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
-            this.label7.Location = new System.Drawing.Point(23, 129);
+            this.label7.Location = new System.Drawing.Point(23, 126);
             this.label7.Margin = new System.Windows.Forms.Padding(0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(100, 18);
@@ -2193,7 +2170,7 @@ namespace AcroniUI.CustomizingForms
             this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label5.Font = new System.Drawing.Font("Open Sans", 9.25F);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
-            this.label5.Location = new System.Drawing.Point(23, 93);
+            this.label5.Location = new System.Drawing.Point(23, 90);
             this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(143, 18);
@@ -2207,7 +2184,7 @@ namespace AcroniUI.CustomizingForms
             this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label6.Font = new System.Drawing.Font("Open Sans", 9.25F);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
-            this.label6.Location = new System.Drawing.Point(23, 111);
+            this.label6.Location = new System.Drawing.Point(23, 108);
             this.label6.Margin = new System.Windows.Forms.Padding(0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(189, 18);
@@ -2221,7 +2198,7 @@ namespace AcroniUI.CustomizingForms
             this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label4.Font = new System.Drawing.Font("Open Sans", 9.25F);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
-            this.label4.Location = new System.Drawing.Point(23, 75);
+            this.label4.Location = new System.Drawing.Point(23, 72);
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(155, 18);
@@ -2234,7 +2211,7 @@ namespace AcroniUI.CustomizingForms
             this.label21.AutoSize = true;
             this.label21.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label21.Font = new System.Drawing.Font("Open Sans", 12.25F, System.Drawing.FontStyle.Bold);
-            this.label21.Location = new System.Drawing.Point(354, 89);
+            this.label21.Location = new System.Drawing.Point(354, 86);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(111, 23);
             this.label21.TabIndex = 9;
@@ -2246,7 +2223,7 @@ namespace AcroniUI.CustomizingForms
             this.label9.AutoSize = true;
             this.label9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label9.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(350, 105);
+            this.label9.Location = new System.Drawing.Point(350, 102);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(140, 37);
             this.label9.TabIndex = 9;
@@ -2259,7 +2236,7 @@ namespace AcroniUI.CustomizingForms
             this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label2.Font = new System.Drawing.Font("Open Sans", 9.25F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
-            this.label2.Location = new System.Drawing.Point(23, 39);
+            this.label2.Location = new System.Drawing.Point(23, 36);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 18);
@@ -2273,7 +2250,7 @@ namespace AcroniUI.CustomizingForms
             this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label3.Font = new System.Drawing.Font("Open Sans", 9.25F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
-            this.label3.Location = new System.Drawing.Point(23, 57);
+            this.label3.Location = new System.Drawing.Point(23, 54);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(144, 18);
@@ -2287,7 +2264,7 @@ namespace AcroniUI.CustomizingForms
             this.label20.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label20.Font = new System.Drawing.Font("Open Sans", 12.25F, System.Drawing.FontStyle.Bold);
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
-            this.label20.Location = new System.Drawing.Point(355, 55);
+            this.label20.Location = new System.Drawing.Point(355, 52);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(90, 23);
             this.label20.TabIndex = 9;
@@ -2300,7 +2277,7 @@ namespace AcroniUI.CustomizingForms
             this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label8.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
-            this.label8.Location = new System.Drawing.Point(356, 40);
+            this.label8.Location = new System.Drawing.Point(356, 37);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(85, 15);
             this.label8.TabIndex = 9;
@@ -2313,7 +2290,7 @@ namespace AcroniUI.CustomizingForms
             this.label19.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label19.Font = new System.Drawing.Font("Open Sans", 9.25F);
             this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(120, 129);
+            this.label19.Location = new System.Drawing.Point(120, 126);
             this.label19.Margin = new System.Windows.Forms.Padding(0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(33, 18);
@@ -2327,7 +2304,7 @@ namespace AcroniUI.CustomizingForms
             this.label18.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label18.Font = new System.Drawing.Font("Open Sans", 9.25F);
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(209, 111);
+            this.label18.Location = new System.Drawing.Point(209, 108);
             this.label18.Margin = new System.Windows.Forms.Padding(0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(33, 18);
@@ -2341,7 +2318,7 @@ namespace AcroniUI.CustomizingForms
             this.label17.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label17.Font = new System.Drawing.Font("Open Sans", 9.25F);
             this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(163, 93);
+            this.label17.Location = new System.Drawing.Point(163, 90);
             this.label17.Margin = new System.Windows.Forms.Padding(0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(30, 18);
@@ -2355,7 +2332,7 @@ namespace AcroniUI.CustomizingForms
             this.label16.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label16.Font = new System.Drawing.Font("Open Sans", 9.25F);
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(175, 75);
+            this.label16.Location = new System.Drawing.Point(175, 72);
             this.label16.Margin = new System.Windows.Forms.Padding(0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(33, 18);
@@ -2369,7 +2346,7 @@ namespace AcroniUI.CustomizingForms
             this.label15.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label15.Font = new System.Drawing.Font("Open Sans", 9.25F);
             this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(164, 57);
+            this.label15.Location = new System.Drawing.Point(164, 54);
             this.label15.Margin = new System.Windows.Forms.Padding(0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(30, 18);
@@ -2383,7 +2360,7 @@ namespace AcroniUI.CustomizingForms
             this.label14.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label14.Font = new System.Drawing.Font("Open Sans", 9.25F);
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(117, 40);
+            this.label14.Location = new System.Drawing.Point(117, 37);
             this.label14.Margin = new System.Windows.Forms.Padding(0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(72, 18);
@@ -2397,7 +2374,7 @@ namespace AcroniUI.CustomizingForms
             this.label13.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label13.Font = new System.Drawing.Font("Open Sans", 9.25F);
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(121, 22);
+            this.label13.Location = new System.Drawing.Point(121, 19);
             this.label13.Margin = new System.Windows.Forms.Padding(0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(22, 18);
@@ -2411,7 +2388,7 @@ namespace AcroniUI.CustomizingForms
             this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label1.Font = new System.Drawing.Font("Open Sans", 9.25F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
-            this.label1.Location = new System.Drawing.Point(23, 22);
+            this.label1.Location = new System.Drawing.Point(23, 19);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 18);
@@ -2421,7 +2398,7 @@ namespace AcroniUI.CustomizingForms
             // 
             // btnOpenModuleBackground
             // 
-            this.btnOpenModuleBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnOpenModuleBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(34)))));
             this.btnOpenModuleBackground.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOpenModuleBackground.FlatAppearance.BorderSize = 0;
             this.btnOpenModuleBackground.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
@@ -2441,7 +2418,7 @@ namespace AcroniUI.CustomizingForms
             // 
             // btnOpenModuleTextIcons
             // 
-            this.btnOpenModuleTextIcons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnOpenModuleTextIcons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(34)))));
             this.btnOpenModuleTextIcons.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOpenModuleTextIcons.FlatAppearance.BorderSize = 0;
             this.btnOpenModuleTextIcons.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
@@ -2507,7 +2484,7 @@ namespace AcroniUI.CustomizingForms
             // 
             this.lblColorName.Font = new System.Drawing.Font("Open Sans", 13.25F, System.Drawing.FontStyle.Bold);
             this.lblColorName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
-            this.lblColorName.Location = new System.Drawing.Point(112, 41);
+            this.lblColorName.Location = new System.Drawing.Point(130, 41);
             this.lblColorName.Name = "lblColorName";
             this.lblColorName.Size = new System.Drawing.Size(173, 29);
             this.lblColorName.TabIndex = 85;
@@ -2528,9 +2505,9 @@ namespace AcroniUI.CustomizingForms
             this.lblHexaColor.AutoSize = true;
             this.lblHexaColor.Font = new System.Drawing.Font("Open Sans", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHexaColor.ForeColor = System.Drawing.Color.White;
-            this.lblHexaColor.Location = new System.Drawing.Point(144, 14);
+            this.lblHexaColor.Location = new System.Drawing.Point(162, 14);
             this.lblHexaColor.Name = "lblHexaColor";
-            this.lblHexaColor.Size = new System.Drawing.Size(114, 32);
+            this.lblHexaColor.Size = new System.Drawing.Size(108, 32);
             this.lblHexaColor.TabIndex = 84;
             this.lblHexaColor.Text = "#2196F3";
             this.lblHexaColor.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -2539,7 +2516,7 @@ namespace AcroniUI.CustomizingForms
             // 
             this.pnlHistorico1.BackColor = System.Drawing.Color.Transparent;
             this.pnlHistorico1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlHistorico1.Location = new System.Drawing.Point(70, 7);
+            this.pnlHistorico1.Location = new System.Drawing.Point(52, 7);
             this.pnlHistorico1.Name = "pnlHistorico1";
             this.pnlHistorico1.Size = new System.Drawing.Size(17, 17);
             this.pnlHistorico1.TabIndex = 91;
@@ -2550,7 +2527,7 @@ namespace AcroniUI.CustomizingForms
             // 
             this.pnlHistorico2.BackColor = System.Drawing.Color.Transparent;
             this.pnlHistorico2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlHistorico2.Location = new System.Drawing.Point(69, 36);
+            this.pnlHistorico2.Location = new System.Drawing.Point(51, 36);
             this.pnlHistorico2.Name = "pnlHistorico2";
             this.pnlHistorico2.Size = new System.Drawing.Size(17, 17);
             this.pnlHistorico2.TabIndex = 109;
@@ -2561,7 +2538,7 @@ namespace AcroniUI.CustomizingForms
             // 
             this.pnlHistorico3.BackColor = System.Drawing.Color.Transparent;
             this.pnlHistorico3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlHistorico3.Location = new System.Drawing.Point(69, 65);
+            this.pnlHistorico3.Location = new System.Drawing.Point(51, 65);
             this.pnlHistorico3.Name = "pnlHistorico3";
             this.pnlHistorico3.Size = new System.Drawing.Size(17, 17);
             this.pnlHistorico3.TabIndex = 110;
@@ -2572,7 +2549,7 @@ namespace AcroniUI.CustomizingForms
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel2.Location = new System.Drawing.Point(69, 96);
+            this.panel2.Location = new System.Drawing.Point(51, 96);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(17, 17);
             this.panel2.TabIndex = 110;
@@ -2585,7 +2562,7 @@ namespace AcroniUI.CustomizingForms
             this.btnColorRed.FlatAppearance.BorderSize = 0;
             this.btnColorRed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnColorRed.ForeColor = System.Drawing.Color.Transparent;
-            this.btnColorRed.Location = new System.Drawing.Point(167, 21);
+            this.btnColorRed.Location = new System.Drawing.Point(162, 21);
             this.btnColorRed.Name = "btnColorRed";
             this.btnColorRed.Size = new System.Drawing.Size(32, 32);
             this.btnColorRed.TabIndex = 114;
@@ -2598,7 +2575,7 @@ namespace AcroniUI.CustomizingForms
             this.btnColorPink.FlatAppearance.BorderSize = 0;
             this.btnColorPink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnColorPink.ForeColor = System.Drawing.Color.Transparent;
-            this.btnColorPink.Location = new System.Drawing.Point(205, 21);
+            this.btnColorPink.Location = new System.Drawing.Point(200, 21);
             this.btnColorPink.Name = "btnColorPink";
             this.btnColorPink.Size = new System.Drawing.Size(32, 32);
             this.btnColorPink.TabIndex = 114;
@@ -2639,7 +2616,7 @@ namespace AcroniUI.CustomizingForms
             this.button13.FlatAppearance.BorderSize = 0;
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.ForeColor = System.Drawing.Color.Transparent;
-            this.button13.Location = new System.Drawing.Point(205, 173);
+            this.button13.Location = new System.Drawing.Point(200, 173);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(32, 32);
             this.button13.TabIndex = 114;
@@ -2652,7 +2629,7 @@ namespace AcroniUI.CustomizingForms
             this.btnLime.FlatAppearance.BorderSize = 0;
             this.btnLime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLime.ForeColor = System.Drawing.Color.Transparent;
-            this.btnLime.Location = new System.Drawing.Point(167, 135);
+            this.btnLime.Location = new System.Drawing.Point(162, 135);
             this.btnLime.Name = "btnLime";
             this.btnLime.Size = new System.Drawing.Size(32, 32);
             this.btnLime.TabIndex = 114;
@@ -2665,7 +2642,7 @@ namespace AcroniUI.CustomizingForms
             this.btnColorLime.FlatAppearance.BorderSize = 0;
             this.btnColorLime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnColorLime.ForeColor = System.Drawing.Color.Transparent;
-            this.btnColorLime.Location = new System.Drawing.Point(205, 97);
+            this.btnColorLime.Location = new System.Drawing.Point(200, 97);
             this.btnColorLime.Name = "btnColorLime";
             this.btnColorLime.Size = new System.Drawing.Size(32, 32);
             this.btnColorLime.TabIndex = 114;
@@ -2678,7 +2655,7 @@ namespace AcroniUI.CustomizingForms
             this.btnColorCloudley.FlatAppearance.BorderSize = 0;
             this.btnColorCloudley.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnColorCloudley.ForeColor = System.Drawing.Color.Transparent;
-            this.btnColorCloudley.Location = new System.Drawing.Point(243, 59);
+            this.btnColorCloudley.Location = new System.Drawing.Point(238, 59);
             this.btnColorCloudley.Name = "btnColorCloudley";
             this.btnColorCloudley.Size = new System.Drawing.Size(32, 32);
             this.btnColorCloudley.TabIndex = 114;
@@ -2691,7 +2668,7 @@ namespace AcroniUI.CustomizingForms
             this.btnColorPurple.FlatAppearance.BorderSize = 0;
             this.btnColorPurple.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnColorPurple.ForeColor = System.Drawing.Color.Transparent;
-            this.btnColorPurple.Location = new System.Drawing.Point(243, 21);
+            this.btnColorPurple.Location = new System.Drawing.Point(238, 21);
             this.btnColorPurple.Name = "btnColorPurple";
             this.btnColorPurple.Size = new System.Drawing.Size(32, 32);
             this.btnColorPurple.TabIndex = 114;
@@ -2704,7 +2681,7 @@ namespace AcroniUI.CustomizingForms
             this.button12.FlatAppearance.BorderSize = 0;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.ForeColor = System.Drawing.Color.Transparent;
-            this.button12.Location = new System.Drawing.Point(167, 173);
+            this.button12.Location = new System.Drawing.Point(162, 173);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(32, 32);
             this.button12.TabIndex = 114;
@@ -2717,7 +2694,7 @@ namespace AcroniUI.CustomizingForms
             this.btnColorYellowey.FlatAppearance.BorderSize = 0;
             this.btnColorYellowey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnColorYellowey.ForeColor = System.Drawing.Color.Transparent;
-            this.btnColorYellowey.Location = new System.Drawing.Point(205, 135);
+            this.btnColorYellowey.Location = new System.Drawing.Point(200, 135);
             this.btnColorYellowey.Name = "btnColorYellowey";
             this.btnColorYellowey.Size = new System.Drawing.Size(32, 32);
             this.btnColorYellowey.TabIndex = 114;
@@ -2730,7 +2707,7 @@ namespace AcroniUI.CustomizingForms
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.ForeColor = System.Drawing.Color.Transparent;
-            this.button6.Location = new System.Drawing.Point(243, 173);
+            this.button6.Location = new System.Drawing.Point(238, 173);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(32, 32);
             this.button6.TabIndex = 114;
@@ -2743,7 +2720,7 @@ namespace AcroniUI.CustomizingForms
             this.btnColorBlue.FlatAppearance.BorderSize = 0;
             this.btnColorBlue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnColorBlue.ForeColor = System.Drawing.Color.Transparent;
-            this.btnColorBlue.Location = new System.Drawing.Point(205, 59);
+            this.btnColorBlue.Location = new System.Drawing.Point(200, 59);
             this.btnColorBlue.Name = "btnColorBlue";
             this.btnColorBlue.Size = new System.Drawing.Size(32, 32);
             this.btnColorBlue.TabIndex = 114;
@@ -2756,7 +2733,7 @@ namespace AcroniUI.CustomizingForms
             this.button11.FlatAppearance.BorderSize = 0;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.ForeColor = System.Drawing.Color.Transparent;
-            this.button11.Location = new System.Drawing.Point(243, 135);
+            this.button11.Location = new System.Drawing.Point(238, 135);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(32, 32);
             this.button11.TabIndex = 114;
@@ -2769,7 +2746,7 @@ namespace AcroniUI.CustomizingForms
             this.btnColorGreen.FlatAppearance.BorderSize = 0;
             this.btnColorGreen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnColorGreen.ForeColor = System.Drawing.Color.Transparent;
-            this.btnColorGreen.Location = new System.Drawing.Point(243, 97);
+            this.btnColorGreen.Location = new System.Drawing.Point(238, 97);
             this.btnColorGreen.Name = "btnColorGreen";
             this.btnColorGreen.Size = new System.Drawing.Size(32, 32);
             this.btnColorGreen.TabIndex = 114;
@@ -2782,7 +2759,7 @@ namespace AcroniUI.CustomizingForms
             this.btnColorCyan.FlatAppearance.BorderSize = 0;
             this.btnColorCyan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnColorCyan.ForeColor = System.Drawing.Color.Transparent;
-            this.btnColorCyan.Location = new System.Drawing.Point(167, 97);
+            this.btnColorCyan.Location = new System.Drawing.Point(162, 97);
             this.btnColorCyan.Name = "btnColorCyan";
             this.btnColorCyan.Size = new System.Drawing.Size(32, 32);
             this.btnColorCyan.TabIndex = 114;
@@ -2795,7 +2772,7 @@ namespace AcroniUI.CustomizingForms
             this.btnColorDeepPurple.FlatAppearance.BorderSize = 0;
             this.btnColorDeepPurple.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnColorDeepPurple.ForeColor = System.Drawing.Color.Transparent;
-            this.btnColorDeepPurple.Location = new System.Drawing.Point(167, 59);
+            this.btnColorDeepPurple.Location = new System.Drawing.Point(162, 59);
             this.btnColorDeepPurple.Name = "btnColorDeepPurple";
             this.btnColorDeepPurple.Size = new System.Drawing.Size(32, 32);
             this.btnColorDeepPurple.TabIndex = 114;
@@ -2835,7 +2812,7 @@ namespace AcroniUI.CustomizingForms
             // Compacto
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(46)))), ((int)(((byte)(47)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.pnlHeadColorpicker);
             this.Controls.Add(this.panel1);
@@ -3095,7 +3072,6 @@ namespace AcroniUI.CustomizingForms
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignCenter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignLeft)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -3326,7 +3302,6 @@ namespace AcroniUI.CustomizingForms
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label lblEscolherCores;
 
     }
 }
