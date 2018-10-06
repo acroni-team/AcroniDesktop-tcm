@@ -2885,7 +2885,7 @@ namespace AcroniUI.CustomizingForms
         private System.Windows.Forms.PictureBox picBoxIcon2;
         private System.Windows.Forms.PictureBox picBoxIcon1;
         private System.Windows.Forms.Button btnVoltar;
-<<<<<<< HEAD
+//<<<<<<< HEAD
         private System.Windows.Forms.Panel fundoCa1;
         private System.Windows.Forms.Panel fundoCa2;
         private System.Windows.Forms.Panel fundoCa3;
@@ -2941,7 +2941,7 @@ namespace AcroniUI.CustomizingForms
         private System.Windows.Forms.Panel fundoCe7;
         private System.Windows.Forms.Panel fundoCe2s;
         private System.Windows.Forms.Panel fundoCe3;
-=======
+//=======
         private System.Windows.Forms.PictureBox picBoxIcon10;
         private System.Windows.Forms.PictureBox picBoxIcon9;
         private System.Windows.Forms.PictureBox picBoxIcon8;
@@ -2949,7 +2949,7 @@ namespace AcroniUI.CustomizingForms
         private System.Windows.Forms.PictureBox picBoxIcon6;
         private System.Windows.Forms.PictureBox picBoxIcon5;
         private System.Windows.Forms.PictureBox picBoxIcon4;
->>>>>>> Ícones
+//>>>>>>> Ícones
     }
 }
 
