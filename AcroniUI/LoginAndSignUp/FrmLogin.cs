@@ -445,5 +445,10 @@ namespace AcroniUI.LoginAndSignUp
                         controlInside.ResetText();
             }
         }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+            Fade.FadeIn(this);
+        }
     }
 }

@@ -176,6 +176,9 @@
     <EmbeddedResource Include="Custom\CustomModules\KeycapTextModule.resx">
       <DependentUpon>KeycapTextModule.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Custom\Fullsize.resx">
+      <DependentUpon>Fullsize.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Custom\Tenkeyless.resx">
       <DependentUpon>Tenkeyless.cs</DependentUpon>
     </EmbeddedResource>

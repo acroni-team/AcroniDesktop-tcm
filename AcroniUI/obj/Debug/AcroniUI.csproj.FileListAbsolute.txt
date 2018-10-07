@@ -53,3 +53,4 @@ E:\Desktop\c\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.pdb
 E:\Desktop\c\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Custom.CustomModules.KeycapIconModule.resources
 E:\Desktop\c\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Custom.CustomModules.KeycapParentModule.resources
 E:\Desktop\c\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Custom.CustomModules.KeycapTextModule.resources
+E:\Desktop\c\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Custom.Fullsize.resources

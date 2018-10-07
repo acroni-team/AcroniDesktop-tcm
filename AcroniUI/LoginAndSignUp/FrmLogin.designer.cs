@@ -664,6 +664,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmLogin";
+            this.Opacity = 0D;
+            this.Load += new System.EventHandler(this.FrmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnSair)).EndInit();
             this.pnlLogin.ResumeLayout(false);
             this.pnlLogin.PerformLayout();

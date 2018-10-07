@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using AcroniLibrary.CustomizingMethods.TextFonts;
 using AcroniLibrary.FileInfo;
 using AcroniLibrary.DesignMethods;
+using AcroniUI.Custom.CustomModules;
 
 namespace AcroniUI.Custom
 {
@@ -20,7 +21,7 @@ namespace AcroniUI.Custom
         Kbtn keybutton = new Kbtn();
 
         // Definição das propriedades de salvamento
-        private bool SettedKeyboardProperties = false;
+        //private bool SetKeyboardProperties;
         Keyboard keyboard = new Keyboard();
 
         //Definição das propriedades das fontes
@@ -33,18 +34,31 @@ namespace AcroniUI.Custom
 
         // Definição das propriedades do colorpicker 
         private Color Color { get; set; } = Color.FromArgb(26, 26, 26);
+        private Color FontColor { get; set; } = Color.White;
 
 
         #endregion
 
         #region Eventos a nível do formulário
+
         //Ao clicar num botão do teclado
         private void kbtn_Click(object sender, EventArgs e)
         {
             keybutton = (Kbtn)sender;
-            keybutton.BackColor = keybutton.SetColor(Color);
+
+            if (__HasBtnStyleFontColorBeenChosen)
+                keybutton.ForeColor = FontColor;
+            else 
+                keybutton.BackColor = keybutton.SetColor(Color);
+
+
             if (HasChosenAIcon)
                 keybutton.Image = SelectedIcon;
+            if (__HasBtnTextModuleBeenChosen)
+            {
+                //KeycapTextModule keycapTextModule = 
+            }
+
         }
 
         //Ao clicar no botão de fechar
@@ -73,6 +87,12 @@ namespace AcroniUI.Custom
             InitializeComponent();
 
             lblKeyboardName.Location = new Point(lblCollectionName.Location.X + lblCollectionName.Size.Width - 5, lblCollectionName.Location.Y);
+
+            btnStyleUnderline.Font = new Font(btnStyleUnderline.Font, FontStyle.Underline);
+            btnStyleStrikeout.Font = new Font(btnStyleStrikeout.Font, FontStyle.Strikeout);
+
+            Bunifu.Framework.UI.BunifuElipse be = new Bunifu.Framework.UI.BunifuElipse();
+            be.ApplyElipse(pnlBtnStyleFontColor, 5);
             //Foreach para arredondar cores do colorpicker
             foreach (Control c in pnlBodyColorpicker.Controls)
             {
@@ -125,6 +145,9 @@ namespace AcroniUI.Custom
             Button b = (Button)sender;
             lblHexaColor.Text = $"#{b.BackColor.R.ToString("X2")}{b.BackColor.G.ToString("X2")}{b.BackColor.B.ToString("X2")}";
 
+            if (__HasBtnStyleFontColorBeenChosen)
+                FontColor = b.BackColor;
+
             if (b == Ambar)
                 lblColorName.Text = "Âmbar";
             else if (b.Name.Contains("_"))
@@ -133,7 +156,7 @@ namespace AcroniUI.Custom
                 lblColorName.Text = "Preto (cor padrão)";
             else
                 lblColorName.Text = b.Name;
-     
+
             //--Transição para mudar de cor
             Transition transition = new Transition(new TransitionType_EaseInEaseOut(200));
             transition.add(pnlChosenColor, "BackColor", b.BackColor);
@@ -417,32 +440,45 @@ namespace AcroniUI.Custom
         //}
         //#endregion
 
-        #region Ícones
+
+
+        #region Controladores dos módulos
+
+        private bool __HasBtnTextModuleBeenChosen { get; set; }
+
+        private bool __HasBtnStyleFontColorBeenChosen { get; set; }
+
+        #endregion
+
+        #region Ícones e texto
 
         private Queue<Image> ImageQueue = new Queue<Image>();
 
         private void btnIcons_Click(object sender, EventArgs e)
         {
-            List<Image> insertableArray = new List<Image> { };
-            using (OpenFileDialog iconGetter = new OpenFileDialog())
-            {
-                iconGetter.InitialDirectory = @"C:\";
-                iconGetter.Title = "Qual o ícone que deseja adicionar?";
-                iconGetter.Filter = "Todos os tipos de imagem | *jpg; *.jpeg; *.bmp; *.png |BMP | *.bmp | JPG | *.jpg; *.jpeg | PNG | *.png ";
-                iconGetter.Multiselect = true;
-                if (iconGetter.ShowDialog() == DialogResult.OK)
-                {
-                    foreach (String fileDirectory in iconGetter.FileNames)
-                        ImageQueue.Enqueue(Image.FromFile(fileDirectory));
+            __HasBtnTextModuleBeenChosen = true;
+            btnOpenModuleTextIcons.BackColor = Color.FromArgb(45, 46, 47);
 
-                    while (ImageQueue.Count > 10)
-                        ImageQueue.Dequeue();
-                }
-                for (int aux = ImageQueue.Count - 1; aux >= 0; aux--)
-                {
-                    insertableArray.Add(ImageQueue.ToArray()[aux]);
-                }
-            }
+            //List<Image> insertableArray = new List<Image> { };
+            //using (OpenFileDialog iconGetter = new OpenFileDialog())
+            //{
+            //    iconGetter.InitialDirectory = @"C:\";
+            //    iconGetter.Title = "Qual o ícone que deseja adicionar?";
+            //    iconGetter.Filter = "Todos os tipos de imagem | *jpg; *.jpeg; *.bmp; *.png |BMP | *.bmp | JPG | *.jpg; *.jpeg | PNG | *.png ";
+            //    iconGetter.Multiselect = true;
+            //    if (iconGetter.ShowDialog() == DialogResult.OK)
+            //    {
+            //        foreach (String fileDirectory in iconGetter.FileNames)
+            //            ImageQueue.Enqueue(Image.FromFile(fileDirectory));
+
+            //        while (ImageQueue.Count > 10)
+            //            ImageQueue.Dequeue();
+            //    }
+            //    for (int aux = ImageQueue.Count - 1; aux >= 0; aux--)
+            //    {
+            //        insertableArray.Add(ImageQueue.ToArray()[aux]);
+            //    }
+            //}
             //for (int i = 0; i < ImageQueue.Count; i++)
             //(pnlIcons.Controls[$"picBoxIcon{i + 1}"] as PictureBox).Image = insertableArray[i];
         }
@@ -468,6 +504,19 @@ namespace AcroniUI.Custom
             catch (Exception) { }
         }
 
+        private void btnStyleFontColor_Click(object sender, EventArgs e)
+        {
+            if (!__HasBtnStyleFontColorBeenChosen)
+            {
+                btnStyleFontColor.BackColor = Color.FromArgb(45, 46, 47);
+                __HasBtnStyleFontColorBeenChosen = true;
+            }
+            else
+            {
+                btnStyleFontColor.BackColor = Color.FromArgb(31, 32, 34);
+                __HasBtnStyleFontColorBeenChosen = false;
+            }
+        }
     }
 }
 

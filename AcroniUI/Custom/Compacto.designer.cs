@@ -194,7 +194,9 @@ namespace AcroniUI.Custom
             this.btnOpenModuleBackground = new AcroniControls.StyleBtn();
             this.btnOpenModuleTextIcons = new AcroniControls.StyleBtn();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlBtnStyleFontColor = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnStyleFontColor = new AcroniControls.StyleBtn();
             this.pnlHeadColorpicker = new System.Windows.Forms.Panel();
             this.lblColorName = new System.Windows.Forms.Label();
             this.pnlChosenColor = new System.Windows.Forms.Panel();
@@ -1980,7 +1982,7 @@ namespace AcroniUI.Custom
             this.btnStyleStrikeout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnStyleStrikeout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStyleStrikeout.Font = new System.Drawing.Font("Open Sans", 12.25F);
-            this.btnStyleStrikeout.ForeColor = System.Drawing.Color.White;
+            this.btnStyleStrikeout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
             this.btnStyleStrikeout.Location = new System.Drawing.Point(149, 74);
             this.btnStyleStrikeout.Name = "btnStyleStrikeout";
             this.btnStyleStrikeout.Size = new System.Drawing.Size(49, 34);
@@ -1997,7 +1999,7 @@ namespace AcroniUI.Custom
             this.btnStyleUnderline.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnStyleUnderline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStyleUnderline.Font = new System.Drawing.Font("Open Sans", 12.25F);
-            this.btnStyleUnderline.ForeColor = System.Drawing.Color.White;
+            this.btnStyleUnderline.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
             this.btnStyleUnderline.Location = new System.Drawing.Point(107, 74);
             this.btnStyleUnderline.Name = "btnStyleUnderline";
             this.btnStyleUnderline.Size = new System.Drawing.Size(36, 34);
@@ -2013,8 +2015,8 @@ namespace AcroniUI.Custom
             this.btnStyleItalic.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnStyleItalic.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnStyleItalic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStyleItalic.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStyleItalic.ForeColor = System.Drawing.Color.White;
+            this.btnStyleItalic.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStyleItalic.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
             this.btnStyleItalic.Location = new System.Drawing.Point(65, 74);
             this.btnStyleItalic.Name = "btnStyleItalic";
             this.btnStyleItalic.Size = new System.Drawing.Size(36, 34);
@@ -2030,8 +2032,8 @@ namespace AcroniUI.Custom
             this.btnStyleBold.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnStyleBold.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnStyleBold.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStyleBold.Font = new System.Drawing.Font("Open Sans", 12.25F);
-            this.btnStyleBold.ForeColor = System.Drawing.Color.White;
+            this.btnStyleBold.Font = new System.Drawing.Font("Open Sans ExtraBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStyleBold.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
             this.btnStyleBold.Location = new System.Drawing.Point(23, 74);
             this.btnStyleBold.Name = "btnStyleBold";
             this.btnStyleBold.Size = new System.Drawing.Size(36, 34);
@@ -2390,8 +2392,10 @@ namespace AcroniUI.Custom
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(34)))));
+            this.panel3.Controls.Add(this.pnlBtnStyleFontColor);
             this.panel3.Controls.Add(this.comboBox1);
             this.panel3.Controls.Add(this.cmbFontes);
+            this.panel3.Controls.Add(this.btnStyleFontColor);
             this.panel3.Controls.Add(this.btnStyleBold);
             this.panel3.Controls.Add(this.btnTextAlignRight);
             this.panel3.Controls.Add(this.btnStyleStrikeout);
@@ -2406,6 +2410,14 @@ namespace AcroniUI.Custom
             this.panel3.Size = new System.Drawing.Size(373, 157);
             this.panel3.TabIndex = 6;
             // 
+            // pnlBtnStyleFontColor
+            // 
+            this.pnlBtnStyleFontColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(150)))), ((int)(((byte)(242)))));
+            this.pnlBtnStyleFontColor.Location = new System.Drawing.Point(334, 48);
+            this.pnlBtnStyleFontColor.Name = "pnlBtnStyleFontColor";
+            this.pnlBtnStyleFontColor.Size = new System.Drawing.Size(10, 10);
+            this.pnlBtnStyleFontColor.TabIndex = 10;
+            // 
             // comboBox1
             // 
             this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
@@ -2419,6 +2431,24 @@ namespace AcroniUI.Custom
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(74, 21);
             this.comboBox1.TabIndex = 1;
+            // 
+            // btnStyleFontColor
+            // 
+            this.btnStyleFontColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(36)))), ((int)(((byte)(38)))));
+            this.btnStyleFontColor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStyleFontColor.FlatAppearance.BorderSize = 0;
+            this.btnStyleFontColor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnStyleFontColor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnStyleFontColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStyleFontColor.Font = new System.Drawing.Font("Open Sans ExtraBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStyleFontColor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
+            this.btnStyleFontColor.Location = new System.Drawing.Point(316, 28);
+            this.btnStyleFontColor.Name = "btnStyleFontColor";
+            this.btnStyleFontColor.Size = new System.Drawing.Size(36, 34);
+            this.btnStyleFontColor.TabIndex = 5;
+            this.btnStyleFontColor.Text = "A";
+            this.btnStyleFontColor.UseVisualStyleBackColor = false;
+            this.btnStyleFontColor.Click += new System.EventHandler(this.btnStyleFontColor_Click);
             // 
             // pnlHeadColorpicker
             // 
@@ -3173,7 +3203,6 @@ namespace AcroniUI.Custom
         private AcroniControls.Kbtn Cb2;
         private AcroniControls.Kbtn Cb1s;
         private System.Windows.Forms.Button btnColorChosen;
-        private System.Windows.Forms.Panel pnlColorpicker;
         private System.Windows.Forms.Panel pnlHistorico;
         private System.Windows.Forms.TextBox txtSelectFont;
         protected System.Windows.Forms.PictureBox picBoxKeyboardBackground;
@@ -3189,10 +3218,6 @@ namespace AcroniUI.Custom
         private System.Windows.Forms.Label lblDefinirParaTodasTeclas;
         private StyleBtn btnOpenModuleSwitch;
         private System.Windows.Forms.Button btnVoltar;
-        //<<<<<<< HEAD
-        ////<<<<<<< HEAD
-        //=======
-        //>>>>>>> 6085eb0e9043626e0c90ad911655a391e0a53c58
         private System.Windows.Forms.Panel fundoCa1;
         private System.Windows.Forms.Panel fundoCa2;
         private System.Windows.Forms.Panel fundoCa3;
@@ -3249,13 +3274,6 @@ namespace AcroniUI.Custom
         private System.Windows.Forms.Panel fundoCe2s;
         private System.Windows.Forms.Panel fundoCe3;
         private Bunifu.Framework.UI.BunifuElipse eBtnOpenModuleSwitch;
-        private System.Windows.Forms.PictureBox picBoxIcon10;
-        private System.Windows.Forms.PictureBox picBoxIcon9;
-        private System.Windows.Forms.PictureBox picBoxIcon8;
-        private System.Windows.Forms.PictureBox picBoxIcon7;
-        private System.Windows.Forms.PictureBox picBoxIcon6;
-        private System.Windows.Forms.PictureBox picBoxIcon5;
-        private System.Windows.Forms.PictureBox picBoxIcon4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlHeadColorpicker;
         private System.Windows.Forms.Label lblColorName;
@@ -3313,6 +3331,8 @@ namespace AcroniUI.Custom
         private System.Windows.Forms.Button btnHist4;
         private System.Windows.Forms.Button btnHist3;
         private System.Windows.Forms.Button btnHist2;
+        private StyleBtn btnStyleFontColor;
+        private System.Windows.Forms.Panel pnlBtnStyleFontColor;
     }
 }
 
