@@ -54,9 +54,27 @@ namespace AcroniUI.Custom
 
             if (HasChosenAIcon)
                 keybutton.Image = SelectedIcon;
+
             if (__HasBtnTextModuleBeenChosen)
             {
-                //KeycapTextModule keycapTextModule = 
+                KeycapTextModule keycapTextModule = new KeycapTextModule();
+                if (keycapTextModule.ShowDialog() == DialogResult.OK)
+                {
+                    //if (!string.IsNullOrEmpty(keycapTextModule.Uppertext))
+                    //    keybutton.Uppertext = keycapTextModule.Uppertext;
+                    //else
+                    //    keybutton.Text = keybutton.Text;
+
+                    //if (!string.IsNullOrEmpty(keycapTextModule.BottomText))
+                    //    keybutton.BottomText = keycapTextModule.BottomText;
+                    //else
+                    //    keybutton.Text = keybutton.Text;
+
+                    if (!string.IsNullOrEmpty(keycapTextModule.Maintext))
+                        keybutton.Text = keycapTextModule.Maintext;
+                    else
+                        keybutton.Text = keybutton.Text;
+                }
             }
 
         }

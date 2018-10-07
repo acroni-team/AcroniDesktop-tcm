@@ -29,11 +29,14 @@ namespace AcroniUI.Custom.CustomModules
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Fade.FadeOut(this);
+
         }
 
         private void GeneralTextChanged(object sender, EventArgs e)
         {
+            TheKhanSoftsWatermarkTextbox.TextboxWithPlaceholder twp = (TheKhanSoftsWatermarkTextbox.TextboxWithPlaceholder)sender;
+            twp.ForeColor = Color.FromArgb(114, 137, 218);
+
             if (sender == txt1)
                 Uppertext = txt1.Text;
             else if (sender == txt2)
@@ -45,6 +48,9 @@ namespace AcroniUI.Custom.CustomModules
         #region Métodos de transição de cores dos textboxes
         private void GeneralMouseMove(object sender, MouseEventArgs e)
         {
+            TheKhanSoftsWatermarkTextbox.TextboxWithPlaceholder twp = (TheKhanSoftsWatermarkTextbox.TextboxWithPlaceholder)sender;
+            twp.ForeColor = Color.FromArgb(114, 137, 218);
+
             if (sender == txt1 || sender == apnlTextbox1)
             {
                 apnlTextbox1.BackColor = Color.FromArgb(42, 45, 50);
@@ -65,6 +71,9 @@ namespace AcroniUI.Custom.CustomModules
 
         private void GeneralMouseLeave(object sender, EventArgs e)
         {
+            TheKhanSoftsWatermarkTextbox.TextboxWithPlaceholder twp = (TheKhanSoftsWatermarkTextbox.TextboxWithPlaceholder)sender;
+            twp.ForeColor = Color.FromArgb(114, 137, 218);
+
             if (sender == txt1 || sender == apnlTextbox1)
             {
                 apnlTextbox1.BackColor = Color.FromArgb(38, 41, 45);
@@ -85,6 +94,9 @@ namespace AcroniUI.Custom.CustomModules
 
         private void GeneralMouseUp(object sender, MouseEventArgs e)
         {
+            TheKhanSoftsWatermarkTextbox.TextboxWithPlaceholder twp = (TheKhanSoftsWatermarkTextbox.TextboxWithPlaceholder)sender;
+            twp.ForeColor = Color.FromArgb(114, 137, 218);
+
             if (sender == txt1 || sender == apnlTextbox1)
             {
                 apnlTextbox1.BackColor = Color.FromArgb(38, 41, 45);
@@ -105,6 +117,9 @@ namespace AcroniUI.Custom.CustomModules
 
         private void GeneralMouseDown(object sender, MouseEventArgs e)
         {
+            TheKhanSoftsWatermarkTextbox.TextboxWithPlaceholder twp = (TheKhanSoftsWatermarkTextbox.TextboxWithPlaceholder)sender;
+            twp.ForeColor = Color.FromArgb(114, 137, 218);
+
             if (sender == txt1 || sender == apnlTextbox1)
             {
                 apnlTextbox1.BackColor = Color.FromArgb(38, 41, 45);
@@ -125,6 +140,9 @@ namespace AcroniUI.Custom.CustomModules
 
         private void GeneralMouseClick(object sender, MouseEventArgs e)
         {
+            TheKhanSoftsWatermarkTextbox.TextboxWithPlaceholder twp = (TheKhanSoftsWatermarkTextbox.TextboxWithPlaceholder)sender;
+            twp.ForeColor = Color.FromArgb(114, 137, 218);
+
             if (sender == txt1 || sender == apnlTextbox1)
             {
                 apnlTextbox1.BackColor = Color.FromArgb(38, 41, 45);
@@ -145,6 +163,9 @@ namespace AcroniUI.Custom.CustomModules
 
         private void GeneralClick(object sender, EventArgs e)
         {
+            TheKhanSoftsWatermarkTextbox.TextboxWithPlaceholder twp = (TheKhanSoftsWatermarkTextbox.TextboxWithPlaceholder)sender;
+            twp.ForeColor = Color.FromArgb(114, 137, 218);
+
             if (sender == txt1 || sender == apnlTextbox1)
             {
                 apnlTextbox1.BackColor = Color.FromArgb(38, 41, 45);
@@ -165,6 +186,9 @@ namespace AcroniUI.Custom.CustomModules
 
         private void GeneralEnter(object sender, EventArgs e)
         {
+            TheKhanSoftsWatermarkTextbox.TextboxWithPlaceholder twp = (TheKhanSoftsWatermarkTextbox.TextboxWithPlaceholder)sender;
+            twp.ForeColor = Color.FromArgb(114, 137, 218);
+
             if (sender == txt1 || sender == apnlTextbox1)
             {
                 apnlTextbox1.BackColor = Color.FromArgb(38, 41, 45);

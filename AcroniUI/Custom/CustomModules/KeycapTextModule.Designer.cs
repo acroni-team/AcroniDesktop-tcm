@@ -86,24 +86,19 @@
             // 
             this.apnlTextbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(45)))));
             this.apnlTextbox1.Controls.Add(this.txt1);
+            this.apnlTextbox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.apnlTextbox1.Location = new System.Drawing.Point(73, 92);
             this.apnlTextbox1.Name = "apnlTextbox1";
             this.apnlTextbox1.Padding = new System.Windows.Forms.Padding(5);
             this.apnlTextbox1.Size = new System.Drawing.Size(328, 50);
             this.apnlTextbox1.TabIndex = 2;
-            this.apnlTextbox1.Click += new System.EventHandler(this.GeneralClick);
-            this.apnlTextbox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.GeneralMouseClick);
-            this.apnlTextbox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.GeneralMouseDown);
-            this.apnlTextbox1.MouseEnter += new System.EventHandler(this.GeneralEnter);
-            this.apnlTextbox1.MouseLeave += new System.EventHandler(this.GeneralMouseLeave);
-            this.apnlTextbox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.GeneralMouseMove);
-            this.apnlTextbox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.GeneralMouseUp);
             // 
             // txt1
             // 
             this.txt1.AccessibleDescription = "";
             this.txt1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(45)))));
             this.txt1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txt1.Font = new System.Drawing.Font("Open Sans", 11.25F);
             this.txt1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
             this.txt1.Location = new System.Drawing.Point(0, 14);
@@ -127,24 +122,19 @@
             // 
             this.apnlTextbox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(45)))));
             this.apnlTextbox2.Controls.Add(this.txt2);
+            this.apnlTextbox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.apnlTextbox2.Location = new System.Drawing.Point(78, 240);
             this.apnlTextbox2.Name = "apnlTextbox2";
             this.apnlTextbox2.Padding = new System.Windows.Forms.Padding(5);
             this.apnlTextbox2.Size = new System.Drawing.Size(328, 52);
             this.apnlTextbox2.TabIndex = 3;
-            this.apnlTextbox2.Click += new System.EventHandler(this.GeneralClick);
-            this.apnlTextbox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.GeneralMouseClick);
-            this.apnlTextbox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.GeneralMouseDown);
-            this.apnlTextbox2.MouseEnter += new System.EventHandler(this.GeneralEnter);
-            this.apnlTextbox2.MouseLeave += new System.EventHandler(this.GeneralMouseLeave);
-            this.apnlTextbox2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.GeneralMouseMove);
-            this.apnlTextbox2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.GeneralMouseUp);
             // 
             // txt2
             // 
             this.txt2.AccessibleDescription = "";
             this.txt2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(45)))));
             this.txt2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txt2.Font = new System.Drawing.Font("Open Sans", 11.25F);
             this.txt2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
             this.txt2.Location = new System.Drawing.Point(0, 14);
@@ -168,24 +158,19 @@
             // 
             this.apnlTextbox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(45)))));
             this.apnlTextbox3.Controls.Add(this.txt3);
+            this.apnlTextbox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.apnlTextbox3.Location = new System.Drawing.Point(73, 455);
             this.apnlTextbox3.Name = "apnlTextbox3";
             this.apnlTextbox3.Padding = new System.Windows.Forms.Padding(5);
             this.apnlTextbox3.Size = new System.Drawing.Size(328, 52);
             this.apnlTextbox3.TabIndex = 3;
-            this.apnlTextbox3.Click += new System.EventHandler(this.GeneralClick);
-            this.apnlTextbox3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.GeneralMouseClick);
-            this.apnlTextbox3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.GeneralMouseDown);
-            this.apnlTextbox3.MouseEnter += new System.EventHandler(this.GeneralEnter);
-            this.apnlTextbox3.MouseLeave += new System.EventHandler(this.GeneralMouseLeave);
-            this.apnlTextbox3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.GeneralMouseMove);
-            this.apnlTextbox3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.GeneralMouseUp);
             // 
             // txt3
             // 
             this.txt3.AccessibleDescription = "";
             this.txt3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(45)))));
             this.txt3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txt3.Font = new System.Drawing.Font("Open Sans", 11.25F);
             this.txt3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
             this.txt3.Location = new System.Drawing.Point(0, 14);
@@ -234,10 +219,10 @@
             this.label4.ForeColor = System.Drawing.Color.DimGray;
             this.label4.Location = new System.Drawing.Point(75, 295);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(378, 36);
+            this.label4.Size = new System.Drawing.Size(349, 36);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Eu particularmente acho meio estúpido exceder a quantidade \r\nde letras que uma te" +
-    "cla permite. Mas você é você, não é? :D\r\n";
+            this.label4.Text = "Dependendo do tamanho da fonte que você escolheu, \r\ndará para deixar mais ou meno" +
+    "s letras numa única tecla ;)\r\n";
             // 
             // btnExit
             // 
@@ -289,7 +274,6 @@
             this.Controls.Add(this.alblUpperText);
             this.Controls.Add(this.apnlTextbox1);
             this.Name = "KeycapTextModule";
-            this.Opacity = 0D;
             this.apnlTextbox1.ResumeLayout(false);
             this.apnlTextbox1.PerformLayout();
             this.apnlTextbox2.ResumeLayout(false);

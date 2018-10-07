@@ -46,7 +46,7 @@ namespace TheKhanSoftsWatermarkTextbox
             }
             else
             {
-                this.ForeColor = Color.Black;
+                this.ForeColor = Color.FromArgb(114, 137, 218);
             }
         }
 
@@ -55,7 +55,7 @@ namespace TheKhanSoftsWatermarkTextbox
             if (this.Text == WatermarkText || this.Text == string.Empty)
             {
                 this.Text = string.Empty;
-                this.ForeColor = Color.Black;
+                this.ForeColor = Color.FromArgb(114, 137, 218);
             }
         }
 

@@ -22,7 +22,6 @@ namespace AcroniLibrary.DesignMethods
                 await Task.Delay(1);
                 form.Opacity -= 0.05;
             }
-            Application.Exit();
         }
     }
 }
