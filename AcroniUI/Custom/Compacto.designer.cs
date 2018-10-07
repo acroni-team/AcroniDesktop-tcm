@@ -1201,7 +1201,7 @@ namespace AcroniUI.Custom
             this.Ca7.Name = "Ca7";
             this.Ca7.Size = new System.Drawing.Size(38, 40);
             this.Ca7.TabIndex = 71;
-            this.Ca7.Text = "Q";
+            this.Ca7.Text = "6";
             this.Ca7.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.Ca7.UseVisualStyleBackColor = false;
             this.Ca7.Click += new System.EventHandler(this.kbtn_Click);
@@ -1219,7 +1219,7 @@ namespace AcroniUI.Custom
             this.Ca8.Name = "Ca8";
             this.Ca8.Size = new System.Drawing.Size(38, 40);
             this.Ca8.TabIndex = 72;
-            this.Ca8.Text = "Q";
+            this.Ca8.Text = "7";
             this.Ca8.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.Ca8.UseVisualStyleBackColor = false;
             this.Ca8.Click += new System.EventHandler(this.kbtn_Click);
@@ -1237,7 +1237,7 @@ namespace AcroniUI.Custom
             this.Ca9.Name = "Ca9";
             this.Ca9.Size = new System.Drawing.Size(38, 40);
             this.Ca9.TabIndex = 73;
-            this.Ca9.Text = "Q";
+            this.Ca9.Text = "8";
             this.Ca9.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.Ca9.UseVisualStyleBackColor = false;
             this.Ca9.Click += new System.EventHandler(this.kbtn_Click);
@@ -1255,7 +1255,7 @@ namespace AcroniUI.Custom
             this.Ca10.Name = "Ca10";
             this.Ca10.Size = new System.Drawing.Size(38, 40);
             this.Ca10.TabIndex = 74;
-            this.Ca10.Text = "Q";
+            this.Ca10.Text = "9";
             this.Ca10.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.Ca10.UseVisualStyleBackColor = false;
             this.Ca10.Click += new System.EventHandler(this.kbtn_Click);
@@ -1273,7 +1273,7 @@ namespace AcroniUI.Custom
             this.Ca11.Name = "Ca11";
             this.Ca11.Size = new System.Drawing.Size(38, 40);
             this.Ca11.TabIndex = 75;
-            this.Ca11.Text = "Q";
+            this.Ca11.Text = "0";
             this.Ca11.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.Ca11.UseVisualStyleBackColor = false;
             this.Ca11.Click += new System.EventHandler(this.kbtn_Click);
@@ -1291,7 +1291,7 @@ namespace AcroniUI.Custom
             this.Ca12.Name = "Ca12";
             this.Ca12.Size = new System.Drawing.Size(38, 40);
             this.Ca12.TabIndex = 76;
-            this.Ca12.Text = "Q";
+            this.Ca12.Text = "–";
             this.Ca12.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.Ca12.UseVisualStyleBackColor = false;
             this.Ca12.Click += new System.EventHandler(this.kbtn_Click);
@@ -1309,7 +1309,7 @@ namespace AcroniUI.Custom
             this.Ca13.Name = "Ca13";
             this.Ca13.Size = new System.Drawing.Size(38, 40);
             this.Ca13.TabIndex = 77;
-            this.Ca13.Text = "Q";
+            this.Ca13.Text = "=";
             this.Ca13.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.Ca13.UseVisualStyleBackColor = false;
             this.Ca13.Click += new System.EventHandler(this.kbtn_Click);
@@ -1327,8 +1327,8 @@ namespace AcroniUI.Custom
             this.Ca14s.Name = "Ca14s";
             this.Ca14s.Size = new System.Drawing.Size(94, 40);
             this.Ca14s.TabIndex = 78;
-            this.Ca14s.Text = "Caps Lock";
-            this.Ca14s.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.Ca14s.Text = "<";
+            this.Ca14s.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Ca14s.UseVisualStyleBackColor = false;
             this.Ca14s.Click += new System.EventHandler(this.kbtn_Click);
             this.Ca14s.Paint += new System.Windows.Forms.PaintEventHandler(this.ChangeColorFundoKbtn);

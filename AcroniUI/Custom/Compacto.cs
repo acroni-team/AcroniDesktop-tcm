@@ -66,6 +66,7 @@ namespace AcroniUI.Custom
                     //    keybutton.Text = keybutton.Text;
 
                     //if (!string.IsNullOrEmpty(keycapTextModule.BottomText))
+                        //if (keybutton = Ca14s
                     //    keybutton.BottomText = keycapTextModule.BottomText;
                     //else
                     //    keybutton.Text = keybutton.Text;
@@ -474,8 +475,17 @@ namespace AcroniUI.Custom
 
         private void btnIcons_Click(object sender, EventArgs e)
         {
-            __HasBtnTextModuleBeenChosen = true;
-            btnOpenModuleTextIcons.BackColor = Color.FromArgb(45, 46, 47);
+            if (__HasBtnTextModuleBeenChosen)
+            {
+                __HasBtnTextModuleBeenChosen = false;
+                btnOpenModuleTextIcons.BackColor = Color.FromArgb(31, 32, 34);
+            }
+            else
+            {
+                __HasBtnTextModuleBeenChosen = true;
+                btnOpenModuleTextIcons.BackColor = Color.FromArgb(45, 46, 47);
+            }
+
 
             //List<Image> insertableArray = new List<Image> { };
             //using (OpenFileDialog iconGetter = new OpenFileDialog())
