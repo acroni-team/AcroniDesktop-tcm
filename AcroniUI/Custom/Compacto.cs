@@ -73,7 +73,7 @@ namespace AcroniUI.Custom
             InitializeComponent();
 
             //Foreach para arredondar cores do colorpicker
-            foreach (Control c in pnlCorEscolhida.Controls)
+            foreach (Control c in pnlBodyColorpicker.Controls)
             {
                 if (c is Button)
                 {
@@ -116,57 +116,79 @@ namespace AcroniUI.Custom
 
         #region Métodos do Color Picker
 
-        private bool[] __disponibilidade_pnlHistorico { get; set; } = { true, false, false };
+        private bool[] __IsSlotAvailable { get; set; } = { true, false, false, false };
 
         //Clicks que ocorrem ao selecionar uma cor
-        private void Color_Click(object sender, EventArgs e)
+        private void btnColor_Click(object sender, EventArgs e)
         {
-            Panel p = (Panel)sender;
-            lblHexaColor.Text = $"#{p.BackColor.R.ToString("X2")}{p.BackColor.G.ToString("X2")}{p.BackColor.B.ToString("X2")}";
-            lblColorName.Text = (!p.Name.Contains("pnl") ? p.Name.Replace("_", " ") : p.Tag.ToString());
+            Button b = (Button)sender;
+            lblHexaColor.Text = $"#{b.BackColor.R.ToString("X2")}{b.BackColor.G.ToString("X2")}{b.BackColor.B.ToString("X2")}";
 
+            if (b == Ambar)
+                lblColorName.Text = "Âmbar";
+            else if (b.Name.Contains("_"))
+                lblColorName.Text = b.Name.Replace("_", " ");
+            else if (b == Preto)
+                lblColorName.Text = "Preto (cor padrão)";
+            else
+                lblColorName.Text = b.Name;
+     
             //--Transição para mudar de cor
             Transition transition = new Transition(new TransitionType_EaseInEaseOut(200));
-            transition.add(pnlColor, "BackColor", p.BackColor);
+            transition.add(pnlChosenColor, "BackColor", b.BackColor);
             transition.run();
 
             //Define a cor da tecla no kbtn_Click
-            Color = p.BackColor;
+            Color = b.BackColor;
 
-            if (__disponibilidade_pnlHistorico[0])
+            if (__IsSlotAvailable[0])
             {
-                pnlHistorico1.BackColor = p.BackColor;
-                __disponibilidade_pnlHistorico[0] = false;
-                __disponibilidade_pnlHistorico[1] = true;
+                btnHist1.BackColor = b.BackColor;
+                __IsSlotAvailable[0] = false;
+                __IsSlotAvailable[1] = true;
             }
-            else if (__disponibilidade_pnlHistorico[1])
+
+            else if (__IsSlotAvailable[1])
             {
-                pnlHistorico2.BackColor = p.BackColor;
-                __disponibilidade_pnlHistorico[1] = false;
-                __disponibilidade_pnlHistorico[2] = true;
+                btnHist2.BackColor = b.BackColor;
+                __IsSlotAvailable[1] = false;
+                __IsSlotAvailable[2] = true;
             }
-            else if (__disponibilidade_pnlHistorico[2])
+
+            else if (__IsSlotAvailable[2])
             {
-                pnlHistorico3.BackColor = p.BackColor;
-                __disponibilidade_pnlHistorico[2] = false;
-                __disponibilidade_pnlHistorico[0] = true;
+                btnHist3.BackColor = b.BackColor;
+                __IsSlotAvailable[2] = false;
+                __IsSlotAvailable[3] = true;
+            }
+
+            else if (__IsSlotAvailable[3])
+            {
+                btnHist4.BackColor = b.BackColor;
+                __IsSlotAvailable[3] = false;
+                __IsSlotAvailable[0] = true;
             }
         }
 
         #region Hover para cada uma das cores do colorpicker
 
 
-        private void pnlColor_MouseMove(object sender, MouseEventArgs e)
+        private void btnColor_MouseLeave(object sender, EventArgs e)
         {
-            //if (checkIfItsFirstTime == 0)
-            //    previousColor = pnlColor.BackColor;
-            //checkIfItsFirstTime++;
-            //pnlColor.BackColor = Color.FromArgb(20, pnlColor.BackColor);
-            //foreach (Control c in this.Controls)
-            //{
-            //    if (!c.Name.Contains("pnlCo") || !c.Name.Equals("pnlHeadColorpicker"))
-            //        c.Visible = false;
-            //}
+            Button btnColor = (Button)sender;
+            btnColor.Size = new Size(btnColor.Size.Width - 5, btnColor.Size.Height - 5);
+            btnColor.Location = new Point(btnColor.Location.X + (5 / 2), btnColor.Location.Y + (5 / 2));
+            Bunifu.Framework.UI.BunifuElipse bunifuElipse = new Bunifu.Framework.UI.BunifuElipse();
+            bunifuElipse.ApplyElipse(btnColor, 5);
+        }
+
+        private void btnColor_MouseEnter(object sender, EventArgs e)
+        {
+            Button btnColor = (Button)sender;
+            btnColor.Size = new Size(btnColor.Size.Width + 5, btnColor.Size.Height + 5);
+            btnColor.Location = new Point(btnColor.Location.X - (5 / 2), btnColor.Location.Y - (5 / 2));
+            Bunifu.Framework.UI.BunifuElipse bunifuElipse = new Bunifu.Framework.UI.BunifuElipse();
+            bunifuElipse.ApplyElipse(btnColor, 5);
         }
 
         #endregion
@@ -445,23 +467,6 @@ namespace AcroniUI.Custom
             catch (Exception) { }
         }
 
-        private void btnColor_MouseLeave(object sender, EventArgs e)
-        {
-            Button btnColor = (Button)sender;
-            btnColor.Size = new Size(btnColor.Size.Width - 5, btnColor.Size.Height - 5);
-            btnColor.Location = new Point(btnColor.Location.X + (5 / 2), btnColor.Location.Y + (5 / 2));
-            Bunifu.Framework.UI.BunifuElipse bunifuElipse = new Bunifu.Framework.UI.BunifuElipse();
-            bunifuElipse.ApplyElipse(btnColor, 5);
-        }
-
-        private void btnColor_MouseEnter(object sender, EventArgs e)
-        {
-            Button btnColor = (Button)sender;
-            btnColor.Size = new Size(btnColor.Size.Width + 5, btnColor.Size.Height + 5);
-            btnColor.Location = new Point(btnColor.Location.X - (5 / 2), btnColor.Location.Y - (5 / 2));
-            Bunifu.Framework.UI.BunifuElipse bunifuElipse = new Bunifu.Framework.UI.BunifuElipse();
-            bunifuElipse.ApplyElipse(btnColor, 5);
-        }
     }
 }
 
