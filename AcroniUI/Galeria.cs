@@ -18,11 +18,11 @@ namespace AcroniUI
 {
     public partial class Galeria : TemplateMenu
     {
-        //SelectColor selectColor;
-        //bool isSelectColorOpen = false;
-        //int countHeightCollection = 0;
-        //int countWidthKeyboard = 0;
-        //bool selectMode;
+        SelectColor selectColor;
+        bool isSelectColorOpen = false;
+        int countHeightCollection = 0;
+        int countWidthKeyboard = 0;
+        bool selectMode;
 
         public Galeria(bool selectMode)
         {
@@ -30,7 +30,8 @@ namespace AcroniUI
 
             this.pnlScroll.AutoScroll = true;
             WelcomeUser();
-            //this.selectMode = selectMode;
+            this.selectMode = selectMode;
+
             if (selectMode)
             {
                 lblBoasVindas.Visible = false;
@@ -41,112 +42,136 @@ namespace AcroniUI
                 lblSelectKeyboard.Visible = true;
             }
 
-            //Compartilha.resourcesImg.Add(Image.FromFile(Application.StartupPath + "\\" + "icon.png"));
-            //Compartilha.resourcesImg.Add(Image.FromFile(Application.StartupPath + "\\" + "icon2.png"));
             //Para pegar as imagens
+            Share.ResourcesImage.Add(Image.FromFile(Application.StartupPath + "\\" + "icon.png"));
+            Share.ResourcesImage.Add(Image.FromFile(Application.StartupPath + "\\" + "icon2.png"));
+
             #region Aplicar redondinho
+
+
             Bunifu.Framework.UI.BunifuElipse ellipse = new Bunifu.Framework.UI.BunifuElipse();
             ellipse.ApplyElipse(btnAdicionarGaleria, 4);
-            #endregion
-            //CarregaColecoes();
-            //#region Adicionar evento de click aos btnEditarGaleria e btnExcluirGaleria
-            //foreach (Control collection in pnlScroll.Controls)
-            //{
-            //    if (collection is AcroniControls.Collection)
-            //    {
-            //        foreach (Control itemColecao in collection.Controls)
-            //        {
-            //            if (itemColecao.Name.Equals("btnEditarGaleria"))
-            //                itemColecao.Click += new EventHandler(Editar);
-            //            else if (itemColecao.Name.Equals("btnExcluirGaleria"))
-            //                itemColecao.Click += new EventHandler(Excluir);
-            //        }
-            //    }
-            //}
 
-            //#endregion
+
+            #endregion
+
+            LoadCollections();
+
+            #region Adicionar evento de click ao btnEditarGaleria e btnExcluirGaleria
+
+            foreach (Control collection in pnlScroll.Controls)
+            {
+                if (collection is AcroniControls.CollectionUI)
+                {
+                    foreach (Control itemColecao in collection.Controls)
+                    {
+                        if (itemColecao.Name.Equals("btnEditarGaleria"))
+                            itemColecao.Click += new EventHandler(Edit);
+                        else if (itemColecao.Name.Equals("btnExcluirGaleria"))
+                            itemColecao.Click += new EventHandler(Exclude);
+                    }
+                }
+            }
+
+            #endregion
         }
         public void WelcomeUser() => lblNomeUsuBoasVindas.Text = SQLConnection.nome_usuario + "!";
 
-        //#region Carregar Coleções
-        //private void CarregaColecoes()
-        //{
-        //    using (FileStream openarchive = new FileStream(Application.StartupPath + @"\" + SQLConnection.nome_usuario + ".acr", FileMode.OpenOrCreate))
-        //    {
-        //        try {
-        //            BinaryFormatter ofByteArrayToObject = new BinaryFormatter();
-        //            CompartilhaObjetosUser.user = (User)ofByteArrayToObject.Deserialize(openarchive);
-        //        }
-        //        catch (Exception) { CompartilhaObjetosUser.user = new User(); }
-        //    }
-        //    int contColecao = 0;
-        //    try
-        //    {
-        //        foreach (AcroniLibrary.FileInfo.Colecao userCollection in CompartilhaObjetosUser.user.userCollections)
-        //        {
-        //            foreach (Teclado teclado in userCollection.collection)
-        //            {
-        //                Compartilha.numTeclados++;
-        //                Compartilha.teclado = teclado.NickName;
-        //                ControlTeclado controlTeclado = new ControlTeclado();
-        //                controlTeclado.Click += new EventHandler(abrirTeclado);
-        //                controlTeclado.ForeColor = SystemColors.Control;
-        //                controlTeclado.Location = new Point(contWidthTeclado += 13, 10);
-        //                Teclados_Colecoes.teclados.Add(controlTeclado);
-        //                contWidthTeclado += 83;
-        //            }
-        //            Compartilha.collectionColor = userCollection.backColor;
-        //            Compartilha.colecao = userCollection.collectionNome;
-        //            AcroniControls.Collection collection = new AcroniControls.Collection();
-        //            if (modeSelect)
-        //            {
-        //                collection.Cursor = Cursors.Hand;
-        //                collection.MouseEnter += new EventHandler(changeColor_MouseEnter);
-        //                collection.MouseLeave += new EventHandler(returnColor_MouseLeave);
-        //            }
-        //            collection.Click += new EventHandler(colecao_Click);
-        //            collection.Location = new Point(16, 8 + contHeighColecao);
-        //            pnlScroll.Controls.Add(collection);
-        //            Compartilha.numTeclados = 0;
-        //            Compartilha.colecao = "";
-        //            Compartilha.teclado = "";
-        //            contWidthTeclado = 0;
-        //            contColecao++;
-        //            contHeighColecao += 179;
-        //            contWidthTeclado = 0;
-        //            Teclados_Colecoes.teclados = new System.Collections.Generic.List<ControlTeclado>();
-        //        }
-        //    }
-        //    catch (Exception er)
-        //    {
-        //        System.Windows.Forms.MessageBox.Show(er.Message);
-        //    }
-        //    lblCollectionsQuantity.Text = Convert.ToString(contColecao);
-        //}
+        #region Carregar Coleções
 
-
-        //#endregion
-        private void colecao_Click(object sender, EventArgs e)
+        private void LoadCollections()
         {
-            //if (modeSelect)
-            //{
-            //    Regex qtdTeclados = new Regex(@"• \d+ Teclados");
-            //    foreach (Control items in (sender as Panel).Controls)
-            //    {
-            //        if (!(qtdTeclados.IsMatch(items.Text)))
-            //        {
-            //            SetNames.colecao = items.Text;
-            //            Compartilha.numTeclados = 0;
-            //            this.Hide();
-            //            break;
-            //        }
+            using (FileStream openarchive = new FileStream(Application.StartupPath + @"\" + SQLConnection.nome_usuario + ".acr", FileMode.OpenOrCreate))
+            {
+                try
+                {
+                    BinaryFormatter ofByteArrayToObject = new BinaryFormatter();
+                    Share.User = (User)ofByteArrayToObject.Deserialize(openarchive);
+                }
+                catch (Exception)
+                {
+                    Share.User = new User();
+                }
+            }
 
-            //    }
-            //}
-            //else
-            //{
+            int countCollections = 0;
 
-            //}
+            try
+            {
+                foreach (Collection userCollection in Share.User.UserCollections)
+                {
+                    foreach (Keyboard k in userCollection.Keyboards)
+                    {
+                        Share.KeyboardsQuantity++;
+                        Share.Keyboard.Name = k.NickName;
+                        ControlKeyboard controlKeyboard = new ControlKeyboard();
+                        controlKeyboard.Click += new EventHandler(OpenKeyboard);
+                        controlKeyboard.ForeColor = SystemColors.Control;
+                        controlKeyboard.Location = new Point(countWidthKeyboard += 13, 10);
+                        ControlKeyboard_Collections.keyboardsControl.Add(controlKeyboard);
+                        countWidthKeyboard += 83;
+                    }
+
+                    Share.Collection.CollectionColor = userCollection.CollectionColor;
+                    Share.Collection.CollectionName = userCollection.CollectionName;
+
+                    //Chama o controle de usuário
+                    AcroniControls.CollectionUI collectionUi = new AcroniControls.CollectionUI();
+
+                    if (selectMode)
+                    {
+                        collectionUi.Cursor = Cursors.Hand;
+                        collectionUi.MouseEnter += new EventHandler(changeColor_MouseEnter);
+                        collectionUi.MouseLeave += new EventHandler(returnColor_MouseLeave);
+                    }
+
+                    collectionUi.Click += new EventHandler(collectionUi_Click);
+                    collectionUi.Location = new Point(16, 8 + countHeightCollection);
+                    pnlScroll.Controls.Add(collectionUi);
+
+                    Share.KeyboardsQuantity = 0;
+                    Share.Collection.CollectionName = "";
+                    Share.Keyboard.Name = "";
+                    countWidthKeyboard = 0;
+                    countCollections++;
+                    countHeightCollection += 179;
+
+                    ControlKeyboard_Collections.keyboardsControl = new List<ControlKeyboard>();
+                }
+            }
+
+            catch (Exception er)
+            {
+                System.Windows.Forms.MessageBox.Show(er.Message);
+            }
+
+            lblCollectionsQuantity.Text = Convert.ToString(countCollections);
+        }
+
+
+        #endregion
+
+        private void collectionUi_Click(object sender, EventArgs e)
+        {
+            if (selectMode)
+            {
+                Regex keyboardsQuantity = new Regex(@"• \d+ Teclados");
+                foreach (Control items in (sender as Panel).Controls)
+                {
+                    if (!(keyboardsQuantity.IsMatch(items.Text)))
+                    {
+                        Share.Collection.CollectionName = items.Text;
+                        Share.KeyboardsQuantity = 0;
+                        this.Hide();
+                        break;
+                    }
+
+                }
+            }
+            else
+            {
+
+            }
 
         }
         private void changeColor_MouseEnter(object sender, EventArgs e)
@@ -160,162 +185,173 @@ namespace AcroniUI
 
         private async void btnAdicionarGaleria_Click(object sender, EventArgs e)
         {
-            //AcroniMessageBoxInput nameteclado = new AcroniMessageBoxInput("Insira o nome de sua coleção","");
-            //nameteclado.Show();
-            //while (nameteclado.Visible)
-            //{
-            //    await Task.Delay(100);
-            //}
-            //if (SetNames.colecao != "")
-            //{
-            //    AcroniLibrary.FileInfo.Colecao newCollection = new AcroniLibrary.FileInfo.Colecao();
-            //    newCollection.collectionNome = SetNames.colecao;
-            //    newCollection.backColor = Color.DimGray;
-            //    CompartilhaObjetosUser.user.userCollections.Add(newCollection);
-            //    Compartilha.colecao = SetNames.colecao;
-            //    AcroniControls.Collection collection = new AcroniControls.Collection();
-            //    if (modeSelect)
-            //    {
-            //        collection.Cursor = Cursors.Hand;
-            //        collection.MouseEnter += new EventHandler(changeColor_MouseEnter);
-            //        collection.MouseLeave += new EventHandler(returnColor_MouseLeave);
-            //    }
-            //    foreach (Control itemColecao in collection.Controls)
-            //    {
-            //        if (itemColecao.Name.Equals("btnEditarGaleria"))
-            //        {
-            //            itemColecao.Click += new EventHandler(Editar);
-            //        }
-            //        else if (itemColecao.Name.Equals("btnExcluirGaleria"))
-            //        {
-            //            itemColecao.Click += new EventHandler(Excluir);
-            //        }
-            //    }
+            AcroniMessageBoxInput collectionNameDialog = new AcroniMessageBoxInput("Insira o nome de sua coleção:");
+            collectionNameDialog.ShowDialog();
+            
 
-            //    collection.Click += new EventHandler(colecao_Click);
-            //    collection.Location = new Point(16, 8 + contHeighColecao);
-            //    contHeighColecao += 179;
-            //    pnlScroll.Controls.Add(collection);
-            //    passarParaArquivo();
-            //    lblCollectionsQuantity.Text = Convert.ToString(Convert.ToInt16(lblCollectionsQuantity.Text) + 1);
-            //    Compartilha.numTeclados = 0;
-            //    Compartilha.colecao = "";
-            //    Compartilha.teclado = "";
+            while (collectionNameDialog.Visible)
+            {
+                await Task.Delay(10);
             }
 
-        //}
-        //private void passarParaArquivo()
-        //{
-        //    using (FileStream savearchive = new FileStream(Application.StartupPath + @"\" + SQLConnection.nome_usuario + ".acr", FileMode.OpenOrCreate))
-        //    {
-        //        BinaryFormatter objectToByteArray = new BinaryFormatter();
-        //        objectToByteArray.Serialize(savearchive, CompartilhaObjetosUser.user);
-        //    }
-        //}
-        //private void Excluir(object sender, EventArgs e)
-        //{
-        //    foreach (Control c in ((sender as PictureBox).Parent as Panel).Controls)
-        //    {
-        //        if (c.Name.Equals("lblColecao1"))
-        //        {
-        //            foreach (AcroniLibrary.FileInfo.Colecao collection in CompartilhaObjetosUser.user.userCollections)
-        //            {
-        //                if (collection.collectionNome.Equals(c.Text))
-        //                {
-        //                    CompartilhaObjetosUser.user.userCollections.Remove(collection);
-        //                    break;
-        //                }
-        //            }
-        //        }
+            if (Share.Collection.CollectionName != "")
+            {
+                Collection newCollection = new Collection();
 
-        //    }
-        //    passarParaArquivo();
-        //    Galeria recharge = new Galeria(false);
-        //    recharge.Show();
-        //    this.Close();
-        //}
-        //private void abrirTeclado(object sender, EventArgs e)
-        //{
-        //    foreach (Control itemsGaleria in (((sender as Button).Parent as Panel).Parent as Panel).Controls)
-        //    {
-        //        if (itemsGaleria.Name.Equals("lblColecao1"))
-        //        {
-        //            foreach (AcroniLibrary.FileInfo.Colecao tecladoGaleria in CompartilhaObjetosUser.user.userCollections)
-        //            {
-        //                if (tecladoGaleria.collectionNome.Equals(itemsGaleria.Text))
-        //                {
-        //                    foreach (Teclado tecladoToOpen in tecladoGaleria.collection)
-        //                    {
-        //                        if (tecladoToOpen.NickName.Equals((sender as Button).Text))
-        //                        {
-        //                            CompartilhaObjetosUser.teclado = tecladoToOpen;
-        //                            Form editarTeclado = null;
-        //                            Compartilha.editKeyboard = true;
-        //                            if (tecladoToOpen.tipoTeclado.Equals("Compacto"))
-        //                            {
-        //                                editarTeclado = new Compacto();
-        //                            }
-        //                            else if (tecladoToOpen.tipoTeclado.Equals("Tenkeyless"))
-        //                            {
-        //                                editarTeclado = new Tenkeyless();
-        //                            }
-        //                            else if (tecladoToOpen.tipoTeclado.Equals(("FullSize")))
-        //                            {
-        //                                editarTeclado = new Fullsize();
-        //                            }
-        //                            Compartilha.colecao = tecladoGaleria.collectionNome;
-        //                            editarTeclado.Show();
-        //                            this.Close();
-        //                            break;
-        //                        }
-        //                    }
-        //                }
-        //            }
-        //        }
-        //    }
-        //}
-       
-        //public async void Editar(object sender, EventArgs e)
-        //{
-        //    if (isSelectColorOpen)
-        //    {
-        //        selectColor.Close();
-        //        Compartilha.colorSelected = Color.Empty;
-        //    }
-        //    selectColor = new SelectColor();
-        //    selectColor.Show();
-        //        isSelectColorOpen = true;
-        //        while (selectColor.Visible)
-        //        {
-        //            await Task.Delay(10);
-        //            if (Compartilha.colorSelected != Color.Empty)
-        //                ((sender as PictureBox).Parent as Panel).BackColor = Compartilha.colorSelected;
-              
-        //        }
-        //        if (Compartilha.colorSelected != Color.Empty)
-        //        {
-        //            foreach (Control c in ((sender as PictureBox).Parent as Panel).Controls)
-        //            {
-        //                if (c.Name.Equals("lblColecao1"))
-        //                {
-        //                    foreach (AcroniLibrary.FileInfo.Colecao collection in CompartilhaObjetosUser.user.userCollections)
-        //                    {
-        //                        if (collection.collectionNome.Equals(c.Text))
-        //                        {
-        //                            collection.backColor = Compartilha.colorSelected;
-        //                            break;
-        //                        }
-        //                    }
-        //                }
-        //            }
+                newCollection.CollectionName = Share.Collection.CollectionName;
+                newCollection.CollectionColor = Color.DimGray;
 
-        //            Compartilha.colorSelected = Color.Empty;
-        //            passarParaArquivo();
-        //        }
-        //        isSelectColorOpen = false;
-            
-            
+                Share.User.UserCollections.Add(newCollection);
 
-        //}
+                Share.Collection.CollectionName = newCollection.CollectionName;
+
+                AcroniControls.CollectionUI collectionUi = new AcroniControls.CollectionUI();
+
+                if (selectMode)
+                {
+                    collectionUi.Cursor = Cursors.Hand;
+                    collectionUi.MouseEnter += new EventHandler(changeColor_MouseEnter);
+                    collectionUi.MouseLeave += new EventHandler(returnColor_MouseLeave);
+                }
+
+                foreach (Control itemColecao in collectionUi.Controls)
+                {
+                    if (itemColecao.Name.Equals("btnEditarGaleria"))
+                    {
+                        itemColecao.Click += new EventHandler(Edit);
+                    }
+                    else if (itemColecao.Name.Equals("btnExcluirGaleria"))
+                    {
+                        itemColecao.Click += new EventHandler(Exclude);
+                    }
+                }
+
+                collectionUi.Click += new EventHandler(collectionUi_Click);
+                collectionUi.Location = new Point(16, 8 + countHeightCollection);
+                countHeightCollection += 179;
+                pnlScroll.Controls.Add(collectionUi);
+                SendToFile();
+                lblCollectionsQuantity.Text = Convert.ToString(Convert.ToInt16(lblCollectionsQuantity.Text) + 1);
+                Share.KeyboardsQuantity = 0;
+                Share.Collection.CollectionName = "";
+                Share.Keyboard.Name = "";
+            }
+
+        }
+
+        private void SendToFile()
+        {
+            using (FileStream savearchive = new FileStream(Application.StartupPath + @"\" + SQLConnection.nome_usuario + ".acr", FileMode.OpenOrCreate))
+            {
+                BinaryFormatter objectToByteArray = new BinaryFormatter();
+                objectToByteArray.Serialize(savearchive, Share.User.UserName);
+            }
+        }
+
+        private void Exclude(object sender, EventArgs e)
+        {
+            foreach (Control c in ((sender as PictureBox).Parent as Panel).Controls)
+            {
+                if (c.Name.Equals("lblColecao1"))
+                {
+                    foreach (Collection collection in Share.User.UserCollections)
+                    {
+                        if (collection.CollectionName.Equals(c.Text))
+                        {
+                            Share.User.UserCollections.Remove(collection);
+                            break;
+                        }
+                    }
+                }
+
+            }
+
+            SendToFile();
+            Galeria recharge = new Galeria(false);
+            recharge.Show();
+            this.Close();
+        }
+
+        private void OpenKeyboard(object sender, EventArgs e)
+        {
+            foreach (Control itemsGallery in (((sender as Button).Parent as Panel).Parent as Panel).Controls)
+            {
+                if (itemsGallery.Name.Equals("lblColecao1"))
+                {
+                    foreach (Collection keyBoardGallery in Share.User.UserCollections)
+                    {
+                        if (keyBoardGallery.CollectionName.Equals(itemsGallery.Text))
+                        {
+                            foreach (Keyboard keyboardToOpen in keyBoardGallery.Keyboards)
+                            {
+                                if (keyboardToOpen.NickName.Equals((sender as Button).Text))
+                                {
+                                    Share.Keyboard = keyboardToOpen;
+                                    Form editarTeclado = null;
+                                    Share.EditKeyboard = true;
+
+                                    if (keyboardToOpen.KeyboardType.Equals("Compacto"))
+                                        editarTeclado = new Compacto();
+                                    else if (keyboardToOpen.KeyboardType.Equals("Tenkeyless"))
+                                        editarTeclado = new Tenkeyless();
+                                    else if (keyboardToOpen.KeyboardType.Equals(("FullSize")))
+                                        editarTeclado = new Fullsize();
+
+                                    Share.Collection.CollectionName = keyBoardGallery.CollectionName;
+                                    editarTeclado.Show();
+                                    this.Close();
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public async void Edit(object sender, EventArgs e)
+        {
+            if (isSelectColorOpen)
+            {
+                selectColor.Close();
+                Share.Collection.CollectionColor = Color.Empty;
+            }
+
+            selectColor = new SelectColor();
+            selectColor.Show();
+
+            isSelectColorOpen = true;
+
+            while (selectColor.Visible)
+            {
+                await Task.Delay(10);
+                if (Share.Collection.CollectionColor != Color.Empty)
+                    ((sender as PictureBox).Parent as Panel).BackColor = Share.Collection.CollectionColor;
+
+            }
+
+            if (Share.Collection.CollectionColor != Color.Empty)
+            {
+                foreach (Control c in ((sender as PictureBox).Parent as Panel).Controls)
+                {
+                    if (c.Name.Equals("lblColecao1"))
+                    {
+                        foreach (Collection collection in Share.User.UserCollections)
+                        {
+                            if (collection.CollectionName.Equals(c.Text))
+                            {
+                                collection.CollectionColor = Share.Collection.CollectionColor;
+                                break;
+                            }
+                        }
+                    }
+                }
+
+                Share.Collection.CollectionColor = Color.Empty;
+                SendToFile();
+            }
+
+            isSelectColorOpen = false;
+        }
     }
 }

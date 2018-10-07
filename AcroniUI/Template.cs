@@ -22,6 +22,7 @@ namespace AcroniUI
                 c.MouseDown += new System.Windows.Forms.MouseEventHandler(FormDrag.Form_MouseDown);
                 c.MouseMove += new System.Windows.Forms.MouseEventHandler(FormDrag.Form_MouseMove);
             }
+
             #endregion    
         }
 

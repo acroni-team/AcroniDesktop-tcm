@@ -16,5 +16,6 @@ namespace AcroniLibrary.FileInfo
         public bool HasRestPads { get; set; }
         public string NickName { get; set; }
         public bool IsMechanicalKeyboard { get; set; }
+        public string KeyboardType { get; set; }
     }
 }

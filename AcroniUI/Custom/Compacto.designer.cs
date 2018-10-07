@@ -224,7 +224,6 @@ namespace AcroniUI.Custom
             this.Roxo = new System.Windows.Forms.Button();
             this.ebtnOpenModuleTextIcons = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.ebtnOpenModuleBackground = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.pnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxKeyboardBackground)).BeginInit();
             this.pnlCustomizingMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignRight)).BeginInit();
@@ -1854,7 +1853,7 @@ namespace AcroniUI.Custom
             this.pnlCustomizingMenu.Controls.Add(this.alblCustomizacao);
             this.pnlCustomizingMenu.Controls.Add(this.btnVoltar);
             this.pnlCustomizingMenu.Controls.Add(this.btnSalvar);
-            this.pnlCustomizingMenu.Location = new System.Drawing.Point(0, 39);
+            this.pnlCustomizingMenu.Location = new System.Drawing.Point(0, 40);
             this.pnlCustomizingMenu.Name = "pnlCustomizingMenu";
             this.pnlCustomizingMenu.Size = new System.Drawing.Size(1280, 116);
             this.pnlCustomizingMenu.TabIndex = 16;
@@ -3090,9 +3089,6 @@ namespace AcroniUI.Custom
             this.Controls.SetChildIndex(this.pnlBodyColorpicker, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.pnlHeadColorpicker, 0);
-            this.Controls.SetChildIndex(this.pnlSuperior, 0);
-            this.pnlSuperior.ResumeLayout(false);
-            this.pnlSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxKeyboardBackground)).EndInit();
             this.pnlCustomizingMenu.ResumeLayout(false);
             this.pnlCustomizingMenu.PerformLayout();

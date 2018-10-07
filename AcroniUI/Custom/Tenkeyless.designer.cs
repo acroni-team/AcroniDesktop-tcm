@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlSuperior.SuspendLayout();
             this.SuspendLayout();
             // 
             // Tenkeyless
@@ -38,8 +37,6 @@
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Name = "Tenkeyless";
             this.Text = "Tenkeyless";
-            this.pnlSuperior.ResumeLayout(false);
-            this.pnlSuperior.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -74,11 +74,11 @@
     <Compile Include="TextboxWithPlaceholder.designer.cs">
       <DependentUpon>TextboxWithPlaceholder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Collection.cs">
+    <Compile Include="CollectionUI.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Collection.Designer.cs">
-      <DependentUpon>Collection.cs</DependentUpon>
+    <Compile Include="CollectionUI.Designer.cs">
+      <DependentUpon>CollectionUI.cs</DependentUpon>
     </Compile>
     <Compile Include="Kbtn.cs">
       <SubType>Component</SubType>

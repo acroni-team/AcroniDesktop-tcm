@@ -31,7 +31,6 @@
             this.btnAbrirCompacto = new System.Windows.Forms.Button();
             this.btnAbrirTenkeyless = new System.Windows.Forms.Button();
             this.btnAbrirFullsize = new System.Windows.Forms.Button();
-            this.pnlSuperior.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAbrirCompacto
@@ -72,12 +71,9 @@
             this.Controls.Add(this.btnAbrirCompacto);
             this.Name = "SelecionarTeclado";
             this.Text = "SelecionarTeclado";
-            this.Controls.SetChildIndex(this.pnlSuperior, 0);
             this.Controls.SetChildIndex(this.btnAbrirCompacto, 0);
             this.Controls.SetChildIndex(this.btnAbrirTenkeyless, 0);
             this.Controls.SetChildIndex(this.btnAbrirFullsize, 0);
-            this.pnlSuperior.ResumeLayout(false);
-            this.pnlSuperior.PerformLayout();
             this.ResumeLayout(false);
 
         }

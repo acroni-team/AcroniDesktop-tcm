@@ -365,7 +365,7 @@ namespace AcroniUI.LoginAndSignUp
                                             using (FileStream savearchive = new FileStream(Application.StartupPath + @"\" + SQLConnection.nome_usuario + ".acr", FileMode.Create))
                                             {
                                                 BinaryFormatter Serializer = new BinaryFormatter();
-                                                Serializer.Serialize(savearchive, ShareUserObjects.User);
+                                                Serializer.Serialize(savearchive, Share.User.UserName);
                                             }
                                         }
                                         (new SelectKeyboard()).Show();

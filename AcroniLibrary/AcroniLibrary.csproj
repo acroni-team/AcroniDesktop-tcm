@@ -51,7 +51,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DesignMethods\FormDrag.cs" />
-    <Compile Include="Share.cs" />
+    <Compile Include="FileInfo\ControlKeyboard.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FileInfo\ControlKeyboard.Designer.cs">
+      <DependentUpon>ControlKeyboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileInfo\ControlKeyboard_Collections.cs" />
+    <Compile Include="FileInfo\Share.cs" />
     <Compile Include="CustomizingMethods\FormManipulator.cs" />
     <Compile Include="DesignMethods\Fade.cs" />
     <Compile Include="SQL\SQLConnection.cs" />
@@ -61,7 +68,6 @@
     <Compile Include="CustomizingMethods\IconsQueue.cs" />
     <Compile Include="CustomizingMethods\TextFonts\Alignment.cs" />
     <Compile Include="FileInfo\Collection.cs" />
-    <Compile Include="FileInfo\ShareUserObjects.cs" />
     <Compile Include="FileInfo\KeyboardIDGenerator.cs" />
     <Compile Include="FileInfo\Keycap.cs" />
     <Compile Include="FileInfo\Keyboard.cs" />

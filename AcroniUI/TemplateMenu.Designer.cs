@@ -50,7 +50,6 @@
             this.btnCustomizarPorCodigo = new System.Windows.Forms.Button();
             this.btnSelectKeyboard = new System.Windows.Forms.Button();
             this.btnAbrirGaleria = new System.Windows.Forms.Button();
-            this.pnlSuperior.SuspendLayout();
             this.pnlAreaUsu.SuspendLayout();
             this.espacoArmazenamento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnConfig)).BeginInit();
@@ -335,9 +334,6 @@
             this.Text = "Master";
             this.Controls.SetChildIndex(this.pnlAreaUsu, 0);
             this.Controls.SetChildIndex(this.pnlOptions, 0);
-            this.Controls.SetChildIndex(this.pnlSuperior, 0);
-            this.pnlSuperior.ResumeLayout(false);
-            this.pnlSuperior.PerformLayout();
             this.pnlAreaUsu.ResumeLayout(false);
             this.pnlAreaUsu.PerformLayout();
             this.espacoArmazenamento.ResumeLayout(false);

@@ -47,7 +47,7 @@
             // 
             // pnlSuperior
             // 
-            this.pnlSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(47)))));
+            this.pnlSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(47)))));
             this.pnlSuperior.Controls.Add(this.btnClose);
             this.pnlSuperior.Controls.Add(this.btnMinimize);
             this.pnlSuperior.Controls.Add(this.lblAcroni);
@@ -63,9 +63,9 @@
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(1188, 0);
+            this.btnClose.Location = new System.Drawing.Point(1182, 0);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(80, 30);
+            this.btnClose.Size = new System.Drawing.Size(71, 30);
             this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.btnClose.TabIndex = 12;
             this.btnClose.TabStop = false;
@@ -75,10 +75,10 @@
             // 
             this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
-            this.btnMinimize.Location = new System.Drawing.Point(1148, 0);
+            this.btnMinimize.Location = new System.Drawing.Point(1140, 0);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(40, 30);
-            this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnMinimize.Size = new System.Drawing.Size(42, 30);
+            this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.btnMinimize.TabIndex = 12;
             this.btnMinimize.TabStop = false;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
@@ -168,7 +168,6 @@
 
         #endregion
         private System.Windows.Forms.ToolStripMenuItem faleConoscoToolStripMenuItem;
-        protected System.Windows.Forms.Panel pnlSuperior;
         protected System.Windows.Forms.Label lblAcroni;
         protected System.Windows.Forms.MenuStrip menuStrip1;
         protected System.Windows.Forms.ToolStripMenuItem ajudaToolStripMenuItem;
@@ -176,5 +175,6 @@
         private System.Windows.Forms.Timer timerFade;
         private System.Windows.Forms.PictureBox btnClose;
         private System.Windows.Forms.PictureBox btnMinimize;
+        private System.Windows.Forms.Panel pnlSuperior;
     }
 }

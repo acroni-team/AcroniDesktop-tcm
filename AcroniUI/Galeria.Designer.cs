@@ -34,11 +34,11 @@
             this.lblSavedCollections1 = new System.Windows.Forms.Label();
             this.lblColecoesSalvas2 = new System.Windows.Forms.Label();
             this.lblCollectionsQuantity = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlScroll = new System.Windows.Forms.Panel();
             this.lblSelectKeyboard = new System.Windows.Forms.Label();
             this.btnAdicionarGaleria = new System.Windows.Forms.Button();
-            this.pnlSuperior.SuspendLayout();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnlScroll.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,16 +105,9 @@
             this.lblCollectionsQuantity.TabIndex = 19;
             this.lblCollectionsQuantity.Text = "0";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(-15, -15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 20;
-            this.pictureBox1.TabStop = false;
-            // 
             // pnlScroll
             // 
+            this.pnlScroll.Controls.Add(this.pictureBox1);
             this.pnlScroll.Location = new System.Drawing.Point(326, 190);
             this.pnlScroll.Name = "pnlScroll";
             this.pnlScroll.Size = new System.Drawing.Size(953, 504);
@@ -148,6 +141,14 @@
             this.btnAdicionarGaleria.UseVisualStyleBackColor = false;
             this.btnAdicionarGaleria.Click += new System.EventHandler(this.btnAdicionarGaleria_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(449, 172);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
+            // 
             // Galeria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -156,7 +157,6 @@
             this.Controls.Add(this.btnAdicionarGaleria);
             this.Controls.Add(this.lblSelectKeyboard);
             this.Controls.Add(this.pnlScroll);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblCollectionsQuantity);
             this.Controls.Add(this.lblColecoesSalvas2);
             this.Controls.Add(this.lblSavedCollections1);
@@ -171,13 +171,10 @@
             this.Controls.SetChildIndex(this.lblSavedCollections1, 0);
             this.Controls.SetChildIndex(this.lblColecoesSalvas2, 0);
             this.Controls.SetChildIndex(this.lblCollectionsQuantity, 0);
-            this.Controls.SetChildIndex(this.pictureBox1, 0);
-            this.Controls.SetChildIndex(this.pnlSuperior, 0);
             this.Controls.SetChildIndex(this.pnlScroll, 0);
             this.Controls.SetChildIndex(this.lblSelectKeyboard, 0);
             this.Controls.SetChildIndex(this.btnAdicionarGaleria, 0);
-            this.pnlSuperior.ResumeLayout(false);
-            this.pnlSuperior.PerformLayout();
+            this.pnlScroll.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -191,9 +188,9 @@
         private System.Windows.Forms.Label lblSavedCollections1;
         private System.Windows.Forms.Label lblColecoesSalvas2;
         private System.Windows.Forms.Label lblCollectionsQuantity;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel pnlScroll;
         private System.Windows.Forms.Label lblSelectKeyboard;
         private System.Windows.Forms.Button btnAdicionarGaleria;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

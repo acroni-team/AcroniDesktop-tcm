@@ -142,7 +142,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AcroniMessageBoxInput";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.TransparencyKey = System.Drawing.Color.Transparent;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.apnlTextbox.ResumeLayout(false);
