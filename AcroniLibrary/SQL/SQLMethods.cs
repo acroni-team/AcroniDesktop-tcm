@@ -19,6 +19,7 @@ namespace AcroniLibrary.SQL
                 }
             }
         }
+
         public static int INSERT_INTO(String commandINSERT)
         {
             using (SqlConnection newConnection = new SqlConnection(SQLConnection.nome_conexao))
@@ -30,6 +31,7 @@ namespace AcroniLibrary.SQL
                 }
             }
         }
+
         public static int INSERT_INTO(String commandINSERT,byte[] parameter)
         {
             using (SqlConnection newConnection = new SqlConnection(SQLConnection.nome_conexao))

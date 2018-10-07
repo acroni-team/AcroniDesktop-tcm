@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AcroniLibrary.FileInfo;
+using System;
 using System.Windows.Forms;
 
 namespace AcroniControls
@@ -17,23 +18,25 @@ namespace AcroniControls
         public AcroniMessageBoxInput(string message)
         {
             InitializeComponent();
+            doBasic();
             alblMessage1.Text = message;
         }
 
         public AcroniMessageBoxInput(string message, string message2)
         {
             InitializeComponent();
+            doBasic();
             alblMessage1.Text = message;
             alblMessage2.Text = message2;
         }
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            //if (alblMessage1.Text.Contains("coleção"))
-            //    SetNames.colecao = txtUserInput.Text;
-            //else
-            //    SetNames.teclado = txtUserInput.Text;
-            //this.Close();
+            if (alblMessage1.Text.Contains("coleção"))
+                Share.Collection.CollectionName = txtUserInput.Text;
+            else
+                Share.Keyboard.Name = txtUserInput.Text;
+            this.Close();
         }
     }
 }

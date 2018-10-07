@@ -85,6 +85,12 @@
     <Compile Include="Custom\CustomModules\KeycapParentModule.Designer.cs">
       <DependentUpon>KeycapParentModule.cs</DependentUpon>
     </Compile>
+    <Compile Include="Custom\CustomModules\KeycapSwitchModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Custom\CustomModules\KeycapSwitchModule.Designer.cs">
+      <DependentUpon>KeycapSwitchModule.cs</DependentUpon>
+    </Compile>
     <Compile Include="Custom\CustomModules\KeycapTextModule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Custom\CustomModules\KeycapParentModule.resx">
       <DependentUpon>KeycapParentModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom\CustomModules\KeycapSwitchModule.resx">
+      <DependentUpon>KeycapSwitchModule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Custom\CustomModules\KeycapTextModule.resx">
       <DependentUpon>KeycapTextModule.cs</DependentUpon>

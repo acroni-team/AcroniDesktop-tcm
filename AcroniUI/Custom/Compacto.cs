@@ -8,6 +8,10 @@ using AcroniLibrary.CustomizingMethods.TextFonts;
 using AcroniLibrary.FileInfo;
 using AcroniLibrary.DesignMethods;
 using AcroniUI.Custom.CustomModules;
+using System.Threading.Tasks;
+using System.IO;
+using AcroniLibrary.SQL;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace AcroniUI.Custom
 {
@@ -21,8 +25,9 @@ namespace AcroniUI.Custom
         Kbtn keybutton = new Kbtn();
 
         // Definição das propriedades de salvamento
-        //private bool SetKeyboardProperties;
+        private bool SetKeyboardProperties;
         Keyboard keyboard = new Keyboard();
+        Collection collection = new Collection();
 
         //Definição das propriedades das fontes
         ContentAlignment ContentAlignment { get; set; }
@@ -48,7 +53,7 @@ namespace AcroniUI.Custom
 
             if (__HasBtnStyleFontColorBeenChosen)
                 keybutton.ForeColor = FontColor;
-            else 
+            else
                 keybutton.BackColor = keybutton.SetColor(Color);
 
 
@@ -66,7 +71,7 @@ namespace AcroniUI.Custom
                     //    keybutton.Text = keybutton.Text;
 
                     //if (!string.IsNullOrEmpty(keycapTextModule.BottomText))
-                        //if (keybutton = Ca14s
+                    //if (keybutton = Ca14s
                     //    keybutton.BottomText = keycapTextModule.BottomText;
                     //else
                     //    keybutton.Text = keybutton.Text;
@@ -80,6 +85,7 @@ namespace AcroniUI.Custom
 
         }
 
+        #region btnVoltar
         //Ao clicar no botão de fechar
         private void btnVoltar_Click(object sender, EventArgs e)
         {
@@ -98,6 +104,7 @@ namespace AcroniUI.Custom
         {
             btnVoltar.Font = new Font(btnVoltar.Font, FontStyle.Bold);
         }
+        #endregion
 
         #endregion
 
@@ -122,10 +129,10 @@ namespace AcroniUI.Custom
                 }
             }
 
-            //if (Compartilha.editKeyboard)
-            //    LoadKeyboard();
-            //else
-            //    ApplyShadowOnKeycaps();
+            if (Share.EditKeyboard)
+                LoadKeyboard();
+            else
+                ApplyShadowOnKeycaps();
 
         }
 
@@ -143,16 +150,6 @@ namespace AcroniUI.Custom
                 }
             }
         }
-
-        // Ideia pro módulo de texto das keycaps
-        //private void SetKeycapText(object sender, EventArgs e)
-        //{
-        //KeycapTextModule keycapTextModule = new KeycapTextModule();
-        //keycapTextModule.ShowDialog();
-        //Kbtn kbtn = (Kbtn)sender;
-        //kbtn.Text = keycapTextModule.Maintext;
-        //}
-
 
         #region Métodos do Color Picker
 
@@ -289,178 +286,6 @@ namespace AcroniUI.Custom
 
         #endregion Fim das fontes
 
-        //#region Carrega Teclado
-        //private void LoadKeyboard()
-        //{
-        //    picBoxKeyboardBackground.Image = CompartilhaObjetosUser.teclado.BackgroundImage;
-        //    picBoxKeyboardBackground.SizeMode = (PictureBoxSizeMode)CompartilhaObjetosUser.teclado.BackgroundModeSize;
-        //    foreach (Control tecla in this.Controls)
-        //    {
-        //        if (tecla is Kbtn)
-        //        {
-        //            foreach (Keycaps keycap in CompartilhaObjetosUser.teclado.Keycaps)
-        //            {
-        //                if (tecla.Name.Equals(keycap.ID))
-        //                {
-        //                    tecla.Font = keycap.Font;
-        //                    tecla.BackColor = keycap.Color;
-        //                    tecla.Text = keycap.Text;
-        //                    (tecla as Button).TextAlign = (ContentAlignment)keycap.ContentAlignment;
-        //                    try
-        //                    {
-        //                        Controls.Find("fundo" + tecla.Name, true)[0].BackColor = Color.FromArgb(90, tecla.BackColor);
-        //                    }
-        //                    catch (Exception) { }
-        //                    break;
-        //                }
-        //            }
-        //        }
-        //    }
-        //}
-        //#endregion
-
-        //#region Salvamento e Carregamento teclados
-
-        //private void btnLer_Click(object sender, EventArgs e)
-        //{
-        //    using (FileStream openarchive = new FileStream(Application.StartupPath + @"\" + Conexao.nome_usuario +".acr", FileMode.Open))
-        //    {
-        //        BinaryFormatter ofByteArrayToObject = new BinaryFormatter();
-        //        colecao = (AcroniLibrary.FileInfo.Colecao)ofByteArrayToObject.Deserialize(openarchive);
-
-        //    }
-
-        //    pictureBox1.Image = colecao.collection[0].BackgroundImage;
-        //    pictureBox1.SizeMode = (PictureBoxSizeMode)colecao.collection[0].BackgroundModeSize;
-        //    foreach (Control control in this.Controls)
-        //    {
-        //        if (control is Kbtn)
-        //        {
-        //            foreach (Keycaps tecla in this.colecao.collection[0].Keycaps)
-        //            {
-        //                if (control.Name.Equals(tecla.ID))
-        //                {
-        //                    control.Name = tecla.ID;
-        //                    control.Font = tecla.Font;
-        //                    control.BackColor = tecla.Color;
-        //                    control.Text = tecla.Text;
-        //                    break;
-        //                }
-        //            }
-        //        }
-        //    }
-        //}
-
-        private async void btnSalvar_Click(object sender, EventArgs e)
-        {
-            //    if (!Compartilha.editKeyboard)
-            //    {
-            //        AcroniMessageBoxInput nameteclado = new AcroniMessageBoxInput("Insira o nome de seu teclado", "");
-            //        nameteclado.Show();
-            //        while (nameteclado.Visible)
-            //        {
-            //            await Task.Delay(100);
-            //        }
-        }
-        //    SaveKeyboard();
-
-
-        //}
-        //private async void SaveKeyboard()
-        //{
-        //    if (!Compartilha.editKeyboard)
-        //    {
-        //        if (SetNames.teclado != null)
-        //        {
-        //            Galeria selectGaleria = new Galeria(true);
-        //            selectGaleria.Show();
-        //            while (selectGaleria.Visible)
-        //            {
-        //                await Task.Delay(100);
-        //            }
-        //            if (SetNames.colecao != null)
-        //            {
-        //                setPropriedadesTeclado();
-        //            }
-        //        }
-        //    }
-        //    else
-        //    {
-        //        foreach (AcroniLibrary.FileInfo.Colecao c in CompartilhaObjetosUser.user.userCollections)
-        //        {
-        //            if (Compartilha.colecao.Equals(c.collectionNome))
-        //            {
-        //                c.collection.Remove(CompartilhaObjetosUser.teclado);
-
-        //            }
-        //        }
-        //        setPropriedadesTeclado();
-
-
-        //    }
-
-        //    if (SetNames.colecao != null && SetNames.teclado != null || SettedKeyboardProperties)
-        //    {
-        //        System.Windows.MessageBox.Show("Teclado adicionado/salvo com sucesso!");
-        //        Compartilha.editKeyboard = true;
-        //        CompartilhaObjetosUser.teclado = keyboard;
-        //    }
-        //    else
-        //        System.Windows.MessageBox.Show("Teclado não foi salvo! Você ser lix");
-        //    SetNames.colecao = null;
-        //    SetNames.teclado = null;
-        //}
-        //private void setPropriedadesTeclado()
-        //{
-        //    keyboard.Name = "FX-4370";
-        //    if (Compartilha.editKeyboard)
-        //        keyboard.NickName = CompartilhaObjetosUser.teclado.NickName;
-        //    else
-        //        keyboard.NickName = SetNames.teclado;
-        //    keyboard.Material = "Madeira";
-        //    keyboard.isMechanicalKeyboard = true;
-        //    keyboard.hasRestPads = false;
-        //    keyboard.BackgroundImage = picBoxKeyboardBackground.Image;
-        //    keyboard.BackgroundModeSize = picBoxKeyboardBackground.SizeMode;
-        //    keyboard.ID = "ID";
-        //    keyboard.tipoTeclado = this.Name;
-        //    foreach (Control tecla in this.Controls)
-        //        if (tecla is Kbtn)
-        //        {
-        //            {
-        //                keyboard.Keycaps.Add(new Keycaps { ID = tecla.Name, Text = tecla.Text, Font = tecla.Font, Color = tecla.BackColor, ContentAlignment = (tecla as Button).TextAlign });
-        //            }
-        //        }
-        //    if (!Compartilha.editKeyboard)
-        //        foreach (AcroniLibrary.FileInfo.Colecao c in CompartilhaObjetosUser.user.userCollections)
-        //        {
-        //            if (c.collectionNome.Equals(SetNames.colecao))
-        //            {
-        //                c.collection.Add(keyboard);
-        //                break;
-        //            }
-        //        }
-        //    else
-        //        foreach (AcroniLibrary.FileInfo.Colecao c in CompartilhaObjetosUser.user.userCollections)
-        //        {
-        //            if (c.collectionNome.Equals(Compartilha.colecao))
-        //            {
-        //                c.collection.Add(keyboard);
-        //                break;
-        //            }
-        //        }
-
-        //    using (FileStream savearchive = new FileStream(Application.StartupPath + @"\" + SQLConnection.nome_usuario + ".acr", FileMode.OpenOrCreate))
-        //    {
-        //        BinaryFormatter Serializer = new BinaryFormatter();
-        //        Serializer.Serialize(savearchive, CompartilhaObjetosUser.user);
-        //    }
-        //    SettedKeyboardProperties = true;
-        //}
-        //#endregion
-
-
-
         #region Controladores dos módulos
 
         private bool __HasBtnTextModuleBeenChosen { get; set; }
@@ -473,7 +298,7 @@ namespace AcroniUI.Custom
 
         private Queue<Image> ImageQueue = new Queue<Image>();
 
-        private void btnIcons_Click(object sender, EventArgs e)
+        private void btnTextAndIcons_Click(object sender, EventArgs e)
         {
             if (__HasBtnTextModuleBeenChosen)
             {
@@ -545,6 +370,195 @@ namespace AcroniUI.Custom
                 __HasBtnStyleFontColorBeenChosen = false;
             }
         }
+
+        private void btnOpenModuleSwitch_Click(object sender, EventArgs e)
+        {
+            KeycapSwitchModule ksm = new KeycapSwitchModule();
+            if (ksm.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+        }
+
+        #region Carregar e salvar teclado
+        private void LoadKeyboard()
+        {
+            picBoxKeyboardBackground.Image = Share.Keyboard.BackgroundImage;
+            picBoxKeyboardBackground.SizeMode = (PictureBoxSizeMode)Share.Keyboard.BackgroundModeSize;
+
+            foreach (Control keycap in this.Controls)
+            {
+                if (keycap is Kbtn)
+                {
+                    foreach (Keycap k in Share.Keyboard.Keycaps)
+                    {
+                        if (keycap.Name.Equals(k.ID))
+                        {
+                            keycap.Font = keycap.Font;
+                            keycap.BackColor = k.Color;
+                            keycap.Text = k.Text;
+
+                            (keycap as Button).TextAlign = (ContentAlignment)k.ContentAlignment;
+                            try
+                            {
+                                Controls.Find("fundo" + keycap.Name, true)[0].BackColor = Color.FromArgb(90, keycap.BackColor);
+                            }
+
+                            catch (Exception) { }
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void btnLer_Click(object sender, EventArgs e)
+        {
+            using (FileStream openarchive = new FileStream(Application.StartupPath + @"\" + SQLConnection.nome_usuario + ".acr", FileMode.Open))
+            {
+                BinaryFormatter ofByteArrayToObject = new BinaryFormatter();
+                collection = (Collection)ofByteArrayToObject.Deserialize(openarchive);
+            }
+
+            picBoxKeyboardBackground.Image = collection.Keyboards[0].BackgroundImage;
+
+            picBoxKeyboardBackground.SizeMode = (PictureBoxSizeMode)collection.Keyboards[0].BackgroundModeSize;
+
+            foreach (Control control in this.Controls)
+            {
+                if (control is Kbtn)
+                {
+                    foreach (Keycap tecla in this.collection.Keyboards[0].Keycaps)
+                    {
+                        if (control.Name.Equals(tecla.ID))
+                        {
+                            control.Name = tecla.ID;
+                            control.Font = tecla.Font;
+                            control.BackColor = tecla.Color;
+                            control.Text = tecla.Text;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        private async void btnSalvar_Click(object sender, EventArgs e)
+        {
+            if (!Share.EditKeyboard)
+            {
+                AcroniMessageBoxInput keyboardName = new AcroniMessageBoxInput("Insira o nome de seu teclado");
+                keyboardName.Show();
+                while (keyboardName.Visible)
+                {
+                    await Task.Delay(100);
+                }
+            }
+            SaveKeyboard();
+        }
+
+        private async void SaveKeyboard()
+        {
+            if (!Share.EditKeyboard)
+            {
+                if (Share.Keyboard != null)
+                {
+                    Galeria selectGallery = new Galeria(true);
+                    selectGallery.Show();
+
+                    while (selectGallery.Visible)
+                    {
+                        await Task.Delay(100);
+                    }
+
+                    if (Share.Collection.CollectionName != null)
+                    {
+                        setPropriedadesTeclado();
+                    }
+                }
+            }
+
+            else
+            {
+                foreach (Collection col in Share.User.UserCollections)
+                {
+                    if (Share.Collection.CollectionName.Equals(col.CollectionName))
+                        col.Keyboards.Remove(Share.Keyboard);
+                }
+
+                setPropriedadesTeclado();
+            }
+
+            //if (SetNames.colecao != null && SetNames.teclado != null || SettedKeyboardProperties)
+            //{
+            //    System.Windows.MessageBox.Show("Teclado adicionado/salvo com sucesso!");
+            //    Compartilha.editKeyboard = true;
+            //    CompartilhaObjetosUser.teclado = keyboard;
+            //}
+            //else
+            //    System.Windows.MessageBox.Show("Teclado não foi salvo! Você ser lix");
+            //SetNames.colecao = null;
+            //SetNames.teclado = null;
+        }
+
+        private void setPropriedadesTeclado()
+        {
+            keyboard.Name = "FX-4370";
+
+            if (Share.EditKeyboard)
+                keyboard.NickName = Share.Keyboard.NickName;
+            else
+                //keyboard.NickName = SetNames.teclado;
+
+            keyboard.Material = "Madeira";
+            keyboard.IsMechanicalKeyboard = true;
+            keyboard.HasRestPads = false;
+            keyboard.BackgroundImage = picBoxKeyboardBackground.Image;
+            keyboard.BackgroundModeSize = picBoxKeyboardBackground.SizeMode;
+            keyboard.ID = "ID";
+            keyboard.KeyboardType = this.Name;
+
+            foreach (Control tecla in this.Controls)
+                if (tecla is Kbtn)
+                {
+                    {
+                        keyboard.Keycaps.Add(new Keycap {
+                            ID = tecla.Name,
+                            Text = tecla.Text,
+                            Font = tecla.Font,
+                            Color = tecla.BackColor,
+                            ContentAlignment = (tecla as Button).TextAlign
+                        });
+                    }
+                }
+
+            //if (!Share.EditKeyboard)
+            //    foreach (Collection col in CompartilhaObjetosUser.user.userCollections)
+            //    {
+            //        if (col.CollectionName.Equals(SetNames.colecao))
+            //        {
+            //            col.collection.Add(keyboard);
+            //            break;
+            //        }
+            //    }
+            //else
+            //    foreach (AcroniLibrary.FileInfo.Colecao c in CompartilhaObjetosUser.user.userCollections)
+            //    {
+            //        if (c.collectionNome.Equals(Compartilha.colecao))
+            //        {
+            //            c.collection.Add(keyboard);
+            //            break;
+            //        }
+            //    }
+
+            //using (FileStream savearchive = new FileStream(Application.StartupPath + @"\" + SQLConnection.nome_usuario + ".acr", FileMode.OpenOrCreate))
+            //{
+            //    BinaryFormatter Serializer = new BinaryFormatter();
+            //    Serializer.Serialize(savearchive, CompartilhaObjetosUser.user);
+            //}
+            //SettedKeyboardProperties = true;
+        }
+        #endregion
     }
 }
 

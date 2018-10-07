@@ -2059,7 +2059,7 @@ namespace AcroniUI.Custom
             this.btnOpenModuleSwitch.Text = "Switch";
             this.btnOpenModuleSwitch.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnOpenModuleSwitch.UseVisualStyleBackColor = false;
-            this.btnOpenModuleSwitch.Click += new System.EventHandler(this.btnIcons_Click);
+            this.btnOpenModuleSwitch.Click += new System.EventHandler(this.btnOpenModuleSwitch_Click);
             // 
             // cmbFontes
             // 
@@ -2367,7 +2367,6 @@ namespace AcroniUI.Custom
             this.btnOpenModuleBackground.Text = "Planos de fundo";
             this.btnOpenModuleBackground.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnOpenModuleBackground.UseVisualStyleBackColor = false;
-            this.btnOpenModuleBackground.Click += new System.EventHandler(this.btnIcons_Click);
             // 
             // btnOpenModuleTextIcons
             // 
@@ -2387,7 +2386,7 @@ namespace AcroniUI.Custom
             this.btnOpenModuleTextIcons.Text = "Textos e\r\nícones";
             this.btnOpenModuleTextIcons.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnOpenModuleTextIcons.UseVisualStyleBackColor = false;
-            this.btnOpenModuleTextIcons.Click += new System.EventHandler(this.btnIcons_Click);
+            this.btnOpenModuleTextIcons.Click += new System.EventHandler(this.btnTextAndIcons_Click);
             // 
             // panel3
             // 
