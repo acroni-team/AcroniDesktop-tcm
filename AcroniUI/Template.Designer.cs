@@ -61,6 +61,7 @@
             // btnClose
             // 
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.Location = new System.Drawing.Point(1188, 0);
             this.btnClose.Name = "btnClose";
@@ -72,6 +73,7 @@
             // 
             // btnMinimize
             // 
+            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
             this.btnMinimize.Location = new System.Drawing.Point(1148, 0);
             this.btnMinimize.Name = "btnMinimize";
@@ -116,6 +118,8 @@
             this.arquivoToolStripMenuItem.Name = "arquivoToolStripMenuItem";
             this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(81, 26);
             this.arquivoToolStripMenuItem.Text = "Arquivo";
+            this.arquivoToolStripMenuItem.MouseLeave += new System.EventHandler(this.menuStripItems_MouseLeave);
+            this.arquivoToolStripMenuItem.MouseMove += new System.Windows.Forms.MouseEventHandler(this.menuStripItems_MouseMove);
             // 
             // faleConoscoToolStripMenuItem
             // 
@@ -134,6 +138,8 @@
             this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
             this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(65, 26);
             this.ajudaToolStripMenuItem.Text = "Ajuda";
+            this.ajudaToolStripMenuItem.MouseLeave += new System.EventHandler(this.menuStripItems_MouseLeave);
+            this.ajudaToolStripMenuItem.MouseMove += new System.Windows.Forms.MouseEventHandler(this.menuStripItems_MouseMove);
             // 
             // timerFade
             // 
@@ -149,6 +155,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Template";
             this.Text = "FrmTemplate";
+            this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(215)))), ((int)(((byte)(243)))));
             this.pnlSuperior.ResumeLayout(false);
             this.pnlSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
@@ -166,8 +173,6 @@
         protected System.Windows.Forms.MenuStrip menuStrip1;
         protected System.Windows.Forms.ToolStripMenuItem ajudaToolStripMenuItem;
         protected System.Windows.Forms.ToolStripMenuItem arquivoToolStripMenuItem;
-        private Bunifu.Framework.UI.BunifuImageButton btnSair;
-        private Bunifu.Framework.UI.BunifuImageButton btnMinimizar;
         private System.Windows.Forms.Timer timerFade;
         private System.Windows.Forms.PictureBox btnClose;
         private System.Windows.Forms.PictureBox btnMinimize;

@@ -74,18 +74,11 @@
     <Compile Include="TextboxWithPlaceholder.designer.cs">
       <DependentUpon>TextboxWithPlaceholder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Compartilha.cs" />
-    <Compile Include="Colecao.cs">
+    <Compile Include="Collection.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Colecao.Designer.cs">
-      <DependentUpon>Colecao.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ControlTeclado.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ControlTeclado.Designer.cs">
-      <DependentUpon>ControlTeclado.cs</DependentUpon>
+    <Compile Include="Collection.Designer.cs">
+      <DependentUpon>Collection.cs</DependentUpon>
     </Compile>
     <Compile Include="Kbtn.cs">
       <SubType>Component</SubType>
@@ -111,7 +104,6 @@
     <Compile Include="SelectColor.Designer.cs">
       <DependentUpon>SelectColor.cs</DependentUpon>
     </Compile>
-    <Compile Include="SetNames.cs" />
     <Compile Include="StyleBtn.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -124,7 +116,6 @@
     <Compile Include="StyleBtnBunifu.Designer.cs">
       <DependentUpon>StyleBtnBunifu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Teclados_Colecoes.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AcroniMessageBoxConfirm.resx">
@@ -143,6 +134,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundo botao.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

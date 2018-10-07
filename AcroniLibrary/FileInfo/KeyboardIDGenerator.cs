@@ -4,7 +4,7 @@ using AcroniUI.CustomizingForms;
 
 namespace AcroniLibrary.FileInfo
 {
-    class IDGenerator
+    class KeyboardIDGenerator
     {
         static string GenerateID(Form formBeingUsedOnCustomizing)
         {

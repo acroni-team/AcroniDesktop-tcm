@@ -53,28 +53,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DesignMethods\FormDrag.cs" />
+    <Compile Include="Share.cs" />
     <Compile Include="CustomizingMethods\FormManipulator.cs" />
-    <Compile Include="Fade.cs" />
-    <Compile Include="SQLConnection.cs" />
+    <Compile Include="DesignMethods\Fade.cs" />
+    <Compile Include="SQL\SQLConnection.cs" />
     <Compile Include="CustomizingMethods\Colorpicker\ColorpickerHandlers.cs" />
     <Compile Include="CustomizingMethods\Colorpicker\SetColorpickerVisibility.cs" />
     <Compile Include="CustomizingMethods\Colorpicker\SetHistColors.cs" />
     <Compile Include="CustomizingMethods\IconsQueue.cs" />
     <Compile Include="CustomizingMethods\TextFonts\Alignment.cs" />
-    <Compile Include="FileInfo\Colecao.cs" />
-    <Compile Include="FileInfo\CompactKeyboardInfo.cs" />
-    <Compile Include="FileInfo\CompartilhaObjetosUser.cs" />
-    <Compile Include="FileInfo\FullsizeKeyboardInfo.cs" />
+    <Compile Include="FileInfo\Collection.cs" />
+    <Compile Include="FileInfo\ShareUserObjects.cs" />
     <Compile Include="FileInfo\KeyboardIDGenerator.cs" />
-    <Compile Include="FileInfo\Keycaps.cs" />
-    <Compile Include="FileInfo\Teclado.cs" />
-    <Compile Include="FileInfo\TenkeylessKeyboardInfo.cs" />
+    <Compile Include="FileInfo\Keycap.cs" />
+    <Compile Include="FileInfo\Keyboard.cs" />
     <Compile Include="FileInfo\User.cs" />
     <Compile Include="CustomizingMethods\TextFonts\LoadFontTypes.cs" />
-    <Compile Include="ImageManipulator.cs" />
+    <Compile Include="DesignMethods\ImageManipulator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SQLMethods.cs" />
-    <Compile Include="SVGClass\SVGParser.cs" />
+    <Compile Include="SQL\SQLMethods.cs" />
     <Compile Include="ValidationOF.cs" />
   </ItemGroup>
   <ItemGroup>

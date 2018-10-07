@@ -31,9 +31,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblBoasVindas = new System.Windows.Forms.Label();
             this.lblNomeUsuBoasVindas = new System.Windows.Forms.Label();
-            this.lblColecoesSalvas1 = new System.Windows.Forms.Label();
+            this.lblSavedCollections1 = new System.Windows.Forms.Label();
             this.lblColecoesSalvas2 = new System.Windows.Forms.Label();
-            this.lblQtdColecoes = new System.Windows.Forms.Label();
+            this.lblCollectionsQuantity = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlScroll = new System.Windows.Forms.Panel();
             this.lblSelectKeyboard = new System.Windows.Forms.Label();
@@ -72,16 +72,16 @@
             this.lblNomeUsuBoasVindas.TabIndex = 16;
             this.lblNomeUsuBoasVindas.Text = "joj!";
             // 
-            // lblColecoesSalvas1
+            // lblSavedCollections1
             // 
-            this.lblColecoesSalvas1.AutoSize = true;
-            this.lblColecoesSalvas1.Font = new System.Drawing.Font("Open Sans SemiBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblColecoesSalvas1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(80)))), ((int)(((byte)(85)))));
-            this.lblColecoesSalvas1.Location = new System.Drawing.Point(624, 140);
-            this.lblColecoesSalvas1.Name = "lblColecoesSalvas1";
-            this.lblColecoesSalvas1.Size = new System.Drawing.Size(102, 27);
-            this.lblColecoesSalvas1.TabIndex = 17;
-            this.lblColecoesSalvas1.Text = "Você tem";
+            this.lblSavedCollections1.AutoSize = true;
+            this.lblSavedCollections1.Font = new System.Drawing.Font("Open Sans SemiBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSavedCollections1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(80)))), ((int)(((byte)(85)))));
+            this.lblSavedCollections1.Location = new System.Drawing.Point(624, 140);
+            this.lblSavedCollections1.Name = "lblSavedCollections1";
+            this.lblSavedCollections1.Size = new System.Drawing.Size(102, 27);
+            this.lblSavedCollections1.TabIndex = 17;
+            this.lblSavedCollections1.Text = "Você tem";
             // 
             // lblColecoesSalvas2
             // 
@@ -94,16 +94,16 @@
             this.lblColecoesSalvas2.TabIndex = 18;
             this.lblColecoesSalvas2.Text = "coleções salvas.";
             // 
-            // lblQtdColecoes
+            // lblCollectionsQuantity
             // 
-            this.lblQtdColecoes.AutoSize = true;
-            this.lblQtdColecoes.Font = new System.Drawing.Font("Open Sans ExtraBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQtdColecoes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(80)))), ((int)(((byte)(85)))));
-            this.lblQtdColecoes.Location = new System.Drawing.Point(720, 140);
-            this.lblQtdColecoes.Name = "lblQtdColecoes";
-            this.lblQtdColecoes.Size = new System.Drawing.Size(24, 27);
-            this.lblQtdColecoes.TabIndex = 19;
-            this.lblQtdColecoes.Text = "0";
+            this.lblCollectionsQuantity.AutoSize = true;
+            this.lblCollectionsQuantity.Font = new System.Drawing.Font("Open Sans ExtraBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCollectionsQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(80)))), ((int)(((byte)(85)))));
+            this.lblCollectionsQuantity.Location = new System.Drawing.Point(720, 140);
+            this.lblCollectionsQuantity.Name = "lblCollectionsQuantity";
+            this.lblCollectionsQuantity.Size = new System.Drawing.Size(24, 27);
+            this.lblCollectionsQuantity.TabIndex = 19;
+            this.lblCollectionsQuantity.Text = "0";
             // 
             // pictureBox1
             // 
@@ -157,9 +157,9 @@
             this.Controls.Add(this.lblSelectKeyboard);
             this.Controls.Add(this.pnlScroll);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.lblQtdColecoes);
+            this.Controls.Add(this.lblCollectionsQuantity);
             this.Controls.Add(this.lblColecoesSalvas2);
-            this.Controls.Add(this.lblColecoesSalvas1);
+            this.Controls.Add(this.lblSavedCollections1);
             this.Controls.Add(this.lblNomeUsuBoasVindas);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblBoasVindas);
@@ -168,9 +168,9 @@
             this.Controls.SetChildIndex(this.lblBoasVindas, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.lblNomeUsuBoasVindas, 0);
-            this.Controls.SetChildIndex(this.lblColecoesSalvas1, 0);
+            this.Controls.SetChildIndex(this.lblSavedCollections1, 0);
             this.Controls.SetChildIndex(this.lblColecoesSalvas2, 0);
-            this.Controls.SetChildIndex(this.lblQtdColecoes, 0);
+            this.Controls.SetChildIndex(this.lblCollectionsQuantity, 0);
             this.Controls.SetChildIndex(this.pictureBox1, 0);
             this.Controls.SetChildIndex(this.pnlSuperior, 0);
             this.Controls.SetChildIndex(this.pnlScroll, 0);
@@ -188,9 +188,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblBoasVindas;
         private System.Windows.Forms.Label lblNomeUsuBoasVindas;
-        private System.Windows.Forms.Label lblColecoesSalvas1;
+        private System.Windows.Forms.Label lblSavedCollections1;
         private System.Windows.Forms.Label lblColecoesSalvas2;
-        private System.Windows.Forms.Label lblQtdColecoes;
+        private System.Windows.Forms.Label lblCollectionsQuantity;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel pnlScroll;
         private System.Windows.Forms.Label lblSelectKeyboard;

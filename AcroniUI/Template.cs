@@ -2,8 +2,6 @@
 using System.Drawing;
 using System.Windows.Forms;
 using FormsDesign;
-using System.Drawing.Text;
-using System.Threading.Tasks;
 using AcroniControls;
 using AcroniLibrary;
 
@@ -14,9 +12,6 @@ namespace AcroniUI
         public Template()
         {
             InitializeComponent();
-            Bunifu.Framework.UI.BunifuElipse ellipse = new Bunifu.Framework.UI.BunifuElipse();
-            ellipse.ApplyElipse(btnSair, 9);
-
             #region Atribuição de Dragging aos controles e no próprio form 
 
             ///<summary> 
@@ -31,32 +26,7 @@ namespace AcroniUI
             #endregion    
         }
 
-        #region Métodos para transição de cores dos botões do menu
-
-
-        private void bunifuImageButton1_MouseMove(object sender, MouseEventArgs e)
-        {
-            btnSair.BackColor = Color.FromArgb(244, 134, 134);
-        }
-
-        private void bunifuImageButton1_MouseLeave(object sender, EventArgs e)
-        {
-            btnSair.BackColor = Color.FromArgb(238, 63, 63);
-        }
-
-        private void bunifuImageButton2_MouseMove(object sender, MouseEventArgs e)
-        {
-            btnMinimizar.BackColor = Color.FromArgb(166, 169, 173);
-        }
-
-        private void bunifuImageButton2_MouseLeave(object sender, EventArgs e)
-        {
-            btnMinimizar.BackColor = Color.FromArgb(47, 47, 47);
-        }
-
-        #endregion
-
-        #region Ações dos botões do menuStrip
+        #region Ações dos botões do pnlSuperior
 
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
@@ -111,6 +81,19 @@ namespace AcroniUI
                 timerFade.Stop();
                 Application.Exit();
             }
+        }
+        #endregion
+        #region UX dos itens do menuStrip
+        private void menuStripItems_MouseMove(object sender, MouseEventArgs e)
+        {
+            ToolStripMenuItem tsmi = (ToolStripMenuItem)sender;
+            tsmi.BackColor = Color.FromArgb(41, 42, 47);
+            Cursor = Cursors.Hand;
+        }
+
+        private void menuStripItems_MouseLeave(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Default;
         }
         #endregion
     }

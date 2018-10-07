@@ -1,6 +1,7 @@
 ﻿using AcroniControls;
 using AcroniLibrary;
 using AcroniLibrary.FileInfo;
+using AcroniLibrary.SQL;
 using AcroniUI.CustomizingForms;
 using System;
 using System.Collections.Generic;
@@ -19,25 +20,27 @@ namespace AcroniUI
     {
         SelectColor selectColor;
         bool isSelectColorOpen = false;
-        int contHeighColecao = 0;
-        int contWidthTeclado = 0;
-        bool modeSelect;
-        public Galeria(bool modeSelect)
+        int countHeightCollection = 0;
+        int conutWidthKeyboard = 0;
+        bool selectMode;
+
+        public Galeria(bool selectMode)
         {
             InitializeComponent();
 
             this.pnlScroll.AutoScroll = true;
-            BoasVindas();
-            this.modeSelect = modeSelect;
-            if (modeSelect)
+            WelcomeUser();
+            this.selectMode = selectMode;
+            if (selectMode)
             {
                 lblBoasVindas.Visible = false;
                 lblNomeUsuBoasVindas.Visible = false;
-                lblColecoesSalvas1.Visible = false;
+                lblSavedCollections1.Visible = false;
                 lblColecoesSalvas2.Visible = false;
-                lblQtdColecoes.Visible = false;
+                lblCollectionsQuantity.Visible = false;
                 lblSelectKeyboard.Visible = true;
             }
+
             Compartilha.resourcesImg.Add(Image.FromFile(Application.StartupPath + "\\" + "icon.png"));
             Compartilha.resourcesImg.Add(Image.FromFile(Application.StartupPath + "\\" + "icon2.png"));
             //Para pegar as imagens
@@ -49,7 +52,7 @@ namespace AcroniUI
             #region Adicionar evento de click aos btnEditarGaleria e btnExcluirGaleria
             foreach (Control collection in pnlScroll.Controls)
             {
-                if (collection is AcroniControls.Colecao)
+                if (collection is AcroniControls.Collection)
                 {
                     foreach (Control itemColecao in collection.Controls)
                     {
@@ -63,7 +66,8 @@ namespace AcroniUI
 
             #endregion
         }
-        public void BoasVindas() => lblNomeUsuBoasVindas.Text = SQLConnection.nome_usuario + "!";
+        public void WelcomeUser() => lblNomeUsuBoasVindas.Text = SQLConnection.nome_usuario + "!";
+
         #region Carregar Coleções
         private void CarregaColecoes()
         {
@@ -93,7 +97,7 @@ namespace AcroniUI
                     }
                     Compartilha.collectionColor = userCollection.backColor;
                     Compartilha.colecao = userCollection.collectionNome;
-                    AcroniControls.Colecao collection = new AcroniControls.Colecao();
+                    AcroniControls.Collection collection = new AcroniControls.Collection();
                     if (modeSelect)
                     {
                         collection.Cursor = Cursors.Hand;
@@ -117,7 +121,7 @@ namespace AcroniUI
             {
                 System.Windows.Forms.MessageBox.Show(er.Message);
             }
-            lblQtdColecoes.Text = Convert.ToString(contColecao);
+            lblCollectionsQuantity.Text = Convert.ToString(contColecao);
         }
 
 
@@ -169,7 +173,7 @@ namespace AcroniUI
                 newCollection.backColor = Color.DimGray;
                 CompartilhaObjetosUser.user.userCollections.Add(newCollection);
                 Compartilha.colecao = SetNames.colecao;
-                AcroniControls.Colecao collection = new AcroniControls.Colecao();
+                AcroniControls.Collection collection = new AcroniControls.Collection();
                 if (modeSelect)
                 {
                     collection.Cursor = Cursors.Hand;
@@ -193,7 +197,7 @@ namespace AcroniUI
                 contHeighColecao += 179;
                 pnlScroll.Controls.Add(collection);
                 passarParaArquivo();
-                lblQtdColecoes.Text = Convert.ToString(Convert.ToInt16(lblQtdColecoes.Text) + 1);
+                lblCollectionsQuantity.Text = Convert.ToString(Convert.ToInt16(lblCollectionsQuantity.Text) + 1);
                 Compartilha.numTeclados = 0;
                 Compartilha.colecao = "";
                 Compartilha.teclado = "";

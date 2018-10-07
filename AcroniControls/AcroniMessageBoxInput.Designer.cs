@@ -34,8 +34,8 @@
             this.alblMessage2 = new System.Windows.Forms.Label();
             this.txtUserInput = new System.Windows.Forms.TextBox();
             this.apnlTextbox = new System.Windows.Forms.Panel();
-            this.btnEnviar = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnEnviar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.apnlTextbox.SuspendLayout();
             this.SuspendLayout();
@@ -52,9 +52,9 @@
             this.alblMessage1.AutoSize = true;
             this.alblMessage1.Font = new System.Drawing.Font("Open Sans", 18.25F, System.Drawing.FontStyle.Bold);
             this.alblMessage1.ForeColor = System.Drawing.Color.White;
-            this.alblMessage1.Location = new System.Drawing.Point(220, 52);
+            this.alblMessage1.Location = new System.Drawing.Point(232, 52);
             this.alblMessage1.Name = "alblMessage1";
-            this.alblMessage1.Size = new System.Drawing.Size(240, 34);
+            this.alblMessage1.Size = new System.Drawing.Size(235, 34);
             this.alblMessage1.TabIndex = 0;
             this.alblMessage1.Text = "Estamos quase lá.";
             // 
@@ -74,7 +74,7 @@
             this.alblMessage2.AutoSize = true;
             this.alblMessage2.Font = new System.Drawing.Font("Open Sans", 12.5F);
             this.alblMessage2.ForeColor = System.Drawing.Color.White;
-            this.alblMessage2.Location = new System.Drawing.Point(100, 86);
+            this.alblMessage2.Location = new System.Drawing.Point(102, 86);
             this.alblMessage2.Name = "alblMessage2";
             this.alblMessage2.Size = new System.Drawing.Size(496, 23);
             this.alblMessage2.TabIndex = 0;
@@ -96,42 +96,47 @@
             // 
             this.apnlTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(47)))), ((int)(((byte)(56)))));
             this.apnlTextbox.Controls.Add(this.txtUserInput);
-            this.apnlTextbox.Location = new System.Drawing.Point(157, 190);
+            this.apnlTextbox.Location = new System.Drawing.Point(167, 190);
             this.apnlTextbox.Name = "apnlTextbox";
             this.apnlTextbox.Size = new System.Drawing.Size(365, 60);
             this.apnlTextbox.TabIndex = 3;
             // 
-            // btnEnviar
-            // 
-            this.btnEnviar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(59)))), ((int)(((byte)(60)))));
-            this.btnEnviar.Font = new System.Drawing.Font("Open Sans ExtraBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnviar.ForeColor = System.Drawing.Color.White;
-            this.btnEnviar.Location = new System.Drawing.Point(393, 281);
-            this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Size = new System.Drawing.Size(106, 46);
-            this.btnEnviar.TabIndex = 0;
-            this.btnEnviar.Text = "Enviar";
-            this.btnEnviar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
-            // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(59)))), ((int)(((byte)(60)))));
-            this.btnCancelar.Font = new System.Drawing.Font("Open Sans ExtraBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.BackgroundImage = global::AcroniControls.Properties.Resources.fundo_botao;
+            this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Open Sans SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(170, 281);
+            this.btnCancelar.Location = new System.Drawing.Point(167, 281);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(106, 46);
-            this.btnCancelar.TabIndex = 4;
+            this.btnCancelar.Size = new System.Drawing.Size(160, 58);
+            this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // btnEnviar
+            // 
+            this.btnEnviar.BackgroundImage = global::AcroniControls.Properties.Resources.fundo_botao;
+            this.btnEnviar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEnviar.FlatAppearance.BorderSize = 0;
+            this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnviar.Font = new System.Drawing.Font("Open Sans SemiBold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnEnviar.ForeColor = System.Drawing.Color.White;
+            this.btnEnviar.Location = new System.Drawing.Point(379, 281);
+            this.btnEnviar.Name = "btnEnviar";
+            this.btnEnviar.Size = new System.Drawing.Size(153, 58);
+            this.btnEnviar.TabIndex = 5;
+            this.btnEnviar.Text = "Enviar";
+            this.btnEnviar.UseVisualStyleBackColor = true;
             // 
             // AcroniMessageBoxInput
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(54)))), ((int)(((byte)(63)))));
             this.ClientSize = new System.Drawing.Size(700, 361);
-            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnEnviar);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.apnlTextbox);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -154,7 +159,7 @@
         private System.Windows.Forms.Label alblMessage2;
         private System.Windows.Forms.TextBox txtUserInput;
         private System.Windows.Forms.Panel apnlTextbox;
-        private System.Windows.Forms.Label btnEnviar;
-        private System.Windows.Forms.Label btnCancelar;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnEnviar;
     }
 }

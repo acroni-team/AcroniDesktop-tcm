@@ -8,6 +8,8 @@ using System.Text.RegularExpressions;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using AcroniLibrary.SQL;
+using AcroniLibrary.FileInfo;
 
 namespace AcroniUI.LoginAndSignUp
 {
@@ -17,7 +19,7 @@ namespace AcroniUI.LoginAndSignUp
         {
             InitializeComponent();
             apnlEsquerdo.BackgroundImage = null;
-            apnlEsquerdo.BackColor = Color.FromArgb(0,147,255);
+            apnlEsquerdo.BackColor = Color.FromArgb(0, 147, 255);
         }
 
         #region Ações dos botões do menuStrip
@@ -26,7 +28,7 @@ namespace AcroniUI.LoginAndSignUp
         {
             this.WindowState = FormWindowState.Minimized;
         }
-        
+
         private void btnSair_Click(object sender, EventArgs e)
         {
             timerFadeOut.Start();
@@ -125,7 +127,7 @@ namespace AcroniUI.LoginAndSignUp
                     TimerSlide.Stop();
                     pnlCadastro.Tag = "Closed";
                 }
-            }                      
+            }
         }
 
         private void btnMinimize_Click(object sender, EventArgs e)
@@ -283,20 +285,23 @@ namespace AcroniUI.LoginAndSignUp
                     txtSenha.isPassword = true;
                     pnlVisibiladade.Tag = "false";
                 }
-            }else if (((Panel)sender).Equals(pnlVisibilidadeCadSenha))
+            }
+            else if (((Panel)sender).Equals(pnlVisibilidadeCadSenha))
             {
-                if(pnlVisibilidadeCadSenha.Tag.Equals("false"))
+                if (pnlVisibilidadeCadSenha.Tag.Equals("false"))
                 {
                     pnlVisibilidadeCadSenha.BackgroundImage = new Bitmap(AcroniUI.Properties.Resources.olho);
                     txtCadPass.isPassword = false;
                     pnlVisibilidadeCadSenha.Tag = "true";
-                }else
+                }
+                else
                 {
                     pnlVisibilidadeCadSenha.BackgroundImage = new Bitmap(AcroniUI.Properties.Resources.olhoblock);
                     txtCadPass.isPassword = true;
                     pnlVisibilidadeCadSenha.Tag = "false";
                 }
-            }else
+            }
+            else
             {
                 if (pnlVisibiladadeRepSenha.Tag.Equals("false"))
                 {
@@ -327,7 +332,7 @@ namespace AcroniUI.LoginAndSignUp
         }
 
         private void txtBoxesCad_OnValueChanged(object sender, EventArgs e) => pnlShowCadError.Location = new Point(94, 508);
-        
+
         private void ChangeMessagelblAviso(String message)
         {
             lblAvisoCad.Text = message;
@@ -355,13 +360,14 @@ namespace AcroniUI.LoginAndSignUp
                             if (!txtCadPass.Text.Equals(txtCadRepPass.Text))
                                 ChangeMessagelblAviso("As senhas estão erradas");
                             else
-                            { 
+                            {
                                 this.AddOwnedForm(GetLayerForm());
                                 TimerFade.Start();
                                 FrmConfirmarEmail confirm = new FrmConfirmarEmail(txtCadUser.Text, txtCadApelido.Text, txtCadPass.Text, txtCadEmail.Text, txtCadCPF.Text, "cadastro");
                                 if (confirm.IsDisposed)
                                     TimerFade.Start();
-                                else {
+                                else
+                                {
                                     confirm.ShowDialog();
                                     Application.OpenForms["LayerFadeForm"].Close();
                                     if (FrmConfirmarEmail.atualizacao_SUCCESS)
@@ -372,14 +378,15 @@ namespace AcroniUI.LoginAndSignUp
                                             using (FileStream savearchive = new FileStream(Application.StartupPath + @"\" + SQLConnection.nome_usuario + ".acr", FileMode.Create))
                                             {
                                                 BinaryFormatter Serializer = new BinaryFormatter();
-                                                Serializer.Serialize(savearchive, CompartilhaObjetosUser.user);
+                                                Serializer.Serialize(savearchive, ShareUserObjects.User);
                                             }
                                         }
                                         (new SelectKeyboard()).Show();
                                         this.Hide();
                                         SQLConnection.nome_usuario = txtEntrar.Text;
                                         // Checa se existe o arquivo, e se não existe, cria - o
-                                    } else
+                                    }
+                                    else
                                     {
                                         TimerFade.Start();
                                         ChangeMessagelblAviso("Cadastro não concluído");
@@ -391,7 +398,7 @@ namespace AcroniUI.LoginAndSignUp
                 }
             }
         }
-        
+
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -426,7 +433,7 @@ namespace AcroniUI.LoginAndSignUp
             }
             else if (((Bunifu.Framework.UI.BunifuMaterialTextbox)sender).Equals(txtCadCPF))
             {
-                if (!ValidationOF.CPF(txtCadCPF.Text))
+                if (!Validator.IsCPF(txtCadCPF.Text))
                     ChangeReferencesOnError(ref alblCPF, Color.Firebrick, ref apnlCPF, ref txtCadCPF, $"O CPF não existe!!");
                 else
                 {
@@ -442,7 +449,7 @@ namespace AcroniUI.LoginAndSignUp
             {
                 foreach (Control controlInside in control.Controls)
                     if (controlInside is Bunifu.Framework.UI.BunifuMaterialTextbox)
-                        controlInside.ResetText();       
+                        controlInside.ResetText();
             }
             foreach (Control control in pnlCadastro.Controls)
             {
