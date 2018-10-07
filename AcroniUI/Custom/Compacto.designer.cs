@@ -156,9 +156,9 @@ namespace AcroniUI.Custom
             this.btnSalvar = new System.Windows.Forms.Button();
             this.picBoxKeyboardBackground = new System.Windows.Forms.PictureBox();
             this.pnlCustomizingMenu = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblKeyboardName = new System.Windows.Forms.Label();
+            this.lblCollectionName = new System.Windows.Forms.Label();
+            this.alblCustomizacao = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnTextAlignRight = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnTextAlignCenter = new Bunifu.Framework.UI.BunifuImageButton();
@@ -1849,9 +1849,9 @@ namespace AcroniUI.Custom
             // pnlCustomizingMenu
             // 
             this.pnlCustomizingMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(48)))), ((int)(((byte)(54)))));
-            this.pnlCustomizingMenu.Controls.Add(this.label12);
-            this.pnlCustomizingMenu.Controls.Add(this.label11);
-            this.pnlCustomizingMenu.Controls.Add(this.label10);
+            this.pnlCustomizingMenu.Controls.Add(this.lblKeyboardName);
+            this.pnlCustomizingMenu.Controls.Add(this.lblCollectionName);
+            this.pnlCustomizingMenu.Controls.Add(this.alblCustomizacao);
             this.pnlCustomizingMenu.Controls.Add(this.btnVoltar);
             this.pnlCustomizingMenu.Controls.Add(this.btnSalvar);
             this.pnlCustomizingMenu.Location = new System.Drawing.Point(0, 39);
@@ -1859,38 +1859,38 @@ namespace AcroniUI.Custom
             this.pnlCustomizingMenu.Size = new System.Drawing.Size(1280, 116);
             this.pnlCustomizingMenu.TabIndex = 16;
             // 
-            // label12
+            // lblKeyboardName
             // 
-            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(48)))), ((int)(((byte)(54)))));
-            this.label12.Font = new System.Drawing.Font("Open Sans", 17.25F, System.Drawing.FontStyle.Bold);
-            this.label12.Location = new System.Drawing.Point(787, 35);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(307, 35);
-            this.label12.TabIndex = 15;
-            this.label12.Text = "• <Nome do teclado>";
+            this.lblKeyboardName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(48)))), ((int)(((byte)(54)))));
+            this.lblKeyboardName.Font = new System.Drawing.Font("Open Sans", 17.25F, System.Drawing.FontStyle.Bold);
+            this.lblKeyboardName.Location = new System.Drawing.Point(787, 35);
+            this.lblKeyboardName.Name = "lblKeyboardName";
+            this.lblKeyboardName.Size = new System.Drawing.Size(307, 35);
+            this.lblKeyboardName.TabIndex = 15;
+            this.lblKeyboardName.Text = "• <Nome do teclado>";
             // 
-            // label11
+            // lblCollectionName
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Open Sans", 17.25F, System.Drawing.FontStyle.Bold);
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(59)))));
-            this.label11.Location = new System.Drawing.Point(495, 35);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(254, 32);
-            this.label11.TabIndex = 15;
-            this.label11.Text = "• <Nome da coleção>";
+            this.lblCollectionName.AutoSize = true;
+            this.lblCollectionName.Font = new System.Drawing.Font("Open Sans", 17.25F, System.Drawing.FontStyle.Bold);
+            this.lblCollectionName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(59)))));
+            this.lblCollectionName.Location = new System.Drawing.Point(495, 35);
+            this.lblCollectionName.Name = "lblCollectionName";
+            this.lblCollectionName.Size = new System.Drawing.Size(254, 32);
+            this.lblCollectionName.TabIndex = 15;
+            this.lblCollectionName.Text = "• <Nome da coleção>";
             // 
-            // label10
+            // alblCustomizacao
             // 
-            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(48)))), ((int)(((byte)(54)))));
-            this.label10.Font = new System.Drawing.Font("Open Sans", 17.25F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
-            this.label10.Location = new System.Drawing.Point(143, 35);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(353, 35);
-            this.label10.TabIndex = 15;
-            this.label10.Text = "Customização";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.alblCustomizacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(48)))), ((int)(((byte)(54)))));
+            this.alblCustomizacao.Font = new System.Drawing.Font("Open Sans", 17.25F, System.Drawing.FontStyle.Bold);
+            this.alblCustomizacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
+            this.alblCustomizacao.Location = new System.Drawing.Point(143, 35);
+            this.alblCustomizacao.Name = "alblCustomizacao";
+            this.alblCustomizacao.Size = new System.Drawing.Size(353, 35);
+            this.alblCustomizacao.TabIndex = 15;
+            this.alblCustomizacao.Text = "Customização";
+            this.alblCustomizacao.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // btnVoltar
             // 
@@ -3294,9 +3294,9 @@ namespace AcroniUI.Custom
         private StyleBtn btnOpenModuleBackground;
         private StyleBtn btnOpenModuleTextIcons;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblKeyboardName;
+        private System.Windows.Forms.Label lblCollectionName;
+        private System.Windows.Forms.Label alblCustomizacao;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label19;

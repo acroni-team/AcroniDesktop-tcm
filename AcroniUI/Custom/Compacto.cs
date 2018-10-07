@@ -72,6 +72,7 @@ namespace AcroniUI.Custom
         {
             InitializeComponent();
 
+            lblKeyboardName.Location = new Point(lblCollectionName.Location.X + lblCollectionName.Size.Width - 5, lblCollectionName.Location.Y);
             //Foreach para arredondar cores do colorpicker
             foreach (Control c in pnlBodyColorpicker.Controls)
             {
