@@ -7,6 +7,7 @@ using System.Drawing;
 using System.IO;
 using System.Threading;
 using AcroniLibrary;
+using AcroniLibrary.SQL;
 
 namespace AcroniUI.LoginAndSignUp
 {
@@ -150,7 +151,7 @@ namespace AcroniUI.LoginAndSignUp
                 FileStream leitor_imagem = new FileStream($@"{Application.StartupPath}\Images\imagemPadrao.jpg", FileMode.Open, FileAccess.Read);
                 BinaryReader convertedor_binario = new BinaryReader(leitor_imagem);
                 byte[] img = convertedor_binario.ReadBytes((int)leitor_imagem.Length);
-                AcroniLibrary.SQLConnection.nome_usuario = usuario_public;
+                SQLConnection.nome_usuario = usuario_public;
                 //MessageBox.Show(tipo_public.Equals("cadastro") ? "Cadastro concluido" : "Atualização concluida");
                 atualizacao_SUCCESS = true;
                 if (tipo_public.Equals("cadastro"))

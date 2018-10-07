@@ -33,8 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AcroniLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="AcroniControls">
+      <HintPath>..\AcroniControls\bin\Debug\AcroniControls.dll</HintPath>
+    </Reference>
+    <Reference Include="AcroniLibrary">
       <HintPath>..\AcroniLibrary\bin\Debug\AcroniLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -71,22 +73,22 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Custom\CustomizingModules\KeycapIconModule.cs">
+    <Compile Include="Custom\CustomModules\KeycapIconModule.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Custom\CustomizingModules\KeycapIconModule.Designer.cs">
+    <Compile Include="Custom\CustomModules\KeycapIconModule.Designer.cs">
       <DependentUpon>KeycapIconModule.cs</DependentUpon>
     </Compile>
-    <Compile Include="Custom\CustomizingModules\KeycapParentModule.cs">
+    <Compile Include="Custom\CustomModules\KeycapParentModule.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Custom\CustomizingModules\KeycapParentModule.Designer.cs">
+    <Compile Include="Custom\CustomModules\KeycapParentModule.Designer.cs">
       <DependentUpon>KeycapParentModule.cs</DependentUpon>
     </Compile>
-    <Compile Include="Custom\CustomizingModules\KeycapTextModule.cs">
+    <Compile Include="Custom\CustomModules\KeycapTextModule.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Custom\CustomizingModules\KeycapTextModule.Designer.cs">
+    <Compile Include="Custom\CustomModules\KeycapTextModule.Designer.cs">
       <DependentUpon>KeycapTextModule.cs</DependentUpon>
     </Compile>
     <Compile Include="Galeria.cs">
@@ -138,12 +140,6 @@
     <Compile Include="Custom\Tenkeyless.designer.cs">
       <DependentUpon>Tenkeyless.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenuLayoutMaster.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MenuLayoutMaster.Designer.cs">
-      <DependentUpon>MenuLayoutMaster.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\Resources1.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -171,13 +167,13 @@
     <EmbeddedResource Include="Custom\Compacto.resx">
       <DependentUpon>Compacto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Custom\CustomizingModules\KeycapIconModule.resx">
+    <EmbeddedResource Include="Custom\CustomModules\KeycapIconModule.resx">
       <DependentUpon>KeycapIconModule.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Custom\CustomizingModules\KeycapParentModule.resx">
+    <EmbeddedResource Include="Custom\CustomModules\KeycapParentModule.resx">
       <DependentUpon>KeycapParentModule.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Custom\CustomizingModules\KeycapTextModule.resx">
+    <EmbeddedResource Include="Custom\CustomModules\KeycapTextModule.resx">
       <DependentUpon>KeycapTextModule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Custom\Tenkeyless.resx">
@@ -197,9 +193,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TemplateMenu.resx">
       <DependentUpon>TemplateMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MenuLayoutMaster.resx">
-      <DependentUpon>MenuLayoutMaster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -231,12 +224,6 @@
     <None Include="app.config" />
     <None Include="Images\olhoblock.png" />
     <None Include="Images\olho.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AcroniControls\AcroniControls.csproj">
-      <Project>{ADF7371B-02A4-4E2B-B342-348E0F4D8F1C}</Project>
-      <Name>AcroniControls</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

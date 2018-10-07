@@ -25,7 +25,7 @@ namespace AcroniControls
             if (selected != null)
                 selected.FlatAppearance.BorderSize = 0;
             selected = (Button)sender;
-            Compartilha.colorSelected = (sender as Button).BackColor;
+            //Compartilha.colorSelected = (sender as Button).BackColor;
             (sender as Button).FlatAppearance.BorderSize = 1;
         }
 
@@ -40,7 +40,7 @@ namespace AcroniControls
             {
                 try
                 {
-                    Compartilha.colorSelected = ColorTranslator.FromHtml(txtColor.Text);
+                    //Compartilha.colorSelected = ColorTranslator.FromHtml(txtColor.Text);
                 }
                 catch (Exception)
                 {
@@ -53,7 +53,7 @@ namespace AcroniControls
                             else
                                 contRGB++;
                         }
-                        Compartilha.colorSelected = Color.FromArgb(rgb[0], rgb[1], rgb[2]);
+                        //Compartilha.colorSelected = Color.FromArgb(rgb[0], rgb[1], rgb[2]);
                     }
                     catch (Exception) { }
                 }

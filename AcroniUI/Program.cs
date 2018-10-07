@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
-using AcroniUI.CustomizingForms;
-using AcroniUI.LoginAndSignUp;
 using System.Threading;
-using AcroniControls;
+using AcroniUI.Custom;
 
 namespace AcroniUI
 {

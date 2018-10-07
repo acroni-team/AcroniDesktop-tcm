@@ -1,23 +1,20 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Drawing;
-using System.Threading.Tasks;
 using Transitions;
 using AcroniControls;
-using AcroniUI.CustomizingForms.CustomizingModules;
 using System.Collections.Generic;
 using AcroniLibrary.CustomizingMethods.TextFonts;
-using AcroniLibrary;
 using AcroniLibrary.FileInfo;
-using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
+using AcroniLibrary.DesignMethods;
 
 namespace AcroniUI.Custom
 {
     public partial class Compacto : Template
     {
 
-        // Definição da kbtn genérica
+        #region Declarações 
+
 
         // Definição do botão de teclado genérico (kbtn)
         Kbtn keybutton = new Kbtn();
@@ -35,7 +32,10 @@ namespace AcroniUI.Custom
         private bool HasChosenAIcon { get; set; }
 
         // Definição das propriedades do colorpicker 
-        private Color Color { get; set; }
+        private Color Color { get; set; } = Color.FromArgb(26, 26, 26);
+
+
+        #endregion
 
         #region Eventos a nível do formulário
         //Ao clicar num botão do teclado
@@ -45,7 +45,6 @@ namespace AcroniUI.Custom
             keybutton.BackColor = keybutton.SetColor(Color);
             if (HasChosenAIcon)
                 keybutton.Image = SelectedIcon;
-
         }
 
         //Ao clicar no botão de fechar
@@ -84,13 +83,13 @@ namespace AcroniUI.Custom
             }
 
             //if (Compartilha.editKeyboard)
-            //    carregaTeclado();
+            //    LoadKeyboard();
             //else
-            //    aplicaFundoTeclas();
+            //    ApplyShadowOnKeycaps();
 
         }
 
-        private void aplicaFundoTeclas()
+        private void ApplyShadowOnKeycaps()
         {
             foreach (Control c in this.Controls)
             {
@@ -105,14 +104,14 @@ namespace AcroniUI.Custom
             }
         }
 
-        private void SetKeycapText(object sender, EventArgs e)
-        {
-            //KeycapTextModule keycapTextModule = new KeycapTextModule();
-            //Opacity = 0.1;
-            //keycapTextModule.ShowDialog();
-            //Kbtn kbtn = (Kbtn)sender;
-            //kbtn.Text = keycapTextModule.Maintext;
-        }
+        // Ideia pro módulo de texto das keycaps
+        //private void SetKeycapText(object sender, EventArgs e)
+        //{
+        //KeycapTextModule keycapTextModule = new KeycapTextModule();
+        //keycapTextModule.ShowDialog();
+        //Kbtn kbtn = (Kbtn)sender;
+        //kbtn.Text = keycapTextModule.Maintext;
+        //}
 
 
         #region Métodos do Color Picker
@@ -120,19 +119,19 @@ namespace AcroniUI.Custom
         private bool[] __disponibilidade_pnlHistorico { get; set; } = { true, false, false };
 
         //Clicks que ocorrem ao selecionar uma cor
-        private void escolhe_cor(object sender, EventArgs e)
+        private void Color_Click(object sender, EventArgs e)
         {
             Panel p = (Panel)sender;
             lblHexaColor.Text = $"#{p.BackColor.R.ToString("X2")}{p.BackColor.G.ToString("X2")}{p.BackColor.B.ToString("X2")}";
             lblColorName.Text = (!p.Name.Contains("pnl") ? p.Name.Replace("_", " ") : p.Tag.ToString());
 
             //--Transição para mudar de cor
-            Transition t_cor = new Transition(new TransitionType_EaseInEaseOut(200));
-            t_cor.add(pnlColor, "BackColor", p.BackColor);
-            t_cor.run();
+            Transition transition = new Transition(new TransitionType_EaseInEaseOut(200));
+            transition.add(pnlColor, "BackColor", p.BackColor);
+            transition.run();
 
+            //Define a cor da tecla no kbtn_Click
             Color = p.BackColor;
-            //Será usado no kbtn_click
 
             if (__disponibilidade_pnlHistorico[0])
             {
@@ -226,7 +225,7 @@ namespace AcroniUI.Custom
         #endregion Fim das fontes
 
         //#region Carrega Teclado
-        //private void carregaTeclado()
+        //private void LoadKeyboard()
         //{
         //    picBoxKeyboardBackground.Image = CompartilhaObjetosUser.teclado.BackgroundImage;
         //    picBoxKeyboardBackground.SizeMode = (PictureBoxSizeMode)CompartilhaObjetosUser.teclado.BackgroundModeSize;
@@ -298,11 +297,11 @@ namespace AcroniUI.Custom
             //            await Task.Delay(100);
             //        }
         }
-        //    saveTeclado();
+        //    SaveKeyboard();
 
 
         //}
-        //private async void saveTeclado()
+        //private async void SaveKeyboard()
         //{
         //    if (!Compartilha.editKeyboard)
         //    {
@@ -446,10 +445,22 @@ namespace AcroniUI.Custom
             catch (Exception) { }
         }
 
-        private void button1_MouseEnter(object sender, EventArgs e)
+        private void btnColor_MouseLeave(object sender, EventArgs e)
         {
             Button btnColor = (Button)sender;
-            btnColor.Size = new Size(btnColor.Width + 25, btnColor.Height + 25);
+            btnColor.Size = new Size(btnColor.Size.Width - 5, btnColor.Size.Height - 5);
+            btnColor.Location = new Point(btnColor.Location.X + (5 / 2), btnColor.Location.Y + (5 / 2));
+            Bunifu.Framework.UI.BunifuElipse bunifuElipse = new Bunifu.Framework.UI.BunifuElipse();
+            bunifuElipse.ApplyElipse(btnColor, 5);
+        }
+
+        private void btnColor_MouseEnter(object sender, EventArgs e)
+        {
+            Button btnColor = (Button)sender;
+            btnColor.Size = new Size(btnColor.Size.Width + 5, btnColor.Size.Height + 5);
+            btnColor.Location = new Point(btnColor.Location.X - (5 / 2), btnColor.Location.Y - (5 / 2));
+            Bunifu.Framework.UI.BunifuElipse bunifuElipse = new Bunifu.Framework.UI.BunifuElipse();
+            bunifuElipse.ApplyElipse(btnColor, 5);
         }
     }
 }

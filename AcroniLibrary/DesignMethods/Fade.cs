@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AcroniLibrary
+namespace AcroniLibrary.DesignMethods
 {
     public class Fade
     {
@@ -22,6 +22,7 @@ namespace AcroniLibrary
                 await Task.Delay(1);
                 form.Opacity -= 0.05;
             }
+            Application.Exit();
         }
     }
 }

@@ -10,6 +10,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using AcroniLibrary.SQL;
 using AcroniLibrary.FileInfo;
+using AcroniLibrary.DesignMethods;
 
 namespace AcroniUI.LoginAndSignUp
 {
@@ -31,7 +32,7 @@ namespace AcroniUI.LoginAndSignUp
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            timerFadeOut.Start();
+            Fade.FadeOut(this);
         }
         #endregion
 
@@ -134,20 +135,6 @@ namespace AcroniUI.LoginAndSignUp
         {
             WindowState = FormWindowState.Minimized;
         }
-
-        private void timerFadeOut_Tick(object sender, EventArgs e)
-        {
-            if (this.Opacity > 0.0)
-            {
-                this.Opacity -= 0.1;
-            }
-            else
-            {
-                timerFadeOut.Stop();
-                Application.Exit();
-            }
-        }
-
 
         private void TimerFade_Tick(object sender, EventArgs e)
         {

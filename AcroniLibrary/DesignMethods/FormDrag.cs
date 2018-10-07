@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 
-namespace FormsDesign
+namespace AcroniLibrary.DesignMethods
 {
     public class FormDrag
     {

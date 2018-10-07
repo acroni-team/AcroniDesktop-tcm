@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using FormsDesign;
+using AcroniLibrary.DesignMethods;
 using AcroniControls;
-using AcroniLibrary;
 
 namespace AcroniUI
 {
@@ -61,7 +60,7 @@ namespace AcroniUI
             if (ambc.DialogResult == DialogResult.Yes)
             {
                 Fade.FadeOut(this);
-                Application.Exit();
+                this.Dispose();
             }
                 
         }

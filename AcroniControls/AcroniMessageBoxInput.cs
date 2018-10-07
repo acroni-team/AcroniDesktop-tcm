@@ -29,11 +29,11 @@ namespace AcroniControls
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            if (alblMessage1.Text.Contains("coleção"))
-                SetNames.colecao = txtUserInput.Text;
-            else
-                SetNames.teclado = txtUserInput.Text;
-            this.Close();
+            //if (alblMessage1.Text.Contains("coleção"))
+            //    SetNames.colecao = txtUserInput.Text;
+            //else
+            //    SetNames.teclado = txtUserInput.Text;
+            //this.Close();
         }
     }
 }

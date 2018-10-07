@@ -1,19 +1,19 @@
 ﻿using System;
-using System.Windows.Forms;
-using AcroniUI.CustomizingForms;
 
 namespace AcroniLibrary.FileInfo
 {
     class KeyboardIDGenerator
     {
-        static string GenerateID(Form formBeingUsedOnCustomizing)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="KeyboardType">
+        ///     Passa a primeira letra do teclado em inglês. 
+        /// </param>
+        /// <returns></returns>
+        static string GenerateID(char KeyboardType)
         {
-            if (formBeingUsedOnCustomizing is Compacto)
-                return $"C{DateTime.UtcNow}";
-            else if (formBeingUsedOnCustomizing is Fullsize)
-                return $"F{DateTime.UtcNow}";
-            else
-                return $"T{DateTime.UtcNow}";
+            return $"{KeyboardType}{DateTime.UtcNow}";
         }
     }
 }

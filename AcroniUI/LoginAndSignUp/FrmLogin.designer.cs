@@ -1,6 +1,4 @@
-﻿using static FormsDesign.FormDrag;
-
-namespace AcroniUI.LoginAndSignUp
+﻿namespace AcroniUI.LoginAndSignUp
 {
     partial class FrmLogin
     {
@@ -650,10 +648,6 @@ namespace AcroniUI.LoginAndSignUp
             this.alblAcroni.BackColor = System.Drawing.Color.Transparent;
             this.alblAcroni.ForeColor = System.Drawing.Color.White;
             this.alblAcroni.Name = "alblAcroni";
-            // 
-            // timerFadeOut
-            // 
-            this.timerFadeOut.Tick += new System.EventHandler(this.timerFadeOut_Tick);
             // 
             // FrmLogin
             // 
