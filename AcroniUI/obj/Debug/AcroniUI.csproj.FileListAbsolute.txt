@@ -54,3 +54,5 @@ E:\Desktop\c\AcroniDesktop\AcroniUI\bin\Debug\AcroniUI.dll
 E:\Desktop\c\AcroniDesktop\AcroniUI\bin\Debug\AcroniControls.pdb
 E:\Desktop\c\AcroniDesktop\AcroniUI\bin\Debug\AcroniLibrary.pdb
 E:\Desktop\c\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.csproj.CopyComplete
+E:\Desktop\c\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Custom.Compacto.resources
+E:\Desktop\c\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Galeria.resources

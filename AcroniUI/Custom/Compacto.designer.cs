@@ -1,7 +1,7 @@
 ﻿using System;
 using AcroniControls;
 
-namespace AcroniUI.CustomizingForms
+namespace AcroniUI.Custom
 {
     partial class Compacto
     {
@@ -3143,10 +3143,10 @@ namespace AcroniUI.CustomizingForms
         private System.Windows.Forms.Label lblDefinirParaTodasTeclas;
         private StyleBtn btnOpenModuleSwitch;
         private System.Windows.Forms.Button btnVoltar;
-//<<<<<<< HEAD
-////<<<<<<< HEAD
-//=======
-//>>>>>>> 6085eb0e9043626e0c90ad911655a391e0a53c58
+        //<<<<<<< HEAD
+        ////<<<<<<< HEAD
+        //=======
+        //>>>>>>> 6085eb0e9043626e0c90ad911655a391e0a53c58
         private System.Windows.Forms.Panel fundoCa1;
         private System.Windows.Forms.Panel fundoCa2;
         private System.Windows.Forms.Panel fundoCa3;

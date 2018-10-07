@@ -15,6 +15,7 @@ using System.Drawing.Text;
 using System.Threading;
 using System.Runtime.Serialization.Formatters.Binary;
 using AcroniControls;
+using AcroniLibrary.SQL;
 
 namespace AcroniUI
 {
@@ -92,7 +93,7 @@ namespace AcroniUI
             lblQtdGasta.Text = Convert.ToString(contTeclados);
             trocar_nome_usuario($"{SQLConnection.nome_usuario}");
             trocar_imagem_usuario(selecionar_imagem_cliente());
-            Compartilha.nomeUsu = lblNomeUsu.Text;
+            //Compartilha.nomeUsu = lblNomeUsu.Text;
             //trocar_plano_usuario($"{Conexao.plano_usuario}!");
             #region Verificar conectividade com internet
 

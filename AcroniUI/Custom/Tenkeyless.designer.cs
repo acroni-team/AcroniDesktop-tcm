@@ -1,4 +1,4 @@
-﻿namespace AcroniUI.CustomizingForms
+﻿namespace AcroniUI.Custom
 {
     partial class Tenkeyless
     {

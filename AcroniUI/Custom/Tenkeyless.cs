@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace AcroniUI.CustomizingForms
+namespace AcroniUI.Custom
 {
     public partial class Tenkeyless : Compacto
     {
