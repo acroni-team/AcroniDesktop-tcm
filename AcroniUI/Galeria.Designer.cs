@@ -37,9 +37,6 @@
             this.pnlScroll = new System.Windows.Forms.Panel();
             this.lblSelectKeyboard = new System.Windows.Forms.Label();
             this.btnAdicionarGaleria = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pnlScroll.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -64,11 +61,11 @@
             // lblNomeUsuBoasVindas
             // 
             this.lblNomeUsuBoasVindas.AutoSize = true;
-            this.lblNomeUsuBoasVindas.Font = new System.Drawing.Font("Open Sans ExtraBold", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeUsuBoasVindas.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomeUsuBoasVindas.ForeColor = System.Drawing.Color.White;
             this.lblNomeUsuBoasVindas.Location = new System.Drawing.Point(785, 104);
             this.lblNomeUsuBoasVindas.Name = "lblNomeUsuBoasVindas";
-            this.lblNomeUsuBoasVindas.Size = new System.Drawing.Size(47, 30);
+            this.lblNomeUsuBoasVindas.Size = new System.Drawing.Size(44, 26);
             this.lblNomeUsuBoasVindas.TabIndex = 16;
             this.lblNomeUsuBoasVindas.Text = "joj!";
             // 
@@ -97,17 +94,16 @@
             // lblCollectionsQuantity
             // 
             this.lblCollectionsQuantity.AutoSize = true;
-            this.lblCollectionsQuantity.Font = new System.Drawing.Font("Open Sans ExtraBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCollectionsQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCollectionsQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(80)))), ((int)(((byte)(85)))));
             this.lblCollectionsQuantity.Location = new System.Drawing.Point(720, 140);
             this.lblCollectionsQuantity.Name = "lblCollectionsQuantity";
-            this.lblCollectionsQuantity.Size = new System.Drawing.Size(24, 27);
+            this.lblCollectionsQuantity.Size = new System.Drawing.Size(24, 25);
             this.lblCollectionsQuantity.TabIndex = 19;
             this.lblCollectionsQuantity.Text = "0";
             // 
             // pnlScroll
             // 
-            this.pnlScroll.Controls.Add(this.pictureBox1);
             this.pnlScroll.Location = new System.Drawing.Point(326, 190);
             this.pnlScroll.Name = "pnlScroll";
             this.pnlScroll.Size = new System.Drawing.Size(953, 504);
@@ -141,14 +137,6 @@
             this.btnAdicionarGaleria.UseVisualStyleBackColor = false;
             this.btnAdicionarGaleria.Click += new System.EventHandler(this.btnAdicionarGaleria_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(449, 172);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 20;
-            this.pictureBox1.TabStop = false;
-            // 
             // Galeria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -174,8 +162,6 @@
             this.Controls.SetChildIndex(this.pnlScroll, 0);
             this.Controls.SetChildIndex(this.lblSelectKeyboard, 0);
             this.Controls.SetChildIndex(this.btnAdicionarGaleria, 0);
-            this.pnlScroll.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,6 +177,5 @@
         private System.Windows.Forms.Panel pnlScroll;
         private System.Windows.Forms.Label lblSelectKeyboard;
         private System.Windows.Forms.Button btnAdicionarGaleria;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

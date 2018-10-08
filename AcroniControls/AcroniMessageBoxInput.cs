@@ -20,6 +20,7 @@ namespace AcroniControls
             InitializeComponent();
             doBasic();
             alblMessage1.Text = message;
+            alblMessage2.Text = "";
         }
 
         public AcroniMessageBoxInput(string message, string message2)

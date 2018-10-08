@@ -54,7 +54,7 @@
             this.alblMessage1.ForeColor = System.Drawing.Color.White;
             this.alblMessage1.Location = new System.Drawing.Point(232, 52);
             this.alblMessage1.Name = "alblMessage1";
-            this.alblMessage1.Size = new System.Drawing.Size(235, 34);
+            this.alblMessage1.Size = new System.Drawing.Size(240, 34);
             this.alblMessage1.TabIndex = 0;
             this.alblMessage1.Text = "Estamos quase lá.";
             // 
@@ -105,6 +105,7 @@
             // 
             this.btnCancelar.BackgroundImage = global::AcroniControls.Properties.Resources.fundo_botao;
             this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Open Sans SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -120,6 +121,7 @@
             // 
             this.btnEnviar.BackgroundImage = global::AcroniControls.Properties.Resources.fundo_botao;
             this.btnEnviar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEnviar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnEnviar.FlatAppearance.BorderSize = 0;
             this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnviar.Font = new System.Drawing.Font("Open Sans SemiBold", 14.25F, System.Drawing.FontStyle.Bold);
@@ -130,6 +132,7 @@
             this.btnEnviar.TabIndex = 5;
             this.btnEnviar.Text = "Enviar";
             this.btnEnviar.UseVisualStyleBackColor = true;
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
             // AcroniMessageBoxInput
             // 

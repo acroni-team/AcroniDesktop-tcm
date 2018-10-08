@@ -226,6 +226,7 @@ namespace AcroniUI.Custom
             this.Roxo = new System.Windows.Forms.Button();
             this.ebtnOpenModuleTextIcons = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.ebtnOpenModuleBackground = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.fundoCa9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxKeyboardBackground)).BeginInit();
             this.pnlCustomizingMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignRight)).BeginInit();
@@ -1233,7 +1234,7 @@ namespace AcroniUI.Custom
             this.Ca9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ca9.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca9.ForeColor = System.Drawing.Color.White;
-            this.Ca9.Location = new System.Drawing.Point(483, 224);
+            this.Ca9.Location = new System.Drawing.Point(7, 4);
             this.Ca9.Name = "Ca9";
             this.Ca9.Size = new System.Drawing.Size(38, 40);
             this.Ca9.TabIndex = 73;
@@ -1436,6 +1437,7 @@ namespace AcroniUI.Custom
             // fundoCa9
             // 
             this.fundoCa9.BackColor = System.Drawing.Color.Black;
+            this.fundoCa9.Controls.Add(this.Ca9);
             this.fundoCa9.Location = new System.Drawing.Point(476, 219);
             this.fundoCa9.Name = "fundoCa9";
             this.fundoCa9.Size = new System.Drawing.Size(52, 56);
@@ -2912,7 +2914,6 @@ namespace AcroniUI.Custom
             this.Controls.Add(this.Ca12);
             this.Controls.Add(this.Ca11);
             this.Controls.Add(this.Ca10);
-            this.Controls.Add(this.Ca9);
             this.Controls.Add(this.Ca8);
             this.Controls.Add(this.Ca7);
             this.Controls.Add(this.Ca6);
@@ -3137,7 +3138,6 @@ namespace AcroniUI.Custom
             this.Controls.SetChildIndex(this.Ca6, 0);
             this.Controls.SetChildIndex(this.Ca7, 0);
             this.Controls.SetChildIndex(this.Ca8, 0);
-            this.Controls.SetChildIndex(this.Ca9, 0);
             this.Controls.SetChildIndex(this.Ca10, 0);
             this.Controls.SetChildIndex(this.Ca11, 0);
             this.Controls.SetChildIndex(this.Ca12, 0);
@@ -3149,6 +3149,7 @@ namespace AcroniUI.Custom
             this.Controls.SetChildIndex(this.pnlBodyColorpicker, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.pnlHeadColorpicker, 0);
+            this.fundoCa9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxKeyboardBackground)).EndInit();
             this.pnlCustomizingMenu.ResumeLayout(false);
             this.pnlCustomizingMenu.PerformLayout();

@@ -61,7 +61,7 @@ namespace AcroniUI
 
             foreach (Control collection in pnlScroll.Controls)
             {
-                if (collection is AcroniControls.CollectionUI)
+                if (collection is CollectionUI)
                 {
                     foreach (Control itemColecao in collection.Controls)
                     {
@@ -186,15 +186,16 @@ namespace AcroniUI
         private async void btnAdicionarGaleria_Click(object sender, EventArgs e)
         {
             AcroniMessageBoxInput collectionNameDialog = new AcroniMessageBoxInput("Insira o nome de sua coleção:");
-            collectionNameDialog.ShowDialog();
-            
+
+            if (collectionNameDialog.ShowDialog() == DialogResult.Cancel)
+                this.Close();
 
             while (collectionNameDialog.Visible)
             {
                 await Task.Delay(10);
             }
 
-            if (Share.Collection.CollectionName != "")
+            if (!string.IsNullOrEmpty(Share.Collection.CollectionName))
             {
                 Collection newCollection = new Collection();
 
@@ -229,6 +230,7 @@ namespace AcroniUI
                 collectionUi.Click += new EventHandler(collectionUi_Click);
                 collectionUi.Location = new Point(16, 8 + countHeightCollection);
                 countHeightCollection += 179;
+                collectionUi.BackColor = newCollection.CollectionColor;
                 pnlScroll.Controls.Add(collectionUi);
                 SendToFile();
                 lblCollectionsQuantity.Text = Convert.ToString(Convert.ToInt16(lblCollectionsQuantity.Text) + 1);
@@ -244,7 +246,7 @@ namespace AcroniUI
             using (FileStream savearchive = new FileStream(Application.StartupPath + @"\" + SQLConnection.nome_usuario + ".acr", FileMode.OpenOrCreate))
             {
                 BinaryFormatter objectToByteArray = new BinaryFormatter();
-                objectToByteArray.Serialize(savearchive, Share.User.UserName);
+                objectToByteArray.Serialize(savearchive, Share.User);
             }
         }
 
@@ -316,10 +318,8 @@ namespace AcroniUI
                 selectColor.Close();
                 Share.Collection.CollectionColor = Color.Empty;
             }
-
             selectColor = new SelectColor();
             selectColor.Show();
-
             isSelectColorOpen = true;
 
             while (selectColor.Visible)
@@ -327,7 +327,6 @@ namespace AcroniUI
                 await Task.Delay(10);
                 if (Share.Collection.CollectionColor != Color.Empty)
                     ((sender as PictureBox).Parent as Panel).BackColor = Share.Collection.CollectionColor;
-
             }
 
             if (Share.Collection.CollectionColor != Color.Empty)

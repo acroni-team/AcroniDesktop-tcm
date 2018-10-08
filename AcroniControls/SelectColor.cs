@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AcroniLibrary.FileInfo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,7 +26,7 @@ namespace AcroniControls
             if (selected != null)
                 selected.FlatAppearance.BorderSize = 0;
             selected = (Button)sender;
-            //Compartilha.colorSelected = (sender as Button).BackColor;
+            Share.Collection.CollectionColor = (sender as Button).BackColor;
             (sender as Button).FlatAppearance.BorderSize = 1;
         }
 
@@ -40,7 +41,7 @@ namespace AcroniControls
             {
                 try
                 {
-                    //Compartilha.colorSelected = ColorTranslator.FromHtml(txtColor.Text);
+                    Share.Collection.CollectionColor = ColorTranslator.FromHtml(txtColor.Text);
                 }
                 catch (Exception)
                 {
@@ -53,7 +54,7 @@ namespace AcroniControls
                             else
                                 contRGB++;
                         }
-                        //Compartilha.colorSelected = Color.FromArgb(rgb[0], rgb[1], rgb[2]);
+                        Share.Collection.CollectionColor = Color.FromArgb(rgb[0], rgb[1], rgb[2]);
                     }
                     catch (Exception) { }
                 }
