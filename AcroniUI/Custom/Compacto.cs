@@ -164,11 +164,11 @@ namespace AcroniUI.Custom
             if (__HasBtnStyleFontColorBeenChosen)
                 FontColor = b.BackColor;
 
-            if (b == Ambar)
+            if (b.Tag.ToString().Contains("Ambar"))
                 lblColorName.Text = "Âmbar";
-            else if (b.Name.Contains("_"))
+            else if (b.Tag.ToString().Contains("_"))
                 lblColorName.Text = b.Name.Replace("_", " ");
-            else if (b == Preto)
+            else if (b.Tag.ToString().Contains("Preto"))
                 lblColorName.Text = "Preto (cor padrão)";
             else
                 lblColorName.Text = b.Name;
@@ -183,6 +183,9 @@ namespace AcroniUI.Custom
 
             if (__IsSlotAvailable[0])
             {
+                btnHist1.Tag = b.Tag;
+                lblColorName.Text = btnHist1.Tag.ToString();
+                btnHist1.Visible = true;
                 btnHist1.BackColor = b.BackColor;
                 __IsSlotAvailable[0] = false;
                 __IsSlotAvailable[1] = true;
@@ -190,6 +193,9 @@ namespace AcroniUI.Custom
 
             else if (__IsSlotAvailable[1])
             {
+                btnHist2.Tag = b.Tag;
+                lblColorName.Text = btnHist2.Tag.ToString();
+                btnHist2.Visible = true;
                 btnHist2.BackColor = b.BackColor;
                 __IsSlotAvailable[1] = false;
                 __IsSlotAvailable[2] = true;
@@ -197,6 +203,9 @@ namespace AcroniUI.Custom
 
             else if (__IsSlotAvailable[2])
             {
+                btnHist3.Tag = b.Tag;
+                lblColorName.Text = btnHist3.Tag.ToString();
+                btnHist3.Visible = true;
                 btnHist3.BackColor = b.BackColor;
                 __IsSlotAvailable[2] = false;
                 __IsSlotAvailable[3] = true;
@@ -204,6 +213,9 @@ namespace AcroniUI.Custom
 
             else if (__IsSlotAvailable[3])
             {
+                btnHist4.Tag = b.Tag;
+                lblColorName.Text = btnHist4.Tag.ToString();
+                btnHist4.Visible = true;
                 btnHist4.BackColor = b.BackColor;
                 __IsSlotAvailable[3] = false;
                 __IsSlotAvailable[0] = true;
