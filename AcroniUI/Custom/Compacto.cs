@@ -83,6 +83,7 @@ namespace AcroniUI.Custom
                 }
             }
 
+
         }
 
         #region btnVoltar
@@ -131,25 +132,10 @@ namespace AcroniUI.Custom
 
             if (Share.EditKeyboard)
                 LoadKeyboard();
-            else
-                ApplyShadowOnKeycaps();
 
         }
 
-        private void ApplyShadowOnKeycaps()
-        {
-            foreach (Control c in this.Controls)
-            {
-                if (c is Kbtn)
-                {
-                    try
-                    {
-                        Controls.Find("fundo" + c.Name, true)[0].BackColor = Color.FromArgb(90, c.BackColor);
-                    }
-                    catch (Exception) { }
-                }
-            }
-        }
+        
 
         #region Métodos do Color Picker
 
@@ -364,7 +350,10 @@ namespace AcroniUI.Custom
         {
             try
             {
-                Controls.Find("fundo" + keybutton.Name, true)[0].BackColor = Color.FromArgb(90, keybutton.BackColor);
+                if (!keybutton.BackColor.Equals(Color.FromArgb(26, 26, 26)))
+                {
+                    Controls.Find("fundo" + keybutton.Name, true)[0].BackColor = Color.FromArgb(90, keybutton.BackColor);
+                }
             }
             catch (Exception) { }
         }
@@ -406,11 +395,12 @@ namespace AcroniUI.Custom
                     {
                         if (keycap.Name.Equals(k.ID))
                         {
-                            keycap.Font = keycap.Font;
+                            keycap.ForeColor = k.ForeColor;
+                            keycap.Font = k.Font;
                             keycap.BackColor = k.Color;
                             keycap.Text = k.Text;
-
                             (keycap as Button).TextAlign = (ContentAlignment)k.ContentAlignment;
+
                             try
                             {
                                 Controls.Find("fundo" + keycap.Name, true)[0].BackColor = Color.FromArgb(90, keycap.BackColor);
@@ -539,7 +529,8 @@ namespace AcroniUI.Custom
                 {
                     {
                         keyboard.Keycaps.Add(new Keycap {
-                            ID = tecla.Name,
+                            ForeColor = tecla.ForeColor,
+                            ID = tecla.Name,                          
                             Text = tecla.Text,
                             Font = tecla.Font,
                             Color = tecla.BackColor,
@@ -563,7 +554,10 @@ namespace AcroniUI.Custom
                 Serializer.Serialize(savearchive, Share.User);
             }
         }
+
         #endregion
+
+       
     }
 }
 

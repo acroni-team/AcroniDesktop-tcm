@@ -98,15 +98,26 @@ namespace AcroniUI.Custom
             this.Cb1s = new AcroniControls.Kbtn();
             this.fundoCa1 = new System.Windows.Forms.Panel();
             this.fundoCa2 = new System.Windows.Forms.Panel();
+            this.lblCa1 = new System.Windows.Forms.Label();
             this.fundoCa3 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.fundoCa4 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
             this.fundoCa5 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
             this.fundoCa6 = new System.Windows.Forms.Panel();
+            this.label22 = new System.Windows.Forms.Label();
             this.fundoCa7 = new System.Windows.Forms.Panel();
+            this.label23 = new System.Windows.Forms.Label();
             this.fundoCa8 = new System.Windows.Forms.Panel();
+            this.label24 = new System.Windows.Forms.Label();
             this.fundoCa9 = new System.Windows.Forms.Panel();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
             this.fundoCa10 = new System.Windows.Forms.Panel();
+            this.label27 = new System.Windows.Forms.Label();
             this.fundoCa11 = new System.Windows.Forms.Panel();
+            this.label28 = new System.Windows.Forms.Label();
             this.fundoCa12 = new System.Windows.Forms.Panel();
             this.fundoCa13 = new System.Windows.Forms.Panel();
             this.fundoCb2 = new System.Windows.Forms.Panel();
@@ -226,7 +237,23 @@ namespace AcroniUI.Custom
             this.Roxo = new System.Windows.Forms.Button();
             this.ebtnOpenModuleTextIcons = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.ebtnOpenModuleBackground = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.fundoCa1.SuspendLayout();
+            this.fundoCa2.SuspendLayout();
+            this.fundoCa3.SuspendLayout();
+            this.fundoCa4.SuspendLayout();
+            this.fundoCa5.SuspendLayout();
+            this.fundoCa6.SuspendLayout();
+            this.fundoCa7.SuspendLayout();
+            this.fundoCa8.SuspendLayout();
             this.fundoCa9.SuspendLayout();
+            this.fundoCa10.SuspendLayout();
+            this.fundoCa11.SuspendLayout();
+            this.fundoCa12.SuspendLayout();
+            this.fundoCa13.SuspendLayout();
+            this.fundoCb2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxKeyboardBackground)).BeginInit();
             this.pnlCustomizingMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignRight)).BeginInit();
@@ -1088,13 +1115,12 @@ namespace AcroniUI.Custom
             this.Ca1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Ca1.FlatAppearance.BorderSize = 0;
             this.Ca1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ca1.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ca1.Font = new System.Drawing.Font("Open Sans", 10F);
             this.Ca1.ForeColor = System.Drawing.Color.White;
-            this.Ca1.Location = new System.Drawing.Point(39, 224);
+            this.Ca1.Location = new System.Drawing.Point(7, 4);
             this.Ca1.Name = "Ca1";
             this.Ca1.Size = new System.Drawing.Size(38, 40);
             this.Ca1.TabIndex = 65;
-            this.Ca1.Text = "‘";
             this.Ca1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.Ca1.UseVisualStyleBackColor = false;
             this.Ca1.Click += new System.EventHandler(this.kbtn_Click);
@@ -1108,7 +1134,7 @@ namespace AcroniUI.Custom
             this.Ca2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ca2.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca2.ForeColor = System.Drawing.Color.White;
-            this.Ca2.Location = new System.Drawing.Point(94, 224);
+            this.Ca2.Location = new System.Drawing.Point(7, 4);
             this.Ca2.Name = "Ca2";
             this.Ca2.Size = new System.Drawing.Size(38, 40);
             this.Ca2.TabIndex = 66;
@@ -1126,11 +1152,10 @@ namespace AcroniUI.Custom
             this.Ca3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ca3.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca3.ForeColor = System.Drawing.Color.White;
-            this.Ca3.Location = new System.Drawing.Point(150, 224);
+            this.Ca3.Location = new System.Drawing.Point(7, 4);
             this.Ca3.Name = "Ca3";
             this.Ca3.Size = new System.Drawing.Size(38, 40);
             this.Ca3.TabIndex = 67;
-            this.Ca3.Text = "2";
             this.Ca3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.Ca3.UseVisualStyleBackColor = false;
             this.Ca3.Click += new System.EventHandler(this.kbtn_Click);
@@ -1144,11 +1169,10 @@ namespace AcroniUI.Custom
             this.Ca4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ca4.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca4.ForeColor = System.Drawing.Color.White;
-            this.Ca4.Location = new System.Drawing.Point(205, 224);
+            this.Ca4.Location = new System.Drawing.Point(7, 4);
             this.Ca4.Name = "Ca4";
             this.Ca4.Size = new System.Drawing.Size(38, 40);
             this.Ca4.TabIndex = 68;
-            this.Ca4.Text = "3";
             this.Ca4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.Ca4.UseVisualStyleBackColor = false;
             this.Ca4.Click += new System.EventHandler(this.kbtn_Click);
@@ -1162,11 +1186,10 @@ namespace AcroniUI.Custom
             this.Ca5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ca5.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca5.ForeColor = System.Drawing.Color.White;
-            this.Ca5.Location = new System.Drawing.Point(261, 224);
+            this.Ca5.Location = new System.Drawing.Point(7, 4);
             this.Ca5.Name = "Ca5";
             this.Ca5.Size = new System.Drawing.Size(38, 40);
             this.Ca5.TabIndex = 69;
-            this.Ca5.Text = "4";
             this.Ca5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.Ca5.UseVisualStyleBackColor = false;
             this.Ca5.Click += new System.EventHandler(this.kbtn_Click);
@@ -1180,11 +1203,10 @@ namespace AcroniUI.Custom
             this.Ca6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ca6.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca6.ForeColor = System.Drawing.Color.White;
-            this.Ca6.Location = new System.Drawing.Point(316, 224);
+            this.Ca6.Location = new System.Drawing.Point(7, 4);
             this.Ca6.Name = "Ca6";
             this.Ca6.Size = new System.Drawing.Size(38, 40);
             this.Ca6.TabIndex = 70;
-            this.Ca6.Text = "5";
             this.Ca6.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.Ca6.UseVisualStyleBackColor = false;
             this.Ca6.Click += new System.EventHandler(this.kbtn_Click);
@@ -1198,11 +1220,10 @@ namespace AcroniUI.Custom
             this.Ca7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ca7.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca7.ForeColor = System.Drawing.Color.White;
-            this.Ca7.Location = new System.Drawing.Point(372, 224);
+            this.Ca7.Location = new System.Drawing.Point(7, 4);
             this.Ca7.Name = "Ca7";
             this.Ca7.Size = new System.Drawing.Size(38, 40);
             this.Ca7.TabIndex = 71;
-            this.Ca7.Text = "6";
             this.Ca7.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.Ca7.UseVisualStyleBackColor = false;
             this.Ca7.Click += new System.EventHandler(this.kbtn_Click);
@@ -1216,11 +1237,10 @@ namespace AcroniUI.Custom
             this.Ca8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ca8.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca8.ForeColor = System.Drawing.Color.White;
-            this.Ca8.Location = new System.Drawing.Point(428, 224);
+            this.Ca8.Location = new System.Drawing.Point(7, 4);
             this.Ca8.Name = "Ca8";
             this.Ca8.Size = new System.Drawing.Size(38, 40);
             this.Ca8.TabIndex = 72;
-            this.Ca8.Text = "7";
             this.Ca8.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.Ca8.UseVisualStyleBackColor = false;
             this.Ca8.Click += new System.EventHandler(this.kbtn_Click);
@@ -1238,7 +1258,6 @@ namespace AcroniUI.Custom
             this.Ca9.Name = "Ca9";
             this.Ca9.Size = new System.Drawing.Size(38, 40);
             this.Ca9.TabIndex = 73;
-            this.Ca9.Text = "8";
             this.Ca9.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.Ca9.UseVisualStyleBackColor = false;
             this.Ca9.Click += new System.EventHandler(this.kbtn_Click);
@@ -1252,11 +1271,10 @@ namespace AcroniUI.Custom
             this.Ca10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ca10.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca10.ForeColor = System.Drawing.Color.White;
-            this.Ca10.Location = new System.Drawing.Point(539, 224);
+            this.Ca10.Location = new System.Drawing.Point(7, 4);
             this.Ca10.Name = "Ca10";
             this.Ca10.Size = new System.Drawing.Size(38, 40);
             this.Ca10.TabIndex = 74;
-            this.Ca10.Text = "9";
             this.Ca10.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.Ca10.UseVisualStyleBackColor = false;
             this.Ca10.Click += new System.EventHandler(this.kbtn_Click);
@@ -1270,11 +1288,10 @@ namespace AcroniUI.Custom
             this.Ca11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ca11.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca11.ForeColor = System.Drawing.Color.White;
-            this.Ca11.Location = new System.Drawing.Point(595, 224);
+            this.Ca11.Location = new System.Drawing.Point(7, 4);
             this.Ca11.Name = "Ca11";
             this.Ca11.Size = new System.Drawing.Size(38, 40);
             this.Ca11.TabIndex = 75;
-            this.Ca11.Text = "0";
             this.Ca11.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.Ca11.UseVisualStyleBackColor = false;
             this.Ca11.Click += new System.EventHandler(this.kbtn_Click);
@@ -1288,11 +1305,10 @@ namespace AcroniUI.Custom
             this.Ca12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ca12.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca12.ForeColor = System.Drawing.Color.White;
-            this.Ca12.Location = new System.Drawing.Point(650, 224);
+            this.Ca12.Location = new System.Drawing.Point(7, 4);
             this.Ca12.Name = "Ca12";
             this.Ca12.Size = new System.Drawing.Size(38, 40);
             this.Ca12.TabIndex = 76;
-            this.Ca12.Text = "–";
             this.Ca12.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.Ca12.UseVisualStyleBackColor = false;
             this.Ca12.Click += new System.EventHandler(this.kbtn_Click);
@@ -1306,11 +1322,10 @@ namespace AcroniUI.Custom
             this.Ca13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ca13.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ca13.ForeColor = System.Drawing.Color.White;
-            this.Ca13.Location = new System.Drawing.Point(705, 224);
+            this.Ca13.Location = new System.Drawing.Point(7, 4);
             this.Ca13.Name = "Ca13";
             this.Ca13.Size = new System.Drawing.Size(38, 40);
             this.Ca13.TabIndex = 77;
-            this.Ca13.Text = "=";
             this.Ca13.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.Ca13.UseVisualStyleBackColor = false;
             this.Ca13.Click += new System.EventHandler(this.kbtn_Click);
@@ -1342,7 +1357,7 @@ namespace AcroniUI.Custom
             this.Cb2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cb2.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cb2.ForeColor = System.Drawing.Color.White;
-            this.Cb2.Location = new System.Drawing.Point(122, 282);
+            this.Cb2.Location = new System.Drawing.Point(7, 4);
             this.Cb2.Name = "Cb2";
             this.Cb2.Size = new System.Drawing.Size(38, 40);
             this.Cb2.TabIndex = 79;
@@ -1372,7 +1387,9 @@ namespace AcroniUI.Custom
             // 
             // fundoCa1
             // 
-            this.fundoCa1.BackColor = System.Drawing.Color.Black;
+            this.fundoCa1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.fundoCa1.Controls.Add(this.label31);
+            this.fundoCa1.Controls.Add(this.Ca1);
             this.fundoCa1.Location = new System.Drawing.Point(32, 219);
             this.fundoCa1.Name = "fundoCa1";
             this.fundoCa1.Size = new System.Drawing.Size(52, 56);
@@ -1380,88 +1397,220 @@ namespace AcroniUI.Custom
             // 
             // fundoCa2
             // 
-            this.fundoCa2.BackColor = System.Drawing.Color.Black;
+            this.fundoCa2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.fundoCa2.Controls.Add(this.lblCa1);
+            this.fundoCa2.Controls.Add(this.Ca2);
             this.fundoCa2.Location = new System.Drawing.Point(87, 219);
             this.fundoCa2.Name = "fundoCa2";
             this.fundoCa2.Size = new System.Drawing.Size(52, 56);
             this.fundoCa2.TabIndex = 1;
             // 
+            // lblCa1
+            // 
+            this.lblCa1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.lblCa1.Font = new System.Drawing.Font("Open Sans", 10F);
+            this.lblCa1.Location = new System.Drawing.Point(9, 4);
+            this.lblCa1.Name = "lblCa1";
+            this.lblCa1.Size = new System.Drawing.Size(29, 40);
+            this.lblCa1.TabIndex = 83;
+            this.lblCa1.Text = "!\r\n1";
+            // 
             // fundoCa3
             // 
-            this.fundoCa3.BackColor = System.Drawing.Color.Black;
+            this.fundoCa3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.fundoCa3.Controls.Add(this.label10);
+            this.fundoCa3.Controls.Add(this.Ca3);
             this.fundoCa3.Location = new System.Drawing.Point(143, 219);
             this.fundoCa3.Name = "fundoCa3";
             this.fundoCa3.Size = new System.Drawing.Size(52, 56);
             this.fundoCa3.TabIndex = 1;
             // 
+            // label10
+            // 
+            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.label10.Font = new System.Drawing.Font("Open Sans", 10F);
+            this.label10.Location = new System.Drawing.Point(9, 4);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(29, 40);
+            this.label10.TabIndex = 84;
+            this.label10.Text = "@\r\n2\r\n";
+            // 
             // fundoCa4
             // 
-            this.fundoCa4.BackColor = System.Drawing.Color.Black;
+            this.fundoCa4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.fundoCa4.Controls.Add(this.label11);
+            this.fundoCa4.Controls.Add(this.Ca4);
             this.fundoCa4.Location = new System.Drawing.Point(198, 219);
             this.fundoCa4.Name = "fundoCa4";
             this.fundoCa4.Size = new System.Drawing.Size(52, 56);
             this.fundoCa4.TabIndex = 2;
             // 
+            // label11
+            // 
+            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.label11.Font = new System.Drawing.Font("Open Sans", 10F);
+            this.label11.Location = new System.Drawing.Point(9, 4);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(29, 40);
+            this.label11.TabIndex = 85;
+            this.label11.Text = "#\r\n3\r\n";
+            // 
             // fundoCa5
             // 
-            this.fundoCa5.BackColor = System.Drawing.Color.Black;
+            this.fundoCa5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.fundoCa5.Controls.Add(this.label12);
+            this.fundoCa5.Controls.Add(this.Ca5);
             this.fundoCa5.Location = new System.Drawing.Point(254, 219);
             this.fundoCa5.Name = "fundoCa5";
             this.fundoCa5.Size = new System.Drawing.Size(52, 56);
             this.fundoCa5.TabIndex = 3;
             // 
+            // label12
+            // 
+            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.label12.Font = new System.Drawing.Font("Open Sans", 10F);
+            this.label12.Location = new System.Drawing.Point(9, 4);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(29, 40);
+            this.label12.TabIndex = 85;
+            this.label12.Text = "$\r\n4\r\n";
+            // 
             // fundoCa6
             // 
-            this.fundoCa6.BackColor = System.Drawing.Color.Black;
+            this.fundoCa6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.fundoCa6.Controls.Add(this.label22);
+            this.fundoCa6.Controls.Add(this.Ca6);
             this.fundoCa6.Location = new System.Drawing.Point(309, 219);
             this.fundoCa6.Name = "fundoCa6";
             this.fundoCa6.Size = new System.Drawing.Size(52, 56);
             this.fundoCa6.TabIndex = 4;
             // 
+            // label22
+            // 
+            this.label22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.label22.Font = new System.Drawing.Font("Open Sans", 10F);
+            this.label22.Location = new System.Drawing.Point(9, 4);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(29, 40);
+            this.label22.TabIndex = 85;
+            this.label22.Text = "%\r\n5\r\n";
+            // 
             // fundoCa7
             // 
-            this.fundoCa7.BackColor = System.Drawing.Color.Black;
+            this.fundoCa7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.fundoCa7.Controls.Add(this.label23);
+            this.fundoCa7.Controls.Add(this.Ca7);
             this.fundoCa7.Location = new System.Drawing.Point(365, 219);
             this.fundoCa7.Name = "fundoCa7";
             this.fundoCa7.Size = new System.Drawing.Size(52, 56);
             this.fundoCa7.TabIndex = 2;
             // 
+            // label23
+            // 
+            this.label23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.label23.Font = new System.Drawing.Font("Open Sans", 10F);
+            this.label23.Location = new System.Drawing.Point(9, 4);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(29, 40);
+            this.label23.TabIndex = 86;
+            this.label23.Text = "¨\r\n6";
+            // 
             // fundoCa8
             // 
-            this.fundoCa8.BackColor = System.Drawing.Color.Black;
+            this.fundoCa8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.fundoCa8.Controls.Add(this.label24);
+            this.fundoCa8.Controls.Add(this.Ca8);
             this.fundoCa8.Location = new System.Drawing.Point(421, 219);
             this.fundoCa8.Name = "fundoCa8";
             this.fundoCa8.Size = new System.Drawing.Size(52, 56);
             this.fundoCa8.TabIndex = 3;
             // 
+            // label24
+            // 
+            this.label24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.label24.Font = new System.Drawing.Font("Open Sans", 10F);
+            this.label24.Location = new System.Drawing.Point(9, 4);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(30, 40);
+            this.label24.TabIndex = 86;
+            this.label24.Text = "&\r\n7";
+            // 
             // fundoCa9
             // 
-            this.fundoCa9.BackColor = System.Drawing.Color.Black;
+            this.fundoCa9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.fundoCa9.Controls.Add(this.label26);
+            this.fundoCa9.Controls.Add(this.label25);
             this.fundoCa9.Controls.Add(this.Ca9);
             this.fundoCa9.Location = new System.Drawing.Point(476, 219);
             this.fundoCa9.Name = "fundoCa9";
             this.fundoCa9.Size = new System.Drawing.Size(52, 56);
             this.fundoCa9.TabIndex = 4;
             // 
+            // label26
+            // 
+            this.label26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.label26.Font = new System.Drawing.Font("Open Sans", 10F);
+            this.label26.Location = new System.Drawing.Point(9, 4);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(29, 40);
+            this.label26.TabIndex = 87;
+            this.label26.Text = "*\r\n8\r\n";
+            // 
+            // label25
+            // 
+            this.label25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.label25.Font = new System.Drawing.Font("Open Sans", 10F);
+            this.label25.Location = new System.Drawing.Point(9, 4);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(29, 40);
+            this.label25.TabIndex = 86;
+            this.label25.Text = "*\r\n8\r\n";
+            // 
             // fundoCa10
             // 
-            this.fundoCa10.BackColor = System.Drawing.Color.Black;
+            this.fundoCa10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.fundoCa10.Controls.Add(this.label27);
+            this.fundoCa10.Controls.Add(this.Ca10);
             this.fundoCa10.Location = new System.Drawing.Point(532, 219);
             this.fundoCa10.Name = "fundoCa10";
             this.fundoCa10.Size = new System.Drawing.Size(52, 56);
             this.fundoCa10.TabIndex = 5;
             // 
+            // label27
+            // 
+            this.label27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.label27.Font = new System.Drawing.Font("Open Sans", 10F);
+            this.label27.Location = new System.Drawing.Point(9, 4);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(29, 40);
+            this.label27.TabIndex = 87;
+            this.label27.Text = "(\r\n9\r\n";
+            // 
             // fundoCa11
             // 
-            this.fundoCa11.BackColor = System.Drawing.Color.Black;
+            this.fundoCa11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.fundoCa11.Controls.Add(this.label28);
+            this.fundoCa11.Controls.Add(this.Ca11);
             this.fundoCa11.Location = new System.Drawing.Point(588, 219);
             this.fundoCa11.Name = "fundoCa11";
             this.fundoCa11.Size = new System.Drawing.Size(52, 56);
             this.fundoCa11.TabIndex = 6;
             // 
+            // label28
+            // 
+            this.label28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.label28.Font = new System.Drawing.Font("Open Sans", 10F);
+            this.label28.Location = new System.Drawing.Point(7, 4);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(29, 40);
+            this.label28.TabIndex = 87;
+            this.label28.Text = ")\r\n0\r\n";
+            // 
             // fundoCa12
             // 
-            this.fundoCa12.BackColor = System.Drawing.Color.Black;
+            this.fundoCa12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.fundoCa12.Controls.Add(this.label29);
+            this.fundoCa12.Controls.Add(this.Ca12);
             this.fundoCa12.Location = new System.Drawing.Point(643, 219);
             this.fundoCa12.Name = "fundoCa12";
             this.fundoCa12.Size = new System.Drawing.Size(52, 56);
@@ -1469,7 +1618,9 @@ namespace AcroniUI.Custom
             // 
             // fundoCa13
             // 
-            this.fundoCa13.BackColor = System.Drawing.Color.Black;
+            this.fundoCa13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.fundoCa13.Controls.Add(this.label30);
+            this.fundoCa13.Controls.Add(this.Ca13);
             this.fundoCa13.Location = new System.Drawing.Point(698, 219);
             this.fundoCa13.Name = "fundoCa13";
             this.fundoCa13.Size = new System.Drawing.Size(52, 56);
@@ -1477,7 +1628,8 @@ namespace AcroniUI.Custom
             // 
             // fundoCb2
             // 
-            this.fundoCb2.BackColor = System.Drawing.Color.Black;
+            this.fundoCb2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.fundoCb2.Controls.Add(this.Cb2);
             this.fundoCb2.Location = new System.Drawing.Point(115, 277);
             this.fundoCb2.Name = "fundoCb2";
             this.fundoCb2.Size = new System.Drawing.Size(52, 56);
@@ -1485,7 +1637,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCb3
             // 
-            this.fundoCb3.BackColor = System.Drawing.Color.Black;
+            this.fundoCb3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCb3.Location = new System.Drawing.Point(172, 277);
             this.fundoCb3.Name = "fundoCb3";
             this.fundoCb3.Size = new System.Drawing.Size(52, 56);
@@ -1493,7 +1645,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCb4
             // 
-            this.fundoCb4.BackColor = System.Drawing.Color.Black;
+            this.fundoCb4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCb4.Location = new System.Drawing.Point(226, 277);
             this.fundoCb4.Name = "fundoCb4";
             this.fundoCb4.Size = new System.Drawing.Size(52, 56);
@@ -1501,7 +1653,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCb5
             // 
-            this.fundoCb5.BackColor = System.Drawing.Color.Black;
+            this.fundoCb5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCb5.Location = new System.Drawing.Point(282, 277);
             this.fundoCb5.Name = "fundoCb5";
             this.fundoCb5.Size = new System.Drawing.Size(52, 56);
@@ -1509,7 +1661,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCb6
             // 
-            this.fundoCb6.BackColor = System.Drawing.Color.Black;
+            this.fundoCb6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCb6.Location = new System.Drawing.Point(337, 277);
             this.fundoCb6.Name = "fundoCb6";
             this.fundoCb6.Size = new System.Drawing.Size(52, 56);
@@ -1517,7 +1669,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCb7
             // 
-            this.fundoCb7.BackColor = System.Drawing.Color.Black;
+            this.fundoCb7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCb7.Location = new System.Drawing.Point(393, 277);
             this.fundoCb7.Name = "fundoCb7";
             this.fundoCb7.Size = new System.Drawing.Size(52, 56);
@@ -1525,7 +1677,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCb8
             // 
-            this.fundoCb8.BackColor = System.Drawing.Color.Black;
+            this.fundoCb8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCb8.Location = new System.Drawing.Point(447, 277);
             this.fundoCb8.Name = "fundoCb8";
             this.fundoCb8.Size = new System.Drawing.Size(52, 56);
@@ -1533,7 +1685,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCb9
             // 
-            this.fundoCb9.BackColor = System.Drawing.Color.Black;
+            this.fundoCb9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCb9.Location = new System.Drawing.Point(503, 277);
             this.fundoCb9.Name = "fundoCb9";
             this.fundoCb9.Size = new System.Drawing.Size(52, 56);
@@ -1541,7 +1693,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCb10
             // 
-            this.fundoCb10.BackColor = System.Drawing.Color.Black;
+            this.fundoCb10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCb10.Location = new System.Drawing.Point(560, 277);
             this.fundoCb10.Name = "fundoCb10";
             this.fundoCb10.Size = new System.Drawing.Size(52, 56);
@@ -1549,7 +1701,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCb11
             // 
-            this.fundoCb11.BackColor = System.Drawing.Color.Black;
+            this.fundoCb11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCb11.Location = new System.Drawing.Point(615, 277);
             this.fundoCb11.Name = "fundoCb11";
             this.fundoCb11.Size = new System.Drawing.Size(52, 56);
@@ -1557,7 +1709,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCb12
             // 
-            this.fundoCb12.BackColor = System.Drawing.Color.Black;
+            this.fundoCb12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCb12.Location = new System.Drawing.Point(671, 277);
             this.fundoCb12.Name = "fundoCb12";
             this.fundoCb12.Size = new System.Drawing.Size(52, 56);
@@ -1565,7 +1717,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCb13
             // 
-            this.fundoCb13.BackColor = System.Drawing.Color.Black;
+            this.fundoCb13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCb13.Location = new System.Drawing.Point(726, 277);
             this.fundoCb13.Name = "fundoCb13";
             this.fundoCb13.Size = new System.Drawing.Size(52, 56);
@@ -1573,7 +1725,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCc2
             // 
-            this.fundoCc2.BackColor = System.Drawing.Color.Black;
+            this.fundoCc2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCc2.Location = new System.Drawing.Point(128, 336);
             this.fundoCc2.Name = "fundoCc2";
             this.fundoCc2.Size = new System.Drawing.Size(52, 56);
@@ -1581,7 +1733,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCc3
             // 
-            this.fundoCc3.BackColor = System.Drawing.Color.Black;
+            this.fundoCc3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCc3.Location = new System.Drawing.Point(184, 336);
             this.fundoCc3.Name = "fundoCc3";
             this.fundoCc3.Size = new System.Drawing.Size(52, 56);
@@ -1589,7 +1741,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCc4
             // 
-            this.fundoCc4.BackColor = System.Drawing.Color.Black;
+            this.fundoCc4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCc4.Location = new System.Drawing.Point(239, 336);
             this.fundoCc4.Name = "fundoCc4";
             this.fundoCc4.Size = new System.Drawing.Size(52, 56);
@@ -1597,7 +1749,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCc5
             // 
-            this.fundoCc5.BackColor = System.Drawing.Color.Black;
+            this.fundoCc5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCc5.Location = new System.Drawing.Point(295, 336);
             this.fundoCc5.Name = "fundoCc5";
             this.fundoCc5.Size = new System.Drawing.Size(52, 56);
@@ -1605,7 +1757,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCc6
             // 
-            this.fundoCc6.BackColor = System.Drawing.Color.Black;
+            this.fundoCc6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCc6.Location = new System.Drawing.Point(350, 336);
             this.fundoCc6.Name = "fundoCc6";
             this.fundoCc6.Size = new System.Drawing.Size(52, 56);
@@ -1613,7 +1765,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCc7
             // 
-            this.fundoCc7.BackColor = System.Drawing.Color.Black;
+            this.fundoCc7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCc7.Location = new System.Drawing.Point(406, 336);
             this.fundoCc7.Name = "fundoCc7";
             this.fundoCc7.Size = new System.Drawing.Size(52, 56);
@@ -1621,7 +1773,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCc8
             // 
-            this.fundoCc8.BackColor = System.Drawing.Color.Black;
+            this.fundoCc8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCc8.Location = new System.Drawing.Point(461, 336);
             this.fundoCc8.Name = "fundoCc8";
             this.fundoCc8.Size = new System.Drawing.Size(52, 56);
@@ -1629,7 +1781,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCc9
             // 
-            this.fundoCc9.BackColor = System.Drawing.Color.Black;
+            this.fundoCc9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCc9.Location = new System.Drawing.Point(517, 336);
             this.fundoCc9.Name = "fundoCc9";
             this.fundoCc9.Size = new System.Drawing.Size(52, 56);
@@ -1637,7 +1789,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCc10
             // 
-            this.fundoCc10.BackColor = System.Drawing.Color.Black;
+            this.fundoCc10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCc10.Location = new System.Drawing.Point(572, 336);
             this.fundoCc10.Name = "fundoCc10";
             this.fundoCc10.Size = new System.Drawing.Size(52, 56);
@@ -1645,7 +1797,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCc11
             // 
-            this.fundoCc11.BackColor = System.Drawing.Color.Black;
+            this.fundoCc11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCc11.Location = new System.Drawing.Point(628, 336);
             this.fundoCc11.Name = "fundoCc11";
             this.fundoCc11.Size = new System.Drawing.Size(52, 56);
@@ -1653,7 +1805,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCc12
             // 
-            this.fundoCc12.BackColor = System.Drawing.Color.Black;
+            this.fundoCc12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCc12.Location = new System.Drawing.Point(683, 336);
             this.fundoCc12.Name = "fundoCc12";
             this.fundoCc12.Size = new System.Drawing.Size(52, 56);
@@ -1661,7 +1813,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCc13
             // 
-            this.fundoCc13.BackColor = System.Drawing.Color.Black;
+            this.fundoCc13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCc13.Location = new System.Drawing.Point(738, 336);
             this.fundoCc13.Name = "fundoCc13";
             this.fundoCc13.Size = new System.Drawing.Size(52, 56);
@@ -1669,7 +1821,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCd2
             // 
-            this.fundoCd2.BackColor = System.Drawing.Color.Black;
+            this.fundoCd2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCd2.Location = new System.Drawing.Point(99, 394);
             this.fundoCd2.Name = "fundoCd2";
             this.fundoCd2.Size = new System.Drawing.Size(52, 56);
@@ -1677,7 +1829,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCd3
             // 
-            this.fundoCd3.BackColor = System.Drawing.Color.Black;
+            this.fundoCd3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCd3.Location = new System.Drawing.Point(154, 394);
             this.fundoCd3.Name = "fundoCd3";
             this.fundoCd3.Size = new System.Drawing.Size(52, 56);
@@ -1685,7 +1837,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCd4
             // 
-            this.fundoCd4.BackColor = System.Drawing.Color.Black;
+            this.fundoCd4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCd4.Location = new System.Drawing.Point(210, 394);
             this.fundoCd4.Name = "fundoCd4";
             this.fundoCd4.Size = new System.Drawing.Size(52, 56);
@@ -1693,7 +1845,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCd5
             // 
-            this.fundoCd5.BackColor = System.Drawing.Color.Black;
+            this.fundoCd5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCd5.Location = new System.Drawing.Point(266, 394);
             this.fundoCd5.Name = "fundoCd5";
             this.fundoCd5.Size = new System.Drawing.Size(52, 56);
@@ -1701,7 +1853,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCd6
             // 
-            this.fundoCd6.BackColor = System.Drawing.Color.Black;
+            this.fundoCd6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCd6.Location = new System.Drawing.Point(321, 394);
             this.fundoCd6.Name = "fundoCd6";
             this.fundoCd6.Size = new System.Drawing.Size(52, 56);
@@ -1709,7 +1861,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCd7
             // 
-            this.fundoCd7.BackColor = System.Drawing.Color.Black;
+            this.fundoCd7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCd7.Location = new System.Drawing.Point(376, 394);
             this.fundoCd7.Name = "fundoCd7";
             this.fundoCd7.Size = new System.Drawing.Size(52, 56);
@@ -1717,7 +1869,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCe5
             // 
-            this.fundoCe5.BackColor = System.Drawing.Color.Black;
+            this.fundoCe5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCe5.Location = new System.Drawing.Point(576, 452);
             this.fundoCe5.Name = "fundoCe5";
             this.fundoCe5.Size = new System.Drawing.Size(64, 56);
@@ -1725,7 +1877,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCd8
             // 
-            this.fundoCd8.BackColor = System.Drawing.Color.Black;
+            this.fundoCd8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCd8.Location = new System.Drawing.Point(432, 394);
             this.fundoCd8.Name = "fundoCd8";
             this.fundoCd8.Size = new System.Drawing.Size(52, 56);
@@ -1733,7 +1885,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCd9
             // 
-            this.fundoCd9.BackColor = System.Drawing.Color.Black;
+            this.fundoCd9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCd9.Location = new System.Drawing.Point(488, 394);
             this.fundoCd9.Name = "fundoCd9";
             this.fundoCd9.Size = new System.Drawing.Size(52, 56);
@@ -1741,7 +1893,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCd10
             // 
-            this.fundoCd10.BackColor = System.Drawing.Color.Black;
+            this.fundoCd10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCd10.Location = new System.Drawing.Point(543, 394);
             this.fundoCd10.Name = "fundoCd10";
             this.fundoCd10.Size = new System.Drawing.Size(52, 56);
@@ -1749,7 +1901,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCd11
             // 
-            this.fundoCd11.BackColor = System.Drawing.Color.Black;
+            this.fundoCd11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCd11.Location = new System.Drawing.Point(599, 394);
             this.fundoCd11.Name = "fundoCd11";
             this.fundoCd11.Size = new System.Drawing.Size(52, 56);
@@ -1757,7 +1909,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCd12
             // 
-            this.fundoCd12.BackColor = System.Drawing.Color.Black;
+            this.fundoCd12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCd12.Location = new System.Drawing.Point(655, 394);
             this.fundoCd12.Name = "fundoCd12";
             this.fundoCd12.Size = new System.Drawing.Size(52, 56);
@@ -1765,7 +1917,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCd13
             // 
-            this.fundoCd13.BackColor = System.Drawing.Color.Black;
+            this.fundoCd13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCd13.Location = new System.Drawing.Point(710, 394);
             this.fundoCd13.Name = "fundoCd13";
             this.fundoCd13.Size = new System.Drawing.Size(52, 56);
@@ -1773,7 +1925,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCe6
             // 
-            this.fundoCe6.BackColor = System.Drawing.Color.Black;
+            this.fundoCe6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCe6.Location = new System.Drawing.Point(645, 452);
             this.fundoCe6.Name = "fundoCe6";
             this.fundoCe6.Size = new System.Drawing.Size(64, 56);
@@ -1781,7 +1933,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCe7
             // 
-            this.fundoCe7.BackColor = System.Drawing.Color.Black;
+            this.fundoCe7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCe7.Location = new System.Drawing.Point(715, 452);
             this.fundoCe7.Name = "fundoCe7";
             this.fundoCe7.Size = new System.Drawing.Size(64, 56);
@@ -1789,7 +1941,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCe2s
             // 
-            this.fundoCe2s.BackColor = System.Drawing.Color.Black;
+            this.fundoCe2s.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCe2s.Location = new System.Drawing.Point(113, 452);
             this.fundoCe2s.Name = "fundoCe2s";
             this.fundoCe2s.Size = new System.Drawing.Size(66, 56);
@@ -1797,7 +1949,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCe3
             // 
-            this.fundoCe3.BackColor = System.Drawing.Color.Black;
+            this.fundoCe3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.fundoCe3.Location = new System.Drawing.Point(183, 452);
             this.fundoCe3.Name = "fundoCe3";
             this.fundoCe3.Size = new System.Drawing.Size(66, 56);
@@ -2898,6 +3050,36 @@ namespace AcroniUI.Custom
             this.ebtnOpenModuleBackground.ElipseRadius = 10;
             this.ebtnOpenModuleBackground.TargetControl = this.btnOpenModuleBackground;
             // 
+            // label29
+            // 
+            this.label29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.label29.Font = new System.Drawing.Font("Open Sans", 10F);
+            this.label29.Location = new System.Drawing.Point(9, 4);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(29, 40);
+            this.label29.TabIndex = 88;
+            this.label29.Text = "_\r\n-\r\n";
+            // 
+            // label30
+            // 
+            this.label30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.label30.Font = new System.Drawing.Font("Open Sans", 10F);
+            this.label30.Location = new System.Drawing.Point(9, 4);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(32, 40);
+            this.label30.TabIndex = 89;
+            this.label30.Text = "+\r\n=  §\r\n";
+            // 
+            // label31
+            // 
+            this.label31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.label31.Font = new System.Drawing.Font("Open Sans", 10F);
+            this.label31.Location = new System.Drawing.Point(9, 4);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(29, 40);
+            this.label31.TabIndex = 84;
+            this.label31.Text = "\"\r\n\'";
+            // 
             // Compacto
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -2908,20 +3090,7 @@ namespace AcroniUI.Custom
             this.Controls.Add(this.pnlBodyColorpicker);
             this.Controls.Add(this.pnlCustomizingMenu);
             this.Controls.Add(this.Cb1s);
-            this.Controls.Add(this.Cb2);
             this.Controls.Add(this.Ca14s);
-            this.Controls.Add(this.Ca13);
-            this.Controls.Add(this.Ca12);
-            this.Controls.Add(this.Ca11);
-            this.Controls.Add(this.Ca10);
-            this.Controls.Add(this.Ca8);
-            this.Controls.Add(this.Ca7);
-            this.Controls.Add(this.Ca6);
-            this.Controls.Add(this.Ca5);
-            this.Controls.Add(this.Ca4);
-            this.Controls.Add(this.Ca3);
-            this.Controls.Add(this.Ca2);
-            this.Controls.Add(this.Ca1);
             this.Controls.Add(this.Cd14);
             this.Controls.Add(this.Ce8);
             this.Controls.Add(this.Ce7);
@@ -3130,26 +3299,26 @@ namespace AcroniUI.Custom
             this.Controls.SetChildIndex(this.Ce7, 0);
             this.Controls.SetChildIndex(this.Ce8, 0);
             this.Controls.SetChildIndex(this.Cd14, 0);
-            this.Controls.SetChildIndex(this.Ca1, 0);
-            this.Controls.SetChildIndex(this.Ca2, 0);
-            this.Controls.SetChildIndex(this.Ca3, 0);
-            this.Controls.SetChildIndex(this.Ca4, 0);
-            this.Controls.SetChildIndex(this.Ca5, 0);
-            this.Controls.SetChildIndex(this.Ca6, 0);
-            this.Controls.SetChildIndex(this.Ca7, 0);
-            this.Controls.SetChildIndex(this.Ca8, 0);
-            this.Controls.SetChildIndex(this.Ca10, 0);
-            this.Controls.SetChildIndex(this.Ca11, 0);
-            this.Controls.SetChildIndex(this.Ca12, 0);
-            this.Controls.SetChildIndex(this.Ca13, 0);
             this.Controls.SetChildIndex(this.Ca14s, 0);
-            this.Controls.SetChildIndex(this.Cb2, 0);
             this.Controls.SetChildIndex(this.Cb1s, 0);
             this.Controls.SetChildIndex(this.pnlCustomizingMenu, 0);
             this.Controls.SetChildIndex(this.pnlBodyColorpicker, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.pnlHeadColorpicker, 0);
+            this.fundoCa1.ResumeLayout(false);
+            this.fundoCa2.ResumeLayout(false);
+            this.fundoCa3.ResumeLayout(false);
+            this.fundoCa4.ResumeLayout(false);
+            this.fundoCa5.ResumeLayout(false);
+            this.fundoCa6.ResumeLayout(false);
+            this.fundoCa7.ResumeLayout(false);
+            this.fundoCa8.ResumeLayout(false);
             this.fundoCa9.ResumeLayout(false);
+            this.fundoCa10.ResumeLayout(false);
+            this.fundoCa11.ResumeLayout(false);
+            this.fundoCa12.ResumeLayout(false);
+            this.fundoCa13.ResumeLayout(false);
+            this.fundoCb2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxKeyboardBackground)).EndInit();
             this.pnlCustomizingMenu.ResumeLayout(false);
             this.pnlCustomizingMenu.PerformLayout();
@@ -3364,6 +3533,20 @@ namespace AcroniUI.Custom
         private System.Windows.Forms.Button btnHist2;
         private StyleBtn btnStyleFontColor;
         private System.Windows.Forms.Panel pnlBtnStyleFontColor;
+        private System.Windows.Forms.Label lblCa1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label31;
     }
 }
 
