@@ -4,20 +4,13 @@ C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\bin\Debug\AcroniUI.pdb
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\bin\Debug\AcroniControls.dll
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\bin\Debug\AcroniLibrary.dll
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\bin\Debug\DotNetKit.Wpf.AutoCompleteComboBox.dll
-C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\bin\Debug\AcroniUI.dll
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\bin\Debug\AcroniControls.pdb
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\bin\Debug\AcroniLibrary.pdb
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.csprojResolveAssemblyReference.cache
-C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.CustomizingForms.Compacto.resources
-C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.CustomizingForms.CustomizingModules.KeycapIconModule.resources
-C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.CustomizingForms.CustomizingModules.KeycapParentModule.resources
-C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.CustomizingForms.CustomizingModules.KeycapTextModule.resources
-C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.CustomizingForms.Tenkeyless.resources
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.LoginAndSignUp.FrmConfirmarEmail.resources
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.LoginAndSignUp.FrmLogin.resources
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.LoginAndSignUp.FrmUsuario.resources
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.TemplateMenu.resources
-C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.MenuLayoutMaster.resources
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Properties.Resources.resources
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.SelectKeyboard.resources
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Splash.resources
@@ -85,3 +78,11 @@ C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop\AcroniUI\obj\
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.csproj.CopyComplete
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.exe
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.pdb
+C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Custom.Compacto.resources
+C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Custom.CustomModules.KeycapIconModule.resources
+C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Custom.CustomModules.KeycapParentModule.resources
+C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Custom.CustomModules.KeycapSwitchModule.resources
+C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Custom.CustomModules.KeycapTextModule.resources
+C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Custom.Fullsize.resources
+C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Custom.Tenkeyless.resources
+C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Galeria.resources

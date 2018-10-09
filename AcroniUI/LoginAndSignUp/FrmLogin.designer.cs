@@ -648,6 +648,7 @@
             this.alblAcroni.BackColor = System.Drawing.Color.Transparent;
             this.alblAcroni.ForeColor = System.Drawing.Color.White;
             this.alblAcroni.Name = "alblAcroni";
+            this.alblAcroni.Click += new System.EventHandler(this.alblAcroni_Click);
             // 
             // FrmLogin
             // 

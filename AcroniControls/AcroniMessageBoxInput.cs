@@ -33,11 +33,14 @@ namespace AcroniControls
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            if (alblMessage1.Text.Contains("coleção"))
-                Share.Collection.CollectionName = txtUserInput.Text;
-            else
-                Share.Keyboard.Name = txtUserInput.Text;
-            this.Close();
+            if (!String.IsNullOrEmpty(txtUserInput.Text))
+                {
+                if (alblMessage1.Text.Contains("coleção"))
+                    Share.Collection.CollectionName = txtUserInput.Text;
+                else
+                    Share.KeyboardNameNotCreated = txtUserInput.Text;
+                this.Close();
+            }
         }
     }
 }

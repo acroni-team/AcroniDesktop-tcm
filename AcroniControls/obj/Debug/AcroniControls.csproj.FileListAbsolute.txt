@@ -1,9 +1,6 @@
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniControls\bin\Debug\AcroniControls.dll
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniControls\bin\Debug\AcroniControls.pdb
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniControls\bin\Debug\Bunifu_UI_v1.52.dll
-C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniControls\bin\Debug\Svg.dll
-C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniControls\bin\Debug\AcroniUI.dll
-C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniControls\bin\Debug\Transitions.dll
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniControls\bin\Debug\AcroniLibrary.pdb
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.csprojResolveAssemblyReference.cache
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.AcroniMessageBoxConfirm.resources
@@ -16,7 +13,6 @@ C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniControls\obj\Debug\AcroniCon
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.pdb
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniControls\bin\Debug\DotNetKit.Wpf.AutoCompleteComboBox.dll
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniControls\bin\Debug\AcroniLibrary.dll
-C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniControls\bin\Debug\AcroniUI.pdb
 E:\Desktop\c\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.csprojAssemblyReference.cache
 E:\Desktop\c\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.AcroniMessageBoxConfirm.resources
 E:\Desktop\c\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.AcroniMessageBoxInput.resources

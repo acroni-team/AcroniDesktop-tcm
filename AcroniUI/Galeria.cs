@@ -103,7 +103,8 @@ namespace AcroniUI
                     foreach (Keyboard k in userCollection.Keyboards)
                     {
                         Share.KeyboardsQuantity++;
-                        Share.Keyboard.Name = k.NickName;
+                        MessageBox.Show(k.NickName);
+                        Share.Keyboard.NickName = k.NickName;
                         ControlKeyboard controlKeyboard = new ControlKeyboard();
                         controlKeyboard.Click += new EventHandler(OpenKeyboard);
                         controlKeyboard.ForeColor = SystemColors.Control;
@@ -162,7 +163,7 @@ namespace AcroniUI
                     {
                         Share.Collection.CollectionName = items.Text;
                         Share.KeyboardsQuantity = 0;
-                        this.Hide();
+                        this.Close();
                         break;
                     }
 

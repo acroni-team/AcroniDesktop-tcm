@@ -91,7 +91,7 @@ namespace AcroniUI.Custom
         {
             SelectKeyboard __selectKeyboard = new SelectKeyboard();
             __selectKeyboard.ShowDialog();
-            //Compartilha.editKeyboard = false;
+            Share.EditKeyboard = false;
             this.Close();
         }
 
@@ -473,7 +473,7 @@ namespace AcroniUI.Custom
         {
             if (!Share.EditKeyboard)
             {
-                if (Share.Keyboard != null)
+                if (!String.IsNullOrEmpty(Share.KeyboardNameNotCreated))
                 {
                     Galeria selectGallery = new Galeria(true);
                     selectGallery.Show();
@@ -483,7 +483,7 @@ namespace AcroniUI.Custom
                         await Task.Delay(100);
                     }
 
-                    if (Share.Collection.CollectionName != null)
+                    if (!String.IsNullOrEmpty(Share.Collection.CollectionName))
                     {
                         setPropriedadesTeclado();
                     }
@@ -495,33 +495,37 @@ namespace AcroniUI.Custom
                 foreach (Collection col in Share.User.UserCollections)
                 {
                     if (Share.Collection.CollectionName.Equals(col.CollectionName))
+                    {
                         col.Keyboards.Remove(Share.Keyboard);
+                        setPropriedadesTeclado();
+                        break;
+                    }
                 }
 
-                setPropriedadesTeclado();
             }
 
-            //if (SetNames.colecao != null && SetNames.teclado != null || SettedKeyboardProperties)
-            //{
-            //    System.Windows.MessageBox.Show("Teclado adicionado/salvo com sucesso!");
-            //    Compartilha.editKeyboard = true;
-            //    CompartilhaObjetosUser.teclado = keyboard;
-            //}
-            //else
-            //    System.Windows.MessageBox.Show("Teclado não foi salvo! Você ser lix");
-            //SetNames.colecao = null;
-            //SetNames.teclado = null;
+            if ((!String.IsNullOrEmpty(Share.Collection.CollectionName) && !String.IsNullOrEmpty(Share.KeyboardNameNotCreated)) || Share.EditKeyboard)
+            {
+                System.Windows.MessageBox.Show("Teclado adicionado/salvo com sucesso!");
+                Share.EditKeyboard = true;
+                Share.Keyboard = keyboard;
+                using (FileStream savearchive = new FileStream(Application.StartupPath + @"\" + SQLConnection.nome_usuario + ".acr", FileMode.OpenOrCreate))
+                {
+                    BinaryFormatter Serializer = new BinaryFormatter();
+                    Serializer.Serialize(savearchive, Share.User);
+                }
+            }
+            else
+                MessageBox.Show("Teclado não foi salvo! Você ser lix");
         }
 
         private void setPropriedadesTeclado()
         {
             keyboard.Name = "FX-4370";
-
-            if (Share.EditKeyboard)
-                keyboard.NickName = Share.Keyboard.NickName;
+            if (!Share.EditKeyboard)
+                keyboard.NickName = Share.KeyboardNameNotCreated;
             else
-                //keyboard.NickName = SetNames.teclado;
-
+                keyboard.NickName = Share.Keyboard.NickName;
             keyboard.Material = "Madeira";
             keyboard.IsMechanicalKeyboard = true;
             keyboard.HasRestPads = false;
@@ -544,31 +548,20 @@ namespace AcroniUI.Custom
                     }
                 }
 
-            //if (!Share.EditKeyboard)
-            //    foreach (Collection col in CompartilhaObjetosUser.user.userCollections)
-            //    {
-            //        if (col.CollectionName.Equals(SetNames.colecao))
-            //        {
-            //            col.collection.Add(keyboard);
-            //            break;
-            //        }
-            //    }
-            //else
-            //    foreach (AcroniLibrary.FileInfo.Colecao c in CompartilhaObjetosUser.user.userCollections)
-            //    {
-            //        if (c.collectionNome.Equals(Compartilha.colecao))
-            //        {
-            //            c.collection.Add(keyboard);
-            //            break;
-            //        }
-            //    }
+                foreach (Collection col in Share.User.UserCollections)
+                {
+                    if (col.CollectionName.Equals(Share.Collection.CollectionName))
+                    {
+                        col.Keyboards.Add(keyboard);
+                        break;
+                    }
+                }
 
-            //using (FileStream savearchive = new FileStream(Application.StartupPath + @"\" + SQLConnection.nome_usuario + ".acr", FileMode.OpenOrCreate))
-            //{
-            //    BinaryFormatter Serializer = new BinaryFormatter();
-            //    Serializer.Serialize(savearchive, CompartilhaObjetosUser.user);
-            //}
-            //SettedKeyboardProperties = true;
+            using (FileStream savearchive = new FileStream(Application.StartupPath + @"\" + SQLConnection.nome_usuario + ".acr", FileMode.OpenOrCreate))
+            {
+                BinaryFormatter Serializer = new BinaryFormatter();
+                Serializer.Serialize(savearchive, Share.User);
+            }
         }
         #endregion
     }

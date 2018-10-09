@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.lblBoasVindas = new System.Windows.Forms.Label();
             this.lblNomeUsuBoasVindas = new System.Windows.Forms.Label();
@@ -37,6 +38,7 @@
             this.pnlScroll = new System.Windows.Forms.Panel();
             this.lblSelectKeyboard = new System.Windows.Forms.Label();
             this.btnAdicionarGaleria = new System.Windows.Forms.Button();
+            this.eBtnAdicionarGaleria = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -61,11 +63,11 @@
             // lblNomeUsuBoasVindas
             // 
             this.lblNomeUsuBoasVindas.AutoSize = true;
-            this.lblNomeUsuBoasVindas.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeUsuBoasVindas.Font = new System.Drawing.Font("Open Sans ExtraBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomeUsuBoasVindas.ForeColor = System.Drawing.Color.White;
-            this.lblNomeUsuBoasVindas.Location = new System.Drawing.Point(785, 104);
+            this.lblNomeUsuBoasVindas.Location = new System.Drawing.Point(784, 105);
             this.lblNomeUsuBoasVindas.Name = "lblNomeUsuBoasVindas";
-            this.lblNomeUsuBoasVindas.Size = new System.Drawing.Size(44, 26);
+            this.lblNomeUsuBoasVindas.Size = new System.Drawing.Size(45, 28);
             this.lblNomeUsuBoasVindas.TabIndex = 16;
             this.lblNomeUsuBoasVindas.Text = "joj!";
             // 
@@ -94,11 +96,11 @@
             // lblCollectionsQuantity
             // 
             this.lblCollectionsQuantity.AutoSize = true;
-            this.lblCollectionsQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCollectionsQuantity.Font = new System.Drawing.Font("Open Sans ExtraBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCollectionsQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(80)))), ((int)(((byte)(85)))));
             this.lblCollectionsQuantity.Location = new System.Drawing.Point(720, 140);
             this.lblCollectionsQuantity.Name = "lblCollectionsQuantity";
-            this.lblCollectionsQuantity.Size = new System.Drawing.Size(24, 25);
+            this.lblCollectionsQuantity.Size = new System.Drawing.Size(24, 27);
             this.lblCollectionsQuantity.TabIndex = 19;
             this.lblCollectionsQuantity.Text = "0";
             // 
@@ -128,7 +130,7 @@
             this.btnAdicionarGaleria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdicionarGaleria.Font = new System.Drawing.Font("Qanelas ExtraBold", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdicionarGaleria.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAdicionarGaleria.Location = new System.Drawing.Point(356, 149);
+            this.btnAdicionarGaleria.Location = new System.Drawing.Point(343, 149);
             this.btnAdicionarGaleria.Name = "btnAdicionarGaleria";
             this.btnAdicionarGaleria.Size = new System.Drawing.Size(35, 35);
             this.btnAdicionarGaleria.TabIndex = 23;
@@ -136,6 +138,11 @@
             this.btnAdicionarGaleria.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAdicionarGaleria.UseVisualStyleBackColor = false;
             this.btnAdicionarGaleria.Click += new System.EventHandler(this.btnAdicionarGaleria_Click);
+            // 
+            // eBtnAdicionarGaleria
+            // 
+            this.eBtnAdicionarGaleria.ElipseRadius = 5;
+            this.eBtnAdicionarGaleria.TargetControl = this.btnAdicionarGaleria;
             // 
             // Galeria
             // 
@@ -177,5 +184,6 @@
         private System.Windows.Forms.Panel pnlScroll;
         private System.Windows.Forms.Label lblSelectKeyboard;
         private System.Windows.Forms.Button btnAdicionarGaleria;
+        private Bunifu.Framework.UI.BunifuElipse eBtnAdicionarGaleria;
     }
 }

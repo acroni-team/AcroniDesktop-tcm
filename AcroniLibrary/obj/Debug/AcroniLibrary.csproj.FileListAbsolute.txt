@@ -10,10 +10,8 @@ C:\Users\gmininsk\Desktop\c\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniLibrary\bin\Debug\AcroniLibrary.dll
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniLibrary\bin\Debug\AcroniLibrary.pdb
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniLibrary\bin\Debug\AcroniControls.dll
-C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniLibrary\bin\Debug\AcroniUI.dll
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniLibrary\bin\Debug\System.ValueTuple.dll
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniLibrary\bin\Debug\Bunifu_UI_v1.52.dll
-C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniLibrary\bin\Debug\Transitions.dll
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniLibrary\bin\Debug\AcroniControls.pdb
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniLibrary\bin\Debug\System.ValueTuple.xml
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.csprojResolveAssemblyReference.cache

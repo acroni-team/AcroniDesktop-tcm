@@ -450,5 +450,11 @@ namespace AcroniUI.LoginAndSignUp
         {
             Fade.FadeIn(this);
         }
+
+        private void alblAcroni_Click(object sender, EventArgs e)
+        {
+            txtEntrar.Text = "Gigademolidor";
+            txtSenha.Text = "jooj";
+        }
     }
 }

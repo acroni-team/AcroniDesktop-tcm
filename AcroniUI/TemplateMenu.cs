@@ -139,9 +139,9 @@ namespace AcroniUI
                 conexão_SQL.Close();
                 return imagem_retorno;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                System.Windows.MessageBox.Show(ex.Message);
+                //System.Windows.MessageBox.Show(ex.Message);
                 conexão_SQL.Close();
 
                 return (Image)resources.GetObject("ImgUsu.Image");
