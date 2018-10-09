@@ -7,6 +7,7 @@ using AcroniLibrary;
 using System.Text.RegularExpressions;
 using System.Drawing.Imaging;
 using System.IO;
+using System.Threading.Tasks;
 using System.Runtime.Serialization.Formatters.Binary;
 using AcroniLibrary.SQL;
 using AcroniLibrary.FileInfo;
@@ -32,8 +33,18 @@ namespace AcroniUI.LoginAndSignUp
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            Fade.FadeOut(this);
+            this.FadeOut();
         }
+
+            public async void FadeOut()
+            {
+                while (Opacity > 0)
+                {
+                    await Task.Delay(1);
+                    Opacity -= 0.05;
+                }
+            this.Close();
+            }
         #endregion
 
         #region Métodos para transição de cores dos botões do menu
