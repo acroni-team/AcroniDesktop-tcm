@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Drawing;
+using System.Threading;
 using System.Windows.Forms;
+using System.Threading.Tasks;
 using AcroniLibrary.DesignMethods;
 using AcroniControls;
 
@@ -35,10 +37,55 @@ namespace AcroniUI
 
         private void btnSair_Click(object sender, EventArgs e)
         {
+            FadeOut();
+        }
+
+        public async void FadeOut()
+        {
+            while (Opacity > 0)
+            {
+                await Task.Delay(1);
+                Opacity -= 0.05;
+            }
             Application.Exit();
         }
 
+        private void pnlStripAjuda_MouseEnter(object sender, EventArgs e)
+        {
+            lblAjuda.ForeColor = Color.FromArgb(40, 42, 47);
+            lblAjuda.BackColor = Color.White;
+        }
 
+        private void pnlStripAjuda_MouseLeave(object sender, EventArgs e)
+        {
+            lblAjuda.ForeColor = Color.White;
+            lblAjuda.BackColor = Color.FromArgb(40, 42, 47);
+            lblAjuda.MouseLeave += lblMenus_MouseLeave;
+            pnlStripAjuda.Visible = false;
+        }
+
+        private void lblMenus_MouseOver(object sender, EventArgs e)
+        {
+            ((Label)sender).ForeColor = Color.FromArgb(40, 42, 47);
+            ((Label)sender).BackColor = Color.White;
+            ((Label)sender).Tag = "selected";
+            if (((Label)sender).Equals(lblAjuda))
+            {
+                pnlStripAjuda.Visible = true;
+            }
+        }
+
+        private void lblMenus_MouseLeave(object sender, EventArgs e)
+        {
+            //if (!((Label)sender).Tag.Equals("selected")) {
+                ((Label)sender).ForeColor = Color.White;
+                ((Label)sender).BackColor = Color.FromArgb(40, 42, 47);
+            if (((Label)sender).Equals(lblAjuda))
+            {
+                pnlStripAjuda.Visible = false;
+            }
+            //}
+        }
         #endregion
 
         private void pnlSuperior_Paint(object sender, PaintEventArgs e)
@@ -83,18 +130,14 @@ namespace AcroniUI
             }
         }
         #endregion
-        #region UX dos itens do menuStrip
-        private void menuStripItems_MouseMove(object sender, MouseEventArgs e)
+        
+        private void pnlStripAjuda_MouseMove(object sender, MouseEventArgs e)
         {
-            ToolStripMenuItem tsmi = (ToolStripMenuItem)sender;
-            tsmi.BackColor = Color.FromArgb(41, 42, 47);
-            Cursor = Cursors.Hand;
+            if (e.Y == 21)
+            {
+                lblAjuda.MouseLeave -= lblMenus_MouseLeave;
+                pnlStripAjuda.Visible = true;
+            }
         }
-
-        private void menuStripItems_MouseLeave(object sender, EventArgs e)
-        {
-            Cursor = Cursors.Default;
-        }
-        #endregion
     }
 }

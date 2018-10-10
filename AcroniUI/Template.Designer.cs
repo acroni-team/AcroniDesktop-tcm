@@ -31,32 +31,61 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Template));
             this.pnlSuperior = new System.Windows.Forms.Panel();
+            this.lblTutorial = new System.Windows.Forms.Label();
+            this.lblAjuda = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.PictureBox();
             this.btnMinimize = new System.Windows.Forms.PictureBox();
             this.lblAcroni = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.faleConoscoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timerFade = new System.Windows.Forms.Timer(this.components);
+            this.pnlStripAjuda = new System.Windows.Forms.Panel();
             this.pnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlSuperior
             // 
             this.pnlSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(47)))));
+            this.pnlSuperior.Controls.Add(this.lblTutorial);
+            this.pnlSuperior.Controls.Add(this.lblAjuda);
             this.pnlSuperior.Controls.Add(this.btnClose);
             this.pnlSuperior.Controls.Add(this.btnMinimize);
             this.pnlSuperior.Controls.Add(this.lblAcroni);
-            this.pnlSuperior.Controls.Add(this.menuStrip1);
             this.pnlSuperior.Location = new System.Drawing.Point(0, 0);
             this.pnlSuperior.Name = "pnlSuperior";
             this.pnlSuperior.Size = new System.Drawing.Size(1280, 40);
             this.pnlSuperior.TabIndex = 11;
             this.pnlSuperior.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlSuperior_Paint);
+            // 
+            // lblTutorial
+            // 
+            this.lblTutorial.AutoSize = true;
+            this.lblTutorial.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblTutorial.Font = new System.Drawing.Font("Open Sans", 12F);
+            this.lblTutorial.ForeColor = System.Drawing.Color.White;
+            this.lblTutorial.Location = new System.Drawing.Point(109, 11);
+            this.lblTutorial.Name = "lblTutorial";
+            this.lblTutorial.Size = new System.Drawing.Size(69, 22);
+            this.lblTutorial.TabIndex = 14;
+            this.lblTutorial.Text = "Tutorial";
+            this.lblTutorial.MouseEnter += new System.EventHandler(this.lblMenus_MouseOver);
+            this.lblTutorial.MouseLeave += new System.EventHandler(this.lblMenus_MouseLeave);
+            // 
+            // lblAjuda
+            // 
+            this.lblAjuda.AutoSize = true;
+            this.lblAjuda.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblAjuda.Font = new System.Drawing.Font("Open Sans", 12F);
+            this.lblAjuda.ForeColor = System.Drawing.Color.White;
+            this.lblAjuda.Location = new System.Drawing.Point(203, 10);
+            this.lblAjuda.Name = "lblAjuda";
+            this.lblAjuda.Size = new System.Drawing.Size(53, 22);
+            this.lblAjuda.TabIndex = 13;
+            this.lblAjuda.Tag = "selected";
+            this.lblAjuda.Text = "Ajuda";
+            this.lblAjuda.MouseEnter += new System.EventHandler(this.lblMenus_MouseOver);
+            this.lblAjuda.MouseLeave += new System.EventHandler(this.lblMenus_MouseLeave);
+            this.lblAjuda.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlStripAjuda_MouseMove);
             // 
             // btnClose
             // 
@@ -88,62 +117,28 @@
             this.lblAcroni.AutoSize = true;
             this.lblAcroni.Font = new System.Drawing.Font("Qanelas ExtraBold", 16F, System.Drawing.FontStyle.Bold);
             this.lblAcroni.ForeColor = System.Drawing.Color.White;
-            this.lblAcroni.Location = new System.Drawing.Point(9, 7);
+            this.lblAcroni.Location = new System.Drawing.Point(9, 6);
             this.lblAcroni.Name = "lblAcroni";
             this.lblAcroni.Size = new System.Drawing.Size(78, 28);
             this.lblAcroni.TabIndex = 2;
             this.lblAcroni.Text = "Acroni";
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(47)))));
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 15.25F);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.arquivoToolStripMenuItem,
-            this.ajudaToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(95, 7);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(164, 30);
-            this.menuStrip1.TabIndex = 12;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // arquivoToolStripMenuItem
-            // 
-            this.arquivoToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.arquivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.faleConoscoToolStripMenuItem});
-            this.arquivoToolStripMenuItem.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.arquivoToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.arquivoToolStripMenuItem.Name = "arquivoToolStripMenuItem";
-            this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(81, 26);
-            this.arquivoToolStripMenuItem.Text = "Arquivo";
-            this.arquivoToolStripMenuItem.MouseLeave += new System.EventHandler(this.menuStripItems_MouseLeave);
-            this.arquivoToolStripMenuItem.MouseMove += new System.Windows.Forms.MouseEventHandler(this.menuStripItems_MouseMove);
-            // 
-            // faleConoscoToolStripMenuItem
-            // 
-            this.faleConoscoToolStripMenuItem.BackColor = System.Drawing.Color.White;
-            this.faleConoscoToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
-            this.faleConoscoToolStripMenuItem.Margin = new System.Windows.Forms.Padding(15);
-            this.faleConoscoToolStripMenuItem.Name = "faleConoscoToolStripMenuItem";
-            this.faleConoscoToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
-            this.faleConoscoToolStripMenuItem.Text = "Fale Conosco";
-            // 
-            // ajudaToolStripMenuItem
-            // 
-            this.ajudaToolStripMenuItem.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ajudaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.ajudaToolStripMenuItem.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
-            this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(65, 26);
-            this.ajudaToolStripMenuItem.Text = "Ajuda";
-            this.ajudaToolStripMenuItem.MouseLeave += new System.EventHandler(this.menuStripItems_MouseLeave);
-            this.ajudaToolStripMenuItem.MouseMove += new System.Windows.Forms.MouseEventHandler(this.menuStripItems_MouseMove);
-            // 
             // timerFade
             // 
             this.timerFade.Tick += new System.EventHandler(this.timerFade_Tick);
+            // 
+            // pnlStripAjuda
+            // 
+            this.pnlStripAjuda.BackColor = System.Drawing.Color.White;
+            this.pnlStripAjuda.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlStripAjuda.Location = new System.Drawing.Point(203, 31);
+            this.pnlStripAjuda.Name = "pnlStripAjuda";
+            this.pnlStripAjuda.Size = new System.Drawing.Size(149, 73);
+            this.pnlStripAjuda.TabIndex = 15;
+            this.pnlStripAjuda.Visible = false;
+            this.pnlStripAjuda.MouseEnter += new System.EventHandler(this.pnlStripAjuda_MouseEnter);
+            this.pnlStripAjuda.MouseLeave += new System.EventHandler(this.pnlStripAjuda_MouseLeave);
+            this.pnlStripAjuda.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlStripAjuda_MouseMove);
             // 
             // Template
             // 
@@ -151,6 +146,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(44)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.pnlStripAjuda);
             this.Controls.Add(this.pnlSuperior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Template";
@@ -159,21 +155,18 @@
             this.pnlSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.ToolStripMenuItem faleConoscoToolStripMenuItem;
         protected System.Windows.Forms.Label lblAcroni;
-        protected System.Windows.Forms.MenuStrip menuStrip1;
-        protected System.Windows.Forms.ToolStripMenuItem ajudaToolStripMenuItem;
-        protected System.Windows.Forms.ToolStripMenuItem arquivoToolStripMenuItem;
         private System.Windows.Forms.Timer timerFade;
         private System.Windows.Forms.PictureBox btnClose;
         private System.Windows.Forms.PictureBox btnMinimize;
         private System.Windows.Forms.Panel pnlSuperior;
+        private System.Windows.Forms.Label lblAjuda;
+        private System.Windows.Forms.Label lblTutorial;
+        public System.Windows.Forms.Panel pnlStripAjuda;
     }
 }

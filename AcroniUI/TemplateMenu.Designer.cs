@@ -78,9 +78,9 @@
             // 
             this.lblNomeUsu.Font = new System.Drawing.Font("Open Sans SemiBold", 12.3F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomeUsu.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblNomeUsu.Location = new System.Drawing.Point(-1, 110);
+            this.lblNomeUsu.Location = new System.Drawing.Point(3, 110);
             this.lblNomeUsu.Name = "lblNomeUsu";
-            this.lblNomeUsu.Size = new System.Drawing.Size(321, 24);
+            this.lblNomeUsu.Size = new System.Drawing.Size(314, 24);
             this.lblNomeUsu.TabIndex = 10;
             this.lblNomeUsu.Text = "Bragod";
             this.lblNomeUsu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -201,9 +201,9 @@
             this.lblPlanoUsu.BackColor = System.Drawing.Color.Transparent;
             this.lblPlanoUsu.Font = new System.Drawing.Font("Open Sans SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlanoUsu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(118)))), ((int)(((byte)(125)))));
-            this.lblPlanoUsu.Location = new System.Drawing.Point(0, 131);
+            this.lblPlanoUsu.Location = new System.Drawing.Point(3, 131);
             this.lblPlanoUsu.Name = "lblPlanoUsu";
-            this.lblPlanoUsu.Size = new System.Drawing.Size(320, 22);
+            this.lblPlanoUsu.Size = new System.Drawing.Size(314, 22);
             this.lblPlanoUsu.TabIndex = 11;
             this.lblPlanoUsu.Text = "Plano Básico";
             this.lblPlanoUsu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -331,9 +331,9 @@
             this.Controls.Add(this.pnlAreaUsu);
             this.Name = "TemplateMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Master";
             this.Controls.SetChildIndex(this.pnlAreaUsu, 0);
             this.Controls.SetChildIndex(this.pnlOptions, 0);
+            this.Controls.SetChildIndex(this.pnlStripAjuda, 0);
             this.pnlAreaUsu.ResumeLayout(false);
             this.pnlAreaUsu.PerformLayout();
             this.espacoArmazenamento.ResumeLayout(false);

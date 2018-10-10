@@ -464,8 +464,11 @@ namespace AcroniUI.LoginAndSignUp
 
         private void alblAcroni_Click(object sender, EventArgs e)
         {
-            txtEntrar.Text = "Gigademolidor";
-            txtSenha.Text = "jooj";
+            //txtEntrar.Text = "Gigademolidor";
+            //txtSenha.Text = "jooj";
+            txtEntrar.Text = "teste";
+            txtSenha.Text = "teste";
+            btnEntrar_Click(default(object), default(EventArgs));
         }
     }
 }
