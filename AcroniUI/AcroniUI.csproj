@@ -73,12 +73,6 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Custom\CustomModules\KeycapIconModule.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Custom\CustomModules\KeycapIconModule.Designer.cs">
-      <DependentUpon>KeycapIconModule.cs</DependentUpon>
-    </Compile>
     <Compile Include="Custom\CustomModules\KeycapParentModule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,11 +85,11 @@
     <Compile Include="Custom\CustomModules\KeycapSwitchModule.Designer.cs">
       <DependentUpon>KeycapSwitchModule.cs</DependentUpon>
     </Compile>
-    <Compile Include="Custom\CustomModules\KeycapTextModule.cs">
+    <Compile Include="Custom\CustomModules\KeycapTextIconModule.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Custom\CustomModules\KeycapTextModule.Designer.cs">
-      <DependentUpon>KeycapTextModule.cs</DependentUpon>
+    <Compile Include="Custom\CustomModules\KeycapTextIconModule.Designer.cs">
+      <DependentUpon>KeycapTextIconModule.cs</DependentUpon>
     </Compile>
     <Compile Include="Galeria.cs">
       <SubType>Form</SubType>
@@ -173,17 +167,14 @@
     <EmbeddedResource Include="Custom\Compacto.resx">
       <DependentUpon>Compacto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Custom\CustomModules\KeycapIconModule.resx">
-      <DependentUpon>KeycapIconModule.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Custom\CustomModules\KeycapParentModule.resx">
       <DependentUpon>KeycapParentModule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Custom\CustomModules\KeycapSwitchModule.resx">
       <DependentUpon>KeycapSwitchModule.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Custom\CustomModules\KeycapTextModule.resx">
-      <DependentUpon>KeycapTextModule.cs</DependentUpon>
+    <EmbeddedResource Include="Custom\CustomModules\KeycapTextIconModule.resx">
+      <DependentUpon>KeycapTextIconModule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Custom\Fullsize.resx">
       <DependentUpon>Fullsize.cs</DependentUpon>

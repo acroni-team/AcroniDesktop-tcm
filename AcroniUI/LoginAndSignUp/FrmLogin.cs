@@ -33,18 +33,9 @@ namespace AcroniUI.LoginAndSignUp
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            this.FadeOut();
+            FadeOut();
         }
 
-            public async void FadeOut()
-            {
-                while (Opacity > 0)
-                {
-                    await Task.Delay(1);
-                    Opacity -= 0.05;
-                }
-            this.Close();
-            }
         #endregion
 
         #region Métodos para transição de cores dos botões do menu
@@ -69,6 +60,7 @@ namespace AcroniUI.LoginAndSignUp
 
         #region Methods of Design
         static Form layerFadeForm = new Form();
+
         private Form GetLayerForm()
         {
             layerFadeForm.Name = "LayerFadeForm";
@@ -169,6 +161,8 @@ namespace AcroniUI.LoginAndSignUp
             }
         }
         #endregion
+
+
 
         SelectKeyboard selecionarTeclado;
 
@@ -459,7 +453,7 @@ namespace AcroniUI.LoginAndSignUp
 
         private void FrmLogin_Load(object sender, EventArgs e)
         {
-            Fade.FadeIn(this);
+            FadeIn();
         }
 
         private void alblAcroni_Click(object sender, EventArgs e)
@@ -470,5 +464,27 @@ namespace AcroniUI.LoginAndSignUp
             txtSenha.Text = "teste";
             btnEntrar_Click(default(object), default(EventArgs));
         }
+
+        #region FadeIn e FadeOut
+        public async void FadeOut()
+        {
+            while (Opacity > 0)
+            {
+                await Task.Delay(1);
+                Opacity -= 0.05;
+            }
+            Application.Exit();
+        }
+
+        public async void FadeIn()
+        {
+            while (Opacity < 1)
+            {
+                await Task.Delay(1);
+                Opacity += 0.05;
+            }
+            Opacity = 1.0;
+        }
+        #endregion
     }
 }

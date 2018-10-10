@@ -40,16 +40,6 @@ namespace AcroniUI
             FadeOut();
         }
 
-        public async void FadeOut()
-        {
-            while (Opacity > 0)
-            {
-                await Task.Delay(1);
-                Opacity -= 0.05;
-            }
-            Application.Exit();
-        }
-
         private void pnlStripAjuda_MouseEnter(object sender, EventArgs e)
         {
             lblAjuda.ForeColor = Color.FromArgb(40, 42, 47);
@@ -106,11 +96,7 @@ namespace AcroniUI
             AcroniMessageBoxConfirm ambc = new AcroniMessageBoxConfirm("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "Você quer mesmo sair? Não se esqueça de salvar o seu teclado ;)");
             ambc.ShowDialog();
             if (ambc.DialogResult == DialogResult.Yes)
-            {
-                Fade.FadeOut(this);
-                this.Dispose();
-            }
-                
+                FadeOut();                
         }
 
         private void btnMinimize_Click(object sender, EventArgs e) => WindowState = FormWindowState.Minimized;
@@ -139,5 +125,29 @@ namespace AcroniUI
                 pnlStripAjuda.Visible = true;
             }
         }
+
+        #region FadeIn e FadeOut
+        public async void FadeOut()
+        {
+            while (Opacity > 0)
+            {
+                await Task.Delay(1);
+                Opacity -= 0.05;
+            }
+            Application.Exit();
+        }
+
+        public async void FadeIn()
+        {
+            while (Opacity < 1)
+            {
+                await Task.Delay(1);
+                Opacity += 0.05;
+            }
+            Opacity = 1.0;
+        }
+        #endregion
+
+        private void Template_Load(object sender, EventArgs e) => FadeIn();
     }
 }

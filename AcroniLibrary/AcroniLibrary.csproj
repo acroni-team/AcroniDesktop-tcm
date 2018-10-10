@@ -64,7 +64,6 @@
     <Compile Include="FileInfo\ControlKeyboard_Collections.cs" />
     <Compile Include="FileInfo\Share.cs" />
     <Compile Include="CustomizingMethods\FormManipulator.cs" />
-    <Compile Include="DesignMethods\Fade.cs" />
     <Compile Include="SQL\SQLConnection.cs" />
     <Compile Include="CustomizingMethods\Colorpicker\ColorpickerHandlers.cs" />
     <Compile Include="CustomizingMethods\Colorpicker\SetColorpickerVisibility.cs" />

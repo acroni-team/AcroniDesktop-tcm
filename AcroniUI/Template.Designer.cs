@@ -150,7 +150,9 @@
             this.Controls.Add(this.pnlSuperior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Template";
+            this.Opacity = 0D;
             this.Text = "FrmTemplate";
+            this.Load += new System.EventHandler(this.Template_Load);
             this.pnlSuperior.ResumeLayout(false);
             this.pnlSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();

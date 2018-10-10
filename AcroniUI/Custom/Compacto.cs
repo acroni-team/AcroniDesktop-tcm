@@ -33,10 +33,6 @@ namespace AcroniUI.Custom
         ContentAlignment ContentAlignment { get; set; }
         private static List<FontFamily> lista_fontFamily = new List<FontFamily>();
 
-        // Esse membro serve para pegar o ícone selecionado e botá-lo na fila de ícones.
-        private Image SelectedIcon { get; set; }
-        private bool HasChosenAIcon { get; set; }
-
         // Definição das propriedades do colorpicker 
         private Color Color { get; set; } = Color.FromArgb(26, 26, 26);
         private Color FontColor { get; set; } = Color.White;
@@ -56,13 +52,9 @@ namespace AcroniUI.Custom
             else
                 keybutton.BackColor = keybutton.SetColor(Color);
 
-
-            if (HasChosenAIcon)
-                keybutton.Image = SelectedIcon;
-
             if (__HasBtnTextModuleBeenChosen)
             {
-                KeycapTextModule keycapTextModule = new KeycapTextModule();
+                KeycapTextIconModule keycapTextModule = new KeycapTextIconModule();
                 if (keycapTextModule.ShowDialog() == DialogResult.OK)
                 {
                     //if (!string.IsNullOrEmpty(keycapTextModule.Uppertext))
@@ -80,6 +72,9 @@ namespace AcroniUI.Custom
                         keybutton.Text = keycapTextModule.Maintext;
                     else
                         keybutton.Text = keybutton.Text;
+
+                    if (KeycapTextIconModule.HasChosenAIcon)
+                        keybutton.Image = keycapTextModule.SelectedIcon;
                 }
             }
 
@@ -114,6 +109,18 @@ namespace AcroniUI.Custom
             InitializeComponent();
 
             lblKeyboardName.Location = new Point(lblCollectionName.Location.X + lblCollectionName.Size.Width - 5, lblCollectionName.Location.Y);
+            if (string.IsNullOrEmpty(Share.Keyboard.Name))
+            {
+                lblKeyboardName.Text = "";
+                lblCollectionName.Text = "";
+            }
+            else
+            {
+                lblKeyboardName.Text = Share.Keyboard.NickName;
+                lblCollectionName.Text = Share.Collection.CollectionName;
+            }
+
+            //Eu preciso disso no construtor, sorry. Não dá pra colocar dois estilos na Open Sans logo no designer.
 
             btnStyleUnderline.Font = new Font(btnStyleUnderline.Font, FontStyle.Underline);
             btnStyleStrikeout.Font = new Font(btnStyleStrikeout.Font, FontStyle.Strikeout);
@@ -134,8 +141,6 @@ namespace AcroniUI.Custom
                 LoadKeyboard();
 
         }
-
-        
 
         #region Métodos do Color Picker
 
@@ -236,9 +241,6 @@ namespace AcroniUI.Custom
 
         #region Fontes das teclas e texto
 
-
-
-
         #region Definição dos métodos de alinhamento
 
         private void btnTextAlignLeft_Click(object sender, EventArgs e)
@@ -268,7 +270,7 @@ namespace AcroniUI.Custom
 
         private void FormLoad(object sender, EventArgs e)
         {
-            Fade.FadeIn(this);
+            FadeIn();
 
             //Carregar todas as fontes que o usuário possui na máquina
             new LoadFontTypes(ref cmbFontes, ref lista_fontFamily);
@@ -294,8 +296,6 @@ namespace AcroniUI.Custom
 
         #region Ícones e texto
 
-        private Queue<Image> ImageQueue = new Queue<Image>();
-
         private void btnTextAndIcons_Click(object sender, EventArgs e)
         {
             if (__HasBtnTextModuleBeenChosen)
@@ -308,40 +308,11 @@ namespace AcroniUI.Custom
                 __HasBtnTextModuleBeenChosen = true;
                 btnOpenModuleTextIcons.BackColor = Color.FromArgb(45, 46, 47);
             }
-
-
-            //List<Image> insertableArray = new List<Image> { };
-            //using (OpenFileDialog iconGetter = new OpenFileDialog())
-            //{
-            //    iconGetter.InitialDirectory = @"C:\";
-            //    iconGetter.Title = "Qual o ícone que deseja adicionar?";
-            //    iconGetter.Filter = "Todos os tipos de imagem | *jpg; *.jpeg; *.bmp; *.png |BMP | *.bmp | JPG | *.jpg; *.jpeg | PNG | *.png ";
-            //    iconGetter.Multiselect = true;
-            //    if (iconGetter.ShowDialog() == DialogResult.OK)
-            //    {
-            //        foreach (String fileDirectory in iconGetter.FileNames)
-            //            ImageQueue.Enqueue(Image.FromFile(fileDirectory));
-
-            //        while (ImageQueue.Count > 10)
-            //            ImageQueue.Dequeue();
-            //    }
-            //    for (int aux = ImageQueue.Count - 1; aux >= 0; aux--)
-            //    {
-            //        insertableArray.Add(ImageQueue.ToArray()[aux]);
-            //    }
-            //}
-            //for (int i = 0; i < ImageQueue.Count; i++)
-            //(pnlIcons.Controls[$"picBoxIcon{i + 1}"] as PictureBox).Image = insertableArray[i];
         }
 
         private void picIcons_Click(object sender, EventArgs e)
         {
-            if (sender != null)
-            {
-                PictureBox __icon = (PictureBox)sender;
-                SelectedIcon = __icon.Image;
-                HasChosenAIcon = true;
-            }
+
         }
 
         #endregion
@@ -357,6 +328,8 @@ namespace AcroniUI.Custom
             }
             catch (Exception) { }
         }
+
+        #region Controladores de cor dos botões de módulo
 
         private void btnStyleFontColor_Click(object sender, EventArgs e)
         {
@@ -380,6 +353,8 @@ namespace AcroniUI.Custom
 
             }
         }
+
+        #endregion
 
         #region Carregar e salvar teclado
         private void LoadKeyboard()
@@ -528,9 +503,10 @@ namespace AcroniUI.Custom
                 if (tecla is Kbtn)
                 {
                     {
-                        keyboard.Keycaps.Add(new Keycap {
+                        keyboard.Keycaps.Add(new Keycap
+                        {
                             ForeColor = tecla.ForeColor,
-                            ID = tecla.Name,                          
+                            ID = tecla.Name,
                             Text = tecla.Text,
                             Font = tecla.Font,
                             Color = tecla.BackColor,
@@ -539,14 +515,14 @@ namespace AcroniUI.Custom
                     }
                 }
 
-                foreach (Collection col in Share.User.UserCollections)
+            foreach (Collection col in Share.User.UserCollections)
+            {
+                if (col.CollectionName.Equals(Share.Collection.CollectionName))
                 {
-                    if (col.CollectionName.Equals(Share.Collection.CollectionName))
-                    {
-                        col.Keyboards.Add(keyboard);
-                        break;
-                    }
+                    col.Keyboards.Add(keyboard);
+                    break;
                 }
+            }
 
             using (FileStream savearchive = new FileStream(Application.StartupPath + @"\" + SQLConnection.nome_usuario + ".acr", FileMode.OpenOrCreate))
             {
@@ -556,8 +532,6 @@ namespace AcroniUI.Custom
         }
 
         #endregion
-
-       
     }
 }
 

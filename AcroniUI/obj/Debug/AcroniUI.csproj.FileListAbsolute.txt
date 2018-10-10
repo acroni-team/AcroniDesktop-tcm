@@ -43,9 +43,7 @@ E:\Desktop\c\AcroniDesktop\AcroniUI\bin\Debug\AcroniLibrary.pdb
 E:\Desktop\c\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.csproj.CopyComplete
 E:\Desktop\c\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.exe
 E:\Desktop\c\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.pdb
-E:\Desktop\c\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Custom.CustomModules.KeycapIconModule.resources
 E:\Desktop\c\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Custom.CustomModules.KeycapParentModule.resources
-E:\Desktop\c\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Custom.CustomModules.KeycapTextModule.resources
 E:\Desktop\c\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Custom.Fullsize.resources
 E:\Desktop\c\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Custom.CustomModules.KeycapSwitchModule.resources
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop\AcroniUI\bin\Debug\AcroniUI.exe.config
@@ -116,3 +114,4 @@ C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.csproj
 C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.csproj.CopyComplete
 C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.exe
 C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.pdb
+E:\Desktop\c\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Custom.CustomModules.KeycapTextIconModule.resources
