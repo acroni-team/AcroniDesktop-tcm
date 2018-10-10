@@ -97,30 +97,34 @@ namespace AcroniUI.Custom
             this.Cb2 = new AcroniControls.Kbtn();
             this.Cb1s = new AcroniControls.Kbtn();
             this.fundoCa1 = new System.Windows.Forms.Panel();
-            this.fundoCa2 = new System.Windows.Forms.Panel();
             this.lblCa1 = new System.Windows.Forms.Label();
+            this.fundoCa2 = new System.Windows.Forms.Panel();
+            this.lblCa2 = new System.Windows.Forms.Label();
             this.fundoCa3 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblCa3 = new System.Windows.Forms.Label();
             this.fundoCa4 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lblCa4 = new System.Windows.Forms.Label();
             this.fundoCa5 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblCa5 = new System.Windows.Forms.Label();
             this.fundoCa6 = new System.Windows.Forms.Panel();
-            this.label22 = new System.Windows.Forms.Label();
+            this.lblCa6 = new System.Windows.Forms.Label();
             this.fundoCa7 = new System.Windows.Forms.Panel();
-            this.label23 = new System.Windows.Forms.Label();
+            this.lblCa7 = new System.Windows.Forms.Label();
             this.fundoCa8 = new System.Windows.Forms.Panel();
-            this.label24 = new System.Windows.Forms.Label();
+            this.lblCa8 = new System.Windows.Forms.Label();
             this.fundoCa9 = new System.Windows.Forms.Panel();
-            this.label26 = new System.Windows.Forms.Label();
+            this.lblCa9 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.fundoCa10 = new System.Windows.Forms.Panel();
-            this.label27 = new System.Windows.Forms.Label();
+            this.lblCa10 = new System.Windows.Forms.Label();
             this.fundoCa11 = new System.Windows.Forms.Panel();
-            this.label28 = new System.Windows.Forms.Label();
+            this.lblCa11 = new System.Windows.Forms.Label();
             this.fundoCa12 = new System.Windows.Forms.Panel();
+            this.lblCa12 = new System.Windows.Forms.Label();
             this.fundoCa13 = new System.Windows.Forms.Panel();
+            this.lblCa13 = new System.Windows.Forms.Label();
             this.fundoCb2 = new System.Windows.Forms.Panel();
+            this.lblCb2 = new System.Windows.Forms.Label();
             this.fundoCb3 = new System.Windows.Forms.Panel();
             this.fundoCb4 = new System.Windows.Forms.Panel();
             this.fundoCb5 = new System.Windows.Forms.Panel();
@@ -237,9 +241,8 @@ namespace AcroniUI.Custom
             this.Roxo = new System.Windows.Forms.Button();
             this.ebtnOpenModuleTextIcons = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.ebtnOpenModuleBackground = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.fundoCa1.SuspendLayout();
             this.fundoCa2.SuspendLayout();
             this.fundoCa3.SuspendLayout();
@@ -1388,22 +1391,12 @@ namespace AcroniUI.Custom
             // fundoCa1
             // 
             this.fundoCa1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.fundoCa1.Controls.Add(this.label31);
+            this.fundoCa1.Controls.Add(this.lblCa1);
             this.fundoCa1.Controls.Add(this.Ca1);
             this.fundoCa1.Location = new System.Drawing.Point(32, 219);
             this.fundoCa1.Name = "fundoCa1";
             this.fundoCa1.Size = new System.Drawing.Size(52, 56);
             this.fundoCa1.TabIndex = 0;
-            // 
-            // fundoCa2
-            // 
-            this.fundoCa2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.fundoCa2.Controls.Add(this.lblCa1);
-            this.fundoCa2.Controls.Add(this.Ca2);
-            this.fundoCa2.Location = new System.Drawing.Point(87, 219);
-            this.fundoCa2.Name = "fundoCa2";
-            this.fundoCa2.Size = new System.Drawing.Size(52, 56);
-            this.fundoCa2.TabIndex = 1;
             // 
             // lblCa1
             // 
@@ -1411,134 +1404,162 @@ namespace AcroniUI.Custom
             this.lblCa1.Font = new System.Drawing.Font("Open Sans", 10F);
             this.lblCa1.Location = new System.Drawing.Point(9, 4);
             this.lblCa1.Name = "lblCa1";
-            this.lblCa1.Size = new System.Drawing.Size(29, 40);
-            this.lblCa1.TabIndex = 83;
-            this.lblCa1.Text = "!\r\n1";
+            this.lblCa1.Size = new System.Drawing.Size(36, 40);
+            this.lblCa1.TabIndex = 84;
+            this.lblCa1.Text = "\"\r\n\'";
+            this.lblCa1.Click += new System.EventHandler(this.lblUpperBottom_Click);
+            // 
+            // fundoCa2
+            // 
+            this.fundoCa2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.fundoCa2.Controls.Add(this.lblCa2);
+            this.fundoCa2.Controls.Add(this.Ca2);
+            this.fundoCa2.Location = new System.Drawing.Point(87, 219);
+            this.fundoCa2.Name = "fundoCa2";
+            this.fundoCa2.Size = new System.Drawing.Size(52, 56);
+            this.fundoCa2.TabIndex = 1;
+            // 
+            // lblCa2
+            // 
+            this.lblCa2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.lblCa2.Font = new System.Drawing.Font("Open Sans", 10F);
+            this.lblCa2.Location = new System.Drawing.Point(9, 4);
+            this.lblCa2.Name = "lblCa2";
+            this.lblCa2.Size = new System.Drawing.Size(36, 40);
+            this.lblCa2.TabIndex = 83;
+            this.lblCa2.Text = "!\r\n1";
+            this.lblCa2.Click += new System.EventHandler(this.lblUpperBottom_Click);
             // 
             // fundoCa3
             // 
             this.fundoCa3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.fundoCa3.Controls.Add(this.label10);
+            this.fundoCa3.Controls.Add(this.lblCa3);
             this.fundoCa3.Controls.Add(this.Ca3);
             this.fundoCa3.Location = new System.Drawing.Point(143, 219);
             this.fundoCa3.Name = "fundoCa3";
             this.fundoCa3.Size = new System.Drawing.Size(52, 56);
             this.fundoCa3.TabIndex = 1;
             // 
-            // label10
+            // lblCa3
             // 
-            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.label10.Font = new System.Drawing.Font("Open Sans", 10F);
-            this.label10.Location = new System.Drawing.Point(9, 4);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(29, 40);
-            this.label10.TabIndex = 84;
-            this.label10.Text = "@\r\n2\r\n";
+            this.lblCa3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.lblCa3.Font = new System.Drawing.Font("Open Sans", 10F);
+            this.lblCa3.Location = new System.Drawing.Point(9, 4);
+            this.lblCa3.Name = "lblCa3";
+            this.lblCa3.Size = new System.Drawing.Size(36, 40);
+            this.lblCa3.TabIndex = 84;
+            this.lblCa3.Text = "@\r\n2\r\n";
+            this.lblCa3.Click += new System.EventHandler(this.lblUpperBottom_Click);
             // 
             // fundoCa4
             // 
             this.fundoCa4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.fundoCa4.Controls.Add(this.label11);
+            this.fundoCa4.Controls.Add(this.lblCa4);
             this.fundoCa4.Controls.Add(this.Ca4);
             this.fundoCa4.Location = new System.Drawing.Point(198, 219);
             this.fundoCa4.Name = "fundoCa4";
             this.fundoCa4.Size = new System.Drawing.Size(52, 56);
             this.fundoCa4.TabIndex = 2;
             // 
-            // label11
+            // lblCa4
             // 
-            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.label11.Font = new System.Drawing.Font("Open Sans", 10F);
-            this.label11.Location = new System.Drawing.Point(9, 4);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(29, 40);
-            this.label11.TabIndex = 85;
-            this.label11.Text = "#\r\n3\r\n";
+            this.lblCa4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.lblCa4.Font = new System.Drawing.Font("Open Sans", 10F);
+            this.lblCa4.Location = new System.Drawing.Point(9, 4);
+            this.lblCa4.Name = "lblCa4";
+            this.lblCa4.Size = new System.Drawing.Size(35, 40);
+            this.lblCa4.TabIndex = 85;
+            this.lblCa4.Text = "#\r\n3\r\n";
+            this.lblCa4.Click += new System.EventHandler(this.lblUpperBottom_Click);
             // 
             // fundoCa5
             // 
             this.fundoCa5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.fundoCa5.Controls.Add(this.label12);
+            this.fundoCa5.Controls.Add(this.lblCa5);
             this.fundoCa5.Controls.Add(this.Ca5);
             this.fundoCa5.Location = new System.Drawing.Point(254, 219);
             this.fundoCa5.Name = "fundoCa5";
             this.fundoCa5.Size = new System.Drawing.Size(52, 56);
             this.fundoCa5.TabIndex = 3;
             // 
-            // label12
+            // lblCa5
             // 
-            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.label12.Font = new System.Drawing.Font("Open Sans", 10F);
-            this.label12.Location = new System.Drawing.Point(9, 4);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(29, 40);
-            this.label12.TabIndex = 85;
-            this.label12.Text = "$\r\n4\r\n";
+            this.lblCa5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.lblCa5.Font = new System.Drawing.Font("Open Sans", 10F);
+            this.lblCa5.Location = new System.Drawing.Point(9, 4);
+            this.lblCa5.Name = "lblCa5";
+            this.lblCa5.Size = new System.Drawing.Size(36, 40);
+            this.lblCa5.TabIndex = 85;
+            this.lblCa5.Text = "$\r\n4\r\n";
+            this.lblCa5.Click += new System.EventHandler(this.lblUpperBottom_Click);
             // 
             // fundoCa6
             // 
             this.fundoCa6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.fundoCa6.Controls.Add(this.label22);
+            this.fundoCa6.Controls.Add(this.lblCa6);
             this.fundoCa6.Controls.Add(this.Ca6);
             this.fundoCa6.Location = new System.Drawing.Point(309, 219);
             this.fundoCa6.Name = "fundoCa6";
             this.fundoCa6.Size = new System.Drawing.Size(52, 56);
             this.fundoCa6.TabIndex = 4;
             // 
-            // label22
+            // lblCa6
             // 
-            this.label22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.label22.Font = new System.Drawing.Font("Open Sans", 10F);
-            this.label22.Location = new System.Drawing.Point(9, 4);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(29, 40);
-            this.label22.TabIndex = 85;
-            this.label22.Text = "%\r\n5\r\n";
+            this.lblCa6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.lblCa6.Font = new System.Drawing.Font("Open Sans", 10F);
+            this.lblCa6.Location = new System.Drawing.Point(9, 4);
+            this.lblCa6.Name = "lblCa6";
+            this.lblCa6.Size = new System.Drawing.Size(36, 40);
+            this.lblCa6.TabIndex = 85;
+            this.lblCa6.Text = "%\r\n5\r\n";
+            this.lblCa6.Click += new System.EventHandler(this.lblUpperBottom_Click);
             // 
             // fundoCa7
             // 
             this.fundoCa7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.fundoCa7.Controls.Add(this.label23);
+            this.fundoCa7.Controls.Add(this.lblCa7);
             this.fundoCa7.Controls.Add(this.Ca7);
             this.fundoCa7.Location = new System.Drawing.Point(365, 219);
             this.fundoCa7.Name = "fundoCa7";
             this.fundoCa7.Size = new System.Drawing.Size(52, 56);
             this.fundoCa7.TabIndex = 2;
             // 
-            // label23
+            // lblCa7
             // 
-            this.label23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.label23.Font = new System.Drawing.Font("Open Sans", 10F);
-            this.label23.Location = new System.Drawing.Point(9, 4);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(29, 40);
-            this.label23.TabIndex = 86;
-            this.label23.Text = "¨\r\n6";
+            this.lblCa7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.lblCa7.Font = new System.Drawing.Font("Open Sans", 10F);
+            this.lblCa7.Location = new System.Drawing.Point(9, 4);
+            this.lblCa7.Name = "lblCa7";
+            this.lblCa7.Size = new System.Drawing.Size(36, 40);
+            this.lblCa7.TabIndex = 86;
+            this.lblCa7.Text = "¨\r\n6";
+            this.lblCa7.Click += new System.EventHandler(this.lblUpperBottom_Click);
             // 
             // fundoCa8
             // 
             this.fundoCa8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.fundoCa8.Controls.Add(this.label24);
+            this.fundoCa8.Controls.Add(this.lblCa8);
             this.fundoCa8.Controls.Add(this.Ca8);
             this.fundoCa8.Location = new System.Drawing.Point(421, 219);
             this.fundoCa8.Name = "fundoCa8";
             this.fundoCa8.Size = new System.Drawing.Size(52, 56);
             this.fundoCa8.TabIndex = 3;
             // 
-            // label24
+            // lblCa8
             // 
-            this.label24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.label24.Font = new System.Drawing.Font("Open Sans", 10F);
-            this.label24.Location = new System.Drawing.Point(9, 4);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(30, 40);
-            this.label24.TabIndex = 86;
-            this.label24.Text = "&\r\n7";
+            this.lblCa8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.lblCa8.Font = new System.Drawing.Font("Open Sans", 10F);
+            this.lblCa8.Location = new System.Drawing.Point(9, 4);
+            this.lblCa8.Name = "lblCa8";
+            this.lblCa8.Size = new System.Drawing.Size(36, 40);
+            this.lblCa8.TabIndex = 86;
+            this.lblCa8.Text = "&\r\n7";
+            this.lblCa8.Click += new System.EventHandler(this.lblUpperBottom_Click);
             // 
             // fundoCa9
             // 
             this.fundoCa9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.fundoCa9.Controls.Add(this.label26);
+            this.fundoCa9.Controls.Add(this.lblCa9);
             this.fundoCa9.Controls.Add(this.label25);
             this.fundoCa9.Controls.Add(this.Ca9);
             this.fundoCa9.Location = new System.Drawing.Point(476, 219);
@@ -1546,15 +1567,16 @@ namespace AcroniUI.Custom
             this.fundoCa9.Size = new System.Drawing.Size(52, 56);
             this.fundoCa9.TabIndex = 4;
             // 
-            // label26
+            // lblCa9
             // 
-            this.label26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.label26.Font = new System.Drawing.Font("Open Sans", 10F);
-            this.label26.Location = new System.Drawing.Point(9, 4);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(29, 40);
-            this.label26.TabIndex = 87;
-            this.label26.Text = "*\r\n8\r\n";
+            this.lblCa9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.lblCa9.Font = new System.Drawing.Font("Open Sans", 10F);
+            this.lblCa9.Location = new System.Drawing.Point(9, 4);
+            this.lblCa9.Name = "lblCa9";
+            this.lblCa9.Size = new System.Drawing.Size(36, 40);
+            this.lblCa9.TabIndex = 87;
+            this.lblCa9.Text = "*\r\n8\r\n";
+            this.lblCa9.Click += new System.EventHandler(this.lblUpperBottom_Click);
             // 
             // label25
             // 
@@ -1569,71 +1591,106 @@ namespace AcroniUI.Custom
             // fundoCa10
             // 
             this.fundoCa10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.fundoCa10.Controls.Add(this.label27);
+            this.fundoCa10.Controls.Add(this.lblCa10);
             this.fundoCa10.Controls.Add(this.Ca10);
             this.fundoCa10.Location = new System.Drawing.Point(532, 219);
             this.fundoCa10.Name = "fundoCa10";
             this.fundoCa10.Size = new System.Drawing.Size(52, 56);
             this.fundoCa10.TabIndex = 5;
             // 
-            // label27
+            // lblCa10
             // 
-            this.label27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.label27.Font = new System.Drawing.Font("Open Sans", 10F);
-            this.label27.Location = new System.Drawing.Point(9, 4);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(29, 40);
-            this.label27.TabIndex = 87;
-            this.label27.Text = "(\r\n9\r\n";
+            this.lblCa10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.lblCa10.Font = new System.Drawing.Font("Open Sans", 10F);
+            this.lblCa10.Location = new System.Drawing.Point(9, 4);
+            this.lblCa10.Name = "lblCa10";
+            this.lblCa10.Size = new System.Drawing.Size(36, 40);
+            this.lblCa10.TabIndex = 87;
+            this.lblCa10.Text = "(\r\n9\r\n";
+            this.lblCa10.Click += new System.EventHandler(this.lblUpperBottom_Click);
             // 
             // fundoCa11
             // 
             this.fundoCa11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.fundoCa11.Controls.Add(this.label28);
+            this.fundoCa11.Controls.Add(this.lblCa11);
             this.fundoCa11.Controls.Add(this.Ca11);
             this.fundoCa11.Location = new System.Drawing.Point(588, 219);
             this.fundoCa11.Name = "fundoCa11";
             this.fundoCa11.Size = new System.Drawing.Size(52, 56);
             this.fundoCa11.TabIndex = 6;
             // 
-            // label28
+            // lblCa11
             // 
-            this.label28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.label28.Font = new System.Drawing.Font("Open Sans", 10F);
-            this.label28.Location = new System.Drawing.Point(7, 4);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(29, 40);
-            this.label28.TabIndex = 87;
-            this.label28.Text = ")\r\n0\r\n";
+            this.lblCa11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.lblCa11.Font = new System.Drawing.Font("Open Sans", 10F);
+            this.lblCa11.Location = new System.Drawing.Point(7, 4);
+            this.lblCa11.Name = "lblCa11";
+            this.lblCa11.Size = new System.Drawing.Size(39, 40);
+            this.lblCa11.TabIndex = 87;
+            this.lblCa11.Text = ")\r\n0\r\n";
+            this.lblCa11.Click += new System.EventHandler(this.lblUpperBottom_Click);
             // 
             // fundoCa12
             // 
             this.fundoCa12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.fundoCa12.Controls.Add(this.label29);
+            this.fundoCa12.Controls.Add(this.lblCa12);
             this.fundoCa12.Controls.Add(this.Ca12);
             this.fundoCa12.Location = new System.Drawing.Point(643, 219);
             this.fundoCa12.Name = "fundoCa12";
             this.fundoCa12.Size = new System.Drawing.Size(52, 56);
             this.fundoCa12.TabIndex = 7;
             // 
+            // lblCa12
+            // 
+            this.lblCa12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.lblCa12.Font = new System.Drawing.Font("Open Sans", 10F);
+            this.lblCa12.Location = new System.Drawing.Point(9, 4);
+            this.lblCa12.Name = "lblCa12";
+            this.lblCa12.Size = new System.Drawing.Size(36, 40);
+            this.lblCa12.TabIndex = 88;
+            this.lblCa12.Text = "_\r\n-\r\n";
+            this.lblCa12.Click += new System.EventHandler(this.lblUpperBottom_Click);
+            // 
             // fundoCa13
             // 
             this.fundoCa13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.fundoCa13.Controls.Add(this.label30);
+            this.fundoCa13.Controls.Add(this.lblCa13);
             this.fundoCa13.Controls.Add(this.Ca13);
             this.fundoCa13.Location = new System.Drawing.Point(698, 219);
             this.fundoCa13.Name = "fundoCa13";
             this.fundoCa13.Size = new System.Drawing.Size(52, 56);
             this.fundoCa13.TabIndex = 8;
             // 
+            // lblCa13
+            // 
+            this.lblCa13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.lblCa13.Font = new System.Drawing.Font("Open Sans", 10F);
+            this.lblCa13.Location = new System.Drawing.Point(9, 4);
+            this.lblCa13.Name = "lblCa13";
+            this.lblCa13.Size = new System.Drawing.Size(36, 40);
+            this.lblCa13.TabIndex = 89;
+            this.lblCa13.Text = "+\r\n=  §\r\n";
+            this.lblCa13.Click += new System.EventHandler(this.lblUpperBottom_Click);
+            // 
             // fundoCb2
             // 
             this.fundoCb2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.fundoCb2.Controls.Add(this.lblCb2);
             this.fundoCb2.Controls.Add(this.Cb2);
             this.fundoCb2.Location = new System.Drawing.Point(115, 277);
             this.fundoCb2.Name = "fundoCb2";
             this.fundoCb2.Size = new System.Drawing.Size(52, 56);
             this.fundoCb2.TabIndex = 9;
+            // 
+            // lblCb2
+            // 
+            this.lblCb2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.lblCb2.Font = new System.Drawing.Font("Open Sans", 12F);
+            this.lblCb2.Location = new System.Drawing.Point(9, 4);
+            this.lblCb2.Name = "lblCb2";
+            this.lblCb2.Size = new System.Drawing.Size(36, 40);
+            this.lblCb2.TabIndex = 88;
+            this.lblCb2.Text = "Q\r\n \r\n";
             // 
             // fundoCb3
             // 
@@ -3050,41 +3107,35 @@ namespace AcroniUI.Custom
             this.ebtnOpenModuleBackground.ElipseRadius = 10;
             this.ebtnOpenModuleBackground.TargetControl = this.btnOpenModuleBackground;
             // 
-            // label29
+            // button1
             // 
-            this.label29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.label29.Font = new System.Drawing.Font("Open Sans", 10F);
-            this.label29.Location = new System.Drawing.Point(9, 4);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(29, 40);
-            this.label29.TabIndex = 88;
-            this.label29.Text = "_\r\n-\r\n";
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(128, 162);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 83;
+            this.button1.Text = "Upper";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label30
+            // button4
             // 
-            this.label30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.label30.Font = new System.Drawing.Font("Open Sans", 10F);
-            this.label30.Location = new System.Drawing.Point(9, 4);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(32, 40);
-            this.label30.TabIndex = 89;
-            this.label30.Text = "+\r\n=  §\r\n";
-            // 
-            // label31
-            // 
-            this.label31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.label31.Font = new System.Drawing.Font("Open Sans", 10F);
-            this.label31.Location = new System.Drawing.Point(9, 4);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(29, 40);
-            this.label31.TabIndex = 84;
-            this.label31.Text = "\"\r\n\'";
+            this.button4.ForeColor = System.Drawing.Color.Black;
+            this.button4.Location = new System.Drawing.Point(216, 162);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 86;
+            this.button4.Text = "Bottom";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Compacto
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pnlHeadColorpicker);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlBodyColorpicker);
@@ -3194,7 +3245,7 @@ namespace AcroniUI.Custom
             this.Controls.Add(this.picBoxKeyboardBackground);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "Compacto";
-            this.Opacity = 0D;
+            this.Opacity = 1D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             this.Load += new System.EventHandler(this.FormLoad);
@@ -3305,6 +3356,9 @@ namespace AcroniUI.Custom
             this.Controls.SetChildIndex(this.pnlBodyColorpicker, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.pnlHeadColorpicker, 0);
+            this.Controls.SetChildIndex(this.button1, 0);
+            this.Controls.SetChildIndex(this.pnlStripAjuda, 0);
+            this.Controls.SetChildIndex(this.button4, 0);
             this.fundoCa1.ResumeLayout(false);
             this.fundoCa2.ResumeLayout(false);
             this.fundoCa3.ResumeLayout(false);
@@ -3533,20 +3587,23 @@ namespace AcroniUI.Custom
         private System.Windows.Forms.Button btnHist2;
         private StyleBtn btnStyleFontColor;
         private System.Windows.Forms.Panel pnlBtnStyleFontColor;
-        private System.Windows.Forms.Label lblCa1;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label lblCa2;
+        private System.Windows.Forms.Label lblCa3;
+        private System.Windows.Forms.Label lblCa4;
+        private System.Windows.Forms.Label lblCa5;
+        private System.Windows.Forms.Label lblCa6;
+        private System.Windows.Forms.Label lblCa7;
+        private System.Windows.Forms.Label lblCa8;
+        private System.Windows.Forms.Label lblCa9;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label lblCa10;
+        private System.Windows.Forms.Label lblCa11;
+        private System.Windows.Forms.Label lblCa12;
+        private System.Windows.Forms.Label lblCa13;
+        private System.Windows.Forms.Label lblCa1;
+        private System.Windows.Forms.Label lblCb2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button4;
     }
 }
 
