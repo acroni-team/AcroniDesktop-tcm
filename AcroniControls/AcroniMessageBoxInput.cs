@@ -34,7 +34,7 @@ namespace AcroniControls
         private void btnEnviar_Click(object sender, EventArgs e)
         {
             if (!String.IsNullOrEmpty(txtUserInput.Text))
-                {
+            {
                 if (alblMessage1.Text.Contains("coleção"))
                     Share.Collection.CollectionName = txtUserInput.Text;
                 else

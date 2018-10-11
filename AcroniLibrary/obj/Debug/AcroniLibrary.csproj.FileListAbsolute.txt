@@ -62,18 +62,6 @@ C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\Acroni
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.csproj.CopyComplete
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.dll
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\O push\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.pdb
-E:\Desktop\c\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.csprojAssemblyReference.cache
-E:\Desktop\c\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.csproj.CoreCompileInputs.cache
-E:\Desktop\c\AcroniDesktop\AcroniLibrary\bin\Debug\AcroniLibrary.dll
-E:\Desktop\c\AcroniDesktop\AcroniLibrary\bin\Debug\AcroniLibrary.pdb
-E:\Desktop\c\AcroniDesktop\AcroniLibrary\bin\Debug\AcroniControls.dll
-E:\Desktop\c\AcroniDesktop\AcroniLibrary\bin\Debug\System.ValueTuple.dll
-E:\Desktop\c\AcroniDesktop\AcroniLibrary\bin\Debug\Bunifu_UI_v1.52.dll
-E:\Desktop\c\AcroniDesktop\AcroniLibrary\bin\Debug\AcroniControls.pdb
-E:\Desktop\c\AcroniDesktop\AcroniLibrary\bin\Debug\System.ValueTuple.xml
-E:\Desktop\c\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.csproj.CopyComplete
-E:\Desktop\c\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.dll
-E:\Desktop\c\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.pdb
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop\AcroniLibrary\bin\Debug\AcroniLibrary.dll
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop\AcroniLibrary\bin\Debug\AcroniLibrary.pdb
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop\AcroniLibrary\bin\Debug\AcroniControls.dll
@@ -86,3 +74,14 @@ C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop\AcroniLibrary
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.csproj.CopyComplete
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.dll
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.pdb
+E:\Desktop\c\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.csproj.CoreCompileInputs.cache
+E:\Desktop\c\AcroniDesktop\AcroniLibrary\bin\Debug\AcroniLibrary.dll
+E:\Desktop\c\AcroniDesktop\AcroniLibrary\bin\Debug\AcroniLibrary.pdb
+E:\Desktop\c\AcroniDesktop\AcroniLibrary\bin\Debug\Bunifu_UI_v1.52.dll
+E:\Desktop\c\AcroniDesktop\AcroniLibrary\bin\Debug\System.ValueTuple.dll
+E:\Desktop\c\AcroniDesktop\AcroniLibrary\bin\Debug\AcroniControls.pdb
+E:\Desktop\c\AcroniDesktop\AcroniLibrary\bin\Debug\System.ValueTuple.xml
+E:\Desktop\c\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.csproj.CopyComplete
+E:\Desktop\c\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.dll
+E:\Desktop\c\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.pdb
+E:\Desktop\c\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.csprojAssemblyReference.cache

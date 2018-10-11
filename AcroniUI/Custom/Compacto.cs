@@ -39,6 +39,9 @@ namespace AcroniUI.Custom
         private Color Color { get; set; } = Color.FromArgb(26, 26, 26);
         private Color FontColor { get; set; } = Color.White;
 
+        // Definição de PictureBox privada que conterá a imagem de fundo para aplicação do efeito de Blur.
+        private PictureBox __PictureBox { get; set; }
+        private Panel __pnl { get; set; }
 
         #endregion
 
@@ -52,15 +55,17 @@ namespace AcroniUI.Custom
             if (__HasBtnStyleFontColorBeenChosen)
                 keybutton.ForeColor = FontColor;
             else
-            else {
+            {
                 keybutton.BackColor = keybutton.SetColor(Color);
-                foreach(Control c in keybutton.Parent.Controls)
+                foreach (Control c in keybutton.Parent.Controls)
                     if (c.Name.Contains(keybutton.Name))
                         c.BackColor = keybutton.BackColor;
             }
 
             if (__HasBtnTextModuleBeenChosen)
             {
+                CallBackgroundImage();
+                Blur();
                 KeycapTextIconModule keycapTextModule = new KeycapTextIconModule();
                 if (keycapTextModule.ShowDialog() == DialogResult.OK)
                 {
@@ -82,6 +87,7 @@ namespace AcroniUI.Custom
 
                     if (KeycapTextIconModule.HasChosenAIcon)
                         keybutton.Image = keycapTextModule.SelectedIcon;
+                    UnBlur();
                 }
             }
 
@@ -116,17 +122,17 @@ namespace AcroniUI.Custom
             InitializeComponent();
 
             lblKeyboardName.Location = new Point(lblCollectionName.Location.X + lblCollectionName.Size.Width - 5, lblCollectionName.Location.Y);
-            if (string.IsNullOrEmpty(Share.Keyboard.Name))
-            {
+            //if (string.IsNullOrEmpty(Share.Keyboard.NickName))
+            //{
                 lblKeyboardName.Text = KeyboardIDGenerator.GenerateID('C');
                 lblCollectionName.Visible = false;
                 lblKeyboardName.Location = lblCollectionName.Location;
-            }
-            else
-            {
-                lblKeyboardName.Text = Share.Keyboard.NickName;
-                lblCollectionName.Text = Share.Collection.CollectionName;
-            }
+            //}
+            //else
+            //{
+            //    lblKeyboardName.Text = Share.Keyboard.NickName;
+            //    lblCollectionName.Text = Share.Collection.CollectionName;
+            //}
 
             //Eu preciso disso no construtor, sorry. Não dá pra colocar dois estilos na Open Sans logo no designer.
 
@@ -302,10 +308,40 @@ namespace AcroniUI.Custom
 
         #endregion
 
+        #region Métodos do blur.
+
+        private void Blur()
+        {
+            Bitmap bmp = Screenshot.TakeSnapshot(panel1);
+            BitmapFilter.GaussianBlur(bmp, 0);
+            __PictureBox.Image = bmp;
+            __PictureBox.BringToFront();
+        }
+
+        private void UnBlur()
+        {
+            __PictureBox.Image = null;
+            __PictureBox.SendToBack();
+        }
+
+        private void CallBackgroundImage()
+        {
+            __pnl = new Panel();
+
+            foreach (Control c in this.Controls)
+            {
+                __pnl.Controls.Add(c);
+            }
+            __PictureBox.Dock = DockStyle.Fill;
+        }
+
+        #endregion
+
         #region Ícones e texto
 
         private void btnTextAndIcons_Click(object sender, EventArgs e)
         {
+
             if (__HasBtnTextModuleBeenChosen)
             {
                 __HasBtnTextModuleBeenChosen = false;
@@ -549,12 +585,14 @@ namespace AcroniUI.Custom
                 MessageBox.Show("Não fez");
             byte[] img = ImageConvert.ImageToByteArray(Screenshot.TakeSnapshot(picBoxKeyboardBackground), ImageFormat.Bmp);
             //if (SQLMethods.INSERT_INTO($"insert into tblPedidosTecladoCustomizado values ((select top 1 id_teclado_customizado from tblTecladoCustomizado order by id_teclado_customizado DESC), @image)", img) != 0)
-                //MessageBox.Show("Fez");
+            //MessageBox.Show("Fez");
             //else
             //    MessageBox.Show("Não fez");
+        }
+
         private void lblUpperBottom_Click(object sender, EventArgs e)
         {
-            kbtn_Click(Controls.Find((sender as Label).Name.Remove(0,3),true)[0],e);
+            kbtn_Click(Controls.Find((sender as Label).Name.Remove(0, 3), true)[0], e);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -566,7 +604,7 @@ namespace AcroniUI.Custom
         private void button4_Click(object sender, EventArgs e)
         {
             lblCb2.Location = new Point(lblCb2.Location.X, lblCb2.Location.Y + 12);
-            lblCb2.Size = new Size(lblCb2.Width,lblCb2.Height-12);
+            lblCb2.Size = new Size(lblCb2.Width, lblCb2.Height - 12);
         }
     }
 }
