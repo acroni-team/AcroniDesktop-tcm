@@ -27,7 +27,7 @@ namespace AcroniUI.Custom
         Kbtn keybutton = new Kbtn();
 
         // Definição das propriedades de salvamento
-        private bool SetKeyboardProperties;
+        //private bool SetKeyboardProperties;
         Keyboard keyboard = new Keyboard();
         Collection collection = new Collection();
 

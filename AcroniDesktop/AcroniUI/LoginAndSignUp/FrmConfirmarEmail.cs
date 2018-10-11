@@ -19,7 +19,7 @@ namespace AcroniUI.LoginAndSignUp
             Application.Run(new Splash());
         }
 
-        private String email_public, senha_public, usuario_public, nome_public,tipo_public, localizacao_img_public, String_de_confirmacao = "",cpf_public;
+        private String email_public, senha_public, usuario_public, nome_public,tipo_public, String_de_confirmacao = "",cpf_public = "";
         
         public static bool atualizacao_SUCCESS;
 
