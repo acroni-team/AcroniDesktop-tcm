@@ -549,6 +549,7 @@ namespace AcroniUI.Custom
             keyboard.Material = "Madeira";
             keyboard.IsMechanicalKeyboard = true;
             keyboard.HasRestPads = false;
+            keyboard.KeyboardType = this.Name;
             keyboard.BackgroundImage = picBoxKeyboardBackground.Image;
             keyboard.BackgroundModeSize = picBoxKeyboardBackground.SizeMode;
 
