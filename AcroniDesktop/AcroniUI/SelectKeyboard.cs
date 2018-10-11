@@ -9,6 +9,7 @@ namespace AcroniUI
         public SelectKeyboard()
         {
             InitializeComponent();
+            MessageBox.Show(Share.User.ID.ToString());
         }
 
         #region Inicializar todos os tipos de teclados

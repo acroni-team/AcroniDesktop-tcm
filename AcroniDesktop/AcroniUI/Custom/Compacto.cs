@@ -22,7 +22,6 @@ namespace AcroniUI.Custom
 
         #region Declarações 
 
-
         // Definição do botão de teclado genérico (kbtn)
         Kbtn keybutton = new Kbtn();
 
@@ -38,9 +37,6 @@ namespace AcroniUI.Custom
         // Definição das propriedades do colorpicker 
         private Color Color { get; set; } = Color.FromArgb(26, 26, 26);
         private Color FontColor { get; set; } = Color.White;
-
-        // Definição de PictureBox privada que conterá a imagem de fundo para aplicação do efeito de Blur.
-        private PictureBox __PictureBox { get; set; }
 
         #endregion
 
@@ -65,19 +61,6 @@ namespace AcroniUI.Custom
 
             if (__HasBtnTextModuleBeenChosen)
             {
-                // Setup do blur. Explicações aqui: https://github.com/felipiiiiiii/Teste-de-Blur
-
-                __PictureBox = new PictureBox
-                {
-                    Dock = DockStyle.Fill
-                };
-
-                pnlBlur.Controls.Add(__PictureBox);
-
-                Blur();
-
-                // Fim do setup do blur. 
-
                 KeycapTextIconModule keycapTextModule = new KeycapTextIconModule();
                 if (keycapTextModule.ShowDialog() == DialogResult.OK)
                 {
@@ -99,7 +82,6 @@ namespace AcroniUI.Custom
 
                     if (KeycapTextIconModule.HasChosenAIcon)
                         keybutton.Image = keycapTextModule.SelectedIcon;
-                    UnBlur();
                 }
             }
 
@@ -133,10 +115,6 @@ namespace AcroniUI.Custom
         {
             InitializeComponent();
 
-            __PictureBox = new PictureBox();
-
-            pnlBlur.Controls.Add(__PictureBox);
-
             //Fazendo com que o label do nome do teclado tenha localização exatamente após o label que contém o nome da coleção.
 
             lblKeyboardName.Location = new Point(lblCollectionName.Location.X + lblCollectionName.Size.Width - 5, lblCollectionName.Location.Y);
@@ -157,8 +135,6 @@ namespace AcroniUI.Custom
 
             btnStyleUnderline.Font = new Font(btnStyleUnderline.Font, FontStyle.Underline);
             btnStyleStrikeout.Font = new Font(btnStyleStrikeout.Font, FontStyle.Strikeout);
-
-
 
             Bunifu.Framework.UI.BunifuElipse be = new Bunifu.Framework.UI.BunifuElipse();
             be.ApplyElipse(pnlBtnStyleFontColor, 5);
@@ -325,24 +301,6 @@ namespace AcroniUI.Custom
         private bool __HasBtnTextModuleBeenChosen { get; set; }
 
         private bool __HasBtnStyleFontColorBeenChosen { get; set; }
-
-        #endregion
-
-        #region Métodos do blur.
-
-        private void Blur()
-        {
-            Bitmap bmp = Screenshot.TakeSnapshot(pnlBlur);
-            BitmapFilter.GaussianBlur(bmp, 0);
-            __PictureBox.Image = bmp;
-            __PictureBox.BringToFront();
-        }
-
-        private void UnBlur()
-        {
-            __PictureBox.Image = null;
-            __PictureBox.SendToBack();
-        }
 
         #endregion
 

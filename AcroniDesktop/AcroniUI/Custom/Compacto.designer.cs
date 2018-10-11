@@ -243,7 +243,6 @@ namespace AcroniUI.Custom
             this.ebtnOpenModuleBackground = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.pnlBlur = new System.Windows.Forms.Panel();
             this.fundoCa1.SuspendLayout();
             this.fundoCa2.SuspendLayout();
             this.fundoCa3.SuspendLayout();
@@ -3130,14 +3129,6 @@ namespace AcroniUI.Custom
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // pnlBlur
-            // 
-            this.pnlBlur.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBlur.Location = new System.Drawing.Point(0, 0);
-            this.pnlBlur.Name = "pnlBlur";
-            this.pnlBlur.Size = new System.Drawing.Size(1280, 720);
-            this.pnlBlur.TabIndex = 87;
-            // 
             // Compacto
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -3252,13 +3243,12 @@ namespace AcroniUI.Custom
             this.Controls.Add(this.fundoCe3);
             this.Controls.Add(this.fundoCe5);
             this.Controls.Add(this.picBoxKeyboardBackground);
-            this.Controls.Add(this.pnlBlur);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "Compacto";
+            this.Opacity = 1D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             this.Load += new System.EventHandler(this.FormLoad);
-            this.Controls.SetChildIndex(this.pnlBlur, 0);
             this.Controls.SetChildIndex(this.picBoxKeyboardBackground, 0);
             this.Controls.SetChildIndex(this.fundoCe5, 0);
             this.Controls.SetChildIndex(this.fundoCe3, 0);
@@ -3614,7 +3604,6 @@ namespace AcroniUI.Custom
         private System.Windows.Forms.Label lblCb2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Panel pnlBlur;
     }
 }
 
