@@ -41,7 +41,6 @@ namespace AcroniUI.Custom
 
         // Definição de PictureBox privada que conterá a imagem de fundo para aplicação do efeito de Blur.
         private PictureBox __PictureBox { get; set; }
-        private Panel __pnl { get; set; }
 
         #endregion
 
@@ -50,10 +49,12 @@ namespace AcroniUI.Custom
         //Ao clicar num botão do teclado
         private void kbtn_Click(object sender, EventArgs e)
         {
+
             keybutton = (Kbtn)sender;
 
             if (__HasBtnStyleFontColorBeenChosen)
                 keybutton.ForeColor = FontColor;
+
             else
             {
                 keybutton.BackColor = keybutton.SetColor(Color);
@@ -64,8 +65,19 @@ namespace AcroniUI.Custom
 
             if (__HasBtnTextModuleBeenChosen)
             {
-                CallBackgroundImage();
+                // Setup do blur. Explicações aqui: https://github.com/felipiiiiiii/Teste-de-Blur
+
+                __PictureBox = new PictureBox
+                {
+                    Dock = DockStyle.Fill
+                };
+
+                pnlBlur.Controls.Add(__PictureBox);
+
                 Blur();
+
+                // Fim do setup do blur. 
+
                 KeycapTextIconModule keycapTextModule = new KeycapTextIconModule();
                 if (keycapTextModule.ShowDialog() == DialogResult.OK)
                 {
@@ -121,34 +133,42 @@ namespace AcroniUI.Custom
         {
             InitializeComponent();
 
+            __PictureBox = new PictureBox();
+
+            pnlBlur.Controls.Add(__PictureBox);
+
+            //Fazendo com que o label do nome do teclado tenha localização exatamente após o label que contém o nome da coleção.
+
             lblKeyboardName.Location = new Point(lblCollectionName.Location.X + lblCollectionName.Size.Width - 5, lblCollectionName.Location.Y);
-            //if (string.IsNullOrEmpty(Share.Keyboard.NickName))
-            //{
+
+            if (string.IsNullOrEmpty(Share.Keyboard.NickName))
+            {
                 lblKeyboardName.Text = KeyboardIDGenerator.GenerateID('C');
                 lblCollectionName.Visible = false;
                 lblKeyboardName.Location = lblCollectionName.Location;
-            //}
-            //else
-            //{
-            //    lblKeyboardName.Text = Share.Keyboard.NickName;
-            //    lblCollectionName.Text = Share.Collection.CollectionName;
-            //}
+            }
+            else
+            {
+                lblKeyboardName.Text = Share.Keyboard.NickName;
+                lblCollectionName.Text = Share.Collection.CollectionName;
+            }
 
-            //Eu preciso disso no construtor, sorry. Não dá pra colocar dois estilos na Open Sans logo no designer.
+            //Eu preciso disso no construtor porque não dá pra colocar dois estilos na Open Sans logo no designer.
 
             btnStyleUnderline.Font = new Font(btnStyleUnderline.Font, FontStyle.Underline);
             btnStyleStrikeout.Font = new Font(btnStyleStrikeout.Font, FontStyle.Strikeout);
 
+
+
             Bunifu.Framework.UI.BunifuElipse be = new Bunifu.Framework.UI.BunifuElipse();
             be.ApplyElipse(pnlBtnStyleFontColor, 5);
+
+
             //Foreach para arredondar cores do colorpicker
             foreach (Control c in pnlBodyColorpicker.Controls)
             {
                 if (c is Button)
-                {
-                    Bunifu.Framework.UI.BunifuElipse elipse = new Bunifu.Framework.UI.BunifuElipse();
-                    elipse.ApplyElipse(c, 5);
-                }
+                    be.ApplyElipse(c, 5);
             }
 
             if (Share.EditKeyboard)
@@ -312,7 +332,7 @@ namespace AcroniUI.Custom
 
         private void Blur()
         {
-            Bitmap bmp = Screenshot.TakeSnapshot(panel1);
+            Bitmap bmp = Screenshot.TakeSnapshot(pnlBlur);
             BitmapFilter.GaussianBlur(bmp, 0);
             __PictureBox.Image = bmp;
             __PictureBox.BringToFront();
@@ -322,17 +342,6 @@ namespace AcroniUI.Custom
         {
             __PictureBox.Image = null;
             __PictureBox.SendToBack();
-        }
-
-        private void CallBackgroundImage()
-        {
-            __pnl = new Panel();
-
-            foreach (Control c in this.Controls)
-            {
-                __pnl.Controls.Add(c);
-            }
-            __PictureBox.Dock = DockStyle.Fill;
         }
 
         #endregion

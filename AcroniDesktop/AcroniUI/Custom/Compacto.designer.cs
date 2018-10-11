@@ -243,6 +243,7 @@ namespace AcroniUI.Custom
             this.ebtnOpenModuleBackground = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.pnlBlur = new System.Windows.Forms.Panel();
             this.fundoCa1.SuspendLayout();
             this.fundoCa2.SuspendLayout();
             this.fundoCa3.SuspendLayout();
@@ -2088,7 +2089,7 @@ namespace AcroniUI.Custom
             this.lblCollectionName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(59)))));
             this.lblCollectionName.Location = new System.Drawing.Point(495, 35);
             this.lblCollectionName.Name = "lblCollectionName";
-            this.lblCollectionName.Size = new System.Drawing.Size(261, 32);
+            this.lblCollectionName.Size = new System.Drawing.Size(254, 32);
             this.lblCollectionName.TabIndex = 15;
             this.lblCollectionName.Text = "• <Nome da coleção>";
             // 
@@ -2179,7 +2180,7 @@ namespace AcroniUI.Custom
             this.lblDefinirParaTodasTeclas.Font = new System.Drawing.Font("Open Sans", 10.25F, System.Drawing.FontStyle.Bold);
             this.lblDefinirParaTodasTeclas.Location = new System.Drawing.Point(25, 128);
             this.lblDefinirParaTodasTeclas.Name = "lblDefinirParaTodasTeclas";
-            this.lblDefinirParaTodasTeclas.Size = new System.Drawing.Size(266, 19);
+            this.lblDefinirParaTodasTeclas.Size = new System.Drawing.Size(239, 19);
             this.lblDefinirParaTodasTeclas.TabIndex = 9;
             this.lblDefinirParaTodasTeclas.Text = "Definir estilo para todas as teclas";
             this.lblDefinirParaTodasTeclas.Click += new System.EventHandler(this.lblDefinirParaTodasTeclas_Click);
@@ -2391,7 +2392,7 @@ namespace AcroniUI.Custom
             this.label21.Font = new System.Drawing.Font("Open Sans", 12.25F, System.Drawing.FontStyle.Bold);
             this.label21.Location = new System.Drawing.Point(354, 86);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(114, 23);
+            this.label21.Size = new System.Drawing.Size(111, 23);
             this.label21.TabIndex = 9;
             this.label21.Text = "Preço atual:\r";
             // 
@@ -2402,7 +2403,7 @@ namespace AcroniUI.Custom
             this.label9.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold);
             this.label9.Location = new System.Drawing.Point(350, 102);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(147, 37);
+            this.label9.Size = new System.Drawing.Size(140, 37);
             this.label9.TabIndex = 9;
             this.label9.Text = "R$ 284,98";
             // 
@@ -2440,7 +2441,7 @@ namespace AcroniUI.Custom
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
             this.label20.Location = new System.Drawing.Point(355, 52);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(98, 23);
+            this.label20.Size = new System.Drawing.Size(90, 23);
             this.label20.TabIndex = 9;
             this.label20.Text = "R$ 249,99";
             // 
@@ -2452,7 +2453,7 @@ namespace AcroniUI.Custom
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
             this.label8.Location = new System.Drawing.Point(356, 37);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(96, 15);
+            this.label8.Size = new System.Drawing.Size(85, 15);
             this.label8.TabIndex = 9;
             this.label8.Text = "Preço original:\r";
             // 
@@ -2699,7 +2700,7 @@ namespace AcroniUI.Custom
             this.lblHexaColor.ForeColor = System.Drawing.Color.White;
             this.lblHexaColor.Location = new System.Drawing.Point(162, 14);
             this.lblHexaColor.Name = "lblHexaColor";
-            this.lblHexaColor.Size = new System.Drawing.Size(114, 32);
+            this.lblHexaColor.Size = new System.Drawing.Size(108, 32);
             this.lblHexaColor.TabIndex = 84;
             this.lblHexaColor.Text = "#2196F3";
             this.lblHexaColor.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -3129,6 +3130,14 @@ namespace AcroniUI.Custom
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // pnlBlur
+            // 
+            this.pnlBlur.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlBlur.Location = new System.Drawing.Point(0, 0);
+            this.pnlBlur.Name = "pnlBlur";
+            this.pnlBlur.Size = new System.Drawing.Size(1280, 720);
+            this.pnlBlur.TabIndex = 87;
+            // 
             // Compacto
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -3243,12 +3252,13 @@ namespace AcroniUI.Custom
             this.Controls.Add(this.fundoCe3);
             this.Controls.Add(this.fundoCe5);
             this.Controls.Add(this.picBoxKeyboardBackground);
+            this.Controls.Add(this.pnlBlur);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "Compacto";
-            this.Opacity = 1D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             this.Load += new System.EventHandler(this.FormLoad);
+            this.Controls.SetChildIndex(this.pnlBlur, 0);
             this.Controls.SetChildIndex(this.picBoxKeyboardBackground, 0);
             this.Controls.SetChildIndex(this.fundoCe5, 0);
             this.Controls.SetChildIndex(this.fundoCe3, 0);
@@ -3604,6 +3614,7 @@ namespace AcroniUI.Custom
         private System.Windows.Forms.Label lblCb2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Panel pnlBlur;
     }
 }
 
