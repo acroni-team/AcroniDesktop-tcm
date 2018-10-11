@@ -39,6 +39,7 @@ namespace AcroniUI.Custom.CustomModules
 
         private void btnExit_Click(object sender, EventArgs e)
         {
+            base.FadeOut(30);
             this.Close();
         }
 

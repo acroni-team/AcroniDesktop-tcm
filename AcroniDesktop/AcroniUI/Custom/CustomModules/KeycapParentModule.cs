@@ -17,31 +17,26 @@ namespace AcroniUI.Custom.CustomModules
             FadeIn();
         }
 
-        ~KeycapParentModule()
-        {
-            FadeOut();
-        }
-
         #region FadeIn e FadeOut
-        public async void FadeOut()
+        public virtual async void FadeOut(int delay)
         {
             while (Opacity > 0)
             {
-                await Task.Delay(1);
+                await Task.Delay(delay);
                 Opacity -= 0.05;
             }
-            Application.Exit();
         }
 
         public async void FadeIn()
         {
             while (Opacity < 1)
             {
-                await Task.Delay(1);
+                await Task.Delay(30);
                 Opacity += 0.05;
             }
             Opacity = 1.0;
         }
         #endregion
+
     }
 }

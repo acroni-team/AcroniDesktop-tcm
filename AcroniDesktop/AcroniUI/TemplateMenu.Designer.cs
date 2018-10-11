@@ -182,6 +182,7 @@
             this.btnConfig.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnConfig.TabIndex = 2;
             this.btnConfig.TabStop = false;
+            this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
             this.btnConfig.MouseEnter += new System.EventHandler(this.CursorHand);
             // 
             // ImgUsu
@@ -330,6 +331,7 @@
             this.Controls.Add(this.pnlOptions);
             this.Controls.Add(this.pnlAreaUsu);
             this.Name = "TemplateMenu";
+            this.Opacity = 1D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Controls.SetChildIndex(this.pnlAreaUsu, 0);
             this.Controls.SetChildIndex(this.pnlOptions, 0);

@@ -4096,6 +4096,7 @@ namespace AcroniUI.Custom
         private System.Windows.Forms.Label lblCb2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;
+<<<<<<< HEAD
         private System.Windows.Forms.Label lblCb3;
         private System.Windows.Forms.Label lblCb4;
         private System.Windows.Forms.Label lblCb5;
@@ -4131,6 +4132,8 @@ namespace AcroniUI.Custom
         private System.Windows.Forms.Label lblCd11;
         private System.Windows.Forms.Label lblCd12;
         private System.Windows.Forms.Label lblCd13;
+=======
+>>>>>>> 4d0adfbc7bf3f7656e24cc54d50de363f27daae6
     }
 }
 

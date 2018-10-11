@@ -290,7 +290,6 @@
             this.Controls.Add(this.styleBtn1);
             this.Controls.Add(this.btnSwitch);
             this.Name = "KeycapSwitchModule";
-            this.Opacity = 1D;
             this.Text = "KeycapSwitchModule";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

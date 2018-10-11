@@ -23,12 +23,11 @@ namespace AcroniUI.Custom
 
         #region Declarações 
 
-
         // Definição do botão de teclado genérico (kbtn)
         Kbtn keybutton = new Kbtn();
 
         // Definição das propriedades de salvamento
-        private bool SetKeyboardProperties;
+        //private bool SetKeyboardProperties;
         Keyboard keyboard = new Keyboard();
         Collection collection = new Collection();
 
@@ -40,10 +39,13 @@ namespace AcroniUI.Custom
         private Color Color { get; set; } = Color.FromArgb(26, 26, 26);
         private Color FontColor { get; set; } = Color.White;
 
+<<<<<<< HEAD
         // Definição de PictureBox privada que conterá a imagem de fundo para aplicação do efeito de Blur.
         private PictureBox __PictureBox { get; set; }
         private Panel __pnl { get; set; }
 
+=======
+>>>>>>> 4d0adfbc7bf3f7656e24cc54d50de363f27daae6
         #endregion
 
         #region Eventos a nível do formulário
@@ -78,30 +80,67 @@ namespace AcroniUI.Custom
             }
             if (__HasBtnTextModuleBeenChosen)
             {
+<<<<<<< HEAD
                 CallBackgroundImage();
                 Blur();
                 KeycapTextIconModule keycapTextModule = new KeycapTextIconModule();
                 if (keycapTextModule.ShowDialog() == DialogResult.OK)
+=======
+                // take a screenshot of the form and darken it:
+                Bitmap bmp = new Bitmap(this.ClientRectangle.Width, this.ClientRectangle.Height);
+                using (Graphics G = Graphics.FromImage(bmp))
                 {
-                    //if (!string.IsNullOrEmpty(keycapTextModule.Uppertext))
-                    //    keybutton.Uppertext = keycapTextModule.Uppertext;
-                    //else
-                    //    keybutton.Text = keybutton.Text;
+                    G.CompositingMode = System.Drawing.Drawing2D.CompositingMode.SourceOver;
+                    G.CopyFromScreen(this.PointToScreen(new Point(0, 0)), new Point(0, 0), this.ClientRectangle.Size);
+                    double percent = 0.75;
+                    Color darken = Color.FromArgb((int)(255 * percent), Color.Black);
+                    using (Brush brsh = new SolidBrush(darken))
+                    {
+                        G.FillRectangle(brsh, this.ClientRectangle);
+                    }
+                }
 
-                    //if (!string.IsNullOrEmpty(keycapTextModule.BottomText))
-                    //if (keybutton = Ca14s
-                    //    keybutton.BottomText = keycapTextModule.BottomText;
-                    //else
-                    //    keybutton.Text = keybutton.Text;
+                // put the darkened screenshot into a Panel and bring it to the front:
+                using (Panel p = new Panel())
+>>>>>>> 4d0adfbc7bf3f7656e24cc54d50de363f27daae6
+                {
+                    p.Location = new Point(0, 0);
+                    p.Size = this.ClientRectangle.Size;
+                    p.BackgroundImage = bmp;
+                    this.Controls.Add(p);
+                    p.BringToFront();
 
-                    if (!string.IsNullOrEmpty(keycapTextModule.Maintext))
-                        keybutton.Text = keycapTextModule.Maintext;
-                    else
-                        keybutton.Text = keybutton.Text;
+                    // display your dialog somehow:
 
-                    if (KeycapTextIconModule.HasChosenAIcon)
-                        keybutton.Image = keycapTextModule.SelectedIcon;
-                    UnBlur();
+                    // panel will be disposed and the form will "lighten" again...
+
+
+                    KeycapTextIconModule keycapTextModule = new KeycapTextIconModule();
+                    keycapTextModule.StartPosition = FormStartPosition.CenterParent;
+                    keycapTextModule.FadeIn();
+                    keycapTextModule.ShowDialog(this);
+
+                    if (keycapTextModule.DialogResult == DialogResult.OK)
+                    { 
+                        //if (!string.IsNullOrEmpty(keycapTextModule.Uppertext))
+                        //    keybutton.Uppertext = keycapTextModule.Uppertext;
+                        //else
+                        //    keybutton.Text = keybutton.Text;
+
+                        //if (!string.IsNullOrEmpty(keycapTextModule.BottomText))
+                        //if (keybutton = Ca14s
+                        //    keybutton.BottomText = keycapTextModule.BottomText;
+                        //else
+                        //    keybutton.Text = keybutton.Text;
+
+                        if (!string.IsNullOrEmpty(keycapTextModule.Maintext))
+                            keybutton.Text = keycapTextModule.Maintext;
+                        else
+                            keybutton.Text = keybutton.Text;
+
+                        if (KeycapTextIconModule.HasChosenAIcon)
+                            keybutton.Image = keycapTextModule.SelectedIcon;
+                    }
                 }
             }
 
@@ -135,6 +174,11 @@ namespace AcroniUI.Custom
         {
             InitializeComponent();
 
+<<<<<<< HEAD
+=======
+            //Fazendo com que o label do nome do teclado tenha localização exatamente após o label que contém o nome da coleção.
+
+>>>>>>> 4d0adfbc7bf3f7656e24cc54d50de363f27daae6
             lblKeyboardName.Location = new Point(lblCollectionName.Location.X + lblCollectionName.Size.Width - 5, lblCollectionName.Location.Y);
             //if (string.IsNullOrEmpty(Share.Keyboard.NickName))
             //{
@@ -322,6 +366,7 @@ namespace AcroniUI.Custom
 
         #endregion
 
+<<<<<<< HEAD
         #region Métodos do blur.
 
         private void Blur()
@@ -351,6 +396,8 @@ namespace AcroniUI.Custom
 
         #endregion
 
+=======
+>>>>>>> 4d0adfbc7bf3f7656e24cc54d50de363f27daae6
         #region Ícones e texto
 
         private void btnTextAndIcons_Click(object sender, EventArgs e)
