@@ -52,7 +52,12 @@ namespace AcroniUI.Custom
             if (__HasBtnStyleFontColorBeenChosen)
                 keybutton.ForeColor = FontColor;
             else
+            else {
                 keybutton.BackColor = keybutton.SetColor(Color);
+                foreach(Control c in keybutton.Parent.Controls)
+                    if (c.Name.Contains(keybutton.Name))
+                        c.BackColor = keybutton.BackColor;
+            }
 
             if (__HasBtnTextModuleBeenChosen)
             {
@@ -547,6 +552,21 @@ namespace AcroniUI.Custom
                 //MessageBox.Show("Fez");
             //else
             //    MessageBox.Show("Não fez");
+        private void lblUpperBottom_Click(object sender, EventArgs e)
+        {
+            kbtn_Click(Controls.Find((sender as Label).Name.Remove(0,3),true)[0],e);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            lblCb2.Location = new Point(lblCb2.Location.X, lblCb2.Location.Y - 12);
+            lblCb2.Size = new Size(lblCb2.Width, lblCb2.Height + 12);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            lblCb2.Location = new Point(lblCb2.Location.X, lblCb2.Location.Y + 12);
+            lblCb2.Size = new Size(lblCb2.Width,lblCb2.Height-12);
         }
     }
 }

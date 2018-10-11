@@ -77,10 +77,8 @@ C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop\AcroniUI\obj\
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.exe
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.pdb
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Custom.Compacto.resources
-C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Custom.CustomModules.KeycapIconModule.resources
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Custom.CustomModules.KeycapParentModule.resources
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Custom.CustomModules.KeycapSwitchModule.resources
-C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Custom.CustomModules.KeycapTextModule.resources
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Custom.Fullsize.resources
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Custom.Tenkeyless.resources
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Galeria.resources
@@ -115,3 +113,4 @@ C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.csproj
 C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.exe
 C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.pdb
 E:\Desktop\c\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Custom.CustomModules.KeycapTextIconModule.resources
+C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Custom.CustomModules.KeycapTextIconModule.resources
