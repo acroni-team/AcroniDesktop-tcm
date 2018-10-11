@@ -19,6 +19,7 @@ namespace AcroniUI.Custom
 {
     public partial class Compacto : Template
     {
+        bool isBottomSelected, isUpperSelected = false;
 
         #region Declarações 
 
@@ -41,6 +42,7 @@ namespace AcroniUI.Custom
 
         // Definição de PictureBox privada que conterá a imagem de fundo para aplicação do efeito de Blur.
         private PictureBox __PictureBox { get; set; }
+        private Panel __pnl { get; set; }
 
         #endregion
 
@@ -49,12 +51,10 @@ namespace AcroniUI.Custom
         //Ao clicar num botão do teclado
         private void kbtn_Click(object sender, EventArgs e)
         {
-
             keybutton = (Kbtn)sender;
 
             if (__HasBtnStyleFontColorBeenChosen)
                 keybutton.ForeColor = FontColor;
-
             else
             {
                 keybutton.BackColor = keybutton.SetColor(Color);
@@ -62,22 +62,24 @@ namespace AcroniUI.Custom
                     if (c.Name.Contains(keybutton.Name))
                         c.BackColor = keybutton.BackColor;
             }
-
+            if (isBottomSelected)
+            {
+                foreach (Control c in keybutton.Parent.Controls)
+                    if (c.Name.Contains("lbl"))
+                        if (c.Location.Y == 6)
+                            c.Location = new Point(c.Location.X, c.Location.Y + 10);
+            }
+            if (isUpperSelected)
+            {
+                foreach (Control c in keybutton.Parent.Controls)
+                    if (c.Name.Contains("lbl"))
+                        if (c.Location.Y == 16)
+                            c.Location = new Point(c.Location.X, c.Location.Y - 10);
+            }
             if (__HasBtnTextModuleBeenChosen)
             {
-                // Setup do blur. Explicações aqui: https://github.com/felipiiiiiii/Teste-de-Blur
-
-                __PictureBox = new PictureBox
-                {
-                    Dock = DockStyle.Fill
-                };
-
-                pnlBlur.Controls.Add(__PictureBox);
-
+                CallBackgroundImage();
                 Blur();
-
-                // Fim do setup do blur. 
-
                 KeycapTextIconModule keycapTextModule = new KeycapTextIconModule();
                 if (keycapTextModule.ShowDialog() == DialogResult.OK)
                 {
@@ -133,42 +135,34 @@ namespace AcroniUI.Custom
         {
             InitializeComponent();
 
-            __PictureBox = new PictureBox();
-
-            pnlBlur.Controls.Add(__PictureBox);
-
-            //Fazendo com que o label do nome do teclado tenha localização exatamente após o label que contém o nome da coleção.
-
             lblKeyboardName.Location = new Point(lblCollectionName.Location.X + lblCollectionName.Size.Width - 5, lblCollectionName.Location.Y);
+            //if (string.IsNullOrEmpty(Share.Keyboard.NickName))
+            //{
+            lblKeyboardName.Text = KeyboardIDGenerator.GenerateID('C');
+            lblCollectionName.Visible = false;
+            lblKeyboardName.Location = lblCollectionName.Location;
+            //}
+            //else
+            //{
+            //    lblKeyboardName.Text = Share.Keyboard.NickName;
+            //    lblCollectionName.Text = Share.Collection.CollectionName;
+            //}
 
-            if (string.IsNullOrEmpty(Share.Keyboard.NickName))
-            {
-                lblKeyboardName.Text = KeyboardIDGenerator.GenerateID('C');
-                lblCollectionName.Visible = false;
-                lblKeyboardName.Location = lblCollectionName.Location;
-            }
-            else
-            {
-                lblKeyboardName.Text = Share.Keyboard.NickName;
-                lblCollectionName.Text = Share.Collection.CollectionName;
-            }
-
-            //Eu preciso disso no construtor porque não dá pra colocar dois estilos na Open Sans logo no designer.
+            //Eu preciso disso no construtor, sorry. Não dá pra colocar dois estilos na Open Sans logo no designer.
 
             btnStyleUnderline.Font = new Font(btnStyleUnderline.Font, FontStyle.Underline);
             btnStyleStrikeout.Font = new Font(btnStyleStrikeout.Font, FontStyle.Strikeout);
 
-
-
             Bunifu.Framework.UI.BunifuElipse be = new Bunifu.Framework.UI.BunifuElipse();
             be.ApplyElipse(pnlBtnStyleFontColor, 5);
-
-
             //Foreach para arredondar cores do colorpicker
             foreach (Control c in pnlBodyColorpicker.Controls)
             {
                 if (c is Button)
-                    be.ApplyElipse(c, 5);
+                {
+                    Bunifu.Framework.UI.BunifuElipse elipse = new Bunifu.Framework.UI.BunifuElipse();
+                    elipse.ApplyElipse(c, 5);
+                }
             }
 
             if (Share.EditKeyboard)
@@ -332,7 +326,7 @@ namespace AcroniUI.Custom
 
         private void Blur()
         {
-            Bitmap bmp = Screenshot.TakeSnapshot(pnlBlur);
+            Bitmap bmp = Screenshot.TakeSnapshot(panel1);
             BitmapFilter.GaussianBlur(bmp, 0);
             __PictureBox.Image = bmp;
             __PictureBox.BringToFront();
@@ -342,6 +336,17 @@ namespace AcroniUI.Custom
         {
             __PictureBox.Image = null;
             __PictureBox.SendToBack();
+        }
+
+        private void CallBackgroundImage()
+        {
+            __pnl = new Panel();
+
+            foreach (Control c in this.Controls)
+            {
+                __pnl.Controls.Add(c);
+            }
+            __PictureBox.Dock = DockStyle.Fill;
         }
 
         #endregion
@@ -426,15 +431,12 @@ namespace AcroniUI.Custom
                             keycap.ForeColor = k.ForeColor;
                             keycap.Font = k.Font;
                             keycap.BackColor = k.Color;
-                            keycap.Text = k.Text;
+                            ////keycap.Text = k.Text;
+                            keycap.Parent.BackColor = Color.FromArgb(90, keycap.BackColor);
+                            foreach (Control c in keycap.Parent.Controls)
+                                if (c.Name.Contains("lbl"))
+                                    c.Text = k.Text;
                             (keycap as Button).TextAlign = (ContentAlignment)k.ContentAlignment;
-
-                            try
-                            {
-                                Controls.Find("fundo" + keycap.Name, true)[0].BackColor = Color.FromArgb(90, keycap.BackColor);
-                            }
-
-                            catch (Exception) { }
                             break;
                         }
                     }
@@ -549,7 +551,6 @@ namespace AcroniUI.Custom
             keyboard.Material = "Madeira";
             keyboard.IsMechanicalKeyboard = true;
             keyboard.HasRestPads = false;
-            keyboard.KeyboardType = this.Name;
             keyboard.BackgroundImage = picBoxKeyboardBackground.Image;
             keyboard.BackgroundModeSize = picBoxKeyboardBackground.SizeMode;
 
@@ -561,7 +562,7 @@ namespace AcroniUI.Custom
                         {
                             ForeColor = tecla.ForeColor,
                             ID = tecla.Name,
-                            Text = tecla.Text,
+                            //Text = tecla.Text,
                             Font = tecla.Font,
                             Color = tecla.BackColor,
                             ContentAlignment = (tecla as Button).TextAlign
@@ -607,15 +608,26 @@ namespace AcroniUI.Custom
 
         private void button1_Click(object sender, EventArgs e)
         {
-            lblCb2.Location = new Point(lblCb2.Location.X, lblCb2.Location.Y - 12);
-            lblCb2.Size = new Size(lblCb2.Width, lblCb2.Height + 12);
+            button4.BackColor = Color.FromArgb(123, 123, 123);
+            isUpperSelected = true;
+            isBottomSelected = false;
+            (sender as Button).BackColor = Color.FromArgb(90, (sender as Button).BackColor);
+        }
+
+        private void Compacto_MouseEnter(object sender, EventArgs e)
+        {
+
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            lblCb2.Location = new Point(lblCb2.Location.X, lblCb2.Location.Y + 12);
-            lblCb2.Size = new Size(lblCb2.Width, lblCb2.Height - 12);
+            button1.BackColor = Color.FromArgb(123, 123, 123);
+            (sender as Button).BackColor = Color.FromArgb(90, (sender as Button).BackColor);
+            isUpperSelected = false;
+            isBottomSelected = true;
         }
+
+
     }
 }
 
