@@ -35,7 +35,7 @@
       <HintPath>..\AcroniLibrary\bin\Debug\AcroniLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu_UI_v1.52">
-      <HintPath>..\..\..\..\Visual Studio 2017\Projects\AcroniDesktop\AcroniUI\bin\Debug\Bunifu_UI_v1.52.dll</HintPath>
+      <HintPath>..\AcroniUI\bin\Debug\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
