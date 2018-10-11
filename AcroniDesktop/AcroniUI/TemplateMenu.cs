@@ -51,7 +51,6 @@ namespace AcroniUI
             //        menuItem.Font = new Font(fontesLayout.Families[0], 13, FontStyle.Regular);
             //    }
             //}
-
             Bunifu.Framework.UI.BunifuElipse ellipse = new Bunifu.Framework.UI.BunifuElipse();
             foreach (Control c in pnlOptions.Controls)
             {
@@ -225,6 +224,12 @@ namespace AcroniUI
                 }
                 this.Close();
             }            
+        }
+
+        private void btnConfig_Click(object sender, EventArgs e)
+        {
+            FadeOut();
+            (new ClientInformation()).Show();
         }
     }
 }

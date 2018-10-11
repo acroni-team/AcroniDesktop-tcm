@@ -68,6 +68,12 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClientInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientInformation.Designer.cs">
+      <DependentUpon>ClientInformation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Custom\CustomModules\KeycapParentModule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,9 @@
     <Compile Include="Template.Designer.cs">
       <DependentUpon>Template.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ClientInformation.resx">
+      <DependentUpon>ClientInformation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Custom\Compacto.resx">
       <DependentUpon>Compacto.cs</DependentUpon>
     </EmbeddedResource>
