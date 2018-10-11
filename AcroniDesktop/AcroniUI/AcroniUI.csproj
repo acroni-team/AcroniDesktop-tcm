@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9D534214-9E90-4506-9D5A-B9648BB7BCE3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AcroniUI</RootNamespace>
+    <AssemblyName>AcroniUI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AcroniControls">
+      <HintPath>..\AcroniControls\bin\Debug\AcroniControls.dll</HintPath>
+    </Reference>
+    <Reference Include="AcroniLibrary">
+      <HintPath>..\AcroniLibrary\bin\Debug\AcroniLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetKit.Wpf.AutoCompleteComboBox, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetKit.Wpf.AutoCompleteComboBox.1.2.0\lib\net45\DotNetKit.Wpf.AutoCompleteComboBox.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Svg, Version=1.5.2.33115, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Svg.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TheKhanSoftsWatermarkTextbox">
+      <HintPath>..\..\..\Programação\C#\Custom Textbox - The Khan\TheKhan\TheKhanSoftsWatermarkTextbox\bin\Debug\TheKhanSoftsWatermarkTextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="Transitions, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Transitions.dll</HintPath>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Custom\CustomModules\KeycapParentModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Custom\CustomModules\KeycapParentModule.Designer.cs">
+      <DependentUpon>KeycapParentModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom\CustomModules\KeycapSwitchModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Custom\CustomModules\KeycapSwitchModule.Designer.cs">
+      <DependentUpon>KeycapSwitchModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom\CustomModules\KeycapTextIconModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Custom\CustomModules\KeycapTextIconModule.Designer.cs">
+      <DependentUpon>KeycapTextIconModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Galeria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Galeria.Designer.cs">
+      <DependentUpon>Galeria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginAndSignUp\FrmConfirmarEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginAndSignUp\FrmConfirmarEmail.designer.cs">
+      <DependentUpon>FrmConfirmarEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginAndSignUp\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginAndSignUp\FrmLogin.designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginAndSignUp\FrmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginAndSignUp\FrmUsuario.designer.cs">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TemplateMenu.Designer.cs">
+      <DependentUpon>TemplateMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Custom\Compacto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Custom\Compacto.designer.cs">
+      <DependentUpon>Compacto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom\Fullsize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Custom\Fullsize.designer.cs">
+      <DependentUpon>Fullsize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom\Tenkeyless.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Custom\Tenkeyless.designer.cs">
+      <DependentUpon>Tenkeyless.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\Resources1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SelectKeyboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectKeyboard.designer.cs">
+      <DependentUpon>SelectKeyboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Images\PoupUpForms\Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Images\PoupUpForms\Splash.designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template.Designer.cs">
+      <DependentUpon>Template.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Custom\Compacto.resx">
+      <DependentUpon>Compacto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom\CustomModules\KeycapParentModule.resx">
+      <DependentUpon>KeycapParentModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom\CustomModules\KeycapSwitchModule.resx">
+      <DependentUpon>KeycapSwitchModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom\CustomModules\KeycapTextIconModule.resx">
+      <DependentUpon>KeycapTextIconModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom\Fullsize.resx">
+      <DependentUpon>Fullsize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom\Tenkeyless.resx">
+      <DependentUpon>Tenkeyless.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Galeria.resx">
+      <DependentUpon>Galeria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginAndSignUp\FrmConfirmarEmail.resx">
+      <DependentUpon>FrmConfirmarEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginAndSignUp\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginAndSignUp\FrmUsuario.resx">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TemplateMenu.resx">
+      <DependentUpon>TemplateMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectKeyboard.resx">
+      <DependentUpon>SelectKeyboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\PoupUpForms\Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template.resx">
+      <DependentUpon>Template.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\back.png" />
+    <Content Include="Images\Botoes da fonte\center.png" />
+    <Content Include="Images\Botoes da fonte\left.png" />
+    <Content Include="Images\Botoes da fonte\right.png" />
+    <Content Include="Images\c064d12f-1c61-48b9-a5eb-927f5dd2f947.jpg" />
+    <Content Include="Images\compacto.png" />
+    <Content Include="Images\fullsize.png" />
+    <Content Include="Images\icons8-eye-30-white.png" />
+    <Content Include="Images\logo.svg" />
+    <Content Include="Images\slogo.png" />
+    <Content Include="Images\tenkeyless.png" />
+    <None Include="AcroniUI.cd" />
+    <None Include="app.config" />
+    <None Include="Images\olhoblock.png" />
+    <None Include="Images\olho.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
