@@ -524,7 +524,6 @@
             this.Controls.Add(this.alblUpperText);
             this.Controls.Add(this.apnlTextbox1);
             this.Name = "KeycapTextIconModule";
-            this.Opacity = 1D;
             this.apnlTextbox1.ResumeLayout(false);
             this.apnlTextbox1.PerformLayout();
             this.apnlTextbox2.ResumeLayout(false);
