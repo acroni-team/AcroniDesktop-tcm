@@ -1,4 +1,4 @@
-﻿using AcroniControls;
+﻿//using AcroniControls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,8 +10,8 @@ namespace AcroniLibrary.CustomizingMethods.TextFonts
 {
     public class Alignment
     {
-        static public void setButtonTextAlignment(System.Drawing.ContentAlignment contentAlignment, Form form, ref Kbtn kbtn)
-        {
+        //static public void setButtonTextAlignment(System.Drawing.ContentAlignment contentAlignment, Form form, ref Kbtn kbtn)
+        //{
             //Então, como você pode ver, o burro aqui tentou definir para todos os botões kbtn do formulário. Esse método será usado posteriormente para apenas um botão naquele sistema de clicar na propriedade
             //e depois no botão para aplicá-lo a propriedade (se o <UX DESIGNER> deixar).
             //foreach (Control c in form.Controls)
@@ -21,6 +21,6 @@ namespace AcroniLibrary.CustomizingMethods.TextFonts
             //        (c as Button).TextAlign = contentAlignment;
             //    }
             //}
-        }
+        //}
     }
 }
