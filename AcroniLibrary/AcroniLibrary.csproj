@@ -55,6 +55,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DesignMethods\FormDrag.cs" />
+    <Compile Include="Drawing\ImageConvert.cs" />
+    <Compile Include="Drawing\Screenshot.cs" />
     <Compile Include="FileInfo\ControlKeyboard.cs">
       <SubType>Component</SubType>
     </Compile>

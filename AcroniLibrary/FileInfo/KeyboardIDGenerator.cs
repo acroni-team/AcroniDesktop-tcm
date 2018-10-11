@@ -2,7 +2,7 @@
 
 namespace AcroniLibrary.FileInfo
 {
-    class KeyboardIDGenerator
+    public class KeyboardIDGenerator
     {
         /// <summary>
         /// 
@@ -11,9 +11,11 @@ namespace AcroniLibrary.FileInfo
         ///     Passa a primeira letra do teclado em inglês. 
         /// </param>
         /// <returns></returns>
-        static string GenerateID(char KeyboardType)
+        public static string GenerateID(char KeyboardType)
         {
-            return $"{KeyboardType}{DateTime.UtcNow}";
+            string utc = DateTime.UtcNow.ToString();
+            utc = utc.Replace(":","").Replace("/","").Replace(" ", "").Trim();
+            return $"{KeyboardType}{utc}";
         }
     }
 }

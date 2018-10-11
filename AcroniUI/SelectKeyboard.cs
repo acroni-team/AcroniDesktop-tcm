@@ -1,4 +1,6 @@
-﻿using AcroniUI.Custom;
+﻿using AcroniLibrary.FileInfo;
+using AcroniUI.Custom;
+using System.Windows;
 
 namespace AcroniUI
 {
@@ -7,6 +9,7 @@ namespace AcroniUI
         public SelectKeyboard()
         {
             InitializeComponent();
+            MessageBox.Show(Share.User.ID.ToString());
         }
 
         #region Inicializar todos os tipos de teclados

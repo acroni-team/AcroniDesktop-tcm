@@ -12,6 +12,8 @@ using System.Threading.Tasks;
 using System.IO;
 using AcroniLibrary.SQL;
 using System.Runtime.Serialization.Formatters.Binary;
+using AcroniLibrary.Drawing;
+using System.Drawing.Imaging;
 
 namespace AcroniUI.Custom
 {
@@ -111,8 +113,9 @@ namespace AcroniUI.Custom
             lblKeyboardName.Location = new Point(lblCollectionName.Location.X + lblCollectionName.Size.Width - 5, lblCollectionName.Location.Y);
             if (string.IsNullOrEmpty(Share.Keyboard.Name))
             {
-                lblKeyboardName.Text = "";
-                lblCollectionName.Text = "";
+                lblKeyboardName.Text = KeyboardIDGenerator.GenerateID('C');
+                lblCollectionName.Visible = false;
+                lblKeyboardName.Location = lblCollectionName.Location;
             }
             else
             {
@@ -432,6 +435,7 @@ namespace AcroniUI.Custom
                 }
             }
             SaveKeyboard();
+            ExportToWebSite();
         }
 
         private async void SaveKeyboard()
@@ -487,6 +491,7 @@ namespace AcroniUI.Custom
         private void setPropriedadesTeclado()
         {
             keyboard.Name = "FX-4370";
+            keyboard.ID = KeyboardIDGenerator.GenerateID('C');
             if (!Share.EditKeyboard)
                 keyboard.NickName = Share.KeyboardNameNotCreated;
             else
@@ -496,8 +501,6 @@ namespace AcroniUI.Custom
             keyboard.HasRestPads = false;
             keyboard.BackgroundImage = picBoxKeyboardBackground.Image;
             keyboard.BackgroundModeSize = picBoxKeyboardBackground.SizeMode;
-            keyboard.ID = "ID";
-            keyboard.KeyboardType = this.Name;
 
             foreach (Control tecla in this.Controls)
                 if (tecla is Kbtn)
@@ -532,6 +535,19 @@ namespace AcroniUI.Custom
         }
 
         #endregion
+
+        private void ExportToWebSite()
+        {
+            if (SQLMethods.INSERT_INTO($"insert into tblTecladoCustomizado (nickname, preco) values ('{keyboard.NickName}', 254.00)") != 0)
+                MessageBox.Show("Fez");
+            else
+                MessageBox.Show("Não fez");
+            byte[] img = ImageConvert.ImageToByteArray(Screenshot.TakeSnapshot(picBoxKeyboardBackground), ImageFormat.Bmp);
+            //if (SQLMethods.INSERT_INTO($"insert into tblPedidosTecladoCustomizado values ((select top 1 id_teclado_customizado from tblTecladoCustomizado order by id_teclado_customizado DESC), @image)", img) != 0)
+                //MessageBox.Show("Fez");
+            //else
+            //    MessageBox.Show("Não fez");
+        }
     }
 }
 

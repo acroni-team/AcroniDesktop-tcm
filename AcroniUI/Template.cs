@@ -13,20 +13,16 @@ namespace AcroniUI
         public Template()
         {
             InitializeComponent();
-            #region Atribuição de Dragging aos controles e no próprio form 
+            //#region Atribuição de Dragging aos controles e no próprio form 
 
-            ///<summary> 
-            /// Esses métodos não foram gerados automaticamente. Trata-se duma maneira de permitir que não apenas o formulário seja arrastável, mas os controles também. 
-            ///</summary>
-            ///
-            foreach (Control c in this.Controls)
-            {
-                c.MouseDown += new System.Windows.Forms.MouseEventHandler(FormDrag.Form_MouseDown);
-                c.MouseMove += new System.Windows.Forms.MouseEventHandler(FormDrag.Form_MouseMove);
-            }
-
-            #endregion    
-        }
+            /////<summary> 
+            ///// Esses métodos não foram gerados automaticamente. Trata-se duma maneira de permitir que não apenas o formulário seja arrastável, mas os controles também. 
+            /////</summary>
+            /////
+            //this.MouseDown += new System.Windows.Forms.MouseEventHandler(FormDrag.Form_MouseDown);
+            //this.MouseMove += new System.Windows.Forms.MouseEventHandler(FormDrag.Form_MouseMove);
+            //#endregion
+        }        
 
         #region Ações dos botões do pnlSuperior
 
@@ -97,6 +93,11 @@ namespace AcroniUI
             ambc.ShowDialog();
             if (ambc.DialogResult == DialogResult.Yes)
                 FadeOut();                
+        }
+
+        ~Template()
+        {
+            FadeOut();
         }
 
         private void btnMinimize_Click(object sender, EventArgs e) => WindowState = FormWindowState.Minimized;
