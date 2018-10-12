@@ -79,6 +79,7 @@ namespace AcroniUI.Custom
                             c.Location = new Point(c.Location.X, c.Location.Y - 10);
             }
 
+
             if (btnOpenModuleTextIcons.Tag.Equals("true"))
             {
                 KeycapTextIconModule ktm = new KeycapTextIconModule();
@@ -119,6 +120,13 @@ namespace AcroniUI.Custom
                 KeycapSwitchModule ksm = new KeycapSwitchModule();
                 OpenModule(ksm);
             }
+
+            if (btnOpenModuleTexture.Tag.Equals("true"))
+            {
+                KeycapTextureModule ktm = new KeycapTextureModule();
+                OpenModule(ktm);
+            }
+
         }
 
 
@@ -455,6 +463,12 @@ namespace AcroniUI.Custom
             ApplyColorToModuleButton(btnOpenModuleBackground, true);
         }
 
+        private void btnOpenModuleTexture_Click(object sender, EventArgs e)
+        {
+            ApplyColorToModuleButton(btnOpenModuleTexture, true);
+        }
+
+
         #endregion
 
         #region Carregar e salvar teclado
@@ -663,7 +677,6 @@ namespace AcroniUI.Custom
         {
 
         }
-
         private void button4_Click(object sender, EventArgs e)
         {
             button1.BackColor = Color.FromArgb(123, 123, 123);

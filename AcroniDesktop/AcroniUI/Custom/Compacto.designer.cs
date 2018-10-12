@@ -280,6 +280,7 @@ namespace AcroniUI.Custom
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.fundoCa14s = new System.Windows.Forms.Panel();
+            this.btnOpenModuleTexture = new AcroniControls.StyleBtn();
             this.fundoCa1.SuspendLayout();
             this.fundoCa2.SuspendLayout();
             this.fundoCa3.SuspendLayout();
@@ -2795,7 +2796,7 @@ namespace AcroniUI.Custom
             this.btnOpenModuleSwitch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpenModuleSwitch.Font = new System.Drawing.Font("Open Sans", 9.25F, System.Drawing.FontStyle.Bold);
             this.btnOpenModuleSwitch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
-            this.btnOpenModuleSwitch.Location = new System.Drawing.Point(23, 37);
+            this.btnOpenModuleSwitch.Location = new System.Drawing.Point(11, 35);
             this.btnOpenModuleSwitch.Name = "btnOpenModuleSwitch";
             this.btnOpenModuleSwitch.Padding = new System.Windows.Forms.Padding(0, 0, 0, 13);
             this.btnOpenModuleSwitch.Size = new System.Drawing.Size(111, 109);
@@ -2859,9 +2860,9 @@ namespace AcroniUI.Custom
             this.panel4.Controls.Add(this.label13);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(773, 0);
+            this.panel4.Location = new System.Drawing.Point(878, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(507, 157);
+            this.panel4.Size = new System.Drawing.Size(402, 157);
             this.panel4.TabIndex = 7;
             // 
             // label7
@@ -2921,7 +2922,7 @@ namespace AcroniUI.Custom
             this.label21.AutoSize = true;
             this.label21.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label21.Font = new System.Drawing.Font("Open Sans", 12.25F, System.Drawing.FontStyle.Bold);
-            this.label21.Location = new System.Drawing.Point(354, 86);
+            this.label21.Location = new System.Drawing.Point(249, 82);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(111, 23);
             this.label21.TabIndex = 9;
@@ -2932,7 +2933,7 @@ namespace AcroniUI.Custom
             this.label9.AutoSize = true;
             this.label9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label9.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(350, 102);
+            this.label9.Location = new System.Drawing.Point(245, 98);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(140, 37);
             this.label9.TabIndex = 9;
@@ -2970,7 +2971,7 @@ namespace AcroniUI.Custom
             this.label20.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label20.Font = new System.Drawing.Font("Open Sans", 12.25F, System.Drawing.FontStyle.Bold);
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
-            this.label20.Location = new System.Drawing.Point(355, 52);
+            this.label20.Location = new System.Drawing.Point(250, 48);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(90, 23);
             this.label20.TabIndex = 9;
@@ -2982,7 +2983,7 @@ namespace AcroniUI.Custom
             this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label8.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
-            this.label8.Location = new System.Drawing.Point(356, 37);
+            this.label8.Location = new System.Drawing.Point(251, 33);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(85, 15);
             this.label8.TabIndex = 9;
@@ -3159,11 +3160,12 @@ namespace AcroniUI.Custom
             // 
             this.pnlBtnOpenModules.BackColor = System.Drawing.Color.Transparent;
             this.pnlBtnOpenModules.Controls.Add(this.btnOpenModuleSwitch);
+            this.pnlBtnOpenModules.Controls.Add(this.btnOpenModuleTexture);
             this.pnlBtnOpenModules.Controls.Add(this.btnOpenModuleBackground);
             this.pnlBtnOpenModules.Controls.Add(this.btnOpenModuleTextIcons);
             this.pnlBtnOpenModules.Location = new System.Drawing.Point(372, 0);
             this.pnlBtnOpenModules.Name = "pnlBtnOpenModules";
-            this.pnlBtnOpenModules.Size = new System.Drawing.Size(401, 157);
+            this.pnlBtnOpenModules.Size = new System.Drawing.Size(508, 157);
             this.pnlBtnOpenModules.TabIndex = 8;
             // 
             // btnOpenModuleBackground
@@ -3176,7 +3178,7 @@ namespace AcroniUI.Custom
             this.btnOpenModuleBackground.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpenModuleBackground.Font = new System.Drawing.Font("Open Sans", 9.25F, System.Drawing.FontStyle.Bold);
             this.btnOpenModuleBackground.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
-            this.btnOpenModuleBackground.Location = new System.Drawing.Point(279, 36);
+            this.btnOpenModuleBackground.Location = new System.Drawing.Point(250, 35);
             this.btnOpenModuleBackground.Name = "btnOpenModuleBackground";
             this.btnOpenModuleBackground.Padding = new System.Windows.Forms.Padding(0, 0, 0, 13);
             this.btnOpenModuleBackground.Size = new System.Drawing.Size(111, 108);
@@ -3197,7 +3199,7 @@ namespace AcroniUI.Custom
             this.btnOpenModuleTextIcons.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpenModuleTextIcons.Font = new System.Drawing.Font("Open Sans", 9.25F, System.Drawing.FontStyle.Bold);
             this.btnOpenModuleTextIcons.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
-            this.btnOpenModuleTextIcons.Location = new System.Drawing.Point(152, 38);
+            this.btnOpenModuleTextIcons.Location = new System.Drawing.Point(131, 35);
             this.btnOpenModuleTextIcons.Name = "btnOpenModuleTextIcons";
             this.btnOpenModuleTextIcons.Padding = new System.Windows.Forms.Padding(0, 0, 0, 13);
             this.btnOpenModuleTextIcons.Size = new System.Drawing.Size(111, 109);
@@ -3687,6 +3689,27 @@ namespace AcroniUI.Custom
             this.fundoCa14s.Size = new System.Drawing.Size(111, 56);
             this.fundoCa14s.TabIndex = 8;
             // 
+            // btnOpenModuleTexture
+            // 
+            this.btnOpenModuleTexture.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(34)))));
+            this.btnOpenModuleTexture.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOpenModuleTexture.FlatAppearance.BorderSize = 0;
+            this.btnOpenModuleTexture.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnOpenModuleTexture.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnOpenModuleTexture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpenModuleTexture.Font = new System.Drawing.Font("Open Sans", 9.25F, System.Drawing.FontStyle.Bold);
+            this.btnOpenModuleTexture.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
+            this.btnOpenModuleTexture.Location = new System.Drawing.Point(379, 36);
+            this.btnOpenModuleTexture.Name = "btnOpenModuleTexture";
+            this.btnOpenModuleTexture.Padding = new System.Windows.Forms.Padding(0, 0, 0, 13);
+            this.btnOpenModuleTexture.Size = new System.Drawing.Size(111, 108);
+            this.btnOpenModuleTexture.TabIndex = 5;
+            this.btnOpenModuleTexture.Tag = "false";
+            this.btnOpenModuleTexture.Text = "Textura";
+            this.btnOpenModuleTexture.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnOpenModuleTexture.UseVisualStyleBackColor = false;
+            this.btnOpenModuleTexture.Click += new System.EventHandler(this.btnOpenModuleTexture_Click);
+            // 
             // Compacto
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -4161,6 +4184,7 @@ namespace AcroniUI.Custom
         private System.Windows.Forms.Label lblCd13;
         private System.Windows.Forms.Panel fundoCa14s;
         private System.Windows.Forms.Panel pnlBtnOpenModules;
+        private StyleBtn btnOpenModuleTexture;
     }
 }
 
