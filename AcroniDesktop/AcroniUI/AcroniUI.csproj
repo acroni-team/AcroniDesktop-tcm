@@ -92,6 +92,12 @@
     <Compile Include="Custom\CustomModules\KeycapTextIconModule.Designer.cs">
       <DependentUpon>KeycapTextIconModule.cs</DependentUpon>
     </Compile>
+    <Compile Include="Custom\CustomModules\KeycapTextureModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Custom\CustomModules\KeycapTextureModule.Designer.cs">
+      <DependentUpon>KeycapTextureModule.cs</DependentUpon>
+    </Compile>
     <Compile Include="Galeria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Custom\CustomModules\KeycapTextIconModule.resx">
       <DependentUpon>KeycapTextIconModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom\CustomModules\KeycapTextureModule.resx">
+      <DependentUpon>KeycapTextureModule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Custom\Fullsize.resx">
       <DependentUpon>Fullsize.cs</DependentUpon>

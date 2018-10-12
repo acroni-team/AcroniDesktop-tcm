@@ -1,5 +1,6 @@
 ﻿using AcroniLibrary.FileInfo;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace AcroniControls
@@ -41,6 +42,23 @@ namespace AcroniControls
                     Share.KeyboardNameNotCreated = txtUserInput.Text;
                 this.Close();
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnInput_MouseEnter(object sender, EventArgs e)
+        {
+            Button b = (Button)sender;
+            b.BackgroundImage = global::AcroniControls.Properties.Resources.fundobotaoclaro;
+        }
+
+        private void btnInput_MouseLeave(object sender, EventArgs e)
+        {
+            Button b = (Button)sender;
+            b.BackgroundImage = global::AcroniControls.Properties.Resources.fundo_botao;
         }
     }
 }

@@ -44,7 +44,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(738, 125);
+            this.label1.Location = new System.Drawing.Point(744, 89);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 15;
@@ -54,7 +54,7 @@
             this.lblBoasVindas.AutoSize = true;
             this.lblBoasVindas.Font = new System.Drawing.Font("Open Sans SemiBold", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBoasVindas.ForeColor = System.Drawing.Color.White;
-            this.lblBoasVindas.Location = new System.Drawing.Point(609, 104);
+            this.lblBoasVindas.Location = new System.Drawing.Point(615, 68);
             this.lblBoasVindas.Name = "lblBoasVindas";
             this.lblBoasVindas.Size = new System.Drawing.Size(183, 30);
             this.lblBoasVindas.TabIndex = 14;
@@ -65,7 +65,7 @@
             this.lblNomeUsuBoasVindas.AutoSize = true;
             this.lblNomeUsuBoasVindas.Font = new System.Drawing.Font("Open Sans ExtraBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomeUsuBoasVindas.ForeColor = System.Drawing.Color.White;
-            this.lblNomeUsuBoasVindas.Location = new System.Drawing.Point(784, 105);
+            this.lblNomeUsuBoasVindas.Location = new System.Drawing.Point(790, 69);
             this.lblNomeUsuBoasVindas.Name = "lblNomeUsuBoasVindas";
             this.lblNomeUsuBoasVindas.Size = new System.Drawing.Size(45, 28);
             this.lblNomeUsuBoasVindas.TabIndex = 16;
@@ -76,7 +76,7 @@
             this.lblSavedCollections1.AutoSize = true;
             this.lblSavedCollections1.Font = new System.Drawing.Font("Open Sans SemiBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSavedCollections1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(80)))), ((int)(((byte)(85)))));
-            this.lblSavedCollections1.Location = new System.Drawing.Point(624, 140);
+            this.lblSavedCollections1.Location = new System.Drawing.Point(696, 104);
             this.lblSavedCollections1.Name = "lblSavedCollections1";
             this.lblSavedCollections1.Size = new System.Drawing.Size(102, 27);
             this.lblSavedCollections1.TabIndex = 17;
@@ -87,7 +87,7 @@
             this.lblColecoesSalvas2.AutoSize = true;
             this.lblColecoesSalvas2.Font = new System.Drawing.Font("Open Sans SemiBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblColecoesSalvas2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(80)))), ((int)(((byte)(85)))));
-            this.lblColecoesSalvas2.Location = new System.Drawing.Point(739, 140);
+            this.lblColecoesSalvas2.Location = new System.Drawing.Point(811, 104);
             this.lblColecoesSalvas2.Name = "lblColecoesSalvas2";
             this.lblColecoesSalvas2.Size = new System.Drawing.Size(167, 27);
             this.lblColecoesSalvas2.TabIndex = 18;
@@ -98,7 +98,7 @@
             this.lblCollectionsQuantity.AutoSize = true;
             this.lblCollectionsQuantity.Font = new System.Drawing.Font("Open Sans ExtraBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCollectionsQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(80)))), ((int)(((byte)(85)))));
-            this.lblCollectionsQuantity.Location = new System.Drawing.Point(720, 140);
+            this.lblCollectionsQuantity.Location = new System.Drawing.Point(792, 104);
             this.lblCollectionsQuantity.Name = "lblCollectionsQuantity";
             this.lblCollectionsQuantity.Size = new System.Drawing.Size(24, 27);
             this.lblCollectionsQuantity.TabIndex = 19;
@@ -116,7 +116,7 @@
             this.lblSelectKeyboard.AutoSize = true;
             this.lblSelectKeyboard.Font = new System.Drawing.Font("Open Sans SemiBold", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSelectKeyboard.ForeColor = System.Drawing.Color.White;
-            this.lblSelectKeyboard.Location = new System.Drawing.Point(550, 110);
+            this.lblSelectKeyboard.Location = new System.Drawing.Point(575, 74);
             this.lblSelectKeyboard.Name = "lblSelectKeyboard";
             this.lblSelectKeyboard.Size = new System.Drawing.Size(542, 30);
             this.lblSelectKeyboard.TabIndex = 22;
@@ -126,16 +126,20 @@
             // btnAdicionarGaleria
             // 
             this.btnAdicionarGaleria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
+            this.btnAdicionarGaleria.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdicionarGaleria.FlatAppearance.BorderSize = 0;
+            this.btnAdicionarGaleria.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(122)))), ((int)(((byte)(124)))));
+            this.btnAdicionarGaleria.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(122)))), ((int)(((byte)(124)))));
             this.btnAdicionarGaleria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdicionarGaleria.Font = new System.Drawing.Font("Qanelas ExtraBold", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdicionarGaleria.ForeColor = System.Drawing.SystemColors.Control;
             this.btnAdicionarGaleria.Location = new System.Drawing.Point(343, 149);
+            this.btnAdicionarGaleria.Margin = new System.Windows.Forms.Padding(0);
             this.btnAdicionarGaleria.Name = "btnAdicionarGaleria";
             this.btnAdicionarGaleria.Size = new System.Drawing.Size(35, 35);
             this.btnAdicionarGaleria.TabIndex = 23;
             this.btnAdicionarGaleria.Text = "+";
-            this.btnAdicionarGaleria.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAdicionarGaleria.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btnAdicionarGaleria.UseVisualStyleBackColor = false;
             this.btnAdicionarGaleria.Click += new System.EventHandler(this.btnAdicionarGaleria_Click);
             // 
@@ -158,8 +162,10 @@
             this.Controls.Add(this.lblNomeUsuBoasVindas);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblBoasVindas);
+            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "Galeria";
             this.Text = "Galeria";
+            this.Controls.SetChildIndex(this.pnlStripAjuda, 0);
             this.Controls.SetChildIndex(this.lblBoasVindas, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.lblNomeUsuBoasVindas, 0);
