@@ -83,7 +83,7 @@
             this.alblUpperText.AutoSize = true;
             this.alblUpperText.Font = new System.Drawing.Font("Open Sans", 14.75F);
             this.alblUpperText.ForeColor = System.Drawing.Color.White;
-            this.alblUpperText.Location = new System.Drawing.Point(80, 51);
+            this.alblUpperText.Location = new System.Drawing.Point(196, 52);
             this.alblUpperText.Name = "alblUpperText";
             this.alblUpperText.Size = new System.Drawing.Size(101, 27);
             this.alblUpperText.TabIndex = 0;
@@ -94,7 +94,7 @@
             this.alblText.AutoSize = true;
             this.alblText.Font = new System.Drawing.Font("Open Sans", 14.75F);
             this.alblText.ForeColor = System.Drawing.Color.White;
-            this.alblText.Location = new System.Drawing.Point(80, 226);
+            this.alblText.Location = new System.Drawing.Point(196, 227);
             this.alblText.Name = "alblText";
             this.alblText.Size = new System.Drawing.Size(183, 27);
             this.alblText.TabIndex = 0;
@@ -105,7 +105,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Open Sans", 14.75F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(80, 417);
+            this.label2.Location = new System.Drawing.Point(196, 418);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 27);
             this.label2.TabIndex = 0;
@@ -116,7 +116,7 @@
             this.apnlTextbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(45)))));
             this.apnlTextbox1.Controls.Add(this.txt1);
             this.apnlTextbox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.apnlTextbox1.Location = new System.Drawing.Point(80, 120);
+            this.apnlTextbox1.Location = new System.Drawing.Point(196, 121);
             this.apnlTextbox1.Name = "apnlTextbox1";
             this.apnlTextbox1.Padding = new System.Windows.Forms.Padding(5);
             this.apnlTextbox1.Size = new System.Drawing.Size(328, 50);
@@ -152,7 +152,7 @@
             this.apnlTextbox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(45)))));
             this.apnlTextbox2.Controls.Add(this.txt2);
             this.apnlTextbox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.apnlTextbox2.Location = new System.Drawing.Point(85, 268);
+            this.apnlTextbox2.Location = new System.Drawing.Point(201, 269);
             this.apnlTextbox2.Name = "apnlTextbox2";
             this.apnlTextbox2.Padding = new System.Windows.Forms.Padding(5);
             this.apnlTextbox2.Size = new System.Drawing.Size(328, 52);
@@ -188,7 +188,7 @@
             this.apnlTextbox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(45)))));
             this.apnlTextbox3.Controls.Add(this.txt3);
             this.apnlTextbox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.apnlTextbox3.Location = new System.Drawing.Point(80, 483);
+            this.apnlTextbox3.Location = new System.Drawing.Point(196, 484);
             this.apnlTextbox3.Name = "apnlTextbox3";
             this.apnlTextbox3.Padding = new System.Windows.Forms.Padding(5);
             this.apnlTextbox3.Size = new System.Drawing.Size(328, 52);
@@ -224,7 +224,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Open Sans", 10.75F);
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(80, 79);
+            this.label1.Location = new System.Drawing.Point(196, 80);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(138, 20);
             this.label1.TabIndex = 0;
@@ -235,7 +235,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Open Sans", 10.75F);
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(80, 444);
+            this.label3.Location = new System.Drawing.Point(196, 445);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(200, 20);
             this.label3.TabIndex = 0;
@@ -246,7 +246,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Open Sans", 9.75F);
             this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(82, 323);
+            this.label4.Location = new System.Drawing.Point(198, 324);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(349, 36);
             this.label4.TabIndex = 0;
@@ -264,7 +264,7 @@
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Open Sans", 12.25F);
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(443, 574);
+            this.btnExit.Location = new System.Drawing.Point(559, 575);
             this.btnExit.Name = "btnExit";
             this.btnExit.Padding = new System.Windows.Forms.Padding(5);
             this.btnExit.Size = new System.Drawing.Size(190, 58);
@@ -280,7 +280,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(368, 57);
+            this.textBox1.Location = new System.Drawing.Point(484, 58);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 0;
@@ -300,7 +300,7 @@
             this.pnlIcons.Controls.Add(this.picBoxIcon3);
             this.pnlIcons.Controls.Add(this.picBoxIcon2);
             this.pnlIcons.Controls.Add(this.picBoxIcon1);
-            this.pnlIcons.Location = new System.Drawing.Point(611, 162);
+            this.pnlIcons.Location = new System.Drawing.Point(727, 163);
             this.pnlIcons.Name = "pnlIcons";
             this.pnlIcons.Size = new System.Drawing.Size(281, 125);
             this.pnlIcons.TabIndex = 6;
@@ -439,7 +439,7 @@
             // apnlLayoutDivisor
             // 
             this.apnlLayoutDivisor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(255)))));
-            this.apnlLayoutDivisor.Location = new System.Drawing.Point(533, 51);
+            this.apnlLayoutDivisor.Location = new System.Drawing.Point(649, 52);
             this.apnlLayoutDivisor.Name = "apnlLayoutDivisor";
             this.apnlLayoutDivisor.Size = new System.Drawing.Size(10, 479);
             this.apnlLayoutDivisor.TabIndex = 7;
@@ -449,7 +449,7 @@
             this.alblIcon.AutoSize = true;
             this.alblIcon.Font = new System.Drawing.Font("Open Sans", 14.75F);
             this.alblIcon.ForeColor = System.Drawing.Color.White;
-            this.alblIcon.Location = new System.Drawing.Point(601, 57);
+            this.alblIcon.Location = new System.Drawing.Point(717, 58);
             this.alblIcon.Name = "alblIcon";
             this.alblIcon.Size = new System.Drawing.Size(73, 27);
             this.alblIcon.TabIndex = 0;
@@ -465,7 +465,7 @@
             this.btnNewIcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNewIcon.Font = new System.Drawing.Font("Open Sans", 9.25F, System.Drawing.FontStyle.Bold);
             this.btnNewIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
-            this.btnNewIcon.Location = new System.Drawing.Point(898, 162);
+            this.btnNewIcon.Location = new System.Drawing.Point(1014, 163);
             this.btnNewIcon.Name = "btnNewIcon";
             this.btnNewIcon.Padding = new System.Windows.Forms.Padding(0, 0, 0, 13);
             this.btnNewIcon.Size = new System.Drawing.Size(93, 125);
@@ -482,7 +482,7 @@
             this.lnklblEsqueceuSenha.Font = new System.Drawing.Font("Open Sans", 9.25F);
             this.lnklblEsqueceuSenha.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.lnklblEsqueceuSenha.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
-            this.lnklblEsqueceuSenha.Location = new System.Drawing.Point(608, 396);
+            this.lnklblEsqueceuSenha.Location = new System.Drawing.Point(724, 397);
             this.lnklblEsqueceuSenha.Name = "lnklblEsqueceuSenha";
             this.lnklblEsqueceuSenha.Size = new System.Drawing.Size(231, 18);
             this.lnklblEsqueceuSenha.TabIndex = 9;
@@ -495,7 +495,7 @@
             this.alblLinkProSite.AutoSize = true;
             this.alblLinkProSite.Font = new System.Drawing.Font("Open Sans", 9.75F);
             this.alblLinkProSite.ForeColor = System.Drawing.Color.DimGray;
-            this.alblLinkProSite.Location = new System.Drawing.Point(608, 350);
+            this.alblLinkProSite.Location = new System.Drawing.Point(724, 351);
             this.alblLinkProSite.Name = "alblLinkProSite";
             this.alblLinkProSite.Size = new System.Drawing.Size(251, 36);
             this.alblLinkProSite.TabIndex = 0;
@@ -505,7 +505,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1058, 654);
+            this.ClientSize = new System.Drawing.Size(1183, 654);
             this.Controls.Add(this.lnklblEsqueceuSenha);
             this.Controls.Add(this.btnNewIcon);
             this.Controls.Add(this.apnlLayoutDivisor);
@@ -524,6 +524,24 @@
             this.Controls.Add(this.alblUpperText);
             this.Controls.Add(this.apnlTextbox1);
             this.Name = "KeycapTextIconModule";
+            this.Opacity = 1D;
+            this.Controls.SetChildIndex(this.apnlTextbox1, 0);
+            this.Controls.SetChildIndex(this.alblUpperText, 0);
+            this.Controls.SetChildIndex(this.alblIcon, 0);
+            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.label3, 0);
+            this.Controls.SetChildIndex(this.label4, 0);
+            this.Controls.SetChildIndex(this.alblLinkProSite, 0);
+            this.Controls.SetChildIndex(this.alblText, 0);
+            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.apnlTextbox2, 0);
+            this.Controls.SetChildIndex(this.apnlTextbox3, 0);
+            this.Controls.SetChildIndex(this.btnExit, 0);
+            this.Controls.SetChildIndex(this.textBox1, 0);
+            this.Controls.SetChildIndex(this.pnlIcons, 0);
+            this.Controls.SetChildIndex(this.apnlLayoutDivisor, 0);
+            this.Controls.SetChildIndex(this.btnNewIcon, 0);
+            this.Controls.SetChildIndex(this.lnklblEsqueceuSenha, 0);
             this.apnlTextbox1.ResumeLayout(false);
             this.apnlTextbox1.PerformLayout();
             this.apnlTextbox2.ResumeLayout(false);

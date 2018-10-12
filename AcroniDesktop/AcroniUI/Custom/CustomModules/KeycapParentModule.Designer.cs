@@ -36,6 +36,7 @@
             // 
             this.btnVoltar.BackColor = System.Drawing.Color.Transparent;
             this.btnVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVoltar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnVoltar.FlatAppearance.BorderSize = 0;
             this.btnVoltar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnVoltar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -67,7 +68,6 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KeycapTextModule";
-            this.Load += new System.EventHandler(this.KeycapParentModule_Load);
             this.ResumeLayout(false);
 
         }

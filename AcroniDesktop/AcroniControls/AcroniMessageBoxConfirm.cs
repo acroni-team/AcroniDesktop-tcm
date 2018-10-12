@@ -18,10 +18,10 @@ namespace AcroniControls
         {
             InitializeComponent();
             ellipse.ApplyElipse(this, 15);
-            ellipse.ApplyElipse(btnCancela, 5);
-            ellipse.ApplyElipse(btnOk, 5);
-            btnCancela.Cursor = Cursors.Hand;
-            btnOk.Cursor = Cursors.Hand;
+            ellipse.ApplyElipse(btnNo, 5);
+            ellipse.ApplyElipse(btnYes, 5);
+            btnNo.Cursor = Cursors.Hand;
+            btnYes.Cursor = Cursors.Hand;
             alblMessage1.Text = message;
             alblMessage2.Text = "";
         }
@@ -30,10 +30,10 @@ namespace AcroniControls
         {
             InitializeComponent();
             ellipse.ApplyElipse(this, 15);
-            ellipse.ApplyElipse(btnCancela, 5);
-            ellipse.ApplyElipse(btnOk, 5);
-            btnCancela.Cursor = Cursors.Hand;
-            btnOk.Cursor = Cursors.Hand;
+            ellipse.ApplyElipse(btnNo, 5);
+            ellipse.ApplyElipse(btnYes, 5);
+            btnNo.Cursor = Cursors.Hand;
+            btnYes.Cursor = Cursors.Hand;
             alblMessage1.Text = message;
             alblMessage2.Text = message2;
         }
@@ -42,25 +42,25 @@ namespace AcroniControls
         {
             InitializeComponent();
             ellipse.ApplyElipse(this, 15);
-            ellipse.ApplyElipse(btnCancela, 5);
-            ellipse.ApplyElipse(btnOk, 5);
-            btnCancela.Cursor = Cursors.Hand;
-            btnOk.Cursor = Cursors.Hand;
+            ellipse.ApplyElipse(btnNo, 5);
+            ellipse.ApplyElipse(btnYes, 5);
+            btnNo.Cursor = Cursors.Hand;
+            btnYes.Cursor = Cursors.Hand;
             alblMessage1.Text = message;
             alblMessage2.Text = message2;
-            btnOk.Text = buttonAcceptMessage;
+            btnYes.Text = buttonAcceptMessage;
         }
 
         public AcceptButtons ButtonClicked { get; set; }
 
         private void btnCancela_MouseMove(object sender, MouseEventArgs e)
         {
-            btnCancela.Font = new Font("Open Sans", 12.5F, FontStyle.Underline);
+            btnNo.Font = new Font("Open Sans", 12.5F, FontStyle.Underline);
         }
 
         private void btnCancela_MouseLeave(object sender, EventArgs e)
         {
-            btnCancela.Font = new Font("Open Sans", 12.5F, FontStyle.Regular);
+            btnNo.Font = new Font("Open Sans", 12.5F, FontStyle.Regular);
         }
 
         private void btnOk_Click(object sender, EventArgs e)

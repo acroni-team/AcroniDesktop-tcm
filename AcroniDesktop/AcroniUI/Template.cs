@@ -92,12 +92,10 @@ namespace AcroniUI
             AcroniMessageBoxConfirm ambc = new AcroniMessageBoxConfirm("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "Você quer mesmo sair? Não se esqueça de salvar o seu teclado ;)");
             ambc.ShowDialog();
             if (ambc.DialogResult == DialogResult.Yes)
-                FadeOut();                
-        }
-
-        ~Template()
-        {
-            FadeOut();
+            {
+                FadeOut();
+                Application.Exit();
+            }
         }
 
         private void btnMinimize_Click(object sender, EventArgs e) => WindowState = FormWindowState.Minimized;

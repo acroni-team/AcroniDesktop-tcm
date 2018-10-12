@@ -10,10 +10,6 @@ namespace AcroniUI.Custom.CustomModules
         public KeycapParentModule()
         {
             InitializeComponent();
-        }
-
-        private void KeycapParentModule_Load(object sender, EventArgs e)
-        {
             FadeIn();
         }
 
@@ -25,13 +21,14 @@ namespace AcroniUI.Custom.CustomModules
                 await Task.Delay(delay);
                 Opacity -= 0.05;
             }
+            Close();
         }
 
         public async void FadeIn()
         {
             while (Opacity < 1)
             {
-                await Task.Delay(30);
+                await Task.Delay(5);
                 Opacity += 0.05;
             }
             Opacity = 1.0;
@@ -40,7 +37,7 @@ namespace AcroniUI.Custom.CustomModules
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            Close();
+            FadeOut(1);
         }
     }
 }

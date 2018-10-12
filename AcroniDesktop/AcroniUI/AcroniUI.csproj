@@ -74,6 +74,12 @@
     <Compile Include="ClientInformation.Designer.cs">
       <DependentUpon>ClientInformation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Custom\CustomModules\KeycapBackgroundModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Custom\CustomModules\KeycapBackgroundModule.Designer.cs">
+      <DependentUpon>KeycapBackgroundModule.cs</DependentUpon>
+    </Compile>
     <Compile Include="Custom\CustomModules\KeycapParentModule.cs">
       <SubType>Form</SubType>
     </Compile>

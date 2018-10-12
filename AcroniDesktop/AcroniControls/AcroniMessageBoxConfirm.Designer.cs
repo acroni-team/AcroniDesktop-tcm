@@ -31,8 +31,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.alblMessage2 = new System.Windows.Forms.Label();
             this.alblMessage1 = new System.Windows.Forms.Label();
-            this.btnCancela = new System.Windows.Forms.Button();
-            this.btnOk = new System.Windows.Forms.Button();
+            this.btnNo = new System.Windows.Forms.Button();
+            this.btnYes = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,47 +69,47 @@
             this.alblMessage1.Text = "DUM DUM Ó";
             this.alblMessage1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnCancela
+            // btnNo
             // 
-            this.btnCancela.BackColor = System.Drawing.Color.Transparent;
-            this.btnCancela.DialogResult = System.Windows.Forms.DialogResult.No;
-            this.btnCancela.FlatAppearance.BorderSize = 0;
-            this.btnCancela.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(54)))), ((int)(((byte)(63)))));
-            this.btnCancela.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(54)))), ((int)(((byte)(63)))));
-            this.btnCancela.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancela.Font = new System.Drawing.Font("Open Sans", 12.5F);
-            this.btnCancela.ForeColor = System.Drawing.Color.White;
-            this.btnCancela.Location = new System.Drawing.Point(150, 235);
-            this.btnCancela.Name = "btnCancela";
-            this.btnCancela.Size = new System.Drawing.Size(99, 41);
-            this.btnCancela.TabIndex = 3;
-            this.btnCancela.Text = "N";
-            this.btnCancela.UseVisualStyleBackColor = false;
-            this.btnCancela.Click += new System.EventHandler(this.btnCancela_Click);
-            this.btnCancela.MouseLeave += new System.EventHandler(this.btnCancela_MouseLeave);
-            this.btnCancela.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCancela_MouseMove);
+            this.btnNo.BackColor = System.Drawing.Color.Transparent;
+            this.btnNo.DialogResult = System.Windows.Forms.DialogResult.No;
+            this.btnNo.FlatAppearance.BorderSize = 0;
+            this.btnNo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(54)))), ((int)(((byte)(63)))));
+            this.btnNo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(54)))), ((int)(((byte)(63)))));
+            this.btnNo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNo.Font = new System.Drawing.Font("Open Sans", 12.5F);
+            this.btnNo.ForeColor = System.Drawing.Color.White;
+            this.btnNo.Location = new System.Drawing.Point(150, 235);
+            this.btnNo.Name = "btnNo";
+            this.btnNo.Size = new System.Drawing.Size(99, 41);
+            this.btnNo.TabIndex = 3;
+            this.btnNo.Text = "Cancelar";
+            this.btnNo.UseVisualStyleBackColor = false;
+            this.btnNo.Click += new System.EventHandler(this.btnCancela_Click);
+            this.btnNo.MouseLeave += new System.EventHandler(this.btnCancela_MouseLeave);
+            this.btnNo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCancela_MouseMove);
             // 
-            // btnOk
+            // btnYes
             // 
-            this.btnOk.BackgroundImage = global::AcroniControls.Properties.Resources.fundo_botao;
-            this.btnOk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnOk.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnOk.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(54)))), ((int)(((byte)(63)))));
-            this.btnOk.FlatAppearance.BorderSize = 0;
-            this.btnOk.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(54)))), ((int)(((byte)(63)))));
-            this.btnOk.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(54)))), ((int)(((byte)(63)))));
-            this.btnOk.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(54)))), ((int)(((byte)(63)))));
-            this.btnOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOk.Font = new System.Drawing.Font("Open Sans SemiBold", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btnOk.ForeColor = System.Drawing.Color.White;
-            this.btnOk.Location = new System.Drawing.Point(328, 226);
-            this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(153, 58);
-            this.btnOk.TabIndex = 6;
-            this.btnOk.Text = "S";
-            this.btnOk.UseVisualStyleBackColor = true;
-            this.btnOk.MouseEnter += new System.EventHandler(this.btnOk_MouseEnter);
-            this.btnOk.MouseLeave += new System.EventHandler(this.btnOk_MouseLeave);
+            this.btnYes.BackgroundImage = global::AcroniControls.Properties.Resources.fundo_botao;
+            this.btnYes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnYes.DialogResult = System.Windows.Forms.DialogResult.Yes;
+            this.btnYes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(54)))), ((int)(((byte)(63)))));
+            this.btnYes.FlatAppearance.BorderSize = 0;
+            this.btnYes.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(54)))), ((int)(((byte)(63)))));
+            this.btnYes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(54)))), ((int)(((byte)(63)))));
+            this.btnYes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(54)))), ((int)(((byte)(63)))));
+            this.btnYes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnYes.Font = new System.Drawing.Font("Open Sans SemiBold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnYes.ForeColor = System.Drawing.Color.White;
+            this.btnYes.Location = new System.Drawing.Point(328, 226);
+            this.btnYes.Name = "btnYes";
+            this.btnYes.Size = new System.Drawing.Size(153, 58);
+            this.btnYes.TabIndex = 6;
+            this.btnYes.Text = "Sim!";
+            this.btnYes.UseVisualStyleBackColor = true;
+            this.btnYes.MouseEnter += new System.EventHandler(this.btnOk_MouseEnter);
+            this.btnYes.MouseLeave += new System.EventHandler(this.btnOk_MouseLeave);
             // 
             // AcroniMessageBoxConfirm
             // 
@@ -117,8 +117,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(54)))), ((int)(((byte)(63)))));
             this.ClientSize = new System.Drawing.Size(640, 361);
-            this.Controls.Add(this.btnOk);
-            this.Controls.Add(this.btnCancela);
+            this.Controls.Add(this.btnYes);
+            this.Controls.Add(this.btnNo);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AcroniMessageBoxConfirm";
@@ -134,7 +134,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label alblMessage2;
         private System.Windows.Forms.Label alblMessage1;
-        private System.Windows.Forms.Button btnCancela;
-        private System.Windows.Forms.Button btnOk;
+        private System.Windows.Forms.Button btnNo;
+        private System.Windows.Forms.Button btnYes;
     }
 }

@@ -52,8 +52,9 @@ namespace AcroniUI.Custom
         {
             keybutton = (Kbtn)sender;
 
-            if (__HasBtnStyleFontColorBeenChosen)
+            if (btnStyleFontColor.Tag.Equals("true"))
                 keybutton.ForeColor = FontColor;
+
             else
             {
                 keybutton.BackColor = keybutton.SetColor(Color);
@@ -61,6 +62,7 @@ namespace AcroniUI.Custom
                     if (c.Name.Contains(keybutton.Name))
                         c.BackColor = keybutton.BackColor;
             }
+
             if (isBottomSelected)
             {
                 foreach (Control c in keybutton.Parent.Controls)
@@ -68,6 +70,7 @@ namespace AcroniUI.Custom
                         if (c.Location.Y == 6)
                             c.Location = new Point(c.Location.X, c.Location.Y + 10);
             }
+
             if (isUpperSelected)
             {
                 foreach (Control c in keybutton.Parent.Controls)
@@ -75,18 +78,13 @@ namespace AcroniUI.Custom
                         if (c.Location.Y == 16)
                             c.Location = new Point(c.Location.X, c.Location.Y - 10);
             }
-            if (__HasBtnTextModuleBeenChosen)
+
+            if (btnOpenModuleTextIcons.Tag.Equals("true"))
             {
+                KeycapTextIconModule ktm = new KeycapTextIconModule();
+                OpenModule(ktm);
 
-                Bitmap bmp = GenerateDarkScreenshot();
-                GeneratePanel(bmp);
-
-                KeycapTextIconModule keycapTextModule = new KeycapTextIconModule();
-                keycapTextModule.StartPosition = FormStartPosition.CenterParent;
-                keycapTextModule.FadeIn();
-                keycapTextModule.ShowDialog(this);
-
-                if (keycapTextModule.DialogResult == DialogResult.OK)
+                if (ktm.DialogResult == DialogResult.OK)
                 {
                     //if (!string.IsNullOrEmpty(keycapTextModule.Uppertext))
                     //    keybutton.Uppertext = keycapTextModule.Uppertext;
@@ -99,27 +97,56 @@ namespace AcroniUI.Custom
                     //else
                     //    keybutton.Text = keybutton.Text;
 
-                    if (!string.IsNullOrEmpty(keycapTextModule.Maintext))
-                        keybutton.Text = keycapTextModule.Maintext;
+                    if (!string.IsNullOrEmpty(ktm.Maintext))
+                        keybutton.Text = ktm.Maintext;
                     else
                         keybutton.Text = keybutton.Text;
 
                     if (KeycapTextIconModule.HasChosenAIcon)
-                        keybutton.Image = keycapTextModule.SelectedIcon;
-                    DisposePanel();
+                        keybutton.Image = ktm.SelectedIcon;
                 }
 
             }
+
+            if (btnOpenModuleBackground.Tag.Equals("true"))
+            {
+                KeycapBackgroundModule kbm = new KeycapBackgroundModule();
+                OpenModule(kbm);
+            }
+
+            if (btnOpenModuleSwitch.Tag.Equals("true"))
+            {
+                KeycapSwitchModule ksm = new KeycapSwitchModule();
+                OpenModule(ksm);
+            }
         }
+
+
+        #region Método inicializador de módulos
+
+
+        private void OpenModule(KeycapParentModule kpm)
+        {
+            GenerateDarkScreenshot();
+            kpm.StartPosition = FormStartPosition.CenterScreen;
+            kpm.FadeIn();
+            kpm.ShowDialog(this);
+            if (kpm.DialogResult == DialogResult.OK || kpm.DialogResult == DialogResult.Cancel)
+                DisposePanel();
+        }
+
+
+        #endregion
 
         #endregion
 
         #region Métodos do darken form
 
-
+        private Panel darkenPanel;
         // Tira uma screenshot do formulário e escurece-a.
-        private Bitmap GenerateDarkScreenshot()
+        private void GenerateDarkScreenshot()
         {
+            darkenPanel = new Panel();
             Bitmap bmp = new Bitmap(this.ClientRectangle.Width, this.ClientRectangle.Height);
             using (Graphics G = Graphics.FromImage(bmp))
             {
@@ -133,15 +160,6 @@ namespace AcroniUI.Custom
                 }
             }
 
-            return bmp;
-        }
-
-        Panel darkenPanel = new Panel();
-        private void DisposePanel() => darkenPanel.Dispose();
-
-        // Coloca o screenshot num Panel e o trás para frente.
-        private void GeneratePanel(Bitmap bmp)
-        {
             darkenPanel.Location = new Point(0, 0);
             darkenPanel.Size = this.ClientRectangle.Size;
             darkenPanel.BackgroundImage = bmp;
@@ -149,6 +167,7 @@ namespace AcroniUI.Custom
             darkenPanel.BringToFront();
         }
 
+        private void DisposePanel() => darkenPanel.Dispose();
 
         #endregion
 
@@ -214,7 +233,7 @@ namespace AcroniUI.Custom
             if (Share.EditKeyboard)
                 LoadKeyboard();
 
-        } 
+        }
         #endregion
 
         #region Métodos do Color Picker
@@ -227,7 +246,7 @@ namespace AcroniUI.Custom
             Button b = (Button)sender;
             lblHexaColor.Text = $"#{b.BackColor.R.ToString("X2")}{b.BackColor.G.ToString("X2")}{b.BackColor.B.ToString("X2")}";
 
-            if (__HasBtnStyleFontColorBeenChosen)
+            if (btnStyleFontColor.Tag.Equals("true"))
                 FontColor = b.BackColor;
 
             if (b.Tag.ToString().Contains("Ambar"))
@@ -323,7 +342,6 @@ namespace AcroniUI.Custom
 
         #endregion
 
-
         #endregion
 
         #region Fontes das teclas e texto
@@ -375,55 +393,66 @@ namespace AcroniUI.Custom
 
         #region Controladores dos módulos e das cores dos botões de módulo.
 
-        private bool __HasBtnTextModuleBeenChosen { get; set; }
 
-        private bool __HasBtnStyleFontColorBeenChosen { get; set; }
+        private void ApplyColorToModuleButton(Control c, bool isDeactivationNecessary)
+        {
+            if (isDeactivationNecessary == true || c != btnStyleFontColor)
+            {
+                foreach (Control btnOpenModule in pnlBtnOpenModules.Controls)
+                {
+                    if (!btnOpenModule.Tag.Equals("true"))
+                    {
+                        if (btnOpenModule != c)
+                        {
+                            btnOpenModule.BackColor = Color.FromArgb(31, 32, 34);
+                            btnOpenModule.Tag = "false";
+                        }
+                        else
+                        {
+                            btnOpenModule.BackColor = Color.FromArgb(80, 80, 80);
+                            btnOpenModule.Tag = "true";
+                        }
+                    }
+                    else
+                    {
+                        btnOpenModule.BackColor = Color.FromArgb(31, 32, 34);
+                        btnOpenModule.Tag = "false";
+                    }
+                }
+            }
+            else
+            {
+                if (!c.Tag.Equals("true"))
+                {
+                    c.BackColor = Color.FromArgb(80, 80, 80);
+                    c.Tag = "true";
+                }
+                else
+                {
+                    c.BackColor = Color.FromArgb(31, 32, 34);
+                    c.Tag = "false";
+                }
+            }
+        }
 
         private void btnOpenModuleSwitch_Click(object sender, EventArgs e)
         {
-            KeycapSwitchModule ksm = new KeycapSwitchModule();
-            if (ksm.ShowDialog() == DialogResult.OK)
-            {
-
-            }
+            ApplyColorToModuleButton(btnOpenModuleSwitch, true);
         }
 
         private void btnStyleFontColor_Click(object sender, EventArgs e)
         {
-            if (!__HasBtnStyleFontColorBeenChosen)
-            {
-                btnStyleFontColor.BackColor = Color.FromArgb(45, 46, 47);
-                __HasBtnStyleFontColorBeenChosen = true;
-            }
-            else
-            {
-                btnStyleFontColor.BackColor = Color.FromArgb(31, 32, 34);
-                __HasBtnStyleFontColorBeenChosen = false;
-            }
+            ApplyColorToModuleButton(btnStyleFontColor, false);
         }
-
-        #endregion
-
-        #region Ícones e texto
 
         private void btnTextAndIcons_Click(object sender, EventArgs e)
         {
-
-            if (__HasBtnTextModuleBeenChosen)
-            {
-                __HasBtnTextModuleBeenChosen = false;
-                btnOpenModuleTextIcons.BackColor = Color.FromArgb(31, 32, 34);
-            }
-            else
-            {
-                __HasBtnTextModuleBeenChosen = true;
-                btnOpenModuleTextIcons.BackColor = Color.FromArgb(45, 46, 47);
-            }
+            ApplyColorToModuleButton(btnOpenModuleTextIcons, true);
         }
 
-        private void picIcons_Click(object sender, EventArgs e)
+        private void btnOpenModuleBackground_Click(object sender, EventArgs e)
         {
-
+            ApplyColorToModuleButton(btnOpenModuleBackground, true);
         }
 
         #endregion
@@ -614,7 +643,7 @@ namespace AcroniUI.Custom
             //MessageBox.Show("Fez");
             //else
             //    MessageBox.Show("Não fez");
-        } 
+        }
         #endregion
 
         private void lblUpperBottom_Click(object sender, EventArgs e)

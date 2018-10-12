@@ -8,6 +8,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcroniLibrary", "AcroniDesktop\AcroniLibrary\AcroniLibrary.csproj", "{CE52AF0A-B700-4DBF-A004-C7240A6A1CC9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcroniUI", "AcroniDesktop\AcroniUI\AcroniUI.csproj", "{9D534214-9E90-4506-9D5A-B9648BB7BCE3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CE52AF0A-B700-4DBF-A004-C7240A6A1CC9} = {CE52AF0A-B700-4DBF-A004-C7240A6A1CC9}
+		{ADF7371B-02A4-4E2B-B342-348E0F4D8F1C} = {ADF7371B-02A4-4E2B-B342-348E0F4D8F1C}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
