@@ -50,7 +50,9 @@ namespace AcroniControls
             alblMessage2.Text = message2;
             btnOk.Text = buttonAcceptMessage;
         }
+
         public AcceptButtons ButtonClicked { get; set; }
+
         private void btnCancela_MouseMove(object sender, MouseEventArgs e)
         {
             btnCancela.Font = new Font("Open Sans", 12.5F, FontStyle.Underline);
@@ -71,6 +73,18 @@ namespace AcroniControls
         {
             ButtonClicked = AcceptButtons.CANCEL;
             this.Close();
+        }
+
+        private void btnOk_MouseEnter(object sender, EventArgs e)
+        {
+            Button b = (Button)sender;
+            b.BackgroundImage = global::AcroniControls.Properties.Resources.fundobotaoclaro;
+        }
+
+        private void btnOk_MouseLeave(object sender, EventArgs e)
+        {
+            Button b = (Button)sender;
+            b.BackgroundImage = global::AcroniControls.Properties.Resources.fundo_botao;
         }
     }
     public enum AcceptButtons

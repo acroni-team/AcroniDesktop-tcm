@@ -42,7 +42,6 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btnAll = new System.Windows.Forms.Button();
             this.btnOnlyThis = new System.Windows.Forms.Button();
-            this.btnVoltar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -249,33 +248,11 @@
             this.btnOnlyThis.Text = "Quero só pra essa tecla :D";
             this.btnOnlyThis.UseVisualStyleBackColor = false;
             // 
-            // btnVoltar
-            // 
-            this.btnVoltar.BackColor = System.Drawing.Color.Transparent;
-            this.btnVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVoltar.FlatAppearance.BorderSize = 0;
-            this.btnVoltar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnVoltar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoltar.Font = new System.Drawing.Font("Open Sans", 12.25F, System.Drawing.FontStyle.Bold);
-            this.btnVoltar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(127)))));
-            this.btnVoltar.Image = ((System.Drawing.Image)(resources.GetObject("btnVoltar.Image")));
-            this.btnVoltar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVoltar.Location = new System.Drawing.Point(28, 3);
-            this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(118, 67);
-            this.btnVoltar.TabIndex = 15;
-            this.btnVoltar.Text = "Cancelar";
-            this.btnVoltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnVoltar.UseVisualStyleBackColor = false;
-            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
-            // 
             // KeycapSwitchModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 600);
-            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnOnlyThis);
             this.Controls.Add(this.btnAll);
             this.Controls.Add(this.pictureBox5);
@@ -290,6 +267,7 @@
             this.Controls.Add(this.styleBtn1);
             this.Controls.Add(this.btnSwitch);
             this.Name = "KeycapSwitchModule";
+            this.Opacity = 1D;
             this.Text = "KeycapSwitchModule";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -316,6 +294,5 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button btnAll;
         private System.Windows.Forms.Button btnOnlyThis;
-        private System.Windows.Forms.Button btnVoltar;
     }
 }

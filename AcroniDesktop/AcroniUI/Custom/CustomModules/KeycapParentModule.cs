@@ -38,5 +38,9 @@ namespace AcroniUI.Custom.CustomModules
         }
         #endregion
 
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

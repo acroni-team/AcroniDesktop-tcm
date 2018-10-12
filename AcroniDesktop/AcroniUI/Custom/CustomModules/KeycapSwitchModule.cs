@@ -24,10 +24,5 @@ namespace AcroniUI.Custom.CustomModules
                 }
             }
         }
-
-        private void btnVoltar_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
     }
 }
