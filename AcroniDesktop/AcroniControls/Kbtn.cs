@@ -17,7 +17,11 @@ namespace AcroniControls
             InitializeComponent();
             this.Cursor = Cursors.Hand;
         }
+//Não apagar, pois ele dá override para o button não mudar a cor no hover.
+        protected override void OnMouseEnter(EventArgs e)
+        {
 
+        }
         /// <summary>
         /// <para>Método que muda a cor de um botão.</para>
         /// </summary>

@@ -12,22 +12,22 @@ namespace AcroniLibrary.FileInfo
         public string UserName { get; set; }
         public int ID { get; set; }
 
-        public User()
-        {
-            using (SqlConnection cnn = new SqlConnection(SQLConnection.nome_conexao))
-            {
-                cnn.Open();
-                using (SqlCommand select = new SqlCommand($"select id_cliente from tblCliente where usuario = 'teste'", cnn))
-                {
-                    using (SqlDataReader sdr = select.ExecuteReader())
-                    {
-                        sdr.Read();
-                        ID = (int)sdr[0];
-                    }
-                }
-            }
-            UserName = SQLConnection.nome_usuario;
-        }
+        //public User()
+        //{
+        //    using (SqlConnection cnn = new SqlConnection(SQLConnection.nome_conexao))
+        //    {
+        //        cnn.Open();
+        //        using (SqlCommand select = new SqlCommand($"select id_cliente from tblCliente where usuario = 'teste'", cnn))
+        //        {
+        //            using (SqlDataReader sdr = select.ExecuteReader())
+        //            {
+        //                sdr.Read();
+        //                ID = (int)sdr[0];
+        //            }
+        //        }
+        //    }
+        //    UserName = SQLConnection.nome_usuario;
+        //}
 
     }
 }

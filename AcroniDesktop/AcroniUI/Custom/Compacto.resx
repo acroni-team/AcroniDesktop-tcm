@@ -118,6 +118,44 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnVoltar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAKRJREFUSEvt
+        lDsKAjEYhBMvptfIo/RxBt0mna2FhU88qavzw6RQ7HZSCPlgIJnATP4srOt0fuEpPaWUWUrpYbI1bRke
+        wUfoBY055wX96fDmd4Y/Eb7k0XQsHIG3enNoxSMJPsZ4bRaOwEsNR9GavgyPpznXAqw39KXYEx1YYtrS
+        l/JRgkl29KV8TzLQl2If/cSCMYQwpy+lTrLnvgntfnadf8S5N63pVQB12WghAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnTextAlignRight.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAFdJREFUSEvt
+        jzEKwEAMw/LP/P8d7SLIYq4Gdwon0JYIXBeb7n7+lOygjhLJbkdNdyVxRj26ktiEmplIdlBHiWS3o6a7
+        kjijHl1JbELNTCQ7qKNEspcvql7wLnNQHJQXXgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnTextAlignCenter.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAFhJREFUSEvt
+        k0EKwCAMBPPP5DH9uUVYyGWlwipSycDc4kgOsWIad28rRTZhQ4rI3khEPGzlGftbZMZs/+C/sJUVkU3Y
+        kCKyN1J3cA62siKyCRtSRLb4wuwFrc13sKSWYjQAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnTextAlignLeft.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAFdJREFUSEvt
+        jzEKwEAMw/LP/P8d7SLIYq4Gdwon0JYIXBeb7n7+lOygjhLJbkLNdCVxRj26ktiOmp5IdlBHiWQ3oWa6
+        kjijHl1JbEdNTyQ7qKNEspcvql6bxHNQpQh8ugAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <metadata name="eBtnOpenModuleSwitch.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>132, 17</value>
+  </metadata>
+  <metadata name="ebtnOpenModuleTextIcons.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>316, 17</value>
+  </metadata>
+  <metadata name="ebtnOpenModuleBackground.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>516, 17</value>
+  </metadata>
   <data name="picBoxKeyboardBackground.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABBUAAAF3CAYAAAD6hXPxAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
@@ -368,44 +406,6 @@
         TkSuQmCC
 </value>
   </data>
-  <data name="btnVoltar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAKRJREFUSEvt
-        lDsKAjEYhBMvptfIo/RxBt0mna2FhU88qavzw6RQ7HZSCPlgIJnATP4srOt0fuEpPaWUWUrpYbI1bRke
-        wUfoBY055wX96fDmd4Y/Eb7k0XQsHIG3enNoxSMJPsZ4bRaOwEsNR9GavgyPpznXAqw39KXYEx1YYtrS
-        l/JRgkl29KV8TzLQl2If/cSCMYQwpy+lTrLnvgntfnadf8S5N63pVQB12WghAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnTextAlignRight.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAFdJREFUSEvt
-        jzEKwEAMw/LP/P8d7SLIYq4Gdwon0JYIXBeb7n7+lOygjhLJbkdNdyVxRj26ktiEmplIdlBHiWS3o6a7
-        kjijHl1JbELNTCQ7qKNEspcvql7wLnNQHJQXXgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="btnTextAlignCenter.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAFhJREFUSEvt
-        k0EKwCAMBPPP5DH9uUVYyGWlwipSycDc4kgOsWIad28rRTZhQ4rI3khEPGzlGftbZMZs/+C/sJUVkU3Y
-        kCKyN1J3cA62siKyCRtSRLb4wuwFrc13sKSWYjQAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="btnTextAlignLeft.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAFdJREFUSEvt
-        jzEKwEAMw/LP/P8d7SLIYq4Gdwon0JYIXBeb7n7+lOygjhLJbkLNdCVxRj26ktiOmp5IdlBHiWQ3oWa6
-        kjijHl1JbEdNTyQ7qKNEspcvql6bxHNQpQh8ugAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <metadata name="eBtnOpenModuleSwitch.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>132, 17</value>
-  </metadata>
-  <metadata name="ebtnOpenModuleTextIcons.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>316, 17</value>
-  </metadata>
-  <metadata name="ebtnOpenModuleBackground.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>516, 17</value>
-  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>38</value>
   </metadata>

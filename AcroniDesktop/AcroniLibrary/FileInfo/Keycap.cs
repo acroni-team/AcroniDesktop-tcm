@@ -14,5 +14,6 @@ namespace AcroniLibrary.FileInfo
         public Font Font { get; set; }
         public Color ForeColor { get; set; }
         public object ContentAlignment { get; set; }
+        public Point TextLocation { get; set; }
     }
 }
