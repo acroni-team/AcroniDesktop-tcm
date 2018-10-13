@@ -149,7 +149,6 @@ namespace AcroniUI
             lblCollectionsQuantity.Text = Convert.ToString(countCollections);
         }
 
-
         #endregion
 
         private void collectionUi_Click(object sender, EventArgs e)

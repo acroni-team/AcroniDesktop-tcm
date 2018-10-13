@@ -13,7 +13,7 @@ namespace AcroniLibrary.FileInfo
         public Image Icon { get; set; }
         public Font Font { get; set; }
         public Color ForeColor { get; set; }
-        public object ContentAlignment { get; set; }
+        public ContentAlignment ContentAlignment { get; set; }
         public Point TextLocation { get; set; }
     }
 }

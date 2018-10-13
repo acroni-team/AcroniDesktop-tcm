@@ -22,7 +22,7 @@ namespace AcroniUI.Custom
         #region Declarações 
 
         // Definição do botão de teclado genérico (kbtn)
-        Kbtn keybutton = new Kbtn();
+        Label keybutton = new Label();
 
         // Definição das propriedades de salvamento
         //private bool SetKeyboardProperties;
@@ -49,65 +49,44 @@ namespace AcroniUI.Custom
         //Ao clicar num botão do teclado
         private void kbtn_Click(object sender, EventArgs e)
         {
-            keybutton = (Kbtn)sender;
+            keybutton = (Label)sender;
 
             if (btnStyleFontColor.Tag.Equals("true"))
-                foreach (Control d in keybutton.Parent.Controls)
-                {
-                    if (d.Name.Contains("lbl"))
-                        d.ForeColor = FontColor;                  
-                }
+                keybutton.ForeColor = FontColor;
+
             else
             {
-                keybutton.BackColor = keybutton.SetColor(Color);
+                keybutton.BackColor = Color;
                 keybutton.Parent.BackColor = Color.FromArgb(90, keybutton.BackColor);
-                foreach (Control c in keybutton.Parent.Controls)
-                    if (c.Name.Contains(keybutton.Name))
-                        c.BackColor = keybutton.BackColor;
             }
-
+            if(isUpperSelected)
+            {
+                if (isLeftSelected)
+                    keybutton.TextAlign = ContentAlignment.TopLeft;
+                if (isCenterSelected)
+                    keybutton.TextAlign = ContentAlignment.TopCenter;
+                if (isRightSelected)
+                    keybutton.TextAlign = ContentAlignment.TopRight;
+            }
             if (isBottomSelected)
             {
-                foreach (Control c in keybutton.Parent.Controls)
-                    if (c.Name.Contains("lbl"))
-                        if (c.Location.Y == 6)
-                            c.Location = new Point(c.Location.X, c.Location.Y + 10);
+                if (isLeftSelected)
+                    keybutton.TextAlign = ContentAlignment.BottomLeft;
+                if (isCenterSelected)
+                    keybutton.TextAlign = ContentAlignment.BottomCenter;
+                if (isRightSelected)
+                    keybutton.TextAlign = ContentAlignment.BottomRight;
             }
 
-            if (isUpperSelected)
-            {
-                foreach (Control c in keybutton.Parent.Controls)
-                    if (c.Name.Contains("lbl"))
-                        if (c.Location.Y == 16)
-                            c.Location = new Point(c.Location.X, c.Location.Y - 10);
-            }
 
-            if (isLeftSelected)
+            if (btnOpenModuleTextIcons.Tag.Equals("true"))
             {
-                foreach (Control c in keybutton.Parent.Controls)
-                    if (c.Name.Contains("lbl"))
-                        if (c.Location.X != 9)
-                            c.Location = new Point(9, c.Location.Y);
-            }
-            if (isCenterSelected)
-            {
-                foreach (Control c in keybutton.Parent.Controls)
-                    if (c.Name.Contains("lbl"))
-                        if (c.Location.X != 15)
-                            c.Location = new Point(15, c.Location.Y);
-            }
-            if (isRightSelected)
-            {
-                foreach (Control c in keybutton.Parent.Controls)
-                    if (c.Name.Contains("lbl"))
-                        if (c.Location.X != 21)
-                            c.Location = new Point(21, c.Location.Y);
-            }
-                if (btnOpenModuleTextIcons.Tag.Equals("true"))
-            {
-                KeycapTextIconModule ktm = new KeycapTextIconModule();
+                KeycapTextIconModule ktm;
+                if (keybutton.Name.Contains("Ca"))
+                    ktm = new KeycapTextIconModule(true);
+                else 
+                    ktm = new KeycapTextIconModule(false);
                 OpenModule(ktm);
-
                 if (ktm.DialogResult == DialogResult.OK)
                 {
                     //if (!string.IsNullOrEmpty(keycapTextModule.Uppertext))
@@ -121,20 +100,22 @@ namespace AcroniUI.Custom
                     //else
                     //    keybutton.Text = keybutton.Text;
 
-                    if (!string.IsNullOrEmpty(ktm.Maintext))
-                        foreach (Control c in keybutton.Parent.Controls)
-                        {
-                            if (c.Name.Contains("lbl"))
-                                c.Text = ktm.Maintext;
-                            else
-                                c.Text = c.Text;
-                        }
-                   
-                    if (KeycapTextIconModule.HasChosenAIcon)
-                        keybutton.Image = ktm.SelectedIcon;
+                    if (!string.IsNullOrEmpty(ktm.Maintext) || !string.IsNullOrEmpty(ktm.Uppertext) || !string.IsNullOrEmpty(ktm.Bottomtext))
+                    {
+                        if (keybutton.Name.Contains("Ca"))
+                            keybutton.Text = ktm.Uppertext + ktm.Bottomtext;
+                        else
+                            keybutton.Text = ktm.Maintext;
+                    }
                 }
-
+                if (KeycapTextIconModule.HasChosenAIcon)
+                {
+                    keybutton.Image = ktm.SelectedIcon;
+                }
             }
+                
+
+            
 
             if (btnOpenModuleBackground.Tag.Equals("true"))
             {
@@ -391,7 +372,7 @@ namespace AcroniUI.Custom
             btnTextAlignLeft.BackColor = Color.FromArgb(90, Color.Transparent);
             btnTextAlignCenter.BackColor = Color.Transparent;
             btnTextAlignRight.BackColor = Color.Transparent;
-            ////ContentAlignment = ContentAlignment.TopLeft;
+            ContentAlignment = ContentAlignment.TopLeft;
         }
 
         private void btnTextAlignCenter_Click(object sender, EventArgs e)
@@ -402,10 +383,10 @@ namespace AcroniUI.Custom
             btnTextAlignLeft.BackColor = Color.Transparent;
             btnTextAlignCenter.BackColor = Color.FromArgb(90, Color.Transparent);
             btnTextAlignRight.BackColor = Color.Transparent;
-            //if (ContentAlignment == ContentAlignment.TopCenter)
-            //    ContentAlignment = ContentAlignment.TopLeft;
-            //else
-            //    ContentAlignment = ContentAlignment.TopCenter;
+            if (ContentAlignment == ContentAlignment.TopCenter)
+                ContentAlignment = ContentAlignment.TopLeft;
+            else
+                ContentAlignment = ContentAlignment.TopCenter;
         }
 
         private void btnTextAlignRight_Click(object sender, EventArgs e)
@@ -416,10 +397,10 @@ namespace AcroniUI.Custom
             btnTextAlignLeft.BackColor = Color.Transparent;
             btnTextAlignCenter.BackColor = Color.Transparent;
             btnTextAlignRight.BackColor = Color.FromArgb(90, Color.Transparent);
-            //if (ContentAlignment == ContentAlignment.TopRight)
-            //    ContentAlignment = ContentAlignment.TopLeft;
-            //else
-            //    ContentAlignment = ContentAlignment.TopRight;
+            if (ContentAlignment == ContentAlignment.TopRight)
+                ContentAlignment = ContentAlignment.TopLeft;
+            else
+                ContentAlignment = ContentAlignment.TopRight;
         }
         #endregion
 
@@ -528,7 +509,7 @@ namespace AcroniUI.Custom
                 {
                     foreach (Keycap k in Share.Keyboard.Keycaps)
                     {
-                        if (keycap.Name.Remove(0,5).Equals(k.ID))
+                        if (("lbl"+keycap.Name.Remove(0,5)).Equals(k.ID))
                         {
                             try {
                                 foreach (Control c in keycap.Controls)
@@ -536,20 +517,17 @@ namespace AcroniUI.Custom
                                     if (c.Name.Contains("lbl"))
                                     {
                                         c.ForeColor = k.ForeColor;
+                                        (c as Label).Image = k.Icon;
                                         c.Font = k.Font;
                                         c.Text = k.Text;
-                                        c.Location = k.TextLocation;
-                                        c.BackColor = k.Color;
-                                    }
-                                    else if (c.Name.Equals(k.ID))
-                                    {
                                         c.BackColor = k.Color;
                                         keycap.BackColor = Color.FromArgb(90, k.Color);
+                                        (c as Label).TextAlign = (ContentAlignment) ContentAlignment;
                                     }
                                 }
                                 ////keycap.Text = k.Text;
-                                //keycap.Parent.BackColor = Color.FromArgb(90, keycap.BackColor);
-                                (keycap as Button).TextAlign = (ContentAlignment)k.ContentAlignment;
+
+
                                 break;
                             }catch(Exception) { }
                         }
@@ -558,36 +536,36 @@ namespace AcroniUI.Custom
             }
         }
 
-        private void btnLer_Click(object sender, EventArgs e)
-        {
-            using (FileStream openarchive = new FileStream(Application.StartupPath + @"\" + SQLConnection.nome_usuario + ".acr", FileMode.Open))
-            {
-                BinaryFormatter ofByteArrayToObject = new BinaryFormatter();
-                collection = (Collection)ofByteArrayToObject.Deserialize(openarchive);
-            }
+        //private void btnLer_Click(object sender, EventArgs e)
+        //{
+        //    using (FileStream openarchive = new FileStream(Application.StartupPath + @"\" + SQLConnection.nome_usuario + ".acr", FileMode.Open))
+        //    {
+        //        BinaryFormatter ofByteArrayToObject = new BinaryFormatter();
+        //        collection = (Collection)ofByteArrayToObject.Deserialize(openarchive);
+        //    }
 
-            picBoxKeyboardBackground.Image = collection.Keyboards[0].BackgroundImage;
+        //    picBoxKeyboardBackground.Image = collection.Keyboards[0].BackgroundImage;
 
-            picBoxKeyboardBackground.SizeMode = (PictureBoxSizeMode)collection.Keyboards[0].BackgroundModeSize;
+        //    picBoxKeyboardBackground.SizeMode = (PictureBoxSizeMode)collection.Keyboards[0].BackgroundModeSize;
 
-            foreach (Control control in this.Controls)
-            {
-                if (control is Kbtn)
-                {
-                    foreach (Keycap tecla in this.collection.Keyboards[0].Keycaps)
-                    {
-                        if (control.Name.Equals(tecla.ID))
-                        {
-                            control.Name = tecla.ID;
-                            control.Font = tecla.Font;
-                            control.BackColor = tecla.Color;
-                            control.Text = tecla.Text;
-                            break;
-                        }
-                    }
-                }
-            }
-        }
+        //    foreach (Control control in this.Controls)
+        //    {
+        //        if (control is Kbtn)
+        //        {
+        //            foreach (Keycap tecla in this.collection.Keyboards[0].Keycaps)
+        //            {
+        //                if (control.Name.Equals(tecla.ID))
+        //                {
+        //                    control.Name = tecla.ID;
+        //                    control.Font = tecla.Font;
+        //                    control.BackColor = tecla.Color;
+        //                    control.Text = tecla.Text;
+        //                    break;
+        //                }
+        //            }
+        //        }
+        //    }
+        //}
 
         private async void btnSalvar_Click(object sender, EventArgs e)
         {
@@ -669,10 +647,11 @@ namespace AcroniUI.Custom
             keyboard.BackgroundImage = picBoxKeyboardBackground.Image;
             keyboard.BackgroundModeSize = picBoxKeyboardBackground.SizeMode;
             string text = "";
-            Point location = Point.Empty;
             Color backcolor = Color.Empty;
             Color forecolor = Color.Empty;
             Font font = null;
+            Image image = null;
+            ContentAlignment textalign = ContentAlignment.TopLeft;
             string name = "";
             foreach (Control tecla in pnlWithKeycaps.Controls)
                 if (tecla.Name.Contains("fundo"))
@@ -682,17 +661,16 @@ namespace AcroniUI.Custom
                         {
                             if (c.Name.Contains("lbl"))
                             {
+                                image = (c as Label).Image;
                                 text = c.Text;
-                                location = c.Location;
                                 forecolor = c.ForeColor;
                                 font = c.Font;
-                                location = c.Location;
-                            }
-                            else if (c.Name.Equals(tecla.Name.Remove(0,5)))
-                            {
                                 backcolor = c.BackColor;
                                 name = c.Name;
+                                textalign = (c as Label).TextAlign;
                             }
+
+
                         }
                         keyboard.Keycaps.Add(new Keycap
                         {
@@ -702,7 +680,8 @@ namespace AcroniUI.Custom
                             Text = text,
                             Font = font,
                             Color = backcolor,
-                            TextLocation = location,
+                            ContentAlignment = textalign,
+                            Icon = image
                             //ContentAlignment = (tecla as Button).TextAlign
                         });
                     }
@@ -746,7 +725,7 @@ namespace AcroniUI.Custom
 
         private void lblUpperBottom_Click(object sender, EventArgs e)
         {
-            kbtn_Click(Controls.Find((sender as Label).Name.Remove(0, 3), true)[0], e);
+            kbtn_Click(sender,e);
         }
 
         private void btnUpper_Click(object sender, EventArgs e)

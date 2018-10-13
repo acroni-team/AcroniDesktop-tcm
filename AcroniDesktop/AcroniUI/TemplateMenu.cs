@@ -16,6 +16,7 @@ using System.Threading;
 using System.Runtime.Serialization.Formatters.Binary;
 using AcroniControls;
 using AcroniLibrary.SQL;
+using AcroniLibrary.FileInfo;
 
 namespace AcroniUI
 {
@@ -179,7 +180,7 @@ namespace AcroniUI
             }
 
         }
-        private void btnAbrirGaleria_Click(object sender, EventArgs e)
+        protected virtual void btnAbrirGaleria_Click(object sender, EventArgs e)
         {
             Galeria galeria = new Galeria(false);
             galeria.Show();
@@ -194,14 +195,14 @@ namespace AcroniUI
             }
         }
 
-        private void btnSelectKeyboard_Click(object sender, EventArgs e)
+        protected virtual void btnSelectKeyboard_Click(object sender, EventArgs e)
         {
             SelectKeyboard selectKeyboard = new SelectKeyboard();
             selectKeyboard.Show();
             fechaForms();
         }
 
-        private void btnDesconectar_Click(object sender, EventArgs e)
+        protected virtual void btnDesconectar_Click(object sender, EventArgs e)
         {
             AcroniMessageBoxConfirm confirmExit =  new AcroniControls.AcroniMessageBoxConfirm("Saindo daqui", "Deseja realmente deslogar?", "OK");
             confirmExit.ShowDialog();

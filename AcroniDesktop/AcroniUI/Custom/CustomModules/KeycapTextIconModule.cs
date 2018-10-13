@@ -15,20 +15,32 @@ namespace AcroniUI.Custom.CustomModules
     public partial class KeycapTextIconModule : KeycapParentModule
     {
 
-        public KeycapTextIconModule()
+        public KeycapTextIconModule(bool UpperBottomText)
         {
             InitializeComponent();
             Bunifu.Framework.UI.BunifuElipse e = new Bunifu.Framework.UI.BunifuElipse();
             e.ApplyElipse(pnlBtnIconChosen, 5);
+            if(UpperBottomText)
+            {
+                apnlTextbox2.Visible = false;
+                pnlBlocked2.Visible = true;
+            }
+            else
+            {
+                apnlTextbox1.Visible = false;
+                apnlTextbox3.Visible = false;
+                pnlBlocked1.Visible = true;
+                pnlBlocked3.Visible = true;
+            }
         }
 
         //Declaração dos textos para aplicá-los às keycaps do teclado
 
-        public string Uppertext { get; set; }
+        public string Uppertext { get; set; } 
 
         public string Maintext { get; set; }
 
-        public string Bottomtext { get; set; }
+        public string Bottomtext { get; set; } 
 
         //Declaração das propriedades dos ícones
         private Queue<Image> ImageQueue = new Queue<Image>();
@@ -53,7 +65,7 @@ namespace AcroniUI.Custom.CustomModules
             else if (sender == txt2)
                 Maintext = txt2.Text;
             else
-                Bottomtext = txt3.Text;
+                Bottomtext = "\n" + txt3.Text;
         }
 
         private void btnNewIcon_Click(object sender, EventArgs e)
@@ -63,7 +75,7 @@ namespace AcroniUI.Custom.CustomModules
             {
                 iconGetter.InitialDirectory = @"C:\";
                 iconGetter.Title = "Qual o ícone que deseja adicionar?";
-                iconGetter.Filter = "Todos os tipos de imagem | *jpg; *.jpeg; *.bmp; *.png |BMP | *.bmp | JPG | *.jpg; *.jpeg | PNG | *.png ";
+                iconGetter.Filter = "Todos os tipos de imagem | *jpg; *.jpeg; *.bmp; *.png; *.ico|BMP | *.bmp | JPG | *.jpg; *.jpeg | PNG | *.png | ICO | *.ico | Todos| *.*";
                 iconGetter.Multiselect = true;
                 if (iconGetter.ShowDialog() == DialogResult.OK)
                 {
@@ -81,7 +93,8 @@ namespace AcroniUI.Custom.CustomModules
             for (int i = 0; i < ImageQueue.Count; i++)
             {
                 (pnlIcons.Controls[$"picBoxIcon{i + 1}"] as PictureBox).Image = insertableArray[i];
-                (pnlIcons.Controls[$"picBoxIcon{i + 1}"] as PictureBox).Visible = true;
+                (pnlIcons.Controls[$"picBoxIcon{i + 1}"] as PictureBox).SizeMode = PictureBoxSizeMode.Zoom;
+               (pnlIcons.Controls[$"picBoxIcon{i + 1}"] as PictureBox).Visible = true;
             }
         }
 

@@ -62,6 +62,9 @@
             this.btnNewIcon = new AcroniControls.StyleBtn();
             this.lnklblEsqueceuSenha = new System.Windows.Forms.LinkLabel();
             this.alblLinkProSite = new System.Windows.Forms.Label();
+            this.pnlBlocked1 = new System.Windows.Forms.Panel();
+            this.pnlBlocked3 = new System.Windows.Forms.Panel();
+            this.pnlBlocked2 = new System.Windows.Forms.Panel();
             this.apnlTextbox1.SuspendLayout();
             this.apnlTextbox2.SuspendLayout();
             this.apnlTextbox3.SuspendLayout();
@@ -322,7 +325,7 @@
             this.picBoxIcon10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBoxIcon10.Location = new System.Drawing.Point(219, 64);
             this.picBoxIcon10.Name = "picBoxIcon10";
-            this.picBoxIcon10.Size = new System.Drawing.Size(40, 40);
+            this.picBoxIcon10.Size = new System.Drawing.Size(38, 40);
             this.picBoxIcon10.TabIndex = 10;
             this.picBoxIcon10.TabStop = false;
             this.picBoxIcon10.Visible = false;
@@ -334,7 +337,7 @@
             this.picBoxIcon9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBoxIcon9.Location = new System.Drawing.Point(168, 64);
             this.picBoxIcon9.Name = "picBoxIcon9";
-            this.picBoxIcon9.Size = new System.Drawing.Size(40, 40);
+            this.picBoxIcon9.Size = new System.Drawing.Size(38, 40);
             this.picBoxIcon9.TabIndex = 9;
             this.picBoxIcon9.TabStop = false;
             this.picBoxIcon9.Visible = false;
@@ -346,7 +349,7 @@
             this.picBoxIcon8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBoxIcon8.Location = new System.Drawing.Point(117, 64);
             this.picBoxIcon8.Name = "picBoxIcon8";
-            this.picBoxIcon8.Size = new System.Drawing.Size(40, 40);
+            this.picBoxIcon8.Size = new System.Drawing.Size(38, 40);
             this.picBoxIcon8.TabIndex = 6;
             this.picBoxIcon8.TabStop = false;
             this.picBoxIcon8.Visible = false;
@@ -358,7 +361,7 @@
             this.picBoxIcon7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBoxIcon7.Location = new System.Drawing.Point(66, 64);
             this.picBoxIcon7.Name = "picBoxIcon7";
-            this.picBoxIcon7.Size = new System.Drawing.Size(40, 40);
+            this.picBoxIcon7.Size = new System.Drawing.Size(38, 40);
             this.picBoxIcon7.TabIndex = 7;
             this.picBoxIcon7.TabStop = false;
             this.picBoxIcon7.Visible = false;
@@ -370,7 +373,7 @@
             this.picBoxIcon6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBoxIcon6.Location = new System.Drawing.Point(15, 64);
             this.picBoxIcon6.Name = "picBoxIcon6";
-            this.picBoxIcon6.Size = new System.Drawing.Size(40, 40);
+            this.picBoxIcon6.Size = new System.Drawing.Size(38, 40);
             this.picBoxIcon6.TabIndex = 8;
             this.picBoxIcon6.TabStop = false;
             this.picBoxIcon6.Visible = false;
@@ -382,7 +385,7 @@
             this.picBoxIcon5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBoxIcon5.Location = new System.Drawing.Point(219, 13);
             this.picBoxIcon5.Name = "picBoxIcon5";
-            this.picBoxIcon5.Size = new System.Drawing.Size(40, 40);
+            this.picBoxIcon5.Size = new System.Drawing.Size(38, 40);
             this.picBoxIcon5.TabIndex = 5;
             this.picBoxIcon5.TabStop = false;
             this.picBoxIcon5.Visible = false;
@@ -394,7 +397,7 @@
             this.picBoxIcon4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBoxIcon4.Location = new System.Drawing.Point(168, 13);
             this.picBoxIcon4.Name = "picBoxIcon4";
-            this.picBoxIcon4.Size = new System.Drawing.Size(40, 40);
+            this.picBoxIcon4.Size = new System.Drawing.Size(38, 40);
             this.picBoxIcon4.TabIndex = 3;
             this.picBoxIcon4.TabStop = false;
             this.picBoxIcon4.Visible = false;
@@ -406,7 +409,7 @@
             this.picBoxIcon3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBoxIcon3.Location = new System.Drawing.Point(117, 13);
             this.picBoxIcon3.Name = "picBoxIcon3";
-            this.picBoxIcon3.Size = new System.Drawing.Size(40, 40);
+            this.picBoxIcon3.Size = new System.Drawing.Size(38, 40);
             this.picBoxIcon3.TabIndex = 0;
             this.picBoxIcon3.TabStop = false;
             this.picBoxIcon3.Visible = false;
@@ -418,7 +421,7 @@
             this.picBoxIcon2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBoxIcon2.Location = new System.Drawing.Point(66, 13);
             this.picBoxIcon2.Name = "picBoxIcon2";
-            this.picBoxIcon2.Size = new System.Drawing.Size(40, 40);
+            this.picBoxIcon2.Size = new System.Drawing.Size(38, 40);
             this.picBoxIcon2.TabIndex = 1;
             this.picBoxIcon2.TabStop = false;
             this.picBoxIcon2.Visible = false;
@@ -430,7 +433,7 @@
             this.picBoxIcon1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBoxIcon1.Location = new System.Drawing.Point(15, 13);
             this.picBoxIcon1.Name = "picBoxIcon1";
-            this.picBoxIcon1.Size = new System.Drawing.Size(40, 40);
+            this.picBoxIcon1.Size = new System.Drawing.Size(38, 40);
             this.picBoxIcon1.TabIndex = 2;
             this.picBoxIcon1.TabStop = false;
             this.picBoxIcon1.Visible = false;
@@ -501,11 +504,41 @@
             this.alblLinkProSite.TabIndex = 0;
             this.alblLinkProSite.Text = "Por acaso está interessado(a) em \r\nícones desenvolvidos pela nossa equipe?";
             // 
+            // pnlBlocked1
+            // 
+            this.pnlBlocked1.BackColor = System.Drawing.Color.Red;
+            this.pnlBlocked1.Location = new System.Drawing.Point(179, 142);
+            this.pnlBlocked1.Name = "pnlBlocked1";
+            this.pnlBlocked1.Size = new System.Drawing.Size(368, 10);
+            this.pnlBlocked1.TabIndex = 17;
+            this.pnlBlocked1.Visible = false;
+            // 
+            // pnlBlocked3
+            // 
+            this.pnlBlocked3.BackColor = System.Drawing.Color.Red;
+            this.pnlBlocked3.Location = new System.Drawing.Point(179, 504);
+            this.pnlBlocked3.Name = "pnlBlocked3";
+            this.pnlBlocked3.Size = new System.Drawing.Size(368, 10);
+            this.pnlBlocked3.TabIndex = 18;
+            this.pnlBlocked3.Visible = false;
+            // 
+            // pnlBlocked2
+            // 
+            this.pnlBlocked2.BackColor = System.Drawing.Color.Red;
+            this.pnlBlocked2.Location = new System.Drawing.Point(179, 291);
+            this.pnlBlocked2.Name = "pnlBlocked2";
+            this.pnlBlocked2.Size = new System.Drawing.Size(368, 10);
+            this.pnlBlocked2.TabIndex = 18;
+            this.pnlBlocked2.Visible = false;
+            // 
             // KeycapTextIconModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1183, 654);
+            this.Controls.Add(this.pnlBlocked2);
+            this.Controls.Add(this.pnlBlocked3);
+            this.Controls.Add(this.pnlBlocked1);
             this.Controls.Add(this.lnklblEsqueceuSenha);
             this.Controls.Add(this.btnNewIcon);
             this.Controls.Add(this.apnlLayoutDivisor);
@@ -542,6 +575,9 @@
             this.Controls.SetChildIndex(this.apnlLayoutDivisor, 0);
             this.Controls.SetChildIndex(this.btnNewIcon, 0);
             this.Controls.SetChildIndex(this.lnklblEsqueceuSenha, 0);
+            this.Controls.SetChildIndex(this.pnlBlocked1, 0);
+            this.Controls.SetChildIndex(this.pnlBlocked3, 0);
+            this.Controls.SetChildIndex(this.pnlBlocked2, 0);
             this.apnlTextbox1.ResumeLayout(false);
             this.apnlTextbox1.PerformLayout();
             this.apnlTextbox2.ResumeLayout(false);
@@ -598,5 +634,8 @@
         private System.Windows.Forms.LinkLabel lnklblEsqueceuSenha;
         private System.Windows.Forms.Label alblLinkProSite;
         private System.Windows.Forms.Panel pnlBtnIconChosen;
+        private System.Windows.Forms.Panel pnlBlocked1;
+        private System.Windows.Forms.Panel pnlBlocked3;
+        private System.Windows.Forms.Panel pnlBlocked2;
     }
 }
