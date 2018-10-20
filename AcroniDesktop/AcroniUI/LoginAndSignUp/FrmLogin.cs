@@ -20,8 +20,6 @@ namespace AcroniUI.LoginAndSignUp
         public FrmLogin()
         {
             InitializeComponent();
-            apnlEsquerdo.BackgroundImage = null;
-            apnlEsquerdo.BackColor = Color.FromArgb(0, 147, 255);
         }
 
         #region Ações dos botões do menuStrip
@@ -104,31 +102,6 @@ namespace AcroniUI.LoginAndSignUp
         #endregion
 
         #region Timers
-        private void TimerSlide_Tick(object sender, EventArgs e)
-        {
-            pnlCadastro.Parent.Invalidate();
-            if (pnlCadastro.Tag.ToString().Equals("Closed"))
-            {
-                pnlCadastro.Location = new Point(pnlCadastro.Location.X - 20, 0);
-                apnlEsquerdo.Location = new Point(apnlEsquerdo.Location.X - 20, 0);
-                if (pnlCadastro.Location.X < 0)
-                {
-                    TimerSlide.Stop();
-                    pnlCadastro.Tag = "Open";
-                }
-            }
-            else if (pnlCadastro.Tag.ToString().Equals("Open"))
-            {
-                pnlCadastro.Location = new Point(pnlCadastro.Location.X + 20, 0);
-                apnlEsquerdo.Location = new Point(apnlEsquerdo.Location.X + 20, 0);
-                pnlLogoCad.Location = new Point(490, 0);
-                if (pnlCadastro.Location.X > 790)
-                {
-                    TimerSlide.Stop();
-                    pnlCadastro.Tag = "Closed";
-                }
-            }
-        }
 
         private void btnMinimize_Click(object sender, EventArgs e)
         {
@@ -388,12 +361,26 @@ namespace AcroniUI.LoginAndSignUp
         }
 
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private async void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             AcceptButton = btnEntrar;
-            if (pnlCadastro.Tag.Equals("Open"))
+            if (pnlCadastro.Tag.Equals("Closed"))
             {
-                TimerSlide.Start();
+                pnlCadastro.BringToFront();
+                pnlLogin.Hide();
+                while (pnlCadastro.Location.X != 0)
+                {
+                    pnlCadastro.Location = new Point(pnlCadastro.Location.X - 20, 0);
+                    await Task.Delay(15);
+                }
+
+                    pnlCadastro.Tag = "Open";
+            }
+            else if (pnlCadastro.Tag.ToString().Equals("Open"))
+            {
+                pnlCadastro.Location = new Point(800, 0);
+                pnlCadastro.Tag = "Closed";
+                pnlLogin.BringToFront();
             }
         }
 

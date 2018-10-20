@@ -148,7 +148,9 @@ namespace AcroniUI.Custom
         {
             GenerateDarkScreenshot();
             kpm.StartPosition = FormStartPosition.CenterScreen;
-            kpm.FadeIn();
+            //kpm
+               
+            //    ();
             kpm.ShowDialog(this);
             if (kpm.DialogResult == DialogResult.OK || kpm.DialogResult == DialogResult.Cancel)
                 DisposePanel();
