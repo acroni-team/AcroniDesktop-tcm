@@ -47,7 +47,6 @@
             this.btnDesconectar = new System.Windows.Forms.Button();
             this.btnQuemSomos = new System.Windows.Forms.Button();
             this.btnFaleConosco = new System.Windows.Forms.Button();
-            this.btnCustomizarPorCodigo = new System.Windows.Forms.Button();
             this.btnSelectKeyboard = new System.Windows.Forms.Button();
             this.btnAbrirGaleria = new System.Windows.Forms.Button();
             this.pnlAreaUsu.SuspendLayout();
@@ -215,7 +214,6 @@
             this.pnlOptions.Controls.Add(this.btnDesconectar);
             this.pnlOptions.Controls.Add(this.btnQuemSomos);
             this.pnlOptions.Controls.Add(this.btnFaleConosco);
-            this.pnlOptions.Controls.Add(this.btnCustomizarPorCodigo);
             this.pnlOptions.Controls.Add(this.btnSelectKeyboard);
             this.pnlOptions.Controls.Add(this.btnAbrirGaleria);
             this.pnlOptions.Location = new System.Drawing.Point(0, 239);
@@ -231,7 +229,7 @@
             this.btnDesconectar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDesconectar.Font = new System.Drawing.Font("Open Sans SemiBold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDesconectar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnDesconectar.Location = new System.Drawing.Point(38, 316);
+            this.btnDesconectar.Location = new System.Drawing.Point(42, 351);
             this.btnDesconectar.Name = "btnDesconectar";
             this.btnDesconectar.Size = new System.Drawing.Size(235, 38);
             this.btnDesconectar.TabIndex = 5;
@@ -248,7 +246,7 @@
             this.btnQuemSomos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuemSomos.Font = new System.Drawing.Font("Open Sans SemiBold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuemSomos.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnQuemSomos.Location = new System.Drawing.Point(38, 263);
+            this.btnQuemSomos.Location = new System.Drawing.Point(42, 284);
             this.btnQuemSomos.Name = "btnQuemSomos";
             this.btnQuemSomos.Size = new System.Drawing.Size(235, 38);
             this.btnQuemSomos.TabIndex = 4;
@@ -264,29 +262,13 @@
             this.btnFaleConosco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFaleConosco.Font = new System.Drawing.Font("Open Sans SemiBold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFaleConosco.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnFaleConosco.Location = new System.Drawing.Point(38, 213);
+            this.btnFaleConosco.Location = new System.Drawing.Point(42, 218);
             this.btnFaleConosco.Name = "btnFaleConosco";
             this.btnFaleConosco.Size = new System.Drawing.Size(235, 38);
             this.btnFaleConosco.TabIndex = 3;
             this.btnFaleConosco.Text = "Fale conosco";
             this.btnFaleConosco.UseVisualStyleBackColor = true;
             this.btnFaleConosco.MouseEnter += new System.EventHandler(this.CursorHand);
-            // 
-            // btnCustomizarPorCodigo
-            // 
-            this.btnCustomizarPorCodigo.FlatAppearance.BorderSize = 0;
-            this.btnCustomizarPorCodigo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
-            this.btnCustomizarPorCodigo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
-            this.btnCustomizarPorCodigo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCustomizarPorCodigo.Font = new System.Drawing.Font("Open Sans SemiBold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCustomizarPorCodigo.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnCustomizarPorCodigo.Location = new System.Drawing.Point(38, 160);
-            this.btnCustomizarPorCodigo.Name = "btnCustomizarPorCodigo";
-            this.btnCustomizarPorCodigo.Size = new System.Drawing.Size(235, 38);
-            this.btnCustomizarPorCodigo.TabIndex = 2;
-            this.btnCustomizarPorCodigo.Text = "Customizar por código";
-            this.btnCustomizarPorCodigo.UseVisualStyleBackColor = true;
-            this.btnCustomizarPorCodigo.MouseEnter += new System.EventHandler(this.CursorHand);
             // 
             // btnSelectKeyboard
             // 
@@ -296,7 +278,7 @@
             this.btnSelectKeyboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSelectKeyboard.Font = new System.Drawing.Font("Open Sans SemiBold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSelectKeyboard.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnSelectKeyboard.Location = new System.Drawing.Point(38, 107);
+            this.btnSelectKeyboard.Location = new System.Drawing.Point(42, 143);
             this.btnSelectKeyboard.Name = "btnSelectKeyboard";
             this.btnSelectKeyboard.Size = new System.Drawing.Size(235, 38);
             this.btnSelectKeyboard.TabIndex = 1;
@@ -313,7 +295,7 @@
             this.btnAbrirGaleria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAbrirGaleria.Font = new System.Drawing.Font("Open Sans SemiBold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAbrirGaleria.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnAbrirGaleria.Location = new System.Drawing.Point(38, 54);
+            this.btnAbrirGaleria.Location = new System.Drawing.Point(42, 70);
             this.btnAbrirGaleria.Name = "btnAbrirGaleria";
             this.btnAbrirGaleria.Size = new System.Drawing.Size(235, 38);
             this.btnAbrirGaleria.TabIndex = 0;
@@ -332,7 +314,6 @@
             this.Controls.Add(this.pnlAreaUsu);
             this.Name = "TemplateMenu";
             this.Opacity = 1D;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Controls.SetChildIndex(this.pnlAreaUsu, 0);
             this.Controls.SetChildIndex(this.pnlOptions, 0);
             this.Controls.SetChildIndex(this.pnlStripAjuda, 0);
@@ -355,7 +336,6 @@
         private System.Windows.Forms.Button btnDesconectar;
         private System.Windows.Forms.Button btnQuemSomos;
         private System.Windows.Forms.Button btnFaleConosco;
-        private System.Windows.Forms.Button btnCustomizarPorCodigo;
         private System.Windows.Forms.Button btnSelectKeyboard;
         private System.Windows.Forms.Label lblQtdGasta;
         private System.Windows.Forms.Panel espacoArmazenamento;

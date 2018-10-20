@@ -84,21 +84,26 @@
             // 
             this.txtUserInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(47)))), ((int)(((byte)(56)))));
             this.txtUserInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUserInput.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserInput.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUserInput.Font = new System.Drawing.Font("Open Sans", 11.25F);
+            this.txtUserInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
             this.txtUserInput.Location = new System.Drawing.Point(0, 19);
             this.txtUserInput.Name = "txtUserInput";
-            this.txtUserInput.Size = new System.Drawing.Size(365, 22);
+            this.txtUserInput.Size = new System.Drawing.Size(365, 21);
             this.txtUserInput.TabIndex = 2;
             this.txtUserInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtUserInput.MouseMove += new System.Windows.Forms.MouseEventHandler(this.txtUserInput_MouseMove);
             // 
             // apnlTextbox
             // 
             this.apnlTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(47)))), ((int)(((byte)(56)))));
             this.apnlTextbox.Controls.Add(this.txtUserInput);
+            this.apnlTextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.apnlTextbox.Location = new System.Drawing.Point(167, 190);
             this.apnlTextbox.Name = "apnlTextbox";
             this.apnlTextbox.Size = new System.Drawing.Size(365, 60);
             this.apnlTextbox.TabIndex = 3;
+            this.apnlTextbox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.txtUserInput_MouseMove);
             // 
             // btnEnviar
             // 

@@ -60,5 +60,11 @@ namespace AcroniControls
             Button b = (Button)sender;
             b.BackgroundImage = global::AcroniControls.Properties.Resources.fundo_botao;
         }
+
+        private void txtUserInput_MouseMove(object sender, MouseEventArgs e)
+        {
+            txtUserInput.BackColor = Color.FromArgb(38, 41, 45);
+            apnlTextbox.BackColor = Color.FromArgb(38, 41, 45);
+        }
     }
 }

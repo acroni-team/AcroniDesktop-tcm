@@ -28,7 +28,6 @@ namespace AcroniUI
         {
             InitializeComponent();
 
-            this.pnlScroll.AutoScroll = true;
             WelcomeUser();
             this.selectMode = selectMode;
 
@@ -43,17 +42,8 @@ namespace AcroniUI
             }
 
             //Para pegar as imagens
-            Share.ResourcesImage.Add(Image.FromFile(Application.StartupPath + "\\" + "icon.png"));
-            Share.ResourcesImage.Add(Image.FromFile(Application.StartupPath + "\\" + "icon2.png"));
-
-            #region Aplicar redondinho
-
-
-            Bunifu.Framework.UI.BunifuElipse ellipse = new Bunifu.Framework.UI.BunifuElipse();
-            ellipse.ApplyElipse(btnAdicionarGaleria, 4);
-
-
-            #endregion
+            Share.ResourcesImage.Add(Image.FromFile(Application.StartupPath + "\\" + "pen.png"));
+            Share.ResourcesImage.Add(Image.FromFile(Application.StartupPath + "\\" + "trash.png"));
 
             LoadCollections();
 
@@ -75,6 +65,7 @@ namespace AcroniUI
 
             #endregion
         }
+
         public void WelcomeUser() => lblNomeUsuBoasVindas.Text = SQLConnection.nome_usuario + "!";
 
         #region Carregar Coleções
@@ -98,6 +89,9 @@ namespace AcroniUI
 
             try
             {
+                if (countCollections != 0)
+                    pnlScroll.BackgroundImage = null;
+
                 foreach (Collection userCollection in Share.User.UserCollections)
                 {
                     foreach (Keyboard k in userCollection.Keyboards)
@@ -351,6 +345,21 @@ namespace AcroniUI
             }
 
             isSelectColorOpen = false;
+        }
+
+        private async void btnAdicionarGaleria_MouseEnter(object sender, EventArgs e)
+        {
+            await Task.Delay(50);
+            btnAdicionarGaleria.Size = new Size(btnAdicionarGaleria.Size.Width + 10, btnAdicionarGaleria.Size.Height + 10);
+            btnAdicionarGaleria.Location = new Point(btnAdicionarGaleria.Location.X - (10 / 2), btnAdicionarGaleria.Location.Y - (10 / 2));
+
+        }
+
+        private async void btnAdicionarGaleria_MouseLeave(object sender, EventArgs e)
+        {
+            await Task.Delay(50);
+            btnAdicionarGaleria.Size = new Size(btnAdicionarGaleria.Size.Width - 10, btnAdicionarGaleria.Size.Height - 10);
+            btnAdicionarGaleria.Location = new Point(btnAdicionarGaleria.Location.X + (10 / 2), btnAdicionarGaleria.Location.Y + (10 / 2));
         }
     }
 }

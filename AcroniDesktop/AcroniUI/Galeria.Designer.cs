@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label1 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Galeria));
             this.lblBoasVindas = new System.Windows.Forms.Label();
             this.lblNomeUsuBoasVindas = new System.Windows.Forms.Label();
             this.lblSavedCollections1 = new System.Windows.Forms.Label();
@@ -41,20 +41,12 @@
             this.eBtnAdicionarGaleria = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(744, 89);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
-            this.label1.TabIndex = 15;
-            // 
             // lblBoasVindas
             // 
             this.lblBoasVindas.AutoSize = true;
             this.lblBoasVindas.Font = new System.Drawing.Font("Open Sans SemiBold", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBoasVindas.ForeColor = System.Drawing.Color.White;
-            this.lblBoasVindas.Location = new System.Drawing.Point(615, 68);
+            this.lblBoasVindas.Location = new System.Drawing.Point(713, 63);
             this.lblBoasVindas.Name = "lblBoasVindas";
             this.lblBoasVindas.Size = new System.Drawing.Size(183, 30);
             this.lblBoasVindas.TabIndex = 14;
@@ -65,7 +57,7 @@
             this.lblNomeUsuBoasVindas.AutoSize = true;
             this.lblNomeUsuBoasVindas.Font = new System.Drawing.Font("Open Sans ExtraBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomeUsuBoasVindas.ForeColor = System.Drawing.Color.White;
-            this.lblNomeUsuBoasVindas.Location = new System.Drawing.Point(790, 69);
+            this.lblNomeUsuBoasVindas.Location = new System.Drawing.Point(888, 64);
             this.lblNomeUsuBoasVindas.Name = "lblNomeUsuBoasVindas";
             this.lblNomeUsuBoasVindas.Size = new System.Drawing.Size(45, 28);
             this.lblNomeUsuBoasVindas.TabIndex = 16;
@@ -98,7 +90,7 @@
             this.lblCollectionsQuantity.AutoSize = true;
             this.lblCollectionsQuantity.Font = new System.Drawing.Font("Open Sans ExtraBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCollectionsQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(80)))), ((int)(((byte)(85)))));
-            this.lblCollectionsQuantity.Location = new System.Drawing.Point(792, 104);
+            this.lblCollectionsQuantity.Location = new System.Drawing.Point(793, 104);
             this.lblCollectionsQuantity.Name = "lblCollectionsQuantity";
             this.lblCollectionsQuantity.Size = new System.Drawing.Size(24, 27);
             this.lblCollectionsQuantity.TabIndex = 19;
@@ -106,6 +98,9 @@
             // 
             // pnlScroll
             // 
+            this.pnlScroll.AutoScroll = true;
+            this.pnlScroll.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlScroll.BackgroundImage")));
+            this.pnlScroll.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pnlScroll.Location = new System.Drawing.Point(326, 190);
             this.pnlScroll.Name = "pnlScroll";
             this.pnlScroll.Size = new System.Drawing.Size(953, 504);
@@ -125,23 +120,26 @@
             // 
             // btnAdicionarGaleria
             // 
-            this.btnAdicionarGaleria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
+            this.btnAdicionarGaleria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(46)))), ((int)(((byte)(47)))));
+            this.btnAdicionarGaleria.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdicionarGaleria.BackgroundImage")));
+            this.btnAdicionarGaleria.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAdicionarGaleria.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdicionarGaleria.FlatAppearance.BorderSize = 0;
-            this.btnAdicionarGaleria.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(122)))), ((int)(((byte)(124)))));
-            this.btnAdicionarGaleria.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(122)))), ((int)(((byte)(124)))));
+            this.btnAdicionarGaleria.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(46)))), ((int)(((byte)(47)))));
+            this.btnAdicionarGaleria.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(46)))), ((int)(((byte)(47)))));
             this.btnAdicionarGaleria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdicionarGaleria.Font = new System.Drawing.Font("Qanelas ExtraBold", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdicionarGaleria.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAdicionarGaleria.Location = new System.Drawing.Point(343, 149);
+            this.btnAdicionarGaleria.Location = new System.Drawing.Point(347, 139);
             this.btnAdicionarGaleria.Margin = new System.Windows.Forms.Padding(0);
             this.btnAdicionarGaleria.Name = "btnAdicionarGaleria";
-            this.btnAdicionarGaleria.Size = new System.Drawing.Size(35, 35);
+            this.btnAdicionarGaleria.Size = new System.Drawing.Size(42, 40);
             this.btnAdicionarGaleria.TabIndex = 23;
-            this.btnAdicionarGaleria.Text = "+";
             this.btnAdicionarGaleria.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btnAdicionarGaleria.UseVisualStyleBackColor = false;
             this.btnAdicionarGaleria.Click += new System.EventHandler(this.btnAdicionarGaleria_Click);
+            this.btnAdicionarGaleria.MouseEnter += new System.EventHandler(this.btnAdicionarGaleria_MouseEnter);
+            this.btnAdicionarGaleria.MouseLeave += new System.EventHandler(this.btnAdicionarGaleria_MouseLeave);
             // 
             // eBtnAdicionarGaleria
             // 
@@ -160,14 +158,12 @@
             this.Controls.Add(this.lblColecoesSalvas2);
             this.Controls.Add(this.lblSavedCollections1);
             this.Controls.Add(this.lblNomeUsuBoasVindas);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblBoasVindas);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "Galeria";
             this.Text = "Galeria";
             this.Controls.SetChildIndex(this.pnlStripAjuda, 0);
             this.Controls.SetChildIndex(this.lblBoasVindas, 0);
-            this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.lblNomeUsuBoasVindas, 0);
             this.Controls.SetChildIndex(this.lblSavedCollections1, 0);
             this.Controls.SetChildIndex(this.lblColecoesSalvas2, 0);
@@ -181,7 +177,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblBoasVindas;
         private System.Windows.Forms.Label lblNomeUsuBoasVindas;
         private System.Windows.Forms.Label lblSavedCollections1;

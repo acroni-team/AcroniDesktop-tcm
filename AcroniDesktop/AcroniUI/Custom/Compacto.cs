@@ -24,6 +24,8 @@ namespace AcroniUI.Custom
         // Definição do botão de teclado genérico (kbtn)
         Label keybutton = new Label();
 
+        System.ComponentModel.ComponentResourceManager resource = new System.ComponentModel.ComponentResourceManager(typeof(Compacto));
+
         // Definição das propriedades de salvamento
         //private bool SetKeyboardProperties;
         Keyboard keyboard = new Keyboard();
@@ -49,7 +51,10 @@ namespace AcroniUI.Custom
         //Ao clicar num botão do teclado
         private void kbtn_Click(object sender, EventArgs e)
         {
-            keybutton = (Label)sender;
+            if (sender is Label)
+                keybutton = (Label)sender;
+            if (sender is Kbtn)
+                keybutton = (Kbtn)sender;
 
             if (btnStyleFontColor.Tag.Equals("true"))
                 keybutton.ForeColor = FontColor;
@@ -57,8 +62,18 @@ namespace AcroniUI.Custom
             else
             {
                 keybutton.BackColor = Color;
-                keybutton.Parent.BackColor = Color.FromArgb(90, keybutton.BackColor);
+                if (Color != Color.FromArgb(26, 26, 26))
+                {
+                    if(keybutton == Cb14sExtensao || keybutton == Cb14s)
+
+                    keybutton.Parent.BackgroundImage = null;
+                    keybutton.Parent.BackColor = Color.FromArgb(90, keybutton.BackColor);
+                }
+                else
+                    keybutton.Parent.BackgroundImage = global::AcroniUI.Properties.Resources.keycapbackgrounddefault;
+                
             }
+
             if(isUpperSelected)
             {
                 if (isLeftSelected)
@@ -718,10 +733,10 @@ namespace AcroniUI.Custom
             //else
             //    MessageBox.Show("Não fez");
         }
+
+
+
         #endregion
-
-
-       
 
         private void lblUpperBottom_Click(object sender, EventArgs e)
         {

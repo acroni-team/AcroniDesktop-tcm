@@ -239,6 +239,7 @@
     <Content Include="Images\compacto.png" />
     <Content Include="Images\fullsize.png" />
     <Content Include="Images\icons8-eye-30-white.png" />
+    <None Include="Images\keycapbackgrounddefault.png" />
     <Content Include="Images\logo.svg" />
     <Content Include="Images\slogo.png" />
     <Content Include="Images\tenkeyless.png" />

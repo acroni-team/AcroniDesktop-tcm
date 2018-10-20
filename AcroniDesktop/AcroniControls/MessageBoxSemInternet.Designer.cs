@@ -34,7 +34,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnEntendi = new System.Windows.Forms.PictureBox();
-            this.lblEntendi = new System.Windows.Forms.Label();
             this.btnOnClick = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -76,9 +75,9 @@
             // 
             this.label2.Font = new System.Drawing.Font("Open Sans SemiBold", 12.25F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(80, 317);
+            this.label2.Location = new System.Drawing.Point(60, 320);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(270, 116);
+            this.label2.Size = new System.Drawing.Size(319, 91);
             this.label2.TabIndex = 2;
             this.label2.Text = "A gente não conseguiu detectar nenhuma conexão com a internet. Se já estiver cone" +
     "ctado, tente de novo. ";
@@ -88,26 +87,13 @@
             // 
             this.btnEntendi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEntendi.Image = ((System.Drawing.Image)(resources.GetObject("btnEntendi.Image")));
-            this.btnEntendi.Location = new System.Drawing.Point(115, 436);
+            this.btnEntendi.Location = new System.Drawing.Point(99, 436);
             this.btnEntendi.Name = "btnEntendi";
-            this.btnEntendi.Size = new System.Drawing.Size(200, 60);
+            this.btnEntendi.Size = new System.Drawing.Size(213, 67);
             this.btnEntendi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnEntendi.TabIndex = 4;
             this.btnEntendi.TabStop = false;
             this.btnEntendi.Click += new System.EventHandler(this.btnEntendi_Click);
-            // 
-            // lblEntendi
-            // 
-            this.lblEntendi.AutoSize = true;
-            this.lblEntendi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(59)))), ((int)(((byte)(60)))));
-            this.lblEntendi.Font = new System.Drawing.Font("Open Sans", 12.25F, System.Drawing.FontStyle.Bold);
-            this.lblEntendi.ForeColor = System.Drawing.Color.White;
-            this.lblEntendi.Location = new System.Drawing.Point(177, 455);
-            this.lblEntendi.Name = "lblEntendi";
-            this.lblEntendi.Size = new System.Drawing.Size(75, 23);
-            this.lblEntendi.TabIndex = 2;
-            this.lblEntendi.Text = "Entendi";
-            this.lblEntendi.Click += new System.EventHandler(this.lblEntendi_Click);
             // 
             // btnOnClick
             // 
@@ -124,7 +110,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(54)))), ((int)(((byte)(63)))));
             this.ClientSize = new System.Drawing.Size(430, 527);
             this.Controls.Add(this.btnOnClick);
-            this.Controls.Add(this.lblEntendi);
             this.Controls.Add(this.btnEntendi);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
@@ -137,7 +122,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEntendi)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -148,7 +132,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox btnEntendi;
-        private System.Windows.Forms.Label lblEntendi;
         private System.Windows.Forms.Button btnOnClick;
     }
 }
