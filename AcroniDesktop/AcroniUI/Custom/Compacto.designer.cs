@@ -2306,7 +2306,7 @@ namespace AcroniUI.Custom
             this.lblCb11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.lblCb11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCb11.Font = new System.Drawing.Font("Open Sans", 12F);
-            this.lblCb11.Location = new System.Drawing.Point(7, 5);
+            this.lblCb11.Location = new System.Drawing.Point(9, 5);
             this.lblCb11.Name = "lblCb11";
             this.lblCb11.Size = new System.Drawing.Size(38, 39);
             this.lblCb11.TabIndex = 90;
