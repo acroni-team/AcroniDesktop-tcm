@@ -109,24 +109,20 @@ namespace AcroniUI.LoginAndSignUp
             pnlCadastro.Parent.Invalidate();
             if (pnlCadastro.Tag.ToString().Equals("Closed"))
             {
-                TimerSlide.Interval = 10;
-                pnlCadastro.Location = new Point(pnlCadastro.Location.X - 10, 0);
-                apnlEsquerdo.Location = new Point(apnlEsquerdo.Location.X - 10, 0);
-                pnlLogoCad.Location = new Point(-15, 0);
-                if (pnlCadastro.Location.X == 0)
+                pnlCadastro.Location = new Point(pnlCadastro.Location.X - 20, 0);
+                apnlEsquerdo.Location = new Point(apnlEsquerdo.Location.X - 20, 0);
+                if (pnlCadastro.Location.X < 0)
                 {
                     TimerSlide.Stop();
                     pnlCadastro.Tag = "Open";
-
                 }
             }
             else if (pnlCadastro.Tag.ToString().Equals("Open"))
             {
-                TimerSlide.Interval = 1;
-                pnlCadastro.Location = new Point(pnlCadastro.Location.X + 10, 0);
-                apnlEsquerdo.Location = new Point(apnlEsquerdo.Location.X + 10, 0);
+                pnlCadastro.Location = new Point(pnlCadastro.Location.X + 20, 0);
+                apnlEsquerdo.Location = new Point(apnlEsquerdo.Location.X + 20, 0);
                 pnlLogoCad.Location = new Point(490, 0);
-                if (pnlCadastro.Location.X == 790)
+                if (pnlCadastro.Location.X > 790)
                 {
                     TimerSlide.Stop();
                     pnlCadastro.Tag = "Closed";
@@ -396,7 +392,9 @@ namespace AcroniUI.LoginAndSignUp
         {
             AcceptButton = btnEntrar;
             if (pnlCadastro.Tag.Equals("Open"))
+            {
                 TimerSlide.Start();
+            }
         }
 
         private void OnLeaveValidation(object sender, EventArgs e)
