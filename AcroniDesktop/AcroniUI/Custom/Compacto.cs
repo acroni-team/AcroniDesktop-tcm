@@ -48,7 +48,7 @@ namespace AcroniUI.Custom
         //Ao clicar num botão do teclado
         private void kbtn_Click(object sender, EventArgs e)
         {
-            keybutton = (Label)sender; 
+            keybutton = (Label)sender;
 
             if (btnStyleFontColor.Tag.Equals("true"))
                 keybutton.ForeColor = FontColor;
@@ -59,16 +59,27 @@ namespace AcroniUI.Custom
 
                 if (Color != Color.FromArgb(26, 26, 26))
                 {
+                    //if (keybutton == Cb14sExtensao || keybutton == Cb14s)
+                    //{
+                    //    Cb14s.Parent.BackgroundImage = null;
+                    //    Cb14sExtensao.Parent.BackgroundImage = null;
+                    //}
+
+                    //else 
+                    //{
+                    //    keybutton.Parent.BackgroundImage = null;
+                    //    keybutton.Parent.BackColor = Color.FromArgb(90, keybutton.BackColor);
+                    //}
+
                     keybutton.Parent.BackgroundImage = null;
                     keybutton.Parent.BackColor = Color.FromArgb(90, keybutton.BackColor);
                 }
 
                 else
                     keybutton.Parent.BackgroundImage = global::AcroniUI.Properties.Resources.keycapbackgrounddefault;
-                
             }
 
-            if(isUpperSelected)
+            if (isUpperSelected)
             {
                 if (isLeftSelected)
                     keybutton.TextAlign = ContentAlignment.TopLeft;
@@ -77,6 +88,7 @@ namespace AcroniUI.Custom
                 if (isRightSelected)
                     keybutton.TextAlign = ContentAlignment.TopRight;
             }
+
             if (isBottomSelected)
             {
                 if (isLeftSelected)
@@ -92,44 +104,26 @@ namespace AcroniUI.Custom
             {
                 KeycapTextIconModule ktm;
                 if (keybutton.Name.Contains("Ca"))
-                    ktm = new KeycapTextIconModule(true);
-                else 
                     ktm = new KeycapTextIconModule(false);
+                else 
+                    ktm = new KeycapTextIconModule(true);
                 OpenModule(ktm);
                 if (ktm.DialogResult == DialogResult.OK)
                 {
-                    //if (!string.IsNullOrEmpty(keycapTextModule.Uppertext))
-                    //    keybutton.Uppertext = keycapTextModule.Uppertext;
-                    //else
-                    //    keybutton.Text = keybutton.Text;
-
-                    //if (!string.IsNullOrEmpty(keycapTextModule.BottomText))
-                    //if (keybutton = Ca14s
-                    //    keybutton.BottomText = keycapTextModule.BottomText;
-                    //else
-                    //    keybutton.Text = keybutton.Text;
 
                     if (!string.IsNullOrEmpty(ktm.Maintext) || !string.IsNullOrEmpty(ktm.Uppertext) || !string.IsNullOrEmpty(ktm.Bottomtext))
                     {
                         if (keybutton.Name.Contains("Ca"))
-                            keybutton.Text = ktm.Uppertext + ktm.Bottomtext;
+                            keybutton.Text = $"{ktm.Uppertext}\n{ktm.Maintext} {ktm.Bottomtext}";
                         else
                             keybutton.Text = ktm.Maintext;
                     }
                 }
+
                 if (KeycapTextIconModule.HasChosenAIcon)
                 {
                     keybutton.Image = ktm.SelectedIcon;
                 }
-            }
-                
-
-            
-
-            if (btnOpenModuleBackground.Tag.Equals("true"))
-            {
-                KeycapBackgroundModule kbm = new KeycapBackgroundModule();
-                OpenModule(kbm);
             }
 
             if (btnOpenModuleSwitch.Tag.Equals("true"))
@@ -495,7 +489,8 @@ namespace AcroniUI.Custom
 
         private void btnOpenModuleBackground_Click(object sender, EventArgs e)
         {
-            ApplyColorToModuleButton(btnOpenModuleBackground, true);
+            KeycapBackgroundModule kbm = new KeycapBackgroundModule();
+            OpenModule(kbm);
         }
 
         private void btnOpenModuleTexture_Click(object sender, EventArgs e)
@@ -731,6 +726,11 @@ namespace AcroniUI.Custom
 
 
         #endregion
+
+        private void btnStyle_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void lblUpperBottom_Click(object sender, EventArgs e)
         {

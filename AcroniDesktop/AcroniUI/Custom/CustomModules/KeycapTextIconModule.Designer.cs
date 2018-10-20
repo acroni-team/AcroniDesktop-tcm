@@ -64,7 +64,6 @@
             this.alblLinkProSite = new System.Windows.Forms.Label();
             this.pnlBlocked1 = new System.Windows.Forms.Panel();
             this.pnlBlocked3 = new System.Windows.Forms.Panel();
-            this.pnlBlocked2 = new System.Windows.Forms.Panel();
             this.apnlTextbox1.SuspendLayout();
             this.apnlTextbox2.SuspendLayout();
             this.apnlTextbox3.SuspendLayout();
@@ -154,7 +153,7 @@
             // 
             this.apnlTextbox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(45)))));
             this.apnlTextbox2.Controls.Add(this.txt2);
-            this.apnlTextbox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.apnlTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.apnlTextbox2.Location = new System.Drawing.Point(201, 269);
             this.apnlTextbox2.Name = "apnlTextbox2";
             this.apnlTextbox2.Padding = new System.Windows.Forms.Padding(5);
@@ -166,7 +165,7 @@
             this.txt2.AccessibleDescription = "";
             this.txt2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(45)))));
             this.txt2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txt2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt2.Font = new System.Drawing.Font("Open Sans", 11.25F);
             this.txt2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
             this.txt2.Location = new System.Drawing.Point(0, 14);
@@ -190,7 +189,7 @@
             // 
             this.apnlTextbox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(45)))));
             this.apnlTextbox3.Controls.Add(this.txt3);
-            this.apnlTextbox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.apnlTextbox3.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.apnlTextbox3.Location = new System.Drawing.Point(196, 484);
             this.apnlTextbox3.Name = "apnlTextbox3";
             this.apnlTextbox3.Padding = new System.Windows.Forms.Padding(5);
@@ -202,7 +201,7 @@
             this.txt3.AccessibleDescription = "";
             this.txt3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(45)))));
             this.txt3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txt3.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt3.Font = new System.Drawing.Font("Open Sans", 11.25F);
             this.txt3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
             this.txt3.Location = new System.Drawing.Point(0, 14);
@@ -496,6 +495,7 @@
             // alblLinkProSite
             // 
             this.alblLinkProSite.AutoSize = true;
+            this.alblLinkProSite.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.alblLinkProSite.Font = new System.Drawing.Font("Open Sans", 9.75F);
             this.alblLinkProSite.ForeColor = System.Drawing.Color.DimGray;
             this.alblLinkProSite.Location = new System.Drawing.Point(724, 351);
@@ -522,21 +522,11 @@
             this.pnlBlocked3.TabIndex = 18;
             this.pnlBlocked3.Visible = false;
             // 
-            // pnlBlocked2
-            // 
-            this.pnlBlocked2.BackColor = System.Drawing.Color.Red;
-            this.pnlBlocked2.Location = new System.Drawing.Point(179, 291);
-            this.pnlBlocked2.Name = "pnlBlocked2";
-            this.pnlBlocked2.Size = new System.Drawing.Size(368, 10);
-            this.pnlBlocked2.TabIndex = 18;
-            this.pnlBlocked2.Visible = false;
-            // 
             // KeycapTextIconModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1183, 654);
-            this.Controls.Add(this.pnlBlocked2);
             this.Controls.Add(this.pnlBlocked3);
             this.Controls.Add(this.pnlBlocked1);
             this.Controls.Add(this.lnklblEsqueceuSenha);
@@ -577,7 +567,6 @@
             this.Controls.SetChildIndex(this.lnklblEsqueceuSenha, 0);
             this.Controls.SetChildIndex(this.pnlBlocked1, 0);
             this.Controls.SetChildIndex(this.pnlBlocked3, 0);
-            this.Controls.SetChildIndex(this.pnlBlocked2, 0);
             this.apnlTextbox1.ResumeLayout(false);
             this.apnlTextbox1.PerformLayout();
             this.apnlTextbox2.ResumeLayout(false);
@@ -636,6 +625,5 @@
         private System.Windows.Forms.Panel pnlBtnIconChosen;
         private System.Windows.Forms.Panel pnlBlocked1;
         private System.Windows.Forms.Panel pnlBlocked3;
-        private System.Windows.Forms.Panel pnlBlocked2;
     }
 }

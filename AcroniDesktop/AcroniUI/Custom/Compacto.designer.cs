@@ -93,19 +93,19 @@ namespace AcroniUI.Custom
             this.btnHist3 = new System.Windows.Forms.Button();
             this.btnHist2 = new System.Windows.Forms.Button();
             this.btnHist1 = new System.Windows.Forms.Button();
-            this.Azul_Acizentado = new System.Windows.Forms.Button();
-            this.Laranja_Escuro = new System.Windows.Forms.Button();
-            this.Lima = new System.Windows.Forms.Button();
-            this.Verde_Claro = new System.Windows.Forms.Button();
+            this.Verde_claro = new System.Windows.Forms.Button();
+            this.Laranja = new System.Windows.Forms.Button();
+            this.Branco = new System.Windows.Forms.Button();
+            this.Teal = new System.Windows.Forms.Button();
             this.Azul_Claro = new System.Windows.Forms.Button();
             this.Violeta = new System.Windows.Forms.Button();
-            this.Cinza = new System.Windows.Forms.Button();
-            this.Laranja = new System.Windows.Forms.Button();
-            this.Preto = new System.Windows.Forms.Button();
-            this.Amarelo = new System.Windows.Forms.Button();
             this.Marrom = new System.Windows.Forms.Button();
-            this.Azul = new System.Windows.Forms.Button();
             this.Ambar = new System.Windows.Forms.Button();
+            this.Preto = new System.Windows.Forms.Button();
+            this.Lima = new System.Windows.Forms.Button();
+            this.Laranja_Escuro = new System.Windows.Forms.Button();
+            this.Azul = new System.Windows.Forms.Button();
+            this.Amarelo = new System.Windows.Forms.Button();
             this.Verde = new System.Windows.Forms.Button();
             this.Ciano = new System.Windows.Forms.Button();
             this.Roxo = new System.Windows.Forms.Button();
@@ -240,6 +240,7 @@ namespace AcroniUI.Custom
             this.fundoCe5 = new System.Windows.Forms.Panel();
             this.Ce5 = new AcroniControls.Kbtn();
             this.picBoxKeyboardBackground = new System.Windows.Forms.PictureBox();
+            this.ebtnOpenModuleTexture = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnlCustomizingMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignRight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignCenter)).BeginInit();
@@ -507,6 +508,7 @@ namespace AcroniUI.Custom
             this.btnStyleStrikeout.TabIndex = 5;
             this.btnStyleStrikeout.Text = "abc";
             this.btnStyleStrikeout.UseVisualStyleBackColor = false;
+            this.btnStyleStrikeout.Click += new System.EventHandler(this.btnStyle_Click);
             // 
             // btnStyleUnderline
             // 
@@ -524,6 +526,7 @@ namespace AcroniUI.Custom
             this.btnStyleUnderline.TabIndex = 5;
             this.btnStyleUnderline.Text = "S";
             this.btnStyleUnderline.UseVisualStyleBackColor = false;
+            this.btnStyleUnderline.Click += new System.EventHandler(this.btnStyle_Click);
             // 
             // btnStyleItalic
             // 
@@ -541,6 +544,7 @@ namespace AcroniUI.Custom
             this.btnStyleItalic.TabIndex = 5;
             this.btnStyleItalic.Text = "I";
             this.btnStyleItalic.UseVisualStyleBackColor = false;
+            this.btnStyleItalic.Click += new System.EventHandler(this.btnStyle_Click);
             // 
             // btnStyleBold
             // 
@@ -558,6 +562,7 @@ namespace AcroniUI.Custom
             this.btnStyleBold.TabIndex = 5;
             this.btnStyleBold.Text = "N";
             this.btnStyleBold.UseVisualStyleBackColor = false;
+            this.btnStyleBold.Click += new System.EventHandler(this.btnStyle_Click);
             // 
             // btnOpenModuleSwitch
             // 
@@ -569,7 +574,7 @@ namespace AcroniUI.Custom
             this.btnOpenModuleSwitch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpenModuleSwitch.Font = new System.Drawing.Font("Open Sans", 9.25F, System.Drawing.FontStyle.Bold);
             this.btnOpenModuleSwitch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
-            this.btnOpenModuleSwitch.Location = new System.Drawing.Point(11, 35);
+            this.btnOpenModuleSwitch.Location = new System.Drawing.Point(20, 35);
             this.btnOpenModuleSwitch.Name = "btnOpenModuleSwitch";
             this.btnOpenModuleSwitch.Padding = new System.Windows.Forms.Padding(0, 0, 0, 13);
             this.btnOpenModuleSwitch.Size = new System.Drawing.Size(111, 109);
@@ -951,7 +956,7 @@ namespace AcroniUI.Custom
             this.btnOpenModuleTexture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpenModuleTexture.Font = new System.Drawing.Font("Open Sans", 9.25F, System.Drawing.FontStyle.Bold);
             this.btnOpenModuleTexture.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
-            this.btnOpenModuleTexture.Location = new System.Drawing.Point(379, 36);
+            this.btnOpenModuleTexture.Location = new System.Drawing.Point(378, 35);
             this.btnOpenModuleTexture.Name = "btnOpenModuleTexture";
             this.btnOpenModuleTexture.Padding = new System.Windows.Forms.Padding(0, 0, 0, 13);
             this.btnOpenModuleTexture.Size = new System.Drawing.Size(111, 108);
@@ -972,7 +977,7 @@ namespace AcroniUI.Custom
             this.btnOpenModuleBackground.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpenModuleBackground.Font = new System.Drawing.Font("Open Sans", 9.25F, System.Drawing.FontStyle.Bold);
             this.btnOpenModuleBackground.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
-            this.btnOpenModuleBackground.Location = new System.Drawing.Point(250, 35);
+            this.btnOpenModuleBackground.Location = new System.Drawing.Point(259, 35);
             this.btnOpenModuleBackground.Name = "btnOpenModuleBackground";
             this.btnOpenModuleBackground.Padding = new System.Windows.Forms.Padding(0, 0, 0, 13);
             this.btnOpenModuleBackground.Size = new System.Drawing.Size(111, 108);
@@ -993,7 +998,7 @@ namespace AcroniUI.Custom
             this.btnOpenModuleTextIcons.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpenModuleTextIcons.Font = new System.Drawing.Font("Open Sans", 9.25F, System.Drawing.FontStyle.Bold);
             this.btnOpenModuleTextIcons.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
-            this.btnOpenModuleTextIcons.Location = new System.Drawing.Point(131, 35);
+            this.btnOpenModuleTextIcons.Location = new System.Drawing.Point(140, 35);
             this.btnOpenModuleTextIcons.Name = "btnOpenModuleTextIcons";
             this.btnOpenModuleTextIcons.Padding = new System.Windows.Forms.Padding(0, 0, 0, 13);
             this.btnOpenModuleTextIcons.Size = new System.Drawing.Size(111, 109);
@@ -1088,20 +1093,20 @@ namespace AcroniUI.Custom
             this.pnlBodyColorpicker.Controls.Add(this.btnHist3);
             this.pnlBodyColorpicker.Controls.Add(this.btnHist2);
             this.pnlBodyColorpicker.Controls.Add(this.btnHist1);
-            this.pnlBodyColorpicker.Controls.Add(this.Azul_Acizentado);
-            this.pnlBodyColorpicker.Controls.Add(this.Laranja_Escuro);
-            this.pnlBodyColorpicker.Controls.Add(this.Lima);
-            this.pnlBodyColorpicker.Controls.Add(this.Verde_Claro);
+            this.pnlBodyColorpicker.Controls.Add(this.Verde_claro);
+            this.pnlBodyColorpicker.Controls.Add(this.Laranja);
+            this.pnlBodyColorpicker.Controls.Add(this.Branco);
+            this.pnlBodyColorpicker.Controls.Add(this.Teal);
             this.pnlBodyColorpicker.Controls.Add(this.Azul_Claro);
             this.pnlBodyColorpicker.Controls.Add(this.Violeta);
-            this.pnlBodyColorpicker.Controls.Add(this.Cinza);
-            this.pnlBodyColorpicker.Controls.Add(this.Laranja);
-            this.pnlBodyColorpicker.Controls.Add(this.Preto);
-            this.pnlBodyColorpicker.Controls.Add(this.Amarelo);
             this.pnlBodyColorpicker.Controls.Add(this.Marrom);
+            this.pnlBodyColorpicker.Controls.Add(this.Ambar);
+            this.pnlBodyColorpicker.Controls.Add(this.Preto);
+            this.pnlBodyColorpicker.Controls.Add(this.Lima);
+            this.pnlBodyColorpicker.Controls.Add(this.Laranja_Escuro);
             this.pnlBodyColorpicker.Controls.Add(this.Azul);
             this.pnlBodyColorpicker.Controls.Add(this.Rosa);
-            this.pnlBodyColorpicker.Controls.Add(this.Ambar);
+            this.pnlBodyColorpicker.Controls.Add(this.Amarelo);
             this.pnlBodyColorpicker.Controls.Add(this.Verde);
             this.pnlBodyColorpicker.Controls.Add(this.Ciano);
             this.pnlBodyColorpicker.Controls.Add(this.Roxo);
@@ -1168,77 +1173,77 @@ namespace AcroniUI.Custom
             this.btnHist1.Visible = false;
             this.btnHist1.Click += new System.EventHandler(this.btnColor_Click);
             // 
-            // Azul_Acizentado
+            // Verde_claro
             // 
-            this.Azul_Acizentado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(125)))), ((int)(((byte)(139)))));
-            this.Azul_Acizentado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Azul_Acizentado.FlatAppearance.BorderSize = 0;
-            this.Azul_Acizentado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Azul_Acizentado.ForeColor = System.Drawing.Color.Transparent;
-            this.Azul_Acizentado.Location = new System.Drawing.Point(200, 206);
-            this.Azul_Acizentado.Name = "Azul_Acizentado";
-            this.Azul_Acizentado.Size = new System.Drawing.Size(32, 32);
-            this.Azul_Acizentado.TabIndex = 114;
-            this.Azul_Acizentado.Tag = "Azul_Acizentado";
-            this.Azul_Acizentado.UseVisualStyleBackColor = false;
-            this.Azul_Acizentado.Click += new System.EventHandler(this.btnColor_Click);
-            this.Azul_Acizentado.MouseEnter += new System.EventHandler(this.btnColor_MouseEnter);
-            this.Azul_Acizentado.MouseLeave += new System.EventHandler(this.btnColor_MouseLeave);
+            this.Verde_claro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(195)))), ((int)(((byte)(74)))));
+            this.Verde_claro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Verde_claro.FlatAppearance.BorderSize = 0;
+            this.Verde_claro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Verde_claro.ForeColor = System.Drawing.Color.Transparent;
+            this.Verde_claro.Location = new System.Drawing.Point(162, 130);
+            this.Verde_claro.Name = "Verde_claro";
+            this.Verde_claro.Size = new System.Drawing.Size(32, 32);
+            this.Verde_claro.TabIndex = 114;
+            this.Verde_claro.Tag = "Azul_Acizentado";
+            this.Verde_claro.UseVisualStyleBackColor = false;
+            this.Verde_claro.Click += new System.EventHandler(this.btnColor_Click);
+            this.Verde_claro.MouseEnter += new System.EventHandler(this.btnColor_MouseEnter);
+            this.Verde_claro.MouseLeave += new System.EventHandler(this.btnColor_MouseLeave);
             // 
-            // Laranja_Escuro
+            // Laranja
             // 
-            this.Laranja_Escuro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
-            this.Laranja_Escuro.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Laranja_Escuro.FlatAppearance.BorderSize = 0;
-            this.Laranja_Escuro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Laranja_Escuro.ForeColor = System.Drawing.Color.Transparent;
-            this.Laranja_Escuro.Location = new System.Drawing.Point(200, 168);
-            this.Laranja_Escuro.Name = "Laranja_Escuro";
-            this.Laranja_Escuro.Size = new System.Drawing.Size(32, 32);
-            this.Laranja_Escuro.TabIndex = 114;
-            this.Laranja_Escuro.Tag = "Laranja Escuro";
-            this.Laranja_Escuro.UseVisualStyleBackColor = false;
-            this.Laranja_Escuro.Click += new System.EventHandler(this.btnColor_Click);
-            this.Laranja_Escuro.MouseEnter += new System.EventHandler(this.btnColor_MouseEnter);
-            this.Laranja_Escuro.MouseLeave += new System.EventHandler(this.btnColor_MouseLeave);
+            this.Laranja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
+            this.Laranja.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Laranja.FlatAppearance.BorderSize = 0;
+            this.Laranja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Laranja.ForeColor = System.Drawing.Color.Transparent;
+            this.Laranja.Location = new System.Drawing.Point(200, 168);
+            this.Laranja.Name = "Laranja";
+            this.Laranja.Size = new System.Drawing.Size(32, 32);
+            this.Laranja.TabIndex = 114;
+            this.Laranja.Tag = "Laranja Escuro";
+            this.Laranja.UseVisualStyleBackColor = false;
+            this.Laranja.Click += new System.EventHandler(this.btnColor_Click);
+            this.Laranja.MouseEnter += new System.EventHandler(this.btnColor_MouseEnter);
+            this.Laranja.MouseLeave += new System.EventHandler(this.btnColor_MouseLeave);
             // 
-            // Lima
+            // Branco
             // 
-            this.Lima.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(220)))), ((int)(((byte)(57)))));
-            this.Lima.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Lima.FlatAppearance.BorderSize = 0;
-            this.Lima.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Lima.ForeColor = System.Drawing.Color.Transparent;
-            this.Lima.Location = new System.Drawing.Point(162, 130);
-            this.Lima.Name = "Lima";
-            this.Lima.Size = new System.Drawing.Size(32, 32);
-            this.Lima.TabIndex = 114;
-            this.Lima.Tag = "Lima";
-            this.Lima.UseVisualStyleBackColor = false;
-            this.Lima.Click += new System.EventHandler(this.btnColor_Click);
-            this.Lima.MouseEnter += new System.EventHandler(this.btnColor_MouseEnter);
-            this.Lima.MouseLeave += new System.EventHandler(this.btnColor_MouseLeave);
+            this.Branco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.Branco.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Branco.FlatAppearance.BorderSize = 0;
+            this.Branco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Branco.ForeColor = System.Drawing.Color.Transparent;
+            this.Branco.Location = new System.Drawing.Point(200, 206);
+            this.Branco.Name = "Branco";
+            this.Branco.Size = new System.Drawing.Size(32, 32);
+            this.Branco.TabIndex = 114;
+            this.Branco.Tag = "Branco";
+            this.Branco.UseVisualStyleBackColor = false;
+            this.Branco.Click += new System.EventHandler(this.btnColor_Click);
+            this.Branco.MouseEnter += new System.EventHandler(this.btnColor_MouseEnter);
+            this.Branco.MouseLeave += new System.EventHandler(this.btnColor_MouseLeave);
             // 
-            // Verde_Claro
+            // Teal
             // 
-            this.Verde_Claro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(195)))), ((int)(((byte)(74)))));
-            this.Verde_Claro.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Verde_Claro.FlatAppearance.BorderSize = 0;
-            this.Verde_Claro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Verde_Claro.ForeColor = System.Drawing.Color.Transparent;
-            this.Verde_Claro.Location = new System.Drawing.Point(200, 92);
-            this.Verde_Claro.Name = "Verde_Claro";
-            this.Verde_Claro.Size = new System.Drawing.Size(32, 32);
-            this.Verde_Claro.TabIndex = 114;
-            this.Verde_Claro.Tag = "Verde Claro";
-            this.Verde_Claro.UseVisualStyleBackColor = false;
-            this.Verde_Claro.Click += new System.EventHandler(this.btnColor_Click);
-            this.Verde_Claro.MouseEnter += new System.EventHandler(this.btnColor_MouseEnter);
-            this.Verde_Claro.MouseLeave += new System.EventHandler(this.btnColor_MouseLeave);
+            this.Teal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.Teal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Teal.FlatAppearance.BorderSize = 0;
+            this.Teal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Teal.ForeColor = System.Drawing.Color.Transparent;
+            this.Teal.Location = new System.Drawing.Point(200, 92);
+            this.Teal.Name = "Teal";
+            this.Teal.Size = new System.Drawing.Size(32, 32);
+            this.Teal.TabIndex = 114;
+            this.Teal.Tag = "Verde Claro";
+            this.Teal.UseVisualStyleBackColor = false;
+            this.Teal.Click += new System.EventHandler(this.btnColor_Click);
+            this.Teal.MouseEnter += new System.EventHandler(this.btnColor_MouseEnter);
+            this.Teal.MouseLeave += new System.EventHandler(this.btnColor_MouseLeave);
             // 
             // Azul_Claro
             // 
-            this.Azul_Claro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.Azul_Claro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(244)))));
             this.Azul_Claro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Azul_Claro.FlatAppearance.BorderSize = 0;
             this.Azul_Claro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1270,39 +1275,39 @@ namespace AcroniUI.Custom
             this.Violeta.MouseEnter += new System.EventHandler(this.btnColor_MouseEnter);
             this.Violeta.MouseLeave += new System.EventHandler(this.btnColor_MouseLeave);
             // 
-            // Cinza
+            // Marrom
             // 
-            this.Cinza.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
-            this.Cinza.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Cinza.FlatAppearance.BorderSize = 0;
-            this.Cinza.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cinza.ForeColor = System.Drawing.Color.Transparent;
-            this.Cinza.Location = new System.Drawing.Point(162, 206);
-            this.Cinza.Name = "Cinza";
-            this.Cinza.Size = new System.Drawing.Size(32, 32);
-            this.Cinza.TabIndex = 114;
-            this.Cinza.Tag = "Cinza";
-            this.Cinza.UseVisualStyleBackColor = false;
-            this.Cinza.Click += new System.EventHandler(this.btnColor_Click);
-            this.Cinza.MouseEnter += new System.EventHandler(this.btnColor_MouseEnter);
-            this.Cinza.MouseLeave += new System.EventHandler(this.btnColor_MouseLeave);
+            this.Marrom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(85)))), ((int)(((byte)(72)))));
+            this.Marrom.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Marrom.FlatAppearance.BorderSize = 0;
+            this.Marrom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Marrom.ForeColor = System.Drawing.Color.Transparent;
+            this.Marrom.Location = new System.Drawing.Point(162, 206);
+            this.Marrom.Name = "Marrom";
+            this.Marrom.Size = new System.Drawing.Size(32, 32);
+            this.Marrom.TabIndex = 114;
+            this.Marrom.Tag = "Cinza";
+            this.Marrom.UseVisualStyleBackColor = false;
+            this.Marrom.Click += new System.EventHandler(this.btnColor_Click);
+            this.Marrom.MouseEnter += new System.EventHandler(this.btnColor_MouseEnter);
+            this.Marrom.MouseLeave += new System.EventHandler(this.btnColor_MouseLeave);
             // 
-            // Laranja
+            // Ambar
             // 
-            this.Laranja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
-            this.Laranja.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Laranja.FlatAppearance.BorderSize = 0;
-            this.Laranja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Laranja.ForeColor = System.Drawing.Color.Transparent;
-            this.Laranja.Location = new System.Drawing.Point(162, 168);
-            this.Laranja.Name = "Laranja";
-            this.Laranja.Size = new System.Drawing.Size(32, 32);
-            this.Laranja.TabIndex = 114;
-            this.Laranja.Tag = "Laranja";
-            this.Laranja.UseVisualStyleBackColor = false;
-            this.Laranja.Click += new System.EventHandler(this.btnColor_Click);
-            this.Laranja.MouseEnter += new System.EventHandler(this.btnColor_MouseEnter);
-            this.Laranja.MouseLeave += new System.EventHandler(this.btnColor_MouseLeave);
+            this.Ambar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
+            this.Ambar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Ambar.FlatAppearance.BorderSize = 0;
+            this.Ambar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Ambar.ForeColor = System.Drawing.Color.Transparent;
+            this.Ambar.Location = new System.Drawing.Point(162, 168);
+            this.Ambar.Name = "Ambar";
+            this.Ambar.Size = new System.Drawing.Size(32, 32);
+            this.Ambar.TabIndex = 114;
+            this.Ambar.Tag = "Laranja";
+            this.Ambar.UseVisualStyleBackColor = false;
+            this.Ambar.Click += new System.EventHandler(this.btnColor_Click);
+            this.Ambar.MouseEnter += new System.EventHandler(this.btnColor_MouseEnter);
+            this.Ambar.MouseLeave += new System.EventHandler(this.btnColor_MouseLeave);
             // 
             // Preto
             // 
@@ -1321,39 +1326,39 @@ namespace AcroniUI.Custom
             this.Preto.MouseEnter += new System.EventHandler(this.btnColor_MouseEnter);
             this.Preto.MouseLeave += new System.EventHandler(this.btnColor_MouseLeave);
             // 
-            // Amarelo
+            // Lima
             // 
-            this.Amarelo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(59)))));
-            this.Amarelo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Amarelo.FlatAppearance.BorderSize = 0;
-            this.Amarelo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Amarelo.ForeColor = System.Drawing.Color.Transparent;
-            this.Amarelo.Location = new System.Drawing.Point(200, 130);
-            this.Amarelo.Name = "Amarelo";
-            this.Amarelo.Size = new System.Drawing.Size(32, 32);
-            this.Amarelo.TabIndex = 114;
-            this.Amarelo.Tag = "Amarelo";
-            this.Amarelo.UseVisualStyleBackColor = false;
-            this.Amarelo.Click += new System.EventHandler(this.btnColor_Click);
-            this.Amarelo.MouseEnter += new System.EventHandler(this.btnColor_MouseEnter);
-            this.Amarelo.MouseLeave += new System.EventHandler(this.btnColor_MouseLeave);
+            this.Lima.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(220)))), ((int)(((byte)(57)))));
+            this.Lima.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Lima.FlatAppearance.BorderSize = 0;
+            this.Lima.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Lima.ForeColor = System.Drawing.Color.Transparent;
+            this.Lima.Location = new System.Drawing.Point(200, 130);
+            this.Lima.Name = "Lima";
+            this.Lima.Size = new System.Drawing.Size(32, 32);
+            this.Lima.TabIndex = 114;
+            this.Lima.Tag = "Amarelo";
+            this.Lima.UseVisualStyleBackColor = false;
+            this.Lima.Click += new System.EventHandler(this.btnColor_Click);
+            this.Lima.MouseEnter += new System.EventHandler(this.btnColor_MouseEnter);
+            this.Lima.MouseLeave += new System.EventHandler(this.btnColor_MouseLeave);
             // 
-            // Marrom
+            // Laranja_Escuro
             // 
-            this.Marrom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(85)))), ((int)(((byte)(72)))));
-            this.Marrom.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Marrom.FlatAppearance.BorderSize = 0;
-            this.Marrom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Marrom.ForeColor = System.Drawing.Color.Transparent;
-            this.Marrom.Location = new System.Drawing.Point(238, 168);
-            this.Marrom.Name = "Marrom";
-            this.Marrom.Size = new System.Drawing.Size(32, 32);
-            this.Marrom.TabIndex = 114;
-            this.Marrom.Tag = "Marrom";
-            this.Marrom.UseVisualStyleBackColor = false;
-            this.Marrom.Click += new System.EventHandler(this.btnColor_Click);
-            this.Marrom.MouseEnter += new System.EventHandler(this.btnColor_MouseEnter);
-            this.Marrom.MouseLeave += new System.EventHandler(this.btnColor_MouseLeave);
+            this.Laranja_Escuro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
+            this.Laranja_Escuro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Laranja_Escuro.FlatAppearance.BorderSize = 0;
+            this.Laranja_Escuro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Laranja_Escuro.ForeColor = System.Drawing.Color.Transparent;
+            this.Laranja_Escuro.Location = new System.Drawing.Point(238, 168);
+            this.Laranja_Escuro.Name = "Laranja_Escuro";
+            this.Laranja_Escuro.Size = new System.Drawing.Size(32, 32);
+            this.Laranja_Escuro.TabIndex = 114;
+            this.Laranja_Escuro.Tag = "Marrom";
+            this.Laranja_Escuro.UseVisualStyleBackColor = false;
+            this.Laranja_Escuro.Click += new System.EventHandler(this.btnColor_Click);
+            this.Laranja_Escuro.MouseEnter += new System.EventHandler(this.btnColor_MouseEnter);
+            this.Laranja_Escuro.MouseLeave += new System.EventHandler(this.btnColor_MouseLeave);
             // 
             // Azul
             // 
@@ -1372,22 +1377,22 @@ namespace AcroniUI.Custom
             this.Azul.MouseEnter += new System.EventHandler(this.btnColor_MouseEnter);
             this.Azul.MouseLeave += new System.EventHandler(this.btnColor_MouseLeave);
             // 
-            // Ambar
+            // Amarelo
             // 
-            this.Ambar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
-            this.Ambar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Ambar.FlatAppearance.BorderSize = 0;
-            this.Ambar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ambar.ForeColor = System.Drawing.Color.Transparent;
-            this.Ambar.Location = new System.Drawing.Point(238, 130);
-            this.Ambar.Name = "Ambar";
-            this.Ambar.Size = new System.Drawing.Size(32, 32);
-            this.Ambar.TabIndex = 114;
-            this.Ambar.Tag = "Âmbar";
-            this.Ambar.UseVisualStyleBackColor = false;
-            this.Ambar.Click += new System.EventHandler(this.btnColor_Click);
-            this.Ambar.MouseEnter += new System.EventHandler(this.btnColor_MouseEnter);
-            this.Ambar.MouseLeave += new System.EventHandler(this.btnColor_MouseLeave);
+            this.Amarelo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(59)))));
+            this.Amarelo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Amarelo.FlatAppearance.BorderSize = 0;
+            this.Amarelo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Amarelo.ForeColor = System.Drawing.Color.Transparent;
+            this.Amarelo.Location = new System.Drawing.Point(238, 130);
+            this.Amarelo.Name = "Amarelo";
+            this.Amarelo.Size = new System.Drawing.Size(32, 32);
+            this.Amarelo.TabIndex = 114;
+            this.Amarelo.Tag = "Âmbar";
+            this.Amarelo.UseVisualStyleBackColor = false;
+            this.Amarelo.Click += new System.EventHandler(this.btnColor_Click);
+            this.Amarelo.MouseEnter += new System.EventHandler(this.btnColor_MouseEnter);
+            this.Amarelo.MouseLeave += new System.EventHandler(this.btnColor_MouseLeave);
             // 
             // Verde
             // 
@@ -2999,6 +3004,11 @@ namespace AcroniUI.Custom
             this.picBoxKeyboardBackground.TabIndex = 98;
             this.picBoxKeyboardBackground.TabStop = false;
             // 
+            // ebtnOpenModuleTexture
+            // 
+            this.ebtnOpenModuleTexture.ElipseRadius = 10;
+            this.ebtnOpenModuleTexture.TargetControl = this.btnOpenModuleTexture;
+            // 
             // Compacto
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -3129,17 +3139,17 @@ namespace AcroniUI.Custom
         private System.Windows.Forms.Panel pnlChosenColor;
         private System.Windows.Forms.Label lblHexaColor;
         private System.Windows.Forms.Panel pnlBodyColorpicker;
-        private System.Windows.Forms.Button Laranja_Escuro;
-        private System.Windows.Forms.Button Lima;
-        private System.Windows.Forms.Button Verde_Claro;
+        private System.Windows.Forms.Button Laranja;
+        private System.Windows.Forms.Button Branco;
+        private System.Windows.Forms.Button Teal;
         private System.Windows.Forms.Button Azul_Claro;
         private System.Windows.Forms.Button Violeta;
-        private System.Windows.Forms.Button Laranja;
-        private System.Windows.Forms.Button Amarelo;
-        private System.Windows.Forms.Button Marrom;
+        private System.Windows.Forms.Button Ambar;
+        private System.Windows.Forms.Button Lima;
+        private System.Windows.Forms.Button Laranja_Escuro;
         private System.Windows.Forms.Button Azul;
         private System.Windows.Forms.Button Rosa;
-        private System.Windows.Forms.Button Ambar;
+        private System.Windows.Forms.Button Amarelo;
         private System.Windows.Forms.Button Verde;
         private System.Windows.Forms.Button Ciano;
         private System.Windows.Forms.Button Roxo;
@@ -3173,8 +3183,8 @@ namespace AcroniUI.Custom
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button Azul_Acizentado;
-        private System.Windows.Forms.Button Cinza;
+        private System.Windows.Forms.Button Verde_claro;
+        private System.Windows.Forms.Button Marrom;
         private System.Windows.Forms.Button Preto;
         private System.Windows.Forms.Button btnHist1;
         private System.Windows.Forms.Button btnHist4;
@@ -3313,6 +3323,7 @@ namespace AcroniUI.Custom
         private Kbtn Cb14s;
         private System.Windows.Forms.Panel fundoCd14;
         private System.Windows.Forms.Panel fundoCa9;
+        private Bunifu.Framework.UI.BunifuElipse ebtnOpenModuleTexture;
     }
 }
 
