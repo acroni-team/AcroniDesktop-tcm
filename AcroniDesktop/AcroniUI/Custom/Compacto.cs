@@ -141,6 +141,45 @@ namespace AcroniUI.Custom
                 }
             }
 
+            if (btnTextAlignLeft.Tag.Equals("active"))
+            {
+                if (btnTextAlignUpper.Tag.Equals("active"))
+                    __contentAlignment = ContentAlignment.TopLeft;
+
+                if (btnTextAlignMiddle.Tag.Equals("active"))
+                    __contentAlignment = ContentAlignment.MiddleLeft;
+
+                if (btnTextAlignBottom.Tag.Equals("active"))
+                    __contentAlignment = ContentAlignment.BottomLeft;
+            }
+
+            else if (btnTextAlignCenter.Tag.Equals("active"))
+            {
+                if (btnTextAlignUpper.Tag.Equals("active"))
+                    __contentAlignment = ContentAlignment.TopCenter;
+
+                if (btnTextAlignMiddle.Tag.Equals("active"))
+                    __contentAlignment = ContentAlignment.MiddleCenter;
+
+                if (btnTextAlignBottom.Tag.Equals("active"))
+                    __contentAlignment = ContentAlignment.BottomCenter;
+            }
+
+            else if (btnTextAlignRight.Tag.Equals("active"))
+            {
+                if (btnTextAlignUpper.Tag.Equals("active"))
+                    __contentAlignment = ContentAlignment.TopRight;
+
+                if (btnTextAlignMiddle.Tag.Equals("active"))
+                    __contentAlignment = ContentAlignment.MiddleRight;
+
+                if (btnTextAlignBottom.Tag.Equals("active"))
+                    __contentAlignment = ContentAlignment.BottomRight;
+            }
+        }
+
+        private void HorizontalContentAlign_Click(object sender, EventArgs e)
+        {
             foreach (Control alignButton in pnlHorizAlign.Controls)
             {
                 if (alignButton == (sender as BunifuImageButton))
@@ -153,6 +192,42 @@ namespace AcroniUI.Custom
                     alignButton.Tag = "disabled";
                     alignButton.BackColor = Color.Transparent;
                 }
+            }
+
+            if (btnTextAlignLeft.Tag.Equals("active"))
+            {
+                if (btnTextAlignUpper.Tag.Equals("active"))
+                    __contentAlignment = ContentAlignment.TopLeft;
+
+                if (btnTextAlignMiddle.Tag.Equals("active"))
+                    __contentAlignment = ContentAlignment.MiddleLeft;
+
+                if (btnTextAlignBottom.Tag.Equals("active"))
+                    __contentAlignment = ContentAlignment.BottomLeft;
+            }
+
+            else if (btnTextAlignCenter.Tag.Equals("active"))
+            {
+                if (btnTextAlignUpper.Tag.Equals("active"))
+                    __contentAlignment = ContentAlignment.TopCenter;
+
+                if (btnTextAlignMiddle.Tag.Equals("active"))
+                    __contentAlignment = ContentAlignment.MiddleCenter;
+
+                if (btnTextAlignBottom.Tag.Equals("active"))
+                    __contentAlignment = ContentAlignment.BottomCenter;
+            }
+
+            else if (btnTextAlignRight.Tag.Equals("active"))
+            {
+                if (btnTextAlignUpper.Tag.Equals("active"))
+                    __contentAlignment = ContentAlignment.TopRight;
+
+                if (btnTextAlignMiddle.Tag.Equals("active"))
+                    __contentAlignment = ContentAlignment.MiddleRight;
+
+                if (btnTextAlignBottom.Tag.Equals("active"))
+                    __contentAlignment = ContentAlignment.BottomRight;
             }
         }
         #endregion
@@ -202,7 +277,7 @@ namespace AcroniUI.Custom
 
             #region Atribuição de fonte e estilos de fonte  
             keybutton.Font = new Font(cmbFontes.Text, float.Parse(cmbFontSize.Text), __fontStyle);
-            keybutton.TextAlign = __contentAlignment; 
+            keybutton.TextAlign = __contentAlignment;
             #endregion
 
             #region Abrir módulos
@@ -242,7 +317,7 @@ namespace AcroniUI.Custom
             {
                 KeycapTextureModule ktm = new KeycapTextureModule();
                 OpenModule(ktm);
-            } 
+            }
             #endregion
         }
 
@@ -478,11 +553,10 @@ namespace AcroniUI.Custom
 
             //Carregar todas as fontes que o usuário possui na máquina
             new LoadFontTypes(ref cmbFontes, ref lista_fontFamily);
-            
+
             //Index padrão da combobox
             cmbFontes.SelectedIndex = cmbFontes.Items.IndexOf("Open Sans");
-
-            cmbFontSize.SelectedIndex = 0;
+            cmbFontSize.SelectedIndex = 1;
         }
 
         private void lblDefinirParaTodasTeclas_Click(object sender, EventArgs e)
@@ -616,7 +690,7 @@ namespace AcroniUI.Custom
             }
         }
 
-        
+
 
         //private void btnLer_Click(object sender, EventArgs e)
         //{

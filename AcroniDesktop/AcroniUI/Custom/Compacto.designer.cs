@@ -946,7 +946,7 @@ namespace AcroniUI.Custom
             this.btnTextAlignBottom.TabStop = false;
             this.btnTextAlignBottom.Tag = "disabled";
             this.btnTextAlignBottom.Zoom = 10;
-            this.btnTextAlignBottom.Click += new System.EventHandler(this.ContentAlignment_Click);
+            this.btnTextAlignBottom.Click += new System.EventHandler(this.HorizontalContentAlign_Click);
             // 
             // btnTextAlignUpper
             // 
@@ -962,7 +962,7 @@ namespace AcroniUI.Custom
             this.btnTextAlignUpper.TabStop = false;
             this.btnTextAlignUpper.Tag = "active";
             this.btnTextAlignUpper.Zoom = 10;
-            this.btnTextAlignUpper.Click += new System.EventHandler(this.ContentAlignment_Click);
+            this.btnTextAlignUpper.Click += new System.EventHandler(this.HorizontalContentAlign_Click);
             // 
             // btnTextAlignMiddle
             // 
@@ -978,7 +978,7 @@ namespace AcroniUI.Custom
             this.btnTextAlignMiddle.TabStop = false;
             this.btnTextAlignMiddle.Tag = "disabled";
             this.btnTextAlignMiddle.Zoom = 10;
-            this.btnTextAlignMiddle.Click += new System.EventHandler(this.ContentAlignment_Click);
+            this.btnTextAlignMiddle.Click += new System.EventHandler(this.HorizontalContentAlign_Click);
             // 
             // pnlBtnOpenModules
             // 
@@ -3086,7 +3086,6 @@ namespace AcroniUI.Custom
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "Compacto";
-            this.Opacity = 1D;
             this.Text = " ";
             this.Load += new System.EventHandler(this.FormLoad);
             this.Controls.SetChildIndex(this.pnlCustomizingMenu, 0);
