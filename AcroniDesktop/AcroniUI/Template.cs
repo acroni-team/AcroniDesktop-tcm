@@ -88,12 +88,13 @@ namespace AcroniUI
         }
 
         #region Sair e minimizar
-        private void btnClose_Click(object sender, EventArgs e)
+        protected virtual void btnClose_Click(object sender, EventArgs e)
         {
             AcroniMessageBoxConfirm ambc = new AcroniMessageBoxConfirm("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "Você quer mesmo sair? Não se esqueça de salvar o seu teclado ;)");
             ambc.ShowDialog();
             if (ambc.DialogResult == DialogResult.Yes)
             {
+
                 FadeOut();
                 Application.Exit();
             }
