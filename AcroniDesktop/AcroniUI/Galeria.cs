@@ -186,6 +186,18 @@ namespace AcroniUI
             if (collectionNameDialog.ShowDialog() == DialogResult.Cancel)
                 this.Close();
 
+            if (collectionNameDialog.ShowDialog() == DialogResult.OK)
+            {
+                if (!String.IsNullOrEmpty(collectionNameDialog.input))
+                {
+                    if (collectionNameDialog.alblMessage.Contains("coleção"))
+                        Share.Collection.CollectionName = collectionNameDialog.input;
+                    else
+                        Share.KeyboardNameNotCreated = collectionNameDialog.input;
+                    this.Close();
+                }
+
+            }
             while (collectionNameDialog.Visible)
             {
                 await Task.Delay(10);
@@ -376,6 +388,6 @@ namespace AcroniUI
             btnAdicionarGaleria.Location = new Point(btnAdicionarGaleria.Location.X + (10 / 2), btnAdicionarGaleria.Location.Y + (10 / 2));
         }
 
-        
+
     }
 }

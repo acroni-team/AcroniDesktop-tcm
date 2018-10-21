@@ -92,6 +92,7 @@
             this.txtUserInput.Size = new System.Drawing.Size(365, 21);
             this.txtUserInput.TabIndex = 2;
             this.txtUserInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtUserInput.TextChanged += new System.EventHandler(this.txtUserInput_TextChanged);
             this.txtUserInput.MouseMove += new System.Windows.Forms.MouseEventHandler(this.txtUserInput_MouseMove);
             // 
             // apnlTextbox

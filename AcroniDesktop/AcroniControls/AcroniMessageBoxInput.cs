@@ -7,6 +7,13 @@ namespace AcroniControls
 {
     public partial class AcroniMessageBoxInput : Form
     {
+        public string input { get; set; }
+
+        public string alblMessage
+        {
+            get => alblMessage1.Text;
+        }
+
         protected void doBasic()
         {
             Bunifu.Framework.UI.BunifuElipse ellipse = new Bunifu.Framework.UI.BunifuElipse();
@@ -53,6 +60,11 @@ namespace AcroniControls
         {
             txtUserInput.BackColor = Color.FromArgb(38, 41, 45);
             apnlTextbox.BackColor = Color.FromArgb(38, 41, 45);
+        }
+
+        private void txtUserInput_TextChanged(object sender, EventArgs e)
+        {
+            input = txtUserInput.Text;
         }
     }
 }

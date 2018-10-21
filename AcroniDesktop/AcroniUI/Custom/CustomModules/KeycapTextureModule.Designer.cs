@@ -33,16 +33,16 @@
             // 
             // btnAlll
             // 
-            this.btnAlll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(255)))));
             this.btnAlll.FlatAppearance.BorderSize = 0;
             this.btnAlll.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
             this.btnAlll.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.btnAlll.Text = "Usar essa textura em todas as teclas.";
             // 
             // btnThis
             // 
             this.btnThis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(255)))));
             this.btnThis.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThis.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnThis.DialogResult = System.Windows.Forms.DialogResult.No;
             this.btnThis.FlatAppearance.BorderSize = 0;
             this.btnThis.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
             this.btnThis.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));

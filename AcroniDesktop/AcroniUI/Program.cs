@@ -18,7 +18,7 @@ namespace AcroniUI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Thread.CurrentThread.SetApartmentState(ApartmentState.Unknown);
-            Application.Run(new AcroniUI.Custom.CustomModules.KeycapTextureModule());
+            Application.Run(new FrmLogin());
         }
     }
 }

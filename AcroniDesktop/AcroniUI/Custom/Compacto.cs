@@ -345,6 +345,19 @@ namespace AcroniUI.Custom
             {
                 KeycapTextureModule ktm = new KeycapTextureModule();
                 OpenModule(ktm);
+                if (ktm.DialogResult == DialogResult.No)
+                    keybutton.BackgroundImage = ktm.SelectedImg;
+                else if (ktm.DialogResult == DialogResult.Yes)
+                {
+                    foreach (Control keycap in pnlWithKeycaps.Controls)
+                    {
+                        if (keycap is Panel && keycap.HasChildren)
+                        {
+                            if (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] is Label)
+                                (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).BackgroundImage = ktm.SelectedImg;
+                        }
+                    }
+                }
             }
             #endregion
         }
@@ -356,7 +369,7 @@ namespace AcroniUI.Custom
             GenerateDarkScreenshot();
             kpm.StartPosition = FormStartPosition.CenterScreen;
             kpm.ShowDialog(this);
-            if (kpm.DialogResult == DialogResult.OK || kpm.DialogResult == DialogResult.Cancel)
+            if (kpm.DialogResult == DialogResult.OK || kpm.DialogResult == DialogResult.Cancel || kpm.DialogResult == DialogResult.Yes || kpm.DialogResult == DialogResult.No )
                 DisposePanel();
         }
 
@@ -673,6 +686,8 @@ namespace AcroniUI.Custom
         {
             KeycapBackgroundModule kbm = new KeycapBackgroundModule();
             OpenModule(kbm);
+            if (kbm.DialogResult == DialogResult.Yes)
+                picBoxKeyboardBackground.Image = kbm.SelectedImg;
         }
 
         private void btnOpenModuleTexture_Click(object sender, EventArgs e)
