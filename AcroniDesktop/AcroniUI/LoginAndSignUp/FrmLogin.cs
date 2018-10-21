@@ -374,7 +374,7 @@ namespace AcroniUI.LoginAndSignUp
                     await Task.Delay(15);
                 }
 
-                    pnlCadastro.Tag = "Open";
+                pnlCadastro.Tag = "Open";
             }
             else if (pnlCadastro.Tag.ToString().Equals("Open"))
             {

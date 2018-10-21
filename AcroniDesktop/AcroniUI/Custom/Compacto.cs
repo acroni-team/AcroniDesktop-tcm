@@ -18,8 +18,10 @@ namespace AcroniUI.Custom
 {
     public partial class Compacto : Template
     {
-        bool isBottomSelected, isUpperSelected, isLeftSelected, isCenterSelected, isRightSelected = false;
         #region Declarações 
+
+        bool isBottomSelected, isUpperSelected, isLeftSelected, isCenterSelected, isRightSelected = false;
+
         // Definição do botão de teclado genérico (kbtn)
         Label keybutton;
 
@@ -33,6 +35,10 @@ namespace AcroniUI.Custom
         private static List<FontFamily> lista_fontFamily = new List<FontFamily>();
 
         // Definição das propriedades do colorpicker 
+        private FontStyle __fontStyle { get; set; } = FontStyle.Regular;
+        private ContentAlignment __contentAlignment { get; set; } = ContentAlignment.TopLeft;
+
+        //Cores do fundo e da fonte
         private Color Color { get; set; } = Color.FromArgb(26, 26, 26);
         private Color FontColor { get; set; } = Color.White;
 
@@ -45,10 +51,112 @@ namespace AcroniUI.Custom
 
         #region Eventos a nível do formulário
 
-        //Ao clicar num botão do teclado
+        private void lblUpperBottom_Click(object sender, EventArgs e)
+        {
+            kbtn_Click(sender, e);
+        }
+
+        private void btnUpper_Click(object sender, EventArgs e)
+        {
+            btnBottom.BackColor = Color.FromArgb(123, 123, 123);
+            isUpperSelected = true;
+            isBottomSelected = false;
+            (sender as Button).BackColor = Color.FromArgb(90, (sender as Button).BackColor);
+        }
+
+        private void btnBottom_Click(object sender, EventArgs e)
+        {
+            btnUpper.BackColor = Color.FromArgb(123, 123, 123);
+            (sender as Button).BackColor = Color.FromArgb(90, (sender as Button).BackColor);
+            isUpperSelected = false;
+            isBottomSelected = true;
+        }
+
+        private void btnStyle_Click(object sender, EventArgs e)
+        {
+            //Isso serve para gerenciar e saber quais estilos foram selecionados.
+            Button style = (Button)sender;
+
+            //Fácil: Se está ativo, desative.
+            if (style.Tag.Equals("active"))
+            {
+                style.Tag = "disabled";
+                style.BackColor = Color.FromArgb(35, 36, 38);
+            }
+            else
+            {
+                style.Tag = "active";
+                style.BackColor = Color.FromArgb(80, 80, 80);
+            }
+
+            #region Combinações de estilo das fontes: 
+
+            // Essas são as possíveis combinações de estilos de fontes:
+
+            if (btnStyleBold.Tag.Equals("active") && btnStyleItalic.Tag.Equals("active") && btnStyleUnderline.Tag.Equals("active"))
+                __fontStyle = FontStyle.Bold | FontStyle.Italic | FontStyle.Underline;
+
+            else if (btnStyleBold.Tag.Equals("active") && btnStyleItalic.Tag.Equals("active"))
+                __fontStyle = FontStyle.Bold | FontStyle.Italic;
+
+            else if (btnStyleBold.Tag.Equals("active") && btnStyleStrikeout.Tag.Equals("active"))
+                __fontStyle = FontStyle.Bold | FontStyle.Strikeout;
+
+            else if (btnStyleBold.Tag.Equals("active") && btnStyleUnderline.Tag.Equals("active"))
+                __fontStyle = FontStyle.Bold | FontStyle.Underline;
+
+            else if (btnStyleBold.Tag.Equals("active") && btnStyleItalic.Tag.Equals("active") && btnStyleStrikeout.Tag.Equals("active"))
+                __fontStyle = FontStyle.Bold | FontStyle.Italic | FontStyle.Strikeout;
+
+            else if (btnStyleItalic.Tag.Equals("active") && btnStyleUnderline.Tag.Equals("active") && btnStyleStrikeout.Tag.Equals("active"))
+                __fontStyle = FontStyle.Italic | FontStyle.Underline | FontStyle.Strikeout;
+
+            else if (btnStyleItalic.Tag.Equals("active") && btnStyleUnderline.Tag.Equals("active"))
+                __fontStyle = FontStyle.Italic | FontStyle.Underline;
+
+            else if (btnStyleItalic.Tag.Equals("active") && btnStyleStrikeout.Tag.Equals("active"))
+                __fontStyle = FontStyle.Italic | FontStyle.Strikeout;
+
+            else if (btnStyleUnderline.Tag.Equals("active") && btnStyleStrikeout.Tag.Equals("active"))
+                __fontStyle = FontStyle.Underline | FontStyle.Strikeout;
+
+            else if (btnStyleBold.Tag.Equals("active") && btnStyleUnderline.Tag.Equals("active") && btnStyleStrikeout.Tag.Equals("active"))
+                __fontStyle = FontStyle.Bold | FontStyle.Underline | FontStyle.Strikeout;
+
+            else if (btnStyleBold.Tag.Equals("active"))
+                __fontStyle = FontStyle.Bold;
+
+            else if (btnStyleItalic.Tag.Equals("active"))
+                __fontStyle = FontStyle.Italic;
+
+            else if (btnStyleUnderline.Tag.Equals("active"))
+                __fontStyle = FontStyle.Underline;
+
+            else if (btnStyleStrikeout.Tag.Equals("active"))
+                __fontStyle = FontStyle.Strikeout;
+
+            else
+                __fontStyle = FontStyle.Regular;
+
+            #endregion
+        }
+
+        private void ContentAlignment_Click(object sender, EventArgs e)
+        {
+            //ContentAlignment 
+        }
+
+
+        /// <summary>
+        /// Método acionado ao clicar num botão do teclado.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void kbtn_Click(object sender, EventArgs e)
         {
             keybutton = (Label)sender;
+
+            #region Atribuição de cores
 
             if (btnStyleFontColor.Tag.Equals("true"))
                 keybutton.ForeColor = FontColor;
@@ -79,6 +187,14 @@ namespace AcroniUI.Custom
                     keybutton.Parent.BackgroundImage = global::AcroniUI.Properties.Resources.keycapbackgrounddefault;
             }
 
+            #endregion
+
+            #region Atribuição de fonte e estilos de fonte  
+            keybutton.Font = new Font(cmbFontes.Text, float.Parse(cmbFontSize.SelectedItem.ToString()), __fontStyle);
+            //keybutton.TextAlign = 
+            #endregion
+
+            #region Alinhamento dos textos
             if (isUpperSelected)
             {
                 if (isLeftSelected)
@@ -98,14 +214,15 @@ namespace AcroniUI.Custom
                 if (isRightSelected)
                     keybutton.TextAlign = ContentAlignment.BottomRight;
             }
+            #endregion
 
-
+            #region Abrir módulos
             if (btnOpenModuleTextIcons.Tag.Equals("true"))
             {
                 KeycapTextIconModule ktm;
                 if (keybutton.Name.Contains("Ca"))
                     ktm = new KeycapTextIconModule(false);
-                else 
+                else
                     ktm = new KeycapTextIconModule(true);
                 OpenModule(ktm);
                 if (ktm.DialogResult == DialogResult.OK)
@@ -136,21 +253,16 @@ namespace AcroniUI.Custom
             {
                 KeycapTextureModule ktm = new KeycapTextureModule();
                 OpenModule(ktm);
-            }
-
+            } 
+            #endregion
         }
 
-
         #region Método inicializador de módulos
-
 
         private void OpenModule(KeycapParentModule kpm)
         {
             GenerateDarkScreenshot();
             kpm.StartPosition = FormStartPosition.CenterScreen;
-            //kpm
-               
-            //    ();
             kpm.ShowDialog(this);
             if (kpm.DialogResult == DialogResult.OK || kpm.DialogResult == DialogResult.Cancel)
                 DisposePanel();
@@ -221,6 +333,8 @@ namespace AcroniUI.Custom
             //Fazendo com que o label do nome do teclado tenha localização exatamente após o label que contém o nome da coleção.
 
             lblKeyboardName.Location = new Point(lblCollectionName.Location.X + lblCollectionName.Size.Width - 5, lblCollectionName.Location.Y);
+
+            //cmbFontes
             if (string.IsNullOrEmpty(Share.Keyboard.NickName))
             {
                 lblKeyboardName.Text = KeyboardIDGenerator.GenerateID('C');
@@ -238,9 +352,11 @@ namespace AcroniUI.Custom
             btnStyleUnderline.Font = new Font(btnStyleUnderline.Font, FontStyle.Underline);
             btnStyleStrikeout.Font = new Font(btnStyleStrikeout.Font, FontStyle.Strikeout);
 
+            //Arredondando o botão de cor de fonte:
 
             Bunifu.Framework.UI.BunifuElipse be = new Bunifu.Framework.UI.BunifuElipse();
             be.ApplyElipse(pnlBtnStyleFontColor, 5);
+
             //Foreach para arredondar cores do colorpicker
             foreach (Control c in pnlBodyColorpicker.Controls)
             {
@@ -382,35 +498,14 @@ namespace AcroniUI.Custom
 
         private void btnTextAlignCenter_Click(object sender, EventArgs e)
         {
-            isLeftSelected = false;
-            isCenterSelected = true;
-            isRightSelected = false;
-            btnTextAlignLeft.BackColor = Color.Transparent;
-            btnTextAlignCenter.BackColor = Color.FromArgb(90, Color.Transparent);
-            btnTextAlignRight.BackColor = Color.Transparent;
-            if (ContentAlignment == ContentAlignment.TopCenter)
-                ContentAlignment = ContentAlignment.TopLeft;
-            else
-                ContentAlignment = ContentAlignment.TopCenter;
+
         }
 
         private void btnTextAlignRight_Click(object sender, EventArgs e)
         {
-            isLeftSelected = false;
-            isCenterSelected = false;
-            isRightSelected = true;
-            btnTextAlignLeft.BackColor = Color.Transparent;
-            btnTextAlignCenter.BackColor = Color.Transparent;
-            btnTextAlignRight.BackColor = Color.FromArgb(90, Color.Transparent);
-            if (ContentAlignment == ContentAlignment.TopRight)
-                ContentAlignment = ContentAlignment.TopLeft;
-            else
-                ContentAlignment = ContentAlignment.TopRight;
+
         }
         #endregion
-
-        //#region ComboBox de FontFace
-        //protected virtual void cmbFontes_SelectedIndexChanged(object sender, EventArgs e) => FontSender = new Font(cmbFontes.Text, FontSize, FontStyle);
 
         private void FormLoad(object sender, EventArgs e)
         {
@@ -418,9 +513,11 @@ namespace AcroniUI.Custom
 
             //Carregar todas as fontes que o usuário possui na máquina
             new LoadFontTypes(ref cmbFontes, ref lista_fontFamily);
-
+            
             //Index padrão da combobox
             cmbFontes.SelectedIndex = cmbFontes.Items.IndexOf("Open Sans");
+
+            cmbFontSize.SelectedIndex = 0;
         }
 
         private void lblDefinirParaTodasTeclas_Click(object sender, EventArgs e)
@@ -515,9 +612,10 @@ namespace AcroniUI.Custom
                 {
                     foreach (Keycap k in Share.Keyboard.Keycaps)
                     {
-                        if (("lbl"+keycap.Name.Remove(0,5)).Equals(k.ID))
+                        if (("lbl" + keycap.Name.Remove(0, 5)).Equals(k.ID))
                         {
-                            try {
+                            try
+                            {
                                 foreach (Control c in keycap.Controls)
                                 {
                                     if (c.Name.Contains("lbl"))
@@ -528,14 +626,15 @@ namespace AcroniUI.Custom
                                         c.Text = k.Text;
                                         c.BackColor = k.Color;
                                         keycap.BackColor = Color.FromArgb(90, k.Color);
-                                        (c as Label).TextAlign = (ContentAlignment) ContentAlignment;
+                                        (c as Label).TextAlign = (ContentAlignment)ContentAlignment;
                                     }
                                 }
                                 ////keycap.Text = k.Text;
 
 
                                 break;
-                            }catch(Exception) { }
+                            }
+                            catch (Exception) { }
                         }
                     }
                 }
@@ -728,38 +827,6 @@ namespace AcroniUI.Custom
 
 
         #endregion
-
-        private void btnStyle_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblUpperBottom_Click(object sender, EventArgs e)
-        {
-            kbtn_Click(sender,e);
-        }
-
-        private void btnUpper_Click(object sender, EventArgs e)
-        {
-            btnBottom.BackColor = Color.FromArgb(123, 123, 123);
-            isUpperSelected = true;
-            isBottomSelected = false;
-            (sender as Button).BackColor = Color.FromArgb(90, (sender as Button).BackColor);
-        }
-
-        private void Compacto_MouseEnter(object sender, EventArgs e)
-        {
-
-        }
-        private void btnBottom_Click(object sender, EventArgs e)
-        {
-            btnUpper.BackColor = Color.FromArgb(123, 123, 123);
-            (sender as Button).BackColor = Color.FromArgb(90, (sender as Button).BackColor);
-            isUpperSelected = false;
-            isBottomSelected = true;
-        }
-
-
     }
 }
 
