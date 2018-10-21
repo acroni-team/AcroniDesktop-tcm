@@ -15,5 +15,6 @@ namespace AcroniLibrary.FileInfo
         public static bool EditKeyboard { get; set; }
         //Deixei essa propriedade porque dava um conflito depois
         public static string KeyboardNameNotCreated { get; set; }
+        public static List<string> CollectionsName { get; set; } = new List<string>();
     }
 }

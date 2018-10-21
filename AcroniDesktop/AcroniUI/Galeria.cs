@@ -5,6 +5,7 @@ using AcroniLibrary.SQL;
 using AcroniUI.Custom;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Text;
@@ -18,6 +19,7 @@ namespace AcroniUI
 {
     public partial class Galeria : TemplateMenu
     {
+        SqlConnection sqlConnection = new SqlConnection("Data Source = " + Environment.MachineName + "\\SQLEXPRESS; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7");
         SelectColor selectColor;
         bool isSelectColorOpen = false;
         int countHeightCollection = 0;
@@ -42,8 +44,8 @@ namespace AcroniUI
             }
 
             //Para pegar as imagens
-            Share.ResourcesImage.Add(Image.FromFile(Application.StartupPath + "\\" + "pen.png"));
-            Share.ResourcesImage.Add(Image.FromFile(Application.StartupPath + "\\" + "trash.png"));
+            Share.ResourcesImage.Add(Image.FromFile(Application.StartupPath + @"\Images\pen.png"));
+            Share.ResourcesImage.Add(Image.FromFile(Application.StartupPath + @"\Images\trash.png"));
 
             LoadCollections();
 
@@ -109,9 +111,9 @@ namespace AcroniUI
 
                     Share.Collection.CollectionColor = userCollection.CollectionColor;
                     Share.Collection.CollectionName = userCollection.CollectionName;
-
+                    Share.CollectionsName.Add(userCollection.CollectionName);
                     //Chama o controle de usuário
-                    AcroniControls.CollectionUI collectionUi = new AcroniControls.CollectionUI();
+                    CollectionUI collectionUi = new CollectionUI();
 
                     if (selectMode)
                     {
@@ -255,6 +257,14 @@ namespace AcroniUI
                         if (collection.CollectionName.Equals(c.Text))
                         {
                             Share.User.UserCollections.Remove(collection);
+                            using (SqlConnection sqlConnection = new SqlConnection("Data Source = " + Environment.MachineName + "\\SQLEXPRESS; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7"))
+                            {
+                                sqlConnection.Open();
+                                using (SqlCommand sqlCommand = new SqlCommand("delete from tblColecao where nick_colecao in('" + c.Text + "') and id_cliente like (select id_cliente from tblCliente where usuario like '" + SQLConnection.nome_usuario + "')", sqlConnection))
+                                {
+                                    sqlCommand.ExecuteNonQuery();
+                                }
+                            }
                             break;
                         }
                     }
@@ -346,7 +356,11 @@ namespace AcroniUI
 
             isSelectColorOpen = false;
         }
+        protected override void btnClose_Click(object sender, EventArgs e)
+        {
 
+            base.btnClose_Click(sender, e);
+        }
         private async void btnAdicionarGaleria_MouseEnter(object sender, EventArgs e)
         {
             await Task.Delay(50);
@@ -361,5 +375,7 @@ namespace AcroniUI
             btnAdicionarGaleria.Size = new Size(btnAdicionarGaleria.Size.Width - 10, btnAdicionarGaleria.Size.Height - 10);
             btnAdicionarGaleria.Location = new Point(btnAdicionarGaleria.Location.X + (10 / 2), btnAdicionarGaleria.Location.Y + (10 / 2));
         }
+
+        
     }
 }

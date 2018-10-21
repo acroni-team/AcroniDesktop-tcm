@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using AcroniLibrary.FileInfo;
+using AcroniLibrary.SQL;
 
 namespace AcroniControls
 {
@@ -14,8 +15,6 @@ namespace AcroniControls
     {
         int countCollection = 0;
         Bitmap collectionsImages;
-        SqlConnection sqlConnection = new SqlConnection("Data Source = " + Environment.MachineName + "\\SQLEXPRESS; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7");
-
         public CollectionUI()
         {
             InitializeComponent();
@@ -46,29 +45,47 @@ namespace AcroniControls
         private void sendToDatabase()
         {
             byte[] img = null;
+            bool alreadyExistsThisCollection = false;
             img = (Byte[])new ImageConverter().ConvertTo(collectionsImages, typeof(Byte[]));
-            sqlConnection.Open();
-            try
+            using (SqlConnection sqlConnection = new SqlConnection("Data Source = " + Environment.MachineName + "\\SQLEXPRESS; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7"))
             {
-                using (SqlCommand sqlCommand = new SqlCommand("insert into tblColecao values ('" + Share.Collection.CollectionName + "',@img,(select email from tblCliente where usuario like '" + Share.User.UserName + "'))", sqlConnection))
+                sqlConnection.Open();
+                using (SqlCommand sqlCommand = new SqlCommand("select nick_colecao from tblColecao where id_cliente like (select id_cliente from tblCliente where usuario like '" + SQLConnection.nome_usuario + "')", sqlConnection))
                 {
-                    sqlCommand.Parameters.AddWithValue("@img", img);
-                    sqlCommand.ExecuteNonQuery();
+                    using (SqlDataReader return_value = sqlCommand.ExecuteReader())
+                    {
+                        if (return_value.HasRows)
+                        {
+                            return_value.Read();
+                            for (int i=0;i< return_value.FieldCount;i++)
+                                if (return_value[i].ToString().Equals(this.lblColecao1.Text))
+                                {
+                                    alreadyExistsThisCollection = true;
+                                    break;
+                                }
+                        }
+                    }
                 }
+                if (!alreadyExistsThisCollection)
+                    using (SqlCommand sqlCommand = new SqlCommand("insert into tblColecao(nick_colecao,imagem_colecao,id_cliente) values ('" + Share.Collection.CollectionName + "',@img,(select id_cliente from tblCliente where usuario like '" + SQLConnection.nome_usuario + "'))", sqlConnection))
+                    {
+                        sqlCommand.Parameters.AddWithValue("@img", img);
+                        sqlCommand.ExecuteNonQuery();
+                    }
+
+                else
+                    using (SqlCommand sqlCommand = new SqlCommand("update tblColecao set imagem_colecao = @img where nick_colecao like '" + Share.Collection.CollectionName + "' and id_cliente like (select id_cliente from tblCliente where usuario like '" + SQLConnection.nome_usuario + "')", sqlConnection))
+                    {
+
+                        sqlCommand.Parameters.AddWithValue("@img", img);
+                        sqlCommand.ExecuteNonQuery();
+                    }
+
             }
-            catch (Exception)
-            {
-                using (SqlCommand sqlCommand = new SqlCommand("update tblColecao set imagem_colecao = @img where nick_colecao like '" + Share.Collection.CollectionName + "'", sqlConnection))
-                {
-                    sqlCommand.Parameters.AddWithValue("@img", img);
-                    sqlCommand.ExecuteNonQuery();
-                }
-            }
-            sqlConnection.Close();
         }
-
     }
-
 }
+
+
 
 
