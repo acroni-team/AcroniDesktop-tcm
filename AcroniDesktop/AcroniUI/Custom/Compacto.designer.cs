@@ -75,6 +75,11 @@ namespace AcroniUI.Custom
             this.btnStyleStrikeout = new AcroniControls.StyleBtn();
             this.btnStyleItalic = new AcroniControls.StyleBtn();
             this.btnStyleUnderline = new AcroniControls.StyleBtn();
+            this.pnlVertAlign = new System.Windows.Forms.Panel();
+            this.pnlHorizAlign = new System.Windows.Forms.Panel();
+            this.btnTextAlignBottom = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnTextAlignUpper = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnTextAlignMiddle = new Bunifu.Framework.UI.BunifuImageButton();
             this.pnlBtnOpenModules = new System.Windows.Forms.Panel();
             this.btnOpenModuleSwitch = new AcroniControls.StyleBtn();
             this.btnOpenModuleTexture = new AcroniControls.StyleBtn();
@@ -107,8 +112,6 @@ namespace AcroniUI.Custom
             this.Verde = new System.Windows.Forms.Button();
             this.Ciano = new System.Windows.Forms.Button();
             this.Roxo = new System.Windows.Forms.Button();
-            this.btnUpper = new System.Windows.Forms.Button();
-            this.btnBottom = new System.Windows.Forms.Button();
             this.pnlWithKeycaps = new System.Windows.Forms.Panel();
             this.fundoCd14 = new System.Windows.Forms.Panel();
             this.Cd14 = new AcroniControls.Kbtn();
@@ -116,7 +119,7 @@ namespace AcroniUI.Custom
             this.Cb14sExtensao = new AcroniControls.Kbtn();
             this.fundoCb14s = new System.Windows.Forms.Panel();
             this.Cb14s = new AcroniControls.Kbtn();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.fundoCc1 = new System.Windows.Forms.Panel();
             this.Cc1 = new AcroniControls.Kbtn();
             this.fundoCb1 = new System.Windows.Forms.Panel();
             this.Cb1s = new AcroniControls.Kbtn();
@@ -248,6 +251,11 @@ namespace AcroniUI.Custom
             this.panel1.SuspendLayout();
             this.apnlCustomOptionsRight.SuspendLayout();
             this.apnlCustomOptionsLeft.SuspendLayout();
+            this.pnlVertAlign.SuspendLayout();
+            this.pnlHorizAlign.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignBottom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignUpper)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignMiddle)).BeginInit();
             this.pnlBtnOpenModules.SuspendLayout();
             this.pnlHeadColorpicker.SuspendLayout();
             this.pnlBodyColorpicker.SuspendLayout();
@@ -255,7 +263,7 @@ namespace AcroniUI.Custom
             this.fundoCd14.SuspendLayout();
             this.fundoCb14sExtensao.SuspendLayout();
             this.fundoCb14s.SuspendLayout();
-            this.panel5.SuspendLayout();
+            this.fundoCc1.SuspendLayout();
             this.fundoCb1.SuspendLayout();
             this.fundoCa1.SuspendLayout();
             this.fundoCa2.SuspendLayout();
@@ -425,14 +433,15 @@ namespace AcroniUI.Custom
             this.btnTextAlignRight.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTextAlignRight.Image = ((System.Drawing.Image)(resources.GetObject("btnTextAlignRight.Image")));
             this.btnTextAlignRight.ImageActive = null;
-            this.btnTextAlignRight.Location = new System.Drawing.Point(323, 88);
+            this.btnTextAlignRight.Location = new System.Drawing.Point(89, 6);
             this.btnTextAlignRight.Name = "btnTextAlignRight";
             this.btnTextAlignRight.Size = new System.Drawing.Size(24, 24);
             this.btnTextAlignRight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnTextAlignRight.TabIndex = 2;
             this.btnTextAlignRight.TabStop = false;
+            this.btnTextAlignRight.Tag = "disabled";
             this.btnTextAlignRight.Zoom = 10;
-            this.btnTextAlignRight.Click += new System.EventHandler(this.ContentAlignment_Click);
+            this.btnTextAlignRight.Click += new System.EventHandler(this.VerticalContentAlignment_Click);
             // 
             // btnTextAlignCenter
             // 
@@ -440,14 +449,15 @@ namespace AcroniUI.Custom
             this.btnTextAlignCenter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTextAlignCenter.Image = ((System.Drawing.Image)(resources.GetObject("btnTextAlignCenter.Image")));
             this.btnTextAlignCenter.ImageActive = null;
-            this.btnTextAlignCenter.Location = new System.Drawing.Point(279, 88);
+            this.btnTextAlignCenter.Location = new System.Drawing.Point(45, 6);
             this.btnTextAlignCenter.Name = "btnTextAlignCenter";
             this.btnTextAlignCenter.Size = new System.Drawing.Size(24, 24);
             this.btnTextAlignCenter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnTextAlignCenter.TabIndex = 2;
             this.btnTextAlignCenter.TabStop = false;
+            this.btnTextAlignCenter.Tag = "disabled";
             this.btnTextAlignCenter.Zoom = 10;
-            this.btnTextAlignCenter.Click += new System.EventHandler(this.ContentAlignment_Click);
+            this.btnTextAlignCenter.Click += new System.EventHandler(this.VerticalContentAlignment_Click);
             // 
             // btnTextAlignLeft
             // 
@@ -455,14 +465,15 @@ namespace AcroniUI.Custom
             this.btnTextAlignLeft.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTextAlignLeft.Image = ((System.Drawing.Image)(resources.GetObject("btnTextAlignLeft.Image")));
             this.btnTextAlignLeft.ImageActive = null;
-            this.btnTextAlignLeft.Location = new System.Drawing.Point(235, 88);
+            this.btnTextAlignLeft.Location = new System.Drawing.Point(3, 6);
             this.btnTextAlignLeft.Name = "btnTextAlignLeft";
             this.btnTextAlignLeft.Size = new System.Drawing.Size(24, 24);
             this.btnTextAlignLeft.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnTextAlignLeft.TabIndex = 2;
             this.btnTextAlignLeft.TabStop = false;
+            this.btnTextAlignLeft.Tag = "active";
             this.btnTextAlignLeft.Zoom = 10;
-            this.btnTextAlignLeft.Click += new System.EventHandler(this.ContentAlignment_Click);
+            this.btnTextAlignLeft.Click += new System.EventHandler(this.VerticalContentAlignment_Click);
             // 
             // lblDefinirParaTodasTeclas
             // 
@@ -471,9 +482,9 @@ namespace AcroniUI.Custom
             this.lblDefinirParaTodasTeclas.Font = new System.Drawing.Font("Open Sans", 10.25F, System.Drawing.FontStyle.Bold);
             this.lblDefinirParaTodasTeclas.Location = new System.Drawing.Point(25, 128);
             this.lblDefinirParaTodasTeclas.Name = "lblDefinirParaTodasTeclas";
-            this.lblDefinirParaTodasTeclas.Size = new System.Drawing.Size(239, 19);
+            this.lblDefinirParaTodasTeclas.Size = new System.Drawing.Size(299, 19);
             this.lblDefinirParaTodasTeclas.TabIndex = 9;
-            this.lblDefinirParaTodasTeclas.Text = "Definir estilo para todas as teclas";
+            this.lblDefinirParaTodasTeclas.Text = "Definir fonte e estilos para todas as teclas";
             this.lblDefinirParaTodasTeclas.Click += new System.EventHandler(this.lblDefinirParaTodasTeclas_Click);
             // 
             // cmbFontes
@@ -486,7 +497,7 @@ namespace AcroniUI.Custom
             this.cmbFontes.ForeColor = System.Drawing.Color.Transparent;
             this.cmbFontes.FormattingEnabled = true;
             this.cmbFontes.ItemHeight = 18;
-            this.cmbFontes.Location = new System.Drawing.Point(20, 34);
+            this.cmbFontes.Location = new System.Drawing.Point(23, 15);
             this.cmbFontes.Name = "cmbFontes";
             this.cmbFontes.Size = new System.Drawing.Size(178, 26);
             this.cmbFontes.TabIndex = 1;
@@ -766,13 +777,12 @@ namespace AcroniUI.Custom
             this.apnlCustomOptionsLeft.Controls.Add(this.cmbFontes);
             this.apnlCustomOptionsLeft.Controls.Add(this.btnStyleFontColor);
             this.apnlCustomOptionsLeft.Controls.Add(this.btnStyleBold);
-            this.apnlCustomOptionsLeft.Controls.Add(this.btnTextAlignRight);
             this.apnlCustomOptionsLeft.Controls.Add(this.btnStyleStrikeout);
-            this.apnlCustomOptionsLeft.Controls.Add(this.btnTextAlignCenter);
             this.apnlCustomOptionsLeft.Controls.Add(this.lblDefinirParaTodasTeclas);
-            this.apnlCustomOptionsLeft.Controls.Add(this.btnTextAlignLeft);
             this.apnlCustomOptionsLeft.Controls.Add(this.btnStyleItalic);
             this.apnlCustomOptionsLeft.Controls.Add(this.btnStyleUnderline);
+            this.apnlCustomOptionsLeft.Controls.Add(this.pnlVertAlign);
+            this.apnlCustomOptionsLeft.Controls.Add(this.pnlHorizAlign);
             this.apnlCustomOptionsLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.apnlCustomOptionsLeft.Location = new System.Drawing.Point(0, 0);
             this.apnlCustomOptionsLeft.Name = "apnlCustomOptionsLeft";
@@ -782,7 +792,7 @@ namespace AcroniUI.Custom
             // pnlBtnStyleFontColor
             // 
             this.pnlBtnStyleFontColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(150)))), ((int)(((byte)(242)))));
-            this.pnlBtnStyleFontColor.Location = new System.Drawing.Point(334, 48);
+            this.pnlBtnStyleFontColor.Location = new System.Drawing.Point(347, 29);
             this.pnlBtnStyleFontColor.Name = "pnlBtnStyleFontColor";
             this.pnlBtnStyleFontColor.Size = new System.Drawing.Size(10, 10);
             this.pnlBtnStyleFontColor.TabIndex = 10;
@@ -802,7 +812,7 @@ namespace AcroniUI.Custom
             "12",
             "14",
             "16"});
-            this.cmbFontSize.Location = new System.Drawing.Point(214, 34);
+            this.cmbFontSize.Location = new System.Drawing.Point(216, 15);
             this.cmbFontSize.Name = "cmbFontSize";
             this.cmbFontSize.Size = new System.Drawing.Size(74, 26);
             this.cmbFontSize.TabIndex = 1;
@@ -817,7 +827,7 @@ namespace AcroniUI.Custom
             this.btnStyleFontColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStyleFontColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStyleFontColor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
-            this.btnStyleFontColor.Location = new System.Drawing.Point(316, 28);
+            this.btnStyleFontColor.Location = new System.Drawing.Point(329, 9);
             this.btnStyleFontColor.Name = "btnStyleFontColor";
             this.btnStyleFontColor.Size = new System.Drawing.Size(36, 34);
             this.btnStyleFontColor.TabIndex = 5;
@@ -901,6 +911,74 @@ namespace AcroniUI.Custom
             this.btnStyleUnderline.Text = "S";
             this.btnStyleUnderline.UseVisualStyleBackColor = false;
             this.btnStyleUnderline.Click += new System.EventHandler(this.btnStyle_Click);
+            // 
+            // pnlVertAlign
+            // 
+            this.pnlVertAlign.Controls.Add(this.btnTextAlignLeft);
+            this.pnlVertAlign.Controls.Add(this.btnTextAlignCenter);
+            this.pnlVertAlign.Controls.Add(this.btnTextAlignRight);
+            this.pnlVertAlign.Location = new System.Drawing.Point(236, 48);
+            this.pnlVertAlign.Name = "pnlVertAlign";
+            this.pnlVertAlign.Size = new System.Drawing.Size(113, 36);
+            this.pnlVertAlign.TabIndex = 14;
+            // 
+            // pnlHorizAlign
+            // 
+            this.pnlHorizAlign.Controls.Add(this.btnTextAlignBottom);
+            this.pnlHorizAlign.Controls.Add(this.btnTextAlignUpper);
+            this.pnlHorizAlign.Controls.Add(this.btnTextAlignMiddle);
+            this.pnlHorizAlign.Location = new System.Drawing.Point(236, 84);
+            this.pnlHorizAlign.Name = "pnlHorizAlign";
+            this.pnlHorizAlign.Size = new System.Drawing.Size(113, 36);
+            this.pnlHorizAlign.TabIndex = 15;
+            // 
+            // btnTextAlignBottom
+            // 
+            this.btnTextAlignBottom.BackColor = System.Drawing.Color.Transparent;
+            this.btnTextAlignBottom.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTextAlignBottom.Image = ((System.Drawing.Image)(resources.GetObject("btnTextAlignBottom.Image")));
+            this.btnTextAlignBottom.ImageActive = null;
+            this.btnTextAlignBottom.Location = new System.Drawing.Point(89, 6);
+            this.btnTextAlignBottom.Name = "btnTextAlignBottom";
+            this.btnTextAlignBottom.Size = new System.Drawing.Size(24, 24);
+            this.btnTextAlignBottom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnTextAlignBottom.TabIndex = 11;
+            this.btnTextAlignBottom.TabStop = false;
+            this.btnTextAlignBottom.Tag = "disabled";
+            this.btnTextAlignBottom.Zoom = 10;
+            this.btnTextAlignBottom.Click += new System.EventHandler(this.ContentAlignment_Click);
+            // 
+            // btnTextAlignUpper
+            // 
+            this.btnTextAlignUpper.BackColor = System.Drawing.Color.Transparent;
+            this.btnTextAlignUpper.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTextAlignUpper.Image = ((System.Drawing.Image)(resources.GetObject("btnTextAlignUpper.Image")));
+            this.btnTextAlignUpper.ImageActive = null;
+            this.btnTextAlignUpper.Location = new System.Drawing.Point(3, 6);
+            this.btnTextAlignUpper.Name = "btnTextAlignUpper";
+            this.btnTextAlignUpper.Size = new System.Drawing.Size(24, 24);
+            this.btnTextAlignUpper.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnTextAlignUpper.TabIndex = 13;
+            this.btnTextAlignUpper.TabStop = false;
+            this.btnTextAlignUpper.Tag = "active";
+            this.btnTextAlignUpper.Zoom = 10;
+            this.btnTextAlignUpper.Click += new System.EventHandler(this.ContentAlignment_Click);
+            // 
+            // btnTextAlignMiddle
+            // 
+            this.btnTextAlignMiddle.BackColor = System.Drawing.Color.Transparent;
+            this.btnTextAlignMiddle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTextAlignMiddle.Image = ((System.Drawing.Image)(resources.GetObject("btnTextAlignMiddle.Image")));
+            this.btnTextAlignMiddle.ImageActive = null;
+            this.btnTextAlignMiddle.Location = new System.Drawing.Point(45, 6);
+            this.btnTextAlignMiddle.Name = "btnTextAlignMiddle";
+            this.btnTextAlignMiddle.Size = new System.Drawing.Size(24, 24);
+            this.btnTextAlignMiddle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnTextAlignMiddle.TabIndex = 12;
+            this.btnTextAlignMiddle.TabStop = false;
+            this.btnTextAlignMiddle.Tag = "disabled";
+            this.btnTextAlignMiddle.Zoom = 10;
+            this.btnTextAlignMiddle.Click += new System.EventHandler(this.ContentAlignment_Click);
             // 
             // pnlBtnOpenModules
             // 
@@ -1434,36 +1512,12 @@ namespace AcroniUI.Custom
             this.Roxo.MouseEnter += new System.EventHandler(this.btnColor_MouseEnter);
             this.Roxo.MouseLeave += new System.EventHandler(this.btnColor_MouseLeave);
             // 
-            // btnUpper
-            // 
-            this.btnUpper.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
-            this.btnUpper.ForeColor = System.Drawing.Color.Black;
-            this.btnUpper.Location = new System.Drawing.Point(128, 162);
-            this.btnUpper.Name = "btnUpper";
-            this.btnUpper.Size = new System.Drawing.Size(75, 23);
-            this.btnUpper.TabIndex = 83;
-            this.btnUpper.Text = "Upper";
-            this.btnUpper.UseVisualStyleBackColor = false;
-            this.btnUpper.Click += new System.EventHandler(this.btnUpper_Click);
-            // 
-            // btnBottom
-            // 
-            this.btnBottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
-            this.btnBottom.ForeColor = System.Drawing.Color.Black;
-            this.btnBottom.Location = new System.Drawing.Point(216, 162);
-            this.btnBottom.Name = "btnBottom";
-            this.btnBottom.Size = new System.Drawing.Size(75, 23);
-            this.btnBottom.TabIndex = 86;
-            this.btnBottom.Text = "Bottom";
-            this.btnBottom.UseVisualStyleBackColor = false;
-            this.btnBottom.Click += new System.EventHandler(this.btnBottom_Click);
-            // 
             // pnlWithKeycaps
             // 
             this.pnlWithKeycaps.Controls.Add(this.fundoCd14);
             this.pnlWithKeycaps.Controls.Add(this.fundoCb14sExtensao);
             this.pnlWithKeycaps.Controls.Add(this.fundoCb14s);
-            this.pnlWithKeycaps.Controls.Add(this.panel5);
+            this.pnlWithKeycaps.Controls.Add(this.fundoCc1);
             this.pnlWithKeycaps.Controls.Add(this.fundoCb1);
             this.pnlWithKeycaps.Controls.Add(this.Ce8);
             this.pnlWithKeycaps.Controls.Add(this.Ce4);
@@ -1611,14 +1665,14 @@ namespace AcroniUI.Custom
             this.Cb14s.UseVisualStyleBackColor = false;
             this.Cb14s.Click += new System.EventHandler(this.kbtn_Click);
             // 
-            // panel5
+            // fundoCc1
             // 
-            this.panel5.BackColor = System.Drawing.Color.Black;
-            this.panel5.Controls.Add(this.Cc1);
-            this.panel5.Location = new System.Drawing.Point(17, 139);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(90, 56);
-            this.panel5.TabIndex = 96;
+            this.fundoCc1.BackColor = System.Drawing.Color.Black;
+            this.fundoCc1.Controls.Add(this.Cc1);
+            this.fundoCc1.Location = new System.Drawing.Point(17, 139);
+            this.fundoCc1.Name = "fundoCc1";
+            this.fundoCc1.Size = new System.Drawing.Size(90, 56);
+            this.fundoCc1.TabIndex = 96;
             // 
             // Cc1
             // 
@@ -3025,8 +3079,6 @@ namespace AcroniUI.Custom
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.pnlWithKeycaps);
-            this.Controls.Add(this.btnBottom);
-            this.Controls.Add(this.btnUpper);
             this.Controls.Add(this.pnlHeadColorpicker);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlBodyColorpicker);
@@ -3041,8 +3093,6 @@ namespace AcroniUI.Custom
             this.Controls.SetChildIndex(this.pnlBodyColorpicker, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.pnlHeadColorpicker, 0);
-            this.Controls.SetChildIndex(this.btnUpper, 0);
-            this.Controls.SetChildIndex(this.btnBottom, 0);
             this.Controls.SetChildIndex(this.pnlWithKeycaps, 0);
             this.Controls.SetChildIndex(this.pnlStripAjuda, 0);
             this.pnlCustomizingMenu.ResumeLayout(false);
@@ -3055,6 +3105,11 @@ namespace AcroniUI.Custom
             this.apnlCustomOptionsRight.PerformLayout();
             this.apnlCustomOptionsLeft.ResumeLayout(false);
             this.apnlCustomOptionsLeft.PerformLayout();
+            this.pnlVertAlign.ResumeLayout(false);
+            this.pnlHorizAlign.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignBottom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignUpper)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignMiddle)).EndInit();
             this.pnlBtnOpenModules.ResumeLayout(false);
             this.pnlHeadColorpicker.ResumeLayout(false);
             this.pnlHeadColorpicker.PerformLayout();
@@ -3063,7 +3118,7 @@ namespace AcroniUI.Custom
             this.fundoCd14.ResumeLayout(false);
             this.fundoCb14sExtensao.ResumeLayout(false);
             this.fundoCb14s.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
+            this.fundoCc1.ResumeLayout(false);
             this.fundoCb1.ResumeLayout(false);
             this.fundoCa1.ResumeLayout(false);
             this.fundoCa2.ResumeLayout(false);
@@ -3202,8 +3257,6 @@ namespace AcroniUI.Custom
         private System.Windows.Forms.Button btnHist2;
         private StyleBtn btnStyleFontColor;
         private System.Windows.Forms.Panel pnlBtnStyleFontColor;
-        private System.Windows.Forms.Button btnUpper;
-        private System.Windows.Forms.Button btnBottom;
         private System.Windows.Forms.Panel pnlBtnOpenModules;
         private StyleBtn btnOpenModuleTexture;
         private System.Windows.Forms.Panel pnlWithKeycaps;
@@ -3325,7 +3378,7 @@ namespace AcroniUI.Custom
         private System.Windows.Forms.Panel fundoCe5;
         private Kbtn Ce5;
         protected System.Windows.Forms.PictureBox picBoxKeyboardBackground;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel fundoCc1;
         private System.Windows.Forms.Panel fundoCb1;
         private System.Windows.Forms.Panel fundoCb14sExtensao;
         private Kbtn Cb14sExtensao;
@@ -3334,6 +3387,11 @@ namespace AcroniUI.Custom
         private System.Windows.Forms.Panel fundoCd14;
         private System.Windows.Forms.Panel fundoCa9;
         private Bunifu.Framework.UI.BunifuElipse ebtnOpenModuleTexture;
+        private Bunifu.Framework.UI.BunifuImageButton btnTextAlignBottom;
+        private Bunifu.Framework.UI.BunifuImageButton btnTextAlignMiddle;
+        private Bunifu.Framework.UI.BunifuImageButton btnTextAlignUpper;
+        private System.Windows.Forms.Panel pnlVertAlign;
+        private System.Windows.Forms.Panel pnlHorizAlign;
     }
 }
 

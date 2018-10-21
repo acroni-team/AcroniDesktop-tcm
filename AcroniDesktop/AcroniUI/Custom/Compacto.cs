@@ -13,14 +13,13 @@ using AcroniLibrary.SQL;
 using System.Runtime.Serialization.Formatters.Binary;
 using AcroniLibrary.Drawing;
 using System.Drawing.Imaging;
+using Bunifu.Framework.UI;
 
 namespace AcroniUI.Custom
 {
     public partial class Compacto : Template
     {
         #region Declarações 
-
-        bool isBottomSelected, isUpperSelected, isLeftSelected, isCenterSelected, isRightSelected = false;
 
         // Definição do botão de teclado genérico (kbtn)
         Label keybutton;
@@ -54,22 +53,6 @@ namespace AcroniUI.Custom
         private void lblUpperBottom_Click(object sender, EventArgs e)
         {
             kbtn_Click(sender, e);
-        }
-
-        private void btnUpper_Click(object sender, EventArgs e)
-        {
-            btnBottom.BackColor = Color.FromArgb(123, 123, 123);
-            isUpperSelected = true;
-            isBottomSelected = false;
-            (sender as Button).BackColor = Color.FromArgb(90, (sender as Button).BackColor);
-        }
-
-        private void btnBottom_Click(object sender, EventArgs e)
-        {
-            btnUpper.BackColor = Color.FromArgb(123, 123, 123);
-            (sender as Button).BackColor = Color.FromArgb(90, (sender as Button).BackColor);
-            isUpperSelected = false;
-            isBottomSelected = true;
         }
 
         private void btnStyle_Click(object sender, EventArgs e)
@@ -141,10 +124,38 @@ namespace AcroniUI.Custom
             #endregion
         }
 
-        private void ContentAlignment_Click(object sender, EventArgs e)
+        #region Alinhamento dos textos
+        private void VerticalContentAlignment_Click(object sender, EventArgs e)
         {
-            //ContentAlignment 
+            foreach (Control alignButton in pnlVertAlign.Controls)
+            {
+                if (alignButton == (sender as BunifuImageButton))
+                {
+                    alignButton.Tag = "active";
+                    alignButton.BackColor = Color.FromArgb(80, 80, 80);
+                }
+                else
+                {
+                    alignButton.Tag = "disabled";
+                    alignButton.BackColor = Color.Transparent;
+                }
+            }
+
+            foreach (Control alignButton in pnlHorizAlign.Controls)
+            {
+                if (alignButton == (sender as BunifuImageButton))
+                {
+                    alignButton.Tag = "active";
+                    alignButton.BackColor = Color.FromArgb(80, 80, 80);
+                }
+                else
+                {
+                    alignButton.Tag = "disabled";
+                    alignButton.BackColor = Color.Transparent;
+                }
+            }
         }
+        #endregion
 
 
         /// <summary>
@@ -190,30 +201,8 @@ namespace AcroniUI.Custom
             #endregion
 
             #region Atribuição de fonte e estilos de fonte  
-            keybutton.Font = new Font(cmbFontes.Text, float.Parse(cmbFontSize.SelectedItem.ToString()), __fontStyle);
-            //keybutton.TextAlign = 
-            #endregion
-
-            #region Alinhamento dos textos
-            if (isUpperSelected)
-            {
-                if (isLeftSelected)
-                    keybutton.TextAlign = ContentAlignment.TopLeft;
-                if (isCenterSelected)
-                    keybutton.TextAlign = ContentAlignment.TopCenter;
-                if (isRightSelected)
-                    keybutton.TextAlign = ContentAlignment.TopRight;
-            }
-
-            if (isBottomSelected)
-            {
-                if (isLeftSelected)
-                    keybutton.TextAlign = ContentAlignment.BottomLeft;
-                if (isCenterSelected)
-                    keybutton.TextAlign = ContentAlignment.BottomCenter;
-                if (isRightSelected)
-                    keybutton.TextAlign = ContentAlignment.BottomRight;
-            }
+            keybutton.Font = new Font(cmbFontes.Text, float.Parse(cmbFontSize.Text), __fontStyle);
+            keybutton.TextAlign = __contentAlignment; 
             #endregion
 
             #region Abrir módulos
@@ -483,30 +472,6 @@ namespace AcroniUI.Custom
 
         #region Fontes das teclas e texto
 
-        #region Definição dos métodos de alinhamento
-
-        private void btnTextAlignLeft_Click(object sender, EventArgs e)
-        {
-            isLeftSelected = true;
-            isCenterSelected = false;
-            isRightSelected = false;
-            btnTextAlignLeft.BackColor = Color.FromArgb(90, Color.Transparent);
-            btnTextAlignCenter.BackColor = Color.Transparent;
-            btnTextAlignRight.BackColor = Color.Transparent;
-            ContentAlignment = ContentAlignment.TopLeft;
-        }
-
-        private void btnTextAlignCenter_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnTextAlignRight_Click(object sender, EventArgs e)
-        {
-
-        }
-        #endregion
-
         private void FormLoad(object sender, EventArgs e)
         {
             FadeIn();
@@ -522,10 +487,20 @@ namespace AcroniUI.Custom
 
         private void lblDefinirParaTodasTeclas_Click(object sender, EventArgs e)
         {
-
+            foreach (Control keycap in pnlWithKeycaps.Controls)
+            {
+                if (keycap is Panel && keycap.HasChildren)
+                {
+                    if (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] is Label)
+                    {
+                        (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).Font = new Font(cmbFontes.Text, float.Parse(cmbFontSize.Text), __fontStyle);
+                        (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).TextAlign = __contentAlignment;
+                    }
+                }
+            }
         }
 
-        #endregion Fim das fontes
+        #endregion
 
         #region Controladores dos módulos e das cores dos botões de módulo.
 
