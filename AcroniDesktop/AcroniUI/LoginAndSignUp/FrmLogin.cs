@@ -379,8 +379,8 @@ namespace AcroniUI.LoginAndSignUp
             else if (pnlCadastro.Tag.ToString().Equals("Open"))
             {
                 pnlCadastro.Location = new Point(800, 0);
+                pnlLogin.Show();
                 pnlCadastro.Tag = "Closed";
-                pnlLogin.BringToFront();
             }
         }
 
