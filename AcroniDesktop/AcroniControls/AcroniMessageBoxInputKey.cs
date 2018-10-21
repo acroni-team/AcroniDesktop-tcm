@@ -8,13 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AcroniUI.Custom.CustomModules
+namespace AcroniControls
 {
-    public partial class KeycapTextureModule : KeycapBackgroundModule
+    public partial class AcroniMessageBoxInputKey : AcroniMessageBoxInput
     {
-        public KeycapTextureModule()
-        {
-            InitializeComponent();
-        }
+        
     }
 }

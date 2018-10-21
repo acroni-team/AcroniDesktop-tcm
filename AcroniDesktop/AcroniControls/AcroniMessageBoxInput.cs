@@ -7,7 +7,7 @@ namespace AcroniControls
 {
     public partial class AcroniMessageBoxInput : Form
     {
-        private void doBasic()
+        protected void doBasic()
         {
             Bunifu.Framework.UI.BunifuElipse ellipse = new Bunifu.Framework.UI.BunifuElipse();
             ellipse.ApplyElipse(this, 15);
@@ -30,18 +30,6 @@ namespace AcroniControls
             doBasic();
             alblMessage1.Text = message;
             alblMessage2.Text = message2;
-        }
-
-        private void btnEnviar_Click(object sender, EventArgs e)
-        {
-            if (!String.IsNullOrEmpty(txtUserInput.Text))
-            {
-                if (alblMessage1.Text.Contains("coleção"))
-                    Share.Collection.CollectionName = txtUserInput.Text;
-                else
-                    Share.KeyboardNameNotCreated = txtUserInput.Text;
-                this.Close();
-            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

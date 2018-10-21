@@ -15,17 +15,20 @@ namespace AcroniUI.Custom.CustomModules
     public partial class KeycapTextIconModule : KeycapParentModule
     {
 
-        public KeycapTextIconModule(bool BlockUpperAndBottomText)
+        public KeycapTextIconModule(bool BlockUpper, bool BlockBottom)
         {
             InitializeComponent();
             Bunifu.Framework.UI.BunifuElipse e = new Bunifu.Framework.UI.BunifuElipse();
             e.ApplyElipse(pnlBtnIconChosen, 5);
 
-            if (BlockUpperAndBottomText)
+            if (BlockUpper)
             {
                 apnlTextbox1.Visible = false;
-                apnlTextbox3.Visible = false;
                 pnlBlocked1.Visible = true;
+            }
+            if (BlockBottom)
+            {
+                apnlTextbox3.Visible = false;
                 pnlBlocked3.Visible = true;
             }
 

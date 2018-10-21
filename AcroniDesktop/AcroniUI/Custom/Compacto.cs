@@ -60,7 +60,7 @@ namespace AcroniUI.Custom
             //Isso serve para gerenciar e saber quais estilos foram selecionados.
             Button style = (Button)sender;
 
-            //Fácil: Se está ativo, desative.
+            //Fácil: Se está ativo, desative. Isso para os botões de estilização da fonte.
             if (style.Tag.Equals("active"))
             {
                 style.Tag = "disabled";
@@ -276,28 +276,56 @@ namespace AcroniUI.Custom
             #endregion
 
             #region Atribuição de fonte e estilos de fonte  
-            keybutton.Font = new Font(cmbFontes.Text, float.Parse(cmbFontSize.Text), __fontStyle);
-            keybutton.TextAlign = __contentAlignment;
+            // Isso serve para saber se nenhum botão de módulo foi escolhido. Se nenhum foi, então você pode atribuir a fonte.
+            int __checkIfCanApplyStyle = 0;
+            foreach (Control btn in pnlBtnOpenModules.Controls)
+            {
+                if (btn.Tag.Equals("disable"))
+                {
+                    __checkIfCanApplyStyle++;
+                }
+            }
+
+            if (__checkIfCanApplyStyle == 4)
+            {
+                keybutton.Font = new Font(cmbFontes.Text, float.Parse(cmbFontSize.Text), __fontStyle);
+                keybutton.TextAlign = __contentAlignment;
+                __checkIfCanApplyStyle = 0;
+            }
+
             #endregion
 
             #region Abrir módulos
-            if (btnOpenModuleTextIcons.Tag.Equals("true"))
+            if (btnOpenModuleTextIcons.Tag.Equals("active"))
             {
                 KeycapTextIconModule ktm;
-                if (keybutton.Name.Contains("Ca"))
-                    ktm = new KeycapTextIconModule(false);
+                // Precisa botar os que não forem especiais aqui.
+
+                if (keybutton == lblCb13 || keybutton == lblCc13 || keybutton == lblCd13 || keybutton.Name.Contains("Ca") && keybutton != lblCa1
+                    && keybutton != lblCa8
+                    && keybutton != lblCa9
+                    && keybutton != lblCa10
+                    && keybutton != lblCa11
+                    && keybutton != lblCa12)
+                    ktm = new KeycapTextIconModule(false, false);
+
+                else if (keybutton.Name.Contains("Ca") || keybutton == lblCb12 || keybutton == lblCc12 || keybutton == lblCd2 || keybutton == lblCd10 || keybutton == lblCd11 || keybutton == lblCd12)
+                    ktm = new KeycapTextIconModule(false, true);
+
                 else
-                    ktm = new KeycapTextIconModule(true);
+                    ktm = new KeycapTextIconModule(true, true);
                 OpenModule(ktm);
                 if (ktm.DialogResult == DialogResult.OK)
                 {
 
                     if (!string.IsNullOrEmpty(ktm.Maintext) || !string.IsNullOrEmpty(ktm.Uppertext) || !string.IsNullOrEmpty(ktm.Bottomtext))
                     {
-                        if (keybutton.Name.Contains("Ca"))
-                            keybutton.Text = $"{ktm.Uppertext}\n{ktm.Maintext} {ktm.Bottomtext}";
-                        else
+                        if (string.IsNullOrWhiteSpace(ktm.Uppertext) && string.IsNullOrWhiteSpace(ktm.Bottomtext))
                             keybutton.Text = ktm.Maintext;
+                        else if (string.IsNullOrWhiteSpace(ktm.Bottomtext))
+                            keybutton.Text = $"{ktm.Uppertext}\n{ktm.Maintext}";
+                        else
+                            keybutton.Text = $"{ktm.Uppertext}\n{ktm.Maintext}{ktm.Bottomtext}";
                     }
                 }
 
@@ -307,13 +335,13 @@ namespace AcroniUI.Custom
                 }
             }
 
-            if (btnOpenModuleSwitch.Tag.Equals("true"))
+            if (btnOpenModuleSwitch.Tag.Equals("active"))
             {
                 KeycapSwitchModule ksm = new KeycapSwitchModule();
                 OpenModule(ksm);
             }
 
-            if (btnOpenModuleTexture.Tag.Equals("true"))
+            if (btnOpenModuleTexture.Tag.Equals("active"))
             {
                 KeycapTextureModule ktm = new KeycapTextureModule();
                 OpenModule(ktm);
@@ -561,14 +589,20 @@ namespace AcroniUI.Custom
 
         private void lblDefinirParaTodasTeclas_Click(object sender, EventArgs e)
         {
-            foreach (Control keycap in pnlWithKeycaps.Controls)
+            AcroniMessageBoxConfirm ambc = new AcroniMessageBoxConfirm("Você tem certeza disso?", "Atenção, pintar para todas as teclas poderá fazer você" +
+                " perder todas as edições que fez até agora. Vai tudo ficar padrãozinho.");
+
+            if (ambc.ShowDialog() == DialogResult.Yes)
             {
-                if (keycap is Panel && keycap.HasChildren)
+                foreach (Control keycap in pnlWithKeycaps.Controls)
                 {
-                    if (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] is Label)
+                    if (keycap is Panel && keycap.HasChildren)
                     {
-                        (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).Font = new Font(cmbFontes.Text, float.Parse(cmbFontSize.Text), __fontStyle);
-                        (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).TextAlign = __contentAlignment;
+                        if (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] is Label)
+                        {
+                            (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).Font = new Font(cmbFontes.Text, float.Parse(cmbFontSize.Text), __fontStyle);
+                            (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).TextAlign = __contentAlignment;
+                        }
                     }
                 }
             }
@@ -585,37 +619,37 @@ namespace AcroniUI.Custom
             {
                 foreach (Control btnOpenModule in pnlBtnOpenModules.Controls)
                 {
-                    if (!btnOpenModule.Tag.Equals("true"))
+                    if (!btnOpenModule.Tag.Equals("active"))
                     {
                         if (btnOpenModule != c)
                         {
                             btnOpenModule.BackColor = Color.FromArgb(31, 32, 34);
-                            btnOpenModule.Tag = "false";
+                            btnOpenModule.Tag = "disable";
                         }
                         else
                         {
                             btnOpenModule.BackColor = Color.FromArgb(80, 80, 80);
-                            btnOpenModule.Tag = "true";
+                            btnOpenModule.Tag = "active";
                         }
                     }
                     else
                     {
                         btnOpenModule.BackColor = Color.FromArgb(31, 32, 34);
-                        btnOpenModule.Tag = "false";
+                        btnOpenModule.Tag = "disable";
                     }
                 }
             }
             else
             {
-                if (!c.Tag.Equals("true"))
+                if (!c.Tag.Equals("active"))
                 {
                     c.BackColor = Color.FromArgb(80, 80, 80);
-                    c.Tag = "true";
+                    c.Tag = "active";
                 }
                 else
                 {
                     c.BackColor = Color.FromArgb(31, 32, 34);
-                    c.Tag = "false";
+                    c.Tag = "disable";
                 }
             }
         }

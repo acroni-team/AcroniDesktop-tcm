@@ -51,12 +51,12 @@
             // 
             this.alblMessage2.Font = new System.Drawing.Font("Open Sans", 12.5F);
             this.alblMessage2.ForeColor = System.Drawing.Color.White;
-            this.alblMessage2.Location = new System.Drawing.Point(0, 76);
+            this.alblMessage2.Location = new System.Drawing.Point(50, 76);
             this.alblMessage2.Name = "alblMessage2";
-            this.alblMessage2.Size = new System.Drawing.Size(640, 23);
+            this.alblMessage2.Size = new System.Drawing.Size(540, 74);
             this.alblMessage2.TabIndex = 0;
             this.alblMessage2.Text = "QWESTION 4 YOU:::: S/N???";
-            this.alblMessage2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.alblMessage2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // alblMessage1
             // 

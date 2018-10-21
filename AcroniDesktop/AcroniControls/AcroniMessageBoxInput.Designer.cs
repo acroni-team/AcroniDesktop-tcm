@@ -124,7 +124,6 @@
             this.btnEnviar.TabIndex = 5;
             this.btnEnviar.Text = "Enviar";
             this.btnEnviar.UseVisualStyleBackColor = true;
-            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             this.btnEnviar.MouseEnter += new System.EventHandler(this.btnInput_MouseEnter);
             this.btnEnviar.MouseLeave += new System.EventHandler(this.btnInput_MouseLeave);
             // 
@@ -173,10 +172,10 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtTeclado;
-        private System.Windows.Forms.Label alblMessage1;
         private System.Windows.Forms.Panel panel1;
+        protected System.Windows.Forms.TextBox txtUserInput;
+        private System.Windows.Forms.Label alblMessage1;
         private System.Windows.Forms.Label alblMessage2;
-        private System.Windows.Forms.TextBox txtUserInput;
         private System.Windows.Forms.Panel apnlTextbox;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnEnviar;

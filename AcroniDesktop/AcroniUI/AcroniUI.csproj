@@ -183,6 +183,9 @@
     <EmbeddedResource Include="Custom\Compacto.resx">
       <DependentUpon>Compacto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Custom\CustomModules\KeycapBackgroundModule.resx">
+      <DependentUpon>KeycapBackgroundModule.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Custom\CustomModules\KeycapParentModule.resx">
       <DependentUpon>KeycapParentModule.cs</DependentUpon>
     </EmbeddedResource>

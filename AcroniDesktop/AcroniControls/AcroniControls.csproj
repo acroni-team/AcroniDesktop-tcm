@@ -65,6 +65,13 @@
     <Compile Include="AcroniMessageBoxInput.Designer.cs">
       <DependentUpon>AcroniMessageBoxInput.cs</DependentUpon>
     </Compile>
+    <Compile Include="AcroniMessageBoxInputKey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AcroniMessageBoxInputKey.Designer.cs">
+      <DependentUpon>AcroniMessageBoxInputKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs" />
     <Compile Include="TextboxWithPlaceholder.cs">
       <SubType>Component</SubType>
     </Compile>
