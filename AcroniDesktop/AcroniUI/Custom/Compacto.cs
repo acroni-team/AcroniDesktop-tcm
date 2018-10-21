@@ -616,6 +616,8 @@ namespace AcroniUI.Custom
             }
         }
 
+        
+
         //private void btnLer_Click(object sender, EventArgs e)
         //{
         //    using (FileStream openarchive = new FileStream(Application.StartupPath + @"\" + SQLConnection.nome_usuario + ".acr", FileMode.Open))
