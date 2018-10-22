@@ -35,7 +35,7 @@
       <HintPath>..\AcroniLibrary\bin\Debug\AcroniLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu_UI_v1.52">
-      <HintPath>..\AcroniUI\bin\Debug\Bunifu_UI_v1.52.dll</HintPath>
+      <HintPath>.\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -65,7 +65,6 @@
     <Compile Include="AcroniMessageBoxInput.Designer.cs">
       <DependentUpon>AcroniMessageBoxInput.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class1.cs" />
     <Compile Include="TextboxWithPlaceholder.cs">
       <SubType>Component</SubType>
     </Compile>
