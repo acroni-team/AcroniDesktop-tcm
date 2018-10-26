@@ -87,7 +87,7 @@
             // 
             this.btnEntendi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEntendi.Image = ((System.Drawing.Image)(resources.GetObject("btnEntendi.Image")));
-            this.btnEntendi.Location = new System.Drawing.Point(99, 436);
+            this.btnEntendi.Location = new System.Drawing.Point(112, 432);
             this.btnEntendi.Name = "btnEntendi";
             this.btnEntendi.Size = new System.Drawing.Size(213, 67);
             this.btnEntendi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

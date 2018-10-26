@@ -17,7 +17,7 @@ namespace AcroniControls
             InitializeComponent();
             Bunifu.Framework.UI.BunifuElipse ellipse = new Bunifu.Framework.UI.BunifuElipse();
             ellipse.ApplyElipse(this, 15);
-            btnOnClick.Click += btnEntendi_Click;
+            btnEntendi.Click += btnEntendi_Click;
         }
 
         private void btnEntendi_Click(object sender, EventArgs e)

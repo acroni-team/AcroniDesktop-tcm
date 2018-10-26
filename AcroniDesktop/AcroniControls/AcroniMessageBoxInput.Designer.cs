@@ -154,6 +154,7 @@
             // 
             // AcroniMessageBoxInput
             // 
+            this.AcceptButton = this.btnEnviar;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(54)))), ((int)(((byte)(63)))));
             this.ClientSize = new System.Drawing.Size(700, 361);
             this.Controls.Add(this.btnEnviar);
