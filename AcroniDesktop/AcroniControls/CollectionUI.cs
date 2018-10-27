@@ -18,6 +18,7 @@ namespace AcroniControls
         public CollectionUI()
         {
             InitializeComponent();
+            this.Cursor = Cursors.Hand;
             this.BackColor = Share.Collection.CollectionColor;
             this.Controls.Add(this.lblColecao1NumTeclados);
             this.Controls.Add(this.lblColecao1);

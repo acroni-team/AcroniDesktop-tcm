@@ -64,6 +64,7 @@ namespace AcroniControls
             // lblColecao1
             // 
             this.lblColecao1.AutoSize = true;
+            this.lblColecao1.BackColor = System.Drawing.Color.Transparent;
             this.lblColecao1.Font = new System.Drawing.Font("Open Sans ExtraBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblColecao1.ForeColor = System.Drawing.Color.White;
             lblColecao1.Name = "lblColecao1";
@@ -73,6 +74,7 @@ namespace AcroniControls
             // 
             // lblColecao1NumTeclados
             // 
+            this.lblColecao1NumTeclados.BackColor = System.Drawing.Color.Transparent;
             this.lblColecao1NumTeclados.AutoSize = true;
             this.lblColecao1NumTeclados.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblColecao1NumTeclados.ForeColor = System.Drawing.Color.White;

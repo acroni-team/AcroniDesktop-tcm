@@ -125,6 +125,7 @@
             this.btnEnviar.TabIndex = 5;
             this.btnEnviar.Text = "Enviar";
             this.btnEnviar.UseVisualStyleBackColor = true;
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             this.btnEnviar.MouseEnter += new System.EventHandler(this.btnInput_MouseEnter);
             this.btnEnviar.MouseLeave += new System.EventHandler(this.btnInput_MouseLeave);
             // 

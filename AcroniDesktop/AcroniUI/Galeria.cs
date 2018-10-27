@@ -114,18 +114,17 @@ namespace AcroniUI
                     Share.CollectionsName.Add(userCollection.CollectionName);
                     //Chama o controle de usuário
                     CollectionUI collectionUi = new CollectionUI();
-
-                    if (selectMode)
-                    {
-                        collectionUi.Cursor = Cursors.Hand;
-                        collectionUi.MouseEnter += new EventHandler(changeColor_MouseEnter);
-                        collectionUi.MouseLeave += new EventHandler(returnColor_MouseLeave);
-                    }
-
+                    collectionUi.MouseEnter += new EventHandler(changeColor_MouseEnter);
+                    collectionUi.MouseLeave += new EventHandler(returnColor_MouseLeave);
                     collectionUi.Click += new EventHandler(collectionUi_Click);
                     collectionUi.Location = new Point(16, 8 + countHeightCollection);
+                    foreach (Control c in collectionUi.Controls)
+                        if (c is Panel)
+                        {
+                            c.Click += new EventHandler(collectionUi_Click);
+                            break;
+                        }
                     pnlScroll.Controls.Add(collectionUi);
-
                     Share.KeyboardsQuantity = 0;
                     Share.Collection.CollectionName = "";
                     Share.Keyboard.Name = "";
@@ -149,30 +148,35 @@ namespace AcroniUI
 
         private void collectionUi_Click(object sender, EventArgs e)
         {
-            if (selectMode)
+            Panel painelkapakapaALO;
+            Regex keyboardsQuantity = new Regex(@"• \d+ Teclados");
+            if ((sender as Panel).Parent is Panel)
+                painelkapakapaALO = (Panel) (sender as Panel).Parent;
+            else
+                painelkapakapaALO = (sender as Panel);
+            foreach (Control items in painelkapakapaALO.Controls)
             {
-                Regex keyboardsQuantity = new Regex(@"• \d+ Teclados");
-                foreach (Control items in (sender as Panel).Controls)
+                if (!(keyboardsQuantity.IsMatch(items.Text)))
                 {
-                    if (!(keyboardsQuantity.IsMatch(items.Text)))
-                    {
-                        Share.Collection.CollectionName = items.Text;
-                        Share.KeyboardsQuantity = 0;
-                        this.Close();
-                        break;
-                    }
 
+                    foreach (Collection userCollection in Share.User.UserCollections)
+                        if (userCollection.CollectionName.Equals(items.Text))
+                            Share.Collection = userCollection;
+                    Share.KeyboardsQuantity = 0;
+                    if (!selectMode)
+                    {
+                        CollectionSelected openSelectedCollection = new CollectionSelected();
+                        openSelectedCollection.Show();
+                    }
+                    this.Close();
+                    break;
                 }
             }
-            else
-            {
-
-            }
-
         }
         private void changeColor_MouseEnter(object sender, EventArgs e)
         {
             (sender as Panel).BackColor = Color.FromArgb((sender as Panel).BackColor.A - 60, (sender as Panel).BackColor.R, (sender as Panel).BackColor.G, (sender as Panel).BackColor.B);
+           
         }
         private void returnColor_MouseLeave(object sender, EventArgs e)
         {
@@ -215,13 +219,9 @@ namespace AcroniUI
                 Share.Collection.CollectionName = newCollection.CollectionName;
 
                 AcroniControls.CollectionUI collectionUi = new AcroniControls.CollectionUI();
-
-                if (selectMode)
-                {
-                    collectionUi.Cursor = Cursors.Hand;
+     
                     collectionUi.MouseEnter += new EventHandler(changeColor_MouseEnter);
                     collectionUi.MouseLeave += new EventHandler(returnColor_MouseLeave);
-                }
 
                 foreach (Control itemColecao in collectionUi.Controls)
                 {
