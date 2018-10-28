@@ -723,8 +723,12 @@ namespace AcroniUI.Custom
                                         c.Font = k.Font;
                                         c.Text = k.Text;
                                         c.BackColor = k.Color;
-                                        keycap.BackColor = Color.FromArgb(90, k.Color);
-                                        (c as Label).TextAlign = (ContentAlignment)ContentAlignment;
+                                        if (!c.BackColor.Equals(Color.FromArgb(26, 26, 26)))
+                                        {
+                                            c.Parent.BackColor = Color.FromArgb(90, k.Color);
+                                            c.Parent.BackgroundImage = null;
+                                        }
+                                        (c as Label).TextAlign = ContentAlignment;
                                     }
                                 }
                                 ////keycap.Text = k.Text;
@@ -732,7 +736,7 @@ namespace AcroniUI.Custom
 
                                 break;
                             }
-                            catch (Exception) { }
+                            catch (Exception err) { }
                         }
                     }
                 }
@@ -851,6 +855,9 @@ namespace AcroniUI.Custom
             keyboard.KeyboardType = this.Name;
             keyboard.BackgroundImage = picBoxKeyboardBackground.Image;
             keyboard.BackgroundModeSize = picBoxKeyboardBackground.SizeMode;
+            Bitmap keyboardImage = new Bitmap(pnlWithKeycaps.Width, pnlWithKeycaps.Height);
+            pnlWithKeycaps.DrawToBitmap(keyboardImage, pnlWithKeycaps.ClientRectangle);
+            keyboard.KeyboardImage = keyboardImage;
             string text = "";
             Color backcolor = Color.Empty;
             Color forecolor = Color.Empty;
@@ -881,13 +888,11 @@ namespace AcroniUI.Custom
                         {
                             ForeColor = forecolor,
                             ID = name,
-                            //Text = tecla.Text,
                             Text = text,
                             Font = font,
                             Color = backcolor,
                             ContentAlignment = textalign,
                             Icon = image
-                            //ContentAlignment = (tecla as Button).TextAlign
                         });
                     }
                 }

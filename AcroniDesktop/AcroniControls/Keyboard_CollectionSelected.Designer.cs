@@ -44,7 +44,7 @@ namespace AcroniControls
             this.Controls.Add(this.picBoxPreviewKeyboard);
             this.Controls.Add(this.picBoxDeleteIcon);
             this.Location = new System.Drawing.Point(123, 123);
-            this.Name = "pnlKeyboard";
+            this.Name = Share.Keyboard.ID;
             this.Size = new System.Drawing.Size(222, 222);
             this.TabIndex = 0;
             // 
@@ -76,7 +76,9 @@ namespace AcroniControls
             this.picBoxPreviewKeyboard.BackColor = System.Drawing.Color.Transparent;
             this.picBoxPreviewKeyboard.Location = new System.Drawing.Point(19, 70);
             this.picBoxPreviewKeyboard.Name = "picBoxPreviewKeyboard";
+            this.picBoxPreviewKeyboard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxPreviewKeyboard.Size = new System.Drawing.Size(183, 61);
+            this.picBoxPreviewKeyboard.Image = Share.Keyboard.KeyboardImage;
             this.picBoxPreviewKeyboard.TabIndex = 0;
             this.picBoxPreviewKeyboard.TabStop = false;
             // 
@@ -91,6 +93,7 @@ namespace AcroniControls
             this.lblKeyboardType.TabIndex = 21;
             this.lblKeyboardType.Text = Share.Keyboard.KeyboardType;
             this.lblKeyboardType.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+
         }
 
         #endregion

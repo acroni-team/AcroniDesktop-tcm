@@ -16,7 +16,9 @@ namespace AcroniControls
             InitializeComponent();
             Bunifu.Framework.UI.BunifuElipse roundCorners = new Bunifu.Framework.UI.BunifuElipse();
             roundCorners.ApplyElipse(this, 7);
+            
         }
+       
 
     }
 }

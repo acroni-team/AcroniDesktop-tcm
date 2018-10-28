@@ -1,5 +1,6 @@
 ﻿using AcroniControls;
 using AcroniLibrary.FileInfo;
+using AcroniUI.Custom;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,27 +25,97 @@ namespace AcroniUI
             lblKeyboardsNumber.Text = contKeyboards + " "+lblKeyboardsNumber.Text;
 
         }
+
         private void loadKeyboards()
         {
             int countLateralPadding = 0;
             int countUpBottomPadding = 0;
+            bool canCountLateralPadding = true;
             foreach (Keyboard userKeyboard in Share.Collection.Keyboards)
             {
-                Share.Keyboard.NickName = userKeyboard.NickName;
-                Share.Keyboard.KeyboardType = userKeyboard.KeyboardType;
-                Keyboard_CollectionSelected userKeyboardUI = new Keyboard_CollectionSelected();
+                Share.Keyboard = userKeyboard;           
+                Keyboard_CollectionSelected userKeyboardUI = new Keyboard_CollectionSelected();                         
+                userKeyboardUI.Location = new Point(countLateralPadding, countUpBottomPadding);
                 if (countLateralPadding == 468)
                 {
                     countLateralPadding = 0;
-                    countUpBottomPadding += 476;
-                }               
-                userKeyboardUI.Location = new Point(0+countLateralPadding, 0+countUpBottomPadding);
-                pnlWithKeyboards.Controls.Add(userKeyboardUI);
+                    countUpBottomPadding += 238;
+                    canCountLateralPadding = false;
+                }
+                if(canCountLateralPadding)
                 countLateralPadding += 234;
-                contKeyboards++;               
+                foreach (Control c in userKeyboardUI.Controls)
+                {
+                    if (c.Name.Equals("picBoxDeleteIcon"))
+                        c.Click += new EventHandler(DeleteKeyboard);
+                    else if (c.Name.Equals("picBoxPreviewKeyboard") || c.Name.Equals("lblKeyboardType") || c.Name.Equals("lblKeyboardName"))
+                    {
+                        c.Click += new EventHandler(OpenKeyboard);
+                        c.MouseEnter += new EventHandler(MouseEnter);
+                    }
+
+                }
+                userKeyboardUI.MouseEnter += new EventHandler(MouseEnter);
+                userKeyboardUI.MouseLeave += new EventHandler(MouseLeave);
+                pnlWithKeyboards.Controls.Add(userKeyboardUI);
+                contKeyboards++;
+                canCountLateralPadding = true;         
             }
         }
+        private void OpenKeyboard(object sender, EventArgs e)
+        {
+            Panel parent;
+            if ((sender as Control).Parent.Name.Equals("pnlWithKeyboards"))
+                parent = (Panel)sender;
+            else
+                parent = (Panel)(sender as Control).Parent;
+            foreach (Collection userCollection in Share.User.UserCollections)
+                if (userCollection.CollectionName.Equals(lblCollectionName.Text))
+                    foreach (Keyboard userKeyboard in userCollection.Keyboards)
+                        if (userKeyboard.ID.Equals(parent.Name))
+                        {
+                            Share.Keyboard = userKeyboard;
+                            Share.EditKeyboard = true;
+                            Form editKeyboard = null;
+                            if (userKeyboard.KeyboardType.Equals("Compacto"))
+                                editKeyboard = new Compacto();
+                            else if (userKeyboard.KeyboardType.Equals("Tenkeyless"))
+                                editKeyboard = new Tenkeyless();
+                            else if (userKeyboard.KeyboardType.Equals(("FullSize")))
+                                editKeyboard = new Fullsize();
+                            editKeyboard.Show();
+                            this.Close();
+                        }
 
-        
+        }    
+        private void DeleteKeyboard(object sender, EventArgs e)
+        {
+            foreach (Collection userCollection in Share.User.UserCollections)
+                if (userCollection.CollectionName.Equals(lblCollectionName.Text))
+                    foreach (Keyboard userKeyboard in userCollection.Keyboards)
+                        if (userKeyboard.ID.Equals((sender as PictureBox).Parent.Name))
+                        {
+                            userCollection.Keyboards.Remove(userKeyboard);
+                            Share.User.SendToFile();
+                            CollectionSelected recharge = new CollectionSelected();
+                            recharge.Show();
+                            this.Close();
+                            break;
+                            
+                        }
+        }
+        private new void MouseEnter(object sender, EventArgs e)
+        {
+            Panel father;
+            if (!(sender as Control).Parent.Name.Equals("pnlWithKeycaps"))
+                father = (Panel)(sender as Control).Parent;
+            else
+                father = (Panel)(sender as Control);
+            father.BackColor = Color.FromArgb(40, father.BackColor);
+        }
+        private new void MouseLeave(object sender, EventArgs e)
+        {   
+            (sender as Control).BackColor = Color.FromArgb(100, (sender as Control).BackColor);
+        }
     }
 }
