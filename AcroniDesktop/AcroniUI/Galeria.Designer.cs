@@ -56,11 +56,11 @@
             // lblNomeUsuBoasVindas
             // 
             this.lblNomeUsuBoasVindas.AutoSize = true;
-            this.lblNomeUsuBoasVindas.Font = new System.Drawing.Font("Open Sans ExtraBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeUsuBoasVindas.Font = new System.Drawing.Font("Open Sans ExtraBold", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomeUsuBoasVindas.ForeColor = System.Drawing.Color.White;
             this.lblNomeUsuBoasVindas.Location = new System.Drawing.Point(857, 64);
             this.lblNomeUsuBoasVindas.Name = "lblNomeUsuBoasVindas";
-            this.lblNomeUsuBoasVindas.Size = new System.Drawing.Size(45, 28);
+            this.lblNomeUsuBoasVindas.Size = new System.Drawing.Size(47, 30);
             this.lblNomeUsuBoasVindas.TabIndex = 16;
             this.lblNomeUsuBoasVindas.Text = "joj!";
             // 
