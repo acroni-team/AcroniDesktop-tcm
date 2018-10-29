@@ -52,10 +52,13 @@
             this.btnOpenCompacto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.btnOpenCompacto.Controls.Add(this.lblCompacto);
             this.btnOpenCompacto.Controls.Add(this.picBoxCompacto);
+            this.btnOpenCompacto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOpenCompacto.Location = new System.Drawing.Point(320, 40);
             this.btnOpenCompacto.Name = "btnOpenCompacto";
             this.btnOpenCompacto.Size = new System.Drawing.Size(960, 227);
             this.btnOpenCompacto.TabIndex = 16;
+            this.btnOpenCompacto.MouseEnter += new System.EventHandler(this.btnOpenTenkeyless_MouseEnter);
+            this.btnOpenCompacto.MouseLeave += new System.EventHandler(this.btnOpenTenkeyless_MouseLeave);
             // 
             // lblCompacto
             // 
@@ -79,6 +82,8 @@
             this.picBoxCompacto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxCompacto.TabIndex = 4;
             this.picBoxCompacto.TabStop = false;
+            this.picBoxCompacto.MouseEnter += new System.EventHandler(this.btnOpenFullSize_MouseEnter);
+            this.picBoxCompacto.MouseLeave += new System.EventHandler(this.picBoxOpenFullSize_MouseLeave);
             // 
             // picBoxOpenFullSize
             // 
@@ -100,10 +105,13 @@
             this.btnOpenTenkeyless.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.btnOpenTenkeyless.Controls.Add(this.lblTenkeyless);
             this.btnOpenTenkeyless.Controls.Add(this.picBoxOpenTenkeyless);
+            this.btnOpenTenkeyless.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOpenTenkeyless.Location = new System.Drawing.Point(320, 267);
             this.btnOpenTenkeyless.Name = "btnOpenTenkeyless";
             this.btnOpenTenkeyless.Size = new System.Drawing.Size(960, 227);
             this.btnOpenTenkeyless.TabIndex = 17;
+            this.btnOpenTenkeyless.MouseEnter += new System.EventHandler(this.btnOpenTenkeyless_MouseEnter);
+            this.btnOpenTenkeyless.MouseLeave += new System.EventHandler(this.btnOpenTenkeyless_MouseLeave);
             // 
             // lblTenkeyless
             // 
@@ -127,6 +135,8 @@
             this.picBoxOpenTenkeyless.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxOpenTenkeyless.TabIndex = 2;
             this.picBoxOpenTenkeyless.TabStop = false;
+            this.picBoxOpenTenkeyless.MouseEnter += new System.EventHandler(this.btnOpenFullSize_MouseEnter);
+            this.picBoxOpenTenkeyless.MouseLeave += new System.EventHandler(this.picBoxOpenFullSize_MouseLeave);
             // 
             // btnOpenFullSize
             // 
@@ -140,8 +150,8 @@
             this.btnOpenFullSize.Size = new System.Drawing.Size(960, 227);
             this.btnOpenFullSize.TabIndex = 18;
             this.btnOpenFullSize.Click += new System.EventHandler(this.picBoxOpenFullSize_Click);
-            this.btnOpenFullSize.MouseEnter += new System.EventHandler(this.btnOpenFullSize_MouseEnter);
-            this.btnOpenFullSize.MouseLeave += new System.EventHandler(this.btnOpenFullSize_MouseLeave);
+            this.btnOpenFullSize.MouseEnter += new System.EventHandler(this.btnOpenTenkeyless_MouseEnter);
+            this.btnOpenFullSize.MouseLeave += new System.EventHandler(this.btnOpenTenkeyless_MouseLeave);
             // 
             // lblFullSize
             // 

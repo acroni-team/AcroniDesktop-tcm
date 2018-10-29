@@ -28,16 +28,33 @@ namespace AcroniUI
 
 
 
-        private async void btnOpenFullSize_MouseEnter(object sender, System.EventArgs e)
+        private async void btnOpenFullSize_MouseEnter(object sender, EventArgs e)
         {
+            int height = 240;
+            int contSize;
+            int contLocation;
             if ((sender as Control) is PictureBox)
-                canDoAnimation = false;    
-                while (picBoxOpenFullSize.Height < 340)
-                {                
+            {              
+                canDoAnimation = false;
+                if ((sender as Control).Name.Contains("Tenkeyless")|| (sender as Control).Name.Contains("Compacto"))
+                {
+                    contLocation = 2;
+                    contSize = 4;
+                }               
+                else
+                {
+                    height = 340;
+                    contSize = 10;
+                    contLocation = 5;
+                }
+
+                while ((sender as Control).Height < height)
+                {
                     await Task.Delay(1);
-                    picBoxOpenFullSize.Size = new System.Drawing.Size(Convert.ToInt32(picBoxOpenFullSize.Size.Width + 10), Convert.ToInt32(picBoxOpenFullSize.Height + 10));
-                    picBoxOpenFullSize.Location = new System.Drawing.Point(Convert.ToInt32(picBoxOpenFullSize.Location.X - 5), Convert.ToInt32(picBoxOpenFullSize.Location.Y - 5));
-                }           
+                    (sender as Control).Size = new System.Drawing.Size((sender as Control).Size.Width + contSize, (sender as Control).Height + contSize);
+                    (sender as Control).Location = new System.Drawing.Point((sender as Control).Location.X - contLocation, (sender as Control).Location.Y - contLocation);
+                }
+            }         
         }
 
         private void picBoxOpenFullSize_Click(object sender, EventArgs e)
@@ -47,29 +64,44 @@ namespace AcroniUI
             this.Close();
         }
 
-        private async void btnOpenFullSize_MouseLeave(object sender, EventArgs e)
-        {
-            while (picBoxOpenFullSize.Height > 201)
-            {
-                if (!canDoAnimation)
-                    break;
-                    await Task.Delay(1);
-                picBoxOpenFullSize.Size = new System.Drawing.Size(Convert.ToInt32(picBoxOpenFullSize.Size.Width - 10), Convert.ToInt32(picBoxOpenFullSize.Height - 10));
-                picBoxOpenFullSize.Location = new System.Drawing.Point(Convert.ToInt32(picBoxOpenFullSize.Location.X + 5), Convert.ToInt32(picBoxOpenFullSize.Location.Y + 5));
-            }
-        }
-
         private async void picBoxOpenFullSize_MouseLeave(object sender, EventArgs e)
         {
-            if (picBoxOpenFullSize.Height > 202)
+            int height = 240;
+            int contSize;
+            int contLocation;
+            if ((sender as Control) is PictureBox)
             {
-                while (picBoxOpenFullSize.Height > 201)
+                canDoAnimation = false;
+                if ((sender as Control).Name.Contains("Tenkeyless")|| (sender as Control).Name.Contains("Compacto"))
                 {
-                    await Task.Delay(1);
-                    picBoxOpenFullSize.Size = new System.Drawing.Size(Convert.ToInt32(picBoxOpenFullSize.Size.Width - 10), Convert.ToInt32(picBoxOpenFullSize.Height - 10));
-                    picBoxOpenFullSize.Location = new System.Drawing.Point(Convert.ToInt32(picBoxOpenFullSize.Location.X + 5), Convert.ToInt32(picBoxOpenFullSize.Location.Y + 5));
+                    contLocation = 2;
+                    contSize = 4;
+                }
+                else
+                {
+                    height = 340;
+                    contSize = 10;
+                    contLocation = 5;
+                }
+                if ((sender as Control).Height > 202)
+                {
+                    while ((sender as Control).Height > 201)
+                    {
+                        await Task.Delay(1);
+                        (sender as Control).Size = new System.Drawing.Size((sender as Control).Size.Width - contSize, (sender as Control).Height - contSize);
+                        (sender as Control).Location = new System.Drawing.Point((sender as Control).Location.X + contLocation, (sender as Control).Location.Y + contLocation);
+                    }
                 }
             }
+        }
+        private void btnOpenTenkeyless_MouseEnter(object sender, EventArgs e)
+        {
+            (sender as Control).BackColor = Color.FromArgb(20,20,20);
+        }
+
+        private void btnOpenTenkeyless_MouseLeave(object sender, EventArgs e)
+        {
+            (sender as Control).BackColor = Color.FromArgb(41,42,44);
         }
     }
 }
