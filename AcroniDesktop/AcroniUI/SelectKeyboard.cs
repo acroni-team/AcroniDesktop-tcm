@@ -36,11 +36,16 @@ namespace AcroniUI
             if ((sender as Control) is PictureBox)
             {              
                 canDoAnimation = false;
-                if ((sender as Control).Name.Contains("Tenkeyless")|| (sender as Control).Name.Contains("Compacto"))
+                if ((sender as Control).Name.Contains("Tenkeyless"))
                 {
                     contLocation = 2;
                     contSize = 4;
-                }               
+                }
+                else if ((sender as Control).Name.Contains("Compacto"))
+                {
+                    contLocation = 1;
+                    contSize = 2;
+                }
                 else
                 {
                     height = 340;
@@ -72,10 +77,15 @@ namespace AcroniUI
             if ((sender as Control) is PictureBox)
             {
                 canDoAnimation = false;
-                if ((sender as Control).Name.Contains("Tenkeyless")|| (sender as Control).Name.Contains("Compacto"))
+                if ((sender as Control).Name.Contains("Tenkeyless"))
                 {
                     contLocation = 2;
                     contSize = 4;
+                }
+                else if((sender as Control).Name.Contains("Compacto"))
+                {
+                    contLocation = 1;
+                    contSize = 2;
                 }
                 else
                 {
@@ -102,6 +112,13 @@ namespace AcroniUI
         private void btnOpenTenkeyless_MouseLeave(object sender, EventArgs e)
         {
             (sender as Control).BackColor = Color.FromArgb(41,42,44);
+        }
+
+        private void picBoxCompacto_Click(object sender, EventArgs e)
+        {
+            Compacto compacto = new Compacto();
+            compacto.Show();
+            this.Close();
         }
     }
 }

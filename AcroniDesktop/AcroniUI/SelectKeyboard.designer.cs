@@ -57,6 +57,7 @@
             this.btnOpenCompacto.Name = "btnOpenCompacto";
             this.btnOpenCompacto.Size = new System.Drawing.Size(960, 227);
             this.btnOpenCompacto.TabIndex = 16;
+            this.btnOpenCompacto.Click += new System.EventHandler(this.picBoxCompacto_Click);
             this.btnOpenCompacto.MouseEnter += new System.EventHandler(this.btnOpenTenkeyless_MouseEnter);
             this.btnOpenCompacto.MouseLeave += new System.EventHandler(this.btnOpenTenkeyless_MouseLeave);
             // 
@@ -71,6 +72,7 @@
             this.lblCompacto.Size = new System.Drawing.Size(233, 55);
             this.lblCompacto.TabIndex = 5;
             this.lblCompacto.Text = "Compacto";
+            this.lblCompacto.Click += new System.EventHandler(this.picBoxCompacto_Click);
             // 
             // picBoxCompacto
             // 
@@ -82,6 +84,7 @@
             this.picBoxCompacto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxCompacto.TabIndex = 4;
             this.picBoxCompacto.TabStop = false;
+            this.picBoxCompacto.Click += new System.EventHandler(this.picBoxCompacto_Click);
             this.picBoxCompacto.MouseEnter += new System.EventHandler(this.btnOpenFullSize_MouseEnter);
             this.picBoxCompacto.MouseLeave += new System.EventHandler(this.picBoxOpenFullSize_MouseLeave);
             // 
