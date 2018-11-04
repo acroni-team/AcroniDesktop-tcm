@@ -205,8 +205,8 @@ namespace AcroniUI
         protected virtual void btnDesconectar_Click(object sender, EventArgs e)
         {
             AcroniMessageBoxConfirm confirmExit =  new AcroniControls.AcroniMessageBoxConfirm("Saindo daqui", "Deseja realmente deslogar?", "OK");
-            confirmExit.ShowDialog();
-            if (confirmExit.ButtonClicked == AcceptButtons.OK)
+
+            if (confirmExit.ShowDialog() == DialogResult.Yes)
             {
                 foreach (Form form in Application.OpenForms)
                 {

@@ -1,12 +1,9 @@
 ﻿using AcroniControls;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Windows.Forms;
 
 namespace AcroniUI.Custom.CustomModules
@@ -25,18 +22,43 @@ namespace AcroniUI.Custom.CustomModules
             {
                 e.ApplyElipse(c, 5);
             }
+
+            if (File.Exists(@"..\..\UserImagesIcons\iconsHistoric.hist"))
+            {
+                using (FileStream openarchive = new FileStream(Application.StartupPath + @"\iconsHistoric.hist", FileMode.Open))
+                {
+                    try
+                    {
+                        BinaryFormatter fromByteArrayToObject = new BinaryFormatter();
+                        List<Image> __currentList = (List<Image>)fromByteArrayToObject.Deserialize(openarchive);
+
+                        for (int i = 0; i < __currentList.Count; i++)
+                        {
+                            (pnlImages.Controls[$"pnlImg{i + 1}"].Controls[$"picBoxImg{i + 1}"] as PictureBox).Image = __currentList[i];
+                            (pnlImages.Controls[$"pnlImg{i + 1}"].Controls[$"picBoxImg{i + 1}"] as PictureBox).SizeMode = PictureBoxSizeMode.Zoom;
+                            (pnlImages.Controls[$"pnlImg{i + 1}"] as Panel).Visible = true;
+                            (pnlImages.Controls[$"pnlImg{i + 1}"] as Panel).BackColor = Color.FromArgb(80, 80, 80);
+                            //(pnlImages.Controls[$"pnlImg{i + 1}"].Controls[$"lblPic{i + 1}"] as Label).Text = ;
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        throw new Exception("Arquivo não encontrado. ");
+                    }
+                }
+            }
         }
 
         //Declaração das propriedades dos ícones
         private Queue<Image> ImageQueue = new Queue<Image>();
 
-        public Image SelectedImg { get; set; }
+        public Image SelectedImg { get; set; } 
 
         public static bool HasChosenAnImg { get; set; }
 
         private void btnNewIcon_Click(object sender, EventArgs e)
         {
-            List<Image> insertableArray = new List<Image> { };
+            List<AcroniLibrary.FileInfo.> insertableArray = new List<> { };
             using (OpenFileDialog iconGetter = new OpenFileDialog())
             {
                 iconGetter.InitialDirectory = @"C:\";
@@ -62,14 +84,19 @@ namespace AcroniUI.Custom.CustomModules
                     insertableArray.Add(ImageQueue.ToArray()[aux]);
                 }
             }
+
             for (int i = 0; i < ImageQueue.Count; i++)
             {
                 (pnlImages.Controls[$"pnlImg{i + 1}"].Controls[$"picBoxImg{i + 1}"] as PictureBox).Image = insertableArray[i];
                 (pnlImages.Controls[$"pnlImg{i + 1}"].Controls[$"picBoxImg{i + 1}"] as PictureBox).SizeMode = PictureBoxSizeMode.Zoom;
                 (pnlImages.Controls[$"pnlImg{i + 1}"] as Panel).Visible = true;
-                this.e.ApplyElipse(pnlImages.Controls[$"pnlImg{i + 1}"] as Panel, 5);
                 (pnlImages.Controls[$"pnlImg{i + 1}"] as Panel).BackColor = Color.FromArgb(80, 80, 80);
                 (pnlImages.Controls[$"pnlImg{i + 1}"].Controls[$"lblPic{i + 1}"] as Label).Text = __imageName;
+                using (FileStream savearchive = new FileStream(@"..\..\UserImagesIcons\iconsHistoric.hist", FileMode.Create))
+                {
+                    BinaryFormatter Serializer = new BinaryFormatter();
+                    Serializer.Serialize(savearchive, insertableArray);
+                }
             }
         }
 

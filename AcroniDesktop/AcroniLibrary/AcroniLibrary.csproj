@@ -59,6 +59,7 @@
       <DependentUpon>ControlKeyboard.cs</DependentUpon>
     </Compile>
     <Compile Include="FileInfo\ControlKeyboard_Collections.cs" />
+    <Compile Include="FileInfo\KeyboardIcons.cs" />
     <Compile Include="FileInfo\Share.cs" />
     <Compile Include="CustomizingMethods\FormManipulator.cs" />
     <Compile Include="SQL\SQLConnection.cs" />
@@ -82,5 +83,6 @@
     <None Include="AcroniLibrary.cd" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
