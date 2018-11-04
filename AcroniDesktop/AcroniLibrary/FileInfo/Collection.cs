@@ -10,7 +10,6 @@ namespace AcroniLibrary.FileInfo
         public List<Keyboard> Keyboards { get; set; } = new List<Keyboard>();
         public string CollectionName { get; set; }
         public Color CollectionColor { get; set; }
-
         /// <summary>
         /// Esse membro necessita que a classe Bitmap seja instanciada com os devidos parâmetros.
         /// </summary>

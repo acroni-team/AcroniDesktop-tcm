@@ -68,11 +68,17 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClientInformation.cs">
+    <Compile Include="Custom\ClientInformation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClientInformation.Designer.cs">
+    <Compile Include="Custom\ClientInformation.Designer.cs">
       <DependentUpon>ClientInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CollectionSelected.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CollectionSelected.Designer.cs">
+      <DependentUpon>CollectionSelected.cs</DependentUpon>
     </Compile>
     <Compile Include="Custom\CustomModules\KeycapBackgroundModule.cs">
       <SubType>Form</SubType>
@@ -177,8 +183,11 @@
     <Compile Include="Template.Designer.cs">
       <DependentUpon>Template.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ClientInformation.resx">
+    <EmbeddedResource Include="Custom\ClientInformation.resx">
       <DependentUpon>ClientInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CollectionSelected.resx">
+      <DependentUpon>CollectionSelected.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Custom\Compacto.resx">
       <DependentUpon>Compacto.cs</DependentUpon>

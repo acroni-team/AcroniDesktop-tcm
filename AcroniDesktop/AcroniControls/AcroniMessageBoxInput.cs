@@ -11,7 +11,7 @@ namespace AcroniControls
 
         public string alblMessage
         {
-            get => alblMessage1.Text;
+            get { return alblMessage1.Text; }
         }
 
         protected void doBasic()
@@ -65,6 +65,12 @@ namespace AcroniControls
         private void txtUserInput_TextChanged(object sender, EventArgs e)
         {
             input = txtUserInput.Text;
+        }
+
+        private void btnEnviar_Click(object sender, EventArgs e)
+        {
+            Share.KeyboardNameNotCreated = txtUserInput.Text;
+            this.Close();
         }
     }
 }

@@ -2,6 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Windows.Forms;
 
 namespace AcroniLibrary.FileInfo
 {
@@ -11,7 +14,14 @@ namespace AcroniLibrary.FileInfo
         public List<Collection> UserCollections { get; set; } = new List<Collection>();
         public string UserName { get; set; }
         public int ID { get; set; }
-
+        public void SendToFile()
+        {
+            using (FileStream savearchive = new FileStream(Application.StartupPath + @"\" + SQLConnection.nome_usuario + ".acr", FileMode.OpenOrCreate))
+            {
+                BinaryFormatter objectToByteArray = new BinaryFormatter();
+                objectToByteArray.Serialize(savearchive, Share.User);
+            }
+        }
         //public User()
         //{
         //    using (SqlConnection cnn = new SqlConnection(SQLConnection.nome_conexao))
