@@ -14,6 +14,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using AcroniLibrary.Drawing;
 using System.Drawing.Imaging;
 using Bunifu.Framework.UI;
+using System.Data.SqlClient;
 
 namespace AcroniUI.Custom
 {
@@ -369,7 +370,7 @@ namespace AcroniUI.Custom
             GenerateDarkScreenshot();
             kpm.StartPosition = FormStartPosition.CenterScreen;
             kpm.ShowDialog(this);
-            if (kpm.DialogResult == DialogResult.OK || kpm.DialogResult == DialogResult.Cancel || kpm.DialogResult == DialogResult.Yes || kpm.DialogResult == DialogResult.No )
+            if (kpm.DialogResult == DialogResult.OK || kpm.DialogResult == DialogResult.Cancel || kpm.DialogResult == DialogResult.Yes || kpm.DialogResult == DialogResult.No)
                 DisposePanel();
         }
 
@@ -439,12 +440,13 @@ namespace AcroniUI.Custom
 
             lblKeyboardName.Location = new Point(lblCollectionName.Location.X + lblCollectionName.Size.Width - 5, lblCollectionName.Location.Y);
 
-            //cmbFontes
             if (string.IsNullOrEmpty(Share.Keyboard.NickName))
             {
                 lblKeyboardName.Text = KeyboardIDGenerator.GenerateID('C');
                 lblCollectionName.Visible = false;
                 lblKeyboardName.Location = lblCollectionName.Location;
+                Share.Keyboard.NickName = "Sem nome";
+                Share.Collection.CollectionName = "";
             }
             else
             {
@@ -778,6 +780,15 @@ namespace AcroniUI.Custom
 
         private async void btnSalvar_Click(object sender, EventArgs e)
         {
+            if (Share.User.KeyboardQuantity < 5)
+                Share.User.KeyboardQuantity++;
+            else
+            {
+                AcroniMessageBoxConfirm mb = new AcroniMessageBoxConfirm("Sinto muito, mas você atingiu o limite de teclados que você " +
+                    "pode criar usando essa conta.", "Atualize sua conta agora mesmo para uma conta Premium");
+                mb.ShowDialog();
+            }
+
             if (!Share.EditKeyboard)
             {
                 AcroniMessageBoxInput keyboardName = new AcroniMessageBoxInput("Insira o nome de seu teclado");
@@ -927,7 +938,7 @@ namespace AcroniUI.Custom
             else
                 MessageBox.Show("Não fez");
 
-            
+
             //if (SQLMethods.INSERT_INTO($"insert into tblPedidosTecladoCustomizado values ((select top 1 id_teclado_customizado from tblTecladoCustomizado order by id_teclado_customizado DESC), @image)", img) != 0)
             //MessageBox.Show("Fez");
             //else
@@ -940,7 +951,7 @@ namespace AcroniUI.Custom
 
         #endregion
 
-        
+
     }
 }
 

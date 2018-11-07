@@ -27,31 +27,13 @@ namespace AcroniUI
         public TemplateMenu()
         {
             InitializeComponent();
-            //using (PrivateFontCollection fontesLayout = new PrivateFontCollection())
-            //{
-            //    fontesLayout.AddFontFile(Application.StartupPath + @"\Fontes\Qanelas-ExtraBold.ttf");
-            //    lblAcroni.Font = new Font(fontesLayout.Families[0], 16);
 
-            //}
-            //using (PrivateFontCollection fontesLayout = new PrivateFontCollection())
-            //{
-            //    fontesLayout.AddFontFile(Application.StartupPath + @"\Fontes\OpenSans-Regular.ttf");
-            //    arquivoToolStripMenuItem.Font = new Font(fontesLayout.Families[0], 12, FontStyle.Regular);
-            //    ajudaToolStripMenuItem.Font = new Font(fontesLayout.Families[0], 12, FontStyle.Regular);
-            //    lblPlanoUsu.Font = new Font(fontesLayout.Families[0], 9, FontStyle.Regular);
-            //    lblQtdDisponivel.Font = new Font(fontesLayout.Families[0], (float)8.25, FontStyle.Regular);
-            //    lblQtdDisponivel.Font = new Font(fontesLayout.Families[0], (float)8.25, FontStyle.Regular);
-
-            //}
-            //using (PrivateFontCollection fontesLayout = new PrivateFontCollection())
-            //{
-            //    fontesLayout.AddFontFile(Application.StartupPath + @"\Fontes\OpenSans-SemiBold.ttf");
-            //    lblNomeUsu.Font = new Font(fontesLayout.Families[0], 12);
-            //    foreach (Control menuItem in this.pnlOptions.Controls)
-            //    {
-            //        menuItem.Font = new Font(fontesLayout.Families[0], 13, FontStyle.Regular);
-            //    }
-            //}
+            for (int i = 0; i <= Share.User.KeyboardQuantity; i++)
+            {
+                if (Share.User.KeyboardQuantity == 0)
+                    break;
+                pnlAreaUsu.Controls[$"pnlPreenchido{i + 1}"].Visible = true;
+            }
             Bunifu.Framework.UI.BunifuElipse ellipse = new Bunifu.Framework.UI.BunifuElipse();
             foreach (Control c in pnlOptions.Controls)
             {
