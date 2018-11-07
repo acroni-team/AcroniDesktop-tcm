@@ -918,11 +918,16 @@ namespace AcroniUI.Custom
         #region Exportar pro site
         private void ExportToWebSite()
         {
-            if (SQLMethods.INSERT_INTO($"insert into tblTecladoCustomizado (nickname, preco) values ('{keyboard.NickName}', 254.00)") != 0)
+            byte[] img = ImageConvert.ImageToByteArray(Screenshot.TakeSnapshot(picBoxKeyboardBackground), ImageFormat.Bmp);
+            MessageBox.Show(Share.User.ID.ToString());
+            if (SQLMethods.INSERT_INTO($"insert into tblTecladoCustomizado (nickname, preco, imagem_teclado) values ('{keyboard.NickName}', 254.00, @image)", img) != 0)
+            {
                 MessageBox.Show("Fez");
+            }
             else
                 MessageBox.Show("Não fez");
-            byte[] img = ImageConvert.ImageToByteArray(Screenshot.TakeSnapshot(picBoxKeyboardBackground), ImageFormat.Bmp);
+
+            
             //if (SQLMethods.INSERT_INTO($"insert into tblPedidosTecladoCustomizado values ((select top 1 id_teclado_customizado from tblTecladoCustomizado order by id_teclado_customizado DESC), @image)", img) != 0)
             //MessageBox.Show("Fez");
             //else

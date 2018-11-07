@@ -58,7 +58,7 @@ namespace AcroniUI.Custom.CustomModules
 
         private void btnNewIcon_Click(object sender, EventArgs e)
         {
-            List<AcroniLibrary.FileInfo.> insertableArray = new List<> { };
+            List<Image> insertableArray = new List<Image> { };
             using (OpenFileDialog iconGetter = new OpenFileDialog())
             {
                 iconGetter.InitialDirectory = @"C:\";
