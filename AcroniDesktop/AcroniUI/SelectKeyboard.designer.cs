@@ -57,8 +57,6 @@
             this.btnOpenCompacto.Size = new System.Drawing.Size(960, 227);
             this.btnOpenCompacto.TabIndex = 16;
             this.btnOpenCompacto.Click += new System.EventHandler(this.picBoxCompacto_Click);
-            this.btnOpenCompacto.MouseEnter += new System.EventHandler(this.btnOpenTenkeyless_MouseEnter);
-            this.btnOpenCompacto.MouseLeave += new System.EventHandler(this.btnOpenTenkeyless_MouseLeave);
             // 
             // lblCompacto
             // 
@@ -111,8 +109,6 @@
             this.btnOpenTenkeyless.Name = "btnOpenTenkeyless";
             this.btnOpenTenkeyless.Size = new System.Drawing.Size(960, 227);
             this.btnOpenTenkeyless.TabIndex = 17;
-            this.btnOpenTenkeyless.MouseEnter += new System.EventHandler(this.btnOpenTenkeyless_MouseEnter);
-            this.btnOpenTenkeyless.MouseLeave += new System.EventHandler(this.btnOpenTenkeyless_MouseLeave);
             // 
             // lblTenkeyless
             // 
@@ -150,8 +146,6 @@
             this.btnOpenFullSize.Size = new System.Drawing.Size(960, 227);
             this.btnOpenFullSize.TabIndex = 18;
             this.btnOpenFullSize.Click += new System.EventHandler(this.picBoxOpenFullSize_Click);
-            this.btnOpenFullSize.MouseEnter += new System.EventHandler(this.btnOpenTenkeyless_MouseEnter);
-            this.btnOpenFullSize.MouseLeave += new System.EventHandler(this.btnOpenTenkeyless_MouseLeave);
             // 
             // lblFullSize
             // 
@@ -181,16 +175,6 @@
             this.Controls.SetChildIndex(this.btnOpenCompacto, 0);
             this.Controls.SetChildIndex(this.btnOpenTenkeyless, 0);
             this.Controls.SetChildIndex(this.btnOpenFullSize, 0);
-            this.btnOpenCompacto.ResumeLayout(false);
-            this.btnOpenCompacto.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxCompacto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxOpenFullSize)).EndInit();
-            this.btnOpenTenkeyless.ResumeLayout(false);
-            this.btnOpenTenkeyless.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxOpenTenkeyless)).EndInit();
-            this.btnOpenFullSize.ResumeLayout(false);
-            this.btnOpenFullSize.PerformLayout();
-            this.ResumeLayout(false);
 
         }
 

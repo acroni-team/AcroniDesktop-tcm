@@ -53,7 +53,6 @@ namespace AcroniUI
                     (sender as Control).Size = new System.Drawing.Size((sender as Control).Size.Width + contSize, (sender as Control).Height + contSize);
                     (sender as Control).Location = new System.Drawing.Point((sender as Control).Location.X - contLocation, (sender as Control).Location.Y - contLocation);
                 }
-                (sender as Control).Parent.BackColor = Color.FromArgb(20, 20, 20);
             }
         }
 
@@ -94,17 +93,7 @@ namespace AcroniUI
                         (sender as Control).Location = new System.Drawing.Point((sender as Control).Location.X + contLocation, (sender as Control).Location.Y + contLocation);
                     }
                 }
-                (sender as Control).Parent.BackColor = Color.FromArgb(41, 42, 44);
             }
-        }
-        private void btnOpenTenkeyless_MouseEnter(object sender, EventArgs e)
-        {
-            (sender as Control).BackColor = Color.FromArgb(20, 20, 20);
-        }
-
-        private void btnOpenTenkeyless_MouseLeave(object sender, EventArgs e)
-        {
-            (sender as Control).BackColor = Color.FromArgb(41, 42, 44);
         }
 
         private void picBoxCompacto_Click(object sender, EventArgs e)
@@ -113,5 +102,6 @@ namespace AcroniUI
             compacto.Show();
             this.Close();
         }
+
     }
 }
