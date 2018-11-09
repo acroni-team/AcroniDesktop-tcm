@@ -13,6 +13,7 @@ namespace AcroniUI
     public partial class SelectKeyboard : TemplateMenu
     {
         bool canDoAnimation = true;
+
         public SelectKeyboard()
         {
             InitializeComponent();

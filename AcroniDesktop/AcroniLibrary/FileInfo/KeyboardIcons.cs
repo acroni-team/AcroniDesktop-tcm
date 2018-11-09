@@ -3,7 +3,7 @@ using System.Drawing;
 
 namespace AcroniLibrary.FileInfo
 {
-    class KeyboardIcons
+    public class KeyboardIcons
     {
         public Image UserIcon { get; set; }
 

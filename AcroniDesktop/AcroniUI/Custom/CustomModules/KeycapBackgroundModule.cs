@@ -1,4 +1,5 @@
 ﻿using AcroniControls;
+using AcroniLibrary.FileInfo;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -25,20 +26,20 @@ namespace AcroniUI.Custom.CustomModules
 
             if (File.Exists(@"..\..\UserImagesIcons\iconsHistoric.hist"))
             {
-                using (FileStream openarchive = new FileStream(Application.StartupPath + @"\iconsHistoric.hist", FileMode.Open))
+                using (FileStream openarchive = new FileStream(Application.StartupPath + @"..\..\..\UserImagesIcons\iconsHistoric.hist", FileMode.Open))
                 {
                     try
                     {
                         BinaryFormatter fromByteArrayToObject = new BinaryFormatter();
-                        List<Image> __currentList = (List<Image>)fromByteArrayToObject.Deserialize(openarchive);
+                        List<KeyboardIcons> __currentList = (List<KeyboardIcons>)fromByteArrayToObject.Deserialize(openarchive);
 
                         for (int i = 0; i < __currentList.Count; i++)
                         {
-                            (pnlImages.Controls[$"pnlImg{i + 1}"].Controls[$"picBoxImg{i + 1}"] as PictureBox).Image = __currentList[i];
+                            (pnlImages.Controls[$"pnlImg{i + 1}"].Controls[$"picBoxImg{i + 1}"] as PictureBox).Image = __currentList[i].UserIcon;
                             (pnlImages.Controls[$"pnlImg{i + 1}"].Controls[$"picBoxImg{i + 1}"] as PictureBox).SizeMode = PictureBoxSizeMode.Zoom;
                             (pnlImages.Controls[$"pnlImg{i + 1}"] as Panel).Visible = true;
                             (pnlImages.Controls[$"pnlImg{i + 1}"] as Panel).BackColor = Color.FromArgb(80, 80, 80);
-                            //(pnlImages.Controls[$"pnlImg{i + 1}"].Controls[$"lblPic{i + 1}"] as Label).Text = ;
+                            (pnlImages.Controls[$"pnlImg{i + 1}"].Controls[$"lblPic{i + 1}"] as Label).Text = __currentList[i].UserDefinedIconName;
                         }
                     }
                     catch (Exception)
@@ -58,7 +59,8 @@ namespace AcroniUI.Custom.CustomModules
 
         private void btnNewIcon_Click(object sender, EventArgs e)
         {
-            List<AcroniLibrary.FileInfo.> insertableArray = new List<> { };
+            List<KeyboardIcons> insertableArray = new List<KeyboardIcons>();
+
             using (OpenFileDialog iconGetter = new OpenFileDialog())
             {
                 iconGetter.InitialDirectory = @"C:\";
@@ -81,17 +83,23 @@ namespace AcroniUI.Custom.CustomModules
                 }
                 for (int aux = ImageQueue.Count - 1; aux >= 0; aux--)
                 {
-                    insertableArray.Add(ImageQueue.ToArray()[aux]);
+                    insertableArray.Add(new KeyboardIcons()
+                    {
+                        UserIcon = ImageQueue.ToArray()[aux],
+                        UserDefinedIconName = __imageName
+                    });
                 }
             }
 
             for (int i = 0; i < ImageQueue.Count; i++)
             {
-                (pnlImages.Controls[$"pnlImg{i + 1}"].Controls[$"picBoxImg{i + 1}"] as PictureBox).Image = insertableArray[i];
+                //É um array composto por uma imagem (ícone) junto com seu nome: 
+
+                (pnlImages.Controls[$"pnlImg{i + 1}"].Controls[$"picBoxImg{i + 1}"] as PictureBox).Image = insertableArray[i].UserIcon;
                 (pnlImages.Controls[$"pnlImg{i + 1}"].Controls[$"picBoxImg{i + 1}"] as PictureBox).SizeMode = PictureBoxSizeMode.Zoom;
                 (pnlImages.Controls[$"pnlImg{i + 1}"] as Panel).Visible = true;
                 (pnlImages.Controls[$"pnlImg{i + 1}"] as Panel).BackColor = Color.FromArgb(80, 80, 80);
-                (pnlImages.Controls[$"pnlImg{i + 1}"].Controls[$"lblPic{i + 1}"] as Label).Text = __imageName;
+                (pnlImages.Controls[$"pnlImg{i + 1}"].Controls[$"lblPic{i + 1}"] as Label).Text = insertableArray[i].UserDefinedIconName;
                 using (FileStream savearchive = new FileStream(@"..\..\UserImagesIcons\iconsHistoric.hist", FileMode.Create))
                 {
                     BinaryFormatter Serializer = new BinaryFormatter();
