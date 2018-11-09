@@ -173,6 +173,11 @@ namespace AcroniUI.LoginAndSignUp
                             if (resposta[0].ToString().Equals(txtSenha.Text))
                             {
                                 SQLConnection.nome_usuario = txtEntrar.Text;
+                                Share.User.KeyboardQuantity = (int) resposta[9];
+
+                                if (resposta[8].ToString() == "p")
+                                    Share.User.isPremiumAccount = true;
+
                                 selecionarTeclado = new SelectKeyboard();
                                 selecionarTeclado.Show();
                                 Hide();
