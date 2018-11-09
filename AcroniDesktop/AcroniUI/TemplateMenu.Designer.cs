@@ -314,6 +314,7 @@
             this.Controls.Add(this.pnlAreaUsu);
             this.Name = "TemplateMenu";
             this.Opacity = 1D;
+            this.Load += new System.EventHandler(this.TemplateMenu_Load);
             this.Controls.SetChildIndex(this.pnlAreaUsu, 0);
             this.Controls.SetChildIndex(this.pnlOptions, 0);
             this.Controls.SetChildIndex(this.pnlStripAjuda, 0);

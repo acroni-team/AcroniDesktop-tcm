@@ -34,8 +34,11 @@ namespace AcroniLibrary.FileInfo
                 {
                     using (SqlDataReader sdr = select.ExecuteReader())
                     {
-                        sdr.Read();
-                        ID = (int)sdr[0];
+                        if (sdr.HasRows)
+                        {
+                            sdr.Read();
+                            this.ID = (int)sdr[0];
+                        }
                     }
                 }
             }

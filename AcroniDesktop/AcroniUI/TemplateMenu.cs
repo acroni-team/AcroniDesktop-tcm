@@ -27,13 +27,16 @@ namespace AcroniUI
         public TemplateMenu()
         {
             InitializeComponent();
-            
+
+            Share.User = new User();
+
             for (int i = 0; i <= Share.User.KeyboardQuantity; i++)
             {
                 if (Share.User.KeyboardQuantity == 0)
                     break;
                 pnlAreaUsu.Controls[$"pnlPreenchido{i + 1}"].Visible = true;
             }
+
             Bunifu.Framework.UI.BunifuElipse ellipse = new Bunifu.Framework.UI.BunifuElipse();
             foreach (Control c in pnlOptions.Controls)
             {
@@ -213,6 +216,11 @@ namespace AcroniUI
         {
             FadeOut();
             (new ClientInformation()).Show();
+        }
+
+        private void TemplateMenu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
