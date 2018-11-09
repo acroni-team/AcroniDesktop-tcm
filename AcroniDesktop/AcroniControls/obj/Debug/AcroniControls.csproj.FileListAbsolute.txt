@@ -13,3 +13,4 @@ E:\Desktop\c\AcroniDesktop\AcroniDesktop\AcroniControls\bin\Debug\AcroniLibrary.
 E:\Desktop\c\AcroniDesktop\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.csproj.CopyComplete
 E:\Desktop\c\AcroniDesktop\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.dll
 E:\Desktop\c\AcroniDesktop\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.pdb
+E:\Desktop\c\AcroniDesktop\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.csprojAssemblyReference.cache

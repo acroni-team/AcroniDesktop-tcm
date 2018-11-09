@@ -245,7 +245,7 @@ namespace AcroniUI.Custom
 
             #region Atribuição de cores
 
-            if (btnStyleFontColor.Tag.Equals("true"))
+            if (btnStyleFontColor.Tag.Equals("active"))
                 keybutton.ForeColor = FontColor;
 
             else
@@ -490,7 +490,7 @@ namespace AcroniUI.Custom
             Button b = (Button)sender;
             lblHexaColor.Text = $"#{b.BackColor.R.ToString("X2")}{b.BackColor.G.ToString("X2")}{b.BackColor.B.ToString("X2")}";
 
-            if (btnStyleFontColor.Tag.Equals("true"))
+            if (btnStyleFontColor.Tag.Equals("active"))
                 FontColor = b.BackColor;
 
             if (b.Tag.ToString().Contains("Ambar"))
@@ -507,8 +507,9 @@ namespace AcroniUI.Custom
             transition.add(pnlChosenColor, "BackColor", b.BackColor);
             transition.run();
 
-            //Define a cor da tecla no kbtn_Click
-            Color = b.BackColor;
+            //Define a cor da tecla no kbtn_Click. 
+            if (!btnStyleFontColor.Tag.Equals("active"))
+                Color = b.BackColor;
 
             if (__IsSlotAvailable[0])
             {
@@ -604,7 +605,7 @@ namespace AcroniUI.Custom
 
         private void lblDefinirParaTodasTeclas_Click(object sender, EventArgs e)
         {
-            AcroniMessageBoxConfirm ambc = new AcroniMessageBoxConfirm("Você tem certeza disso?", "Atenção, pintar para todas as teclas poderá fazer você" +
+            AcroniMessageBoxConfirm ambc = new AcroniMessageBoxConfirm("Você tem certeza disso?", "Atenção, editar e pintar para todas as teclas poderá fazer você" +
                 " perder todas as edições que fez até agora. Vai tudo ficar padrãozinho.");
 
             if (ambc.ShowDialog() == DialogResult.Yes)
@@ -617,6 +618,15 @@ namespace AcroniUI.Custom
                         {
                             (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).Font = new Font(cmbFontes.Text, float.Parse(cmbFontSize.Text), __fontStyle);
                             (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).TextAlign = __contentAlignment;
+                            (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).BackColor = Color;
+                            if (Color != Color.FromArgb(26, 26, 26))
+                            {
+                                keycap.BackColor = Color.FromArgb(90, (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).BackColor);
+                                keycap.BackgroundImage = null;
+                            }
+                            else
+                                keycap.BackgroundImage = global::AcroniUI.Properties.Resources.keycapbackgrounddefault;
+                            (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).ForeColor = FontColor;
                         }
                     }
                 }
@@ -782,6 +792,7 @@ namespace AcroniUI.Custom
         {
             if (Share.User.KeyboardQuantity < 5)
                 Share.User.KeyboardQuantity++;
+
             else
             {
                 AcroniMessageBoxConfirm mb = new AcroniMessageBoxConfirm("Sinto muito, mas você atingiu o limite de teclados que você " +
@@ -800,6 +811,7 @@ namespace AcroniUI.Custom
             }
             SaveKeyboard();
             ExportToWebSite();
+            btnVoltar_Click(default(object), e);
         }
 
         private async void SaveKeyboard()
@@ -849,7 +861,7 @@ namespace AcroniUI.Custom
                 }
             }
             else
-                MessageBox.Show("Teclado não foi salvo! Você ser lix");
+                MessageBox.Show("Teclado não foi salvo!");
         }
 
         private void setPropriedadesTeclado()
@@ -944,14 +956,7 @@ namespace AcroniUI.Custom
             //else
             //    MessageBox.Show("Não fez");
         }
-
-
-
-
-
         #endregion
-
-
     }
 }
 

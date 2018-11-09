@@ -42,11 +42,6 @@ namespace AcroniUI
                 lblCollectionsQuantity.Visible = false;
                 lblSelectKeyboard.Visible = true;
             }
-
-            //Para pegar as imagens
-            Share.ResourcesImage.Add(Image.FromFile(Application.StartupPath + @"\Images\pen.png"));
-            Share.ResourcesImage.Add(Image.FromFile(Application.StartupPath + @"\Images\trash.png"));
-
             LoadCollections();
 
             #region Adicionar evento de click ao btnEditarGaleria e btnExcluirGaleria

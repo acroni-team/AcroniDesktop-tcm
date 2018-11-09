@@ -244,12 +244,13 @@
     <Content Include="Images\Botoes da fonte\center.png" />
     <Content Include="Images\Botoes da fonte\left.png" />
     <Content Include="Images\Botoes da fonte\right.png" />
-    <Content Include="Images\c064d12f-1c61-48b9-a5eb-927f5dd2f947.jpg" />
     <Content Include="Images\compacto.png" />
     <Content Include="Images\fullsize.png" />
     <Content Include="Images\icons8-eye-30-white.png" />
+    <None Include="Images\thrash.png" />
     <None Include="Images\keycapbackgrounddefault.png" />
     <Content Include="Images\logo.svg" />
+    <None Include="Images\pen.png" />
     <Content Include="Images\slogo.png" />
     <Content Include="Images\tenkeyless.png" />
     <None Include="AcroniUI.cd" />

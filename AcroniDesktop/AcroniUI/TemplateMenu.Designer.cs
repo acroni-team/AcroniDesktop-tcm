@@ -71,7 +71,6 @@
             this.pnlAreaUsu.Name = "pnlAreaUsu";
             this.pnlAreaUsu.Size = new System.Drawing.Size(320, 200);
             this.pnlAreaUsu.TabIndex = 12;
-            this.pnlAreaUsu.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlAreaUsu_Paint);
             // 
             // lblNomeUsu
             // 

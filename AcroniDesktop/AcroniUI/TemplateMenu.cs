@@ -32,47 +32,14 @@ namespace AcroniUI
 
             for (int i = 0; i <= Share.User.KeyboardQuantity; i++)
             {
-                if (Share.User.KeyboardQuantity == 0)
-                    break;
-                pnlAreaUsu.Controls[$"pnlPreenchido{i + 1}"].Visible = true;
+                if (Share.User.KeyboardQuantity != 0)
+                    pnlAreaUsu.Controls[$"pnlPreenchido{i + 1}"].Visible = true;
             }
 
             Bunifu.Framework.UI.BunifuElipse ellipse = new Bunifu.Framework.UI.BunifuElipse();
             foreach (Control c in pnlOptions.Controls)
             {
                 ellipse.ApplyElipse(c, 7);
-            }
-
-
-            string[] arquivos = Directory.GetFiles(@"C:\Users\Public\Pictures");
-            if (arquivos.Length > 0)
-            {
-                if (arquivos.Length == 1)
-                {
-                    pnlPreenchido1.Visible = true;
-                    contTeclados++;
-                    if (arquivos.Length == 2)
-                    {
-                        pnlPreenchido2.Visible = true;
-                        contTeclados++;
-                        if (arquivos.Length == 3)
-                        {
-                            pnlPreenchido3.Visible = true;
-                            contTeclados++;
-                            if (arquivos.Length == 4)
-                            {
-                                pnlPreenchido4.Visible = true;
-                                contTeclados++;
-                                if (arquivos.Length == 5)
-                                {
-                                    pnlPreenchido5.Visible = true;
-                                    contTeclados++;
-                                }
-                            }
-                        }
-                    }
-
-                }
             }
             ImgUsu.SizeMode = PictureBoxSizeMode.Zoom;
             lblQtdGasta.Text = Convert.ToString(contTeclados);
@@ -91,6 +58,15 @@ namespace AcroniUI
         public void trocar_imagem_usuario(Image imagem) => ImgUsu.Image = imagem;
         SqlConnection conexão_SQL = new SqlConnection(SQLConnection.nome_conexao);
         SqlCommand comando_SQL;
+
+        protected void UpdateKeyboardQuantity()
+        {
+            for (int i = 0; i <= Share.User.KeyboardQuantity; i++)
+            {
+                if (Share.User.KeyboardQuantity != 0)
+                    pnlAreaUsu.Controls[$"pnlPreenchido{i + 1}"].Visible = true;
+            }
+        }
 
         public Image selecionar_imagem_cliente()
         {
@@ -141,11 +117,6 @@ namespace AcroniUI
             Hand.Cursor = Cursors.Hand;
         }
 
-        private void pnlAreaUsu_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void ImgUsu_Paint(object sender, PaintEventArgs e)
         {
             using (GraphicsPath ellipse = new GraphicsPath())
@@ -173,9 +144,9 @@ namespace AcroniUI
         }
         private void fechaForms()
         {
-            for(int i = 0; i < Application.OpenForms.Count; i++)
+            for (int i = 0; i < Application.OpenForms.Count; i++)
             {
-                if(!Application.OpenForms[i].Name.Equals("FrmLogin"))
+                if (!Application.OpenForms[i].Name.Equals("FrmLogin"))
                     Application.OpenForms[i].Close();
             }
         }
@@ -189,7 +160,7 @@ namespace AcroniUI
 
         protected virtual void btnDesconectar_Click(object sender, EventArgs e)
         {
-            AcroniMessageBoxConfirm confirmExit =  new AcroniControls.AcroniMessageBoxConfirm("Saindo daqui", "Deseja realmente deslogar?", "OK");
+            AcroniMessageBoxConfirm confirmExit = new AcroniControls.AcroniMessageBoxConfirm("Saindo daqui", "Deseja realmente deslogar?", "OK");
 
             if (confirmExit.ShowDialog() == DialogResult.Yes)
             {
@@ -209,7 +180,7 @@ namespace AcroniUI
                     }
                 }
                 this.Close();
-            }            
+            }
         }
 
         private void btnConfig_Click(object sender, EventArgs e)

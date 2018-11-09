@@ -41,7 +41,7 @@ namespace AcroniControls
             ///
             ((System.ComponentModel.ISupportInitialize)(this.btnEditarGaleria)).EndInit();
             this.btnEditarGaleria.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditarGaleria.Image = Share.ResourcesImage[0];
+            this.btnEditarGaleria.Image = global::AcroniControls.Properties.Resources.pen;
             this.btnEditarGaleria.Location = new System.Drawing.Point(823, 12);
             this.btnEditarGaleria.Name = "btnEditarGaleria";
             this.btnEditarGaleria.Size = new System.Drawing.Size(29, 29);
@@ -53,7 +53,7 @@ namespace AcroniControls
             // 
             ((System.ComponentModel.ISupportInitialize)(this.btnExcluirGaleria)).EndInit();
             this.btnExcluirGaleria.BackColor = System.Drawing.Color.Transparent;
-            this.btnExcluirGaleria.Image = Share.ResourcesImage[1];
+            this.btnExcluirGaleria.Image = global::AcroniControls.Properties.Resources.thrash;
             this.btnExcluirGaleria.Location = new System.Drawing.Point(869, 14);
             this.btnExcluirGaleria.Name = "btnExcluirGaleria";
             this.btnExcluirGaleria.Size = new System.Drawing.Size(27, 27);
