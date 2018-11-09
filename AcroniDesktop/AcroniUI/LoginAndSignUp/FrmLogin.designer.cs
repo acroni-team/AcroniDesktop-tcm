@@ -44,7 +44,6 @@
             this.btnEntrar = new System.Windows.Forms.Button();
             this.alblAindaNaoTemUmaConta = new System.Windows.Forms.Label();
             this.lblCadastrar = new System.Windows.Forms.LinkLabel();
-            this.lblAvisoCad = new System.Windows.Forms.Label();
             this.pnlLogoCad = new System.Windows.Forms.Panel();
             this.lnklblEsqueceuSenha = new System.Windows.Forms.LinkLabel();
             this.apnlSenha = new System.Windows.Forms.Panel();
@@ -54,6 +53,7 @@
             this.txtEntrar = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.alblSejaBemVindo = new System.Windows.Forms.Label();
             this.alblEntrar = new System.Windows.Forms.Label();
+            this.lblAvisoCad = new System.Windows.Forms.Label();
             this.pnlCadastro = new System.Windows.Forms.Panel();
             this.alblCPF = new System.Windows.Forms.Label();
             this.apnlCPF = new System.Windows.Forms.Panel();
@@ -210,12 +210,6 @@
             this.lblCadastrar.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(0)))), ((int)(((byte)(158)))));
             this.lblCadastrar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // lblAvisoCad
-            // 
-            resources.ApplyResources(this.lblAvisoCad, "lblAvisoCad");
-            this.lblAvisoCad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.lblAvisoCad.Name = "lblAvisoCad";
-            // 
             // pnlLogoCad
             // 
             resources.ApplyResources(this.pnlLogoCad, "pnlLogoCad");
@@ -304,6 +298,12 @@
             this.alblEntrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(61)))));
             this.alblEntrar.ForeColor = System.Drawing.Color.White;
             this.alblEntrar.Name = "alblEntrar";
+            // 
+            // lblAvisoCad
+            // 
+            resources.ApplyResources(this.lblAvisoCad, "lblAvisoCad");
+            this.lblAvisoCad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.lblAvisoCad.Name = "lblAvisoCad";
             // 
             // pnlCadastro
             // 

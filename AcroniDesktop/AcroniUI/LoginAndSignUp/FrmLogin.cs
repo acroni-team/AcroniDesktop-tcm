@@ -131,8 +131,6 @@ namespace AcroniUI.LoginAndSignUp
         }
         #endregion
 
-
-
         SelectKeyboard selecionarTeclado;
 
         private void btnEntrar_Click(object sender, EventArgs e)
@@ -185,7 +183,7 @@ namespace AcroniUI.LoginAndSignUp
                             }
                             else
                             {
-                                pnlQueDesce.Location = new Point(68, 460);
+                                pnlQueDesce.Location = new Point(47, 444);
                                 lblAviso.Text = "A senha está incorreta.";
                                 lblAviso.Visible = true;
                                 resposta.Close();
@@ -193,7 +191,7 @@ namespace AcroniUI.LoginAndSignUp
                         }
                         else
                         {
-                            pnlQueDesce.Location = new Point(68, 460);
+                            pnlQueDesce.Location = new Point(47, 444);
                             lblAviso.Text = "A senha está incorreta.";
                             lblAviso.Visible = true;
                             resposta.Close();
@@ -211,7 +209,7 @@ namespace AcroniUI.LoginAndSignUp
                 }
                 else
                 {
-                    pnlQueDesce.Location = new Point(68, 460);
+                    pnlQueDesce.Location = new Point(47, 444);
                     lblAviso.Text = "Este usuário não existe.";
                     lblAviso.Visible = true;
                     resposta_usuario.Close();
@@ -287,7 +285,8 @@ namespace AcroniUI.LoginAndSignUp
 
         private void txtBoxesLogin_OnValueChanged(object sender, EventArgs e)
         {
-            pnlQueDesce.Location = new Point(68, 438);
+            pnlQueDesce.Location = new Point(47, 417);
+            lblAviso.Visible = false;
             pnlShowCadError.Location = new Point(94, 508);
             Bunifu.Framework.UI.BunifuMaterialTextbox b = (Bunifu.Framework.UI.BunifuMaterialTextbox)sender;
             if (b.Name.Contains("Senha") && pnlVisibiladade.Tag.Equals("false"))
@@ -339,6 +338,8 @@ namespace AcroniUI.LoginAndSignUp
                                     Application.OpenForms["LayerFadeForm"].Close();
                                     if (FrmConfirmarEmail.atualizacao_SUCCESS)
                                     {
+                                        SQLConnection.nome_usuario = txtCadApelido.Text;
+                                        Share.User = new User();
                                         //(new AcroniControls.AcroniMessageBoxConfirm("Cadastro concluido!")).Show();
                                         if (!File.Exists(Application.StartupPath + "\\" + SQLConnection.nome_usuario + ".acr"))
                                         {
@@ -350,7 +351,6 @@ namespace AcroniUI.LoginAndSignUp
                                         }
                                         (new SelectKeyboard()).Show();
                                         this.Hide();
-                                        SQLConnection.nome_usuario = txtEntrar.Text;
                                         // Checa se existe o arquivo, e se não existe, cria - o
                                     }
                                     else

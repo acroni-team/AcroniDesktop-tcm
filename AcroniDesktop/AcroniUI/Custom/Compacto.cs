@@ -738,7 +738,7 @@ namespace AcroniUI.Custom
 
                                 break;
                             }
-                            catch (Exception) { }
+                            catch (Exception err) { MessageBox.Show(err.Message); }
                         }
                     }
                 }

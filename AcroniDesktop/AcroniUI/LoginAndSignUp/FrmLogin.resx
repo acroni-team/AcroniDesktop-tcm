@@ -3266,28 +3266,6 @@
         bInRenVGFIG76OnRI6x7RH//2Q==
 </value>
   </data>
-  <data name="alblAGenteTemOQueVocePrecisa.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="alblAGenteTemOQueVocePrecisa.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Open Sans, 12.25pt</value>
-  </data>
-  <data name="alblAGenteTemOQueVocePrecisa.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="alblAGenteTemOQueVocePrecisa.Location" type="System.Drawing.Point, System.Drawing">
-    <value>51, 579</value>
-  </data>
-  <data name="alblAGenteTemOQueVocePrecisa.Size" type="System.Drawing.Size, System.Drawing">
-    <value>345, 46</value>
-  </data>
-  <data name="alblAGenteTemOQueVocePrecisa.TabIndex" type="System.Int32, mscorlib">
-    <value>75</value>
-  </data>
-  <data name="alblAGenteTemOQueVocePrecisa.Text" xml:space="preserve">
-    <value>Obtenha uma conta agora - e tenha acesso 
-à nossa plataforma completa, de graça.</value>
-  </data>
   <data name="&gt;&gt;alblAGenteTemOQueVocePrecisa.Name" xml:space="preserve">
     <value>alblAGenteTemOQueVocePrecisa</value>
   </data>
@@ -3300,29 +3278,6 @@
   <data name="&gt;&gt;alblAGenteTemOQueVocePrecisa.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="alblProcurandoPorTeclados.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="alblProcurandoPorTeclados.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Open Sans, 23.25pt, style=Bold</value>
-  </data>
-  <data name="alblProcurandoPorTeclados.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="alblProcurandoPorTeclados.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 442</value>
-  </data>
-  <data name="alblProcurandoPorTeclados.Size" type="System.Drawing.Size, System.Drawing">
-    <value>322, 126</value>
-  </data>
-  <data name="alblProcurandoPorTeclados.TabIndex" type="System.Int32, mscorlib">
-    <value>75</value>
-  </data>
-  <data name="alblProcurandoPorTeclados.Text" xml:space="preserve">
-    <value>Compre teclados
-de marcas famosas 
-ou crie o seu.</value>
-  </data>
   <data name="&gt;&gt;alblProcurandoPorTeclados.Name" xml:space="preserve">
     <value>alblProcurandoPorTeclados</value>
   </data>
@@ -3334,27 +3289,6 @@ ou crie o seu.</value>
   </data>
   <data name="&gt;&gt;alblProcurandoPorTeclados.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="alblAcroni.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="alblAcroni.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Qanelas ExtraBold, 26.2499981pt, style=Bold</value>
-  </data>
-  <data name="alblAcroni.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="alblAcroni.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 48</value>
-  </data>
-  <data name="alblAcroni.Size" type="System.Drawing.Size, System.Drawing">
-    <value>123, 43</value>
-  </data>
-  <data name="alblAcroni.TabIndex" type="System.Int32, mscorlib">
-    <value>75</value>
-  </data>
-  <data name="alblAcroni.Text" xml:space="preserve">
-    <value>Acroni</value>
   </data>
   <data name="&gt;&gt;alblAcroni.Name" xml:space="preserve">
     <value>alblAcroni</value>
@@ -3402,7 +3336,7 @@ ou crie o seu.</value>
     <value>NoControl</value>
   </data>
   <data name="lblAviso.Location" type="System.Drawing.Point, System.Drawing">
-    <value>84, 434</value>
+    <value>70, 434</value>
   </data>
   <data name="lblAviso.Size" type="System.Drawing.Size, System.Drawing">
     <value>196, 20</value>
@@ -3498,7 +3432,7 @@ ou crie o seu.</value>
     <value>2</value>
   </data>
   <data name="pnlQueDesce.Location" type="System.Drawing.Point, System.Drawing">
-    <value>62, 438</value>
+    <value>47, 417</value>
   </data>
   <data name="pnlQueDesce.Size" type="System.Drawing.Size, System.Drawing">
     <value>361, 160</value>
@@ -3632,21 +3566,6 @@ ou crie o seu.</value>
   <data name="&gt;&gt;lnklblEsqueceuSenha.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="pnlVisibiladade.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="pnlVisibiladade.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Center</value>
-  </data>
-  <data name="pnlVisibiladade.Location" type="System.Drawing.Point, System.Drawing">
-    <value>279, 11</value>
-  </data>
-  <data name="pnlVisibiladade.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 30</value>
-  </data>
-  <data name="pnlVisibiladade.TabIndex" type="System.Int32, mscorlib">
-    <value>67</value>
-  </data>
   <data name="&gt;&gt;pnlVisibiladade.Name" xml:space="preserve">
     <value>pnlVisibiladade</value>
   </data>
@@ -3658,21 +3577,6 @@ ou crie o seu.</value>
   </data>
   <data name="&gt;&gt;pnlVisibiladade.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="txtSenha.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Open Sans, 10.25pt</value>
-  </data>
-  <data name="txtSenha.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 4</value>
-  </data>
-  <data name="txtSenha.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="txtSenha.Size" type="System.Drawing.Size, System.Drawing">
-    <value>318, 44</value>
-  </data>
-  <data name="txtSenha.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
   </data>
   <data name="&gt;&gt;txtSenha.Name" xml:space="preserve">
     <value>txtSenha</value>
@@ -3706,21 +3610,6 @@ ou crie o seu.</value>
   </data>
   <data name="&gt;&gt;apnlSenha.ZOrder" xml:space="preserve">
     <value>5</value>
-  </data>
-  <data name="txtEntrar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Open Sans, 10.25pt</value>
-  </data>
-  <data name="txtEntrar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 4</value>
-  </data>
-  <data name="txtEntrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="txtEntrar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>318, 44</value>
-  </data>
-  <data name="txtEntrar.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
   </data>
   <data name="&gt;&gt;txtEntrar.Name" xml:space="preserve">
     <value>txtEntrar</value>
@@ -3911,21 +3800,6 @@ ou crie o seu.</value>
   <data name="&gt;&gt;lblAvisoCad.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="txtCadCPF.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Open Sans, 10.25pt</value>
-  </data>
-  <data name="txtCadCPF.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 4</value>
-  </data>
-  <data name="txtCadCPF.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="txtCadCPF.Size" type="System.Drawing.Size, System.Drawing">
-    <value>297, 44</value>
-  </data>
-  <data name="txtCadCPF.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
   <data name="&gt;&gt;txtCadCPF.Name" xml:space="preserve">
     <value>txtCadCPF</value>
   </data>
@@ -3959,21 +3833,6 @@ ou crie o seu.</value>
   <data name="&gt;&gt;apnlCPF.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="pnlVisibiladadeRepSenha.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="pnlVisibiladadeRepSenha.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Center</value>
-  </data>
-  <data name="pnlVisibiladadeRepSenha.Location" type="System.Drawing.Point, System.Drawing">
-    <value>259, 12</value>
-  </data>
-  <data name="pnlVisibiladadeRepSenha.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 30</value>
-  </data>
-  <data name="pnlVisibiladadeRepSenha.TabIndex" type="System.Int32, mscorlib">
-    <value>67</value>
-  </data>
   <data name="&gt;&gt;pnlVisibiladadeRepSenha.Name" xml:space="preserve">
     <value>pnlVisibiladadeRepSenha</value>
   </data>
@@ -3985,21 +3844,6 @@ ou crie o seu.</value>
   </data>
   <data name="&gt;&gt;pnlVisibiladadeRepSenha.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="txtCadRepPass.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Open Sans, 10.25pt</value>
-  </data>
-  <data name="txtCadRepPass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 4</value>
-  </data>
-  <data name="txtCadRepPass.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="txtCadRepPass.Size" type="System.Drawing.Size, System.Drawing">
-    <value>297, 44</value>
-  </data>
-  <data name="txtCadRepPass.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
   </data>
   <data name="&gt;&gt;txtCadRepPass.Name" xml:space="preserve">
     <value>txtCadRepPass</value>
@@ -4033,21 +3877,6 @@ ou crie o seu.</value>
   </data>
   <data name="&gt;&gt;apnlRepSenha.ZOrder" xml:space="preserve">
     <value>4</value>
-  </data>
-  <data name="txtCadEmail.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Open Sans, 10.25pt</value>
-  </data>
-  <data name="txtCadEmail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 4</value>
-  </data>
-  <data name="txtCadEmail.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="txtCadEmail.Size" type="System.Drawing.Size, System.Drawing">
-    <value>298, 44</value>
-  </data>
-  <data name="txtCadEmail.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
   </data>
   <data name="&gt;&gt;txtCadEmail.Name" xml:space="preserve">
     <value>txtCadEmail</value>
@@ -4208,21 +4037,6 @@ ou crie o seu.</value>
   <data name="&gt;&gt;alblNome.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="txtCadApelido.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Open Sans, 10.25pt</value>
-  </data>
-  <data name="txtCadApelido.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 4</value>
-  </data>
-  <data name="txtCadApelido.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="txtCadApelido.Size" type="System.Drawing.Size, System.Drawing">
-    <value>298, 44</value>
-  </data>
-  <data name="txtCadApelido.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
   <data name="&gt;&gt;txtCadApelido.Name" xml:space="preserve">
     <value>txtCadApelido</value>
   </data>
@@ -4256,21 +4070,6 @@ ou crie o seu.</value>
   <data name="&gt;&gt;apnlApelido.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="pnlVisibilidadeCadSenha.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="pnlVisibilidadeCadSenha.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Center</value>
-  </data>
-  <data name="pnlVisibilidadeCadSenha.Location" type="System.Drawing.Point, System.Drawing">
-    <value>259, 12</value>
-  </data>
-  <data name="pnlVisibilidadeCadSenha.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 30</value>
-  </data>
-  <data name="pnlVisibilidadeCadSenha.TabIndex" type="System.Int32, mscorlib">
-    <value>67</value>
-  </data>
   <data name="&gt;&gt;pnlVisibilidadeCadSenha.Name" xml:space="preserve">
     <value>pnlVisibilidadeCadSenha</value>
   </data>
@@ -4282,21 +4081,6 @@ ou crie o seu.</value>
   </data>
   <data name="&gt;&gt;pnlVisibilidadeCadSenha.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="txtCadPass.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Open Sans, 10.25pt</value>
-  </data>
-  <data name="txtCadPass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 4</value>
-  </data>
-  <data name="txtCadPass.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="txtCadPass.Size" type="System.Drawing.Size, System.Drawing">
-    <value>297, 44</value>
-  </data>
-  <data name="txtCadPass.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
   </data>
   <data name="&gt;&gt;txtCadPass.Name" xml:space="preserve">
     <value>txtCadPass</value>
@@ -4330,21 +4114,6 @@ ou crie o seu.</value>
   </data>
   <data name="&gt;&gt;apnlCadSenha.ZOrder" xml:space="preserve">
     <value>11</value>
-  </data>
-  <data name="txtCadUser.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Open Sans, 10.25pt</value>
-  </data>
-  <data name="txtCadUser.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 4</value>
-  </data>
-  <data name="txtCadUser.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="txtCadUser.Size" type="System.Drawing.Size, System.Drawing">
-    <value>298, 44</value>
-  </data>
-  <data name="txtCadUser.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
   </data>
   <data name="&gt;&gt;txtCadUser.Name" xml:space="preserve">
     <value>txtCadUser</value>
@@ -4481,33 +4250,6 @@ ou crie o seu.</value>
   <data name="pnlShowCadError.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="btnCadastrar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="btnCadastrar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnCadastrar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Open Sans, 10.25pt, style=Bold</value>
-  </data>
-  <data name="btnCadastrar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnCadastrar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 16</value>
-  </data>
-  <data name="btnCadastrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="btnCadastrar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>303, 48</value>
-  </data>
-  <data name="btnCadastrar.TabIndex" type="System.Int32, mscorlib">
-    <value>73</value>
-  </data>
-  <data name="btnCadastrar.Text" xml:space="preserve">
-    <value>Cadastrando!</value>
-  </data>
   <data name="&gt;&gt;btnCadastrar.Name" xml:space="preserve">
     <value>btnCadastrar</value>
   </data>
@@ -4520,27 +4262,6 @@ ou crie o seu.</value>
   <data name="&gt;&gt;btnCadastrar.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label8.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Open Sans, 8.28pt</value>
-  </data>
-  <data name="label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 82</value>
-  </data>
-  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 17</value>
-  </data>
-  <data name="label8.TabIndex" type="System.Int32, mscorlib">
-    <value>72</value>
-  </data>
-  <data name="label8.Text" xml:space="preserve">
-    <value>Já tem uma conta?</value>
-  </data>
   <data name="&gt;&gt;label8.Name" xml:space="preserve">
     <value>label8</value>
   </data>
@@ -4552,27 +4273,6 @@ ou crie o seu.</value>
   </data>
   <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="linkLabel1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="linkLabel1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Open Sans, 8.28pt</value>
-  </data>
-  <data name="linkLabel1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>156, 82</value>
-  </data>
-  <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 17</value>
-  </data>
-  <data name="linkLabel1.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="linkLabel1.Text" xml:space="preserve">
-    <value>Volte ao Login!</value>
   </data>
   <data name="&gt;&gt;linkLabel1.Name" xml:space="preserve">
     <value>linkLabel1</value>
@@ -4733,9 +4433,513 @@ ou crie o seu.</value>
   <metadata name="TimerSlide.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>656, 17</value>
   </metadata>
+  <data name="pnlVisibiladade.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="pnlVisibiladade.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="pnlVisibiladade.Location" type="System.Drawing.Point, System.Drawing">
+    <value>279, 11</value>
+  </data>
+  <data name="pnlVisibiladade.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 30</value>
+  </data>
+  <data name="pnlVisibiladade.TabIndex" type="System.Int32, mscorlib">
+    <value>67</value>
+  </data>
+  <data name="&gt;&gt;pnlVisibiladade.Name" xml:space="preserve">
+    <value>pnlVisibiladade</value>
+  </data>
+  <data name="&gt;&gt;pnlVisibiladade.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlVisibiladade.Parent" xml:space="preserve">
+    <value>apnlSenha</value>
+  </data>
+  <data name="&gt;&gt;pnlVisibiladade.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtSenha.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Open Sans, 10.25pt</value>
+  </data>
+  <data name="txtSenha.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 4</value>
+  </data>
+  <data name="txtSenha.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="txtSenha.Size" type="System.Drawing.Size, System.Drawing">
+    <value>318, 44</value>
+  </data>
+  <data name="txtSenha.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtSenha.Name" xml:space="preserve">
+    <value>txtSenha</value>
+  </data>
+  <data name="&gt;&gt;txtSenha.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuMaterialTextbox, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtSenha.Parent" xml:space="preserve">
+    <value>apnlSenha</value>
+  </data>
+  <data name="&gt;&gt;txtSenha.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtEntrar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Open Sans, 10.25pt</value>
+  </data>
+  <data name="txtEntrar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="txtEntrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="txtEntrar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>318, 44</value>
+  </data>
+  <data name="txtEntrar.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtEntrar.Name" xml:space="preserve">
+    <value>txtEntrar</value>
+  </data>
+  <data name="&gt;&gt;txtEntrar.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuMaterialTextbox, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtEntrar.Parent" xml:space="preserve">
+    <value>apnlUsuario</value>
+  </data>
+  <data name="&gt;&gt;txtEntrar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtCadCPF.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Open Sans, 10.25pt</value>
+  </data>
+  <data name="txtCadCPF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="txtCadCPF.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="txtCadCPF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>297, 44</value>
+  </data>
+  <data name="txtCadCPF.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtCadCPF.Name" xml:space="preserve">
+    <value>txtCadCPF</value>
+  </data>
+  <data name="&gt;&gt;txtCadCPF.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuMaterialTextbox, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtCadCPF.Parent" xml:space="preserve">
+    <value>apnlCPF</value>
+  </data>
+  <data name="&gt;&gt;txtCadCPF.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pnlVisibiladadeRepSenha.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="pnlVisibiladadeRepSenha.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="pnlVisibiladadeRepSenha.Location" type="System.Drawing.Point, System.Drawing">
+    <value>259, 12</value>
+  </data>
+  <data name="pnlVisibiladadeRepSenha.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 30</value>
+  </data>
+  <data name="pnlVisibiladadeRepSenha.TabIndex" type="System.Int32, mscorlib">
+    <value>67</value>
+  </data>
+  <data name="&gt;&gt;pnlVisibiladadeRepSenha.Name" xml:space="preserve">
+    <value>pnlVisibiladadeRepSenha</value>
+  </data>
+  <data name="&gt;&gt;pnlVisibiladadeRepSenha.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlVisibiladadeRepSenha.Parent" xml:space="preserve">
+    <value>apnlRepSenha</value>
+  </data>
+  <data name="&gt;&gt;pnlVisibiladadeRepSenha.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtCadRepPass.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Open Sans, 10.25pt</value>
+  </data>
+  <data name="txtCadRepPass.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="txtCadRepPass.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="txtCadRepPass.Size" type="System.Drawing.Size, System.Drawing">
+    <value>297, 44</value>
+  </data>
+  <data name="txtCadRepPass.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtCadRepPass.Name" xml:space="preserve">
+    <value>txtCadRepPass</value>
+  </data>
+  <data name="&gt;&gt;txtCadRepPass.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuMaterialTextbox, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtCadRepPass.Parent" xml:space="preserve">
+    <value>apnlRepSenha</value>
+  </data>
+  <data name="&gt;&gt;txtCadRepPass.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtCadEmail.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Open Sans, 10.25pt</value>
+  </data>
+  <data name="txtCadEmail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="txtCadEmail.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="txtCadEmail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>298, 44</value>
+  </data>
+  <data name="txtCadEmail.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtCadEmail.Name" xml:space="preserve">
+    <value>txtCadEmail</value>
+  </data>
+  <data name="&gt;&gt;txtCadEmail.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuMaterialTextbox, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtCadEmail.Parent" xml:space="preserve">
+    <value>apnlEmail</value>
+  </data>
+  <data name="&gt;&gt;txtCadEmail.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtCadApelido.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Open Sans, 10.25pt</value>
+  </data>
+  <data name="txtCadApelido.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="txtCadApelido.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="txtCadApelido.Size" type="System.Drawing.Size, System.Drawing">
+    <value>298, 44</value>
+  </data>
+  <data name="txtCadApelido.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtCadApelido.Name" xml:space="preserve">
+    <value>txtCadApelido</value>
+  </data>
+  <data name="&gt;&gt;txtCadApelido.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuMaterialTextbox, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtCadApelido.Parent" xml:space="preserve">
+    <value>apnlApelido</value>
+  </data>
+  <data name="&gt;&gt;txtCadApelido.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pnlVisibilidadeCadSenha.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="pnlVisibilidadeCadSenha.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="pnlVisibilidadeCadSenha.Location" type="System.Drawing.Point, System.Drawing">
+    <value>259, 12</value>
+  </data>
+  <data name="pnlVisibilidadeCadSenha.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 30</value>
+  </data>
+  <data name="pnlVisibilidadeCadSenha.TabIndex" type="System.Int32, mscorlib">
+    <value>67</value>
+  </data>
+  <data name="&gt;&gt;pnlVisibilidadeCadSenha.Name" xml:space="preserve">
+    <value>pnlVisibilidadeCadSenha</value>
+  </data>
+  <data name="&gt;&gt;pnlVisibilidadeCadSenha.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlVisibilidadeCadSenha.Parent" xml:space="preserve">
+    <value>apnlCadSenha</value>
+  </data>
+  <data name="&gt;&gt;pnlVisibilidadeCadSenha.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtCadPass.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Open Sans, 10.25pt</value>
+  </data>
+  <data name="txtCadPass.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="txtCadPass.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="txtCadPass.Size" type="System.Drawing.Size, System.Drawing">
+    <value>297, 44</value>
+  </data>
+  <data name="txtCadPass.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtCadPass.Name" xml:space="preserve">
+    <value>txtCadPass</value>
+  </data>
+  <data name="&gt;&gt;txtCadPass.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuMaterialTextbox, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtCadPass.Parent" xml:space="preserve">
+    <value>apnlCadSenha</value>
+  </data>
+  <data name="&gt;&gt;txtCadPass.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtCadUser.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Open Sans, 10.25pt</value>
+  </data>
+  <data name="txtCadUser.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="txtCadUser.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="txtCadUser.Size" type="System.Drawing.Size, System.Drawing">
+    <value>298, 44</value>
+  </data>
+  <data name="txtCadUser.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtCadUser.Name" xml:space="preserve">
+    <value>txtCadUser</value>
+  </data>
+  <data name="&gt;&gt;txtCadUser.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuMaterialTextbox, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtCadUser.Parent" xml:space="preserve">
+    <value>apnlNome</value>
+  </data>
+  <data name="&gt;&gt;txtCadUser.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnCadastrar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="btnCadastrar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnCadastrar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Open Sans, 10.25pt, style=Bold</value>
+  </data>
+  <data name="btnCadastrar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnCadastrar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 16</value>
+  </data>
+  <data name="btnCadastrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="btnCadastrar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>303, 48</value>
+  </data>
+  <data name="btnCadastrar.TabIndex" type="System.Int32, mscorlib">
+    <value>73</value>
+  </data>
+  <data name="btnCadastrar.Text" xml:space="preserve">
+    <value>Cadastrando!</value>
+  </data>
+  <data name="&gt;&gt;btnCadastrar.Name" xml:space="preserve">
+    <value>btnCadastrar</value>
+  </data>
+  <data name="&gt;&gt;btnCadastrar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCadastrar.Parent" xml:space="preserve">
+    <value>pnlShowCadError</value>
+  </data>
+  <data name="&gt;&gt;btnCadastrar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Open Sans, 8.28pt</value>
+  </data>
+  <data name="label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>48, 82</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 17</value>
+  </data>
+  <data name="label8.TabIndex" type="System.Int32, mscorlib">
+    <value>72</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>Já tem uma conta?</value>
+  </data>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
+  </data>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>pnlShowCadError</value>
+  </data>
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="linkLabel1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="linkLabel1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Open Sans, 8.28pt</value>
+  </data>
+  <data name="linkLabel1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>156, 82</value>
+  </data>
+  <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 17</value>
+  </data>
+  <data name="linkLabel1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="linkLabel1.Text" xml:space="preserve">
+    <value>Volte ao Login!</value>
+  </data>
+  <data name="&gt;&gt;linkLabel1.Name" xml:space="preserve">
+    <value>linkLabel1</value>
+  </data>
+  <data name="&gt;&gt;linkLabel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;linkLabel1.Parent" xml:space="preserve">
+    <value>pnlShowCadError</value>
+  </data>
+  <data name="&gt;&gt;linkLabel1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <metadata name="TimerFade.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="alblAGenteTemOQueVocePrecisa.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="alblAGenteTemOQueVocePrecisa.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Open Sans, 12.25pt</value>
+  </data>
+  <data name="alblAGenteTemOQueVocePrecisa.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="alblAGenteTemOQueVocePrecisa.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 579</value>
+  </data>
+  <data name="alblAGenteTemOQueVocePrecisa.Size" type="System.Drawing.Size, System.Drawing">
+    <value>345, 46</value>
+  </data>
+  <data name="alblAGenteTemOQueVocePrecisa.TabIndex" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="alblAGenteTemOQueVocePrecisa.Text" xml:space="preserve">
+    <value>Obtenha uma conta agora - e tenha acesso 
+à nossa plataforma completa, de graça.</value>
+  </data>
+  <data name="&gt;&gt;alblAGenteTemOQueVocePrecisa.Name" xml:space="preserve">
+    <value>alblAGenteTemOQueVocePrecisa</value>
+  </data>
+  <data name="&gt;&gt;alblAGenteTemOQueVocePrecisa.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;alblAGenteTemOQueVocePrecisa.Parent" xml:space="preserve">
+    <value>apnlEsquerdo</value>
+  </data>
+  <data name="&gt;&gt;alblAGenteTemOQueVocePrecisa.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="alblProcurandoPorTeclados.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="alblProcurandoPorTeclados.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Open Sans, 23.25pt, style=Bold</value>
+  </data>
+  <data name="alblProcurandoPorTeclados.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="alblProcurandoPorTeclados.Location" type="System.Drawing.Point, System.Drawing">
+    <value>48, 442</value>
+  </data>
+  <data name="alblProcurandoPorTeclados.Size" type="System.Drawing.Size, System.Drawing">
+    <value>325, 126</value>
+  </data>
+  <data name="alblProcurandoPorTeclados.TabIndex" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="alblProcurandoPorTeclados.Text" xml:space="preserve">
+    <value>Compre teclados
+de marcas famosas 
+ou crie o seu.</value>
+  </data>
+  <data name="&gt;&gt;alblProcurandoPorTeclados.Name" xml:space="preserve">
+    <value>alblProcurandoPorTeclados</value>
+  </data>
+  <data name="&gt;&gt;alblProcurandoPorTeclados.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;alblProcurandoPorTeclados.Parent" xml:space="preserve">
+    <value>apnlEsquerdo</value>
+  </data>
+  <data name="&gt;&gt;alblProcurandoPorTeclados.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="alblAcroni.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="alblAcroni.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Qanelas ExtraBold, 26.2499981pt, style=Bold</value>
+  </data>
+  <data name="alblAcroni.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="alblAcroni.Location" type="System.Drawing.Point, System.Drawing">
+    <value>68, 48</value>
+  </data>
+  <data name="alblAcroni.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 43</value>
+  </data>
+  <data name="alblAcroni.TabIndex" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="alblAcroni.Text" xml:space="preserve">
+    <value>Acroni</value>
+  </data>
+  <data name="&gt;&gt;alblAcroni.Name" xml:space="preserve">
+    <value>alblAcroni</value>
+  </data>
+  <data name="&gt;&gt;alblAcroni.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;alblAcroni.Parent" xml:space="preserve">
+    <value>apnlEsquerdo</value>
+  </data>
+  <data name="&gt;&gt;alblAcroni.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <metadata name="timerFadeOut.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>765, 3</value>
   </metadata>
