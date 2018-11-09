@@ -159,7 +159,7 @@ namespace AcroniUI.LoginAndSignUp
                             conexão_SQL.Open();
 
                         //--Criando um comando SELECT e chamando sua resposta
-                        String select = "SELECT senha FROM tblCliente WHERE usuario='" + txtEntrar.Text + "'";
+                        String select = "SELECT senha,tipoConta, quantidade_teclados FROM tblCliente WHERE usuario='" + txtEntrar.Text + "'";
                         comando_SQL = new SqlCommand(select, conexão_SQL);
                         SqlDataReader resposta = comando_SQL.ExecuteReader();
 
@@ -173,9 +173,10 @@ namespace AcroniUI.LoginAndSignUp
                             if (resposta[0].ToString().Equals(txtSenha.Text))
                             {
                                 SQLConnection.nome_usuario = txtEntrar.Text;
-                                Share.User.KeyboardQuantity = (int) resposta[9];
+                                Share.User = new User();
+                                Share.User.KeyboardQuantity = (int) resposta[2];
 
-                                if (resposta[8].ToString() == "p")
+                                if (resposta[1].ToString() == "p")
                                     Share.User.isPremiumAccount = true;
 
                                 selecionarTeclado = new SelectKeyboard();

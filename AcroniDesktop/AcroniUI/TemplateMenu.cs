@@ -27,7 +27,7 @@ namespace AcroniUI
         public TemplateMenu()
         {
             InitializeComponent();
-
+            
             for (int i = 0; i <= Share.User.KeyboardQuantity; i++)
             {
                 if (Share.User.KeyboardQuantity == 0)
