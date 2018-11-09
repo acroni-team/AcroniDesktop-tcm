@@ -16,17 +16,12 @@ namespace AcroniUI
         public SelectKeyboard()
         {
             InitializeComponent();
-            Bunifu.Framework.UI.BunifuElipse roundCorners= new Bunifu.Framework.UI.BunifuElipse();
+            Bunifu.Framework.UI.BunifuElipse roundCorners = new Bunifu.Framework.UI.BunifuElipse();
             roundCorners.ApplyElipse(lblFullSize, 20);
             roundCorners.ApplyElipse(lblTenkeyless, 20);
             roundCorners.ApplyElipse(lblCompacto, 20);
 
         }
-
-        #region Inicializar todos os tipos de teclados
-        #endregion
-
-
 
         private async void btnOpenFullSize_MouseEnter(object sender, EventArgs e)
         {
@@ -34,7 +29,7 @@ namespace AcroniUI
             int contSize;
             int contLocation;
             if ((sender as Control) is PictureBox)
-            {              
+            {
                 if ((sender as Control).Name.Contains("Tenkeyless"))
                 {
                     contLocation = 2;
@@ -58,7 +53,8 @@ namespace AcroniUI
                     (sender as Control).Size = new System.Drawing.Size((sender as Control).Size.Width + contSize, (sender as Control).Height + contSize);
                     (sender as Control).Location = new System.Drawing.Point((sender as Control).Location.X - contLocation, (sender as Control).Location.Y - contLocation);
                 }
-            }         
+                (sender as Control).Parent.BackColor = Color.FromArgb(20, 20, 20);
+            }
         }
 
         private void picBoxOpenFullSize_Click(object sender, EventArgs e)
@@ -79,7 +75,7 @@ namespace AcroniUI
                     contLocation = 2;
                     contSize = 4;
                 }
-                else if((sender as Control).Name.Contains("Compacto"))
+                else if ((sender as Control).Name.Contains("Compacto"))
                 {
                     contLocation = 1;
                     contSize = 2;
@@ -98,16 +94,17 @@ namespace AcroniUI
                         (sender as Control).Location = new System.Drawing.Point((sender as Control).Location.X + contLocation, (sender as Control).Location.Y + contLocation);
                     }
                 }
+                (sender as Control).Parent.BackColor = Color.FromArgb(41, 42, 44);
             }
         }
         private void btnOpenTenkeyless_MouseEnter(object sender, EventArgs e)
         {
-            (sender as Control).BackColor = Color.FromArgb(20,20,20);
+            (sender as Control).BackColor = Color.FromArgb(20, 20, 20);
         }
 
         private void btnOpenTenkeyless_MouseLeave(object sender, EventArgs e)
         {
-            (sender as Control).BackColor = Color.FromArgb(41,42,44);
+            (sender as Control).BackColor = Color.FromArgb(41, 42, 44);
         }
 
         private void picBoxCompacto_Click(object sender, EventArgs e)

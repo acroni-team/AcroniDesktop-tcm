@@ -49,7 +49,6 @@
             // btnOpenCompacto
             // 
             this.btnOpenCompacto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(44)))));
-            this.btnOpenCompacto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.btnOpenCompacto.Controls.Add(this.lblCompacto);
             this.btnOpenCompacto.Controls.Add(this.picBoxCompacto);
             this.btnOpenCompacto.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -105,7 +104,6 @@
             // btnOpenTenkeyless
             // 
             this.btnOpenTenkeyless.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(44)))));
-            this.btnOpenTenkeyless.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.btnOpenTenkeyless.Controls.Add(this.lblTenkeyless);
             this.btnOpenTenkeyless.Controls.Add(this.picBoxOpenTenkeyless);
             this.btnOpenTenkeyless.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -144,7 +142,6 @@
             // btnOpenFullSize
             // 
             this.btnOpenFullSize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(44)))));
-            this.btnOpenFullSize.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.btnOpenFullSize.Controls.Add(this.lblFullSize);
             this.btnOpenFullSize.Controls.Add(this.picBoxOpenFullSize);
             this.btnOpenFullSize.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -178,7 +175,6 @@
             this.Controls.Add(this.btnOpenFullSize);
             this.Controls.Add(this.btnOpenTenkeyless);
             this.Controls.Add(this.btnOpenCompacto);
-            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "SelectKeyboard";
             this.Text = "SelecionarTeclado";
             this.Controls.SetChildIndex(this.pnlStripAjuda, 0);
