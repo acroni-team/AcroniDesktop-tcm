@@ -159,7 +159,7 @@ namespace AcroniUI.LoginAndSignUp
                             conexão_SQL.Open();
 
                         //--Criando um comando SELECT e chamando sua resposta
-                        String select = "SELECT senha,tipoConta, quantidade_teclados FROM tblCliente WHERE usuario='" + txtEntrar.Text + "'";
+                        String select = "SELECT senha, tipoConta, quantidade_teclados FROM tblCliente WHERE usuario='" + txtEntrar.Text + "'";
                         comando_SQL = new SqlCommand(select, conexão_SQL);
                         SqlDataReader resposta = comando_SQL.ExecuteReader();
 
@@ -174,7 +174,7 @@ namespace AcroniUI.LoginAndSignUp
                             {
                                 SQLConnection.nome_usuario = txtEntrar.Text;
                                 Share.User = new User();
-                                Share.User.KeyboardQuantity = (int) resposta[2];
+                                Share.User.KeyboardQuantity = (int)resposta[2];
 
                                 if (resposta[1].ToString() == "p")
                                     Share.User.isPremiumAccount = true;
@@ -449,8 +449,6 @@ namespace AcroniUI.LoginAndSignUp
 
         private void alblAcroni_Click(object sender, EventArgs e)
         {
-            //txtEntrar.Text = "Gigademolidor";
-            //txtSenha.Text = "jooj";
             txtEntrar.Text = "teste";
             txtSenha.Text = "teste";
             btnEntrar_Click(default(object), default(EventArgs));

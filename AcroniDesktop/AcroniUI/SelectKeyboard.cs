@@ -12,7 +12,6 @@ namespace AcroniUI
 {
     public partial class SelectKeyboard : TemplateMenu
     {
-        bool canDoAnimation = true;
 
         public SelectKeyboard()
         {
@@ -36,7 +35,6 @@ namespace AcroniUI
             int contLocation;
             if ((sender as Control) is PictureBox)
             {              
-                canDoAnimation = false;
                 if ((sender as Control).Name.Contains("Tenkeyless"))
                 {
                     contLocation = 2;
@@ -72,12 +70,10 @@ namespace AcroniUI
 
         private async void picBoxOpenFullSize_MouseLeave(object sender, EventArgs e)
         {
-            int height = 240;
             int contSize;
             int contLocation;
             if ((sender as Control) is PictureBox)
             {
-                canDoAnimation = false;
                 if ((sender as Control).Name.Contains("Tenkeyless"))
                 {
                     contLocation = 2;
@@ -90,7 +86,6 @@ namespace AcroniUI
                 }
                 else
                 {
-                    height = 340;
                     contSize = 10;
                     contLocation = 5;
                 }

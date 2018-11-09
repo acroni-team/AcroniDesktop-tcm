@@ -738,7 +738,7 @@ namespace AcroniUI.Custom
 
                                 break;
                             }
-                            catch (Exception err) { }
+                            catch (Exception) { }
                         }
                     }
                 }
