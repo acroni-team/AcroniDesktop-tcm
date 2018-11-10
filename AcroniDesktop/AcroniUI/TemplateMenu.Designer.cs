@@ -34,11 +34,11 @@
             this.lblQtdDisponivel = new System.Windows.Forms.Label();
             this.lblQtdGasta = new System.Windows.Forms.Label();
             this.espacoArmazenamento = new System.Windows.Forms.Panel();
-            this.pnlPreenchido5 = new System.Windows.Forms.Panel();
-            this.pnlPreenchido4 = new System.Windows.Forms.Panel();
-            this.pnlPreenchido3 = new System.Windows.Forms.Panel();
-            this.pnlPreenchido2 = new System.Windows.Forms.Panel();
             this.pnlPreenchido1 = new System.Windows.Forms.Panel();
+            this.pnlPreenchido2 = new System.Windows.Forms.Panel();
+            this.pnlPreenchido3 = new System.Windows.Forms.Panel();
+            this.pnlPreenchido4 = new System.Windows.Forms.Panel();
+            this.pnlPreenchido5 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnConfig = new System.Windows.Forms.PictureBox();
             this.ImgUsu = new System.Windows.Forms.PictureBox();
@@ -108,42 +108,24 @@
             // espacoArmazenamento
             // 
             this.espacoArmazenamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(118)))), ((int)(((byte)(125)))));
-            this.espacoArmazenamento.Controls.Add(this.pnlPreenchido5);
-            this.espacoArmazenamento.Controls.Add(this.pnlPreenchido4);
-            this.espacoArmazenamento.Controls.Add(this.pnlPreenchido3);
-            this.espacoArmazenamento.Controls.Add(this.pnlPreenchido2);
             this.espacoArmazenamento.Controls.Add(this.pnlPreenchido1);
+            this.espacoArmazenamento.Controls.Add(this.pnlPreenchido2);
+            this.espacoArmazenamento.Controls.Add(this.pnlPreenchido3);
+            this.espacoArmazenamento.Controls.Add(this.pnlPreenchido4);
+            this.espacoArmazenamento.Controls.Add(this.pnlPreenchido5);
             this.espacoArmazenamento.Location = new System.Drawing.Point(25, 161);
             this.espacoArmazenamento.Name = "espacoArmazenamento";
             this.espacoArmazenamento.Size = new System.Drawing.Size(265, 5);
             this.espacoArmazenamento.TabIndex = 7;
             // 
-            // pnlPreenchido5
+            // pnlPreenchido1
             // 
-            this.pnlPreenchido5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(148)))), ((int)(((byte)(254)))));
-            this.pnlPreenchido5.Location = new System.Drawing.Point(211, 0);
-            this.pnlPreenchido5.Name = "pnlPreenchido5";
-            this.pnlPreenchido5.Size = new System.Drawing.Size(53, 5);
-            this.pnlPreenchido5.TabIndex = 11;
-            this.pnlPreenchido5.Visible = false;
-            // 
-            // pnlPreenchido4
-            // 
-            this.pnlPreenchido4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(148)))), ((int)(((byte)(254)))));
-            this.pnlPreenchido4.Location = new System.Drawing.Point(158, 0);
-            this.pnlPreenchido4.Name = "pnlPreenchido4";
-            this.pnlPreenchido4.Size = new System.Drawing.Size(53, 5);
-            this.pnlPreenchido4.TabIndex = 11;
-            this.pnlPreenchido4.Visible = false;
-            // 
-            // pnlPreenchido3
-            // 
-            this.pnlPreenchido3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(148)))), ((int)(((byte)(254)))));
-            this.pnlPreenchido3.Location = new System.Drawing.Point(105, 0);
-            this.pnlPreenchido3.Name = "pnlPreenchido3";
-            this.pnlPreenchido3.Size = new System.Drawing.Size(53, 5);
-            this.pnlPreenchido3.TabIndex = 10;
-            this.pnlPreenchido3.Visible = false;
+            this.pnlPreenchido1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(148)))), ((int)(((byte)(254)))));
+            this.pnlPreenchido1.Location = new System.Drawing.Point(0, 0);
+            this.pnlPreenchido1.Name = "pnlPreenchido1";
+            this.pnlPreenchido1.Size = new System.Drawing.Size(53, 5);
+            this.pnlPreenchido1.TabIndex = 8;
+            this.pnlPreenchido1.Visible = false;
             // 
             // pnlPreenchido2
             // 
@@ -154,14 +136,32 @@
             this.pnlPreenchido2.TabIndex = 9;
             this.pnlPreenchido2.Visible = false;
             // 
-            // pnlPreenchido1
+            // pnlPreenchido3
             // 
-            this.pnlPreenchido1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(148)))), ((int)(((byte)(254)))));
-            this.pnlPreenchido1.Location = new System.Drawing.Point(0, 0);
-            this.pnlPreenchido1.Name = "pnlPreenchido1";
-            this.pnlPreenchido1.Size = new System.Drawing.Size(53, 5);
-            this.pnlPreenchido1.TabIndex = 8;
-            this.pnlPreenchido1.Visible = false;
+            this.pnlPreenchido3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(148)))), ((int)(((byte)(254)))));
+            this.pnlPreenchido3.Location = new System.Drawing.Point(105, 0);
+            this.pnlPreenchido3.Name = "pnlPreenchido3";
+            this.pnlPreenchido3.Size = new System.Drawing.Size(53, 5);
+            this.pnlPreenchido3.TabIndex = 10;
+            this.pnlPreenchido3.Visible = false;
+            // 
+            // pnlPreenchido4
+            // 
+            this.pnlPreenchido4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(148)))), ((int)(((byte)(254)))));
+            this.pnlPreenchido4.Location = new System.Drawing.Point(158, 0);
+            this.pnlPreenchido4.Name = "pnlPreenchido4";
+            this.pnlPreenchido4.Size = new System.Drawing.Size(53, 5);
+            this.pnlPreenchido4.TabIndex = 11;
+            this.pnlPreenchido4.Visible = false;
+            // 
+            // pnlPreenchido5
+            // 
+            this.pnlPreenchido5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(148)))), ((int)(((byte)(254)))));
+            this.pnlPreenchido5.Location = new System.Drawing.Point(211, 0);
+            this.pnlPreenchido5.Name = "pnlPreenchido5";
+            this.pnlPreenchido5.Size = new System.Drawing.Size(53, 5);
+            this.pnlPreenchido5.TabIndex = 11;
+            this.pnlPreenchido5.Visible = false;
             // 
             // panel1
             // 

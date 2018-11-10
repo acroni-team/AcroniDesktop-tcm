@@ -860,26 +860,26 @@ namespace AcroniUI.Custom
                 //    }
                 //}
 
-                //using (SqlConnection conn = new SqlConnection(SQLConnection.nome_conexao))
-                //{
-                //    conn.Open();
-                //    using (SqlCommand cmm = new SqlCommand("select quantidade_teclados from tblCliente", conn))
-                //    {
-                //        using (SqlDataReader sdr = cmm.ExecuteReader())
-                //        {
-                //            sdr.Read();
-                //            if ((int)sdr[0] >= 5)
-                //            {
-                //                goto a;
-                //            }
-                //        }
-                //        using (SqlCommand comm = new SqlCommand($"update tblCliente set quantidade_teclados = quantidade_teclados + 1 where usuario like '{SQLConnection.nome_usuario}'", conn))
-                //        {
-                //            a;
-                //            comm.ExecuteNonQuery();
-                //        }
-                //    }
-                //}
+                using (SqlConnection conn = new SqlConnection(SQLConnection.nome_conexao))
+                {
+                    conn.Open();
+                    using (SqlCommand cmm = new SqlCommand("select quantidade_teclados from tblCliente", conn))
+                    {
+                        using (SqlDataReader sdr = cmm.ExecuteReader())
+                        {
+                            sdr.Read();
+                            if ((int)sdr[0] >= 5)
+                            {
+                                goto aGotoExample;
+                            }
+                        }
+                        aGotoExample:
+                        using (SqlCommand comm = new SqlCommand($"update tblCliente set quantidade_teclados = quantidade_teclados + 1 where usuario like '{SQLConnection.nome_usuario}'", conn))
+                        {
+                            comm.ExecuteNonQuery();
+                        }
+                    }
+                }
 
 
                 System.Windows.MessageBox.Show("Teclado adicionado/salvo com sucesso!");

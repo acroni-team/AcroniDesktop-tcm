@@ -28,8 +28,6 @@ namespace AcroniUI
         {
             InitializeComponent();
 
-            UpdateKeyboardQuantity();
-
             Bunifu.Framework.UI.BunifuElipse ellipse = new Bunifu.Framework.UI.BunifuElipse();
             foreach (Control c in pnlOptions.Controls)
             {
@@ -39,6 +37,7 @@ namespace AcroniUI
             lblQtdGasta.Text = Convert.ToString(contTeclados);
             trocar_nome_usuario($"{SQLConnection.nome_usuario}");
             trocar_imagem_usuario(selecionar_imagem_cliente());
+            UpdateKeyboardQuantity();
             //Compartilha.nomeUsu = lblNomeUsu.Text;
             //trocar_plano_usuario($"{Conexao.plano_usuario}!");
             #region Verificar conectividade com internet
@@ -64,11 +63,10 @@ namespace AcroniUI
                     {
                         sdr.Read();
                         Share.User.KeyboardQuantity = (int)sdr[0];
-
                         for (int i = 0; i <= Share.User.KeyboardQuantity; i++)
                         {
                             if (Share.User.KeyboardQuantity != 0)
-                                pnlAreaUsu.Controls[$"pnlPreenchido{i + 1}"].Visible = true;
+                                espacoArmazenamento.Controls[$"pnlPreenchido{i + 1}"].Visible = true;
                         }
                     }
                 }
