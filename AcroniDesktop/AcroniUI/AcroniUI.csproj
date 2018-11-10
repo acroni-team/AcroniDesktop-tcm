@@ -107,6 +107,12 @@
     <Compile Include="Custom\CustomModules\KeycapTextureModule.Designer.cs">
       <DependentUpon>KeycapTextureModule.cs</DependentUpon>
     </Compile>
+    <Compile Include="Custom\KeyboardSelectionModule\PickKeyboardColorModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Custom\KeyboardSelectionModule\PickKeyboardColorModule.Designer.cs">
+      <DependentUpon>PickKeyboardColorModule.cs</DependentUpon>
+    </Compile>
     <Compile Include="Galeria.cs">
       <SubType>Form</SubType>
     </Compile>

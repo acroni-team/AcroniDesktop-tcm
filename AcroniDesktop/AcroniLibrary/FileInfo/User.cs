@@ -14,7 +14,7 @@ namespace AcroniLibrary.FileInfo
         public List<Collection> UserCollections { get; set; } = new List<Collection>();
         public string UserName { get; set; }
         public int ID { get; set; }
-        public int KeyboardQuantity { get; set; } = 0;
+        public int KeyboardQuantity { get; set; }
         public bool isPremiumAccount { get; set; } = false;
 
         public void SendToFile()

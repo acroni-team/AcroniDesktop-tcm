@@ -1,5 +1,7 @@
 ﻿using AcroniLibrary.FileInfo;
+using AcroniLibrary.SQL;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Drawing;
 
 namespace AcroniLibrary.FileInfo
@@ -11,7 +13,7 @@ namespace AcroniLibrary.FileInfo
         public static User User;
         public static Keyboard Keyboard { get; set; } = new Keyboard();
         public static Collection Collection { get; set; } = new Collection();
-        public static int KeyboardsQuantity { get; set; } = 0;
+        public static int KeyboardsQuantity { get; set; }
         public static bool EditKeyboard { get; set; }
         //Deixei essa propriedade porque dava um conflito depois
         public static string KeyboardNameNotCreated { get; set; }

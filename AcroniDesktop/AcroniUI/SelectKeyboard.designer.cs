@@ -153,11 +153,11 @@
             this.lblFullSize.BackColor = System.Drawing.Color.Transparent;
             this.lblFullSize.Font = new System.Drawing.Font("Qanelas ExtraBold", 33F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFullSize.ForeColor = System.Drawing.Color.White;
-            this.lblFullSize.Location = new System.Drawing.Point(383, 96);
+            this.lblFullSize.Location = new System.Drawing.Point(388, 96);
             this.lblFullSize.Name = "lblFullSize";
-            this.lblFullSize.Size = new System.Drawing.Size(171, 55);
+            this.lblFullSize.Size = new System.Drawing.Size(168, 55);
             this.lblFullSize.TabIndex = 1;
-            this.lblFullSize.Text = "FullSize";
+            this.lblFullSize.Text = "Fullsize";
             this.lblFullSize.Click += new System.EventHandler(this.picBoxOpenFullSize_Click);
             // 
             // SelectKeyboard
@@ -169,12 +169,23 @@
             this.Controls.Add(this.btnOpenFullSize);
             this.Controls.Add(this.btnOpenTenkeyless);
             this.Controls.Add(this.btnOpenCompacto);
+            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "SelectKeyboard";
             this.Text = "SelecionarTeclado";
             this.Controls.SetChildIndex(this.pnlStripAjuda, 0);
             this.Controls.SetChildIndex(this.btnOpenCompacto, 0);
             this.Controls.SetChildIndex(this.btnOpenTenkeyless, 0);
             this.Controls.SetChildIndex(this.btnOpenFullSize, 0);
+            this.btnOpenCompacto.ResumeLayout(false);
+            this.btnOpenCompacto.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxCompacto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxOpenFullSize)).EndInit();
+            this.btnOpenTenkeyless.ResumeLayout(false);
+            this.btnOpenTenkeyless.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxOpenTenkeyless)).EndInit();
+            this.btnOpenFullSize.ResumeLayout(false);
+            this.btnOpenFullSize.PerformLayout();
+            this.ResumeLayout(false);
 
         }
 

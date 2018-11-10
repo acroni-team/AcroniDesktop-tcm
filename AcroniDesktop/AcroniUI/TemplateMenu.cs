@@ -28,13 +28,7 @@ namespace AcroniUI
         {
             InitializeComponent();
 
-            Share.User = new User();
-
-            for (int i = 0; i <= Share.User.KeyboardQuantity; i++)
-            {
-                if (Share.User.KeyboardQuantity != 0)
-                    pnlAreaUsu.Controls[$"pnlPreenchido{i + 1}"].Visible = true;
-            }
+            UpdateKeyboardQuantity();
 
             Bunifu.Framework.UI.BunifuElipse ellipse = new Bunifu.Framework.UI.BunifuElipse();
             foreach (Control c in pnlOptions.Controls)
@@ -59,13 +53,27 @@ namespace AcroniUI
         SqlConnection conexão_SQL = new SqlConnection(SQLConnection.nome_conexao);
         SqlCommand comando_SQL;
 
-        protected void UpdateKeyboardQuantity()
+        public void UpdateKeyboardQuantity()
         {
-            for (int i = 0; i <= Share.User.KeyboardQuantity; i++)
+            using (SqlConnection conn = new SqlConnection(SQLConnection.nome_conexao))
             {
-                if (Share.User.KeyboardQuantity != 0)
-                    pnlAreaUsu.Controls[$"pnlPreenchido{i + 1}"].Visible = true;
+                conn.Open();
+                using (SqlCommand comm = new SqlCommand($"select quantidade_teclados from tblCliente where usuario like '{SQLConnection.nome_usuario}'", conn))
+                {
+                    using (SqlDataReader sdr = comm.ExecuteReader())
+                    {
+                        sdr.Read();
+                        Share.User.KeyboardQuantity = (int)sdr[0];
+
+                        for (int i = 0; i <= Share.User.KeyboardQuantity; i++)
+                        {
+                            if (Share.User.KeyboardQuantity != 0)
+                                pnlAreaUsu.Controls[$"pnlPreenchido{i + 1}"].Visible = true;
+                        }
+                    }
+                }
             }
+
         }
 
         public Image selecionar_imagem_cliente()

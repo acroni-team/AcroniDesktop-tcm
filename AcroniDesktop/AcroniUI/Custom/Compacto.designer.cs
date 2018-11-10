@@ -428,8 +428,7 @@ namespace AcroniUI.Custom
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(118, 67);
             this.btnVoltar.TabIndex = 14;
-            this.btnVoltar.Text = "Cancelar";
-            this.btnVoltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             this.btnVoltar.MouseLeave += new System.EventHandler(this.btnVoltar_MouseLeave);
@@ -1804,7 +1803,7 @@ namespace AcroniUI.Custom
             // 
             this.lblCc1s.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.lblCc1s.Font = new System.Drawing.Font("Open Sans", 10F);
-            this.lblCc1s.Location = new System.Drawing.Point(7, 6);
+            this.lblCc1s.Location = new System.Drawing.Point(7, 8);
             this.lblCc1s.Margin = new System.Windows.Forms.Padding(0);
             this.lblCc1s.Name = "lblCc1s";
             this.lblCc1s.Size = new System.Drawing.Size(76, 40);
