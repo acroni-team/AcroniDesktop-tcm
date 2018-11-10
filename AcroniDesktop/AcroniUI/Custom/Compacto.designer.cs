@@ -140,9 +140,9 @@ namespace AcroniUI.Custom
             this.fundoCa14s = new System.Windows.Forms.Panel();
             this.lblCa14s = new System.Windows.Forms.Label();
             this.fundoCb14sExtensao = new System.Windows.Forms.Panel();
-            this.Cb14sExtensao = new AcroniControls.Kbtn();
+            this.Cb14sExtensao = new System.Windows.Forms.Label();
             this.fundoCb14s = new System.Windows.Forms.Panel();
-            this.Cb14s = new AcroniControls.Kbtn();
+            this.Cb14s = new System.Windows.Forms.Label();
             this.fundoCa1 = new System.Windows.Forms.Panel();
             this.lblCa1 = new System.Windows.Forms.Label();
             this.fundoCa2 = new System.Windows.Forms.Panel();
@@ -354,6 +354,7 @@ namespace AcroniUI.Custom
             // btnSalvar
             // 
             this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(60)))));
+            this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalvar.FlatAppearance.BorderSize = 0;
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Open Sans", 12.25F, System.Drawing.FontStyle.Bold);
@@ -1594,7 +1595,9 @@ namespace AcroniUI.Custom
             // fundoCd14s
             // 
             this.fundoCd14s.BackColor = System.Drawing.Color.Black;
+            this.fundoCd14s.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fundoCd14s.BackgroundImage")));
             this.fundoCd14s.Controls.Add(this.lblCd14s);
+            this.fundoCd14s.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fundoCd14s.Location = new System.Drawing.Point(749, 197);
             this.fundoCd14s.Name = "fundoCd14s";
             this.fundoCd14s.Size = new System.Drawing.Size(97, 56);
@@ -1603,18 +1606,24 @@ namespace AcroniUI.Custom
             // lblCd14s
             // 
             this.lblCd14s.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.lblCd14s.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCd14s.Font = new System.Drawing.Font("Open Sans", 10F);
-            this.lblCd14s.Location = new System.Drawing.Point(8, 6);
+            this.lblCd14s.Image = ((System.Drawing.Image)(resources.GetObject("lblCd14s.Image")));
+            this.lblCd14s.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblCd14s.Location = new System.Drawing.Point(8, 5);
             this.lblCd14s.Margin = new System.Windows.Forms.Padding(0);
             this.lblCd14s.Name = "lblCd14s";
-            this.lblCd14s.Size = new System.Drawing.Size(81, 40);
+            this.lblCd14s.Size = new System.Drawing.Size(81, 36);
             this.lblCd14s.TabIndex = 89;
-            this.lblCd14s.Text = "Shift";
+            this.lblCd14s.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblCd14s.Click += new System.EventHandler(this.lblUpperBottom_Click);
             // 
             // fundoCe8
             // 
             this.fundoCe8.BackColor = System.Drawing.Color.Black;
+            this.fundoCe8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fundoCe8.BackgroundImage")));
             this.fundoCe8.Controls.Add(this.lblCe8);
+            this.fundoCe8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fundoCe8.Location = new System.Drawing.Point(768, 255);
             this.fundoCe8.Name = "fundoCe8";
             this.fundoCe8.Size = new System.Drawing.Size(78, 56);
@@ -1623,18 +1632,23 @@ namespace AcroniUI.Custom
             // lblCe8
             // 
             this.lblCe8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.lblCe8.Font = new System.Drawing.Font("Open Sans", 10F);
-            this.lblCe8.Location = new System.Drawing.Point(8, 6);
+            this.lblCe8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblCe8.Font = new System.Drawing.Font("Open Sans", 9.25F);
+            this.lblCe8.Location = new System.Drawing.Point(7, 4);
             this.lblCe8.Margin = new System.Windows.Forms.Padding(0);
             this.lblCe8.Name = "lblCe8";
-            this.lblCe8.Size = new System.Drawing.Size(62, 40);
+            this.lblCe8.Size = new System.Drawing.Size(62, 39);
             this.lblCe8.TabIndex = 89;
-            this.lblCe8.Text = "Shift";
+            this.lblCe8.Text = "Ctrl";
+            this.lblCe8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblCe8.Click += new System.EventHandler(this.lblUpperBottom_Click);
             // 
             // fundoCe7
             // 
             this.fundoCe7.BackColor = System.Drawing.Color.Black;
+            this.fundoCe7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fundoCe7.BackgroundImage")));
             this.fundoCe7.Controls.Add(this.lblCe7);
+            this.fundoCe7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fundoCe7.Location = new System.Drawing.Point(698, 255);
             this.fundoCe7.Name = "fundoCe7";
             this.fundoCe7.Size = new System.Drawing.Size(67, 56);
@@ -1643,18 +1657,23 @@ namespace AcroniUI.Custom
             // lblCe7
             // 
             this.lblCe7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.lblCe7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCe7.Font = new System.Drawing.Font("Open Sans", 10F);
-            this.lblCe7.Location = new System.Drawing.Point(8, 6);
+            this.lblCe7.Image = ((System.Drawing.Image)(resources.GetObject("lblCe7.Image")));
+            this.lblCe7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblCe7.Location = new System.Drawing.Point(7, 5);
             this.lblCe7.Margin = new System.Windows.Forms.Padding(0);
             this.lblCe7.Name = "lblCe7";
-            this.lblCe7.Size = new System.Drawing.Size(51, 40);
+            this.lblCe7.Size = new System.Drawing.Size(51, 37);
             this.lblCe7.TabIndex = 89;
-            this.lblCe7.Text = "Shift";
+            this.lblCe7.Click += new System.EventHandler(this.lblUpperBottom_Click);
             // 
             // fundoCe6
             // 
             this.fundoCe6.BackColor = System.Drawing.Color.Black;
+            this.fundoCe6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fundoCe6.BackgroundImage")));
             this.fundoCe6.Controls.Add(this.lblCe6);
+            this.fundoCe6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fundoCe6.Location = new System.Drawing.Point(629, 255);
             this.fundoCe6.Name = "fundoCe6";
             this.fundoCe6.Size = new System.Drawing.Size(66, 56);
@@ -1663,18 +1682,22 @@ namespace AcroniUI.Custom
             // lblCe6
             // 
             this.lblCe6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.lblCe6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCe6.Font = new System.Drawing.Font("Open Sans", 10F);
-            this.lblCe6.Location = new System.Drawing.Point(8, 6);
+            this.lblCe6.Image = ((System.Drawing.Image)(resources.GetObject("lblCe6.Image")));
+            this.lblCe6.Location = new System.Drawing.Point(7, 3);
             this.lblCe6.Margin = new System.Windows.Forms.Padding(0);
             this.lblCe6.Name = "lblCe6";
-            this.lblCe6.Size = new System.Drawing.Size(51, 40);
+            this.lblCe6.Size = new System.Drawing.Size(52, 40);
             this.lblCe6.TabIndex = 89;
-            this.lblCe6.Text = "Shift";
+            this.lblCe6.Click += new System.EventHandler(this.lblUpperBottom_Click);
             // 
             // fundoCe5
             // 
             this.fundoCe5.BackColor = System.Drawing.Color.Black;
+            this.fundoCe5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fundoCe5.BackgroundImage")));
             this.fundoCe5.Controls.Add(this.lblCe5);
+            this.fundoCe5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fundoCe5.Location = new System.Drawing.Point(559, 255);
             this.fundoCe5.Name = "fundoCe5";
             this.fundoCe5.Size = new System.Drawing.Size(66, 56);
@@ -1683,18 +1706,23 @@ namespace AcroniUI.Custom
             // lblCe5
             // 
             this.lblCe5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.lblCe5.Font = new System.Drawing.Font("Open Sans", 10F);
-            this.lblCe5.Location = new System.Drawing.Point(8, 6);
+            this.lblCe5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblCe5.Font = new System.Drawing.Font("Open Sans", 9.25F);
+            this.lblCe5.Location = new System.Drawing.Point(7, 6);
             this.lblCe5.Margin = new System.Windows.Forms.Padding(0);
             this.lblCe5.Name = "lblCe5";
-            this.lblCe5.Size = new System.Drawing.Size(51, 40);
+            this.lblCe5.Size = new System.Drawing.Size(51, 37);
             this.lblCe5.TabIndex = 89;
-            this.lblCe5.Text = "Shift";
+            this.lblCe5.Text = "Alt Gr";
+            this.lblCe5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblCe5.Click += new System.EventHandler(this.lblUpperBottom_Click);
             // 
             // fundoCe4s
             // 
             this.fundoCe4s.BackColor = System.Drawing.Color.Black;
+            this.fundoCe4s.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fundoCe4s.BackgroundImage")));
             this.fundoCe4s.Controls.Add(this.lblCe4s);
+            this.fundoCe4s.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fundoCe4s.Location = new System.Drawing.Point(236, 255);
             this.fundoCe4s.Name = "fundoCe4s";
             this.fundoCe4s.Size = new System.Drawing.Size(318, 56);
@@ -1703,17 +1731,21 @@ namespace AcroniUI.Custom
             // lblCe4s
             // 
             this.lblCe4s.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.lblCe4s.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCe4s.Font = new System.Drawing.Font("Open Sans", 10F);
             this.lblCe4s.Location = new System.Drawing.Point(8, 6);
             this.lblCe4s.Margin = new System.Windows.Forms.Padding(0);
             this.lblCe4s.Name = "lblCe4s";
-            this.lblCe4s.Size = new System.Drawing.Size(303, 40);
+            this.lblCe4s.Size = new System.Drawing.Size(299, 36);
             this.lblCe4s.TabIndex = 89;
+            this.lblCe4s.Click += new System.EventHandler(this.lblUpperBottom_Click);
             // 
             // fundoCe3
             // 
             this.fundoCe3.BackColor = System.Drawing.Color.Black;
+            this.fundoCe3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fundoCe3.BackgroundImage")));
             this.fundoCe3.Controls.Add(this.lblCe3);
+            this.fundoCe3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fundoCe3.Location = new System.Drawing.Point(165, 255);
             this.fundoCe3.Name = "fundoCe3";
             this.fundoCe3.Size = new System.Drawing.Size(68, 56);
@@ -1722,18 +1754,24 @@ namespace AcroniUI.Custom
             // lblCe3
             // 
             this.lblCe3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.lblCe3.Font = new System.Drawing.Font("Open Sans", 10F);
-            this.lblCe3.Location = new System.Drawing.Point(7, 6);
+            this.lblCe3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblCe3.Font = new System.Drawing.Font("Open Sans", 9.25F);
+            this.lblCe3.Location = new System.Drawing.Point(8, 4);
             this.lblCe3.Margin = new System.Windows.Forms.Padding(0);
             this.lblCe3.Name = "lblCe3";
-            this.lblCe3.Size = new System.Drawing.Size(54, 40);
+            this.lblCe3.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
+            this.lblCe3.Size = new System.Drawing.Size(49, 38);
             this.lblCe3.TabIndex = 89;
-            this.lblCe3.Text = "Shift";
+            this.lblCe3.Text = "Alt";
+            this.lblCe3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblCe3.Click += new System.EventHandler(this.lblUpperBottom_Click);
             // 
             // fundoCe2s
             // 
             this.fundoCe2s.BackColor = System.Drawing.Color.Black;
+            this.fundoCe2s.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fundoCe2s.BackgroundImage")));
             this.fundoCe2s.Controls.Add(this.lblCe2s);
+            this.fundoCe2s.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fundoCe2s.Location = new System.Drawing.Point(97, 255);
             this.fundoCe2s.Name = "fundoCe2s";
             this.fundoCe2s.Size = new System.Drawing.Size(67, 56);
@@ -1742,18 +1780,22 @@ namespace AcroniUI.Custom
             // lblCe2s
             // 
             this.lblCe2s.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.lblCe2s.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCe2s.Font = new System.Drawing.Font("Open Sans", 10F);
-            this.lblCe2s.Location = new System.Drawing.Point(8, 6);
+            this.lblCe2s.Image = ((System.Drawing.Image)(resources.GetObject("lblCe2s.Image")));
+            this.lblCe2s.Location = new System.Drawing.Point(7, 3);
             this.lblCe2s.Margin = new System.Windows.Forms.Padding(0);
             this.lblCe2s.Name = "lblCe2s";
             this.lblCe2s.Size = new System.Drawing.Size(52, 40);
             this.lblCe2s.TabIndex = 89;
-            this.lblCe2s.Text = "Shift";
+            this.lblCe2s.Click += new System.EventHandler(this.lblUpperBottom_Click);
             // 
             // fundoCe1s
             // 
             this.fundoCe1s.BackColor = System.Drawing.Color.Black;
+            this.fundoCe1s.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fundoCe1s.BackgroundImage")));
             this.fundoCe1s.Controls.Add(this.lblCe1s);
+            this.fundoCe1s.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fundoCe1s.Location = new System.Drawing.Point(16, 255);
             this.fundoCe1s.Name = "fundoCe1s";
             this.fundoCe1s.Size = new System.Drawing.Size(78, 56);
@@ -1762,18 +1804,24 @@ namespace AcroniUI.Custom
             // lblCe1s
             // 
             this.lblCe1s.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.lblCe1s.Font = new System.Drawing.Font("Open Sans", 10F);
+            this.lblCe1s.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblCe1s.Font = new System.Drawing.Font("Open Sans", 9.25F);
+            this.lblCe1s.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblCe1s.Location = new System.Drawing.Point(8, 6);
             this.lblCe1s.Margin = new System.Windows.Forms.Padding(0);
             this.lblCe1s.Name = "lblCe1s";
-            this.lblCe1s.Size = new System.Drawing.Size(63, 40);
+            this.lblCe1s.Size = new System.Drawing.Size(63, 37);
             this.lblCe1s.TabIndex = 89;
-            this.lblCe1s.Text = "Shift";
+            this.lblCe1s.Text = "Ctrl";
+            this.lblCe1s.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblCe1s.Click += new System.EventHandler(this.lblUpperBottom_Click);
             // 
             // fundoCd1s
             // 
             this.fundoCd1s.BackColor = System.Drawing.Color.Black;
+            this.fundoCd1s.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fundoCd1s.BackgroundImage")));
             this.fundoCd1s.Controls.Add(this.lblCd1s);
+            this.fundoCd1s.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fundoCd1s.Location = new System.Drawing.Point(16, 197);
             this.fundoCd1s.Name = "fundoCd1s";
             this.fundoCd1s.Size = new System.Drawing.Size(63, 56);
@@ -1782,19 +1830,24 @@ namespace AcroniUI.Custom
             // lblCd1s
             // 
             this.lblCd1s.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.lblCd1s.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCd1s.Font = new System.Drawing.Font("Open Sans", 10F);
+            this.lblCd1s.Image = global::AcroniUI.Properties.Resources.shiftarrow;
+            this.lblCd1s.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblCd1s.Location = new System.Drawing.Point(8, 6);
             this.lblCd1s.Margin = new System.Windows.Forms.Padding(0);
             this.lblCd1s.Name = "lblCd1s";
-            this.lblCd1s.Size = new System.Drawing.Size(48, 40);
+            this.lblCd1s.Size = new System.Drawing.Size(48, 36);
             this.lblCd1s.TabIndex = 89;
-            this.lblCd1s.Text = "Shift";
+            this.lblCd1s.Click += new System.EventHandler(this.lblUpperBottom_Click);
             // 
             // fundoCc1s
             // 
             this.fundoCc1s.BackColor = System.Drawing.Color.Black;
+            this.fundoCc1s.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fundoCc1s.BackgroundImage")));
             this.fundoCc1s.Controls.Add(this.lblCc1s);
-            this.fundoCc1s.Location = new System.Drawing.Point(17, 135);
+            this.fundoCc1s.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.fundoCc1s.Location = new System.Drawing.Point(17, 139);
             this.fundoCc1s.Name = "fundoCc1s";
             this.fundoCc1s.Size = new System.Drawing.Size(90, 56);
             this.fundoCc1s.TabIndex = 96;
@@ -1802,19 +1855,25 @@ namespace AcroniUI.Custom
             // lblCc1s
             // 
             this.lblCc1s.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.lblCc1s.Font = new System.Drawing.Font("Open Sans", 10F);
-            this.lblCc1s.Location = new System.Drawing.Point(7, 8);
+            this.lblCc1s.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblCc1s.Font = new System.Drawing.Font("Open Sans", 9.25F);
+            this.lblCc1s.Location = new System.Drawing.Point(9, 4);
             this.lblCc1s.Margin = new System.Windows.Forms.Padding(0);
             this.lblCc1s.Name = "lblCc1s";
-            this.lblCc1s.Size = new System.Drawing.Size(76, 40);
+            this.lblCc1s.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
+            this.lblCc1s.Size = new System.Drawing.Size(75, 39);
             this.lblCc1s.TabIndex = 89;
             this.lblCc1s.Text = "Fixa";
+            this.lblCc1s.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblCc1s.Click += new System.EventHandler(this.lblUpperBottom_Click);
             // 
             // fundoCb1s
             // 
             this.fundoCb1s.BackColor = System.Drawing.Color.Black;
+            this.fundoCb1s.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fundoCb1s.BackgroundImage")));
             this.fundoCb1s.Controls.Add(this.lblCb1s);
-            this.fundoCb1s.Location = new System.Drawing.Point(17, 79);
+            this.fundoCb1s.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.fundoCb1s.Location = new System.Drawing.Point(17, 80);
             this.fundoCb1s.Name = "fundoCb1s";
             this.fundoCb1s.Size = new System.Drawing.Size(77, 56);
             this.fundoCb1s.TabIndex = 95;
@@ -1822,19 +1881,24 @@ namespace AcroniUI.Custom
             // lblCb1s
             // 
             this.lblCb1s.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.lblCb1s.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCb1s.Font = new System.Drawing.Font("Open Sans", 10F);
-            this.lblCb1s.Location = new System.Drawing.Point(7, 6);
+            this.lblCb1s.Image = ((System.Drawing.Image)(resources.GetObject("lblCb1s.Image")));
+            this.lblCb1s.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblCb1s.Location = new System.Drawing.Point(8, 6);
             this.lblCb1s.Margin = new System.Windows.Forms.Padding(0);
             this.lblCb1s.Name = "lblCb1s";
-            this.lblCb1s.Size = new System.Drawing.Size(63, 40);
+            this.lblCb1s.Size = new System.Drawing.Size(63, 36);
             this.lblCb1s.TabIndex = 89;
-            this.lblCb1s.Text = "<--\r\n\r\n";
+            this.lblCb1s.Click += new System.EventHandler(this.lblUpperBottom_Click);
             // 
             // fundoCa14s
             // 
             this.fundoCa14s.BackColor = System.Drawing.Color.Black;
+            this.fundoCa14s.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fundoCa14s.BackgroundImage")));
             this.fundoCa14s.Controls.Add(this.lblCa14s);
-            this.fundoCa14s.Location = new System.Drawing.Point(738, 22);
+            this.fundoCa14s.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.fundoCa14s.Location = new System.Drawing.Point(738, 23);
             this.fundoCa14s.Name = "fundoCa14s";
             this.fundoCa14s.Size = new System.Drawing.Size(109, 56);
             this.fundoCa14s.TabIndex = 94;
@@ -1842,18 +1906,25 @@ namespace AcroniUI.Custom
             // lblCa14s
             // 
             this.lblCa14s.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.lblCa14s.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCa14s.Font = new System.Drawing.Font("Open Sans", 10F);
-            this.lblCa14s.Location = new System.Drawing.Point(7, 6);
+            this.lblCa14s.Image = ((System.Drawing.Image)(resources.GetObject("lblCa14s.Image")));
+            this.lblCa14s.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblCa14s.Location = new System.Drawing.Point(7, 5);
             this.lblCa14s.Margin = new System.Windows.Forms.Padding(0);
             this.lblCa14s.Name = "lblCa14s";
-            this.lblCa14s.Size = new System.Drawing.Size(95, 40);
+            this.lblCa14s.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.lblCa14s.Size = new System.Drawing.Size(95, 37);
             this.lblCa14s.TabIndex = 89;
-            this.lblCa14s.Text = "<--\r\n\r\n";
+            this.lblCa14s.Click += new System.EventHandler(this.lblUpperBottom_Click);
             // 
             // fundoCb14sExtensao
             // 
             this.fundoCb14sExtensao.BackColor = System.Drawing.Color.Black;
+            this.fundoCb14sExtensao.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fundoCb14sExtensao.BackgroundImage")));
+            this.fundoCb14sExtensao.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.fundoCb14sExtensao.Controls.Add(this.Cb14sExtensao);
+            this.fundoCb14sExtensao.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fundoCb14sExtensao.Location = new System.Drawing.Point(779, 132);
             this.fundoCb14sExtensao.Name = "fundoCb14sExtensao";
             this.fundoCb14sExtensao.Size = new System.Drawing.Size(68, 63);
@@ -1863,51 +1934,44 @@ namespace AcroniUI.Custom
             // 
             this.Cb14sExtensao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.Cb14sExtensao.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Cb14sExtensao.FlatAppearance.BorderSize = 0;
-            this.Cb14sExtensao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cb14sExtensao.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cb14sExtensao.ForeColor = System.Drawing.Color.White;
-            this.Cb14sExtensao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Cb14sExtensao.Location = new System.Drawing.Point(3, -12);
+            this.Cb14sExtensao.Font = new System.Drawing.Font("Open Sans", 12F);
+            this.Cb14sExtensao.Location = new System.Drawing.Point(6, 0);
             this.Cb14sExtensao.Name = "Cb14sExtensao";
-            this.Cb14sExtensao.Size = new System.Drawing.Size(57, 65);
-            this.Cb14sExtensao.TabIndex = 78;
-            this.Cb14sExtensao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Cb14sExtensao.UseVisualStyleBackColor = false;
-            this.Cb14sExtensao.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cb14sExtensao.Size = new System.Drawing.Size(55, 53);
+            this.Cb14sExtensao.TabIndex = 116;
+            this.Cb14sExtensao.Click += new System.EventHandler(this.lblUpperBottom_Click);
             // 
             // fundoCb14s
             // 
             this.fundoCb14s.BackColor = System.Drawing.Color.Black;
+            this.fundoCb14s.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fundoCb14s.BackgroundImage")));
             this.fundoCb14s.Controls.Add(this.Cb14s);
+            this.fundoCb14s.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fundoCb14s.Location = new System.Drawing.Point(765, 78);
             this.fundoCb14s.Name = "fundoCb14s";
-            this.fundoCb14s.Size = new System.Drawing.Size(82, 56);
+            this.fundoCb14s.Size = new System.Drawing.Size(82, 55);
             this.fundoCb14s.TabIndex = 146;
             // 
             // Cb14s
             // 
             this.Cb14s.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.Cb14s.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Cb14s.FlatAppearance.BorderSize = 0;
-            this.Cb14s.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cb14s.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cb14s.ForeColor = System.Drawing.Color.White;
+            this.Cb14s.Font = new System.Drawing.Font("Open Sans", 12F);
             this.Cb14s.Image = ((System.Drawing.Image)(resources.GetObject("Cb14s.Image")));
             this.Cb14s.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Cb14s.Location = new System.Drawing.Point(9, 10);
+            this.Cb14s.Location = new System.Drawing.Point(6, 6);
             this.Cb14s.Name = "Cb14s";
-            this.Cb14s.Size = new System.Drawing.Size(65, 45);
-            this.Cb14s.TabIndex = 78;
-            this.Cb14s.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Cb14s.UseVisualStyleBackColor = false;
-            this.Cb14s.Click += new System.EventHandler(this.kbtn_Click);
+            this.Cb14s.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.Cb14s.Size = new System.Drawing.Size(71, 48);
+            this.Cb14s.TabIndex = 117;
+            this.Cb14s.Click += new System.EventHandler(this.lblUpperBottom_Click);
             // 
             // fundoCa1
             // 
             this.fundoCa1.BackColor = System.Drawing.Color.Black;
             this.fundoCa1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fundoCa1.BackgroundImage")));
             this.fundoCa1.Controls.Add(this.lblCa1);
+            this.fundoCa1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fundoCa1.Location = new System.Drawing.Point(17, 22);
             this.fundoCa1.Name = "fundoCa1";
             this.fundoCa1.Size = new System.Drawing.Size(52, 56);
@@ -1916,6 +1980,7 @@ namespace AcroniUI.Custom
             // lblCa1
             // 
             this.lblCa1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.lblCa1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCa1.Font = new System.Drawing.Font("Open Sans", 10F);
             this.lblCa1.Location = new System.Drawing.Point(7, 6);
             this.lblCa1.Margin = new System.Windows.Forms.Padding(0);
@@ -1930,6 +1995,7 @@ namespace AcroniUI.Custom
             this.fundoCa2.BackColor = System.Drawing.Color.Black;
             this.fundoCa2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fundoCa2.BackgroundImage")));
             this.fundoCa2.Controls.Add(this.lblCa2);
+            this.fundoCa2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fundoCa2.Location = new System.Drawing.Point(72, 22);
             this.fundoCa2.Name = "fundoCa2";
             this.fundoCa2.Size = new System.Drawing.Size(52, 56);
@@ -1938,6 +2004,7 @@ namespace AcroniUI.Custom
             // lblCa2
             // 
             this.lblCa2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.lblCa2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCa2.Font = new System.Drawing.Font("Open Sans", 10F);
             this.lblCa2.Location = new System.Drawing.Point(8, 6);
             this.lblCa2.Margin = new System.Windows.Forms.Padding(0);
@@ -1952,6 +2019,7 @@ namespace AcroniUI.Custom
             this.fundoCa3.BackColor = System.Drawing.Color.Black;
             this.fundoCa3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fundoCa3.BackgroundImage")));
             this.fundoCa3.Controls.Add(this.lblCa3);
+            this.fundoCa3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fundoCa3.Location = new System.Drawing.Point(128, 22);
             this.fundoCa3.Name = "fundoCa3";
             this.fundoCa3.Size = new System.Drawing.Size(52, 56);
@@ -1960,6 +2028,7 @@ namespace AcroniUI.Custom
             // lblCa3
             // 
             this.lblCa3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.lblCa3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCa3.Font = new System.Drawing.Font("Open Sans", 10F);
             this.lblCa3.Location = new System.Drawing.Point(7, 5);
             this.lblCa3.Margin = new System.Windows.Forms.Padding(0);
@@ -1974,6 +2043,7 @@ namespace AcroniUI.Custom
             this.fundoCa4.BackColor = System.Drawing.Color.Black;
             this.fundoCa4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fundoCa4.BackgroundImage")));
             this.fundoCa4.Controls.Add(this.lblCa4);
+            this.fundoCa4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fundoCa4.Location = new System.Drawing.Point(183, 22);
             this.fundoCa4.Name = "fundoCa4";
             this.fundoCa4.Size = new System.Drawing.Size(52, 56);
@@ -1982,6 +2052,7 @@ namespace AcroniUI.Custom
             // lblCa4
             // 
             this.lblCa4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.lblCa4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCa4.Font = new System.Drawing.Font("Open Sans", 10F);
             this.lblCa4.Location = new System.Drawing.Point(8, 5);
             this.lblCa4.Margin = new System.Windows.Forms.Padding(0);
@@ -1996,6 +2067,7 @@ namespace AcroniUI.Custom
             this.fundoCa5.BackColor = System.Drawing.Color.Black;
             this.fundoCa5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fundoCa5.BackgroundImage")));
             this.fundoCa5.Controls.Add(this.lblCa5);
+            this.fundoCa5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fundoCa5.Location = new System.Drawing.Point(239, 22);
             this.fundoCa5.Name = "fundoCa5";
             this.fundoCa5.Size = new System.Drawing.Size(52, 56);
@@ -2004,6 +2076,7 @@ namespace AcroniUI.Custom
             // lblCa5
             // 
             this.lblCa5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.lblCa5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCa5.Font = new System.Drawing.Font("Open Sans", 10F);
             this.lblCa5.Location = new System.Drawing.Point(8, 6);
             this.lblCa5.Margin = new System.Windows.Forms.Padding(0);
@@ -2018,6 +2091,7 @@ namespace AcroniUI.Custom
             this.fundoCa6.BackColor = System.Drawing.Color.Black;
             this.fundoCa6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fundoCa6.BackgroundImage")));
             this.fundoCa6.Controls.Add(this.lblCa6);
+            this.fundoCa6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fundoCa6.Location = new System.Drawing.Point(294, 22);
             this.fundoCa6.Name = "fundoCa6";
             this.fundoCa6.Size = new System.Drawing.Size(52, 56);
@@ -2026,6 +2100,7 @@ namespace AcroniUI.Custom
             // lblCa6
             // 
             this.lblCa6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.lblCa6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCa6.Font = new System.Drawing.Font("Open Sans", 10F);
             this.lblCa6.Location = new System.Drawing.Point(8, 6);
             this.lblCa6.Margin = new System.Windows.Forms.Padding(0);
@@ -2040,6 +2115,7 @@ namespace AcroniUI.Custom
             this.fundoCa7.BackColor = System.Drawing.Color.Black;
             this.fundoCa7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fundoCa7.BackgroundImage")));
             this.fundoCa7.Controls.Add(this.lblCa7);
+            this.fundoCa7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fundoCa7.Location = new System.Drawing.Point(350, 22);
             this.fundoCa7.Name = "fundoCa7";
             this.fundoCa7.Size = new System.Drawing.Size(52, 56);
@@ -2048,6 +2124,7 @@ namespace AcroniUI.Custom
             // lblCa7
             // 
             this.lblCa7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.lblCa7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCa7.Font = new System.Drawing.Font("Open Sans", 10F);
             this.lblCa7.Location = new System.Drawing.Point(7, 6);
             this.lblCa7.Margin = new System.Windows.Forms.Padding(0);
@@ -2062,6 +2139,7 @@ namespace AcroniUI.Custom
             this.fundoCa8.BackColor = System.Drawing.Color.Black;
             this.fundoCa8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fundoCa8.BackgroundImage")));
             this.fundoCa8.Controls.Add(this.lblCa8);
+            this.fundoCa8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fundoCa8.Location = new System.Drawing.Point(406, 22);
             this.fundoCa8.Name = "fundoCa8";
             this.fundoCa8.Size = new System.Drawing.Size(52, 56);
@@ -2070,6 +2148,7 @@ namespace AcroniUI.Custom
             // lblCa8
             // 
             this.lblCa8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.lblCa8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCa8.Font = new System.Drawing.Font("Open Sans", 10F);
             this.lblCa8.Location = new System.Drawing.Point(7, 5);
             this.lblCa8.Margin = new System.Windows.Forms.Padding(0);
@@ -2085,6 +2164,7 @@ namespace AcroniUI.Custom
             this.fundoCa9.BackColor = System.Drawing.Color.Black;
             this.fundoCa9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fundoCa9.BackgroundImage")));
             this.fundoCa9.Controls.Add(this.lblCa9);
+            this.fundoCa9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fundoCa9.Location = new System.Drawing.Point(461, 22);
             this.fundoCa9.Name = "fundoCa9";
             this.fundoCa9.Size = new System.Drawing.Size(52, 56);
@@ -2093,6 +2173,7 @@ namespace AcroniUI.Custom
             // lblCa9
             // 
             this.lblCa9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.lblCa9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCa9.Font = new System.Drawing.Font("Open Sans", 10F);
             this.lblCa9.Location = new System.Drawing.Point(8, 6);
             this.lblCa9.Margin = new System.Windows.Forms.Padding(0);
@@ -2107,6 +2188,7 @@ namespace AcroniUI.Custom
             this.fundoCa10.BackColor = System.Drawing.Color.Black;
             this.fundoCa10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fundoCa10.BackgroundImage")));
             this.fundoCa10.Controls.Add(this.lblCa10);
+            this.fundoCa10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fundoCa10.Location = new System.Drawing.Point(517, 22);
             this.fundoCa10.Name = "fundoCa10";
             this.fundoCa10.Size = new System.Drawing.Size(52, 56);
@@ -2115,6 +2197,7 @@ namespace AcroniUI.Custom
             // lblCa10
             // 
             this.lblCa10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.lblCa10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCa10.Font = new System.Drawing.Font("Open Sans", 10F);
             this.lblCa10.Location = new System.Drawing.Point(7, 5);
             this.lblCa10.Margin = new System.Windows.Forms.Padding(0);
@@ -2129,6 +2212,7 @@ namespace AcroniUI.Custom
             this.fundoCa11.BackColor = System.Drawing.Color.Black;
             this.fundoCa11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fundoCa11.BackgroundImage")));
             this.fundoCa11.Controls.Add(this.lblCa11);
+            this.fundoCa11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fundoCa11.Location = new System.Drawing.Point(573, 22);
             this.fundoCa11.Name = "fundoCa11";
             this.fundoCa11.Size = new System.Drawing.Size(52, 56);
@@ -2137,6 +2221,7 @@ namespace AcroniUI.Custom
             // lblCa11
             // 
             this.lblCa11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.lblCa11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCa11.Font = new System.Drawing.Font("Open Sans", 10F);
             this.lblCa11.Location = new System.Drawing.Point(7, 5);
             this.lblCa11.Margin = new System.Windows.Forms.Padding(0);
@@ -2151,6 +2236,7 @@ namespace AcroniUI.Custom
             this.fundoCa12.BackColor = System.Drawing.Color.Black;
             this.fundoCa12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fundoCa12.BackgroundImage")));
             this.fundoCa12.Controls.Add(this.lblCa12);
+            this.fundoCa12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fundoCa12.Location = new System.Drawing.Point(628, 22);
             this.fundoCa12.Name = "fundoCa12";
             this.fundoCa12.Size = new System.Drawing.Size(52, 56);
@@ -2159,6 +2245,7 @@ namespace AcroniUI.Custom
             // lblCa12
             // 
             this.lblCa12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.lblCa12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCa12.Font = new System.Drawing.Font("Open Sans", 10F);
             this.lblCa12.Location = new System.Drawing.Point(8, 5);
             this.lblCa12.Margin = new System.Windows.Forms.Padding(0);
@@ -2173,6 +2260,7 @@ namespace AcroniUI.Custom
             this.fundoCa13.BackColor = System.Drawing.Color.Black;
             this.fundoCa13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fundoCa13.BackgroundImage")));
             this.fundoCa13.Controls.Add(this.lblCa13);
+            this.fundoCa13.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fundoCa13.Location = new System.Drawing.Point(683, 22);
             this.fundoCa13.Name = "fundoCa13";
             this.fundoCa13.Size = new System.Drawing.Size(52, 56);
@@ -2181,6 +2269,7 @@ namespace AcroniUI.Custom
             // lblCa13
             // 
             this.lblCa13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.lblCa13.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCa13.Font = new System.Drawing.Font("Open Sans", 10F);
             this.lblCa13.Location = new System.Drawing.Point(8, 6);
             this.lblCa13.Margin = new System.Windows.Forms.Padding(0);
@@ -2524,7 +2613,7 @@ namespace AcroniUI.Custom
             // 
             // fundoCc5
             // 
-            this.fundoCc5.BackColor = System.Drawing.Color.Black;
+            this.fundoCc5.BackColor = System.Drawing.Color.Transparent;
             this.fundoCc5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fundoCc5.BackgroundImage")));
             this.fundoCc5.Controls.Add(this.lblCc5);
             this.fundoCc5.Location = new System.Drawing.Point(280, 139);
@@ -2757,7 +2846,7 @@ namespace AcroniUI.Custom
             this.lblCd3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.lblCd3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCd3.Font = new System.Drawing.Font("Open Sans", 12F);
-            this.lblCd3.Location = new System.Drawing.Point(7, 4);
+            this.lblCd3.Location = new System.Drawing.Point(7, 5);
             this.lblCd3.Name = "lblCd3";
             this.lblCd3.Size = new System.Drawing.Size(38, 40);
             this.lblCd3.TabIndex = 89;
@@ -2813,6 +2902,7 @@ namespace AcroniUI.Custom
             this.fundoCd6.BackColor = System.Drawing.Color.Black;
             this.fundoCd6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fundoCd6.BackgroundImage")));
             this.fundoCd6.Controls.Add(this.lblCd6);
+            this.fundoCd6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fundoCd6.Location = new System.Drawing.Point(306, 197);
             this.fundoCd6.Name = "fundoCd6";
             this.fundoCd6.Size = new System.Drawing.Size(52, 56);
@@ -3218,7 +3308,6 @@ namespace AcroniUI.Custom
         private System.Windows.Forms.Button btnHist3;
         private System.Windows.Forms.Button btnHist2;
         private StyleBtn btnStyleFontColor;
-        private System.Windows.Forms.Panel pnlBtnStyleFontColor;
         private System.Windows.Forms.Panel pnlBtnOpenModules;
         private StyleBtn btnOpenModuleTexture;
         private System.Windows.Forms.Panel pnlWithKeycaps;
@@ -3321,9 +3410,7 @@ namespace AcroniUI.Custom
         private System.Windows.Forms.Label lblCd13;
         protected System.Windows.Forms.PictureBox picBoxKeyboardBackground;
         private System.Windows.Forms.Panel fundoCb14sExtensao;
-        private Kbtn Cb14sExtensao;
         private System.Windows.Forms.Panel fundoCb14s;
-        private Kbtn Cb14s;
         private System.Windows.Forms.Panel fundoCa9;
         private Bunifu.Framework.UI.BunifuElipse ebtnOpenModuleTexture;
         private Bunifu.Framework.UI.BunifuImageButton btnTextAlignBottom;
@@ -3331,8 +3418,6 @@ namespace AcroniUI.Custom
         private Bunifu.Framework.UI.BunifuImageButton btnTextAlignUpper;
         private System.Windows.Forms.Panel pnlVertAlign;
         private System.Windows.Forms.Panel pnlHorizAlign;
-        private System.Windows.Forms.Panel fundoCc1s;
-        private System.Windows.Forms.Label lblCc1s;
         private System.Windows.Forms.Panel fundoCb1s;
         private System.Windows.Forms.Label lblCb1s;
         private System.Windows.Forms.Panel fundoCa14s;
@@ -3357,6 +3442,11 @@ namespace AcroniUI.Custom
         private System.Windows.Forms.Label lblCe8;
         private System.Windows.Forms.Panel fundoCd14s;
         private System.Windows.Forms.Label lblCd14s;
+        private System.Windows.Forms.Panel fundoCc1s;
+        private System.Windows.Forms.Label lblCc1s;
+        private System.Windows.Forms.Label Cb14sExtensao;
+        private System.Windows.Forms.Label Cb14s;
+        private System.Windows.Forms.Panel pnlBtnStyleFontColor;
     }
 }
 

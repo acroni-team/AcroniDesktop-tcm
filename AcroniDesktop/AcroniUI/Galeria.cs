@@ -87,7 +87,6 @@ namespace AcroniUI
                     foreach (Keyboard k in userCollection.Keyboards)
                     {
                         Share.KeyboardsQuantity++;
-                        MessageBox.Show(k.NickName);
                         Share.Keyboard.NickName = k.NickName;
                         ControlKeyboard controlKeyboard = new ControlKeyboard();
                         controlKeyboard.Click += new EventHandler(OpenKeyboard);
@@ -252,7 +251,7 @@ namespace AcroniUI
                 }
 
             }
-
+            this.UpdateKeyboardQuantity();
             Share.User.SendToFile();
             Galeria recharge = new Galeria(false);
             recharge.Show();

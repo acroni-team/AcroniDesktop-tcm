@@ -254,24 +254,34 @@ namespace AcroniUI.Custom
 
                 if (Color != Color.FromArgb(26, 26, 26))
                 {
-                    //if (keybutton == Cb14sExtensao || keybutton == Cb14s)
-                    //{
-                    //    Cb14s.Parent.BackgroundImage = null;
-                    //    Cb14sExtensao.Parent.BackgroundImage = null;
-                    //}
+                    if (keybutton == Cb14sExtensao || keybutton == Cb14s)
+                    {
+                        Cb14s.Parent.BackgroundImage = null;
+                        Cb14sExtensao.Parent.BackgroundImage = null;
+                        if (keybutton == Cb14s)
+                        {
+                            Cb14sExtensao.Parent.BackColor = Color.FromArgb(90, keybutton.BackColor);
+                            Cb14sExtensao.BackColor = Color;
+                        }
+                        else
+                        {
+                            Cb14s.Parent.BackColor = Color.FromArgb(90, keybutton.BackColor);
+                            Cb14s.BackColor = Color;
+                        }
+                    }
 
-                    //else 
-                    //{
-                    //    keybutton.Parent.BackgroundImage = null;
-                    //    keybutton.Parent.BackColor = Color.FromArgb(90, keybutton.BackColor);
-                    //}
+                    else
+                    {
+                        keybutton.Parent.BackgroundImage = null;
+                        keybutton.Parent.BackColor = Color.FromArgb(90, keybutton.BackColor);
+                    }
 
                     keybutton.Parent.BackgroundImage = null;
                     keybutton.Parent.BackColor = Color.FromArgb(90, keybutton.BackColor);
                 }
 
                 else
-                    keybutton.Parent.BackgroundImage = global::AcroniUI.Properties.Resources.keycapbackgrounddefault;
+                    keybutton.Parent.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\..\..\Images\Teclas\{keybutton.Name}.png");
             }
 
             #endregion
@@ -874,7 +884,7 @@ namespace AcroniUI.Custom
                             }
                         }
                         aGotoExample:
-                        using (SqlCommand comm = new SqlCommand($"update tblCliente set quantidade_teclados = quantidade_teclados + 1 where usuario like '{SQLConnection.nome_usuario}'", conn))
+                        using (SqlCommand comm = new SqlCommand($"update tblCliente set quantidade_teclados = {Share.User.KeyboardQuantity} where usuario like '{SQLConnection.nome_usuario}'", conn))
                         {
                             comm.ExecuteNonQuery();
                         }

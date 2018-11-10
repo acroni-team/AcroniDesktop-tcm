@@ -547,7 +547,6 @@
             this.Controls.Add(this.alblUpperText);
             this.Controls.Add(this.apnlTextbox1);
             this.Name = "KeycapTextIconModule";
-            this.Opacity = 1D;
             this.Controls.SetChildIndex(this.apnlTextbox1, 0);
             this.Controls.SetChildIndex(this.alblUpperText, 0);
             this.Controls.SetChildIndex(this.alblIcon, 0);

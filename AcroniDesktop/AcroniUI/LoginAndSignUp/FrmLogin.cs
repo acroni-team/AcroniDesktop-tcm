@@ -181,8 +181,6 @@ namespace AcroniUI.LoginAndSignUp
                                     }
                                 if (resposta[1].ToString() == "p")
                                         Share.User.isPremiumAccount = true;
-                                foreach (Collection col in Share.User.UserCollections)
-                                    MessageBox.Show(col.CollectionName);
                                 selecionarTeclado = new SelectKeyboard();
                                 selecionarTeclado.Show();
                                 Hide();

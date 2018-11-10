@@ -213,6 +213,9 @@
     <EmbeddedResource Include="Custom\Fullsize.resx">
       <DependentUpon>Fullsize.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Custom\KeyboardSelectionModule\PickKeyboardColorModule.resx">
+      <DependentUpon>PickKeyboardColorModule.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Custom\Tenkeyless.resx">
       <DependentUpon>Tenkeyless.cs</DependentUpon>
     </EmbeddedResource>
@@ -257,7 +260,9 @@
     <None Include="Images\keycapbackgrounddefault.png" />
     <Content Include="Images\logo.svg" />
     <None Include="Images\pen.png" />
+    <None Include="Images\shiftarrow.png" />
     <Content Include="Images\slogo.png" />
+    <None Include="Images\tabarrowkeysred.png" />
     <Content Include="Images\tenkeyless.png" />
     <None Include="AcroniUI.cd" />
     <None Include="app.config" />

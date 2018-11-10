@@ -65,6 +65,7 @@
             this.Controls.Add(this.btnThis);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "KeycapTextureModule";
+            this.Opacity = 0D;
             this.Text = "KeycapTextureModule";
             this.Controls.SetChildIndex(this.btnAlll, 0);
             this.Controls.SetChildIndex(this.btnThis, 0);

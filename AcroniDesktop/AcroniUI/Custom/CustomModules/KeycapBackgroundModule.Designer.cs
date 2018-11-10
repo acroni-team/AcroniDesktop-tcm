@@ -332,7 +332,6 @@
             this.Controls.Add(this.btnNewIcon);
             this.Controls.Add(this.pnlImages);
             this.Name = "KeycapBackgroundModule";
-            this.Opacity = 1D;
             this.Text = "KeycapBackgroundModule";
             this.Controls.SetChildIndex(this.pnlImages, 0);
             this.Controls.SetChildIndex(this.btnNewIcon, 0);
