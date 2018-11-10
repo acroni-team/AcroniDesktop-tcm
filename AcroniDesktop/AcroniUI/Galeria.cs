@@ -29,7 +29,6 @@ namespace AcroniUI
         public Galeria(bool selectMode)
         {
             InitializeComponent();
-
             WelcomeUser();
             this.selectMode = selectMode;
 
@@ -71,15 +70,9 @@ namespace AcroniUI
         {
             using (FileStream openarchive = new FileStream(Application.StartupPath + @"\" + SQLConnection.nome_usuario + ".acr", FileMode.OpenOrCreate))
             {
-                try
-                {
+               
                     BinaryFormatter ofByteArrayToObject = new BinaryFormatter();
-                    Share.User = (User)ofByteArrayToObject.Deserialize(openarchive);
-                }
-                catch (Exception)
-                {
-                    Share.User = new User();
-                }
+                    Share.User = (User)ofByteArrayToObject.Deserialize(openarchive);               
             }
 
             int countCollections = 0;
@@ -160,6 +153,7 @@ namespace AcroniUI
             }
             if (!selectMode)
             {
+
                 CollectionSelected openSelectedCollection = new CollectionSelected();
                 openSelectedCollection.Show();
             }

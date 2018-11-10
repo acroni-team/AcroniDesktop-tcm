@@ -19,13 +19,13 @@ namespace AcroniUI
         public CollectionSelected()
         {
             InitializeComponent();
+            Share.User.CatchFromFile();
             pnlWithKeyboards.AutoScroll = true;
             loadKeyboards();
             lblCollectionName.Text = Share.Collection.CollectionName;
             lblKeyboardsNumber.Text = contKeyboards + " "+lblKeyboardsNumber.Text;
-
         }
-
+        
         private void loadKeyboards()
         {
             int countLateralPadding = 0;

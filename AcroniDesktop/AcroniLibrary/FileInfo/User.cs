@@ -25,6 +25,18 @@ namespace AcroniLibrary.FileInfo
                 objectToByteArray.Serialize(savearchive, Share.User);
             }
         }
+        public void CatchFromFile()
+        {
+            using (FileStream savearchive = new FileStream(Application.StartupPath + @"\" + SQLConnection.nome_usuario + ".acr", FileMode.OpenOrCreate))
+            {
+                BinaryFormatter objectToByteArray = new BinaryFormatter();
+                UserCollections = (objectToByteArray.Deserialize(savearchive) as User).UserCollections;
+                //UserName = (objectToByteArray.Deserialize(savearchive) as User).UserName;
+                //isPremiumAccount = (objectToByteArray.Deserialize(savearchive) as User).isPremiumAccount;
+                //KeyboardQuantity = (objectToByteArray.Deserialize(savearchive) as User).KeyboardQuantity;
+
+            }
+        }
         public User()
         {
             using (SqlConnection cnn = new SqlConnection(SQLConnection.nome_conexao))
