@@ -14,5 +14,6 @@ namespace AcroniLibrary.FileInfo
         /// Esse membro necessita que a classe Bitmap seja instanciada com os devidos parâmetros.
         /// </summary>
         public Bitmap CollectionPicture { get; set; }
+        public int CollectionID { get; set; } = 0;
     }
 }

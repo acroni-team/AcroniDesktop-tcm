@@ -851,24 +851,24 @@ namespace AcroniUI.Custom
 
             if ((!String.IsNullOrEmpty(Share.Collection.CollectionName) && !String.IsNullOrEmpty(Share.KeyboardNameNotCreated)) || Share.EditKeyboard)
             {
-                //using (SqlConnection conn = new SqlConnection(SQLConnection.nome_conexao))
-                //{
-                //    conn.Open();
+                using (SqlConnection conn = new SqlConnection(SQLConnection.nome_conexao))
+                {
+                    conn.Open();
 
-                //    using (SqlCommand com = new SqlCommand($"select quantidade_teclados from tblCliente", conn))
-                //    {
-                //        using (SqlDataReader sd = com.ExecuteReader())
-                //        {
-                //            sd.Read();
-                //            if ((int)sd[0] >= 5)
-                //            {
-                //                AcroniMessageBoxConfirm mb = new AcroniMessageBoxConfirm("Sinto muito, mas você atingiu o limite de teclados que você " +
-                //                    "pode criar usando essa conta.", "Atualize sua conta agora mesmo para uma conta Premium");
-                //                mb.ShowDialog();
-                //            }
-                //        }
-                //    }
-                //}
+                    using (SqlCommand com = new SqlCommand($"select quantidade_teclados from tblCliente", conn))
+                    {
+                        using (SqlDataReader sd = com.ExecuteReader())
+                        {
+                            sd.Read();
+                            if ((int)sd[0] >= 5)
+                            {
+                                AcroniMessageBoxConfirm mb = new AcroniMessageBoxConfirm("Sinto muito, mas você atingiu o limite de teclados que você " +
+                                    "pode criar usando essa conta.", "Atualize sua conta agora mesmo para uma conta Premium");
+                                mb.ShowDialog();
+                            }
+                        }
+                    }
+                }
 
                 using (SqlConnection conn = new SqlConnection(SQLConnection.nome_conexao))
                 {
@@ -878,7 +878,7 @@ namespace AcroniUI.Custom
                         using (SqlDataReader sdr = cmm.ExecuteReader())
                         {
                             sdr.Read();
-                            if ((int)sdr[0] >= 5)
+                            if ((int)sdr[0] <= 5)
                             {
                                 goto aGotoExample;
                             }
@@ -963,9 +963,11 @@ namespace AcroniUI.Custom
 
             foreach (Collection col in Share.User.UserCollections)
             {
+                int i = 0;
                 if (col.CollectionName.Equals(Share.Collection.CollectionName))
                 {
                     col.Keyboards.Add(keyboard);
+                    col.CollectionID = i + 1;
                     break;
                 }
             }
@@ -984,7 +986,7 @@ namespace AcroniUI.Custom
         {
             byte[] img = ImageConvert.ImageToByteArray(Screenshot.TakeSnapshot(picBoxKeyboardBackground), ImageFormat.Bmp);
 
-            SQLMethods.INSERT_INTO($"insert into tblTecladoCustomizado (nickname, preco, imagem_teclado) values ('{keyboard.NickName}', 254.00, @image)", img);
+            SQLMethods.INSERT_INTO($"insert into tblTecladoCustomizado (id_colecao, id_cliente, imagem_teclado, nickname, preco) values ({Share.Collection.CollectionID},{Share.User.ID}, @image,'{Share.Keyboard.NickName}',254.00)", img);
 
         }
         #endregion

@@ -1,5 +1,6 @@
 ﻿using AcroniControls;
 using AcroniLibrary;
+using AcroniLibrary.Drawing;
 using AcroniLibrary.FileInfo;
 using AcroniLibrary.SQL;
 using AcroniUI.Custom;
@@ -8,6 +9,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Drawing.Text;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -70,9 +72,9 @@ namespace AcroniUI
         {
             using (FileStream openarchive = new FileStream(Application.StartupPath + @"\" + SQLConnection.nome_usuario + ".acr", FileMode.OpenOrCreate))
             {
-               
-                    BinaryFormatter ofByteArrayToObject = new BinaryFormatter();
-                    Share.User = (User)ofByteArrayToObject.Deserialize(openarchive);               
+
+                BinaryFormatter ofByteArrayToObject = new BinaryFormatter();
+                Share.User = (User)ofByteArrayToObject.Deserialize(openarchive);
             }
 
             int countCollections = 0;
@@ -138,7 +140,7 @@ namespace AcroniUI
             Panel painelkapakapaALO;
             Regex keyboardsQuantity = new Regex(@"• \d+ Teclados");
             if (!(sender as Panel).Parent.Name.Equals("pnlScroll"))
-                painelkapakapaALO = (Panel) (sender as Panel).Parent;
+                painelkapakapaALO = (Panel)(sender as Panel).Parent;
             else
                 painelkapakapaALO = (sender as Panel);
             foreach (Control items in painelkapakapaALO.Controls)
@@ -162,7 +164,7 @@ namespace AcroniUI
         private void changeColor_MouseEnter(object sender, EventArgs e)
         {
             (sender as Panel).BackColor = Color.FromArgb(195, (sender as Panel).BackColor.R, (sender as Panel).BackColor.G, (sender as Panel).BackColor.B);
-           
+
         }
         private void returnColor_MouseLeave(object sender, EventArgs e)
         {
@@ -172,7 +174,7 @@ namespace AcroniUI
         private void btnAdicionarGaleria_Click(object sender, EventArgs e)
         {
             AcroniMessageBoxInput collectionNameDialog = new AcroniMessageBoxInput("Insira o nome de sua coleção:");
-            
+
             if (collectionNameDialog.ShowDialog() == DialogResult.OK)
             {
                 if (!String.IsNullOrEmpty(collectionNameDialog.input))
@@ -196,9 +198,10 @@ namespace AcroniUI
                 Share.Collection.CollectionName = newCollection.CollectionName;
 
                 AcroniControls.CollectionUI collectionUi = new AcroniControls.CollectionUI();
-     
-                    collectionUi.MouseEnter += new EventHandler(changeColor_MouseEnter);
-                    collectionUi.MouseLeave += new EventHandler(returnColor_MouseLeave);
+
+                collectionUi.MouseEnter += new EventHandler(changeColor_MouseEnter);
+                collectionUi.MouseLeave += new EventHandler(returnColor_MouseLeave);
+
 
                 foreach (Control itemColecao in collectionUi.Controls)
                 {
@@ -222,6 +225,10 @@ namespace AcroniUI
                 Share.KeyboardsQuantity = 0;
                 Share.Collection.CollectionName = "";
                 Share.Keyboard.Name = "";
+                byte[] img = ImageConvert.ImageToByteArray(Screenshot.TakeSnapshot(collectionUi), ImageFormat.Bmp);
+
+                SQLMethods.INSERT_INTO($"insert into tblColecao values ({Share.User.ID}, '{Share.Collection.CollectionName}', @image)", img);
+
             }
 
         }

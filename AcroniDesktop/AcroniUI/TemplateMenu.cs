@@ -27,6 +27,7 @@ namespace AcroniUI
         public TemplateMenu()
         {
             InitializeComponent();
+            Share.User = new User();
             UpdateKeyboardQuantity();
             Bunifu.Framework.UI.BunifuElipse ellipse = new Bunifu.Framework.UI.BunifuElipse();
             foreach (Control c in pnlOptions.Controls)

@@ -22,8 +22,6 @@ namespace AcroniUI
             ///
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(FormDrag.Form_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(FormDrag.Form_MouseMove);
-
-            Share.User = new User();
             
             #endregion
 

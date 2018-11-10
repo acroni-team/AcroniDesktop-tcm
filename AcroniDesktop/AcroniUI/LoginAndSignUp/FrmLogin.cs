@@ -174,13 +174,13 @@ namespace AcroniUI.LoginAndSignUp
                                 Share.User = new User();
                                 Share.User.KeyboardQuantity = (int)resposta[2];
                                 if (File.Exists(Application.StartupPath + "\\" + txtEntrar.Text + ".acr"))
-                                using (FileStream openarchive = new FileStream(Application.StartupPath + "\\" + txtEntrar.Text + ".acr",FileMode.Open))
+                                    using (FileStream openarchive = new FileStream(Application.StartupPath + "\\" + txtEntrar.Text + ".acr", FileMode.Open))
                                     {
                                         BinaryFormatter toObject = new BinaryFormatter();
-                                        Share.User = (User) toObject.Deserialize(openarchive);
+                                        Share.User = (User)toObject.Deserialize(openarchive);
                                     }
                                 if (resposta[1].ToString() == "p")
-                                        Share.User.isPremiumAccount = true;
+                                    Share.User.isPremiumAccount = true;
                                 selecionarTeclado = new SelectKeyboard();
                                 selecionarTeclado.Show();
                                 Hide();
