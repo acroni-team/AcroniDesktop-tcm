@@ -14,6 +14,7 @@ E:\Desktop\c\AcroniDesktop\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls
 E:\Desktop\c\AcroniDesktop\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.dll
 E:\Desktop\c\AcroniDesktop\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.pdb
 E:\Desktop\c\AcroniDesktop\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.csprojAssemblyReference.cache
+<<<<<<< HEAD
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniControls\bin\Debug\AcroniControls.dll
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniControls\bin\Debug\AcroniControls.pdb
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniControls\bin\Debug\AcroniLibrary.dll
@@ -28,3 +29,21 @@ C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniControls\obj\D
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.csproj.GenerateResource.Cache
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.dll
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.pdb
+=======
+C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniControls\bin\Debug\AcroniControls.dll
+C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniControls\bin\Debug\AcroniControls.pdb
+C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniControls\bin\Debug\AcroniLibrary.dll
+C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniControls\bin\Debug\Bunifu_UI_v1.52.dll
+C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniControls\bin\Debug\AcroniLibrary.pdb
+C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.csprojAssemblyReference.cache
+C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.AcroniMessageBoxConfirm.resources
+C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.AcroniMessageBoxInput.resources
+C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniControls\obj\Debug\TheKhanSoftsWatermarkTextbox.TextboxWithPlaceholder.resources
+C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.MessageBoxSemInternet.resources
+C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.Properties.Resources.resources
+C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.csproj.GenerateResource.cache
+C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.csproj.CoreCompileInputs.cache
+C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.csproj.CopyComplete
+C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.dll
+C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.pdb
+>>>>>>> b0a12f11e80dbb1698cb07199e16a23b183bbfb3
