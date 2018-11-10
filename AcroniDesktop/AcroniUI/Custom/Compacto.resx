@@ -484,6 +484,16 @@
         jqndlUX8N/js7hz4Pw/4LwwiBdUZ0aO/2hitl9UzR1cAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="Cb14s.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAHCAYAAADXhRcnAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4yMfEgaZUAAAC2SURBVChTY/j/
+        /z9Z+OfPn9ewShCDwZrRwb9//ziBEgZ//vxJAbK5ocIYAKz51q1b7EBFYr9//3YB4glATdf//v37DYg/
+        ffv2zQ6oSAeGP3/+DGcD8TWGHz9+VAM1XQYq/g405B/QSWAA5P8D4ldAw15iw2DNjx494gQaoAnkxAIN
+        WQ7UcBOIPwDNeQ80wwZomzY2/PHjR3WIB6Bg1apVzEANIr9+/TIDmp7w/PlznH5mYGBgAAD2IhVubZ/F
+        awAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="fundoCa1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADUAAAA6CAIAAACf0obyAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -1437,16 +1447,6 @@
         /5qIbZDtow7ffffd3dOnT+9++umnXx1NDAAAAHw+tl9v2P6Mv/15f/tz//bn/+0eYL8P+PXf8vAuh3/z
         oV/+evqLfzx58uQ/v/zyy//aBgcAAACux/bn/e3P/b/853/84unR/cDb7r74/7yohVcQEOpJAAAAAElF
         TkSuQmCC
-</value>
-  </data>
-  <data name="Cb14s.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAHCAYAAADXhRcnAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4yMfEgaZUAAAC2SURBVChTY/j/
-        /z9Z+OfPn9ewShCDwZrRwb9//ziBEgZ//vxJAbK5ocIYAKz51q1b7EBFYr9//3YB4glATdf//v37DYg/
-        ffv2zQ6oSAeGP3/+DGcD8TWGHz9+VAM1XQYq/g405B/QSWAA5P8D4ldAw15iw2DNjx494gQaoAnkxAIN
-        WQ7UcBOIPwDNeQ80wwZomzY2/PHjR3WIB6Bg1apVzEANIr9+/TIDmp7w/PlznH5mYGBgAAD2IhVubZ/F
-        awAAAABJRU5ErkJggg==
 </value>
   </data>
   <metadata name="eBtnOpenModuleSwitch.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

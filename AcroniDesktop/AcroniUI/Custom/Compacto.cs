@@ -811,7 +811,6 @@ namespace AcroniUI.Custom
                 }
             }
             SaveKeyboard();
-            ExportToWebSite();
         }
 
         private async void SaveKeyboard()
@@ -900,6 +899,7 @@ namespace AcroniUI.Custom
                     BinaryFormatter Serializer = new BinaryFormatter();
                     Serializer.Serialize(savearchive, Share.User);
                 }
+                ExportToWebSite();
             }
             else
                 MessageBox.Show("Teclado não foi salvo!");
@@ -984,9 +984,9 @@ namespace AcroniUI.Custom
         #region Exportar pro site
         private void ExportToWebSite()
         {
-            byte[] img = ImageConvert.ImageToByteArray(Screenshot.TakeSnapshot(picBoxKeyboardBackground), ImageFormat.Bmp);
+            byte[] img = ImageConvert.ImageToByteArray(Screenshot.TakeSnapshot(pnlWithKeycaps), ImageFormat.Bmp);
 
-            SQLMethods.INSERT_INTO($"insert into tblTecladoCustomizado (id_colecao, id_cliente, imagem_teclado, nickname, preco) values ({Share.Collection.CollectionID},{Share.User.ID}, @image,'{Share.Keyboard.NickName}',254.00)", img);
+            SQLMethods.INSERT_INTO($"insert into tblTecladoCustomizado (id_colecao, id_cliente, imagem_teclado, nickname, preco) values ('1', {Share.User.ID}, @image,'{Share.Keyboard.NickName}',254.00)", img);
 
         }
         #endregion

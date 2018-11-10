@@ -72,7 +72,6 @@ namespace AcroniUI
         {
             using (FileStream openarchive = new FileStream(Application.StartupPath + @"\" + SQLConnection.nome_usuario + ".acr", FileMode.OpenOrCreate))
             {
-
                 BinaryFormatter ofByteArrayToObject = new BinaryFormatter();
                 Share.User = (User)ofByteArrayToObject.Deserialize(openarchive);
             }

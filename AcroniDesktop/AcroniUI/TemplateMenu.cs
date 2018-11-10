@@ -64,13 +64,13 @@ namespace AcroniUI
                     {
                         sdr.Read();
                         Share.User.KeyboardQuantity = (int)sdr[0];
-                        for (int i = 0; i <= Share.User.KeyboardQuantity; i++)
+                        for (int i = 0; i < Share.User.KeyboardQuantity; i++)
                         {
                             if (Share.User.KeyboardQuantity != 0)
                                 espacoArmazenamento.Controls[$"pnlPreenchido{i + 1}"].Visible = true;
                             else
                             {
-                                for(int j = 0; j <= 5; j++)
+                                for(int j = 0; j < 5; j++)
                                 {
                                     espacoArmazenamento.Controls[$"pnlPreenchido{j + 1}"].Visible = false;
                                 }
