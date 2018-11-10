@@ -894,7 +894,7 @@ namespace AcroniUI.Custom
                 System.Windows.MessageBox.Show("Teclado adicionado/salvo com sucesso!");
                 Share.EditKeyboard = true;
                 Share.Keyboard = keyboard;
-                using (FileStream savearchive = new FileStream(Application.StartupPath + @"\" + SQLConnection.nome_usuario + ".acr", FileMode.OpenOrCreate))
+                using (FileStream savearchive = new FileStream(Application.StartupPath + @"\" + SQLConnection.nome_usuario + ".acr", FileMode.CreateNew))
                 {
                     BinaryFormatter Serializer = new BinaryFormatter();
                     Serializer.Serialize(savearchive, Share.User);

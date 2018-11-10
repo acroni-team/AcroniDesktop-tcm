@@ -173,12 +173,11 @@ namespace AcroniUI.LoginAndSignUp
                                 SQLConnection.nome_usuario = txtEntrar.Text;
                                 Share.User = new User();
                                 Share.User.KeyboardQuantity = (int)resposta[2];
-                                if (File.Exists(Application.StartupPath + "\\" + txtEntrar.Text + ".acr"))
-                                    using (FileStream openarchive = new FileStream(Application.StartupPath + "\\" + txtEntrar.Text + ".acr", FileMode.Open))
-                                    {
-                                        BinaryFormatter toObject = new BinaryFormatter();
-                                        Share.User = (User)toObject.Deserialize(openarchive);
-                                    }
+                                using (FileStream openarchive = new FileStream($@"{Application.StartupPath}\..\..\{txtEntrar.Text}.acr", FileMode.Open))
+                                {
+                                    BinaryFormatter toObject = new BinaryFormatter();
+                                    Share.User = (User)toObject.Deserialize(openarchive);
+                                }
                                 if (resposta[1].ToString() == "p")
                                     Share.User.isPremiumAccount = true;
                                 selecionarTeclado = new SelectKeyboard();
@@ -309,6 +308,17 @@ namespace AcroniUI.LoginAndSignUp
             pnlShowCadError.Location = new Point(apnlApelido.Location.X, 510);
         }
 
+        private void MetodoParaCriarPerfilADM()
+        {
+            Share.User = new User();
+
+            using (FileStream savearchive = new FileStream($@"{Application.StartupPath}\..\..\{txtEntrar.Text}.acr", FileMode.Create))
+            {
+                BinaryFormatter Serializer = new BinaryFormatter();
+                Serializer.Serialize(savearchive, Share.User);
+            }
+        }
+
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             if (hasEmptyRegisters())
@@ -345,9 +355,9 @@ namespace AcroniUI.LoginAndSignUp
                                         SQLConnection.nome_usuario = txtCadApelido.Text;
                                         Share.User = new User();
                                         //(new AcroniControls.AcroniMessageBoxConfirm("Cadastro concluido!")).Show();
-                                        if (!File.Exists(Application.StartupPath + "\\" + SQLConnection.nome_usuario + ".acr"))
+                                        if (!File.Exists($@"{Application.StartupPath}\..\..\{txtEntrar.Text}.acr"))
                                         {
-                                            using (FileStream savearchive = new FileStream(Application.StartupPath + @"\" + SQLConnection.nome_usuario + ".acr", FileMode.Create))
+                                            using (FileStream savearchive = new FileStream($@"{Application.StartupPath}\..\..\{txtEntrar.Text}.acr", FileMode.OpenOrCreate))
                                             {
                                                 BinaryFormatter Serializer = new BinaryFormatter();
                                                 Serializer.Serialize(savearchive, Share.User);
@@ -455,6 +465,7 @@ namespace AcroniUI.LoginAndSignUp
         {
             txtEntrar.Text = "teste";
             txtSenha.Text = "teste";
+            MetodoParaCriarPerfilADM();
             btnEntrar_Click(default(object), default(EventArgs));
         }
 
