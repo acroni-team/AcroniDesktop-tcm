@@ -172,15 +172,12 @@ namespace AcroniUI.LoginAndSignUp
                             {
                                 SQLConnection.nome_usuario = txtEntrar.Text;
                                 Share.User = new User();
-                                Share.User.KeyboardQuantity = (int)resposta[2];
                                 if (File.Exists($@"{Application.StartupPath}\..\..\{txtEntrar.Text}.acr"))
-                                    using (FileStream openarchive = new FileStream($@"{Application.StartupPath}\..\..\{txtEntrar.Text}.acr", FileMode.Open))
-                                    {
-                                        BinaryFormatter toObject = new BinaryFormatter();
-                                        Share.User = (User)toObject.Deserialize(openarchive);
-                                    }
+                                    Share.User.CatchFromFile();
                                 else
                                     MetodoParaCriarPerfilADM();
+                                foreach (Collection col in Share.User.UserCollections)
+                                    MessageBox.Show(col.CollectionName);
                                 if (resposta[1].ToString() == "p")
                                     Share.User.isPremiumAccount = true;
                                 Hide();
@@ -469,7 +466,6 @@ namespace AcroniUI.LoginAndSignUp
         {
             txtEntrar.Text = "teste";
             txtSenha.Text = "teste";
-            MetodoParaCriarPerfilADM();
             btnEntrar_Click(default(object), default(EventArgs));
         }
 

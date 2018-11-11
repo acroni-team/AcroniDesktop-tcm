@@ -23,11 +23,10 @@ namespace AcroniUI
     public partial class TemplateMenu : Template
     {
         ComponentResourceManager resources = new ComponentResourceManager(typeof(TemplateMenu));
-        int contTeclados = 0;
         public TemplateMenu()
         {
             InitializeComponent();
-            //UpdateKeyboardQuantity();
+            UpdateKeyboardQuantity();
             Bunifu.Framework.UI.BunifuElipse ellipse = new Bunifu.Framework.UI.BunifuElipse();
             foreach (Control c in pnlOptions.Controls)
             {
@@ -64,42 +63,47 @@ namespace AcroniUI
             }
             else
             {
+                Share.User.KeyboardQuantity = 0;
+                foreach (Collection col in Share.User.UserCollections)
+                    foreach (Keyboard k in col.Keyboards)
+                        Share.User.KeyboardQuantity++;
                 lblQtdGasta.Text = "" + Share.User.KeyboardQuantity;
-                //foreach (Control c in espacoArmazenamento.Controls)
-                //{
-                //    if (i < Share.User.KeyboardQuantity)
-                //        c.Visible = true;
-                //    i++;
+                foreach (Control c in espacoArmazenamento.Controls)
+                {
+                    if (i < Share.User.KeyboardQuantity)
+                        c.Visible = true;
+                    i++;
+                }
 
-                //    if (conexão_SQL.State != ConnectionState.Open)
-                //        conexão_SQL.Open();
+                    //    if (conexão_SQL.State != ConnectionState.Open)
+                    //        conexão_SQL.Open();
 
-                //    using (comando_SQL = new SqlCommand($"select quantidade_teclados from tblCliente where id_cliente like '{SQLConnection.nome_usuario}'", conexão_SQL))
-                //    {
-                //        using (SqlDataReader sdr = comando_SQL.ExecuteReader())
-                //        {
-                //            sdr.Read();
+                    //    using (comando_SQL = new SqlCommand($"select quantidade_teclados from tblCliente where id_cliente like '{SQLConnection.nome_usuario}'", conexão_SQL))
+                    //    {
+                    //        using (SqlDataReader sdr = comando_SQL.ExecuteReader())
+                    //        {
+                    //            sdr.Read();
 
-                //            if ((int)sdr[0] == 0)
-                //                Share.User.KeyboardQuantity = 0;
-                //            else
-                //                Share.User.KeyboardQuantity = (int)sdr[0];
+                    //            if ((int)sdr[0] == 0)
+                    //                Share.User.KeyboardQuantity = 0;
+                    //            else
+                    //                Share.User.KeyboardQuantity = (int)sdr[0];
 
-                //            for (int a = 0; a < Share.User.KeyboardQuantity; a++)
-                //            {
-                //                if (Share.User.KeyboardQuantity != 0)
-                //                    espacoArmazenamento.Controls[$"pnlPreenchido{i + 1}"].Visible = true;
-                //                else
-                //                {
-                //                    for (int j = 0; j < 5; j++)
-                //                    {
-                //                        espacoArmazenamento.Controls[$"pnlPreenchido{j + 1}"].Visible = false;
-                //                    }
-                //                }
-                //            }
-                //        }
-                //    }
-            }
+                    //            for (int a = 0; a < Share.User.KeyboardQuantity; a++)
+                    //            {
+                    //                if (Share.User.KeyboardQuantity != 0)
+                    //                    espacoArmazenamento.Controls[$"pnlPreenchido{i + 1}"].Visible = true;
+                    //                else
+                    //                {
+                    //                    for (int j = 0; j < 5; j++)
+                    //                    {
+                    //                        espacoArmazenamento.Controls[$"pnlPreenchido{j + 1}"].Visible = false;
+                    //                    }
+                    //                }
+                    //            }
+                    //        }
+                    //    }
+                }
         }
         //if(Share.User.isPremiumAccount)
         //using (SqlConnection conn = new SqlConnection(SQLConnection.nome_conexao))

@@ -14,6 +14,7 @@ namespace AcroniControls
     public partial class SelectColor : Form
     {
         Button selected;
+        public Color settedColor;
         List<int> rgb = new List<int>();
         int contRGB = 0;
         public SelectColor()
@@ -26,7 +27,7 @@ namespace AcroniControls
             if (selected != null)
                 selected.FlatAppearance.BorderSize = 0;
             selected = (Button)sender;
-            Share.Collection.CollectionColor = (sender as Button).BackColor;
+            settedColor = (sender as Button).BackColor;
             (sender as Button).FlatAppearance.BorderSize = 1;
         }
 
@@ -41,7 +42,7 @@ namespace AcroniControls
             {
                 try
                 {
-                    Share.Collection.CollectionColor = ColorTranslator.FromHtml(txtColor.Text);
+                    settedColor = ColorTranslator.FromHtml(txtColor.Text);
                 }
                 catch (Exception)
                 {
@@ -49,12 +50,12 @@ namespace AcroniControls
                     {
                         foreach (char c in txtColor.Text)
                         {
-                            if (c != ';')
+                            if (c != ';'&&c!=',')
                                 rgb[contRGB] += c;
                             else
                                 contRGB++;
                         }
-                        Share.Collection.CollectionColor = Color.FromArgb(rgb[0], rgb[1], rgb[2]);
+                        settedColor = Color.FromArgb(rgb[0], rgb[1], rgb[2]);
                     }
                     catch (Exception) { }
                 }

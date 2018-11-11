@@ -824,7 +824,7 @@ namespace AcroniUI.Custom
 
                                 break;
                             }
-                            catch (Exception err) { MessageBox.Show(err.Message); }
+                            catch (Exception err) { }
                         }
                     }
                 }
@@ -878,13 +878,16 @@ namespace AcroniUI.Custom
                     }
                     else
                     {
-                        ++Share.User.KeyboardQuantity;
                         MessageBox.Show("" + Share.User.KeyboardQuantity);
                         Share.User.SendToFile();
                         canSave = true;
                     }
                 }
+                else {
+                    canSave = true;
+                }
             if (canSave)
+            {
                 if (!Share.EditKeyboard)
                 {
                     AcroniMessageBoxInput keyboardName = new AcroniMessageBoxInput("Insira o nome de seu teclado");
@@ -894,7 +897,8 @@ namespace AcroniUI.Custom
                         await Task.Delay(100);
                     }
                 }
-            SaveKeyboard();
+                SaveKeyboard();
+            }
         }
 
         private async void SaveKeyboard()
@@ -972,7 +976,7 @@ namespace AcroniUI.Custom
                 //        }
                 //    }
                 //}
-
+                ++Share.User.KeyboardQuantity;
                 AcroniMessageBoxConfirm success = new AcroniMessageBoxConfirm("Teclado adicionado/salvo com sucesso!", "Ele se encontrará na coleção selecionada, em sua galeria :D");
                 success.ShowDialog();
                 Share.EditKeyboard = true;
@@ -984,7 +988,6 @@ namespace AcroniUI.Custom
             {
                 AcroniMessageBoxConfirm fail = new AcroniMessageBoxConfirm("Tu cancelastes a operação no meio do processo/Salvamento inválido ;-;", "Tente novamente, se desejas mesmo salvá - lo!");
                 fail.ShowDialog();
-                --Share.User.KeyboardQuantity;
             }
         }
 
