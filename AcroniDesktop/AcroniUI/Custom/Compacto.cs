@@ -275,20 +275,9 @@ namespace AcroniUI.Custom
                         keybutton.Parent.BackgroundImage = null;
                         keybutton.Parent.BackColor = Color.FromArgb(90, keybutton.BackColor);
                     }
-
-                    keybutton.Parent.BackgroundImage = null;
-                    keybutton.Parent.BackColor = Color.FromArgb(90, keybutton.BackColor);
                 }
 
                 else
-                {
-                    try
-                    {
-                        keybutton.Parent.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\..\..\Images\Teclas\{keybutton.Name}.png");
-                    }
-                    catch (Exception) { }
-                }
-
                 {
                     if (keybutton.Size.Equals(new Size(38, 39)))
                         keybutton.Parent.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\..\..\Images\Teclas\keycapbackgrounddefault.png");
@@ -297,7 +286,6 @@ namespace AcroniUI.Custom
                         keybutton.Parent.BackColor = Color.Black;
                         keybutton.Parent.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\..\..\Images\Teclas\{keybutton.Name}.png");
                     }
-
                 }
             }
 
