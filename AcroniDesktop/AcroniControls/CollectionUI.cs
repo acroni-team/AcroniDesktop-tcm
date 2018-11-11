@@ -8,13 +8,14 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using AcroniLibrary.FileInfo;
 using AcroniLibrary.SQL;
+using AcroniLibrary.Drawing;
+using System.Drawing.Imaging;
 
 namespace AcroniControls
 {
     public partial class CollectionUI : Panel
     {
         int countCollection = 0;
-        Bitmap collectionsImages;
         public CollectionUI()
         {
             InitializeComponent();
@@ -24,7 +25,6 @@ namespace AcroniControls
             this.Controls.Add(this.lblColecao1);
             this.Controls.Add(this.colecao1);
             this.Size = new System.Drawing.Size(910, 161);
-            collectionsImages = new Bitmap(this.Width, this.Height);
             this.Name = "colecao" + countCollection;
             Bunifu.Framework.UI.BunifuElipse ellipse = new Bunifu.Framework.UI.BunifuElipse();
             this.lblColecao1NumTeclados.Location = new System.Drawing.Point((lblColecao1.Width + 10), 16);
@@ -36,7 +36,6 @@ namespace AcroniControls
 
             ellipse.ApplyElipse(this, 5);
             ellipse.ApplyElipse(colecao1, 5);
-            this.DrawToBitmap(collectionsImages, this.ClientRectangle);
             sendToDatabase();
             this.Controls.Add(this.btnEditarGaleria);
             this.Controls.Add(btnExcluirGaleria);
@@ -45,9 +44,9 @@ namespace AcroniControls
 
         private void sendToDatabase()
         {
-            byte[] img = null;
+            byte[] img = ImageConvert.ImageToByteArray(Screenshot.TakeSnapshot(this), ImageFormat.Bmp);
             bool alreadyExistsThisCollection = false;
-            img = (Byte[])new ImageConverter().ConvertTo(collectionsImages, typeof(Byte[]));
+
             using (SqlConnection sqlConnection = new SqlConnection("Data Source = " + Environment.MachineName + "\\SQLEXPRESS; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7"))
             {
                 sqlConnection.Open();
@@ -58,7 +57,7 @@ namespace AcroniControls
                         if (return_value.HasRows)
                         {
                             return_value.Read();
-                            for (int i=0;i< return_value.FieldCount;i++)
+                            for (int i = 0; i < return_value.FieldCount; i++)
                                 if (return_value[i].ToString().Equals(this.lblColecao1.Text))
                                 {
                                     alreadyExistsThisCollection = true;
@@ -68,7 +67,7 @@ namespace AcroniControls
                     }
                 }
                 if (!alreadyExistsThisCollection)
-                    using (SqlCommand sqlCommand = new SqlCommand("insert into tblColecao(nick_colecao,imagem_colecao,id_cliente) values ('" + Share.Collection.CollectionName + "',@img,(select id_cliente from tblCliente where usuario like '" + SQLConnection.nome_usuario + "'))", sqlConnection))
+                    using (SqlCommand sqlCommand = new SqlCommand($"insert into tblColecao(id_cliente, nick_colecao, imagem_colecao) values ((select id_cliente from tblCliente where usuario like '{SQLConnection.nome_usuario}'),'{Share.Collection.CollectionName}', @img)", sqlConnection))
                     {
                         sqlCommand.Parameters.AddWithValue("@img", img);
                         sqlCommand.ExecuteNonQuery();

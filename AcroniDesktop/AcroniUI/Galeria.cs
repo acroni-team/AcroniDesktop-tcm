@@ -226,7 +226,7 @@ namespace AcroniUI
                 Share.Keyboard.Name = "";
                 byte[] img = ImageConvert.ImageToByteArray(Screenshot.TakeSnapshot(collectionUi), ImageFormat.Bmp);
 
-                SQLMethods.INSERT_INTO($"insert into tblColecao values ({Share.User.ID}, '{Share.Collection.CollectionName}', @image)", img);
+                SQLMethods.INSERT_INTO($"insert into tblColecao values ((select id_cliente from tblCliente where usuario like '{SQLConnection.nome_usuario}'), '{Share.Collection.CollectionName}', @image)", img);
 
             }
 
