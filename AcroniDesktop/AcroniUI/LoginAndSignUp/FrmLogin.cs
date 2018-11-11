@@ -183,9 +183,10 @@ namespace AcroniUI.LoginAndSignUp
                                     MetodoParaCriarPerfilADM();
                                 if (resposta[1].ToString() == "p")
                                     Share.User.isPremiumAccount = true;
-                                selecionarTeclado = new SelectKeyboard();
-                                selecionarTeclado.Show();
                                 Hide();
+                                selecionarTeclado = new SelectKeyboard();
+                                selecionarTeclado.ShowDialog();
+       
                             }
                             else
                             {

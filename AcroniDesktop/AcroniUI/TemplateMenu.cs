@@ -27,7 +27,7 @@ namespace AcroniUI
         public TemplateMenu()
         {
             InitializeComponent();
-            UpdateKeyboardQuantity();
+            //UpdateKeyboardQuantity();
             Bunifu.Framework.UI.BunifuElipse ellipse = new Bunifu.Framework.UI.BunifuElipse();
             foreach (Control c in pnlOptions.Controls)
             {
@@ -62,65 +62,72 @@ namespace AcroniUI
                 foreach (Control c in espacoArmazenamento.Controls)
                     c.Visible = true;
             }
-            else {
+            else
+            {
                 lblQtdGasta.Text = "" + Share.User.KeyboardQuantity;
-                foreach (Control c in espacoArmazenamento.Controls)
-                {
-                    if (i < Share.User.KeyboardQuantity)
-                        c.Visible = true;
-                    i++;
+                //foreach (Control c in espacoArmazenamento.Controls)
+                //{
+                //    if (i < Share.User.KeyboardQuantity)
+                //        c.Visible = true;
+                //    i++;
 
-                    using (SqlDataReader sdr = comm.ExecuteReader())
-                    {
-                        sdr.Read();
+                //    if (conexão_SQL.State != ConnectionState.Open)
+                //        conexão_SQL.Open();
 
-                        if ((int)sdr[0] == 0)
-                            Share.User.KeyboardQuantity = 0;
-                        else
-                            Share.User.KeyboardQuantity = (int)sdr[0];
+                //    using (comando_SQL = new SqlCommand($"select quantidade_teclados from tblCliente where id_cliente like '{SQLConnection.nome_usuario}'", conexão_SQL))
+                //    {
+                //        using (SqlDataReader sdr = comando_SQL.ExecuteReader())
+                //        {
+                //            sdr.Read();
 
-                        for (int i = 0; i < Share.User.KeyboardQuantity; i++)
-                        {
-                            if (Share.User.KeyboardQuantity != 0)
-                                espacoArmazenamento.Controls[$"pnlPreenchido{i + 1}"].Visible = true;
-                            else
-                            {
-                                for(int j = 0; j < 5; j++)
-                                {
-                                    espacoArmazenamento.Controls[$"pnlPreenchido{j + 1}"].Visible = false;
-                                }
-                            }
-                        }
-                    }
-                }
+                //            if ((int)sdr[0] == 0)
+                //                Share.User.KeyboardQuantity = 0;
+                //            else
+                //                Share.User.KeyboardQuantity = (int)sdr[0];
+
+                //            for (int a = 0; a < Share.User.KeyboardQuantity; a++)
+                //            {
+                //                if (Share.User.KeyboardQuantity != 0)
+                //                    espacoArmazenamento.Controls[$"pnlPreenchido{i + 1}"].Visible = true;
+                //                else
+                //                {
+                //                    for (int j = 0; j < 5; j++)
+                //                    {
+                //                        espacoArmazenamento.Controls[$"pnlPreenchido{j + 1}"].Visible = false;
+                //                    }
+                //                }
+                //            }
+                //        }
+                //    }
             }
-            //if(Share.User.isPremiumAccount)
-            //using (SqlConnection conn = new SqlConnection(SQLConnection.nome_conexao))
-            //{
-            //    conn.Open();
-            //    using (SqlCommand comm = new SqlCommand($"select quantidade_teclados from tblCliente where usuario like '{SQLConnection.nome_usuario}'", conn))
-            //    {
-            //        using (SqlDataReader sdr = comm.ExecuteReader())
-            //        {
-            //            sdr.Read();
-            //            Share.User.KeyboardQuantity = (int)sdr[0];
-            //            for (int i = 0; i < Share.User.KeyboardQuantity; i++)
-            //            {
-            //                if (Share.User.KeyboardQuantity != 0)
-            //                    espacoArmazenamento.Controls[$"pnlPreenchido{i + 1}"].Visible = true;
-            //                else
-            //                {
-            //                    for(int j = 0; j < 5; j++)
-            //                    {
-            //                        espacoArmazenamento.Controls[$"pnlPreenchido{j + 1}"].Visible = false;
-            //                    }
-            //                }
-            //            }
-            //        }
-            //    }
-            //}
-
         }
+        //if(Share.User.isPremiumAccount)
+        //using (SqlConnection conn = new SqlConnection(SQLConnection.nome_conexao))
+        //{
+        //    conn.Open();
+        //    using (SqlCommand comm = new SqlCommand($"select quantidade_teclados from tblCliente where usuario like '{SQLConnection.nome_usuario}'", conn))
+        //    {
+        //        using (SqlDataReader sdr = comm.ExecuteReader())
+        //        {
+        //            sdr.Read();
+        //            Share.User.KeyboardQuantity = (int)sdr[0];
+        //            for (int i = 0; i < Share.User.KeyboardQuantity; i++)
+        //            {
+        //                if (Share.User.KeyboardQuantity != 0)
+        //                    espacoArmazenamento.Controls[$"pnlPreenchido{i + 1}"].Visible = true;
+        //                else
+        //                {
+        //                    for(int j = 0; j < 5; j++)
+        //                    {
+        //                        espacoArmazenamento.Controls[$"pnlPreenchido{j + 1}"].Visible = false;
+        //                    }
+        //                }
+        //            }
+        //        }
+        //    }
+        //}
+
+
 
         public Image selecionar_imagem_cliente()
         {
@@ -194,7 +201,7 @@ namespace AcroniUI
         {
             Galeria galeria = new Galeria(false);
             fechaForms();
-            galeria.Show();
+            galeria.ShowDialog();
         }
         private void fechaForms()
         {
@@ -207,9 +214,9 @@ namespace AcroniUI
 
         protected virtual void btnSelectKeyboard_Click(object sender, EventArgs e)
         {
-            SelectKeyboard selectKeyboard = new SelectKeyboard();
-            selectKeyboard.Show();
             fechaForms();
+            SelectKeyboard selectKeyboard = new SelectKeyboard();
+            selectKeyboard.ShowDialog();
         }
 
         protected virtual void btnDesconectar_Click(object sender, EventArgs e)

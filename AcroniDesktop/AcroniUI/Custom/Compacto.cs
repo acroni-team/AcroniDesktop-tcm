@@ -469,7 +469,6 @@ namespace AcroniUI.Custom
             Share.EditKeyboard = false;
             this.Close();
             SelectKeyboard __selectKeyboard = new SelectKeyboard();
-            __selectKeyboard.UpdateKeyboardQuantity();
             __selectKeyboard.ShowDialog();
 
         }
@@ -900,7 +899,7 @@ namespace AcroniUI.Custom
                 if (!Share.EditKeyboard)
                 {
                     AcroniMessageBoxInput keyboardName = new AcroniMessageBoxInput("Insira o nome de seu teclado");
-                    keyboardName.Show();
+                    keyboardName.ShowDialog();
                     while (keyboardName.Visible)
                     {
                         await Task.Delay(100);
@@ -916,7 +915,7 @@ namespace AcroniUI.Custom
                 if (!String.IsNullOrEmpty(Share.KeyboardNameNotCreated))
                 {
                     Galeria selectGallery = new Galeria(true);
-                    selectGallery.Show();
+                    selectGallery.ShowDialog();
                     while (selectGallery.Visible)
                     {
                         await Task.Delay(100);
