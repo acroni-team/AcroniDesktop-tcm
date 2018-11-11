@@ -249,6 +249,7 @@
     <Content Include="Images\fullsize.png" />
     <Content Include="Images\icons8-eye-30-white.png" />
     <None Include="Images\thrash.png" />
+    <None Include="Images\imagensPlaceholder\Imagem padrão para perfil.png" />
     <Content Include="Images\logo.svg" />
     <None Include="Images\pen.png" />
     <None Include="Images\shiftarrow.png" />

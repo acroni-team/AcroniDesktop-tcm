@@ -44,6 +44,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pnlUserImg = new System.Windows.Forms.Panel();
+            this.pnlEscurecerImg = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.eBtnSave = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.ePnlUserImg = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -54,17 +56,15 @@
             this.ebtnAlterarPlano = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
             this.bunifuMaterialTextbox2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.pnlEscurecerImg = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.apnlCPF.SuspendLayout();
             this.apnlNome.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.pnlUserImg.SuspendLayout();
+            this.pnlEscurecerImg.SuspendLayout();
             this.apnlEmail.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.pnlEscurecerImg.SuspendLayout();
             this.SuspendLayout();
             // 
             // apnlCPF
@@ -266,6 +266,35 @@
             this.pnlUserImg.TabIndex = 111;
             this.pnlUserImg.MouseEnter += new System.EventHandler(this.pnlUserImg_MouseEnter);
             // 
+            // pnlEscurecerImg
+            // 
+            this.pnlEscurecerImg.BackColor = System.Drawing.Color.Black;
+            this.pnlEscurecerImg.Controls.Add(this.label3);
+            this.pnlEscurecerImg.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlEscurecerImg.Location = new System.Drawing.Point(0, 0);
+            this.pnlEscurecerImg.Name = "pnlEscurecerImg";
+            this.pnlEscurecerImg.Size = new System.Drawing.Size(180, 180);
+            this.pnlEscurecerImg.TabIndex = 0;
+            this.pnlEscurecerImg.Click += new System.EventHandler(this.AlterarImagem);
+            this.pnlEscurecerImg.MouseEnter += new System.EventHandler(this.pnlEscurecerImg_MouseEnter);
+            this.pnlEscurecerImg.MouseLeave += new System.EventHandler(this.pnlEscurecerImg_MouseLeave);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Open Sans", 11.75F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label3.Location = new System.Drawing.Point(24, 80);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(135, 22);
+            this.label3.TabIndex = 112;
+            this.label3.Text = "Alterar imagem";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Click += new System.EventHandler(this.AlterarImagem);
+            this.label3.MouseEnter += new System.EventHandler(this.pnlEscurecerImg_MouseEnter);
+            // 
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(40)))));
@@ -279,8 +308,10 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(189, 55);
             this.btnSave.TabIndex = 110;
+            this.btnSave.Tag = "not salvo";
             this.btnSave.Text = "Salvo";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // eBtnSave
             // 
@@ -387,35 +418,6 @@
             this.bunifuMaterialTextbox2.TabIndex = 0;
             this.bunifuMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // pnlEscurecerImg
-            // 
-            this.pnlEscurecerImg.BackColor = System.Drawing.Color.Black;
-            this.pnlEscurecerImg.Controls.Add(this.label3);
-            this.pnlEscurecerImg.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlEscurecerImg.Location = new System.Drawing.Point(0, 0);
-            this.pnlEscurecerImg.Name = "pnlEscurecerImg";
-            this.pnlEscurecerImg.Size = new System.Drawing.Size(180, 180);
-            this.pnlEscurecerImg.TabIndex = 0;
-            this.pnlEscurecerImg.Click += new System.EventHandler(this.AlterarImagem);
-            this.pnlEscurecerImg.MouseEnter += new System.EventHandler(this.pnlEscurecerImg_MouseEnter);
-            this.pnlEscurecerImg.MouseLeave += new System.EventHandler(this.pnlEscurecerImg_MouseLeave);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Open Sans", 11.75F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(24, 80);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 22);
-            this.label3.TabIndex = 112;
-            this.label3.Text = "Alterar imagem";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.Click += new System.EventHandler(this.AlterarImagem);
-            this.label3.MouseEnter += new System.EventHandler(this.pnlEscurecerImg_MouseEnter);
-            // 
             // MinhaConta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -435,6 +437,7 @@
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "MinhaConta";
             this.Text = "MinhaConta";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MinhaConta_FormClosing);
             this.Controls.SetChildIndex(this.apnlNome, 0);
             this.Controls.SetChildIndex(this.apnlCPF, 0);
             this.Controls.SetChildIndex(this.label1, 0);
@@ -451,11 +454,11 @@
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.pnlUserImg.ResumeLayout(false);
+            this.pnlEscurecerImg.ResumeLayout(false);
+            this.pnlEscurecerImg.PerformLayout();
             this.apnlEmail.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.pnlEscurecerImg.ResumeLayout(false);
-            this.pnlEscurecerImg.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -53,6 +53,7 @@ namespace AcroniUI
         public void UpdateKeyboardQuantity()
         {
             int i = 0;
+
             if (Share.User.isPremiumAccount)
             {
                 lblPlanoUsu.Text = "Plano Premium";

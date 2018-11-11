@@ -24,6 +24,12 @@ namespace AcroniUI
 
             pnlEscurecerImg.BackColor = Color.FromArgb(90, pnlEscurecerImg.BackColor);
 
+            ChamarImagemDoBanco();
+        }
+
+        private void ChamarImagemDoBanco()
+        {
+
             using (SqlConnection conn = new SqlConnection(SQLConnection.nome_conexao))
             {
                 conn.Open();
@@ -61,7 +67,9 @@ namespace AcroniUI
             pnlEscurecerImg.BackColor = Color.FromArgb(90, pnlEscurecerImg.BackColor);
         }
 
-        Bitmap bmp;
+        //Isso serve para eu só mandar a imagem pro banco quando ele for salvar, e não quando ele simplesmente mudar a imagem.
+
+        private Bitmap bmp;
 
         private void AlterarImagem(object sender, EventArgs e)
         {
@@ -73,19 +81,35 @@ namespace AcroniUI
                 profilePic.Multiselect = false;
                 if (profilePic.ShowDialog() == DialogResult.OK)
                 {
-                    pnlUserImg.BackgroundImage = Image.FromFile(profilePic.FileName);
-                    using (SqlConnection conn = new SqlConnection(SQLConnection.nome_conexao))
-                    {
-                        conn.Open();
-                        byte[] img = ImageConvert.ImageToByteArray(Image.FromFile(profilePic.FileName), ImageFormat.Bmp);
-
-                        using (SqlCommand comm = new SqlCommand($"update tblCliente set imagem_cliente = @img where usuario like '{SQLConnection.nome_usuario}'", conn))
-                        {
-                            comm.Parameters.AddWithValue("@img", img);
-                            comm.ExecuteNonQuery();
-                        }
-                    }
+                    bmp = new Bitmap(Image.FromFile(profilePic.FileName));
+                    pnlUserImg.BackgroundImage = bmp;
                 }
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection conn = new SqlConnection(SQLConnection.nome_conexao))
+            {
+                conn.Open();
+                byte[] img = ImageConvert.ImageToByteArray(bmp, ImageFormat.Bmp);
+
+                using (SqlCommand comm = new SqlCommand($"update tblCliente set imagem_cliente = @img where usuario like '{SQLConnection.nome_usuario}'", conn))
+                {
+                    comm.Parameters.AddWithValue("@img", img);
+                    comm.ExecuteNonQuery();
+                }
+            }
+        }
+
+        private void MinhaConta_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (btnSave.Tag.Equals("not salvo"))
+            {
+                if ((new AcroniControls.AcroniMessageBoxConfirm("Você tem certeza que deseja sair sem salvar?")).ShowDialog() == DialogResult.Yes)
+                    ChamarImagemDoBanco();
+                else
+                    e.Cancel = true;
             }
         }
 
