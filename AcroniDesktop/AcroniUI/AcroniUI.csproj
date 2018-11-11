@@ -125,12 +125,6 @@
     <Compile Include="LoginAndSignUp\FrmLogin.designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginAndSignUp\FrmUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LoginAndSignUp\FrmUsuario.designer.cs">
-      <DependentUpon>FrmUsuario.cs</DependentUpon>
-    </Compile>
     <Compile Include="MinhaConta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,8 +219,8 @@
     <EmbeddedResource Include="LoginAndSignUp\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginAndSignUp\FrmUsuario.resx">
-      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="MinhaConta.resx">
+      <DependentUpon>MinhaConta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TemplateMenu.resx">
       <DependentUpon>TemplateMenu.cs</DependentUpon>
