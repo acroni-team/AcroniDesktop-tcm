@@ -246,13 +246,12 @@ namespace AcroniUI
 
         private void btnConfig_Click(object sender, EventArgs e)
         {
-            FadeOut();
-            (new MinhaConta()).Show();
+            (new MinhaConta()).ShowDialog();
         }
 
-        private void TemplateMenu_Load(object sender, EventArgs e)
+        private void btnEditarMinhaConta_Click(object sender, EventArgs e)
         {
-
+            (new MinhaConta()).ShowDialog();
         }
     }
 }

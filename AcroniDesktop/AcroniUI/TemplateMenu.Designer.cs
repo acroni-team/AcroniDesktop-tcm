@@ -46,7 +46,7 @@
             this.pnlOptions = new System.Windows.Forms.Panel();
             this.btnDesconectar = new System.Windows.Forms.Button();
             this.btnQuemSomos = new System.Windows.Forms.Button();
-            this.btnFaleConosco = new System.Windows.Forms.Button();
+            this.btnEditarMinhaConta = new System.Windows.Forms.Button();
             this.btnSelectKeyboard = new System.Windows.Forms.Button();
             this.btnAbrirGaleria = new System.Windows.Forms.Button();
             this.pnlAreaUsu.SuspendLayout();
@@ -67,9 +67,9 @@
             this.pnlAreaUsu.Controls.Add(this.btnConfig);
             this.pnlAreaUsu.Controls.Add(this.ImgUsu);
             this.pnlAreaUsu.Controls.Add(this.lblPlanoUsu);
-            this.pnlAreaUsu.Location = new System.Drawing.Point(0, 39);
+            this.pnlAreaUsu.Location = new System.Drawing.Point(0, 37);
             this.pnlAreaUsu.Name = "pnlAreaUsu";
-            this.pnlAreaUsu.Size = new System.Drawing.Size(320, 200);
+            this.pnlAreaUsu.Size = new System.Drawing.Size(320, 202);
             this.pnlAreaUsu.TabIndex = 12;
             // 
             // lblNomeUsu
@@ -212,7 +212,7 @@
             this.pnlOptions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(63)))));
             this.pnlOptions.Controls.Add(this.btnDesconectar);
             this.pnlOptions.Controls.Add(this.btnQuemSomos);
-            this.pnlOptions.Controls.Add(this.btnFaleConosco);
+            this.pnlOptions.Controls.Add(this.btnEditarMinhaConta);
             this.pnlOptions.Controls.Add(this.btnSelectKeyboard);
             this.pnlOptions.Controls.Add(this.btnAbrirGaleria);
             this.pnlOptions.Location = new System.Drawing.Point(0, 239);
@@ -232,7 +232,7 @@
             this.btnDesconectar.Name = "btnDesconectar";
             this.btnDesconectar.Size = new System.Drawing.Size(235, 38);
             this.btnDesconectar.TabIndex = 5;
-            this.btnDesconectar.Text = "Desconectar";
+            this.btnDesconectar.Text = "Sair";
             this.btnDesconectar.UseVisualStyleBackColor = true;
             this.btnDesconectar.Click += new System.EventHandler(this.btnDesconectar_Click);
             this.btnDesconectar.MouseEnter += new System.EventHandler(this.CursorHand);
@@ -253,21 +253,22 @@
             this.btnQuemSomos.UseVisualStyleBackColor = true;
             this.btnQuemSomos.MouseEnter += new System.EventHandler(this.CursorHand);
             // 
-            // btnFaleConosco
+            // btnEditarMinhaConta
             // 
-            this.btnFaleConosco.FlatAppearance.BorderSize = 0;
-            this.btnFaleConosco.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
-            this.btnFaleConosco.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
-            this.btnFaleConosco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFaleConosco.Font = new System.Drawing.Font("Open Sans SemiBold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFaleConosco.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnFaleConosco.Location = new System.Drawing.Point(42, 218);
-            this.btnFaleConosco.Name = "btnFaleConosco";
-            this.btnFaleConosco.Size = new System.Drawing.Size(235, 38);
-            this.btnFaleConosco.TabIndex = 3;
-            this.btnFaleConosco.Text = "Fale conosco";
-            this.btnFaleConosco.UseVisualStyleBackColor = true;
-            this.btnFaleConosco.MouseEnter += new System.EventHandler(this.CursorHand);
+            this.btnEditarMinhaConta.FlatAppearance.BorderSize = 0;
+            this.btnEditarMinhaConta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
+            this.btnEditarMinhaConta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
+            this.btnEditarMinhaConta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditarMinhaConta.Font = new System.Drawing.Font("Open Sans SemiBold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarMinhaConta.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnEditarMinhaConta.Location = new System.Drawing.Point(42, 218);
+            this.btnEditarMinhaConta.Name = "btnEditarMinhaConta";
+            this.btnEditarMinhaConta.Size = new System.Drawing.Size(235, 38);
+            this.btnEditarMinhaConta.TabIndex = 3;
+            this.btnEditarMinhaConta.Text = "Editar minha conta";
+            this.btnEditarMinhaConta.UseVisualStyleBackColor = true;
+            this.btnEditarMinhaConta.Click += new System.EventHandler(this.btnEditarMinhaConta_Click);
+            this.btnEditarMinhaConta.MouseEnter += new System.EventHandler(this.CursorHand);
             // 
             // btnSelectKeyboard
             // 
@@ -313,7 +314,6 @@
             this.Controls.Add(this.pnlAreaUsu);
             this.Name = "TemplateMenu";
             this.Opacity = 1D;
-            this.Load += new System.EventHandler(this.TemplateMenu_Load);
             this.Controls.SetChildIndex(this.pnlAreaUsu, 0);
             this.Controls.SetChildIndex(this.pnlOptions, 0);
             this.Controls.SetChildIndex(this.pnlStripAjuda, 0);
@@ -335,7 +335,7 @@
         private System.Windows.Forms.Button btnAbrirGaleria;
         private System.Windows.Forms.Button btnDesconectar;
         private System.Windows.Forms.Button btnQuemSomos;
-        private System.Windows.Forms.Button btnFaleConosco;
+        private System.Windows.Forms.Button btnEditarMinhaConta;
         private System.Windows.Forms.Button btnSelectKeyboard;
         private System.Windows.Forms.Label lblQtdGasta;
         private System.Windows.Forms.Panel espacoArmazenamento;
