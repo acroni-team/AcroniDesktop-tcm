@@ -978,7 +978,6 @@ namespace AcroniUI.Custom
                 Share.EditKeyboard = true;
                 Share.Keyboard = keyboard;
                 Share.User.SendToFile();
-                ExportToWebSite();
             }
             else
             {
