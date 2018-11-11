@@ -106,10 +106,16 @@ namespace AcroniUI
         {
             if (btnSave.Tag.Equals("not salvo"))
             {
-                if ((new AcroniControls.AcroniMessageBoxConfirm("Você tem certeza que deseja sair sem salvar?")).ShowDialog() == DialogResult.Yes)
+                AcroniControls.AcroniMessageBoxConfirm a = new AcroniControls.AcroniMessageBoxConfirm("Você tem certeza que deseja sair sem salvar?");
+
+                if (a.ShowDialog() == DialogResult.Yes)
                     ChamarImagemDoBanco();
                 else
-                    e.Cancel = true;
+                {
+                    MinhaConta mc = new MinhaConta();
+                    mc.pnlUserImg.BackgroundImage = bmp;
+                    mc.ShowDialog();
+                }
             }
         }
 

@@ -6,7 +6,6 @@ E:\Desktop\c\AcroniDesktop\AcroniDesktop\AcroniUI\bin\Debug\AcroniLibrary.dll
 E:\Desktop\c\AcroniDesktop\AcroniDesktop\AcroniUI\bin\Debug\Bunifu_UI_v1.52.dll
 E:\Desktop\c\AcroniDesktop\AcroniDesktop\AcroniUI\bin\Debug\AcroniControls.pdb
 E:\Desktop\c\AcroniDesktop\AcroniDesktop\AcroniUI\bin\Debug\AcroniLibrary.pdb
-E:\Desktop\c\AcroniDesktop\AcroniDesktop\AcroniUI\bin\Debug\Transitions.pdb
 E:\Desktop\c\AcroniDesktop\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.csprojAssemblyReference.cache
 E:\Desktop\c\AcroniDesktop\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.CollectionSelected.resources
 E:\Desktop\c\AcroniDesktop\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Custom.Compacto.resources
