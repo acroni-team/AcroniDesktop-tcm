@@ -233,6 +233,7 @@
             this.txtCollectionName.Name = "txtCollectionName";
             this.txtCollectionName.Size = new System.Drawing.Size(236, 20);
             this.txtCollectionName.TabIndex = 16;
+            this.txtCollectionName.Text = "a";
             // 
             // label4
             // 
@@ -272,6 +273,7 @@
             this.Name = "SelectColor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SelectColor";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SelectColor_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,7 +297,7 @@
         private System.Windows.Forms.TextBox txtColor;
         private System.Windows.Forms.Button btnApply;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtCollectionName;
+        public System.Windows.Forms.TextBox txtCollectionName;
         private System.Windows.Forms.Label label4;
     }
 }
