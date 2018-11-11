@@ -43,6 +43,8 @@
             this.txtColor = new System.Windows.Forms.TextBox();
             this.btnApply = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtCollectionName = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button10
@@ -204,7 +206,7 @@
             this.btnApply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnApply.Font = new System.Drawing.Font("Qanelas ExtraBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnApply.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnApply.Location = new System.Drawing.Point(20, 152);
+            this.btnApply.Location = new System.Drawing.Point(20, 206);
             this.btnApply.Name = "btnApply";
             this.btnApply.Size = new System.Drawing.Size(236, 27);
             this.btnApply.TabIndex = 14;
@@ -223,12 +225,34 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "RGB:99;99;99";
             // 
+            // txtCollectionName
+            // 
+            this.txtCollectionName.BackColor = System.Drawing.Color.DarkGray;
+            this.txtCollectionName.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtCollectionName.Location = new System.Drawing.Point(20, 176);
+            this.txtCollectionName.Name = "txtCollectionName";
+            this.txtCollectionName.Size = new System.Drawing.Size(236, 20);
+            this.txtCollectionName.TabIndex = 16;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Open Sans SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
+            this.label4.Location = new System.Drawing.Point(17, 153);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(243, 17);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Modifique o nome de sua coleção abaixo:";
+            // 
             // SelectColor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(44)))), ((int)(((byte)(47)))));
-            this.ClientSize = new System.Drawing.Size(274, 191);
+            this.ClientSize = new System.Drawing.Size(274, 238);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtCollectionName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnApply);
             this.Controls.Add(this.txtColor);
@@ -271,5 +295,7 @@
         private System.Windows.Forms.TextBox txtColor;
         private System.Windows.Forms.Button btnApply;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtCollectionName;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -22,7 +22,6 @@ namespace AcroniUI
     public partial class Galeria : TemplateMenu
     {
         SqlConnection sqlConnection = new SqlConnection("Data Source = " + Environment.MachineName + "\\SQLEXPRESS; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7");
-        bool isSelectColorOpen = false;
         int countHeightCollection = 0;
         int countWidthKeyboard = 0;
         bool selectMode;
@@ -118,14 +117,13 @@ namespace AcroniUI
                     countWidthKeyboard = 0;
                     countCollections++;
                     countHeightCollection += 179;
-
                     ControlKeyboard_Collections.keyboardsControl = new List<ControlKeyboard>();
                 }
             }
 
             catch (Exception er)
             {
-                System.Windows.Forms.MessageBox.Show(er.Message);
+                MessageBox.Show(er.Message);
             }
 
             lblCollectionsQuantity.Text = Convert.ToString(countCollections);
@@ -171,60 +169,72 @@ namespace AcroniUI
 
         private void btnAdicionarGaleria_Click(object sender, EventArgs e)
         {
-            AcroniMessageBoxInput collectionNameDialog = new AcroniMessageBoxInput("Insira o nome de sua coleção:");
-
-            if (collectionNameDialog.ShowDialog() == DialogResult.OK)
+            short contcollections = 0;
+            if (!Share.User.isPremiumAccount)
+                foreach (Collection col in Share.User.UserCollections)
+                    contcollections++;
+            if (contcollections < 1)
             {
-                if (!String.IsNullOrEmpty(collectionNameDialog.input))
+                AcroniMessageBoxInput collectionNameDialog = new AcroniMessageBoxInput("Insira o nome de sua coleção:");         
+                if (collectionNameDialog.ShowDialog() == DialogResult.OK)
                 {
-                    if (collectionNameDialog.alblMessage.Contains("coleção"))
-                        Share.Collection.CollectionName = collectionNameDialog.input;
-                    else
-                        Share.KeyboardNameNotCreated = collectionNameDialog.input;
+                    if (!String.IsNullOrEmpty(collectionNameDialog.input))
+                    {
+                        if (collectionNameDialog.alblMessage.Contains("coleção"))
+                            Share.Collection.CollectionName = collectionNameDialog.input;
+                        else
+                            Share.KeyboardNameNotCreated = collectionNameDialog.input;
+                    }
+
+                }
+                if (!string.IsNullOrEmpty(Share.Collection.CollectionName))
+                {
+                    Collection newCollection = new Collection();
+
+                    newCollection.CollectionName = Share.Collection.CollectionName;
+                    newCollection.CollectionColor = Color.DimGray;
+
+                    Share.User.UserCollections.Add(newCollection);
+
+                    Share.Collection.CollectionName = newCollection.CollectionName;
+
+                    AcroniControls.CollectionUI collectionUi = new AcroniControls.CollectionUI();
+
+                    collectionUi.MouseEnter += new EventHandler(changeColor_MouseEnter);
+                    collectionUi.MouseLeave += new EventHandler(returnColor_MouseLeave);
+
+
+                    foreach (Control itemColecao in collectionUi.Controls)
+                    {
+                        if (itemColecao.Name.Equals("btnEditarGaleria"))
+                        {
+                            itemColecao.Click += new EventHandler(Edit);
+                        }
+                        else if (itemColecao.Name.Equals("btnExcluirGaleria"))
+                        {
+                            itemColecao.Click += new EventHandler(Exclude);
+                        }
+                    }
+
+                    collectionUi.Click += new EventHandler(collectionUi_Click);
+                    collectionUi.Location = new Point(16, 8 + countHeightCollection);
+                    countHeightCollection += 179;
+                    collectionUi.BackColor = newCollection.CollectionColor;
+                    pnlScroll.Controls.Add(collectionUi);
+                    Share.User.SendToFile();
+                    lblCollectionsQuantity.Text = Convert.ToString(Convert.ToInt16(lblCollectionsQuantity.Text) + 1);
+                    Share.KeyboardsQuantity = 0;
+                    Share.Collection.CollectionName = "";
+                    Share.Keyboard.Name = "";
                 }
 
             }
-            if (!string.IsNullOrEmpty(Share.Collection.CollectionName))
+            else
             {
-                Collection newCollection = new Collection();
-
-                newCollection.CollectionName = Share.Collection.CollectionName;
-                newCollection.CollectionColor = Color.DimGray;
-
-                Share.User.UserCollections.Add(newCollection);
-
-                Share.Collection.CollectionName = newCollection.CollectionName;
-
-                AcroniControls.CollectionUI collectionUi = new AcroniControls.CollectionUI();
-
-                collectionUi.MouseEnter += new EventHandler(changeColor_MouseEnter);
-                collectionUi.MouseLeave += new EventHandler(returnColor_MouseLeave);
-
-
-                foreach (Control itemColecao in collectionUi.Controls)
-                {
-                    if (itemColecao.Name.Equals("btnEditarGaleria"))
-                    {
-                        itemColecao.Click += new EventHandler(Edit);
-                    }
-                    else if (itemColecao.Name.Equals("btnExcluirGaleria"))
-                    {
-                        itemColecao.Click += new EventHandler(Exclude);
-                    }
-                }
-
-                collectionUi.Click += new EventHandler(collectionUi_Click);
-                collectionUi.Location = new Point(16, 8 + countHeightCollection);
-                countHeightCollection += 179;
-                collectionUi.BackColor = newCollection.CollectionColor;
-                pnlScroll.Controls.Add(collectionUi);
-                Share.User.SendToFile();
-                lblCollectionsQuantity.Text = Convert.ToString(Convert.ToInt16(lblCollectionsQuantity.Text) + 1);
-                Share.KeyboardsQuantity = 0;
-                Share.Collection.CollectionName = "";
-                Share.Keyboard.Name = "";
+                AcroniMessageBoxConfirm mb = new AcroniMessageBoxConfirm("Sinto muito, mas você atingiu o limite de coleções que você " +
+                                                       "pode criar usando essa conta.", "Atualize sua conta agora mesmo para uma conta Premium");
+                mb.ShowDialog();
             }
-
         }
 
         private void Exclude(object sender, EventArgs e)
@@ -336,11 +346,9 @@ namespace AcroniUI
                 Share.User.SendToFile();
             }
 
-            isSelectColorOpen = false;
         }
         protected override void btnClose_Click(object sender, EventArgs e)
         {
-
             base.btnClose_Click(sender, e);
         }
         private async void btnAdicionarGaleria_MouseEnter(object sender, EventArgs e)
