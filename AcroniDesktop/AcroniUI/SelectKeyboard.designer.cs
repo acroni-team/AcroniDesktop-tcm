@@ -169,7 +169,6 @@
             this.Controls.Add(this.btnOpenFullSize);
             this.Controls.Add(this.btnOpenTenkeyless);
             this.Controls.Add(this.btnOpenCompacto);
-            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "SelectKeyboard";
             this.Text = "SelecionarTeclado";
             this.Controls.SetChildIndex(this.pnlStripAjuda, 0);

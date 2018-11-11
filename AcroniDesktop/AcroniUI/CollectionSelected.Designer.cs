@@ -83,7 +83,6 @@
             this.Controls.Add(this.lblKeyboardsNumber);
             this.Controls.Add(this.lblCollectionName);
             this.Controls.Add(this.alblMinhaGaleria);
-            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "CollectionSelected";
             this.Text = "CollectionSelected";
             this.Controls.SetChildIndex(this.alblMinhaGaleria, 0);
