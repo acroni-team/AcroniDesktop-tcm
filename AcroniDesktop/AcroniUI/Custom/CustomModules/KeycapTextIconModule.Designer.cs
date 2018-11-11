@@ -64,6 +64,7 @@
             this.alblLinkProSite = new System.Windows.Forms.Label();
             this.pnlBlocked1 = new System.Windows.Forms.Panel();
             this.pnlBlocked3 = new System.Windows.Forms.Panel();
+            this.lnkRedefineIcons = new System.Windows.Forms.LinkLabel();
             this.apnlTextbox1.SuspendLayout();
             this.apnlTextbox2.SuspendLayout();
             this.apnlTextbox3.SuspendLayout();
@@ -327,6 +328,7 @@
             this.picBoxIcon10.Size = new System.Drawing.Size(38, 40);
             this.picBoxIcon10.TabIndex = 10;
             this.picBoxIcon10.TabStop = false;
+            this.picBoxIcon10.Tag = "Not chosen";
             this.picBoxIcon10.Visible = false;
             this.picBoxIcon10.Click += new System.EventHandler(this.picIcons_Click);
             // 
@@ -339,6 +341,7 @@
             this.picBoxIcon9.Size = new System.Drawing.Size(38, 40);
             this.picBoxIcon9.TabIndex = 9;
             this.picBoxIcon9.TabStop = false;
+            this.picBoxIcon9.Tag = "Not chosen";
             this.picBoxIcon9.Visible = false;
             this.picBoxIcon9.Click += new System.EventHandler(this.picIcons_Click);
             // 
@@ -351,6 +354,7 @@
             this.picBoxIcon8.Size = new System.Drawing.Size(38, 40);
             this.picBoxIcon8.TabIndex = 6;
             this.picBoxIcon8.TabStop = false;
+            this.picBoxIcon8.Tag = "Not chosen";
             this.picBoxIcon8.Visible = false;
             this.picBoxIcon8.Click += new System.EventHandler(this.picIcons_Click);
             // 
@@ -363,6 +367,7 @@
             this.picBoxIcon7.Size = new System.Drawing.Size(38, 40);
             this.picBoxIcon7.TabIndex = 7;
             this.picBoxIcon7.TabStop = false;
+            this.picBoxIcon7.Tag = "Not chosen";
             this.picBoxIcon7.Visible = false;
             this.picBoxIcon7.Click += new System.EventHandler(this.picIcons_Click);
             // 
@@ -375,6 +380,7 @@
             this.picBoxIcon6.Size = new System.Drawing.Size(38, 40);
             this.picBoxIcon6.TabIndex = 8;
             this.picBoxIcon6.TabStop = false;
+            this.picBoxIcon6.Tag = "Not chosen";
             this.picBoxIcon6.Visible = false;
             this.picBoxIcon6.Click += new System.EventHandler(this.picIcons_Click);
             // 
@@ -387,6 +393,7 @@
             this.picBoxIcon5.Size = new System.Drawing.Size(38, 40);
             this.picBoxIcon5.TabIndex = 5;
             this.picBoxIcon5.TabStop = false;
+            this.picBoxIcon5.Tag = "Not chosen";
             this.picBoxIcon5.Visible = false;
             this.picBoxIcon5.Click += new System.EventHandler(this.picIcons_Click);
             // 
@@ -399,6 +406,7 @@
             this.picBoxIcon4.Size = new System.Drawing.Size(38, 40);
             this.picBoxIcon4.TabIndex = 3;
             this.picBoxIcon4.TabStop = false;
+            this.picBoxIcon4.Tag = "Not chosen";
             this.picBoxIcon4.Visible = false;
             this.picBoxIcon4.Click += new System.EventHandler(this.picIcons_Click);
             // 
@@ -411,6 +419,7 @@
             this.picBoxIcon3.Size = new System.Drawing.Size(38, 40);
             this.picBoxIcon3.TabIndex = 0;
             this.picBoxIcon3.TabStop = false;
+            this.picBoxIcon3.Tag = "Not chosen";
             this.picBoxIcon3.Visible = false;
             this.picBoxIcon3.Click += new System.EventHandler(this.picIcons_Click);
             // 
@@ -423,6 +432,7 @@
             this.picBoxIcon2.Size = new System.Drawing.Size(38, 40);
             this.picBoxIcon2.TabIndex = 1;
             this.picBoxIcon2.TabStop = false;
+            this.picBoxIcon2.Tag = "Not chosen";
             this.picBoxIcon2.Visible = false;
             this.picBoxIcon2.Click += new System.EventHandler(this.picIcons_Click);
             // 
@@ -435,6 +445,7 @@
             this.picBoxIcon1.Size = new System.Drawing.Size(38, 40);
             this.picBoxIcon1.TabIndex = 2;
             this.picBoxIcon1.TabStop = false;
+            this.picBoxIcon1.Tag = "Not chosen";
             this.picBoxIcon1.Visible = false;
             this.picBoxIcon1.Click += new System.EventHandler(this.picIcons_Click);
             // 
@@ -484,7 +495,7 @@
             this.lnklblEsqueceuSenha.Font = new System.Drawing.Font("Open Sans", 9.25F);
             this.lnklblEsqueceuSenha.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.lnklblEsqueceuSenha.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
-            this.lnklblEsqueceuSenha.Location = new System.Drawing.Point(724, 397);
+            this.lnklblEsqueceuSenha.Location = new System.Drawing.Point(724, 464);
             this.lnklblEsqueceuSenha.Name = "lnklblEsqueceuSenha";
             this.lnklblEsqueceuSenha.Size = new System.Drawing.Size(231, 18);
             this.lnklblEsqueceuSenha.TabIndex = 9;
@@ -498,7 +509,7 @@
             this.alblLinkProSite.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.alblLinkProSite.Font = new System.Drawing.Font("Open Sans", 9.75F);
             this.alblLinkProSite.ForeColor = System.Drawing.Color.DimGray;
-            this.alblLinkProSite.Location = new System.Drawing.Point(724, 351);
+            this.alblLinkProSite.Location = new System.Drawing.Point(724, 418);
             this.alblLinkProSite.Name = "alblLinkProSite";
             this.alblLinkProSite.Size = new System.Drawing.Size(251, 36);
             this.alblLinkProSite.TabIndex = 0;
@@ -522,11 +533,28 @@
             this.pnlBlocked3.TabIndex = 18;
             this.pnlBlocked3.Visible = false;
             // 
+            // lnkRedefineIcons
+            // 
+            this.lnkRedefineIcons.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.lnkRedefineIcons.AutoSize = true;
+            this.lnkRedefineIcons.Font = new System.Drawing.Font("Open Sans", 9.25F);
+            this.lnkRedefineIcons.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lnkRedefineIcons.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.lnkRedefineIcons.Location = new System.Drawing.Point(724, 303);
+            this.lnkRedefineIcons.Name = "lnkRedefineIcons";
+            this.lnkRedefineIcons.Size = new System.Drawing.Size(97, 18);
+            this.lnkRedefineIcons.TabIndex = 19;
+            this.lnkRedefineIcons.TabStop = true;
+            this.lnkRedefineIcons.Text = "Redefinir ícone";
+            this.lnkRedefineIcons.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.lnkRedefineIcons.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkRedefineIcons_LinkClicked);
+            // 
             // KeycapTextIconModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1183, 654);
+            this.Controls.Add(this.lnkRedefineIcons);
             this.Controls.Add(this.pnlBlocked3);
             this.Controls.Add(this.pnlBlocked1);
             this.Controls.Add(this.lnklblEsqueceuSenha);
@@ -547,6 +575,7 @@
             this.Controls.Add(this.alblUpperText);
             this.Controls.Add(this.apnlTextbox1);
             this.Name = "KeycapTextIconModule";
+            this.Opacity = 1D;
             this.Controls.SetChildIndex(this.apnlTextbox1, 0);
             this.Controls.SetChildIndex(this.alblUpperText, 0);
             this.Controls.SetChildIndex(this.alblIcon, 0);
@@ -566,6 +595,7 @@
             this.Controls.SetChildIndex(this.lnklblEsqueceuSenha, 0);
             this.Controls.SetChildIndex(this.pnlBlocked1, 0);
             this.Controls.SetChildIndex(this.pnlBlocked3, 0);
+            this.Controls.SetChildIndex(this.lnkRedefineIcons, 0);
             this.apnlTextbox1.ResumeLayout(false);
             this.apnlTextbox1.PerformLayout();
             this.apnlTextbox2.ResumeLayout(false);
@@ -624,5 +654,6 @@
         private System.Windows.Forms.Panel pnlBtnIconChosen;
         private System.Windows.Forms.Panel pnlBlocked1;
         private System.Windows.Forms.Panel pnlBlocked3;
+        private System.Windows.Forms.LinkLabel lnkRedefineIcons;
     }
 }

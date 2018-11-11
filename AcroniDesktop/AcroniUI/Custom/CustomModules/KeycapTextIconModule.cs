@@ -125,7 +125,7 @@ namespace AcroniUI.Custom.CustomModules
                 {
                     icon.Tag = "Not chosen";
                     pnlBtnIconChosen.Visible = false;
-                    SelectedIcon = global::AcroniUI.Properties.Resources.compacto;
+                    SelectedIcon = null;
                     HasChosenAIcon = false;
                 }
                 else
@@ -301,8 +301,12 @@ namespace AcroniUI.Custom.CustomModules
             }
             Cursor = Cursors.IBeam;
         }
+
         #endregion
 
-
+        private void lnkRedefineIcons_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            SelectedIcon = null;
+        }
     }
 }
