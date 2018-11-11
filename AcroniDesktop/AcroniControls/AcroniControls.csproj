@@ -127,6 +127,9 @@
     <EmbeddedResource Include="AcroniMessageBoxInput.resx">
       <DependentUpon>AcroniMessageBoxInput.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SelectColor.resx">
+      <DependentUpon>SelectColor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TextboxWithPlaceholder.resx">
       <DependentUpon>TextboxWithPlaceholder.cs</DependentUpon>
     </EmbeddedResource>
