@@ -387,7 +387,6 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlImages;
-        private AcroniControls.StyleBtn btnNewIcon;
         protected System.Windows.Forms.Button btnAlll;
         private System.Windows.Forms.Panel pnlImg1;
         private System.Windows.Forms.Panel pnlImg6;
@@ -409,5 +408,6 @@
         private System.Windows.Forms.Label lblPic1;
         private System.Windows.Forms.Panel pnlBtnIconChosen;
         protected System.Windows.Forms.Button btnRedefineBackgroundImage;
+        protected AcroniControls.StyleBtn btnNewIcon;
     }
 }

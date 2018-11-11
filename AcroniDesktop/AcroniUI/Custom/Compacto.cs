@@ -367,8 +367,31 @@ namespace AcroniUI.Custom
             {
                 KeycapTextureModule ktm = new KeycapTextureModule();
                 OpenModule(ktm);
-                if (ktm.DialogResult == DialogResult.No)
+                if (ktm.DialogResult == DialogResult.Cancel)
+                {
+                    if (keybutton.Size.Equals(new Size(38, 39)))
+                        keybutton.Parent.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\..\..\Images\Teclas\keycapbackgrounddefault.png");
+                    else
+                        keybutton.Parent.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\..\..\Images\Teclas\{keybutton.Name}.png");
+                }
+
+                else if (ktm.DialogResult == DialogResult.OK)
+                {
+                    foreach (Control keycap in pnlWithKeycaps.Controls)
+                    {
+                        if (keycap is Panel && keycap.HasChildren)
+                        {
+                            if ((keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).Size.Equals(new Size(38, 39)))
+                                keycap.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\..\..\Images\Teclas\keycapbackgrounddefault.png");
+                            else
+                                keycap.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\..\..\Images\Teclas\{(keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).Name}.png");
+                        }
+                    }
+                }
+
+                else if (ktm.DialogResult == DialogResult.No)
                     keybutton.BackgroundImage = ktm.SelectedImg;
+
                 else if (ktm.DialogResult == DialogResult.Yes)
                 {
                     foreach (Control keycap in pnlWithKeycaps.Controls)

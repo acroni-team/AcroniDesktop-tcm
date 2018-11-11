@@ -148,7 +148,7 @@ namespace AcroniUI.Custom.CustomModules
             }
         }
 
-        private void btnRedefineBackgroundImage_Click(object sender, EventArgs e)
+        protected virtual void btnRedefineBackgroundImage_Click(object sender, EventArgs e)
         {
             SelectedImg = global::AcroniUI.Properties.Resources.compacto;
         }
