@@ -55,6 +55,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.apnlCPF.SuspendLayout();
             this.apnlEmail.SuspendLayout();
             this.apnlNome.SuspendLayout();
@@ -346,6 +347,7 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.panel7);
             this.panel5.Controls.Add(this.button1);
             this.panel5.Controls.Add(this.label8);
             this.panel5.Controls.Add(this.label7);
@@ -416,6 +418,16 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(180, 180);
             this.panel6.TabIndex = 111;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Transparent;
+            this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel7.Location = new System.Drawing.Point(121, 67);
+            this.panel7.Margin = new System.Windows.Forms.Padding(0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(180, 180);
+            this.panel7.TabIndex = 112;
             // 
             // MinhaConta
             // 
@@ -496,5 +508,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel7;
     }
 }

@@ -978,16 +978,14 @@ namespace AcroniUI.Custom
                 Share.EditKeyboard = true;
                 Share.Keyboard = keyboard;
                 Share.User.SendToFile();
+                ExportToWebSite();
             }
             else
             {
                 AcroniMessageBoxConfirm fail = new AcroniMessageBoxConfirm("Tu cancelastes a operação no meio do processo/Salvamento inválido ;-;", "Tente novamente, se desejas mesmo salvá - lo!");
                 fail.ShowDialog();
                 --Share.User.KeyboardQuantity;
-
             }
-
-
         }
 
         private void setPropriedadesTeclado()
