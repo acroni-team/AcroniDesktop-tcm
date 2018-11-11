@@ -66,9 +66,34 @@ namespace AcroniUI
                 lblQtdGasta.Text = "" + Share.User.KeyboardQuantity;
                 foreach (Control c in espacoArmazenamento.Controls)
                 {
+<<<<<<< HEAD
                     if (i < Share.User.KeyboardQuantity)
                         c.Visible = true;
                     i++;
+=======
+                    using (SqlDataReader sdr = comm.ExecuteReader())
+                    {
+                        sdr.Read();
+
+                        if ((int)sdr[0] == 0)
+                            Share.User.KeyboardQuantity = 0;
+                        else
+                            Share.User.KeyboardQuantity = (int)sdr[0];
+
+                        for (int i = 0; i < Share.User.KeyboardQuantity; i++)
+                        {
+                            if (Share.User.KeyboardQuantity != 0)
+                                espacoArmazenamento.Controls[$"pnlPreenchido{i + 1}"].Visible = true;
+                            else
+                            {
+                                for(int j = 0; j < 5; j++)
+                                {
+                                    espacoArmazenamento.Controls[$"pnlPreenchido{j + 1}"].Visible = false;
+                                }
+                            }
+                        }
+                    }
+>>>>>>> 9e6dba6b993ae40d86703d7f3d8d39179fd05c5b
                 }
             }
             //if(Share.User.isPremiumAccount)
@@ -217,7 +242,7 @@ namespace AcroniUI
         private void btnConfig_Click(object sender, EventArgs e)
         {
             FadeOut();
-            (new ClientInformation()).Show();
+            (new MinhaConta()).Show();
         }
 
         private void TemplateMenu_Load(object sender, EventArgs e)

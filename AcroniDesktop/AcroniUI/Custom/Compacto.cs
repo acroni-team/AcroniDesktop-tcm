@@ -254,19 +254,19 @@ namespace AcroniUI.Custom
 
                 if (Color != Color.FromArgb(26, 26, 26))
                 {
-                    if (keybutton == Cb14sExtensao || keybutton == Cb14s)
+                    if (keybutton == lblCb14sExtensao || keybutton == lblCb14s)
                     {
-                        Cb14s.Parent.BackgroundImage = null;
-                        Cb14sExtensao.Parent.BackgroundImage = null;
-                        if (keybutton == Cb14s)
+                        lblCb14s.Parent.BackgroundImage = null;
+                        lblCb14sExtensao.Parent.BackgroundImage = null;
+                        if (keybutton == lblCb14s)
                         {
-                            Cb14sExtensao.Parent.BackColor = Color.FromArgb(90, keybutton.BackColor);
-                            Cb14sExtensao.BackColor = Color;
+                            lblCb14sExtensao.BackColor = Color;
+                            lblCb14sExtensao.Parent.BackColor = Color.FromArgb(90, keybutton.BackColor);
                         }
                         else
                         {
-                            Cb14s.Parent.BackColor = Color.FromArgb(90, keybutton.BackColor);
-                            Cb14s.BackColor = Color;
+                            lblCb14s.BackColor = Color;
+                            lblCb14s.Parent.BackColor = Color.FromArgb(90, keybutton.BackColor);
                         }
                     }
 
@@ -281,11 +281,25 @@ namespace AcroniUI.Custom
                 }
 
                 else
+<<<<<<< HEAD
                     try {
                         keybutton.Parent.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\..\..\Images\Teclas\{keybutton.Name}.png");
                     }
                     catch (Exception) { }
                     }
+=======
+                {
+                    if (keybutton.Size.Equals(new Size(38, 39)))
+                        keybutton.Parent.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\..\..\Images\Teclas\keycapbackgrounddefault.png");
+                    else
+                    {
+                        keybutton.Parent.BackColor = Color.Black;
+                        keybutton.Parent.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\..\..\Images\Teclas\{keybutton.Name}.png");
+                    }
+
+                }
+            }
+>>>>>>> 9e6dba6b993ae40d86703d7f3d8d39179fd05c5b
 
             #endregion
 
@@ -329,18 +343,20 @@ namespace AcroniUI.Custom
                 else
                     ktm = new KeycapTextIconModule(true, true);
                 OpenModule(ktm);
+
                 if (ktm.DialogResult == DialogResult.OK)
                 {
+                    if (string.IsNullOrWhiteSpace(ktm.Maintext))
+                        keybutton.Text = $"{keybutton.Text}";
 
-                    if (!string.IsNullOrEmpty(ktm.Maintext) || !string.IsNullOrEmpty(ktm.Uppertext) || !string.IsNullOrEmpty(ktm.Bottomtext))
-                    {
-                        if (string.IsNullOrWhiteSpace(ktm.Uppertext) && string.IsNullOrWhiteSpace(ktm.Bottomtext))
-                            keybutton.Text = ktm.Maintext;
-                        else if (string.IsNullOrWhiteSpace(ktm.Bottomtext))
-                            keybutton.Text = $"{ktm.Uppertext}\n{ktm.Maintext}";
-                        else
-                            keybutton.Text = $"{ktm.Uppertext}\n{ktm.Maintext}{ktm.Bottomtext}";
-                    }
+                    else if (string.IsNullOrWhiteSpace(ktm.Uppertext) && string.IsNullOrWhiteSpace(ktm.Bottomtext))
+                        keybutton.Text = ktm.Maintext;
+
+                    else if (string.IsNullOrWhiteSpace(ktm.Bottomtext))
+                        keybutton.Text = $"{ktm.Uppertext}\n{ktm.Maintext}";
+
+                    else
+                        keybutton.Text = $"{ktm.Uppertext}\n{ktm.Maintext}{ktm.Bottomtext}";
                 }
 
                 if (KeycapTextIconModule.HasChosenAIcon)
@@ -631,17 +647,52 @@ namespace AcroniUI.Custom
                     {
                         if (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] is Label)
                         {
+                            (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).BackColor = Color;
                             (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).Font = new Font(cmbFontes.Text, float.Parse(cmbFontSize.Text), __fontStyle);
                             (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).TextAlign = __contentAlignment;
-                            (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).BackColor = Color;
+
                             if (Color != Color.FromArgb(26, 26, 26))
                             {
-                                keycap.BackColor = Color.FromArgb(90, (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).BackColor);
+                                if ((keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label) == lblCb14sExtensao || (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label) == lblCb14s)
+                                {
+                                    lblCb14s.Parent.BackgroundImage = null;
+                                    lblCb14sExtensao.Parent.BackgroundImage = null;
+
+                                    if ((keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label) == lblCb14s)
+                                    {
+                                        lblCb14sExtensao.BackColor = Color;
+                                        lblCb14sExtensao.Parent.BackColor = Color.FromArgb(90, (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).BackColor);
+                                    }
+                                    else
+                                    {
+                                        lblCb14s.BackColor = Color;
+                                        lblCb14s.Parent.BackColor = Color.FromArgb(90, (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).BackColor);
+                                    }
+                                }
+
+                                else
+                                {
+                                    keycap.BackgroundImage = null;
+                                    keycap.BackColor = Color.FromArgb(90, (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).BackColor);
+                                }
+
                                 keycap.BackgroundImage = null;
+                                keycap.BackColor = Color.FromArgb(90, (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).BackColor);
                             }
+
                             else
-                                keycap.BackgroundImage = global::AcroniUI.Properties.Resources.keycapbackgrounddefault;
-                            (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).ForeColor = FontColor;
+                            {
+                                if ((keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).Size.Equals(new Size(38, 39)))
+                                    keycap.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\..\..\Images\Teclas\keycapbackgrounddefault.png");
+                                else
+                                {
+                                    keycap.BackColor = Color.Black;
+                                    keycap.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\..\..\Images\Teclas\{(keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).Name}.png");
+                                }
+
+                            }
+                            if (btnStyleFontColor.Tag.Equals("active"))
+                                (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).ForeColor = FontColor;
                         }
                     }
                 }
@@ -1009,7 +1060,6 @@ namespace AcroniUI.Custom
             byte[] img = ImageConvert.ImageToByteArray(Screenshot.TakeSnapshot(pnlWithKeycaps), ImageFormat.Bmp);
 
             SQLMethods.INSERT_INTO($"insert into tblTecladoCustomizado (id_colecao, id_cliente, imagem_teclado, nickname, preco) values (1, (select id_cliente from tblCliente where usuario like '{SQLConnection.nome_usuario}'), @image,'{Share.Keyboard.NickName}',254.00)", img);
-
         }
         #endregion
 

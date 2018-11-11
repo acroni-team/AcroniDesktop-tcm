@@ -1,9 +1,11 @@
 ﻿using AcroniControls;
 using AcroniLibrary.FileInfo;
+using AcroniLibrary.SQL;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Windows.Forms;
 
@@ -11,7 +13,6 @@ namespace AcroniUI.Custom.CustomModules
 {
     public partial class KeycapBackgroundModule : KeycapParentModule
     {
-        private string __imageName { get; set; }
 
         Bunifu.Framework.UI.BunifuElipse e = new Bunifu.Framework.UI.BunifuElipse();
 
@@ -24,9 +25,9 @@ namespace AcroniUI.Custom.CustomModules
                 e.ApplyElipse(c, 5);
             }
 
-            if (File.Exists(@"..\..\UserImagesIcons\iconsHistoric.hist"))
+            if (File.Exists($@"{Application.StartupPath}\..\..\UserImagesIcons\{SQLConnection.nome_usuario}IconsHistoric.hist"))
             {
-                using (FileStream openarchive = new FileStream(Application.StartupPath + @"..\..\..\UserImagesIcons\iconsHistoric.hist", FileMode.Open))
+                using (FileStream openarchive = new FileStream($@"{Application.StartupPath}\..\..\UserImagesIcons\{SQLConnection.nome_usuario}IconsHistoric.hist", FileMode.Open))
                 {
                     try
                     {
@@ -53,12 +54,15 @@ namespace AcroniUI.Custom.CustomModules
         //Declaração das propriedades dos ícones
         private Queue<Image> ImageQueue = new Queue<Image>();
 
-        public Image SelectedImg { get; set; } 
+        public Image SelectedImg { get; set; }
 
         public static bool HasChosenAnImg { get; set; }
 
+        private Queue<String> __imageName = new Queue<String>();
+
         private void btnNewIcon_Click(object sender, EventArgs e)
         {
+
             List<KeyboardIcons> insertableArray = new List<KeyboardIcons>();
 
             using (OpenFileDialog iconGetter = new OpenFileDialog())
@@ -70,23 +74,32 @@ namespace AcroniUI.Custom.CustomModules
                 if (iconGetter.ShowDialog() == DialogResult.OK)
                 {
                     foreach (String fileDirectory in iconGetter.FileNames)
+                    {
                         ImageQueue.Enqueue(Image.FromFile(fileDirectory));
+                    }
 
                     while (ImageQueue.Count > 10)
+                    {
                         ImageQueue.Dequeue();
+                        __imageName.Dequeue();
+                    }
 
                     AcroniMessageBoxInput input = new AcroniMessageBoxInput("Muito legal a imagem, parabéns.", "Agora escolha um nome para ela.");
                     if (input.ShowDialog() == DialogResult.OK)
+                        __imageName.Enqueue(input.input);
+                    else
                     {
-                        __imageName = input.input;
+                        ImageQueue = new Queue<Image>(ImageQueue.Reverse());
+                        ImageQueue.Dequeue();
                     }
                 }
+
                 for (int aux = ImageQueue.Count - 1; aux >= 0; aux--)
                 {
                     insertableArray.Add(new KeyboardIcons()
                     {
                         UserIcon = ImageQueue.ToArray()[aux],
-                        UserDefinedIconName = __imageName
+                        UserDefinedIconName = __imageName.ToArray()[aux]
                     });
                 }
             }
@@ -100,7 +113,8 @@ namespace AcroniUI.Custom.CustomModules
                 (pnlImages.Controls[$"pnlImg{i + 1}"] as Panel).Visible = true;
                 (pnlImages.Controls[$"pnlImg{i + 1}"] as Panel).BackColor = Color.FromArgb(80, 80, 80);
                 (pnlImages.Controls[$"pnlImg{i + 1}"].Controls[$"lblPic{i + 1}"] as Label).Text = insertableArray[i].UserDefinedIconName;
-                using (FileStream savearchive = new FileStream(@"..\..\UserImagesIcons\iconsHistoric.hist", FileMode.Create))
+
+                using (FileStream savearchive = new FileStream($@"{Application.StartupPath}\..\..\UserImagesIcons\{SQLConnection.nome_usuario}IconsHistoric.hist", FileMode.Create))
                 {
                     BinaryFormatter Serializer = new BinaryFormatter();
                     Serializer.Serialize(savearchive, insertableArray);
@@ -111,18 +125,32 @@ namespace AcroniUI.Custom.CustomModules
         private void picIcons_Click(object sender, EventArgs e)
         {
             PictureBox icon = (PictureBox)sender;
-            icon.Tag = "Chosen";
-            if (icon.Tag.Equals("Chosen"))
-                icon.Focus();
 
             if (sender != null)
             {
-                pnlBtnIconChosen.Visible = true;
-                pnlBtnIconChosen.Location = new Point(icon.Location.X + icon.Size.Width - 10, icon.Location.Y + icon.Size.Height - 10);
-                this.e.ApplyElipse(pnlBtnIconChosen, 5);
-                SelectedImg = icon.Image;
-                HasChosenAnImg = true;
+                if (icon.Tag.Equals("Chosen"))
+                {
+                    icon.Tag = "Not chosen";
+                    pnlBtnIconChosen.Visible = false;
+                    SelectedImg = global::AcroniUI.Properties.Resources.compacto;
+                    HasChosenAnImg = false;
+                }
+                else
+                {
+                    icon.Tag = "Chosen";
+                    icon.Parent.Controls.Add(pnlBtnIconChosen);
+                    pnlBtnIconChosen.Visible = true;
+                    pnlBtnIconChosen.Location = new Point(icon.Location.X + icon.Size.Width - 10, icon.Location.Y + icon.Size.Height - 10);
+                    pnlBtnIconChosen.BringToFront();
+                    SelectedImg = icon.Image;
+                    HasChosenAnImg = true;
+                }
             }
+        }
+
+        private void btnRedefineBackgroundImage_Click(object sender, EventArgs e)
+        {
+            SelectedImg = global::AcroniUI.Properties.Resources.compacto;
         }
     }
 }

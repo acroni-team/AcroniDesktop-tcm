@@ -468,8 +468,7 @@ namespace AcroniUI.LoginAndSignUp
         {
             txtEntrar.Text = "teste";
             txtSenha.Text = "teste";
-            //MetodoParaCriarPerfilADM();
-            // q desgraça é essa q ta ferrando o .acr
+            MetodoParaCriarPerfilADM();
             btnEntrar_Click(default(object), default(EventArgs));
         }
 
