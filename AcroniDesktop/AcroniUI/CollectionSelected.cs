@@ -31,7 +31,9 @@ namespace AcroniUI
             int countLateralPadding = 0;
             int countUpBottomPadding = 0;
             bool canCountLateralPadding = true;
-            foreach (Keyboard userKeyboard in Share.Collection.Keyboards)
+            foreach(Collection col in Share.User.UserCollections)
+                if(Share.Collection.CollectionName.Equals(col.CollectionName))
+            foreach (Keyboard userKeyboard in col.Keyboards)
             {
                 Share.Keyboard = userKeyboard;           
                 Keyboard_CollectionSelected userKeyboardUI = new Keyboard_CollectionSelected();                         

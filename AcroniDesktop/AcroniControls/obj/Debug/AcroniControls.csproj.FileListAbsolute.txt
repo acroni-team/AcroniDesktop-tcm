@@ -14,3 +14,17 @@ E:\Desktop\c\AcroniDesktop\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls
 E:\Desktop\c\AcroniDesktop\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.csproj.CopyComplete
 E:\Desktop\c\AcroniDesktop\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.dll
 E:\Desktop\c\AcroniDesktop\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.pdb
+C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniControls\bin\Debug\AcroniControls.dll
+C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniControls\bin\Debug\AcroniControls.pdb
+C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniControls\bin\Debug\AcroniLibrary.dll
+C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniControls\bin\Debug\Bunifu_UI_v1.52.dll
+C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniControls\bin\Debug\AcroniLibrary.pdb
+C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.csprojResolveAssemblyReference.cache
+C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.AcroniMessageBoxConfirm.resources
+C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.AcroniMessageBoxInput.resources
+C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniControls\obj\Debug\TheKhanSoftsWatermarkTextbox.TextboxWithPlaceholder.resources
+C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.MessageBoxSemInternet.resources
+C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.Properties.Resources.resources
+C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.csproj.GenerateResource.Cache
+C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.dll
+C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniControls\obj\Debug\AcroniControls.pdb
