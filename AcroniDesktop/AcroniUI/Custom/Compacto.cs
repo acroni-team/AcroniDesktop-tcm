@@ -337,19 +337,12 @@ namespace AcroniUI.Custom
                 OpenModule(ktm);
                 if (ktm.DialogResult == DialogResult.OK)
                 {
-                    if (!string.IsNullOrEmpty(ktm.Maintext) || !string.IsNullOrEmpty(ktm.Uppertext) || !string.IsNullOrEmpty(ktm.Bottomtext))
-                    {
-                        if (string.IsNullOrWhiteSpace(ktm.Uppertext) && string.IsNullOrWhiteSpace(ktm.Bottomtext))
-                            keybutton.Text = ktm.Maintext;
-                        else if (string.IsNullOrWhiteSpace(ktm.Bottomtext))
-                            keybutton.Text = $"{ktm.Uppertext}\n{ktm.Maintext}";
-                        else
-                            keybutton.Text = $"{ktm.Uppertext}\n{ktm.Maintext}{ktm.Bottomtext}";
-                    }
+                    if (string.IsNullOrWhiteSpace(ktm.Uppertext) && string.IsNullOrWhiteSpace(ktm.Bottomtext))
+                        keybutton.Text = ktm.Maintext;
+                    else if (string.IsNullOrWhiteSpace(ktm.Bottomtext))
+                        keybutton.Text = $"{ktm.Uppertext}\n{ktm.Maintext}";
                     else
-                    {
-
-                    }
+                        keybutton.Text = $"{ktm.Uppertext}\n{ktm.Maintext}{ktm.Bottomtext}";
                 }
 
                 if (KeycapTextIconModule.HasChosenAIcon)
@@ -636,7 +629,7 @@ namespace AcroniUI.Custom
                 foreach (Control keycap in pnlWithKeycaps.Controls)
                 {
                     if (keycap is Panel && keycap.HasChildren)
-                    { 
+                    {
                         if (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] is Label)
                         {
                             (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).BackColor = Color;

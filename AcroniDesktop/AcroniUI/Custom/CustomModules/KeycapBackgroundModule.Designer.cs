@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KeycapBackgroundModule));
             this.pnlImages = new System.Windows.Forms.Panel();
-            this.pnlBtnIconChosen = new System.Windows.Forms.Panel();
             this.pnlImg6 = new System.Windows.Forms.Panel();
             this.lblPic6 = new System.Windows.Forms.Label();
             this.picBoxImg6 = new System.Windows.Forms.PictureBox();
@@ -49,8 +48,10 @@
             this.pnlImg1 = new System.Windows.Forms.Panel();
             this.lblPic1 = new System.Windows.Forms.Label();
             this.picBoxImg1 = new System.Windows.Forms.PictureBox();
+            this.pnlBtnIconChosen = new System.Windows.Forms.Panel();
             this.btnNewIcon = new AcroniControls.StyleBtn();
             this.btnAlll = new System.Windows.Forms.Button();
+            this.btnRedefineBackgroundImage = new System.Windows.Forms.Button();
             this.pnlImages.SuspendLayout();
             this.pnlImg6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxImg6)).BeginInit();
@@ -79,17 +80,6 @@
             this.pnlImages.Name = "pnlImages";
             this.pnlImages.Size = new System.Drawing.Size(607, 331);
             this.pnlImages.TabIndex = 17;
-            // 
-            // pnlBtnIconChosen
-            // 
-            this.pnlBtnIconChosen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(255)))));
-            this.pnlBtnIconChosen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBtnIconChosen.BackgroundImage")));
-            this.pnlBtnIconChosen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlBtnIconChosen.Location = new System.Drawing.Point(517, 433);
-            this.pnlBtnIconChosen.Name = "pnlBtnIconChosen";
-            this.pnlBtnIconChosen.Size = new System.Drawing.Size(17, 17);
-            this.pnlBtnIconChosen.TabIndex = 12;
-            this.pnlBtnIconChosen.Visible = false;
             // 
             // pnlImg6
             // 
@@ -289,6 +279,17 @@
             this.picBoxImg1.Tag = "Not chosen";
             this.picBoxImg1.Click += new System.EventHandler(this.picIcons_Click);
             // 
+            // pnlBtnIconChosen
+            // 
+            this.pnlBtnIconChosen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(255)))));
+            this.pnlBtnIconChosen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBtnIconChosen.BackgroundImage")));
+            this.pnlBtnIconChosen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlBtnIconChosen.Location = new System.Drawing.Point(517, 433);
+            this.pnlBtnIconChosen.Name = "pnlBtnIconChosen";
+            this.pnlBtnIconChosen.Size = new System.Drawing.Size(17, 17);
+            this.pnlBtnIconChosen.TabIndex = 12;
+            this.pnlBtnIconChosen.Visible = false;
+            // 
             // btnNewIcon
             // 
             this.btnNewIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(34)))));
@@ -302,7 +303,7 @@
             this.btnNewIcon.Location = new System.Drawing.Point(658, 85);
             this.btnNewIcon.Name = "btnNewIcon";
             this.btnNewIcon.Padding = new System.Windows.Forms.Padding(0, 0, 0, 13);
-            this.btnNewIcon.Size = new System.Drawing.Size(161, 249);
+            this.btnNewIcon.Size = new System.Drawing.Size(161, 192);
             this.btnNewIcon.TabIndex = 18;
             this.btnNewIcon.Text = "Novo!";
             this.btnNewIcon.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -320,7 +321,7 @@
             this.btnAlll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlll.Font = new System.Drawing.Font("Open Sans", 10F);
             this.btnAlll.ForeColor = System.Drawing.Color.White;
-            this.btnAlll.Location = new System.Drawing.Point(658, 358);
+            this.btnAlll.Location = new System.Drawing.Point(658, 288);
             this.btnAlll.Name = "btnAlll";
             this.btnAlll.Padding = new System.Windows.Forms.Padding(5);
             this.btnAlll.Size = new System.Drawing.Size(161, 58);
@@ -328,12 +329,33 @@
             this.btnAlll.Text = "Usar como plano de fundo do teclado";
             this.btnAlll.UseVisualStyleBackColor = false;
             // 
+            // btnRedefineBackgroundImage
+            // 
+            this.btnRedefineBackgroundImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(255)))));
+            this.btnRedefineBackgroundImage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRedefineBackgroundImage.DialogResult = System.Windows.Forms.DialogResult.Yes;
+            this.btnRedefineBackgroundImage.FlatAppearance.BorderSize = 0;
+            this.btnRedefineBackgroundImage.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.btnRedefineBackgroundImage.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.btnRedefineBackgroundImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRedefineBackgroundImage.Font = new System.Drawing.Font("Open Sans", 10F);
+            this.btnRedefineBackgroundImage.ForeColor = System.Drawing.Color.White;
+            this.btnRedefineBackgroundImage.Location = new System.Drawing.Point(658, 355);
+            this.btnRedefineBackgroundImage.Name = "btnRedefineBackgroundImage";
+            this.btnRedefineBackgroundImage.Padding = new System.Windows.Forms.Padding(5);
+            this.btnRedefineBackgroundImage.Size = new System.Drawing.Size(161, 58);
+            this.btnRedefineBackgroundImage.TabIndex = 10;
+            this.btnRedefineBackgroundImage.Text = "Voltar para plano de fundo padrão";
+            this.btnRedefineBackgroundImage.UseVisualStyleBackColor = false;
+            this.btnRedefineBackgroundImage.Click += new System.EventHandler(this.btnRedefineBackgroundImage_Click);
+            // 
             // KeycapBackgroundModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(862, 472);
             this.Controls.Add(this.pnlBtnIconChosen);
+            this.Controls.Add(this.btnRedefineBackgroundImage);
             this.Controls.Add(this.btnAlll);
             this.Controls.Add(this.btnNewIcon);
             this.Controls.Add(this.pnlImages);
@@ -343,6 +365,7 @@
             this.Controls.SetChildIndex(this.pnlImages, 0);
             this.Controls.SetChildIndex(this.btnNewIcon, 0);
             this.Controls.SetChildIndex(this.btnAlll, 0);
+            this.Controls.SetChildIndex(this.btnRedefineBackgroundImage, 0);
             this.Controls.SetChildIndex(this.pnlBtnIconChosen, 0);
             this.pnlImages.ResumeLayout(false);
             this.pnlImg6.ResumeLayout(false);
@@ -385,5 +408,6 @@
         private System.Windows.Forms.Label lblPic2;
         private System.Windows.Forms.Label lblPic1;
         private System.Windows.Forms.Panel pnlBtnIconChosen;
+        protected System.Windows.Forms.Button btnRedefineBackgroundImage;
     }
 }

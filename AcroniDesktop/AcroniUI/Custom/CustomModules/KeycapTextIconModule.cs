@@ -125,16 +125,18 @@ namespace AcroniUI.Custom.CustomModules
                 {
                     icon.Tag = "Not chosen";
                     pnlBtnIconChosen.Visible = false;
-                    SelectedIcon = null;
+                    SelectedIcon = global::AcroniUI.Properties.Resources.compacto;
                     HasChosenAIcon = false;
                 }
-
-                icon.Tag = "Chosen";
-                pnlBtnIconChosen.Visible = true;
-                pnlBtnIconChosen.Location = new Point(icon.Location.X + icon.Size.Width - 10, icon.Location.Y + icon.Size.Height - 10);
-                pnlBtnIconChosen.BringToFront();
-                SelectedIcon = icon.Image;
-                HasChosenAIcon = true;
+                else
+                {
+                    icon.Tag = "Chosen";
+                    pnlBtnIconChosen.Visible = true;
+                    pnlBtnIconChosen.Location = new Point(icon.Location.X + icon.Size.Width - 10, icon.Location.Y + icon.Size.Height - 10);
+                    pnlBtnIconChosen.BringToFront();
+                    SelectedIcon = icon.Image;
+                    HasChosenAIcon = true;
+                }
             }
         }
 

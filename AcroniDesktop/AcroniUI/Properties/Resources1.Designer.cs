@@ -73,6 +73,16 @@ namespace AcroniUI.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap compacto {
+            get {
+                object obj = ResourceManager.GetObject("compacto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap keycapbackgrounddefault {
             get {
                 object obj = ResourceManager.GetObject("keycapbackgrounddefault", resourceCulture);

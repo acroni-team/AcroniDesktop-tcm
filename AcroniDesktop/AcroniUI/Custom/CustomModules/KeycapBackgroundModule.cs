@@ -131,19 +131,26 @@ namespace AcroniUI.Custom.CustomModules
                 if (icon.Tag.Equals("Chosen"))
                 {
                     icon.Tag = "Not chosen";
-                    pnlBtnIconChosen.Visible = true;
-                    SelectedImg = null;
+                    pnlBtnIconChosen.Visible = false;
+                    SelectedImg = global::AcroniUI.Properties.Resources.compacto;
                     HasChosenAnImg = false;
                 }
-
-                icon.Tag = "Chosen";
-                icon.Parent.Controls.Add(pnlBtnIconChosen);
-                pnlBtnIconChosen.Visible = true;
-                pnlBtnIconChosen.Location = new Point(icon.Location.X + icon.Size.Width - 10, icon.Location.Y + icon.Size.Height - 10);
-                pnlBtnIconChosen.BringToFront();
-                SelectedImg = icon.Image;
-                HasChosenAnImg = true;
+                else
+                {
+                    icon.Tag = "Chosen";
+                    icon.Parent.Controls.Add(pnlBtnIconChosen);
+                    pnlBtnIconChosen.Visible = true;
+                    pnlBtnIconChosen.Location = new Point(icon.Location.X + icon.Size.Width - 10, icon.Location.Y + icon.Size.Height - 10);
+                    pnlBtnIconChosen.BringToFront();
+                    SelectedImg = icon.Image;
+                    HasChosenAnImg = true;
+                }
             }
+        }
+
+        private void btnRedefineBackgroundImage_Click(object sender, EventArgs e)
+        {
+            SelectedImg = global::AcroniUI.Properties.Resources.compacto;
         }
     }
 }
