@@ -92,20 +92,24 @@ namespace AcroniUI
         }    
         private void DeleteKeyboard(object sender, EventArgs e)
         {
-            foreach (Collection userCollection in Share.User.UserCollections)
-                if (userCollection.CollectionName.Equals(lblCollectionName.Text))
-                    foreach (Keyboard userKeyboard in userCollection.Keyboards)
-                        if (userKeyboard.ID.Equals((sender as PictureBox).Parent.Name))
-                        {
-                            userCollection.Keyboards.Remove(userKeyboard);
-                            Share.User.KeyboardQuantity--;
-                            Share.User.SendToFile();
-                            CollectionSelected recharge = new CollectionSelected();
-                            recharge.Show();
-                            this.Close();
-                            break;
-                            
-                        }
+            AcroniMessageBoxConfirm confirmExclude = new AcroniMessageBoxConfirm("Deseja mesmo excluir este teclado?", "Não terá como reverter o processo O_O");
+            if (confirmExclude.ShowDialog() == DialogResult.Yes)
+            {
+                foreach (Collection userCollection in Share.User.UserCollections)
+                    if (userCollection.CollectionName.Equals(lblCollectionName.Text))
+                        foreach (Keyboard userKeyboard in userCollection.Keyboards)
+                            if (userKeyboard.ID.Equals((sender as PictureBox).Parent.Name))
+                            {
+                                userCollection.Keyboards.Remove(userKeyboard);
+                                Share.User.KeyboardQuantity--;
+                                Share.User.SendToFile();
+                                CollectionSelected recharge = new CollectionSelected();
+                                recharge.Show();
+                                this.Close();
+                                break;
+
+                            }
+            }
         }
         private new void MouseEnter(object sender, EventArgs e)
         {

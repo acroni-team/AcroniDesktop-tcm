@@ -229,36 +229,41 @@ namespace AcroniUI
 
         private void Exclude(object sender, EventArgs e)
         {
-            foreach (Control c in ((sender as PictureBox).Parent as Panel).Controls)
+            AcroniMessageBoxConfirm confirmExclude = new AcroniMessageBoxConfirm("Deseja mesmo excluir esta coleção?","Não terá como reverter o processo O_O");
+            if (confirmExclude.ShowDialog() == DialogResult.Yes)
             {
-                if (c.Name.Equals("lblColecao1"))
+                foreach (Control c in ((sender as PictureBox).Parent as Panel).Controls)
                 {
-                    foreach (Collection collection in Share.User.UserCollections)
+                    if (c.Name.Equals("lblColecao1"))
                     {
-                        if (collection.CollectionName.Equals(c.Text))
+                        foreach (Collection collection in Share.User.UserCollections)
                         {
-                            Share.User.UserCollections.Remove(collection);
-                            foreach (Keyboard k in collection.Keyboards)
-                                Share.User.KeyboardQuantity--;
-                            using (SqlConnection sqlConnection = new SqlConnection("Data Source = " + Environment.MachineName + "\\SQLEXPRESS; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7"))
+                            if (collection.CollectionName.Equals(c.Text))
                             {
-                                sqlConnection.Open();
-                                using (SqlCommand sqlCommand = new SqlCommand("delete from tblColecao where nick_colecao in('" + c.Text + "') and id_cliente like (select id_cliente from tblCliente where usuario like '" + SQLConnection.nome_usuario + "')", sqlConnection))
+                                Share.User.UserCollections.Remove(collection);
+                                foreach (Keyboard k in collection.Keyboards)
+                                    Share.User.KeyboardQuantity--;
+                                using (SqlConnection sqlConnection = new SqlConnection("Data Source = " + Environment.MachineName + "\\SQLEXPRESS; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7"))
                                 {
-                                    sqlCommand.ExecuteNonQuery();
+                                    sqlConnection.Open();
+                                    using (SqlCommand sqlCommand = new SqlCommand("delete from tblColecao where nick_colecao in('" + c.Text + "') and id_cliente like (select id_cliente from tblCliente where usuario like '" + SQLConnection.nome_usuario + "')", sqlConnection))
+                                    {
+                                        sqlCommand.ExecuteNonQuery();
+                                    }
                                 }
+                                break;
                             }
-                            break;
                         }
                     }
-                }
 
+                }
+                this.UpdateKeyboardQuantity();
+                Share.User.SendToFile();
+                Galeria recharge = new Galeria(false);
+                recharge.Show();
+                this.Close();
             }
-            this.UpdateKeyboardQuantity();
-            Share.User.SendToFile();
-            Galeria recharge = new Galeria(false);
-            recharge.Show();
-            this.Close();
+          
         }
 
         private void OpenKeyboard(object sender, EventArgs e)

@@ -63,6 +63,10 @@ namespace AcroniUI
             }
             else
             {
+                Share.User.KeyboardQuantity = 0;
+                foreach (Collection col in Share.User.UserCollections)
+                    foreach (Keyboard k in col.Keyboards)
+                        Share.User.KeyboardQuantity++;
                 lblQtdGasta.Text = "" + Share.User.KeyboardQuantity;
                 foreach (Control c in espacoArmazenamento.Controls)
                 {
