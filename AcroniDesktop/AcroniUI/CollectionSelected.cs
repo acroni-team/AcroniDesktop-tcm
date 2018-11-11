@@ -98,6 +98,7 @@ namespace AcroniUI
                         if (userKeyboard.ID.Equals((sender as PictureBox).Parent.Name))
                         {
                             userCollection.Keyboards.Remove(userKeyboard);
+                            Share.User.KeyboardQuantity--;
                             Share.User.SendToFile();
                             CollectionSelected recharge = new CollectionSelected();
                             recharge.Show();
