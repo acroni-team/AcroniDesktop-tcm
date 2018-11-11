@@ -65,12 +65,6 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Custom\ClientInformation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Custom\ClientInformation.Designer.cs">
-      <DependentUpon>ClientInformation.cs</DependentUpon>
-    </Compile>
     <Compile Include="CollectionSelected.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +131,12 @@
     <Compile Include="LoginAndSignUp\FrmUsuario.designer.cs">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="MinhaConta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MinhaConta.Designer.cs">
+      <DependentUpon>MinhaConta.cs</DependentUpon>
+    </Compile>
     <Compile Include="TemplateMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,9 +186,6 @@
     <Compile Include="Template.Designer.cs">
       <DependentUpon>Template.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Custom\ClientInformation.resx">
-      <DependentUpon>ClientInformation.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CollectionSelected.resx">
       <DependentUpon>CollectionSelected.cs</DependentUpon>
     </EmbeddedResource>
@@ -257,12 +254,12 @@
     <Content Include="Images\fullsize.png" />
     <Content Include="Images\icons8-eye-30-white.png" />
     <None Include="Images\thrash.png" />
-    <None Include="Images\keycapbackgrounddefault.png" />
     <Content Include="Images\logo.svg" />
     <None Include="Images\pen.png" />
     <None Include="Images\shiftarrow.png" />
     <Content Include="Images\slogo.png" />
     <None Include="Images\tabarrowkeysred.png" />
+    <None Include="Images\Teclas\keycapbackgrounddefault.png" />
     <Content Include="Images\tenkeyless.png" />
     <None Include="AcroniUI.cd" />
     <None Include="app.config" />

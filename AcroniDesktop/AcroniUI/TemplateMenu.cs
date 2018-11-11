@@ -63,7 +63,12 @@ namespace AcroniUI
                     using (SqlDataReader sdr = comm.ExecuteReader())
                     {
                         sdr.Read();
-                        Share.User.KeyboardQuantity = (int)sdr[0];
+
+                        if ((int)sdr[0] == 0)
+                            Share.User.KeyboardQuantity = 0;
+                        else
+                            Share.User.KeyboardQuantity = (int)sdr[0];
+
                         for (int i = 0; i < Share.User.KeyboardQuantity; i++)
                         {
                             if (Share.User.KeyboardQuantity != 0)
@@ -200,7 +205,7 @@ namespace AcroniUI
         private void btnConfig_Click(object sender, EventArgs e)
         {
             FadeOut();
-            (new ClientInformation()).Show();
+            (new MinhaConta()).Show();
         }
 
         private void TemplateMenu_Load(object sender, EventArgs e)

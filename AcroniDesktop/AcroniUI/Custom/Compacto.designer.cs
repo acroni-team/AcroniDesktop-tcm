@@ -140,9 +140,9 @@ namespace AcroniUI.Custom
             this.fundoCa14s = new System.Windows.Forms.Panel();
             this.lblCa14s = new System.Windows.Forms.Label();
             this.fundoCb14sExtensao = new System.Windows.Forms.Panel();
-            this.Cb14sExtensao = new System.Windows.Forms.Label();
+            this.lblCb14sExtensao = new System.Windows.Forms.Label();
             this.fundoCb14s = new System.Windows.Forms.Panel();
-            this.Cb14s = new System.Windows.Forms.Label();
+            this.lblCb14s = new System.Windows.Forms.Label();
             this.fundoCa1 = new System.Windows.Forms.Panel();
             this.lblCa1 = new System.Windows.Forms.Label();
             this.fundoCa2 = new System.Windows.Forms.Panel();
@@ -1923,48 +1923,48 @@ namespace AcroniUI.Custom
             this.fundoCb14sExtensao.BackColor = System.Drawing.Color.Black;
             this.fundoCb14sExtensao.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fundoCb14sExtensao.BackgroundImage")));
             this.fundoCb14sExtensao.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.fundoCb14sExtensao.Controls.Add(this.Cb14sExtensao);
+            this.fundoCb14sExtensao.Controls.Add(this.lblCb14sExtensao);
             this.fundoCb14sExtensao.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fundoCb14sExtensao.Location = new System.Drawing.Point(779, 132);
             this.fundoCb14sExtensao.Name = "fundoCb14sExtensao";
             this.fundoCb14sExtensao.Size = new System.Drawing.Size(68, 63);
             this.fundoCb14sExtensao.TabIndex = 147;
             // 
-            // Cb14sExtensao
+            // lblCb14sExtensao
             // 
-            this.Cb14sExtensao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.Cb14sExtensao.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Cb14sExtensao.Font = new System.Drawing.Font("Open Sans", 12F);
-            this.Cb14sExtensao.Location = new System.Drawing.Point(6, 0);
-            this.Cb14sExtensao.Name = "Cb14sExtensao";
-            this.Cb14sExtensao.Size = new System.Drawing.Size(55, 53);
-            this.Cb14sExtensao.TabIndex = 116;
-            this.Cb14sExtensao.Click += new System.EventHandler(this.lblUpperBottom_Click);
+            this.lblCb14sExtensao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.lblCb14sExtensao.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblCb14sExtensao.Font = new System.Drawing.Font("Open Sans", 12F);
+            this.lblCb14sExtensao.Location = new System.Drawing.Point(6, 0);
+            this.lblCb14sExtensao.Name = "lblCb14sExtensao";
+            this.lblCb14sExtensao.Size = new System.Drawing.Size(55, 53);
+            this.lblCb14sExtensao.TabIndex = 116;
+            this.lblCb14sExtensao.Click += new System.EventHandler(this.lblUpperBottom_Click);
             // 
             // fundoCb14s
             // 
             this.fundoCb14s.BackColor = System.Drawing.Color.Black;
             this.fundoCb14s.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fundoCb14s.BackgroundImage")));
-            this.fundoCb14s.Controls.Add(this.Cb14s);
+            this.fundoCb14s.Controls.Add(this.lblCb14s);
             this.fundoCb14s.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fundoCb14s.Location = new System.Drawing.Point(765, 78);
             this.fundoCb14s.Name = "fundoCb14s";
             this.fundoCb14s.Size = new System.Drawing.Size(82, 55);
             this.fundoCb14s.TabIndex = 146;
             // 
-            // Cb14s
+            // lblCb14s
             // 
-            this.Cb14s.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.Cb14s.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Cb14s.Font = new System.Drawing.Font("Open Sans", 12F);
-            this.Cb14s.Image = ((System.Drawing.Image)(resources.GetObject("Cb14s.Image")));
-            this.Cb14s.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Cb14s.Location = new System.Drawing.Point(6, 6);
-            this.Cb14s.Name = "Cb14s";
-            this.Cb14s.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.Cb14s.Size = new System.Drawing.Size(71, 48);
-            this.Cb14s.TabIndex = 117;
-            this.Cb14s.Click += new System.EventHandler(this.lblUpperBottom_Click);
+            this.lblCb14s.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.lblCb14s.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblCb14s.Font = new System.Drawing.Font("Open Sans", 12F);
+            this.lblCb14s.Image = ((System.Drawing.Image)(resources.GetObject("lblCb14s.Image")));
+            this.lblCb14s.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblCb14s.Location = new System.Drawing.Point(6, 6);
+            this.lblCb14s.Name = "lblCb14s";
+            this.lblCb14s.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.lblCb14s.Size = new System.Drawing.Size(71, 48);
+            this.lblCb14s.TabIndex = 117;
+            this.lblCb14s.Click += new System.EventHandler(this.lblUpperBottom_Click);
             // 
             // fundoCa1
             // 
@@ -2057,7 +2057,7 @@ namespace AcroniUI.Custom
             this.lblCa4.Location = new System.Drawing.Point(8, 5);
             this.lblCa4.Margin = new System.Windows.Forms.Padding(0);
             this.lblCa4.Name = "lblCa4";
-            this.lblCa4.Size = new System.Drawing.Size(38, 40);
+            this.lblCa4.Size = new System.Drawing.Size(38, 39);
             this.lblCa4.TabIndex = 85;
             this.lblCa4.Text = "#\r\n3\r\n";
             this.lblCa4.Click += new System.EventHandler(this.lblUpperBottom_Click);
@@ -2081,7 +2081,7 @@ namespace AcroniUI.Custom
             this.lblCa5.Location = new System.Drawing.Point(8, 6);
             this.lblCa5.Margin = new System.Windows.Forms.Padding(0);
             this.lblCa5.Name = "lblCa5";
-            this.lblCa5.Size = new System.Drawing.Size(38, 40);
+            this.lblCa5.Size = new System.Drawing.Size(38, 39);
             this.lblCa5.TabIndex = 85;
             this.lblCa5.Text = "$\r\n4\r\n";
             this.lblCa5.Click += new System.EventHandler(this.lblUpperBottom_Click);
@@ -2105,7 +2105,7 @@ namespace AcroniUI.Custom
             this.lblCa6.Location = new System.Drawing.Point(8, 6);
             this.lblCa6.Margin = new System.Windows.Forms.Padding(0);
             this.lblCa6.Name = "lblCa6";
-            this.lblCa6.Size = new System.Drawing.Size(38, 40);
+            this.lblCa6.Size = new System.Drawing.Size(38, 39);
             this.lblCa6.TabIndex = 85;
             this.lblCa6.Text = "%\r\n5\r\n";
             this.lblCa6.Click += new System.EventHandler(this.lblUpperBottom_Click);
@@ -2129,7 +2129,7 @@ namespace AcroniUI.Custom
             this.lblCa7.Location = new System.Drawing.Point(7, 6);
             this.lblCa7.Margin = new System.Windows.Forms.Padding(0);
             this.lblCa7.Name = "lblCa7";
-            this.lblCa7.Size = new System.Drawing.Size(38, 40);
+            this.lblCa7.Size = new System.Drawing.Size(38, 39);
             this.lblCa7.TabIndex = 86;
             this.lblCa7.Text = "¨\r\n6  ¬";
             this.lblCa7.Click += new System.EventHandler(this.lblUpperBottom_Click);
@@ -2153,7 +2153,7 @@ namespace AcroniUI.Custom
             this.lblCa8.Location = new System.Drawing.Point(7, 5);
             this.lblCa8.Margin = new System.Windows.Forms.Padding(0);
             this.lblCa8.Name = "lblCa8";
-            this.lblCa8.Size = new System.Drawing.Size(38, 40);
+            this.lblCa8.Size = new System.Drawing.Size(38, 39);
             this.lblCa8.TabIndex = 86;
             this.lblCa8.Text = "&\r\n7";
             this.lblCa8.UseMnemonic = false;
@@ -2178,7 +2178,7 @@ namespace AcroniUI.Custom
             this.lblCa9.Location = new System.Drawing.Point(8, 6);
             this.lblCa9.Margin = new System.Windows.Forms.Padding(0);
             this.lblCa9.Name = "lblCa9";
-            this.lblCa9.Size = new System.Drawing.Size(38, 40);
+            this.lblCa9.Size = new System.Drawing.Size(38, 39);
             this.lblCa9.TabIndex = 87;
             this.lblCa9.Text = "*\r\n8\r\n";
             this.lblCa9.Click += new System.EventHandler(this.lblUpperBottom_Click);
@@ -2202,7 +2202,7 @@ namespace AcroniUI.Custom
             this.lblCa10.Location = new System.Drawing.Point(7, 5);
             this.lblCa10.Margin = new System.Windows.Forms.Padding(0);
             this.lblCa10.Name = "lblCa10";
-            this.lblCa10.Size = new System.Drawing.Size(38, 40);
+            this.lblCa10.Size = new System.Drawing.Size(38, 39);
             this.lblCa10.TabIndex = 87;
             this.lblCa10.Text = "(\r\n9\r\n";
             this.lblCa10.Click += new System.EventHandler(this.lblUpperBottom_Click);
@@ -2226,7 +2226,7 @@ namespace AcroniUI.Custom
             this.lblCa11.Location = new System.Drawing.Point(7, 5);
             this.lblCa11.Margin = new System.Windows.Forms.Padding(0);
             this.lblCa11.Name = "lblCa11";
-            this.lblCa11.Size = new System.Drawing.Size(38, 40);
+            this.lblCa11.Size = new System.Drawing.Size(38, 39);
             this.lblCa11.TabIndex = 87;
             this.lblCa11.Text = ")\r\n0\r\n";
             this.lblCa11.Click += new System.EventHandler(this.lblUpperBottom_Click);
@@ -2250,7 +2250,7 @@ namespace AcroniUI.Custom
             this.lblCa12.Location = new System.Drawing.Point(8, 5);
             this.lblCa12.Margin = new System.Windows.Forms.Padding(0);
             this.lblCa12.Name = "lblCa12";
-            this.lblCa12.Size = new System.Drawing.Size(38, 40);
+            this.lblCa12.Size = new System.Drawing.Size(38, 39);
             this.lblCa12.TabIndex = 88;
             this.lblCa12.Text = "_\r\n-\r\n";
             this.lblCa12.Click += new System.EventHandler(this.lblUpperBottom_Click);
@@ -2274,7 +2274,7 @@ namespace AcroniUI.Custom
             this.lblCa13.Location = new System.Drawing.Point(8, 6);
             this.lblCa13.Margin = new System.Windows.Forms.Padding(0);
             this.lblCa13.Name = "lblCa13";
-            this.lblCa13.Size = new System.Drawing.Size(38, 40);
+            this.lblCa13.Size = new System.Drawing.Size(38, 39);
             this.lblCa13.TabIndex = 89;
             this.lblCa13.Text = "+\r\n=  §\r\n";
             this.lblCa13.Click += new System.EventHandler(this.lblUpperBottom_Click);
@@ -2848,7 +2848,7 @@ namespace AcroniUI.Custom
             this.lblCd3.Font = new System.Drawing.Font("Open Sans", 12F);
             this.lblCd3.Location = new System.Drawing.Point(7, 5);
             this.lblCd3.Name = "lblCd3";
-            this.lblCd3.Size = new System.Drawing.Size(38, 40);
+            this.lblCd3.Size = new System.Drawing.Size(38, 39);
             this.lblCd3.TabIndex = 89;
             this.lblCd3.Text = "Z";
             this.lblCd3.Click += new System.EventHandler(this.lblUpperBottom_Click);
@@ -3069,7 +3069,7 @@ namespace AcroniUI.Custom
             this.lblCd13.Font = new System.Drawing.Font("Open Sans", 10F);
             this.lblCd13.Location = new System.Drawing.Point(7, 4);
             this.lblCd13.Name = "lblCd13";
-            this.lblCd13.Size = new System.Drawing.Size(38, 40);
+            this.lblCd13.Size = new System.Drawing.Size(38, 39);
             this.lblCd13.TabIndex = 89;
             this.lblCd13.Text = "?\r\n/    °";
             this.lblCd13.Click += new System.EventHandler(this.lblUpperBottom_Click);
@@ -3444,8 +3444,8 @@ namespace AcroniUI.Custom
         private System.Windows.Forms.Label lblCd14s;
         private System.Windows.Forms.Panel fundoCc1s;
         private System.Windows.Forms.Label lblCc1s;
-        private System.Windows.Forms.Label Cb14sExtensao;
-        private System.Windows.Forms.Label Cb14s;
+        private System.Windows.Forms.Label lblCb14sExtensao;
+        private System.Windows.Forms.Label lblCb14s;
         private System.Windows.Forms.Panel pnlBtnStyleFontColor;
     }
 }

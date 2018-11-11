@@ -53,7 +53,7 @@
             this.alblMessage1.ForeColor = System.Drawing.Color.White;
             this.alblMessage1.Location = new System.Drawing.Point(0, 52);
             this.alblMessage1.Name = "alblMessage1";
-            this.alblMessage1.Size = new System.Drawing.Size(700, 34);
+            this.alblMessage1.Size = new System.Drawing.Size(565, 34);
             this.alblMessage1.TabIndex = 0;
             this.alblMessage1.Text = "Estamos quase lá.";
             this.alblMessage1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -66,8 +66,9 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(700, 150);
+            this.panel1.Size = new System.Drawing.Size(565, 150);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // alblMessage2
             // 
@@ -75,7 +76,7 @@
             this.alblMessage2.ForeColor = System.Drawing.Color.White;
             this.alblMessage2.Location = new System.Drawing.Point(0, 86);
             this.alblMessage2.Name = "alblMessage2";
-            this.alblMessage2.Size = new System.Drawing.Size(700, 23);
+            this.alblMessage2.Size = new System.Drawing.Size(565, 23);
             this.alblMessage2.TabIndex = 0;
             this.alblMessage2.Text = "Um código foi enviado pro seu email. Agora é só colar ele aqui.";
             this.alblMessage2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -87,9 +88,9 @@
             this.txtUserInput.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUserInput.Font = new System.Drawing.Font("Open Sans", 11.25F);
             this.txtUserInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
-            this.txtUserInput.Location = new System.Drawing.Point(0, 19);
+            this.txtUserInput.Location = new System.Drawing.Point(8, 19);
             this.txtUserInput.Name = "txtUserInput";
-            this.txtUserInput.Size = new System.Drawing.Size(365, 21);
+            this.txtUserInput.Size = new System.Drawing.Size(347, 21);
             this.txtUserInput.TabIndex = 2;
             this.txtUserInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtUserInput.TextChanged += new System.EventHandler(this.txtUserInput_TextChanged);
@@ -100,7 +101,7 @@
             this.apnlTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(47)))), ((int)(((byte)(56)))));
             this.apnlTextbox.Controls.Add(this.txtUserInput);
             this.apnlTextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.apnlTextbox.Location = new System.Drawing.Point(167, 190);
+            this.apnlTextbox.Location = new System.Drawing.Point(96, 187);
             this.apnlTextbox.Name = "apnlTextbox";
             this.apnlTextbox.Size = new System.Drawing.Size(365, 60);
             this.apnlTextbox.TabIndex = 3;
@@ -119,7 +120,7 @@
             this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnviar.Font = new System.Drawing.Font("Open Sans SemiBold", 13.25F, System.Drawing.FontStyle.Bold);
             this.btnEnviar.ForeColor = System.Drawing.Color.White;
-            this.btnEnviar.Location = new System.Drawing.Point(379, 281);
+            this.btnEnviar.Location = new System.Drawing.Point(308, 278);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(153, 58);
             this.btnEnviar.TabIndex = 5;
@@ -143,7 +144,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Open Sans SemiBold", 13.25F, System.Drawing.FontStyle.Bold);
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(167, 281);
+            this.btnCancelar.Location = new System.Drawing.Point(96, 278);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(160, 58);
             this.btnCancelar.TabIndex = 5;
@@ -157,7 +158,7 @@
             // 
             this.AcceptButton = this.btnEnviar;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(54)))), ((int)(((byte)(63)))));
-            this.ClientSize = new System.Drawing.Size(700, 361);
+            this.ClientSize = new System.Drawing.Size(565, 361);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.apnlTextbox);

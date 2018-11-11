@@ -1,6 +1,6 @@
 ﻿namespace AcroniUI
 {
-    partial class ClientInformation
+    partial class MinhaConta
     {
         /// <summary>
         /// Required designer variable.
@@ -28,19 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // ClientInformation
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1280, 720);
-            this.Location = new System.Drawing.Point(0, 0);
-            this.Name = "ClientInformation";
-            this.Text = "ClientInformation";
-            this.Load += new System.EventHandler(this.ClientInformation_Load);
-            this.ResumeLayout(false);
-
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "MinhaConta";
         }
 
         #endregion

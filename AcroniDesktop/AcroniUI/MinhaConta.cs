@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace AcroniUI
 {
-    public partial class ClientInformation : TemplateMenu
+    public partial class MinhaConta : TemplateMenu
     {
-        public ClientInformation()
+        public MinhaConta()
         {
             InitializeComponent();
-        }
-
-        private void ClientInformation_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

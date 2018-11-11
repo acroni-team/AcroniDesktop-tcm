@@ -61,11 +61,28 @@ namespace AcroniUI.Custom.CustomModules
             twp.ForeColor = Color.FromArgb(114, 137, 218);
 
             if (sender == txt1)
-                Uppertext = txt1.Text;
+            {
+                if (txt1.Text.Equals("Um único caractere, por favor."))
+                    Uppertext = "";
+                else
+                    Uppertext = txt1.Text;
+            }
+
             else if (sender == txt2)
-                Maintext = txt2.Text;
+            {
+                if (txt2.Text.Equals("Aqui pode deixar quantos quiser ;)"))
+                    Maintext = "";
+                else
+                    Maintext = txt2.Text;
+            }
+
             else
-                Bottomtext = "\n" + txt3.Text;
+            {
+                if (txt3.Text.Equals("Um único caractere, por favor."))
+                    Bottomtext = "";
+                else
+                    Bottomtext = "\n" + txt3.Text;
+            }
         }
 
         private void btnNewIcon_Click(object sender, EventArgs e)

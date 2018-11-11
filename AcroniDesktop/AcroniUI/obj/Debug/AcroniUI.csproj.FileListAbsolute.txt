@@ -8,7 +8,6 @@ E:\Desktop\c\AcroniDesktop\AcroniDesktop\AcroniUI\bin\Debug\AcroniControls.pdb
 E:\Desktop\c\AcroniDesktop\AcroniDesktop\AcroniUI\bin\Debug\AcroniLibrary.pdb
 E:\Desktop\c\AcroniDesktop\AcroniDesktop\AcroniUI\bin\Debug\Transitions.pdb
 E:\Desktop\c\AcroniDesktop\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.csprojAssemblyReference.cache
-E:\Desktop\c\AcroniDesktop\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.ClientInformation.resources
 E:\Desktop\c\AcroniDesktop\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.CollectionSelected.resources
 E:\Desktop\c\AcroniDesktop\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Custom.Compacto.resources
 E:\Desktop\c\AcroniDesktop\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Custom.CustomModules.KeycapBackgroundModule.resources

@@ -44,7 +44,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(640, 150);
+            this.panel1.Size = new System.Drawing.Size(529, 150);
             this.panel1.TabIndex = 2;
             // 
             // alblMessage2
@@ -53,9 +53,9 @@
             this.alblMessage2.ForeColor = System.Drawing.Color.White;
             this.alblMessage2.Location = new System.Drawing.Point(50, 76);
             this.alblMessage2.Name = "alblMessage2";
-            this.alblMessage2.Size = new System.Drawing.Size(540, 74);
+            this.alblMessage2.Size = new System.Drawing.Size(416, 74);
             this.alblMessage2.TabIndex = 0;
-            this.alblMessage2.Text = "QWESTION 4 YOU:::: S/N???";
+            this.alblMessage2.Text = "I dislike life as a experiente in general";
             this.alblMessage2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // alblMessage1
@@ -64,9 +64,9 @@
             this.alblMessage1.ForeColor = System.Drawing.Color.White;
             this.alblMessage1.Location = new System.Drawing.Point(0, 42);
             this.alblMessage1.Name = "alblMessage1";
-            this.alblMessage1.Size = new System.Drawing.Size(640, 34);
+            this.alblMessage1.Size = new System.Drawing.Size(516, 34);
             this.alblMessage1.TabIndex = 0;
-            this.alblMessage1.Text = "DUM DUM Ó";
+            this.alblMessage1.Text = "What keeps you moving on?";
             this.alblMessage1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnNo
@@ -79,7 +79,7 @@
             this.btnNo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNo.Font = new System.Drawing.Font("Open Sans", 12.5F);
             this.btnNo.ForeColor = System.Drawing.Color.White;
-            this.btnNo.Location = new System.Drawing.Point(150, 235);
+            this.btnNo.Location = new System.Drawing.Point(118, 235);
             this.btnNo.Name = "btnNo";
             this.btnNo.Size = new System.Drawing.Size(99, 41);
             this.btnNo.TabIndex = 3;
@@ -102,7 +102,7 @@
             this.btnYes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnYes.Font = new System.Drawing.Font("Open Sans SemiBold", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnYes.ForeColor = System.Drawing.Color.White;
-            this.btnYes.Location = new System.Drawing.Point(328, 226);
+            this.btnYes.Location = new System.Drawing.Point(296, 226);
             this.btnYes.Name = "btnYes";
             this.btnYes.Size = new System.Drawing.Size(153, 58);
             this.btnYes.TabIndex = 6;
@@ -117,7 +117,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(54)))), ((int)(((byte)(63)))));
-            this.ClientSize = new System.Drawing.Size(640, 361);
+            this.ClientSize = new System.Drawing.Size(529, 361);
             this.Controls.Add(this.btnYes);
             this.Controls.Add(this.btnNo);
             this.Controls.Add(this.panel1);
