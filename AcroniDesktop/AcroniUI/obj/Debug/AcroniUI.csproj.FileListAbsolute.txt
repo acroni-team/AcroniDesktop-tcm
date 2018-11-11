@@ -44,7 +44,6 @@ C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniUI\bin\Debug\A
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniUI\bin\Debug\AcroniLibrary.pdb
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniUI\bin\Debug\Transitions.pdb
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.csprojResolveAssemblyReference.cache
-C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.ClientInformation.resources
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.CollectionSelected.resources
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Custom.Compacto.resources
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Custom.CustomModules.KeycapBackgroundModule.resources

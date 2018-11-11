@@ -466,6 +466,7 @@ namespace AcroniUI.Custom
         //Ao clicar no botão de fechar
         private void btnVoltar_Click(object sender, EventArgs e)
         {
+            Share.Collection = new Collection();
             Share.EditKeyboard = false;
             this.Close();
             SelectKeyboard __selectKeyboard = new SelectKeyboard();
