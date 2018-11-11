@@ -22,7 +22,6 @@ namespace AcroniUI
     public partial class Galeria : TemplateMenu
     {
         SqlConnection sqlConnection = new SqlConnection("Data Source = " + Environment.MachineName + "\\SQLEXPRESS; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7");
-        SelectColor selectColor;
         bool isSelectColorOpen = false;
         int countHeightCollection = 0;
         int countWidthKeyboard = 0;
@@ -298,26 +297,22 @@ namespace AcroniUI
                 }
             }
         }
-
+        SelectColor selectColor = new SelectColor();
+        bool canclose = false;
         public async void Edit(object sender, EventArgs e)
         {
-            if (isSelectColorOpen)
-            {
+            if (canclose)
                 selectColor.Close();
-                Share.Collection.CollectionColor = Color.Empty;
-            }
             selectColor = new SelectColor();
             selectColor.Show();
-            isSelectColorOpen = true;
-
+            canclose = true;
             while (selectColor.Visible)
             {
                 await Task.Delay(10);
-                if (Share.Collection.CollectionColor != Color.Empty)
-                    ((sender as PictureBox).Parent as Panel).BackColor = Share.Collection.CollectionColor;
+                if (selectColor.settedColor != Color.Empty)
+                    ((sender as PictureBox).Parent as Panel).BackColor = selectColor.settedColor;
             }
-
-            if (Share.Collection.CollectionColor != Color.Empty)
+            if (selectColor.settedColor != Color.Empty)
             {
                 foreach (Control c in ((sender as PictureBox).Parent as Panel).Controls)
                 {
@@ -327,14 +322,12 @@ namespace AcroniUI
                         {
                             if (collection.CollectionName.Equals(c.Text))
                             {
-                                collection.CollectionColor = Share.Collection.CollectionColor;
+                                collection.CollectionColor = selectColor.settedColor;
                                 break;
                             }
                         }
                     }
                 }
-
-                Share.Collection.CollectionColor = Color.Empty;
                 Share.User.SendToFile();
             }
 
