@@ -312,23 +312,28 @@ namespace AcroniUI
                 }
             }
         }
-        SelectColor selectColor = new SelectColor();
+        SelectColor selectColor;
         bool canclose = false;
         public async void Edit(object sender, EventArgs e)
         {
             if (canclose)
                 selectColor.Close();
-            selectColor = new SelectColor();
+            foreach (Control itemsGallery in (((sender as PictureBox).Parent as Panel)).Controls)
+                if (itemsGallery.Name.Equals("lblColecao1"))
+                    selectColor = new SelectColor(itemsGallery.Text);
             selectColor.Show();
             canclose = true;
             while (selectColor.Visible)
             {
                 await Task.Delay(10);
-                if (selectColor.settedColor != Color.Empty)
-                    ((sender as PictureBox).Parent as Panel).BackColor = selectColor.settedColor;
+                if (selectColor.SettedColor != Color.Empty)
+                    ((sender as PictureBox).Parent as Panel).BackColor = selectColor.SettedColor;
             }
-            if (selectColor.settedColor != Color.Empty)
-            {
+            foreach (Control itemsGallery in (((sender as PictureBox).Parent as Panel)).Controls)            
+                if (itemsGallery.Name.Equals("lblColecao1"))                
+                    itemsGallery.Text = selectColor.CollectionName;        
+                if (selectColor.SettedColor != Color.Empty)
+                {
                 foreach (Control c in ((sender as PictureBox).Parent as Panel).Controls)
                 {
                     if (c.Name.Equals("lblColecao1"))
@@ -337,7 +342,11 @@ namespace AcroniUI
                         {
                             if (collection.CollectionName.Equals(c.Text))
                             {
-                                collection.CollectionColor = selectColor.settedColor;
+                                collection.CollectionColor = selectColor.SettedColor;
+                                collection.CollectionName = selectColor.CollectionName;
+                                Galeria recharge = new Galeria(false);
+                                recharge.Show();
+                                this.Close();
                                 break;
                             }
                         }

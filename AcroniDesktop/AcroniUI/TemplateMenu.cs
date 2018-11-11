@@ -49,7 +49,7 @@ namespace AcroniUI
         public void trocar_imagem_usuario(Image imagem) => ImgUsu.Image = imagem;
         SqlConnection conexão_SQL = new SqlConnection(SQLConnection.nome_conexao);
         SqlCommand comando_SQL;
-
+        private void TemplateMenu_Load(object sender, EventArgs e) => UpdateKeyboardQuantity();
         public void UpdateKeyboardQuantity()
         {
             int i = 0;
