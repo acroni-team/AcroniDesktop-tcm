@@ -56,7 +56,6 @@ C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniUI\obj\Debug\A
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Galeria.resources
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.LoginAndSignUp.FrmConfirmarEmail.resources
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.LoginAndSignUp.FrmLogin.resources
-C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.LoginAndSignUp.FrmUsuario.resources
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.TemplateMenu.resources
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Properties.Resources.resources
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.SelectKeyboard.resources
@@ -64,3 +63,4 @@ C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniUI\obj\Debug\A
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.Template.resources
 C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.csproj.GenerateResource.Cache
 E:\Desktop\c\AcroniDesktop\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.MinhaConta.resources
+C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniUI\obj\Debug\AcroniUI.MinhaConta.resources

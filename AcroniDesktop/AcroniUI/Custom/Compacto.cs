@@ -885,6 +885,7 @@ namespace AcroniUI.Custom
                     }
                 }
             if (canSave)
+            {
                 if (!Share.EditKeyboard)
                 {
                     AcroniMessageBoxInput keyboardName = new AcroniMessageBoxInput("Insira o nome de seu teclado");
@@ -894,7 +895,8 @@ namespace AcroniUI.Custom
                         await Task.Delay(100);
                     }
                 }
-            SaveKeyboard();
+                SaveKeyboard();
+            }
         }
 
         private async void SaveKeyboard()
