@@ -335,12 +335,18 @@ namespace AcroniUI.Custom
                 else
                     ktm = new KeycapTextIconModule(true, true);
                 OpenModule(ktm);
+
                 if (ktm.DialogResult == DialogResult.OK)
                 {
-                    if (string.IsNullOrWhiteSpace(ktm.Uppertext) && string.IsNullOrWhiteSpace(ktm.Bottomtext))
+                    if (string.IsNullOrWhiteSpace(ktm.Maintext))
+                        keybutton.Text = $"{keybutton.Text}";
+
+                    else if (string.IsNullOrWhiteSpace(ktm.Uppertext) && string.IsNullOrWhiteSpace(ktm.Bottomtext))
                         keybutton.Text = ktm.Maintext;
+
                     else if (string.IsNullOrWhiteSpace(ktm.Bottomtext))
                         keybutton.Text = $"{ktm.Uppertext}\n{ktm.Maintext}";
+
                     else
                         keybutton.Text = $"{ktm.Uppertext}\n{ktm.Maintext}{ktm.Bottomtext}";
                 }
