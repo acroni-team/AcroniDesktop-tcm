@@ -250,6 +250,7 @@
     <Content Include="Images\Botoes da fonte\center.png" />
     <Content Include="Images\Botoes da fonte\left.png" />
     <Content Include="Images\Botoes da fonte\right.png" />
+    <None Include="Images\checkmark.png" />
     <Content Include="Images\compacto.png" />
     <Content Include="Images\fullsize.png" />
     <Content Include="Images\icons8-eye-30-white.png" />

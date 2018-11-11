@@ -118,14 +118,21 @@ namespace AcroniUI.Custom.CustomModules
         private void picIcons_Click(object sender, EventArgs e)
         {
             PictureBox icon = (PictureBox)sender;
-            icon.Tag = "Chosen";
-            if (icon.Tag.Equals("Chosen"))
-                icon.Focus();
 
             if (sender != null)
             {
+                if (icon.Tag.Equals("Chosen"))
+                {
+                    icon.Tag = "Not chosen";
+                    pnlBtnIconChosen.Visible = false;
+                    SelectedIcon = null;
+                    HasChosenAIcon = false;
+                }
+
+                icon.Tag = "Chosen";
                 pnlBtnIconChosen.Visible = true;
                 pnlBtnIconChosen.Location = new Point(icon.Location.X + icon.Size.Width - 10, icon.Location.Y + icon.Size.Height - 10);
+                pnlBtnIconChosen.BringToFront();
                 SelectedIcon = icon.Image;
                 HasChosenAIcon = true;
             }

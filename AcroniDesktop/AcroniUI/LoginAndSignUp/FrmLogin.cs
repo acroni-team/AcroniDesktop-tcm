@@ -173,11 +173,14 @@ namespace AcroniUI.LoginAndSignUp
                                 SQLConnection.nome_usuario = txtEntrar.Text;
                                 Share.User = new User();
                                 Share.User.KeyboardQuantity = (int)resposta[2];
-                                using (FileStream openarchive = new FileStream($@"{Application.StartupPath}\..\..\{txtEntrar.Text}.acr", FileMode.Open))
-                                {
-                                    BinaryFormatter toObject = new BinaryFormatter();
-                                    Share.User = (User)toObject.Deserialize(openarchive);
-                                }
+                                if (File.Exists($@"{Application.StartupPath}\..\..\{txtEntrar.Text}.acr"))
+                                    using (FileStream openarchive = new FileStream($@"{Application.StartupPath}\..\..\{txtEntrar.Text}.acr", FileMode.Open))
+                                    {
+                                        BinaryFormatter toObject = new BinaryFormatter();
+                                        Share.User = (User)toObject.Deserialize(openarchive);
+                                    }
+                                else
+                                    MetodoParaCriarPerfilADM();
                                 if (resposta[1].ToString() == "p")
                                     Share.User.isPremiumAccount = true;
                                 selecionarTeclado = new SelectKeyboard();

@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Windows.Forms;
 
@@ -57,73 +58,92 @@ namespace AcroniUI.Custom.CustomModules
 
         public static bool HasChosenAnImg { get; set; }
 
-        string __imageName;
+        private Queue<String> __imageName = new Queue<String>();
 
         private void btnNewIcon_Click(object sender, EventArgs e)
         {
-            __imageName = "";
-                List<KeyboardIcons> insertableArray = new List<KeyboardIcons>();
 
-                using (OpenFileDialog iconGetter = new OpenFileDialog())
+            List<KeyboardIcons> insertableArray = new List<KeyboardIcons>();
+
+            using (OpenFileDialog iconGetter = new OpenFileDialog())
+            {
+                iconGetter.InitialDirectory = @"C:\";
+                iconGetter.Title = "Qual o ícone que deseja adicionar?";
+                iconGetter.Filter = "Todos os tipos de imagem | *jpg; *.jpeg; *.bmp; *.png; *.ico|BMP | *.bmp | JPG | *.jpg; *.jpeg | PNG | *.png | ICO | *.ico | Todos| *.*";
+                iconGetter.Multiselect = true;
+                if (iconGetter.ShowDialog() == DialogResult.OK)
                 {
-                    iconGetter.InitialDirectory = @"C:\";
-                    iconGetter.Title = "Qual o ícone que deseja adicionar?";
-                    iconGetter.Filter = "Todos os tipos de imagem | *jpg; *.jpeg; *.bmp; *.png; *.ico|BMP | *.bmp | JPG | *.jpg; *.jpeg | PNG | *.png | ICO | *.ico | Todos| *.*";
-                    iconGetter.Multiselect = true;
-                    if (iconGetter.ShowDialog() == DialogResult.OK)
+                    foreach (String fileDirectory in iconGetter.FileNames)
                     {
-                        foreach (String fileDirectory in iconGetter.FileNames)
-                            ImageQueue.Enqueue(Image.FromFile(fileDirectory));
-
-                        while (ImageQueue.Count > 10)
-                            ImageQueue.Dequeue();
-
-                        AcroniMessageBoxInput input = new AcroniMessageBoxInput("Muito legal a imagem, parabéns.", "Agora escolha um nome para ela.");
-                        if (input.ShowDialog() == DialogResult.OK)
-                        {
-                            __imageName = input.input;
-                        }
+                        ImageQueue.Enqueue(Image.FromFile(fileDirectory));
                     }
-                    for (int aux = ImageQueue.Count - 1; aux >= 0; aux--)
+
+                    while (ImageQueue.Count > 10)
                     {
-                        insertableArray.Add(new KeyboardIcons()
-                        {
-                            UserIcon = ImageQueue.ToArray()[aux],
-                            UserDefinedIconName = __imageName
-                        });
+                        ImageQueue.Dequeue();
+                        __imageName.Dequeue();
+                    }
+
+                    AcroniMessageBoxInput input = new AcroniMessageBoxInput("Muito legal a imagem, parabéns.", "Agora escolha um nome para ela.");
+                    if (input.ShowDialog() == DialogResult.OK)
+                        __imageName.Enqueue(input.input);
+                    else
+                    {
+                        ImageQueue = new Queue<Image>(ImageQueue.Reverse());
+                        ImageQueue.Dequeue();
                     }
                 }
 
-                for (int i = 0; i < ImageQueue.Count; i++)
+                for (int aux = ImageQueue.Count - 1; aux >= 0; aux--)
                 {
-                    //É um array composto por uma imagem (ícone) junto com seu nome: 
-
-                    (pnlImages.Controls[$"pnlImg{i + 1}"].Controls[$"picBoxImg{i + 1}"] as PictureBox).Image = insertableArray[i].UserIcon;
-                    (pnlImages.Controls[$"pnlImg{i + 1}"].Controls[$"picBoxImg{i + 1}"] as PictureBox).SizeMode = PictureBoxSizeMode.Zoom;
-                    (pnlImages.Controls[$"pnlImg{i + 1}"] as Panel).Visible = true;
-                    (pnlImages.Controls[$"pnlImg{i + 1}"] as Panel).BackColor = Color.FromArgb(80, 80, 80);
-                    (pnlImages.Controls[$"pnlImg{i + 1}"].Controls[$"lblPic{i + 1}"] as Label).Text = insertableArray[i].UserDefinedIconName;
-                    using (FileStream savearchive = new FileStream($@"{Application.StartupPath}\..\..\UserImagesIcons\{SQLConnection.nome_usuario}IconsHistoric.hist", FileMode.Create))
+                    insertableArray.Add(new KeyboardIcons()
                     {
-                        BinaryFormatter Serializer = new BinaryFormatter();
-                        Serializer.Serialize(savearchive, insertableArray);
-                    }
+                        UserIcon = ImageQueue.ToArray()[aux],
+                        UserDefinedIconName = __imageName.ToArray()[aux]
+                    });
                 }
             }
 
-            private void picIcons_Click(object sender, EventArgs e)
+            for (int i = 0; i < ImageQueue.Count; i++)
             {
-                PictureBox icon = (PictureBox)sender;
-                icon.Visible = true;
+                //É um array composto por uma imagem (ícone) junto com seu nome: 
 
-                if (sender != null)
+                (pnlImages.Controls[$"pnlImg{i + 1}"].Controls[$"picBoxImg{i + 1}"] as PictureBox).Image = insertableArray[i].UserIcon;
+                (pnlImages.Controls[$"pnlImg{i + 1}"].Controls[$"picBoxImg{i + 1}"] as PictureBox).SizeMode = PictureBoxSizeMode.Zoom;
+                (pnlImages.Controls[$"pnlImg{i + 1}"] as Panel).Visible = true;
+                (pnlImages.Controls[$"pnlImg{i + 1}"] as Panel).BackColor = Color.FromArgb(80, 80, 80);
+                (pnlImages.Controls[$"pnlImg{i + 1}"].Controls[$"lblPic{i + 1}"] as Label).Text = insertableArray[i].UserDefinedIconName;
+
+                using (FileStream savearchive = new FileStream($@"{Application.StartupPath}\..\..\UserImagesIcons\{SQLConnection.nome_usuario}IconsHistoric.hist", FileMode.Create))
                 {
-                    pnlBtnIconChosen.Visible = true;
-                    pnlBtnIconChosen.Location = new Point(icon.Location.X + icon.Size.Width - 10, icon.Location.Y + icon.Size.Height - 10);
-                    this.e.ApplyElipse(pnlBtnIconChosen, 5);
-                    SelectedImg = icon.Image;
-                    HasChosenAnImg = true;
+                    BinaryFormatter Serializer = new BinaryFormatter();
+                    Serializer.Serialize(savearchive, insertableArray);
                 }
             }
         }
+
+        private void picIcons_Click(object sender, EventArgs e)
+        {
+            PictureBox icon = (PictureBox)sender;
+
+            if (sender != null)
+            {
+                if (icon.Tag.Equals("Chosen"))
+                {
+                    icon.Tag = "Not chosen";
+                    pnlBtnIconChosen.Visible = true;
+                    SelectedImg = null;
+                    HasChosenAnImg = false;
+                }
+
+                icon.Tag = "Chosen";
+                icon.Parent.Controls.Add(pnlBtnIconChosen);
+                pnlBtnIconChosen.Visible = true;
+                pnlBtnIconChosen.Location = new Point(icon.Location.X + icon.Size.Width - 10, icon.Location.Y + icon.Size.Height - 10);
+                pnlBtnIconChosen.BringToFront();
+                SelectedImg = icon.Image;
+                HasChosenAnImg = true;
+            }
+        }
     }
+}

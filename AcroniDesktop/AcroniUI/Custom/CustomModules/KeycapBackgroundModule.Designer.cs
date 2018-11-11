@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KeycapBackgroundModule));
             this.pnlImages = new System.Windows.Forms.Panel();
+            this.pnlBtnIconChosen = new System.Windows.Forms.Panel();
             this.pnlImg6 = new System.Windows.Forms.Panel();
             this.lblPic6 = new System.Windows.Forms.Label();
             this.picBoxImg6 = new System.Windows.Forms.PictureBox();
@@ -46,7 +47,6 @@
             this.lblPic2 = new System.Windows.Forms.Label();
             this.picBoxImg2 = new System.Windows.Forms.PictureBox();
             this.pnlImg1 = new System.Windows.Forms.Panel();
-            this.pnlBtnIconChosen = new System.Windows.Forms.Panel();
             this.lblPic1 = new System.Windows.Forms.Label();
             this.picBoxImg1 = new System.Windows.Forms.PictureBox();
             this.btnNewIcon = new AcroniControls.StyleBtn();
@@ -80,12 +80,23 @@
             this.pnlImages.Size = new System.Drawing.Size(607, 331);
             this.pnlImages.TabIndex = 17;
             // 
+            // pnlBtnIconChosen
+            // 
+            this.pnlBtnIconChosen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(255)))));
+            this.pnlBtnIconChosen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBtnIconChosen.BackgroundImage")));
+            this.pnlBtnIconChosen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlBtnIconChosen.Location = new System.Drawing.Point(517, 433);
+            this.pnlBtnIconChosen.Name = "pnlBtnIconChosen";
+            this.pnlBtnIconChosen.Size = new System.Drawing.Size(17, 17);
+            this.pnlBtnIconChosen.TabIndex = 12;
+            this.pnlBtnIconChosen.Visible = false;
+            // 
             // pnlImg6
             // 
             this.pnlImg6.Controls.Add(this.lblPic6);
             this.pnlImg6.Controls.Add(this.picBoxImg6);
             this.pnlImg6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlImg6.Location = new System.Drawing.Point(391, 180);
+            this.pnlImg6.Location = new System.Drawing.Point(422, 173);
             this.pnlImg6.Name = "pnlImg6";
             this.pnlImg6.Size = new System.Drawing.Size(123, 131);
             this.pnlImg6.TabIndex = 0;
@@ -110,6 +121,7 @@
             this.picBoxImg6.Size = new System.Drawing.Size(99, 81);
             this.picBoxImg6.TabIndex = 2;
             this.picBoxImg6.TabStop = false;
+            this.picBoxImg6.Tag = "Not chosen";
             this.picBoxImg6.Click += new System.EventHandler(this.picIcons_Click);
             // 
             // pnlImg5
@@ -117,7 +129,7 @@
             this.pnlImg5.Controls.Add(this.lblPic5);
             this.pnlImg5.Controls.Add(this.picBoxImg5);
             this.pnlImg5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlImg5.Location = new System.Drawing.Point(213, 180);
+            this.pnlImg5.Location = new System.Drawing.Point(244, 173);
             this.pnlImg5.Name = "pnlImg5";
             this.pnlImg5.Size = new System.Drawing.Size(123, 131);
             this.pnlImg5.TabIndex = 0;
@@ -142,6 +154,7 @@
             this.picBoxImg5.Size = new System.Drawing.Size(99, 81);
             this.picBoxImg5.TabIndex = 2;
             this.picBoxImg5.TabStop = false;
+            this.picBoxImg5.Tag = "Not chosen";
             this.picBoxImg5.Click += new System.EventHandler(this.picIcons_Click);
             // 
             // pnlImg4
@@ -149,7 +162,7 @@
             this.pnlImg4.Controls.Add(this.lblPic4);
             this.pnlImg4.Controls.Add(this.picBoxImg4);
             this.pnlImg4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlImg4.Location = new System.Drawing.Point(43, 180);
+            this.pnlImg4.Location = new System.Drawing.Point(74, 173);
             this.pnlImg4.Name = "pnlImg4";
             this.pnlImg4.Size = new System.Drawing.Size(123, 131);
             this.pnlImg4.TabIndex = 0;
@@ -174,6 +187,7 @@
             this.picBoxImg4.Size = new System.Drawing.Size(99, 81);
             this.picBoxImg4.TabIndex = 2;
             this.picBoxImg4.TabStop = false;
+            this.picBoxImg4.Tag = "Not chosen";
             this.picBoxImg4.Click += new System.EventHandler(this.picIcons_Click);
             // 
             // pnlImg3
@@ -181,7 +195,7 @@
             this.pnlImg3.Controls.Add(this.lblPic3);
             this.pnlImg3.Controls.Add(this.picBoxImg3);
             this.pnlImg3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlImg3.Location = new System.Drawing.Point(391, 31);
+            this.pnlImg3.Location = new System.Drawing.Point(422, 24);
             this.pnlImg3.Name = "pnlImg3";
             this.pnlImg3.Size = new System.Drawing.Size(123, 131);
             this.pnlImg3.TabIndex = 0;
@@ -206,6 +220,7 @@
             this.picBoxImg3.Size = new System.Drawing.Size(99, 81);
             this.picBoxImg3.TabIndex = 1;
             this.picBoxImg3.TabStop = false;
+            this.picBoxImg3.Tag = "Not chosen";
             this.picBoxImg3.Click += new System.EventHandler(this.picIcons_Click);
             // 
             // pnlImg2
@@ -213,7 +228,7 @@
             this.pnlImg2.Controls.Add(this.lblPic2);
             this.pnlImg2.Controls.Add(this.picBoxImg2);
             this.pnlImg2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlImg2.Location = new System.Drawing.Point(213, 31);
+            this.pnlImg2.Location = new System.Drawing.Point(244, 24);
             this.pnlImg2.Name = "pnlImg2";
             this.pnlImg2.Size = new System.Drawing.Size(123, 131);
             this.pnlImg2.TabIndex = 0;
@@ -238,30 +253,19 @@
             this.picBoxImg2.Size = new System.Drawing.Size(99, 81);
             this.picBoxImg2.TabIndex = 1;
             this.picBoxImg2.TabStop = false;
+            this.picBoxImg2.Tag = "Not chosen";
             this.picBoxImg2.Click += new System.EventHandler(this.picIcons_Click);
             // 
             // pnlImg1
             // 
-            this.pnlImg1.Controls.Add(this.pnlBtnIconChosen);
             this.pnlImg1.Controls.Add(this.lblPic1);
             this.pnlImg1.Controls.Add(this.picBoxImg1);
             this.pnlImg1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlImg1.Location = new System.Drawing.Point(43, 31);
+            this.pnlImg1.Location = new System.Drawing.Point(74, 24);
             this.pnlImg1.Name = "pnlImg1";
             this.pnlImg1.Size = new System.Drawing.Size(123, 131);
             this.pnlImg1.TabIndex = 0;
             this.pnlImg1.Visible = false;
-            // 
-            // pnlBtnIconChosen
-            // 
-            this.pnlBtnIconChosen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(255)))));
-            this.pnlBtnIconChosen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBtnIconChosen.BackgroundImage")));
-            this.pnlBtnIconChosen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlBtnIconChosen.Location = new System.Drawing.Point(101, 85);
-            this.pnlBtnIconChosen.Name = "pnlBtnIconChosen";
-            this.pnlBtnIconChosen.Size = new System.Drawing.Size(17, 17);
-            this.pnlBtnIconChosen.TabIndex = 12;
-            this.pnlBtnIconChosen.Visible = false;
             // 
             // lblPic1
             // 
@@ -282,6 +286,7 @@
             this.picBoxImg1.Size = new System.Drawing.Size(99, 81);
             this.picBoxImg1.TabIndex = 0;
             this.picBoxImg1.TabStop = false;
+            this.picBoxImg1.Tag = "Not chosen";
             this.picBoxImg1.Click += new System.EventHandler(this.picIcons_Click);
             // 
             // btnNewIcon
@@ -297,7 +302,7 @@
             this.btnNewIcon.Location = new System.Drawing.Point(658, 85);
             this.btnNewIcon.Name = "btnNewIcon";
             this.btnNewIcon.Padding = new System.Windows.Forms.Padding(0, 0, 0, 13);
-            this.btnNewIcon.Size = new System.Drawing.Size(93, 125);
+            this.btnNewIcon.Size = new System.Drawing.Size(161, 249);
             this.btnNewIcon.TabIndex = 18;
             this.btnNewIcon.Text = "Novo!";
             this.btnNewIcon.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -315,27 +320,30 @@
             this.btnAlll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlll.Font = new System.Drawing.Font("Open Sans", 10F);
             this.btnAlll.ForeColor = System.Drawing.Color.White;
-            this.btnAlll.Location = new System.Drawing.Point(658, 325);
+            this.btnAlll.Location = new System.Drawing.Point(658, 358);
             this.btnAlll.Name = "btnAlll";
             this.btnAlll.Padding = new System.Windows.Forms.Padding(5);
             this.btnAlll.Size = new System.Drawing.Size(161, 58);
             this.btnAlll.TabIndex = 10;
-            this.btnAlll.Text = "Usar como plano de fundo do teclado.";
+            this.btnAlll.Text = "Usar como plano de fundo do teclado";
             this.btnAlll.UseVisualStyleBackColor = false;
             // 
             // KeycapBackgroundModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 450);
+            this.ClientSize = new System.Drawing.Size(862, 472);
+            this.Controls.Add(this.pnlBtnIconChosen);
             this.Controls.Add(this.btnAlll);
             this.Controls.Add(this.btnNewIcon);
             this.Controls.Add(this.pnlImages);
             this.Name = "KeycapBackgroundModule";
+            this.Opacity = 1D;
             this.Text = "KeycapBackgroundModule";
             this.Controls.SetChildIndex(this.pnlImages, 0);
             this.Controls.SetChildIndex(this.btnNewIcon, 0);
             this.Controls.SetChildIndex(this.btnAlll, 0);
+            this.Controls.SetChildIndex(this.pnlBtnIconChosen, 0);
             this.pnlImages.ResumeLayout(false);
             this.pnlImg6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxImg6)).EndInit();
