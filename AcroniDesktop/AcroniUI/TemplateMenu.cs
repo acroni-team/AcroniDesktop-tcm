@@ -34,7 +34,6 @@ namespace AcroniUI
                 ellipse.ApplyElipse(c, 7);
             }
             ImgUsu.SizeMode = PictureBoxSizeMode.Zoom;
-            lblQtdGasta.Text = Convert.ToString(contTeclados);
             trocar_nome_usuario($"{SQLConnection.nome_usuario}");
             trocar_imagem_usuario(selecionar_imagem_cliente());
 
@@ -54,11 +53,23 @@ namespace AcroniUI
 
         public void UpdateKeyboardQuantity()
         {
-            using (SqlConnection conn = new SqlConnection(SQLConnection.nome_conexao))
+            int i = 0;
+            if (Share.User.isPremiumAccount)
             {
-                conn.Open();
-                using (SqlCommand comm = new SqlCommand($"select quantidade_teclados from tblCliente where usuario like '{SQLConnection.nome_usuario}'", conn))
+                lblPlanoUsu.Text = "Plano Premium";
+                lblQtdDisponivel.Visible = false;
+                lblQtdGasta.Visible = false;
+                foreach (Control c in espacoArmazenamento.Controls)
+                    c.Visible = true;
+            }
+            else {
+                lblQtdGasta.Text = "" + Share.User.KeyboardQuantity;
+                foreach (Control c in espacoArmazenamento.Controls)
                 {
+                    if (i < Share.User.KeyboardQuantity)
+                        c.Visible = true;
+                    i++;
+
                     using (SqlDataReader sdr = comm.ExecuteReader())
                     {
                         sdr.Read();
@@ -83,6 +94,31 @@ namespace AcroniUI
                     }
                 }
             }
+            //if(Share.User.isPremiumAccount)
+            //using (SqlConnection conn = new SqlConnection(SQLConnection.nome_conexao))
+            //{
+            //    conn.Open();
+            //    using (SqlCommand comm = new SqlCommand($"select quantidade_teclados from tblCliente where usuario like '{SQLConnection.nome_usuario}'", conn))
+            //    {
+            //        using (SqlDataReader sdr = comm.ExecuteReader())
+            //        {
+            //            sdr.Read();
+            //            Share.User.KeyboardQuantity = (int)sdr[0];
+            //            for (int i = 0; i < Share.User.KeyboardQuantity; i++)
+            //            {
+            //                if (Share.User.KeyboardQuantity != 0)
+            //                    espacoArmazenamento.Controls[$"pnlPreenchido{i + 1}"].Visible = true;
+            //                else
+            //                {
+            //                    for(int j = 0; j < 5; j++)
+            //                    {
+            //                        espacoArmazenamento.Controls[$"pnlPreenchido{j + 1}"].Visible = false;
+            //                    }
+            //                }
+            //            }
+            //        }
+            //    }
+            //}
 
         }
 
@@ -157,8 +193,8 @@ namespace AcroniUI
         protected virtual void btnAbrirGaleria_Click(object sender, EventArgs e)
         {
             Galeria galeria = new Galeria(false);
-            galeria.Show();
             fechaForms();
+            galeria.Show();
         }
         private void fechaForms()
         {
@@ -192,7 +228,7 @@ namespace AcroniUI
                     }
                     else
                     {
-                        LoginAndSignUp.FrmLogin login = new AcroniUI.LoginAndSignUp.FrmLogin();
+                        LoginAndSignUp.FrmLogin login = new LoginAndSignUp.FrmLogin();
                         login.CleanAllTextbox();
                         login.Show();
                     }

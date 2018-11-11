@@ -282,6 +282,14 @@ namespace AcroniUI.Custom
 
                 else
                 {
+                    try
+                    {
+                        keybutton.Parent.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\..\..\Images\Teclas\{keybutton.Name}.png");
+                    }
+                    catch (Exception) { }
+                }
+
+                {
                     if (keybutton.Size.Equals(new Size(38, 39)))
                         keybutton.Parent.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\..\..\Images\Teclas\keycapbackgrounddefault.png");
                     else
@@ -458,11 +466,12 @@ namespace AcroniUI.Custom
         //Ao clicar no botão de fechar
         private void btnVoltar_Click(object sender, EventArgs e)
         {
+            Share.EditKeyboard = false;
+            this.Close();
             SelectKeyboard __selectKeyboard = new SelectKeyboard();
             __selectKeyboard.UpdateKeyboardQuantity();
             __selectKeyboard.ShowDialog();
-            Share.EditKeyboard = false;
-            this.Close();
+
         }
 
         private void btnVoltar_MouseMove(object sender, MouseEventArgs e)
@@ -869,16 +878,34 @@ namespace AcroniUI.Custom
 
         private async void btnSalvar_Click(object sender, EventArgs e)
         {
-
-            if (!Share.EditKeyboard)
-            {
-                AcroniMessageBoxInput keyboardName = new AcroniMessageBoxInput("Insira o nome de seu teclado");
-                keyboardName.Show();
-                while (keyboardName.Visible)
+            bool canSave = false;
+            if (!Share.User.isPremiumAccount)
+                if (!Share.EditKeyboard)
                 {
-                    await Task.Delay(100);
+                    if (Share.User.KeyboardQuantity == 5)
+                    {
+                        AcroniMessageBoxConfirm mb = new AcroniMessageBoxConfirm("Sinto muito, mas você atingiu o limite de teclados que você " +
+                                        "pode criar usando essa conta.", "Atualize sua conta agora mesmo para uma conta Premium");
+                        mb.ShowDialog();
+                    }
+                    else
+                    {
+                        ++Share.User.KeyboardQuantity;
+                        MessageBox.Show("" + Share.User.KeyboardQuantity);
+                        Share.User.SendToFile();
+                        canSave = true;
+                    }
                 }
-            }
+            if (canSave)
+                if (!Share.EditKeyboard)
+                {
+                    AcroniMessageBoxInput keyboardName = new AcroniMessageBoxInput("Insira o nome de seu teclado");
+                    keyboardName.Show();
+                    while (keyboardName.Visible)
+                    {
+                        await Task.Delay(100);
+                    }
+                }
             SaveKeyboard();
         }
 
@@ -890,7 +917,6 @@ namespace AcroniUI.Custom
                 {
                     Galeria selectGallery = new Galeria(true);
                     selectGallery.Show();
-
                     while (selectGallery.Visible)
                     {
                         await Task.Delay(100);
@@ -919,59 +945,62 @@ namespace AcroniUI.Custom
 
             if ((!String.IsNullOrEmpty(Share.Collection.CollectionName) && !String.IsNullOrEmpty(Share.KeyboardNameNotCreated)) || Share.EditKeyboard)
             {
-                using (SqlConnection conn = new SqlConnection(SQLConnection.nome_conexao))
-                {
-                    conn.Open();
+                //using (SqlConnection conn = new SqlConnection(SQLConnection.nome_conexao))
+                //{
+                //    conn.Open();
 
-                    using (SqlCommand com = new SqlCommand($"select quantidade_teclados from tblCliente", conn))
-                    {
-                        using (SqlDataReader sd = com.ExecuteReader())
-                        {
-                            sd.Read();
-                            if ((int)sd[0] >= 5)
-                            {
-                                AcroniMessageBoxConfirm mb = new AcroniMessageBoxConfirm("Sinto muito, mas você atingiu o limite de teclados que você " +
-                                    "pode criar usando essa conta.", "Atualize sua conta agora mesmo para uma conta Premium");
-                                mb.ShowDialog();
-                            }
-                        }
-                    }
-                }
+                //    using (SqlCommand com = new SqlCommand($"select quantidade_teclados from tblCliente", conn))
+                //    {
+                //        using (SqlDataReader sd = com.ExecuteReader())
+                //        {
+                //            sd.Read();
+                //            if ((int)sd[0] >= 5)
+                //            {
+                //                AcroniMessageBoxConfirm mb = new AcroniMessageBoxConfirm("Sinto muito, mas você atingiu o limite de teclados que você " +
+                //                    "pode criar usando essa conta.", "Atualize sua conta agora mesmo para uma conta Premium");
+                //                mb.ShowDialog();
+                //            }
+                //        }
+                //    }
+                //}
 
-                using (SqlConnection conn = new SqlConnection(SQLConnection.nome_conexao))
-                {
-                    conn.Open();
-                    using (SqlCommand cmm = new SqlCommand("select quantidade_teclados from tblCliente", conn))
-                    {
-                        using (SqlDataReader sdr = cmm.ExecuteReader())
-                        {
-                            sdr.Read();
-                            if ((int)sdr[0] <= 5)
-                            {
-                                goto aGotoExample;
-                            }
-                        }
-                        aGotoExample:
-                        using (SqlCommand comm = new SqlCommand($"update tblCliente set quantidade_teclados = {Share.User.KeyboardQuantity} where usuario like '{SQLConnection.nome_usuario}'", conn))
-                        {
-                            comm.ExecuteNonQuery();
-                        }
-                    }
-                }
+                //using (SqlConnection conn = new SqlConnection(SQLConnection.nome_conexao))
+                //{
+                //    conn.Open();
+                //    using (SqlCommand cmm = new SqlCommand("select quantidade_teclados from tblCliente", conn))
+                //    {
+                //        using (SqlDataReader sdr = cmm.ExecuteReader())
+                //        {
+                //            sdr.Read();
+                //            if ((int)sdr[0] <= 5)
+                //            {
+                //                goto aGotoExample;
+                //            }
+                //        }
+                //        aGotoExample:
+                //        using (SqlCommand comm = new SqlCommand($"update tblCliente set quantidade_teclados = {Share.User.KeyboardQuantity} where usuario like '{SQLConnection.nome_usuario}'", conn))
+                //        {
+                //            comm.ExecuteNonQuery();
+                //        }
+                //    }
+                //}
 
-
-                System.Windows.MessageBox.Show("Teclado adicionado/salvo com sucesso!");
+                AcroniMessageBoxConfirm success = new AcroniMessageBoxConfirm("Teclado adicionado/salvo com sucesso!", "Ele se encontrará na coleção selecionada, em sua galeria :D");
+                success.ShowDialog();
                 Share.EditKeyboard = true;
                 Share.Keyboard = keyboard;
-                using (FileStream savearchive = new FileStream($@"{Application.StartupPath}\..\..\{SQLConnection.nome_usuario}.acr", FileMode.Create))
-                {
-                    BinaryFormatter Serializer = new BinaryFormatter();
-                    Serializer.Serialize(savearchive, Share.User);
-                }
+                Share.User.SendToFile();
                 ExportToWebSite();
             }
             else
-                MessageBox.Show("Teclado não foi salvo!");
+            {
+                AcroniMessageBoxConfirm fail = new AcroniMessageBoxConfirm("Tu cancelastes a operação no meio do processo/Salvamento inválido ;-;", "Tente novamente, se desejas mesmo salvá - lo!");
+                fail.ShowDialog();
+                --Share.User.KeyboardQuantity;
+
+            }
+
+
         }
 
         private void setPropriedadesTeclado()
@@ -1041,11 +1070,11 @@ namespace AcroniUI.Custom
                 }
             }
 
-            using (FileStream savearchive = new FileStream($@"{Application.StartupPath}\..\..\{SQLConnection.nome_usuario}.acr", FileMode.OpenOrCreate))
-            {
-                BinaryFormatter Serializer = new BinaryFormatter();
-                Serializer.Serialize(savearchive, Share.User);
-            }
+            //using (FileStream savearchive = new FileStream($@"{Application.StartupPath}\..\..\{SQLConnection.nome_usuario}.acr", FileMode.OpenOrCreate))
+            //{
+            //    BinaryFormatter Serializer = new BinaryFormatter();
+            //    Serializer.Serialize(savearchive, Share.User);
+            //}
         }
 
         #endregion
@@ -1058,6 +1087,8 @@ namespace AcroniUI.Custom
             SQLMethods.INSERT_INTO($"insert into tblTecladoCustomizado (id_colecao, id_cliente, imagem_teclado, nickname, preco) values (1, (select id_cliente from tblCliente where usuario like '{SQLConnection.nome_usuario}'), @image,'{Share.Keyboard.NickName}',254.00)", img);
         }
         #endregion
+
+
     }
 }
 

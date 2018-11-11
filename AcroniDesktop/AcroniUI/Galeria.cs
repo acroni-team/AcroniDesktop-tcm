@@ -243,6 +243,8 @@ namespace AcroniUI
                         if (collection.CollectionName.Equals(c.Text))
                         {
                             Share.User.UserCollections.Remove(collection);
+                            foreach (Keyboard k in collection.Keyboards)
+                                Share.User.KeyboardQuantity--;
                             using (SqlConnection sqlConnection = new SqlConnection("Data Source = " + Environment.MachineName + "\\SQLEXPRESS; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7"))
                             {
                                 sqlConnection.Open();
