@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Data;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 
 namespace AcroniLibrary.SQL
@@ -18,6 +20,26 @@ namespace AcroniLibrary.SQL
                     }
                 }
             }
+        }
+        public static List<object> SELECT(string SelectCommand)
+        {
+            List<object> ret = new List<object> { };
+            using (SqlConnection newConn = new SqlConnection(SQLConnection.nome_conexao))
+            {
+                newConn.Open();
+                using (SqlCommand newComm = new SqlCommand((SelectCommand.Contains("SELECT") || SelectCommand.Contains("select")) ? SelectCommand : "SELECT " + SelectCommand,newConn))
+                {
+                    using (SqlDataReader reader = newComm.ExecuteReader())
+                    {
+                        reader.Read();
+                        for (int i = 0; i < reader.FieldCount; i++)
+                        {
+                            ret.Add(reader[i]);
+                        }
+                    }
+                }
+            }
+            return ret;
         }
 
         public static int INSERT_INTO(String commandINSERT)

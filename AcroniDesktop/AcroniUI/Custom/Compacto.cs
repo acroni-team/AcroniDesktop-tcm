@@ -36,7 +36,7 @@ namespace AcroniUI.Custom
 
         // Definição das propriedades do colorpicker 
         private FontStyle __fontStyle { get; set; } = FontStyle.Regular;
-        private ContentAlignment __contentAlignment { get; set; } = ContentAlignment.TopLeft;
+        private object __contentAlignment { get; set; } = ContentAlignment.TopLeft;
 
         //Cores do fundo e da fonte
         private Color Color { get; set; } = Color.FromArgb(26, 26, 26);
@@ -305,7 +305,7 @@ namespace AcroniUI.Custom
             if (__checkIfCanApplyStyle == 4)
             {
                 keybutton.Font = new Font(cmbFontes.Text, float.Parse(cmbFontSize.Text), __fontStyle);
-                keybutton.TextAlign = __contentAlignment;
+                keybutton.TextAlign =(ContentAlignment) __contentAlignment;
                 __checkIfCanApplyStyle = 0;
             }
 
@@ -454,6 +454,8 @@ namespace AcroniUI.Custom
         //Ao clicar no botão de fechar
         private void btnVoltar_Click(object sender, EventArgs e)
         {
+            if (Share.EditKeyboard)
+                ExportToWebSite();
             Share.Collection = new Collection();
             Share.EditKeyboard = false;
             this.Close();
@@ -482,19 +484,6 @@ namespace AcroniUI.Custom
 
             lblKeyboardName.Location = new Point(lblCollectionName.Location.X + lblCollectionName.Size.Width - 5, lblCollectionName.Location.Y);
 
-            if (string.IsNullOrEmpty(Share.Keyboard.NickName))
-            {
-                lblKeyboardName.Text = KeyboardIDGenerator.GenerateID('C');
-                lblCollectionName.Visible = false;
-                lblKeyboardName.Location = lblCollectionName.Location;
-                Share.Keyboard.NickName = "Sem nome";
-                Share.Collection.CollectionName = "";
-            }
-            else
-            {
-                lblKeyboardName.Text = Share.Keyboard.NickName;
-                lblCollectionName.Text = Share.Collection.CollectionName;
-            }
 
             //Eu preciso disso no construtor, sorry. Não dá pra colocar dois estilos na Open Sans logo no designer.
 
@@ -518,6 +507,14 @@ namespace AcroniUI.Custom
 
             if (Share.EditKeyboard)
                 LoadKeyboard();
+            else
+            {
+                lblCollectionName.Visible = false;
+                lblKeyboardName.Location = lblCollectionName.Location;
+                lblKeyboardName.Text = "Sem Nome";
+                lblCollectionName.Text = "";
+            }
+
 
         }
         #endregion
@@ -603,8 +600,8 @@ namespace AcroniUI.Custom
                     Controls.Find("fundo" + keybutton.Name, true)[0].BackColor = Color.FromArgb(90, keybutton.BackColor);
                 }
             }
-            catch (Exception) { }
-        }
+            catch (Exception) {}
+        } 
 
         #region Hover para cada uma das cores do colorpicker
 
@@ -660,7 +657,7 @@ namespace AcroniUI.Custom
                         {
                             (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).BackColor = Color;
                             (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).Font = new Font(cmbFontes.Text, float.Parse(cmbFontSize.Text), __fontStyle);
-                            (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).TextAlign = __contentAlignment;
+                            (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).TextAlign = (ContentAlignment)__contentAlignment;
 
                             if (Color != Color.FromArgb(26, 26, 26))
                             {
@@ -789,6 +786,8 @@ namespace AcroniUI.Custom
         #region Carregar e salvar teclado
         private void LoadKeyboard()
         {
+            lblKeyboardName.Text = Share.Keyboard.NickName;
+            lblCollectionName.Text = Share.Collection.CollectionName;
             picBoxKeyboardBackground.Image = Share.Keyboard.BackgroundImage;
             picBoxKeyboardBackground.SizeMode = (PictureBoxSizeMode)Share.Keyboard.BackgroundModeSize;
 
@@ -816,7 +815,7 @@ namespace AcroniUI.Custom
                                             c.Parent.BackColor = Color.FromArgb(90, k.Color);
                                             c.Parent.BackgroundImage = null;
                                         }
-                                        (c as Label).TextAlign = ContentAlignment;
+                                        (c as Label).TextAlign = (ContentAlignment) k.ContentAlignment;
                                     }
                                 }
                                 ////keycap.Text = k.Text;
@@ -824,7 +823,7 @@ namespace AcroniUI.Custom
 
                                 break;
                             }
-                            catch (Exception err) { }
+                            catch (Exception e) { MessageBox.Show(e.Message); }
                         }
                     }
                 }
@@ -878,8 +877,6 @@ namespace AcroniUI.Custom
                     }
                     else
                     {
-                        MessageBox.Show("" + Share.User.KeyboardQuantity);
-                        Share.User.SendToFile();
                         canSave = true;
                     }
                 }
@@ -1013,7 +1010,7 @@ namespace AcroniUI.Custom
             Color forecolor = Color.Empty;
             Font font = null;
             Image image = null;
-            ContentAlignment textalign = ContentAlignment.TopLeft;
+            object textalign = ContentAlignment.TopLeft;
             string name = "";
             foreach (Control tecla in pnlWithKeycaps.Controls)
                 if (tecla.Name.Contains("fundo"))
@@ -1070,12 +1067,47 @@ namespace AcroniUI.Custom
         #region Exportar pro site
         private void ExportToWebSite()
         {
+            bool alreadyExistsThisKeyboard = false;
             byte[] img = ImageConvert.ImageToByteArray(Screenshot.TakeSnapshot(pnlWithKeycaps), ImageFormat.Bmp);
-
-            SQLMethods.INSERT_INTO($"insert into tblTecladoCustomizado (id_colecao, id_cliente, imagem_teclado, nickname, preco) values (1, (select id_cliente from tblCliente where usuario like '{SQLConnection.nome_usuario}'), @image,'{Share.Keyboard.NickName}',254.00)", img);
+            using (SqlConnection sqlConnection = new SqlConnection("Data Source = " + Environment.MachineName + "\\SQLEXPRESS; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7"))
+            {
+                sqlConnection.Open();
+                using (SqlCommand sqlCommand = new SqlCommand($"select nickname from tblTecladoCustomizado where id_cliente = {Share.User.ID}", sqlConnection))
+                {
+                    using (SqlDataReader return_value = sqlCommand.ExecuteReader())
+                    {
+                        if (return_value.HasRows)
+                        {
+                            return_value.Read();
+                            for (int i = 0; i < return_value.FieldCount; i++)
+                                if (return_value[i].ToString().Equals(Share.Keyboard.NickName))
+                                {
+                                    alreadyExistsThisKeyboard = true;
+                                    break;
+                                }
+                        }
+                    }
+                }
+                if (!alreadyExistsThisKeyboard)
+                    using (SqlCommand sqlCommand = new SqlCommand($"insert into tblTecladoCustomizado(id_colecao, id_cliente,imagem_teclado,nickname,preco) values ((select id_colecao from tblColecao where nick_colecao like '{Share.Collection.CollectionName}' and id_cliente = {Share.User.ID}),{Share.User.ID},@img,'{Share.Keyboard.NickName}',250)", sqlConnection))
+                    {
+                        try
+                        {
+                            sqlCommand.Parameters.AddWithValue("@img", img);
+                            sqlCommand.ExecuteNonQuery();
+                        }
+                        catch (Exception e) { MessageBox.Show(e.Message); }
+                    }
+                else
+                    using (SqlCommand sqlCommand = new SqlCommand($"update tblTecladoCustomizado set imagem_teclado = @img where id_colecao like (select id_colecao from tblColecao where id_cliente = {Share.User.ID}) and id_cliente like "+Share.User.ID, sqlConnection))
+                    {
+                        sqlCommand.Parameters.AddWithValue("@img", img);
+                        sqlCommand.ExecuteNonQuery();
+                    }
+            }
         }
-        #endregion
 
+        #endregion
 
     }
 }

@@ -52,10 +52,10 @@
             this.apnlEmail = new System.Windows.Forms.Panel();
             this.txtCEP = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtPass = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.ebtnAlterarPlano = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
-            this.bunifuMaterialTextbox2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtUser = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.apnlCPF.SuspendLayout();
             this.apnlNome.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -96,6 +96,7 @@
             this.txtCPF.Size = new System.Drawing.Size(297, 44);
             this.txtCPF.TabIndex = 1;
             this.txtCPF.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtCPF.OnValueChanged += new System.EventHandler(this.txtBoxMyAccount_OnValueChanged);
             // 
             // apnlNome
             // 
@@ -127,6 +128,7 @@
             this.txtNome.Size = new System.Drawing.Size(298, 44);
             this.txtNome.TabIndex = 0;
             this.txtNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtNome.OnValueChanged += new System.EventHandler(this.txtBoxMyAccount_OnValueChanged);
             // 
             // label1
             // 
@@ -181,6 +183,7 @@
             this.txtEmail.Size = new System.Drawing.Size(298, 44);
             this.txtEmail.TabIndex = 0;
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtEmail.OnValueChanged += new System.EventHandler(this.txtBoxMyAccount_OnValueChanged);
             // 
             // panel5
             // 
@@ -288,7 +291,7 @@
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label3.Location = new System.Drawing.Point(24, 80);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 22);
+            this.label3.Size = new System.Drawing.Size(141, 22);
             this.label3.TabIndex = 112;
             this.label3.Text = "Alterar imagem";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -299,8 +302,6 @@
             // 
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(40)))));
             this.btnSave.FlatAppearance.BorderSize = 0;
-            this.btnSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
-            this.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Open Sans SemiBold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.SystemColors.ButtonFace;
@@ -308,7 +309,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(189, 55);
             this.btnSave.TabIndex = 110;
-            this.btnSave.Tag = "not salvo";
+            this.btnSave.Tag = "";
             this.btnSave.Text = "Salvo";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -352,36 +353,38 @@
             this.txtCEP.Size = new System.Drawing.Size(298, 44);
             this.txtCEP.TabIndex = 0;
             this.txtCEP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtCEP.OnValueChanged += new System.EventHandler(this.txtBoxMyAccount_OnValueChanged);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
-            this.panel2.Controls.Add(this.bunifuMaterialTextbox1);
+            this.panel2.Controls.Add(this.txtPass);
             this.panel2.Location = new System.Drawing.Point(429, 574);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(306, 50);
             this.panel2.TabIndex = 114;
             // 
-            // bunifuMaterialTextbox1
+            // txtPass
             // 
-            this.bunifuMaterialTextbox1.AllowDrop = true;
-            this.bunifuMaterialTextbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
-            this.bunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox1.Font = new System.Drawing.Font("Open Sans", 10F, System.Drawing.FontStyle.Bold);
-            this.bunifuMaterialTextbox1.ForeColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(118)))), ((int)(((byte)(125)))));
-            this.bunifuMaterialTextbox1.HintText = "Senha";
-            this.bunifuMaterialTextbox1.isPassword = false;
-            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
-            this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
-            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
-            this.bunifuMaterialTextbox1.LineThickness = 3;
-            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(4, 4);
-            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
-            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(298, 44);
-            this.bunifuMaterialTextbox1.TabIndex = 0;
-            this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtPass.AllowDrop = true;
+            this.txtPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
+            this.txtPass.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPass.Font = new System.Drawing.Font("Open Sans", 10F, System.Drawing.FontStyle.Bold);
+            this.txtPass.ForeColor = System.Drawing.Color.White;
+            this.txtPass.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(118)))), ((int)(((byte)(125)))));
+            this.txtPass.HintText = "Senha";
+            this.txtPass.isPassword = false;
+            this.txtPass.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
+            this.txtPass.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
+            this.txtPass.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
+            this.txtPass.LineThickness = 3;
+            this.txtPass.Location = new System.Drawing.Point(4, 4);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(298, 44);
+            this.txtPass.TabIndex = 0;
+            this.txtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtPass.OnValueChanged += new System.EventHandler(this.txtBoxMyAccount_OnValueChanged);
             // 
             // ebtnAlterarPlano
             // 
@@ -391,32 +394,33 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
-            this.panel3.Controls.Add(this.bunifuMaterialTextbox2);
+            this.panel3.Controls.Add(this.txtUser);
             this.panel3.Location = new System.Drawing.Point(429, 507);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(306, 50);
             this.panel3.TabIndex = 115;
             // 
-            // bunifuMaterialTextbox2
+            // txtUser
             // 
-            this.bunifuMaterialTextbox2.AllowDrop = true;
-            this.bunifuMaterialTextbox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
-            this.bunifuMaterialTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox2.Font = new System.Drawing.Font("Open Sans", 10F, System.Drawing.FontStyle.Bold);
-            this.bunifuMaterialTextbox2.ForeColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox2.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(118)))), ((int)(((byte)(125)))));
-            this.bunifuMaterialTextbox2.HintText = "Nome de usuário";
-            this.bunifuMaterialTextbox2.isPassword = false;
-            this.bunifuMaterialTextbox2.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
-            this.bunifuMaterialTextbox2.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
-            this.bunifuMaterialTextbox2.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
-            this.bunifuMaterialTextbox2.LineThickness = 3;
-            this.bunifuMaterialTextbox2.Location = new System.Drawing.Point(4, 4);
-            this.bunifuMaterialTextbox2.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox2.Name = "bunifuMaterialTextbox2";
-            this.bunifuMaterialTextbox2.Size = new System.Drawing.Size(298, 44);
-            this.bunifuMaterialTextbox2.TabIndex = 0;
-            this.bunifuMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtUser.AllowDrop = true;
+            this.txtUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
+            this.txtUser.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUser.Font = new System.Drawing.Font("Open Sans", 10F, System.Drawing.FontStyle.Bold);
+            this.txtUser.ForeColor = System.Drawing.Color.White;
+            this.txtUser.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(118)))), ((int)(((byte)(125)))));
+            this.txtUser.HintText = "Nome de usuário";
+            this.txtUser.isPassword = false;
+            this.txtUser.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
+            this.txtUser.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
+            this.txtUser.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
+            this.txtUser.LineThickness = 3;
+            this.txtUser.Location = new System.Drawing.Point(4, 4);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(298, 44);
+            this.txtUser.TabIndex = 0;
+            this.txtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtUser.OnValueChanged += new System.EventHandler(this.txtBoxMyAccount_OnValueChanged);
             // 
             // MinhaConta
             // 
@@ -484,10 +488,10 @@
         private System.Windows.Forms.Panel apnlEmail;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtCEP;
         private System.Windows.Forms.Panel panel2;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtPass;
         private Bunifu.Framework.UI.BunifuElipse ebtnAlterarPlano;
         private System.Windows.Forms.Panel panel3;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox2;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtUser;
         private System.Windows.Forms.Panel pnlEscurecerImg;
         private System.Windows.Forms.Label label3;
     }

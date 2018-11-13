@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -100,7 +101,15 @@ namespace AcroniUI
                         foreach (Keyboard userKeyboard in userCollection.Keyboards)
                             if (userKeyboard.ID.Equals((sender as PictureBox).Parent.Name))
                             {
-                                userCollection.Keyboards.Remove(userKeyboard);
+                                using (SqlConnection sqlConnection = new SqlConnection("Data Source = " + Environment.MachineName + "\\SQLEXPRESS; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7"))
+                                {
+                                    sqlConnection.Open();
+                                    using (SqlCommand sqlCommand = new SqlCommand($"delete from tblTecladoCustomizado where nickname like '{userKeyboard.NickName}' and id_cliente like {Share.User.ID}", sqlConnection))
+                                    {
+                                        sqlCommand.ExecuteNonQuery();
+                                    }
+                                }
+                                        userCollection.Keyboards.Remove(userKeyboard);
                                 Share.User.KeyboardQuantity--;
                                 Share.User.SendToFile();
                                 CollectionSelected recharge = new CollectionSelected();
@@ -111,6 +120,7 @@ namespace AcroniUI
                             }
             }
         }
+        Color controlkeyboardcolor = Color.FromArgb(35, 36, 40);
         private new void MouseEnter(object sender, EventArgs e)
         {
             Panel father;
@@ -118,11 +128,13 @@ namespace AcroniUI
                 father = (Panel)(sender as Control).Parent;
             else
                 father = (Panel)(sender as Control);
-            father.BackColor = Color.FromArgb(40, father.BackColor);
+            father.BackColor = Color.FromArgb(30,30,30);
+            pnlWithKeyboards.BackColor = Color.Transparent;
         }
         private new void MouseLeave(object sender, EventArgs e)
-        {   
-            (sender as Control).BackColor = Color.FromArgb(100, (sender as Control).BackColor);
+        {
+            (sender as Control).BackColor = controlkeyboardcolor;
+            pnlWithKeyboards.BackColor = Color.Transparent;
         }
     }
 }

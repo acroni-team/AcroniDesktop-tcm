@@ -30,6 +30,7 @@ namespace AcroniControls
         /// </summary>
         private void InitializeComponent()
         {
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBoxDeleteIcon = new System.Windows.Forms.PictureBox();
             this.lblKeyboardName = new System.Windows.Forms.Label();
             this.picBoxPreviewKeyboard = new System.Windows.Forms.PictureBox();

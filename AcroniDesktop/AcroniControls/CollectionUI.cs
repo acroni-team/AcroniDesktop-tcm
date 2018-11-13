@@ -28,7 +28,6 @@ namespace AcroniControls
             this.Name = "colecao" + countCollection;
             Bunifu.Framework.UI.BunifuElipse ellipse = new Bunifu.Framework.UI.BunifuElipse();
             this.lblColecao1NumTeclados.Location = new System.Drawing.Point((lblColecao1.Width + 10), 16);
-
             foreach (ControlKeyboard ck in ControlKeyboard_Collections.keyboardsControl)
             {
                 colecao1.Controls.Add(ck);
@@ -44,13 +43,15 @@ namespace AcroniControls
 
         private void sendToDatabase()
         {
-            byte[] img = ImageConvert.ImageToByteArray(Screenshot.TakeSnapshot(this), ImageFormat.Bmp);
+            Bitmap collectionPicture = new Bitmap(this.Width, this.Height);
+            this.DrawToBitmap(collectionPicture, this.ClientRectangle);
+            byte[] img = ImageConvert.ImageToByteArray(collectionPicture,ImageFormat.Bmp);
             bool alreadyExistsThisCollection = false;
 
             using (SqlConnection sqlConnection = new SqlConnection("Data Source = " + Environment.MachineName + "\\SQLEXPRESS; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7"))
             {
                 sqlConnection.Open();
-                using (SqlCommand sqlCommand = new SqlCommand("select nick_colecao from tblColecao where id_cliente like (select id_cliente from tblCliente where usuario like '" + SQLConnection.nome_usuario + "')", sqlConnection))
+                using (SqlCommand sqlCommand = new SqlCommand("select nick_colecao from tblColecao where id_cliente in (select id_cliente from tblCliente where usuario like '" + SQLConnection.nome_usuario + "')", sqlConnection))
                 {
                     using (SqlDataReader return_value = sqlCommand.ExecuteReader())
                     {
@@ -76,7 +77,6 @@ namespace AcroniControls
                 else
                     using (SqlCommand sqlCommand = new SqlCommand("update tblColecao set imagem_colecao = @img where nick_colecao like '" + Share.Collection.CollectionName + "' and id_cliente like (select id_cliente from tblCliente where usuario like '" + SQLConnection.nome_usuario + "')", sqlConnection))
                     {
-
                         sqlCommand.Parameters.AddWithValue("@img", img);
                         sqlCommand.ExecuteNonQuery();
                     }

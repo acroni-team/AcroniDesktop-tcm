@@ -25,6 +25,22 @@ namespace AcroniUI
             pnlEscurecerImg.BackColor = Color.FromArgb(90, pnlEscurecerImg.BackColor);
 
             ChamarImagemDoBanco();
+
+            List<object> ret = SQLMethods.SELECT("SELECT nome,cpf,cep,email,usuario,senha FROM tblCliente");
+
+            txtNome.Text = ret[0].ToString();
+            txtNome.HintText = ret[0].ToString();
+            txtCPF.Text = String.IsNullOrEmpty(ret[1].ToString()) ? "NÃO TEMOS O SEU CPF. Informe-o" : ret[2].ToString();
+            txtCPF.HintText = String.IsNullOrEmpty(ret[1].ToString()) ? "NÃO TEMOS O SEU CPF. Informe-o" : ret[2].ToString();
+            txtCEP.Text = String.IsNullOrEmpty(ret[2].ToString()) ? "Informe o seu CEP :D" : ret[2].ToString();
+            txtCEP.HintText = String.IsNullOrEmpty(ret[2].ToString()) ? "Informe o seu CEP :D" : ret[2].ToString();
+            txtEmail.Text = ret[3].ToString();
+            txtEmail.HintText = ret[3].ToString();
+            txtPass.Text = ret[4].ToString();
+            txtPass.HintText = ret[4].ToString();
+            txtUser.Text = ret[5].ToString();
+            txtUser.HintText = ret[5].ToString();
+            nameofTextbox.Clear();
         }
 
         private void ChamarImagemDoBanco()
@@ -118,7 +134,16 @@ namespace AcroniUI
                 }
             }
         }
+        bool firstTime = true;
+        List<string> nameofTextbox = new List<string> { };
+        private void txtBoxMyAccount_OnValueChanged(object sender, EventArgs e)
+        {
+            
+        }
 
+        private void btnSalvar_Click(object sender, EventArgs e) {
+            
+        }
         //    private void btnAtualizar_Click(object sender, EventArgs e)
         //    {
         //        if (!possuiCamposVazios())
@@ -210,37 +235,37 @@ namespace AcroniUI
         //            lblAviso.Visible = true;
         //        }
         //    }
-        //    --Método que checa se o Form possui campos vazios
-        //    private bool possuiCamposVazios()
-        //    {
-        //        bool b = false;
-        //        foreach (Control controle in Controls)
-        //        {
-        //            if (controle is Bunifu.Framework.UI.BunifuMaterialTextbox)
-        //            {
-        //                if ((controle as Bunifu.Framework.UI.BunifuMaterialTextbox).Text.Equals(String.Empty))
-        //                {
-        //                    b = true;
-        //                    break;
-        //                }
-        //            }
-        //        }
-        //        return b;
-        //    }
+        //--Método que checa se o Form possui campos vazios
+        private bool possuiCamposVazios()
+        {
+            bool b = false;
+            foreach (Control controle in Controls)
+            {
+                if (controle is Bunifu.Framework.UI.BunifuMaterialTextbox)
+                {
+                    if ((controle as Bunifu.Framework.UI.BunifuMaterialTextbox).Text.Equals(String.Empty))
+                    {
+                        b = true;
+                        break;
+                    }
+                }
+            }
+            return b;
+        }
 
-        //    private void btnVoltar_Click(object sender, EventArgs e)
-        //    {
-        //        this.Close();
-        //    }
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
-        //    private void txtSenha_OnValueChanged(object sender, EventArgs e)
-        //    {
-        //        txtSenha.isPassword = true;
-        //    }
+        //private void txtSenha_OnValueChanged(object sender, EventArgs e)
+        //{
+        //    txtSenha.isPassword = true;
+        //}
 
-        //    private void txtRepetirSenha_OnValueChanged(object sender, EventArgs e)
-        //    {
-        //        txtRepetirSenha.isPassword = true;
-        //    }
+        //private void txtRepetirSenha_OnValueChanged(object sender, EventArgs e)
+        //{
+        //    txtRepetirSenha.isPassword = true;
+        //}
     }
 }

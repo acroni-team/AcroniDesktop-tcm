@@ -26,7 +26,6 @@ namespace AcroniUI
         public TemplateMenu()
         {
             InitializeComponent();
-            UpdateKeyboardQuantity();
             Bunifu.Framework.UI.BunifuElipse ellipse = new Bunifu.Framework.UI.BunifuElipse();
             foreach (Control c in pnlOptions.Controls)
             {
@@ -49,11 +48,14 @@ namespace AcroniUI
         public void trocar_imagem_usuario(Image imagem) => ImgUsu.Image = imagem;
         SqlConnection conexão_SQL = new SqlConnection(SQLConnection.nome_conexao);
         SqlCommand comando_SQL;
-        private void TemplateMenu_Load(object sender, EventArgs e) => UpdateKeyboardQuantity();
+        private void TemplateMenu_Load(object sender, EventArgs e)
+        {
+            if (!DesignMode)
+                UpdateKeyboardQuantity();
+        }
         public void UpdateKeyboardQuantity()
         {
             int i = 0;
-
             if (Share.User.isPremiumAccount)
             {
                 lblPlanoUsu.Text = "Plano Premium";
@@ -205,8 +207,9 @@ namespace AcroniUI
         protected virtual void btnAbrirGaleria_Click(object sender, EventArgs e)
         {
             Galeria galeria = new Galeria(false);
-            fechaForms();
-            galeria.ShowDialog();
+            galeria.Show();
+            this.Close();
+
         }
         private void fechaForms()
         {
@@ -219,9 +222,9 @@ namespace AcroniUI
 
         protected virtual void btnSelectKeyboard_Click(object sender, EventArgs e)
         {
-            fechaForms();
             SelectKeyboard selectKeyboard = new SelectKeyboard();
             selectKeyboard.ShowDialog();
+            this.Close();
         }
 
         protected virtual void btnDesconectar_Click(object sender, EventArgs e)

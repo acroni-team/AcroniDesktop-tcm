@@ -160,7 +160,6 @@
             this.Controls.Add(this.lblSavedCollections1);
             this.Controls.Add(this.lblNomeUsuBoasVindas);
             this.Controls.Add(this.lblBoasVindas);
-            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "Galeria";
             this.Text = "Galeria";
             this.Controls.SetChildIndex(this.pnlStripAjuda, 0);

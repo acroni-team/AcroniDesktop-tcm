@@ -176,10 +176,10 @@ namespace AcroniUI.LoginAndSignUp
                                     Share.User.CatchFromFile();
                                 else
                                     MetodoParaCriarPerfilADM();
-                                foreach (Collection col in Share.User.UserCollections)
-                                    MessageBox.Show(col.CollectionName);
+                       
                                 if (resposta[1].ToString() == "p")
                                     Share.User.isPremiumAccount = true;
+                                Share.User.SendToFile();
                                 Hide();
                                 selecionarTeclado = new SelectKeyboard();
                                 selecionarTeclado.ShowDialog();

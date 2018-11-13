@@ -41,10 +41,11 @@ namespace AcroniUI
                 lblCollectionsQuantity.Visible = false;
                 lblSelectKeyboard.Visible = true;
             }
+            if(!DesignMode)
             LoadCollections();
 
             #region Adicionar evento de click ao btnEditarGaleria e btnExcluirGaleria
-
+            if(!DesignMode)
             foreach (Control collection in pnlScroll.Controls)
             {
                 if (collection is CollectionUI)
@@ -173,7 +174,7 @@ namespace AcroniUI
             if (!Share.User.isPremiumAccount)
                 foreach (Collection col in Share.User.UserCollections)
                     contcollections++;
-            if (contcollections < 1)
+            if (contcollections < 1||Share.User.isPremiumAccount)
             {
                 AcroniMessageBoxInput collectionNameDialog = new AcroniMessageBoxInput("Insira o nome de sua coleção:");         
                 if (collectionNameDialog.ShowDialog() == DialogResult.OK)
@@ -256,7 +257,11 @@ namespace AcroniUI
                                 using (SqlConnection sqlConnection = new SqlConnection("Data Source = " + Environment.MachineName + "\\SQLEXPRESS; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7"))
                                 {
                                     sqlConnection.Open();
-                                    using (SqlCommand sqlCommand = new SqlCommand("delete from tblColecao where nick_colecao in('" + c.Text + "') and id_cliente like (select id_cliente from tblCliente where usuario like '" + SQLConnection.nome_usuario + "')", sqlConnection))
+                                    using (SqlCommand sqlCommand = new SqlCommand($"delete from tblTecladoCustomizado where id_cliente = {Share.User.ID}", sqlConnection))
+                                    {
+                                        sqlCommand.ExecuteNonQuery();
+                                    }
+                                    using (SqlCommand sqlCommand = new SqlCommand("delete from tblColecao where nick_colecao in('" + c.Text + $"') and id_cliente like {Share.User.ID}", sqlConnection))
                                     {
                                         sqlCommand.ExecuteNonQuery();
                                     }
@@ -318,43 +323,60 @@ namespace AcroniUI
         {
             if (canclose)
                 selectColor.Close();
-            foreach (Control itemsGallery in (((sender as PictureBox).Parent as Panel)).Controls)
-                if (itemsGallery.Name.Equals("lblColecao1"))
-                    selectColor = new SelectColor(itemsGallery.Text);
-            selectColor.Show();
-            canclose = true;
-            while (selectColor.Visible)
+            else
             {
-                await Task.Delay(10);
-                if (selectColor.SettedColor != Color.Empty)
-                    ((sender as PictureBox).Parent as Panel).BackColor = selectColor.SettedColor;
-            }
-            foreach (Control itemsGallery in (((sender as PictureBox).Parent as Panel)).Controls)            
-                if (itemsGallery.Name.Equals("lblColecao1"))                
-                    itemsGallery.Text = selectColor.CollectionName;        
-                if (selectColor.SettedColor != Color.Empty)
+                foreach (Control itemsGallery in (((sender as PictureBox).Parent as Panel)).Controls)
+                    if (itemsGallery.Name.Equals("lblColecao1"))
+                        selectColor = new SelectColor(itemsGallery.Text);
+                selectColor.Show();
+                canclose = true;
+                while (selectColor.Visible)
                 {
-                foreach (Control c in ((sender as PictureBox).Parent as Panel).Controls)
+                    await Task.Delay(10);
+                    if (selectColor.SettedColor != Color.Empty)
+                        ((sender as PictureBox).Parent as Panel).BackColor = selectColor.SettedColor;
+                }
+                if (selectColor.SettedColor != Color.Empty || !string.IsNullOrEmpty(selectColor.CollectionName))
                 {
-                    if (c.Name.Equals("lblColecao1"))
+                    foreach (Control c in ((sender as PictureBox).Parent as Panel).Controls)
                     {
-                        foreach (Collection collection in Share.User.UserCollections)
+                        if (c.Name.Equals("lblColecao1"))
                         {
-                            if (collection.CollectionName.Equals(c.Text))
+                            foreach (Collection collection in Share.User.UserCollections)
                             {
-                                collection.CollectionColor = selectColor.SettedColor;
-                                collection.CollectionName = selectColor.CollectionName;
-                                Galeria recharge = new Galeria(false);
-                                recharge.Show();
-                                this.Close();
-                                break;
+                                if (collection.CollectionName.Equals(c.Text))
+                                {
+                                    if (selectColor.SettedColor != Color.Empty)
+                                        collection.CollectionColor = selectColor.SettedColor;
+                                    if (!string.IsNullOrEmpty(selectColor.CollectionName))
+                                    {
+                                        using (SqlConnection sqlConnection = new SqlConnection("Data Source = " + Environment.MachineName + "\\SQLEXPRESS; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7"))
+                                        {
+                                            sqlConnection.Open();
+
+                                            using (SqlCommand sqlCommand = new SqlCommand($"update tblColecao set nick_colecao = '{selectColor.CollectionName}' where nick_colecao like '" + Share.Collection.CollectionName + "' and id_cliente like (select id_cliente from tblCliente where usuario like '" + SQLConnection.nome_usuario + "')", sqlConnection))
+                                            {
+                                                sqlCommand.ExecuteNonQuery();
+                                            }
+                                            using (SqlCommand sqlCommand = new SqlCommand($"delete from tblColecao where nick_colecao like '{collection.CollectionName}' and id_cliente like {Share.User.ID}", sqlConnection))
+                                            {
+                                                sqlCommand.ExecuteNonQuery();
+                                            }
+                                            }
+                                        collection.CollectionName = selectColor.CollectionName;
+                                    }
+                                    Share.User.SendToFile();
+                                    Galeria recharge = new Galeria(false);
+                                    recharge.Show();
+                                    this.Close();
+                                    break;
+                                }
                             }
                         }
                     }
+                    Share.User.SendToFile();
                 }
-                Share.User.SendToFile();
             }
-
         }
         protected override void btnClose_Click(object sender, EventArgs e)
         {
