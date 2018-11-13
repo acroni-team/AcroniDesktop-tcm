@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KeycapBackgroundModule));
             this.pnlImages = new System.Windows.Forms.Panel();
             this.pnlImg6 = new System.Windows.Forms.Panel();
@@ -52,6 +53,9 @@
             this.btnNewIcon = new AcroniControls.StyleBtn();
             this.btnAlll = new System.Windows.Forms.Button();
             this.btnRedefineBackgroundImage = new System.Windows.Forms.Button();
+            this.ebtnPlanoDeFundo = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.eBtnVoltarParaPlanoPadrao = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.ebtnNewIcon = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnlImages.SuspendLayout();
             this.pnlImg6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxImg6)).BeginInit();
@@ -349,6 +353,21 @@
             this.btnRedefineBackgroundImage.UseVisualStyleBackColor = false;
             this.btnRedefineBackgroundImage.Click += new System.EventHandler(this.btnRedefineBackgroundImage_Click);
             // 
+            // ebtnPlanoDeFundo
+            // 
+            this.ebtnPlanoDeFundo.ElipseRadius = 5;
+            this.ebtnPlanoDeFundo.TargetControl = this.btnAlll;
+            // 
+            // eBtnVoltarParaPlanoPadrao
+            // 
+            this.eBtnVoltarParaPlanoPadrao.ElipseRadius = 5;
+            this.eBtnVoltarParaPlanoPadrao.TargetControl = this.btnRedefineBackgroundImage;
+            // 
+            // ebtnNewIcon
+            // 
+            this.ebtnNewIcon.ElipseRadius = 5;
+            this.ebtnNewIcon.TargetControl = this.btnNewIcon;
+            // 
             // KeycapBackgroundModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -409,5 +428,8 @@
         private System.Windows.Forms.Panel pnlBtnIconChosen;
         protected System.Windows.Forms.Button btnRedefineBackgroundImage;
         protected AcroniControls.StyleBtn btnNewIcon;
+        private Bunifu.Framework.UI.BunifuElipse ebtnPlanoDeFundo;
+        private Bunifu.Framework.UI.BunifuElipse eBtnVoltarParaPlanoPadrao;
+        private Bunifu.Framework.UI.BunifuElipse ebtnNewIcon;
     }
 }

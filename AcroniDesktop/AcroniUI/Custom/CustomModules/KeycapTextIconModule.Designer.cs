@@ -65,6 +65,8 @@
             this.pnlBlocked1 = new System.Windows.Forms.Panel();
             this.pnlBlocked3 = new System.Windows.Forms.Panel();
             this.lnkRedefineIcons = new System.Windows.Forms.LinkLabel();
+            this.ebtnNewIcon = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.epnlIcons = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.apnlTextbox1.SuspendLayout();
             this.apnlTextbox2.SuspendLayout();
             this.apnlTextbox3.SuspendLayout();
@@ -278,7 +280,7 @@
             // 
             // ebtnExit
             // 
-            this.ebtnExit.ElipseRadius = 20;
+            this.ebtnExit.ElipseRadius = 5;
             this.ebtnExit.TargetControl = this.btnExit;
             // 
             // textBox1
@@ -542,12 +544,22 @@
             this.lnkRedefineIcons.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
             this.lnkRedefineIcons.Location = new System.Drawing.Point(724, 303);
             this.lnkRedefineIcons.Name = "lnkRedefineIcons";
-            this.lnkRedefineIcons.Size = new System.Drawing.Size(97, 18);
+            this.lnkRedefineIcons.Size = new System.Drawing.Size(152, 18);
             this.lnkRedefineIcons.TabIndex = 19;
             this.lnkRedefineIcons.TabStop = true;
-            this.lnkRedefineIcons.Text = "Redefinir ícone";
+            this.lnkRedefineIcons.Text = "Voltar ícone pro padrão.";
             this.lnkRedefineIcons.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
             this.lnkRedefineIcons.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkRedefineIcons_LinkClicked);
+            // 
+            // ebtnNewIcon
+            // 
+            this.ebtnNewIcon.ElipseRadius = 5;
+            this.ebtnNewIcon.TargetControl = this.btnNewIcon;
+            // 
+            // epnlIcons
+            // 
+            this.epnlIcons.ElipseRadius = 5;
+            this.epnlIcons.TargetControl = this.pnlIcons;
             // 
             // KeycapTextIconModule
             // 
@@ -655,5 +667,7 @@
         private System.Windows.Forms.Panel pnlBlocked1;
         private System.Windows.Forms.Panel pnlBlocked3;
         private System.Windows.Forms.LinkLabel lnkRedefineIcons;
+        private Bunifu.Framework.UI.BunifuElipse ebtnNewIcon;
+        private Bunifu.Framework.UI.BunifuElipse epnlIcons;
     }
 }

@@ -20,6 +20,9 @@ namespace AcroniUI.Custom.CustomModules
             InitializeComponent();
             Bunifu.Framework.UI.BunifuElipse e = new Bunifu.Framework.UI.BunifuElipse();
             e.ApplyElipse(pnlBtnIconChosen, 5);
+            e.ApplyElipse(apnlTextbox1, 5);
+            e.ApplyElipse(apnlTextbox2, 5);
+            e.ApplyElipse(apnlTextbox3, 5);
 
             if (BlockUpper)
             {

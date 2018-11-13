@@ -357,6 +357,29 @@ namespace AcroniUI.Custom
             {
                 KeycapSwitchModule ksm = new KeycapSwitchModule();
                 OpenModule(ksm);
+
+                if (ksm.DialogResult == DialogResult.Yes)
+                {
+                    foreach (Control keycap in pnlWithKeycaps.Controls)
+                    {
+                        if (keycap is Panel && keycap.HasChildren)
+                        {
+                            Panel p = new Panel();
+                            p.Size = new Size(10, 10);
+                            (new BunifuElipse()).ApplyElipse(p, 7);
+                            p.BackColor = ksm.SwitchColor;
+                            p.Location = (keycap.Controls[keycap.Name.Replace("fundo","lbl")] as Label).Location;
+                            keycap.Controls.Add(p);
+                            p.Visible = true;
+                            p.BringToFront();
+                            p.MouseMove += 
+                        }
+                    }
+                }
+                else if (ksm.DialogResult == DialogResult.No)
+                {
+
+                }
             }
 
             if (btnOpenModuleTexture.Tag.Equals("active"))
@@ -412,6 +435,22 @@ namespace AcroniUI.Custom
             kpm.ShowDialog(this);
             if (kpm.DialogResult == DialogResult.OK || kpm.DialogResult == DialogResult.Cancel || kpm.DialogResult == DialogResult.Yes || kpm.DialogResult == DialogResult.No)
                 DisposePanel();
+        }
+
+        private void OpenSwitchDialog(Label LabelThatHasASwitch, Bitmap SwitchPicture)
+        {
+            Panel SwitchDialog = new Panel();
+            SwitchDialog.Size = new Size(350, 100);
+            (new BunifuElipse()).ApplyElipse(SwitchDialog, 10);
+            SwitchDialog.BackColor = Color.FromArgb(45, 46, 47);
+            SwitchDialog.Location = new Point(LabelThatHasASwitch.Location.X + 25, LabelThatHasASwitch.Location.Y + 25);
+            this.Controls.Add(SwitchDialog);
+            SwitchDialog.Visible = true;
+            SwitchDialog.BringToFront();
+
+            PictureBox pb = new PictureBox();
+            
+
         }
 
 
