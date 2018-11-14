@@ -12,12 +12,6 @@ E:\Desktop\c\AcroniDesktop\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.c
 E:\Desktop\c\AcroniDesktop\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.dll
 E:\Desktop\c\AcroniDesktop\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.pdb
 <<<<<<< HEAD
-C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniLibrary\bin\Debug\AcroniLibrary.dll
-C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniLibrary\bin\Debug\AcroniLibrary.pdb
-C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniLibrary\bin\Debug\Bunifu_UI_v1.52.dll
-C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.csprojResolveAssemblyReference.cache
-C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.dll
-C:\Users\zeusm\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.pdb
 C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniLibrary\bin\Debug\AcroniLibrary.dll
 C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniLibrary\bin\Debug\AcroniLibrary.pdb
 C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniLibrary\bin\Debug\Bunifu_UI_v1.52.dll

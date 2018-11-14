@@ -372,7 +372,7 @@ namespace AcroniUI.Custom
                             keycap.Controls.Add(p);
                             p.Visible = true;
                             p.BringToFront();
-                            p.MouseMove += 
+                            //p.MouseMove +=  
                         }
                     }
                 }

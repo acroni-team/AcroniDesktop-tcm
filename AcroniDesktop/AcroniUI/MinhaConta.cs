@@ -13,6 +13,9 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AcroniLibrary.FileInfo;
+using AcroniLibrary;
+using Bunifu.Framework.UI;
 
 namespace AcroniUI
 {
@@ -30,17 +33,21 @@ namespace AcroniUI
 
             txtNome.Text = ret[0].ToString();
             txtNome.HintText = ret[0].ToString();
-            txtCPF.Text = String.IsNullOrEmpty(ret[1].ToString()) ? "NÃO TEMOS O SEU CPF. Informe-o" : ret[2].ToString();
-            txtCPF.HintText = String.IsNullOrEmpty(ret[1].ToString()) ? "NÃO TEMOS O SEU CPF. Informe-o" : ret[2].ToString();
+            txtCPF.Text = String.IsNullOrEmpty(ret[1].ToString()) ? "NÃO TEMOS O SEU CPF. Informe-o" : ret[1].ToString();
+            txtCPF.HintText = String.IsNullOrEmpty(ret[1].ToString()) ? "NÃO TEMOS O SEU CPF. Informe-o" : ret[1].ToString();
             txtCEP.Text = String.IsNullOrEmpty(ret[2].ToString()) ? "Informe o seu CEP :D" : ret[2].ToString();
             txtCEP.HintText = String.IsNullOrEmpty(ret[2].ToString()) ? "Informe o seu CEP :D" : ret[2].ToString();
             txtEmail.Text = ret[3].ToString();
             txtEmail.HintText = ret[3].ToString();
-            txtPass.Text = ret[4].ToString();
-            txtPass.HintText = ret[4].ToString();
-            txtUser.Text = ret[5].ToString();
-            txtUser.HintText = ret[5].ToString();
+            txtUser.Text = ret[4].ToString();
+            txtUser.HintText = ret[4].ToString();
+            txtPass.Text = ret[5].ToString();
+            txtPass.HintText = ret[5].ToString();
             nameofTextbox.Clear();
+            btnSave.BackColor = Color.FromArgb(34, 36, 40);
+            btnSave.Text = "Salvo";
+            btnSave.Tag = "Dont handler";
+            btnSave.Click -= btnSave_Click;
         }
 
         private void ChamarImagemDoBanco()
@@ -83,6 +90,104 @@ namespace AcroniUI
             pnlEscurecerImg.BackColor = Color.FromArgb(90, pnlEscurecerImg.BackColor);
         }
 
+        private void txtBoxMyAccount_MouseLeave(object sender, EventArgs e)
+        {
+            if (((BunifuMaterialTextbox)sender).ForeColor == Color.Firebrick)
+            {
+                ((BunifuMaterialTextbox)sender).ForeColor = Color.White;
+                ((BunifuMaterialTextbox)sender).Parent.BackColor = Color.FromArgb(53,56,62);
+            }
+
+            if (!String.IsNullOrEmpty(txtEmail.Text))
+            {
+                if (!nameofTextbox.Contains(txtEmail.Name))
+                    nameofTextbox.Add(txtEmail.Name);
+
+                if (!SQLMethods.SELECT_HASROWS("SELECT email FROM tblCliente WHERE email LIKE '" + txtEmail.Text + "'") && Regex.IsMatch(txtEmail.Text, @"^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"))
+                    txtEmail.AccessibleDescription = "Validated";
+            }
+            else
+            {
+                nameofTextbox.Remove(txtEmail.Name);
+                txtEmail.AccessibleDescription = "Not";
+            }
+
+            if (!String.IsNullOrEmpty(txtNome.Text))
+            {
+                if (!nameofTextbox.Contains(txtNome.Name))
+                    nameofTextbox.Add(txtNome.Name);
+
+                if (txtNome.Text.Contains(" "))
+                {
+                    txtNome.AccessibleDescription = "Validated";
+                }
+            }
+            else
+            {
+                nameofTextbox.Remove(txtNome.Name);
+                txtNome.AccessibleDescription = "Not";
+            }
+
+            if (!String.IsNullOrEmpty(txtPass.Text))
+            {
+                if (!nameofTextbox.Contains(txtPass.Name))
+                    nameofTextbox.Add(txtPass.Name);
+                
+            }else
+                nameofTextbox.Remove(txtPass.Name);
+
+            if (!String.IsNullOrEmpty(txtUser.Text))
+            {
+                if (!nameofTextbox.Contains(txtUser.Name))
+                    nameofTextbox.Add(txtUser.Name);
+
+                if (!SQLMethods.SELECT_HASROWS("SELECT usuario FROM tblCliente WHERE usuario LIKE '" + txtUser + "'"))
+                    txtUser.AccessibleDescription = "Validated";
+            }
+            else
+            {
+                nameofTextbox.Remove(txtUser.Name);
+                txtUser.AccessibleDescription = "Not";
+            }
+
+            if (!String.IsNullOrEmpty(txtCPF.Text))
+            {
+                if (!nameofTextbox.Contains(txtCPF.Name))
+                    nameofTextbox.Add(txtCPF.Name);
+
+                if (Validator.IsCPF(txtCPF.Text))
+                    txtCPF.AccessibleDescription = "Validated";
+            }
+            else
+            {
+                nameofTextbox.Remove(txtCPF.Name);
+                txtCPF.AccessibleDescription = "Not";
+            }
+
+            if (!String.IsNullOrEmpty(txtCEP.Text))
+            {
+                if (!nameofTextbox.Contains(txtCEP.Name))
+                    nameofTextbox.Add(txtCEP.Name);
+            }else
+                nameofTextbox.Remove(txtCEP.Name);
+
+            if (nameofTextbox.Count > 0)
+            {
+                btnSave.BackColor = Color.FromArgb(0, 147, 255);
+                btnSave.Text = "Salvar";
+                if (btnSave.Tag.Equals("Dont handler"))
+                    btnSave.Click += btnSave_Click;
+                btnSave.Tag = "Has handler";
+            }
+            else
+            {
+                btnSave.BackColor = Color.FromArgb(34, 36, 40);
+                btnSave.Text = "Salvo";
+                btnSave.Tag = "Dont handler";
+                btnSave.Click -= btnSave_Click;
+            }
+        }
+
         //Isso serve para eu só mandar a imagem pro banco quando ele for salvar, e não quando ele simplesmente mudar a imagem.
 
         private Bitmap bmp;
@@ -104,18 +209,36 @@ namespace AcroniUI
         }
 
         private void btnSave_Click(object sender, EventArgs e)
-        {
-            using (SqlConnection conn = new SqlConnection(SQLConnection.nome_conexao))
+        {   
+            foreach (String name in nameofTextbox)
             {
-                conn.Open();
-                byte[] img = ImageConvert.ImageToByteArray(bmp, ImageFormat.Bmp);
-
-                using (SqlCommand comm = new SqlCommand($"update tblCliente set imagem_cliente = @img where usuario like '{SQLConnection.nome_usuario}'", conn))
+                if ((Controls.Find(name, true))[0].AccessibleDescription.Equals("Validated"))
+                    SQLMethods.UPDATE("UPDATE tblCliente SET " + (Controls.Find(name, true))[0].Tag + " = '" + (Controls.Find(name, true))[0].Text + "' WHERE id_cliente = " + Share.User.ID);
+                
+                else
                 {
-                    comm.Parameters.AddWithValue("@img", img);
-                    comm.ExecuteNonQuery();
+                    (Controls.Find(name, true))[0].Parent.BackColor = Color.Firebrick;
+                    (Controls.Find(name, true))[0].ForeColor = Color.Firebrick;
                 }
             }
+            if (!(bmp is null))
+            {
+                using (SqlConnection conn = new SqlConnection(SQLConnection.nome_conexao))
+                {
+                    conn.Open();
+                    byte[] img = ImageConvert.ImageToByteArray(bmp, ImageFormat.Bmp);
+
+                    using (SqlCommand comm = new SqlCommand($"update tblCliente set imagem_cliente = @img where usuario like '{SQLConnection.nome_usuario}'", conn))
+                    {
+                        comm.Parameters.AddWithValue("@img", img);
+                        comm.ExecuteNonQuery();
+                    }
+                }
+            }
+            btnSave.BackColor = Color.FromArgb(34, 36, 40);
+            btnSave.Text = "Salvo";
+            btnSave.Tag = "Dont handler";
+            btnSave.Click -= btnSave_Click;
         }
 
         private void MinhaConta_FormClosing(object sender, FormClosingEventArgs e)
@@ -134,16 +257,7 @@ namespace AcroniUI
                 }
             }
         }
-        bool firstTime = true;
         List<string> nameofTextbox = new List<string> { };
-        private void txtBoxMyAccount_OnValueChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnSalvar_Click(object sender, EventArgs e) {
-            
-        }
         //    private void btnAtualizar_Click(object sender, EventArgs e)
         //    {
         //        if (!possuiCamposVazios())

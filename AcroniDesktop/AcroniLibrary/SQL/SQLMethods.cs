@@ -54,6 +54,18 @@ namespace AcroniLibrary.SQL
             }
         }
 
+        public static int UPDATE(String commandUPDATE)
+        {
+            using (SqlConnection newConnection = new SqlConnection(SQLConnection.nome_conexao))
+            {
+                newConnection.Open();
+                using (SqlCommand update = new SqlCommand(commandUPDATE, newConnection))
+                {
+                    return update.ExecuteNonQuery();
+                }
+            }
+        }
+
         public static int INSERT_INTO(String commandINSERT,byte[] parameter)
         {
             using (SqlConnection newConnection = new SqlConnection(SQLConnection.nome_conexao))

@@ -90,13 +90,14 @@
             this.txtCPF.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
             this.txtCPF.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
             this.txtCPF.LineThickness = 3;
-            this.txtCPF.Location = new System.Drawing.Point(4, 4);
+            this.txtCPF.Location = new System.Drawing.Point(4, 3);
             this.txtCPF.Margin = new System.Windows.Forms.Padding(4);
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(297, 44);
             this.txtCPF.TabIndex = 1;
+            this.txtCPF.Tag = "cpf";
             this.txtCPF.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtCPF.OnValueChanged += new System.EventHandler(this.txtBoxMyAccount_OnValueChanged);
+            this.txtCPF.OnValueChanged += new System.EventHandler(this.txtBoxMyAccount_MouseLeave);
             // 
             // apnlNome
             // 
@@ -122,13 +123,14 @@
             this.txtNome.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
             this.txtNome.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
             this.txtNome.LineThickness = 15555;
-            this.txtNome.Location = new System.Drawing.Point(4, 4);
+            this.txtNome.Location = new System.Drawing.Point(4, 3);
             this.txtNome.Margin = new System.Windows.Forms.Padding(4);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(298, 44);
             this.txtNome.TabIndex = 0;
+            this.txtNome.Tag = "nome";
             this.txtNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtNome.OnValueChanged += new System.EventHandler(this.txtBoxMyAccount_OnValueChanged);
+            this.txtNome.OnValueChanged += new System.EventHandler(this.txtBoxMyAccount_MouseLeave);
             // 
             // label1
             // 
@@ -177,13 +179,14 @@
             this.txtEmail.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
             this.txtEmail.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
             this.txtEmail.LineThickness = 3;
-            this.txtEmail.Location = new System.Drawing.Point(4, 4);
+            this.txtEmail.Location = new System.Drawing.Point(4, 3);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(298, 44);
             this.txtEmail.TabIndex = 0;
+            this.txtEmail.Tag = "email";
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtEmail.OnValueChanged += new System.EventHandler(this.txtBoxMyAccount_OnValueChanged);
+            this.txtEmail.OnValueChanged += new System.EventHandler(this.txtBoxMyAccount_MouseLeave);
             // 
             // panel5
             // 
@@ -309,10 +312,9 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(189, 55);
             this.btnSave.TabIndex = 110;
-            this.btnSave.Tag = "";
+            this.btnSave.Tag = "Dont handler";
             this.btnSave.Text = "Salvo";
             this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // eBtnSave
             // 
@@ -335,6 +337,7 @@
             // 
             // txtCEP
             // 
+            this.txtCEP.AccessibleDescription = "Validated";
             this.txtCEP.AllowDrop = true;
             this.txtCEP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
             this.txtCEP.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -347,13 +350,14 @@
             this.txtCEP.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
             this.txtCEP.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
             this.txtCEP.LineThickness = 3;
-            this.txtCEP.Location = new System.Drawing.Point(4, 4);
+            this.txtCEP.Location = new System.Drawing.Point(4, 3);
             this.txtCEP.Margin = new System.Windows.Forms.Padding(4);
             this.txtCEP.Name = "txtCEP";
             this.txtCEP.Size = new System.Drawing.Size(298, 44);
             this.txtCEP.TabIndex = 0;
+            this.txtCEP.Tag = "cep";
             this.txtCEP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtCEP.OnValueChanged += new System.EventHandler(this.txtBoxMyAccount_OnValueChanged);
+            this.txtCEP.OnValueChanged += new System.EventHandler(this.txtBoxMyAccount_MouseLeave);
             // 
             // panel2
             // 
@@ -366,6 +370,7 @@
             // 
             // txtPass
             // 
+            this.txtPass.AccessibleDescription = "Validated";
             this.txtPass.AllowDrop = true;
             this.txtPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
             this.txtPass.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -378,13 +383,14 @@
             this.txtPass.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
             this.txtPass.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
             this.txtPass.LineThickness = 3;
-            this.txtPass.Location = new System.Drawing.Point(4, 4);
+            this.txtPass.Location = new System.Drawing.Point(4, 3);
             this.txtPass.Margin = new System.Windows.Forms.Padding(4);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(298, 44);
             this.txtPass.TabIndex = 0;
+            this.txtPass.Tag = "senha";
             this.txtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtPass.OnValueChanged += new System.EventHandler(this.txtBoxMyAccount_OnValueChanged);
+            this.txtPass.OnValueChanged += new System.EventHandler(this.txtBoxMyAccount_MouseLeave);
             // 
             // ebtnAlterarPlano
             // 
@@ -414,13 +420,14 @@
             this.txtUser.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
             this.txtUser.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
             this.txtUser.LineThickness = 3;
-            this.txtUser.Location = new System.Drawing.Point(4, 4);
+            this.txtUser.Location = new System.Drawing.Point(4, 3);
             this.txtUser.Margin = new System.Windows.Forms.Padding(4);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(298, 44);
             this.txtUser.TabIndex = 0;
+            this.txtUser.Tag = "usuario";
             this.txtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtUser.OnValueChanged += new System.EventHandler(this.txtBoxMyAccount_OnValueChanged);
+            this.txtUser.OnValueChanged += new System.EventHandler(this.txtBoxMyAccount_MouseLeave);
             // 
             // MinhaConta
             // 
