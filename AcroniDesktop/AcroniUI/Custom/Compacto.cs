@@ -1139,7 +1139,7 @@ namespace AcroniUI.Custom
                         catch (Exception e) { MessageBox.Show(e.Message); }
                     }
                 else
-                    using (SqlCommand sqlCommand = new SqlCommand($"update tblTecladoCustomizado set imagem_teclado = @img where id_colecao like (select id_colecao from tblColecao where id_cliente = {Share.User.ID}) and id_cliente like "+Share.User.ID, sqlConnection))
+                    using (SqlCommand sqlCommand = new SqlCommand($"update tblTecladoCustomizado set imagem_teclado = @img where id_colecao like (select id_colecao from tblColecao where id_cliente = {Share.User.ID}) and id_cliente like "+Share.User.ID+$" and nickname like '{Share.Keyboard.NickName}'", sqlConnection))
                     {
                         sqlCommand.Parameters.AddWithValue("@img", img);
                         sqlCommand.ExecuteNonQuery();

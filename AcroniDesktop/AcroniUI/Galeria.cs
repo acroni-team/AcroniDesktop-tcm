@@ -354,7 +354,7 @@ namespace AcroniUI
                                         {
                                             sqlConnection.Open();
 
-                                            using (SqlCommand sqlCommand = new SqlCommand($"update tblColecao set nick_colecao = '{selectColor.CollectionName}' where nick_colecao like '" + collection.CollectionName + "' and id_cliente like (select id_cliente from tblCliente where usuario like '" + SQLConnection.nome_usuario + "')", sqlConnection))
+                                            using (SqlCommand sqlCommand = new SqlCommand($"update tblColecao set nick_colecao = '{selectColor.CollectionName}' where nick_colecao like '" + collection.CollectionName + "' and id_cliente = "+Share.User.ID, sqlConnection))
                                             {
                                                 sqlCommand.ExecuteNonQuery();
                                             }                                      

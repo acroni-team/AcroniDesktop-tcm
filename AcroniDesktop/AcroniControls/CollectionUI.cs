@@ -51,19 +51,17 @@ namespace AcroniControls
             using (SqlConnection sqlConnection = new SqlConnection("Data Source = " + Environment.MachineName + "\\SQLEXPRESS; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7"))
             {
                 sqlConnection.Open();
-                using (SqlCommand sqlCommand = new SqlCommand("select nick_colecao from tblColecao where id_cliente in (select id_cliente from tblCliente where usuario like '" + SQLConnection.nome_usuario + "')", sqlConnection))
+                using (SqlCommand sqlCommand = new SqlCommand($"select nick_colecao from tblColecao where id_cliente = {Share.User.ID}", sqlConnection))
                 {
                     using (SqlDataReader return_value = sqlCommand.ExecuteReader())
                     {
-                        if (return_value.HasRows)
+                        while (return_value.Read())
                         {
-                            return_value.Read();
-                            for (int i = 0; i < return_value.FieldCount; i++)
-                                if (return_value[i].ToString().Equals(this.lblColecao1.Text))
-                                {
-                                    alreadyExistsThisCollection = true;
-                                    break;
-                                }
+                            if (return_value[0].ToString().Equals(this.lblColecao1.Text))
+                            {
+                                alreadyExistsThisCollection = true;
+                                break;
+                            }
                         }
                     }
                 }

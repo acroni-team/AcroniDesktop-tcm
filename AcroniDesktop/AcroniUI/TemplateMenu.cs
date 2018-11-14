@@ -74,36 +74,44 @@ namespace AcroniUI
                         c.Visible = true;
                     i++;
                 }
-
-                    //    if (conexão_SQL.State != ConnectionState.Open)
-                    //        conexão_SQL.Open();
-
-                    //    using (comando_SQL = new SqlCommand($"select quantidade_teclados from tblCliente where id_cliente like '{SQLConnection.nome_usuario}'", conexão_SQL))
-                    //    {
-                    //        using (SqlDataReader sdr = comando_SQL.ExecuteReader())
-                    //        {
-                    //            sdr.Read();
-
-                    //            if ((int)sdr[0] == 0)
-                    //                Share.User.KeyboardQuantity = 0;
-                    //            else
-                    //                Share.User.KeyboardQuantity = (int)sdr[0];
-
-                    //            for (int a = 0; a < Share.User.KeyboardQuantity; a++)
-                    //            {
-                    //                if (Share.User.KeyboardQuantity != 0)
-                    //                    espacoArmazenamento.Controls[$"pnlPreenchido{i + 1}"].Visible = true;
-                    //                else
-                    //                {
-                    //                    for (int j = 0; j < 5; j++)
-                    //                    {
-                    //                        espacoArmazenamento.Controls[$"pnlPreenchido{j + 1}"].Visible = false;
-                    //                    }
-                    //                }
-                    //            }
-                    //        }
-                    //    }
+                using (SqlConnection sqlConnection = new SqlConnection("Data Source = " + Environment.MachineName + "\\SQLEXPRESS; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7"))
+                {
+                    sqlConnection.Open();               
+                    using (SqlCommand sqlCommand = new SqlCommand($"update tblCliente set quantidade_teclados = {Share.User.KeyboardQuantity} where id_cliente = {Share.User.ID}", sqlConnection))
+                    {
+                        sqlCommand.ExecuteNonQuery();
+                    }
                 }
+
+                        //    if (conexão_SQL.State != ConnectionState.Open)
+                        //        conexão_SQL.Open();
+
+                        //    using (comando_SQL = new SqlCommand($"select quantidade_teclados from tblCliente where id_cliente like '{SQLConnection.nome_usuario}'", conexão_SQL))
+                        //    {
+                        //        using (SqlDataReader sdr = comando_SQL.ExecuteReader())
+                        //        {
+                        //            sdr.Read();
+
+                        //            if ((int)sdr[0] == 0)
+                        //                Share.User.KeyboardQuantity = 0;
+                        //            else
+                        //                Share.User.KeyboardQuantity = (int)sdr[0];
+
+                        //            for (int a = 0; a < Share.User.KeyboardQuantity; a++)
+                        //            {
+                        //                if (Share.User.KeyboardQuantity != 0)
+                        //                    espacoArmazenamento.Controls[$"pnlPreenchido{i + 1}"].Visible = true;
+                        //                else
+                        //                {
+                        //                    for (int j = 0; j < 5; j++)
+                        //                    {
+                        //                        espacoArmazenamento.Controls[$"pnlPreenchido{j + 1}"].Visible = false;
+                        //                    }
+                        //                }
+                        //            }
+                        //        }
+                        //    }
+                    }
         }
         //if(Share.User.isPremiumAccount)
         //using (SqlConnection conn = new SqlConnection(SQLConnection.nome_conexao))
