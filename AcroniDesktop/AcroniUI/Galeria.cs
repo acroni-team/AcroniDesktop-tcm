@@ -354,14 +354,10 @@ namespace AcroniUI
                                         {
                                             sqlConnection.Open();
 
-                                            using (SqlCommand sqlCommand = new SqlCommand($"update tblColecao set nick_colecao = '{selectColor.CollectionName}' where nick_colecao like '" + Share.Collection.CollectionName + "' and id_cliente like (select id_cliente from tblCliente where usuario like '" + SQLConnection.nome_usuario + "')", sqlConnection))
+                                            using (SqlCommand sqlCommand = new SqlCommand($"update tblColecao set nick_colecao = '{selectColor.CollectionName}' where nick_colecao like '" + collection.CollectionName + "' and id_cliente like (select id_cliente from tblCliente where usuario like '" + SQLConnection.nome_usuario + "')", sqlConnection))
                                             {
                                                 sqlCommand.ExecuteNonQuery();
-                                            }
-                                            using (SqlCommand sqlCommand = new SqlCommand($"delete from tblColecao where nick_colecao like '{collection.CollectionName}' and id_cliente like {Share.User.ID}", sqlConnection))
-                                            {
-                                                sqlCommand.ExecuteNonQuery();
-                                            }
+                                            }                                      
                                             }
                                         collection.CollectionName = selectColor.CollectionName;
                                     }

@@ -1117,13 +1117,14 @@ namespace AcroniUI.Custom
                     {
                         if (return_value.HasRows)
                         {
-                            return_value.Read();
-                            for (int i = 0; i < return_value.FieldCount; i++)
-                                if (return_value[i].ToString().Equals(Share.Keyboard.NickName))
+                            while(return_value.Read())
+                            {
+                                if (return_value[0].ToString().Equals(Share.Keyboard.NickName))
                                 {
                                     alreadyExistsThisKeyboard = true;
                                     break;
                                 }
+                            }
                         }
                     }
                 }
