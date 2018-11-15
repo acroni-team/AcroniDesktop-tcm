@@ -41,12 +41,13 @@ namespace AcroniUI
             #region Verificar conectividade com internet
 
             #endregion
+            
         }
         #region Obter informações do cliente pelo banco
         public void trocar_nome_usuario(String usuario) => lblNomeUsu.Text = SQLConnection.nome_usuario;
         //public void trocar_plano_usuario(String plano) => lblPlanoUsu.Text += plano;
 
-        public void trocar_imagem_usuario(Image imagem) => ImgUsu.Image = imagem;
+        public void trocar_imagem_usuario(Image imagem) => ImgUsu.BackgroundImage = imagem;
         SqlConnection conexão_SQL = new SqlConnection(SQLConnection.nome_conexao);
         SqlCommand comando_SQL;
 
@@ -259,12 +260,14 @@ namespace AcroniUI
 
         private void btnConfig_Click(object sender, EventArgs e)
         {
-            (new MinhaConta()).ShowDialog();
+            this.Close();
+            (new MinhaConta()).Show();
         }
 
         private void btnEditarMinhaConta_Click(object sender, EventArgs e)
         {
-            (new MinhaConta()).ShowDialog();
+            this.Close();
+            (new MinhaConta()).Show();
         }
     }
 }

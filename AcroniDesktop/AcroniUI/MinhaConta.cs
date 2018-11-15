@@ -204,6 +204,13 @@ namespace AcroniUI
                 {
                     bmp = new Bitmap(Image.FromFile(profilePic.FileName));
                     pnlUserImg.BackgroundImage = bmp;
+                    pnlUserImg.AccessibleDescription = "Validated";
+                    nameofTextbox.Add(pnlUserImg.Name);
+                    btnSave.BackColor = Color.FromArgb(0, 147, 255);
+                    btnSave.Text = "Salvar";
+                    if (btnSave.Tag.Equals("Dont handler"))
+                        btnSave.Click += btnSave_Click;
+                    btnSave.Tag = "Has handler";
                 }
             }
         }
@@ -212,27 +219,29 @@ namespace AcroniUI
         {   
             foreach (String name in nameofTextbox)
             {
-                if ((Controls.Find(name, true))[0].AccessibleDescription.Equals("Validated"))
-                    SQLMethods.UPDATE("UPDATE tblCliente SET " + (Controls.Find(name, true))[0].Tag + " = '" + (Controls.Find(name, true))[0].Text + "' WHERE id_cliente = " + Share.User.ID);
-                
+                if ((Controls.Find(name, true))[0].AccessibleDescription.Equals("Validated")) {
+                    if (!(Controls.Find(name, true))[0].Name.Equals("pnlUserImg"))
+                        SQLMethods.UPDATE("UPDATE tblCliente SET " + (Controls.Find(name, true))[0].Tag + " = '" + (Controls.Find(name, true))[0].Text + "' WHERE id_cliente = " + Share.User.ID);
+                    else
+                    {
+                        using (SqlConnection conn = new SqlConnection(SQLConnection.nome_conexao))
+                        {
+                            conn.Open();
+                            byte[] img = ImageConvert.ImageToByteArray(bmp, ImageFormat.Bmp);
+
+                            using (SqlCommand comm = new SqlCommand($"update tblCliente set imagem_cliente = @img where usuario like '{SQLConnection.nome_usuario}'", conn))
+                            {
+                                comm.Parameters.AddWithValue("@img", img);
+                                comm.ExecuteNonQuery();
+                                pnlUserImg.BackgroundImage = bmp;
+                            }
+                        }
+                    }           
+                }
                 else
                 {
                     (Controls.Find(name, true))[0].Parent.BackColor = Color.Firebrick;
                     (Controls.Find(name, true))[0].ForeColor = Color.Firebrick;
-                }
-            }
-            if (!(bmp is null))
-            {
-                using (SqlConnection conn = new SqlConnection(SQLConnection.nome_conexao))
-                {
-                    conn.Open();
-                    byte[] img = ImageConvert.ImageToByteArray(bmp, ImageFormat.Bmp);
-
-                    using (SqlCommand comm = new SqlCommand($"update tblCliente set imagem_cliente = @img where usuario like '{SQLConnection.nome_usuario}'", conn))
-                    {
-                        comm.Parameters.AddWithValue("@img", img);
-                        comm.ExecuteNonQuery();
-                    }
                 }
             }
             btnSave.BackColor = Color.FromArgb(34, 36, 40);

@@ -823,6 +823,13 @@ namespace AcroniUI.Custom
         #endregion
 
         #region Carregar e salvar teclado
+
+        private void AtualizarLabels()
+        {
+            lblKeyboardName.Text = Share.Keyboard.NickName;
+            lblCollectionName.Text = Share.Collection.CollectionName;
+        }
+
         private void LoadKeyboard()
         {
             lblKeyboardName.Text = Share.Keyboard.NickName;
@@ -1149,6 +1156,10 @@ namespace AcroniUI.Custom
 
         #endregion
 
+        private void pnlCustomizingMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
 

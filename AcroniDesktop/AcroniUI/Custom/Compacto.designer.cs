@@ -379,6 +379,7 @@ namespace AcroniUI.Custom
             this.pnlCustomizingMenu.Name = "pnlCustomizingMenu";
             this.pnlCustomizingMenu.Size = new System.Drawing.Size(1280, 116);
             this.pnlCustomizingMenu.TabIndex = 16;
+            this.pnlCustomizingMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlCustomizingMenu_Paint);
             // 
             // lblKeyboardName
             // 

@@ -186,7 +186,8 @@
             // ImgUsu
             // 
             this.ImgUsu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(54)))), ((int)(((byte)(63)))));
-            this.ImgUsu.Image = ((System.Drawing.Image)(resources.GetObject("ImgUsu.Image")));
+            this.ImgUsu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ImgUsu.BackgroundImage")));
+            this.ImgUsu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ImgUsu.Location = new System.Drawing.Point(118, 24);
             this.ImgUsu.Name = "ImgUsu";
             this.ImgUsu.Size = new System.Drawing.Size(82, 82);

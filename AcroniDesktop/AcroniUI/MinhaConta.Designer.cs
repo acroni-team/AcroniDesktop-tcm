@@ -269,6 +269,7 @@
             this.pnlUserImg.Margin = new System.Windows.Forms.Padding(0);
             this.pnlUserImg.Name = "pnlUserImg";
             this.pnlUserImg.Size = new System.Drawing.Size(180, 180);
+            this.pnlUserImg.Tag = "imagem_cliente";
             this.pnlUserImg.TabIndex = 111;
             this.pnlUserImg.MouseEnter += new System.EventHandler(this.pnlUserImg_MouseEnter);
             // 
@@ -445,7 +446,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.apnlCPF);
             this.Controls.Add(this.apnlNome);
-            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "MinhaConta";
             this.Text = "MinhaConta";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MinhaConta_FormClosing);
