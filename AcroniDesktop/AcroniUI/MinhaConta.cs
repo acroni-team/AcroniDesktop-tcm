@@ -71,7 +71,7 @@ namespace AcroniUI
         }
 
         SqlConnection conexao_SQL = new SqlConnection(SQLConnection.nome_conexao);
-        SqlCommand comando_SQL;
+        //SqlCommand comando_SQL;
 
         Regex validacao_email = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
 

@@ -1,0 +1,7 @@
+C:\Users\gui_m\Documents\AcroniDesktop\AcroniDesktop\AcroniLibrary\bin\x86\Debug\AcroniLibrary.dll
+C:\Users\gui_m\Documents\AcroniDesktop\AcroniDesktop\AcroniLibrary\bin\x86\Debug\AcroniLibrary.pdb
+C:\Users\gui_m\Documents\AcroniDesktop\AcroniDesktop\AcroniLibrary\bin\x86\Debug\Bunifu_UI_v1.52.dll
+C:\Users\gui_m\Documents\AcroniDesktop\AcroniDesktop\AcroniLibrary\obj\x86\Debug\AcroniLibrary.csproj.CoreCompileInputs.cache
+C:\Users\gui_m\Documents\AcroniDesktop\AcroniDesktop\AcroniLibrary\obj\x86\Debug\AcroniLibrary.csproj.CopyComplete
+C:\Users\gui_m\Documents\AcroniDesktop\AcroniDesktop\AcroniLibrary\obj\x86\Debug\AcroniLibrary.dll
+C:\Users\gui_m\Documents\AcroniDesktop\AcroniDesktop\AcroniLibrary\obj\x86\Debug\AcroniLibrary.pdb
