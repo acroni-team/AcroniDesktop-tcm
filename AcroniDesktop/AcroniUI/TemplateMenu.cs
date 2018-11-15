@@ -210,6 +210,11 @@ namespace AcroniUI
             }
 
         }
+        protected void ChangeClientImage(Bitmap bmp)
+        {
+            ImgUsu.BackgroundImage = bmp;
+        }
+
         protected virtual void btnAbrirGaleria_Click(object sender, EventArgs e)
         {
             Galeria galeria = new Galeria(false);

@@ -233,7 +233,7 @@ namespace AcroniUI
                             {
                                 comm.Parameters.AddWithValue("@img", img);
                                 comm.ExecuteNonQuery();
-                                pnlUserImg.BackgroundImage = bmp;
+                                ChangeClientImage(bmp);
                             }
                         }
                     }           
