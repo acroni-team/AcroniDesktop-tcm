@@ -361,9 +361,9 @@ namespace AcroniUI.LoginAndSignUp
                                         SQLConnection.nome_usuario = txtCadApelido.Text;
                                         Share.User = new User();
                                         //(new AcroniControls.AcroniMessageBoxConfirm("Cadastro concluido!")).Show();
-                                        if (!File.Exists($@"{Application.StartupPath}\..\..\{txtEntrar.Text}.acr"))
+                                        if (!File.Exists($@"{Application.StartupPath}\Users\{txtEntrar.Text}.acr"))
                                         {
-                                            using (FileStream savearchive = new FileStream($@"{Application.StartupPath}\..\..\{txtEntrar.Text}.acr", FileMode.OpenOrCreate))
+                                            using (FileStream savearchive = new FileStream($@"{Application.StartupPath}\Users\{txtEntrar.Text}.acr", FileMode.OpenOrCreate))
                                             {
                                                 BinaryFormatter Serializer = new BinaryFormatter();
                                                 Serializer.Serialize(savearchive, Share.User);

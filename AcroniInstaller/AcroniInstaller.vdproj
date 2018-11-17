@@ -15,6 +15,18 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_0746E626BC4F42BFA0ADA01B5001E6BD"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_0793113A0FC0421D9BCDC0EA579C7065"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_3589CD5E86F72BE903E6E5685C2C27BD"
         "OwnerKey" = "8:_99DB54822DD2B4AFF956DE97E6E95C3E"
         "MsmSig" = "8:_UNDEFINED"
@@ -22,25 +34,37 @@
         "Entry"
         {
         "MsmKey" = "8:_3589CD5E86F72BE903E6E5685C2C27BD"
-        "OwnerKey" = "8:_60886D3241184DB489AD1EA6642D24DB"
+        "OwnerKey" = "8:_0793113A0FC0421D9BCDC0EA579C7065"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_60886D3241184DB489AD1EA6642D24DB"
+        "MsmKey" = "8:_36F0B525644F48968E0C31E11A373461"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_59489AE8425C453F91CE86ACEC0177C0"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_64DE122BF585B7BDA750CFAFE9825038"
-        "OwnerKey" = "8:_60886D3241184DB489AD1EA6642D24DB"
+        "OwnerKey" = "8:_0793113A0FC0421D9BCDC0EA579C7065"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_99DB54822DD2B4AFF956DE97E6E95C3E"
-        "OwnerKey" = "8:_60886D3241184DB489AD1EA6642D24DB"
+        "OwnerKey" = "8:_0793113A0FC0421D9BCDC0EA579C7065"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_B62DC354DA12429FAA0F324D39250329"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -52,7 +76,7 @@
         "Entry"
         {
         "MsmKey" = "8:_C8A70D70BE3A2CBA5E79FAF7F81F6A94"
-        "OwnerKey" = "8:_60886D3241184DB489AD1EA6642D24DB"
+        "OwnerKey" = "8:_0793113A0FC0421D9BCDC0EA579C7065"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -64,7 +88,7 @@
         "Entry"
         {
         "MsmKey" = "8:_D26031662201B0281806CEF0D487215F"
-        "OwnerKey" = "8:_60886D3241184DB489AD1EA6642D24DB"
+        "OwnerKey" = "8:_0793113A0FC0421D9BCDC0EA579C7065"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -82,7 +106,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_60886D3241184DB489AD1EA6642D24DB"
+        "OwnerKey" = "8:_0793113A0FC0421D9BCDC0EA579C7065"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -204,6 +228,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0746E626BC4F42BFA0ADA01B5001E6BD"
+            {
+            "SourcePath" = "8:..\\AcroniDesktop\\AcroniUI\\bin\\Debug\\Images\\trash.png"
+            "TargetName" = "8:trash.png"
+            "Tag" = "8:"
+            "Folder" = "8:_5DAFF04D8B074F5583A522FD6B7B8E75"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_3589CD5E86F72BE903E6E5685C2C27BD"
             {
             "AssemblyRegister" = "3:1"
@@ -233,6 +277,46 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_36F0B525644F48968E0C31E11A373461"
+            {
+            "SourcePath" = "8:..\\AcroniDesktop\\AcroniUI\\bin\\Debug\\Images\\imagemPadrao.jpg"
+            "TargetName" = "8:imagemPadrao.jpg"
+            "Tag" = "8:"
+            "Folder" = "8:_98F54B9EE1BA4238A2648276A66B8DF4"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_59489AE8425C453F91CE86ACEC0177C0"
+            {
+            "SourcePath" = "8:..\\AcroniDesktop\\AcroniUI\\bin\\Debug\\Images\\pen.png"
+            "TargetName" = "8:pen.png"
+            "Tag" = "8:"
+            "Folder" = "8:_5DAFF04D8B074F5583A522FD6B7B8E75"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_64DE122BF585B7BDA750CFAFE9825038"
@@ -295,6 +379,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B62DC354DA12429FAA0F324D39250329"
+            {
+            "SourcePath" = "8:..\\..\\..\\..\\Desktop\\Me Deixa existir.txt"
+            "TargetName" = "8:Me Deixa existir.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_0AF0EAA24A4A464EBFC80CEB4E7F7575"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C8A70D70BE3A2CBA5E79FAF7F81F6A94"
@@ -382,6 +486,29 @@
         }
         "FileType"
         {
+            "{5EB83D71-FA18-4901-BE56-DE22E13CC478}:_3A311A26870247AAAB85B9AA36F2AB67"
+            {
+            "Name" = "8:Acroni File"
+            "Description" = "8:"
+            "Extensions" = "8:.acr"
+            "MIME" = "8:"
+            "Icon" = "8:_EC1F135BE5D742A6999AC0C874911826"
+            "IconIndex" = "3:0"
+                "Command"
+                {
+                "Command" = "8:_0793113A0FC0421D9BCDC0EA579C7065"
+                }
+                "Verbs"
+                {
+                    "{95C0C507-CBF0-42B8-B119-07219E384A4A}:_B3E94DD9830D4BADA492552631D9A6D4"
+                    {
+                    "Command" = "8:&Open"
+                    "Verb" = "8:open"
+                    "Arguments" = "8:\"%1\""
+                    "Order" = "3:0"
+                    }
+                }
+            }
         }
         "Folder"
         {
@@ -422,10 +549,32 @@
                     "Name" = "8:Users"
                     "AlwaysCreate" = "11:TRUE"
                     "Condition" = "8:"
-                    "Transitive" = "11:FALSE"
+                    "Transitive" = "11:TRUE"
                     "Property" = "8:_E0446A7B56E946F2B751E451F4B0B1FF"
                         "Folders"
                         {
+                        }
+                    }
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_5DAFF04D8B074F5583A522FD6B7B8E75"
+                    {
+                    "Name" = "8:Images"
+                    "AlwaysCreate" = "11:TRUE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:TRUE"
+                    "Property" = "8:_319EADFFFA934340844AB38D8BB9774E"
+                        "Folders"
+                        {
+                            "{9EF0B969-E518-4E46-987F-47570745A589}:_98F54B9EE1BA4238A2648276A66B8DF4"
+                            {
+                            "Name" = "8:PlaceHolder"
+                            "AlwaysCreate" = "11:TRUE"
+                            "Condition" = "8:"
+                            "Transitive" = "11:TRUE"
+                            "Property" = "8:_6A9EC9D76F484FDDB40A27F867C41213"
+                                "Folders"
+                                {
+                                }
+                            }
                         }
                     }
                 }
@@ -575,7 +724,7 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_60886D3241184DB489AD1EA6642D24DB"
+            "Target" = "8:_0793113A0FC0421D9BCDC0EA579C7065"
             "Folder" = "8:_4EAB41AFE69F48228BA74675D8EB47B3"
             "WorkingFolder" = "8:_96BD986584044A129A899221C598E3A6"
             "Icon" = "8:_EC1F135BE5D742A6999AC0C874911826"
@@ -589,7 +738,7 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_60886D3241184DB489AD1EA6642D24DB"
+            "Target" = "8:_0793113A0FC0421D9BCDC0EA579C7065"
             "Folder" = "8:_47B931B329FF4DA08ADE09CEB83FCC98"
             "WorkingFolder" = "8:_96BD986584044A129A899221C598E3A6"
             "Icon" = "8:_EC1F135BE5D742A6999AC0C874911826"
@@ -994,7 +1143,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_60886D3241184DB489AD1EA6642D24DB"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_0793113A0FC0421D9BCDC0EA579C7065"
             {
             "SourcePath" = "8:..\\AcroniDesktop\\AcroniUI\\obj\\x86\\Debug\\AcroniUI.exe"
             "TargetName" = "8:"

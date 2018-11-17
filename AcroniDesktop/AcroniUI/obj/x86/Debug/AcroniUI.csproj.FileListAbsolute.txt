@@ -62,3 +62,4 @@ C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniUI\obj\x86\Deb
 C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniUI\obj\x86\Debug\AcroniUI.csproj.CopyComplete
 C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniUI\obj\x86\Debug\AcroniUI.exe
 C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniUI\obj\x86\Debug\AcroniUI.pdb
+C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniUI\obj\x86\Debug\AcroniUI.csprojAssemblyReference.cache

@@ -148,7 +148,7 @@ namespace AcroniUI.LoginAndSignUp
         {            
             if (txtCodigo.Text.ToUpper().Equals(String_de_confirmacao))
             {
-                FileStream leitor_imagem = new FileStream($@"{Application.StartupPath}\..\..\Images\imagensPlaceholder\Imagem padrão para perfil.png", FileMode.Open, FileAccess.Read);
+                FileStream leitor_imagem = new FileStream($@"{Application.StartupPath}\Images\PlaceHolder\imagemPadrao.jpg", FileMode.Open, FileAccess.Read);
                 BinaryReader convertedor_binario = new BinaryReader(leitor_imagem);
                 byte[] img = convertedor_binario.ReadBytes((int)leitor_imagem.Length);
                 SQLConnection.nome_usuario = usuario_public;
