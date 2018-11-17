@@ -12,6 +12,10 @@ using System.Runtime.Serialization.Formatters.Binary;
 using AcroniLibrary.SQL;
 using AcroniLibrary.FileInfo;
 using AcroniLibrary.DesignMethods;
+using System.Security.Permissions;
+using System.Security;
+using System.Security.Principal;
+using System.Diagnostics;
 
 namespace AcroniUI.LoginAndSignUp
 {
@@ -172,11 +176,12 @@ namespace AcroniUI.LoginAndSignUp
                             {
                                 SQLConnection.nome_usuario = txtEntrar.Text;
                                 Share.User = new User();
-                                if (File.Exists($@"{Application.StartupPath}\..\..\{txtEntrar.Text}.acr"))
+                                if (File.Exists($@"{Application.StartupPath}\Users\{txtEntrar.Text}.acr"))
                                     Share.User.CatchFromFile();
                                 else
+                                {
                                     MetodoParaCriarPerfilADM();
-                       
+                                }
                                 if (resposta[1].ToString() == "p")
                                     Share.User.isPremiumAccount = true;
                                 Share.User.SendToFile();
@@ -313,7 +318,7 @@ namespace AcroniUI.LoginAndSignUp
         {
             Share.User = new User();
 
-            using (FileStream savearchive = new FileStream($@"{Application.StartupPath}\..\..\{txtEntrar.Text}.acr", FileMode.Create))
+            using (FileStream savearchive = new FileStream($@"{Application.StartupPath}\{txtEntrar.Text}.acr", FileMode.Create))
             {
                 BinaryFormatter Serializer = new BinaryFormatter();
                 Serializer.Serialize(savearchive, Share.User);

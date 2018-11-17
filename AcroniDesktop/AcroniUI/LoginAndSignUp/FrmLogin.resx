@@ -151,7 +151,7 @@
     <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>100</value>
+    <value>25</value>
   </metadata>
   <data name="btnEntrar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -3313,7 +3313,7 @@
     <value>48, 442</value>
   </data>
   <data name="alblProcurandoPorTeclados.Size" type="System.Drawing.Size, System.Drawing">
-    <value>322, 126</value>
+    <value>325, 126</value>
   </data>
   <data name="alblProcurandoPorTeclados.TabIndex" type="System.Int32, mscorlib">
     <value>75</value>

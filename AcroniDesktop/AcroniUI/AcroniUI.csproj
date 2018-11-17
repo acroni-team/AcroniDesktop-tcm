@@ -52,6 +52,9 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="AcroniControls">
       <HintPath>..\AcroniControls\bin\Debug\AcroniControls.dll</HintPath>
@@ -255,6 +258,7 @@
     <Content Include="Images\Botoes da fonte\center.png" />
     <Content Include="Images\Botoes da fonte\left.png" />
     <Content Include="Images\Botoes da fonte\right.png" />
+    <None Include="app.manifest" />
     <None Include="Images\checkmark.png" />
     <Content Include="Images\compacto.png" />
     <Content Include="Images\fullsize.png" />

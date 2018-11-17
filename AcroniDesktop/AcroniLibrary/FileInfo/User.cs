@@ -19,7 +19,7 @@ namespace AcroniLibrary.FileInfo
 
         public void SendToFile()
         {
-            using (FileStream savearchive = new FileStream($@"{Application.StartupPath}\..\..\{SQLConnection.nome_usuario}.acr", FileMode.OpenOrCreate))
+            using (FileStream savearchive = new FileStream($@"{Application.StartupPath}\Users\{SQLConnection.nome_usuario}.acr", FileMode.OpenOrCreate))
             {
                 BinaryFormatter objectToByteArray = new BinaryFormatter();
                 objectToByteArray.Serialize(savearchive, Share.User);
@@ -27,7 +27,7 @@ namespace AcroniLibrary.FileInfo
         }
         public void CatchFromFile()
         {
-            using (FileStream savearchive = new FileStream($@"{Application.StartupPath}\..\..\{SQLConnection.nome_usuario}.acr", FileMode.Open))
+            using (FileStream savearchive = new FileStream($@"{Application.StartupPath}\Users\{SQLConnection.nome_usuario}.acr", FileMode.Open))
             {
                 BinaryFormatter objectToByteArray = new BinaryFormatter();
                 Share.User = (User)objectToByteArray.Deserialize(savearchive);
