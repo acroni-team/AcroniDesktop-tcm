@@ -148,6 +148,11 @@
     <Compile Include="MinhaConta.Designer.cs">
       <DependentUpon>MinhaConta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="TemplateMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,11 +179,6 @@
       <DependentUpon>Tenkeyless.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
-    <Compile Include="Properties\Resources1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="SelectKeyboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -241,7 +241,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="SelectKeyboard.resx">
       <DependentUpon>SelectKeyboard.cs</DependentUpon>

@@ -15,13 +15,25 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_050DCB7EB46B4AAB90DBF91A88F57664"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_0746E626BC4F42BFA0ADA01B5001E6BD"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_0793113A0FC0421D9BCDC0EA579C7065"
+        "MsmKey" = "8:_1D2788816C7A4510800444BFFC28CBD4"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_31C45BDB923A460FA38D8CAC3446B827"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -34,7 +46,7 @@
         "Entry"
         {
         "MsmKey" = "8:_3589CD5E86F72BE903E6E5685C2C27BD"
-        "OwnerKey" = "8:_0793113A0FC0421D9BCDC0EA579C7065"
+        "OwnerKey" = "8:_E50044A10C924CF2873FAF09C81FBF9E"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -51,19 +63,49 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_609BEC7E3F8942C99E5B039B476AD955"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_64DE122BF585B7BDA750CFAFE9825038"
-        "OwnerKey" = "8:_0793113A0FC0421D9BCDC0EA579C7065"
+        "OwnerKey" = "8:_E50044A10C924CF2873FAF09C81FBF9E"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_76FBE989B6DE462E9D9B62E38BFF7FC6"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_95664961CD0545ED87E1993702E25CCE"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_98BCA7262C0344A381A14DB8723E1B74"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_99DB54822DD2B4AFF956DE97E6E95C3E"
-        "OwnerKey" = "8:_0793113A0FC0421D9BCDC0EA579C7065"
+        "OwnerKey" = "8:_E50044A10C924CF2873FAF09C81FBF9E"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_B62DC354DA12429FAA0F324D39250329"
+        "MsmKey" = "8:_A3ECC9F2BCBC4F358D7D3637D1E2A0BD"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_C60ABB36B38446F2A1DB84F8AC431437"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -76,7 +118,7 @@
         "Entry"
         {
         "MsmKey" = "8:_C8A70D70BE3A2CBA5E79FAF7F81F6A94"
-        "OwnerKey" = "8:_0793113A0FC0421D9BCDC0EA579C7065"
+        "OwnerKey" = "8:_E50044A10C924CF2873FAF09C81FBF9E"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -87,13 +129,67 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_D20F881F77AF4048B7D9E8BBD6A8B3A9"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_D26031662201B0281806CEF0D487215F"
-        "OwnerKey" = "8:_0793113A0FC0421D9BCDC0EA579C7065"
+        "OwnerKey" = "8:_E50044A10C924CF2873FAF09C81FBF9E"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D2B1920879464C8E8DFB5C64CFCC0B0C"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_DBD0BA665D0541D3A725F1553366733E"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_E50044A10C924CF2873FAF09C81FBF9E"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_E6BDFF8B1E424A8FA5812E9D98A810CD"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_EC1F135BE5D742A6999AC0C874911826"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F5A4506908994EE7846FB4DC2F7E2897"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F79E448F89524B769BE52B3C55C4937A"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F82AA265537C4052928D3B34780853E2"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_FE9092BF7EB047DDB00367C1477FD72F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -106,7 +202,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_0793113A0FC0421D9BCDC0EA579C7065"
+        "OwnerKey" = "8:_E50044A10C924CF2873FAF09C81FBF9E"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -228,12 +324,72 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_050DCB7EB46B4AAB90DBF91A88F57664"
+            {
+            "SourcePath" = "8:..\\AcroniDesktop\\AcroniUI\\Images\\Teclas\\lblCb14sExtensao.png"
+            "TargetName" = "8:lblCb14sExtensao.png"
+            "Tag" = "8:"
+            "Folder" = "8:_417BE21D84E24D48B5547F64BF6B320E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0746E626BC4F42BFA0ADA01B5001E6BD"
             {
             "SourcePath" = "8:..\\AcroniDesktop\\AcroniUI\\bin\\Debug\\Images\\trash.png"
             "TargetName" = "8:trash.png"
             "Tag" = "8:"
             "Folder" = "8:_5DAFF04D8B074F5583A522FD6B7B8E75"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1D2788816C7A4510800444BFFC28CBD4"
+            {
+            "SourcePath" = "8:..\\AcroniDesktop\\AcroniUI\\Images\\Teclas\\lblCe4s.png"
+            "TargetName" = "8:lblCe4s.png"
+            "Tag" = "8:"
+            "Folder" = "8:_417BE21D84E24D48B5547F64BF6B320E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_31C45BDB923A460FA38D8CAC3446B827"
+            {
+            "SourcePath" = "8:..\\AcroniDesktop\\AcroniUI\\Images\\Teclas\\keycapbackgrounddefault.png"
+            "TargetName" = "8:keycapbackgrounddefault.png"
+            "Tag" = "8:"
+            "Folder" = "8:_417BE21D84E24D48B5547F64BF6B320E"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -319,6 +475,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_609BEC7E3F8942C99E5B039B476AD955"
+            {
+            "SourcePath" = "8:..\\AcroniDesktop\\AcroniUI\\Images\\Teclas\\lblCe7.png"
+            "TargetName" = "8:lblCe7.png"
+            "Tag" = "8:"
+            "Folder" = "8:_417BE21D84E24D48B5547F64BF6B320E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_64DE122BF585B7BDA750CFAFE9825038"
             {
             "AssemblyRegister" = "3:1"
@@ -348,6 +524,66 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_76FBE989B6DE462E9D9B62E38BFF7FC6"
+            {
+            "SourcePath" = "8:..\\AcroniDesktop\\AcroniUI\\Images\\Teclas\\lblCd14s.png"
+            "TargetName" = "8:lblCd14s.png"
+            "Tag" = "8:"
+            "Folder" = "8:_417BE21D84E24D48B5547F64BF6B320E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_95664961CD0545ED87E1993702E25CCE"
+            {
+            "SourcePath" = "8:..\\AcroniDesktop\\AcroniUI\\UserImagesIcons\\testeIconsHistoric.hist"
+            "TargetName" = "8:testeIconsHistoric.hist"
+            "Tag" = "8:"
+            "Folder" = "8:_D7C5FAA6F91B450D8AB268219C67622D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_98BCA7262C0344A381A14DB8723E1B74"
+            {
+            "SourcePath" = "8:..\\AcroniDesktop\\AcroniUI\\Images\\Teclas\\lblCe6.png"
+            "TargetName" = "8:lblCe6.png"
+            "Tag" = "8:"
+            "Folder" = "8:_417BE21D84E24D48B5547F64BF6B320E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_99DB54822DD2B4AFF956DE97E6E95C3E"
@@ -381,12 +617,32 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B62DC354DA12429FAA0F324D39250329"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A3ECC9F2BCBC4F358D7D3637D1E2A0BD"
             {
-            "SourcePath" = "8:..\\..\\..\\..\\Desktop\\Me Deixa existir.txt"
-            "TargetName" = "8:Me Deixa existir.txt"
+            "SourcePath" = "8:..\\AcroniDesktop\\AcroniUI\\Images\\Teclas\\lblCb1s.png"
+            "TargetName" = "8:lblCb1s.png"
             "Tag" = "8:"
-            "Folder" = "8:_0AF0EAA24A4A464EBFC80CEB4E7F7575"
+            "Folder" = "8:_417BE21D84E24D48B5547F64BF6B320E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C60ABB36B38446F2A1DB84F8AC431437"
+            {
+            "SourcePath" = "8:..\\AcroniDesktop\\AcroniUI\\Images\\Teclas\\lblCe3.png"
+            "TargetName" = "8:lblCe3.png"
+            "Tag" = "8:"
+            "Folder" = "8:_417BE21D84E24D48B5547F64BF6B320E"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -432,6 +688,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D20F881F77AF4048B7D9E8BBD6A8B3A9"
+            {
+            "SourcePath" = "8:..\\AcroniDesktop\\AcroniUI\\Images\\Teclas\\lblCa14s.png"
+            "TargetName" = "8:lblCa14s.png"
+            "Tag" = "8:"
+            "Folder" = "8:_417BE21D84E24D48B5547F64BF6B320E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D26031662201B0281806CEF0D487215F"
             {
             "AssemblyRegister" = "3:1"
@@ -463,6 +739,66 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D2B1920879464C8E8DFB5C64CFCC0B0C"
+            {
+            "SourcePath" = "8:..\\AcroniDesktop\\AcroniUI\\Images\\Teclas\\lblCe5.png"
+            "TargetName" = "8:lblCe5.png"
+            "Tag" = "8:"
+            "Folder" = "8:_417BE21D84E24D48B5547F64BF6B320E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DBD0BA665D0541D3A725F1553366733E"
+            {
+            "SourcePath" = "8:..\\AcroniDesktop\\AcroniUI\\Images\\Teclas\\lblCd1s.png"
+            "TargetName" = "8:lblCd1s.png"
+            "Tag" = "8:"
+            "Folder" = "8:_417BE21D84E24D48B5547F64BF6B320E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E6BDFF8B1E424A8FA5812E9D98A810CD"
+            {
+            "SourcePath" = "8:..\\AcroniDesktop\\AcroniUI\\Images\\Teclas\\lblCc1s.png"
+            "TargetName" = "8:lblCc1s.png"
+            "Tag" = "8:"
+            "Folder" = "8:_417BE21D84E24D48B5547F64BF6B320E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EC1F135BE5D742A6999AC0C874911826"
             {
             "SourcePath" = "8:..\\..\\..\\..\\Downloads\\DesktopIcon.ico"
@@ -483,32 +819,89 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F5A4506908994EE7846FB4DC2F7E2897"
+            {
+            "SourcePath" = "8:..\\AcroniDesktop\\AcroniUI\\Images\\Teclas\\lblCe8.png"
+            "TargetName" = "8:lblCe8.png"
+            "Tag" = "8:"
+            "Folder" = "8:_417BE21D84E24D48B5547F64BF6B320E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F79E448F89524B769BE52B3C55C4937A"
+            {
+            "SourcePath" = "8:..\\AcroniDesktop\\AcroniUI\\Images\\Teclas\\lblCe1s.png"
+            "TargetName" = "8:lblCe1s.png"
+            "Tag" = "8:"
+            "Folder" = "8:_417BE21D84E24D48B5547F64BF6B320E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F82AA265537C4052928D3B34780853E2"
+            {
+            "SourcePath" = "8:..\\AcroniDesktop\\AcroniUI\\Images\\Teclas\\lblCe2s.png"
+            "TargetName" = "8:lblCe2s.png"
+            "Tag" = "8:"
+            "Folder" = "8:_417BE21D84E24D48B5547F64BF6B320E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FE9092BF7EB047DDB00367C1477FD72F"
+            {
+            "SourcePath" = "8:..\\AcroniDesktop\\AcroniUI\\Images\\Teclas\\lblCb14s.png"
+            "TargetName" = "8:lblCb14s.png"
+            "Tag" = "8:"
+            "Folder" = "8:_417BE21D84E24D48B5547F64BF6B320E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
         }
         "FileType"
         {
-            "{5EB83D71-FA18-4901-BE56-DE22E13CC478}:_3A311A26870247AAAB85B9AA36F2AB67"
-            {
-            "Name" = "8:Acroni File"
-            "Description" = "8:"
-            "Extensions" = "8:.acr"
-            "MIME" = "8:"
-            "Icon" = "8:_EC1F135BE5D742A6999AC0C874911826"
-            "IconIndex" = "3:0"
-                "Command"
-                {
-                "Command" = "8:_0793113A0FC0421D9BCDC0EA579C7065"
-                }
-                "Verbs"
-                {
-                    "{95C0C507-CBF0-42B8-B119-07219E384A4A}:_B3E94DD9830D4BADA492552631D9A6D4"
-                    {
-                    "Command" = "8:&Open"
-                    "Verb" = "8:open"
-                    "Arguments" = "8:\"%1\""
-                    "Order" = "3:0"
-                    }
-                }
-            }
         }
         "Folder"
         {
@@ -564,6 +957,17 @@
                     "Property" = "8:_319EADFFFA934340844AB38D8BB9774E"
                         "Folders"
                         {
+                            "{9EF0B969-E518-4E46-987F-47570745A589}:_417BE21D84E24D48B5547F64BF6B320E"
+                            {
+                            "Name" = "8:Teclas"
+                            "AlwaysCreate" = "11:TRUE"
+                            "Condition" = "8:"
+                            "Transitive" = "11:FALSE"
+                            "Property" = "8:_B39061FF921B47D4ADFE7D4C35E12A33"
+                                "Folders"
+                                {
+                                }
+                            }
                             "{9EF0B969-E518-4E46-987F-47570745A589}:_98F54B9EE1BA4238A2648276A66B8DF4"
                             {
                             "Name" = "8:PlaceHolder"
@@ -575,6 +979,28 @@
                                 {
                                 }
                             }
+                            "{9EF0B969-E518-4E46-987F-47570745A589}:_D7C5FAA6F91B450D8AB268219C67622D"
+                            {
+                            "Name" = "8:UserImageIcons"
+                            "AlwaysCreate" = "11:TRUE"
+                            "Condition" = "8:"
+                            "Transitive" = "11:FALSE"
+                            "Property" = "8:_51C0F3E933AA4A11A5E84E7F62228DDD"
+                                "Folders"
+                                {
+                                }
+                            }
+                        }
+                    }
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_8A4CA9C4FDD34272BC0FCC3CEDF58DF5"
+                    {
+                    "Name" = "8:UserImageIcons"
+                    "AlwaysCreate" = "11:TRUE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_19CA095AA75240439B74A002C580CDAB"
+                        "Folders"
+                        {
                         }
                     }
                 }
@@ -596,7 +1022,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Customização de Teclados"
         "ProductCode" = "8:{4382093C-8171-401C-8271-8234A868558D}"
-        "PackageCode" = "8:{87FE7206-97A8-4FFB-8EA8-BC5886C09007}"
+        "PackageCode" = "8:{362996C6-E9FF-45E3-B692-0CEBA3A28AAC}"
         "UpgradeCode" = "8:{33E64104-6828-49B2-A384-A707EEC04E82}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -609,8 +1035,8 @@
         "ARPHELPLINK" = "8:"
         "Title" = "8:AcroniInstaller"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:gui_mota_pereira@outlook.com"
-        "Keywords" = "8:"
+        "ARPCONTACT" = "8:Acroni"
+        "Keywords" = "8:Acroni"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
         "ARPPRODUCTICON" = "8:"
@@ -724,7 +1150,7 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_0793113A0FC0421D9BCDC0EA579C7065"
+            "Target" = "8:_E50044A10C924CF2873FAF09C81FBF9E"
             "Folder" = "8:_4EAB41AFE69F48228BA74675D8EB47B3"
             "WorkingFolder" = "8:_96BD986584044A129A899221C598E3A6"
             "Icon" = "8:_EC1F135BE5D742A6999AC0C874911826"
@@ -738,7 +1164,7 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_0793113A0FC0421D9BCDC0EA579C7065"
+            "Target" = "8:_E50044A10C924CF2873FAF09C81FBF9E"
             "Folder" = "8:_47B931B329FF4DA08ADE09CEB83FCC98"
             "WorkingFolder" = "8:_96BD986584044A129A899221C598E3A6"
             "Icon" = "8:_EC1F135BE5D742A6999AC0C874911826"
@@ -1143,7 +1569,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_0793113A0FC0421D9BCDC0EA579C7065"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_E50044A10C924CF2873FAF09C81FBF9E"
             {
             "SourcePath" = "8:..\\AcroniDesktop\\AcroniUI\\obj\\x86\\Debug\\AcroniUI.exe"
             "TargetName" = "8:"

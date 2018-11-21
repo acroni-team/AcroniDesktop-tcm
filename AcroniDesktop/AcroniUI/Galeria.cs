@@ -69,7 +69,7 @@ namespace AcroniUI
 
         private void LoadCollections()
         {
-            using (FileStream openarchive = new FileStream($@"{Application.StartupPath}\Users\{SQLConnection.nome_usuario}.acr", FileMode.OpenOrCreate))
+            using (FileStream openarchive = new FileStream($@"{Application.StartupPath}\Users\{SQLConnection.nome_usuario}.acr", FileMode.Open))
             {
                 BinaryFormatter ofByteArrayToObject = new BinaryFormatter();
                 Share.User = (User)ofByteArrayToObject.Deserialize(openarchive);

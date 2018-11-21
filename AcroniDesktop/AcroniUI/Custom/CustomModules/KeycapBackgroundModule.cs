@@ -25,9 +25,9 @@ namespace AcroniUI.Custom.CustomModules
                 e.ApplyElipse(c, 5);
             }
 
-            if (File.Exists($@"{Application.StartupPath}\Users\{SQLConnection.nome_usuario}IconsHistoric.hist"))
+            if (File.Exists($@"{Application.StartupPath}\UserImageIcons\{SQLConnection.nome_usuario}IconsHistoric.hist"))
             {
-                using (FileStream openarchive = new FileStream($@"{Application.StartupPath}\Users\{SQLConnection.nome_usuario}IconsHistoric.hist", FileMode.Open))
+                using (FileStream openarchive = new FileStream($@"{Application.StartupPath}\UserImageIcons\{SQLConnection.nome_usuario}IconsHistoric.hist", FileMode.Open))
                 {
                     try
                     {
@@ -114,7 +114,7 @@ namespace AcroniUI.Custom.CustomModules
                 (pnlImages.Controls[$"pnlImg{i + 1}"] as Panel).BackColor = Color.FromArgb(80, 80, 80);
                 (pnlImages.Controls[$"pnlImg{i + 1}"].Controls[$"lblPic{i + 1}"] as Label).Text = insertableArray[i].UserDefinedIconName;
 
-                using (FileStream savearchive = new FileStream($@"{Application.StartupPath}\Users\{SQLConnection.nome_usuario}IconsHistoric.hist", FileMode.Create))
+                using (FileStream savearchive = new FileStream($@"{Application.StartupPath}\{SQLConnection.nome_usuario}IconsHistoric.hist", FileMode.Create))
                 {
                     BinaryFormatter Serializer = new BinaryFormatter();
                     Serializer.Serialize(savearchive, insertableArray);
