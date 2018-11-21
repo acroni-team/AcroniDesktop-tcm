@@ -69,11 +69,13 @@ namespace AcroniUI
 
         private void LoadCollections()
         {
-            using (FileStream openarchive = new FileStream($@"{Application.StartupPath}\Users\{SQLConnection.nome_usuario}.acr", FileMode.Open))
-            {
-                BinaryFormatter ofByteArrayToObject = new BinaryFormatter();
-                Share.User = (User)ofByteArrayToObject.Deserialize(openarchive);
-            }
+            //using (FileStream openarchive = new FileStream($@"{Application.StartupPath}\Users\{SQLConnection.nome_usuario}.acr", FileMode.Open))
+            //{
+                //BinaryFormatter ofByteArrayToObject = new BinaryFormatter();
+                Share.User = new User();
+                Share.User.CatchFromFile();
+                //Share.User = (User)ofByteArrayToObject.Deserialize(openarchive);
+            //}
 
             int countCollections = 0;
 
@@ -172,8 +174,10 @@ namespace AcroniUI
         {
             short contcollections = 0;
             if (!Share.User.isPremiumAccount)
+            {
                 foreach (Collection col in Share.User.UserCollections)
                     contcollections++;
+            }
             if (contcollections < 1||Share.User.isPremiumAccount)
             {
                 AcroniMessageBoxInput collectionNameDialog = new AcroniMessageBoxInput("Insira o nome de sua coleção:");         
@@ -185,8 +189,9 @@ namespace AcroniUI
                             Share.Collection.CollectionName = collectionNameDialog.input;
                         else
                             Share.KeyboardNameNotCreated = collectionNameDialog.input;
+                        
                     }
-
+                    
                 }
                 if (!string.IsNullOrEmpty(Share.Collection.CollectionName))
                 {

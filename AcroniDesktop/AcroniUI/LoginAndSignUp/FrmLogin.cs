@@ -65,6 +65,7 @@ namespace AcroniUI.LoginAndSignUp
 
         private Form GetLayerForm()
         {
+            layerFadeForm = new Form();
             layerFadeForm.Name = "LayerFadeForm";
             layerFadeForm.Dock = DockStyle.Fill;
             layerFadeForm.Size = new Size(1280, 720);
@@ -176,7 +177,8 @@ namespace AcroniUI.LoginAndSignUp
                             {
                                 SQLConnection.nome_usuario = txtEntrar.Text;
                                 Share.User = new User();
-                                if (File.Exists($@"{Application.StartupPath}\Users\{txtEntrar.Text}.acr"))
+                                MessageBox.Show($@"{Application.StartupPath}\Users\{txtEntrar.Text}.acr");  
+                                if (File.Exists($@"{Application.StartupPath}\Acroni\Customização de Teclados\Users\{txtEntrar.Text}.acr"))
                                     Share.User.CatchFromFile();
                                 else
                                 {

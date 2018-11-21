@@ -280,11 +280,11 @@ namespace AcroniUI.Custom
                 else
                 {
                     if (keybutton.Size.Equals(new Size(38, 39)))
-                        keybutton.Parent.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Images\Teclas\keycapbackgrounddefault.png");
+                        keybutton.Parent.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Acroni\Customização de Teclados\Images\Teclas\keycapbackgrounddefault.png");
                     else
                     {
                         keybutton.Parent.BackColor = Color.Black;
-                        keybutton.Parent.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Images\Teclas\{keybutton.Name}.png");
+                        keybutton.Parent.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Acroni\Customização de Teclados\Images\Teclas\{keybutton.Name}.png");
                     }
                 }
             }
@@ -401,9 +401,9 @@ namespace AcroniUI.Custom
                         if (keycap is Panel && keycap.HasChildren)
                         {
                             if ((keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).Size.Equals(new Size(38, 39)))
-                                keycap.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Images\Teclas\keycapbackgrounddefault.png");
+                                keycap.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Acroni\Customização de Teclados\Images\Teclas\keycapbackgrounddefault.png");
                             else
-                                keycap.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Images\Teclas\{(keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).Name}.png");
+                                keycap.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Acroni\Customização de Teclados\Images\Teclas\{(keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).Name}.png");
                         }
                     }
                 }
@@ -730,11 +730,11 @@ namespace AcroniUI.Custom
                             else
                             {
                                 if ((keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).Size.Equals(new Size(38, 39)))
-                                    keycap.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Images\Teclas\keycapbackgrounddefault.png");
+                                    keycap.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Acroni\Customização de Teclados\Images\Teclas\keycapbackgrounddefault.png");
                                 else
                                 {
                                     keycap.BackColor = Color.Black;
-                                    keycap.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Images\Teclas\{(keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).Name}.png");
+                                    keycap.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Acroni\Customização de Teclados\Images\Teclas\{(keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).Name}.png");
                                 }
 
                             }
@@ -1019,7 +1019,7 @@ namespace AcroniUI.Custom
                 //        }
                 //    }
                 //}
-                ++Share.User.KeyboardQuantity;
+                Share.User.KeyboardQuantity++;
                 AcroniMessageBoxConfirm success = new AcroniMessageBoxConfirm("Teclado adicionado/salvo com sucesso!", "Ele se encontrará na coleção selecionada, em sua galeria :D");
                 success.ShowDialog();
                 Share.EditKeyboard = true;
@@ -1118,7 +1118,7 @@ namespace AcroniUI.Custom
             using (SqlConnection sqlConnection = new SqlConnection("Data Source = " + Environment.MachineName + "\\SQLEXPRESS; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7"))
             {
                 sqlConnection.Open();
-                using (SqlCommand sqlCommand = new SqlCommand($"select nickname from tblTecladoCustomizado where id_cliente = {Share.User.ID}", sqlConnection))
+                using (SqlCommand sqlCommand = new SqlCommand($"select nickname from tblTecladoCustomizado where id_cliente = {Share.User.ID} and id_colecao = {Share.Collection.CollectionID}", sqlConnection))
                 {
                     using (SqlDataReader return_value = sqlCommand.ExecuteReader())
                     {
@@ -1129,6 +1129,7 @@ namespace AcroniUI.Custom
                                 if (return_value[0].ToString().Equals(Share.Keyboard.NickName))
                                 {
                                     alreadyExistsThisKeyboard = true;
+                                    MessageBox.Show("Consulta");
                                     break;
                                 }
                             }

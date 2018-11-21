@@ -46,7 +46,7 @@
         "Entry"
         {
         "MsmKey" = "8:_3589CD5E86F72BE903E6E5685C2C27BD"
-        "OwnerKey" = "8:_E50044A10C924CF2873FAF09C81FBF9E"
+        "OwnerKey" = "8:_ED32EB330AD6421C8E8E760D813F5BDE"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -70,7 +70,7 @@
         "Entry"
         {
         "MsmKey" = "8:_64DE122BF585B7BDA750CFAFE9825038"
-        "OwnerKey" = "8:_E50044A10C924CF2873FAF09C81FBF9E"
+        "OwnerKey" = "8:_ED32EB330AD6421C8E8E760D813F5BDE"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -94,7 +94,7 @@
         "Entry"
         {
         "MsmKey" = "8:_99DB54822DD2B4AFF956DE97E6E95C3E"
-        "OwnerKey" = "8:_E50044A10C924CF2873FAF09C81FBF9E"
+        "OwnerKey" = "8:_ED32EB330AD6421C8E8E760D813F5BDE"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -118,7 +118,7 @@
         "Entry"
         {
         "MsmKey" = "8:_C8A70D70BE3A2CBA5E79FAF7F81F6A94"
-        "OwnerKey" = "8:_E50044A10C924CF2873FAF09C81FBF9E"
+        "OwnerKey" = "8:_ED32EB330AD6421C8E8E760D813F5BDE"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -136,7 +136,7 @@
         "Entry"
         {
         "MsmKey" = "8:_D26031662201B0281806CEF0D487215F"
-        "OwnerKey" = "8:_E50044A10C924CF2873FAF09C81FBF9E"
+        "OwnerKey" = "8:_ED32EB330AD6421C8E8E760D813F5BDE"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -153,12 +153,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_E50044A10C924CF2873FAF09C81FBF9E"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_E6BDFF8B1E424A8FA5812E9D98A810CD"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -166,6 +160,12 @@
         "Entry"
         {
         "MsmKey" = "8:_EC1F135BE5D742A6999AC0C874911826"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_ED32EB330AD6421C8E8E760D813F5BDE"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -202,7 +202,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_E50044A10C924CF2873FAF09C81FBF9E"
+        "OwnerKey" = "8:_ED32EB330AD6421C8E8E760D813F5BDE"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -997,7 +997,7 @@
                     "Name" = "8:UserImageIcons"
                     "AlwaysCreate" = "11:TRUE"
                     "Condition" = "8:"
-                    "Transitive" = "11:FALSE"
+                    "Transitive" = "11:TRUE"
                     "Property" = "8:_19CA095AA75240439B74A002C580CDAB"
                         "Folders"
                         {
@@ -1022,7 +1022,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Customização de Teclados"
         "ProductCode" = "8:{4382093C-8171-401C-8271-8234A868558D}"
-        "PackageCode" = "8:{362996C6-E9FF-45E3-B692-0CEBA3A28AAC}"
+        "PackageCode" = "8:{25104739-E1C4-4F18-A7C5-682130490211}"
         "UpgradeCode" = "8:{33E64104-6828-49B2-A384-A707EEC04E82}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -1046,7 +1046,7 @@
         "TargetPlatform" = "3:0"
         "PreBuildEvent" = "8:"
         "PostBuildEvent" = "8:"
-        "RunPostBuildEvent" = "3:0"
+        "RunPostBuildEvent" = "3:1"
         }
         "Registry"
         {
@@ -1150,7 +1150,7 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_E50044A10C924CF2873FAF09C81FBF9E"
+            "Target" = "8:_ED32EB330AD6421C8E8E760D813F5BDE"
             "Folder" = "8:_4EAB41AFE69F48228BA74675D8EB47B3"
             "WorkingFolder" = "8:_96BD986584044A129A899221C598E3A6"
             "Icon" = "8:_EC1F135BE5D742A6999AC0C874911826"
@@ -1164,7 +1164,7 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_E50044A10C924CF2873FAF09C81FBF9E"
+            "Target" = "8:_ED32EB330AD6421C8E8E760D813F5BDE"
             "Folder" = "8:_47B931B329FF4DA08ADE09CEB83FCC98"
             "WorkingFolder" = "8:_96BD986584044A129A899221C598E3A6"
             "Icon" = "8:_EC1F135BE5D742A6999AC0C874911826"
@@ -1197,7 +1197,8 @@
                             "Type" = "3:8"
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
-                            "Setting" = "3:1"
+                            "Setting" = "3:2"
+                            "Value" = "8:_36F0B525644F48968E0C31E11A373461"
                             "UsePlugInResources" = "11:TRUE"
                             }
                             "ShowProgress"
@@ -1450,6 +1451,41 @@
             "Attributes" = "3:1"
                 "Dialogs"
                 {
+                    "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_09B32D45CC254A42AF1163E9D32F9D00"
+                    {
+                    "Sequence" = "3:200"
+                    "DisplayName" = "8:Pasta de Instalação"
+                    "UseDynamicProperties" = "11:TRUE"
+                    "IsDependency" = "11:FALSE"
+                    "SourcePath" = "8:<VsdDialogDir>\\VsdFolderDlg.wid"
+                        "Properties"
+                        {
+                            "BannerBitmap"
+                            {
+                            "Name" = "8:BannerBitmap"
+                            "DisplayName" = "8:#1001"
+                            "Description" = "8:#1101"
+                            "Type" = "3:8"
+                            "ContextData" = "8:Bitmap"
+                            "Attributes" = "3:4"
+                            "Setting" = "3:1"
+                            "UsePlugInResources" = "11:TRUE"
+                            }
+                            "InstallAllUsersVisible"
+                            {
+                            "Name" = "8:InstallAllUsersVisible"
+                            "DisplayName" = "8:#1059"
+                            "Description" = "8:#1159"
+                            "Type" = "3:5"
+                            "ContextData" = "8:1;True=1;False=0"
+                            "Attributes" = "3:0"
+                            "Setting" = "3:0"
+                            "Value" = "3:1"
+                            "DefaultValue" = "3:1"
+                            "UsePlugInResources" = "11:TRUE"
+                            }
+                        }
+                    }
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_4BF1A35F409F48768C51E7D3629C8346"
                     {
                     "Sequence" = "3:100"
@@ -1515,42 +1551,7 @@
                             "Type" = "3:8"
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
-                            "Setting" = "3:1"
-                            "UsePlugInResources" = "11:TRUE"
-                            }
-                        }
-                    }
-                    "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_78872A1624FB4FA3B9683CE045FFCEB8"
-                    {
-                    "Sequence" = "3:200"
-                    "DisplayName" = "8:Pasta de Instalação"
-                    "UseDynamicProperties" = "11:TRUE"
-                    "IsDependency" = "11:FALSE"
-                    "SourcePath" = "8:<VsdDialogDir>\\VsdFolderDlg.wid"
-                        "Properties"
-                        {
-                            "BannerBitmap"
-                            {
-                            "Name" = "8:BannerBitmap"
-                            "DisplayName" = "8:#1001"
-                            "Description" = "8:#1101"
-                            "Type" = "3:8"
-                            "ContextData" = "8:Bitmap"
-                            "Attributes" = "3:4"
-                            "Setting" = "3:1"
-                            "UsePlugInResources" = "11:TRUE"
-                            }
-                            "InstallAllUsersVisible"
-                            {
-                            "Name" = "8:InstallAllUsersVisible"
-                            "DisplayName" = "8:#1059"
-                            "Description" = "8:#1159"
-                            "Type" = "3:5"
-                            "ContextData" = "8:1;True=1;False=0"
-                            "Attributes" = "3:0"
                             "Setting" = "3:0"
-                            "Value" = "3:1"
-                            "DefaultValue" = "3:1"
                             "UsePlugInResources" = "11:TRUE"
                             }
                         }
@@ -1569,7 +1570,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_E50044A10C924CF2873FAF09C81FBF9E"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_ED32EB330AD6421C8E8E760D813F5BDE"
             {
             "SourcePath" = "8:..\\AcroniDesktop\\AcroniUI\\obj\\x86\\Debug\\AcroniUI.exe"
             "TargetName" = "8:"
