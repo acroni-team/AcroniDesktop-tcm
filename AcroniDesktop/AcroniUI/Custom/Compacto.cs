@@ -1048,8 +1048,7 @@ namespace AcroniUI.Custom
             keyboard.KeyboardType = this.Name;
             keyboard.BackgroundImage = picBoxKeyboardBackground.Image;
             keyboard.BackgroundModeSize = picBoxKeyboardBackground.SizeMode;
-            Bitmap keyboardImage = new Bitmap(pnlWithKeycaps.Width, pnlWithKeycaps.Height);
-            pnlWithKeycaps.DrawToBitmap(keyboardImage, pnlWithKeycaps.ClientRectangle);
+            Bitmap keyboardImage = Screenshot.TakeSnapshot(pnlWithKeycaps);
             keyboard.KeyboardImage = keyboardImage;
             string text = "";
             Color backcolor = Color.Empty;
