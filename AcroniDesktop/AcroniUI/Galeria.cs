@@ -388,7 +388,6 @@ namespace AcroniUI
             await Task.Delay(50);
             btnAdicionarGaleria.Size = new Size(btnAdicionarGaleria.Size.Width + 10, btnAdicionarGaleria.Size.Height + 10);
             btnAdicionarGaleria.Location = new Point(btnAdicionarGaleria.Location.X - (10 / 2), btnAdicionarGaleria.Location.Y - (10 / 2));
-
         }
 
         private async void btnAdicionarGaleria_MouseLeave(object sender, EventArgs e)

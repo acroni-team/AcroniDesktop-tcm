@@ -177,8 +177,7 @@ namespace AcroniUI.LoginAndSignUp
                             {
                                 SQLConnection.nome_usuario = txtEntrar.Text;
                                 Share.User = new User();
-                                MessageBox.Show($@"{Application.StartupPath}\Users\{txtEntrar.Text}.acr");  
-                                if (File.Exists($@"{Application.StartupPath}\Acroni\Customização de Teclados\Users\{txtEntrar.Text}.acr"))
+                                if (File.Exists($@"{Application.StartupPath}\Users\{txtEntrar.Text}.acr"))
                                     Share.User.CatchFromFile();
                                 else
                                 {

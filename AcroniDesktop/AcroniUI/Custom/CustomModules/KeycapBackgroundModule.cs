@@ -114,7 +114,7 @@ namespace AcroniUI.Custom.CustomModules
                 (pnlImages.Controls[$"pnlImg{i + 1}"] as Panel).BackColor = Color.FromArgb(80, 80, 80);
                 (pnlImages.Controls[$"pnlImg{i + 1}"].Controls[$"lblPic{i + 1}"] as Label).Text = insertableArray[i].UserDefinedIconName;
 
-                using (FileStream savearchive = new FileStream($@"{Application.StartupPath}\{SQLConnection.nome_usuario}IconsHistoric.hist", FileMode.Create))
+                using (FileStream savearchive = new FileStream($@"{Application.StartupPath}\UserImageIcons\{SQLConnection.nome_usuario}IconsHistoric.hist", FileMode.Create))
                 {
                     BinaryFormatter Serializer = new BinaryFormatter();
                     Serializer.Serialize(savearchive, insertableArray);

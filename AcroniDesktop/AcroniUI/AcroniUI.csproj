@@ -59,8 +59,9 @@
     <Reference Include="AcroniControls">
       <HintPath>..\AcroniControls\bin\Debug\AcroniControls.dll</HintPath>
     </Reference>
-    <Reference Include="AcroniLibrary">
-      <HintPath>..\AcroniLibrary\bin\Debug\AcroniLibrary.dll</HintPath>
+    <Reference Include="AcroniLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AcroniLibrary\bin\x86\Debug\AcroniLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu_UI_v1.52">
       <HintPath>.\Bunifu_UI_v1.52.dll</HintPath>

@@ -33,20 +33,20 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_31C45BDB923A460FA38D8CAC3446B827"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_3589CD5E86F72BE903E6E5685C2C27BD"
+        "MsmKey" = "8:_20CC218FE3E41AE6F911E096D5EF9346"
         "OwnerKey" = "8:_99DB54822DD2B4AFF956DE97E6E95C3E"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_3589CD5E86F72BE903E6E5685C2C27BD"
-        "OwnerKey" = "8:_ED32EB330AD6421C8E8E760D813F5BDE"
+        "MsmKey" = "8:_20CC218FE3E41AE6F911E096D5EF9346"
+        "OwnerKey" = "8:_E9778FE07896452B8EF72A07C04B9973"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_31C45BDB923A460FA38D8CAC3446B827"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -70,7 +70,7 @@
         "Entry"
         {
         "MsmKey" = "8:_64DE122BF585B7BDA750CFAFE9825038"
-        "OwnerKey" = "8:_ED32EB330AD6421C8E8E760D813F5BDE"
+        "OwnerKey" = "8:_E9778FE07896452B8EF72A07C04B9973"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -94,7 +94,7 @@
         "Entry"
         {
         "MsmKey" = "8:_99DB54822DD2B4AFF956DE97E6E95C3E"
-        "OwnerKey" = "8:_ED32EB330AD6421C8E8E760D813F5BDE"
+        "OwnerKey" = "8:_E9778FE07896452B8EF72A07C04B9973"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -112,13 +112,13 @@
         "Entry"
         {
         "MsmKey" = "8:_C8A70D70BE3A2CBA5E79FAF7F81F6A94"
-        "OwnerKey" = "8:_3589CD5E86F72BE903E6E5685C2C27BD"
+        "OwnerKey" = "8:_20CC218FE3E41AE6F911E096D5EF9346"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_C8A70D70BE3A2CBA5E79FAF7F81F6A94"
-        "OwnerKey" = "8:_ED32EB330AD6421C8E8E760D813F5BDE"
+        "OwnerKey" = "8:_E9778FE07896452B8EF72A07C04B9973"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -136,7 +136,7 @@
         "Entry"
         {
         "MsmKey" = "8:_D26031662201B0281806CEF0D487215F"
-        "OwnerKey" = "8:_ED32EB330AD6421C8E8E760D813F5BDE"
+        "OwnerKey" = "8:_E9778FE07896452B8EF72A07C04B9973"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -159,13 +159,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_EC1F135BE5D742A6999AC0C874911826"
+        "MsmKey" = "8:_E9778FE07896452B8EF72A07C04B9973"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_ED32EB330AD6421C8E8E760D813F5BDE"
+        "MsmKey" = "8:_EC1F135BE5D742A6999AC0C874911826"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -202,7 +202,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_ED32EB330AD6421C8E8E760D813F5BDE"
+        "OwnerKey" = "8:_E9778FE07896452B8EF72A07C04B9973"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -220,7 +220,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_3589CD5E86F72BE903E6E5685C2C27BD"
+        "OwnerKey" = "8:_20CC218FE3E41AE6F911E096D5EF9346"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -384,34 +384,14 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_31C45BDB923A460FA38D8CAC3446B827"
-            {
-            "SourcePath" = "8:..\\AcroniDesktop\\AcroniUI\\Images\\Teclas\\keycapbackgrounddefault.png"
-            "TargetName" = "8:keycapbackgrounddefault.png"
-            "Tag" = "8:"
-            "Folder" = "8:_417BE21D84E24D48B5547F64BF6B320E"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_3589CD5E86F72BE903E6E5685C2C27BD"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_20CC218FE3E41AE6F911E096D5EF9346"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:AcroniLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:AcroniLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
-                    "_3589CD5E86F72BE903E6E5685C2C27BD"
+                    "_20CC218FE3E41AE6F911E096D5EF9346"
                     {
                     "Name" = "8:AcroniLibrary.dll"
                     "Attributes" = "3:512"
@@ -433,6 +413,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_31C45BDB923A460FA38D8CAC3446B827"
+            {
+            "SourcePath" = "8:..\\AcroniDesktop\\AcroniUI\\Images\\Teclas\\keycapbackgrounddefault.png"
+            "TargetName" = "8:keycapbackgrounddefault.png"
+            "Tag" = "8:"
+            "Folder" = "8:_417BE21D84E24D48B5547F64BF6B320E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_36F0B525644F48968E0C31E11A373461"
@@ -1022,7 +1022,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Customização de Teclados"
         "ProductCode" = "8:{4382093C-8171-401C-8271-8234A868558D}"
-        "PackageCode" = "8:{25104739-E1C4-4F18-A7C5-682130490211}"
+        "PackageCode" = "8:{AF2E6F1B-CFC9-44C7-A701-7E150F4722C5}"
         "UpgradeCode" = "8:{33E64104-6828-49B2-A384-A707EEC04E82}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -1150,7 +1150,7 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_ED32EB330AD6421C8E8E760D813F5BDE"
+            "Target" = "8:_E9778FE07896452B8EF72A07C04B9973"
             "Folder" = "8:_4EAB41AFE69F48228BA74675D8EB47B3"
             "WorkingFolder" = "8:_96BD986584044A129A899221C598E3A6"
             "Icon" = "8:_EC1F135BE5D742A6999AC0C874911826"
@@ -1164,7 +1164,7 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_ED32EB330AD6421C8E8E760D813F5BDE"
+            "Target" = "8:_E9778FE07896452B8EF72A07C04B9973"
             "Folder" = "8:_47B931B329FF4DA08ADE09CEB83FCC98"
             "WorkingFolder" = "8:_96BD986584044A129A899221C598E3A6"
             "Icon" = "8:_EC1F135BE5D742A6999AC0C874911826"
@@ -1197,8 +1197,7 @@
                             "Type" = "3:8"
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
-                            "Setting" = "3:2"
-                            "Value" = "8:_36F0B525644F48968E0C31E11A373461"
+                            "Setting" = "3:1"
                             "UsePlugInResources" = "11:TRUE"
                             }
                             "ShowProgress"
@@ -1570,7 +1569,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_ED32EB330AD6421C8E8E760D813F5BDE"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_E9778FE07896452B8EF72A07C04B9973"
             {
             "SourcePath" = "8:..\\AcroniDesktop\\AcroniUI\\obj\\x86\\Debug\\AcroniUI.exe"
             "TargetName" = "8:"

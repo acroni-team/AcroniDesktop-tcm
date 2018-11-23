@@ -280,11 +280,11 @@ namespace AcroniUI.Custom
                 else
                 {
                     if (keybutton.Size.Equals(new Size(38, 39)))
-                        keybutton.Parent.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Acroni\Customização de Teclados\Images\Teclas\keycapbackgrounddefault.png");
+                        keybutton.Parent.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Images\Teclas\keycapbackgrounddefault.png");
                     else
                     {
                         keybutton.Parent.BackColor = Color.Black;
-                        keybutton.Parent.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Acroni\Customização de Teclados\Images\Teclas\{keybutton.Name}.png");
+                        keybutton.Parent.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Images\Teclas\{keybutton.Name}.png");
                     }
                 }
             }
@@ -401,9 +401,9 @@ namespace AcroniUI.Custom
                         if (keycap is Panel && keycap.HasChildren)
                         {
                             if ((keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).Size.Equals(new Size(38, 39)))
-                                keycap.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Acroni\Customização de Teclados\Images\Teclas\keycapbackgrounddefault.png");
+                                keycap.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Images\Teclas\keycapbackgrounddefault.png");
                             else
-                                keycap.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Acroni\Customização de Teclados\Images\Teclas\{(keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).Name}.png");
+                                keycap.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Images\Teclas\{(keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).Name}.png");
                         }
                     }
                 }
@@ -730,11 +730,11 @@ namespace AcroniUI.Custom
                             else
                             {
                                 if ((keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).Size.Equals(new Size(38, 39)))
-                                    keycap.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Acroni\Customização de Teclados\Images\Teclas\keycapbackgrounddefault.png");
+                                    keycap.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Images\Teclas\keycapbackgrounddefault.png");
                                 else
                                 {
                                     keycap.BackColor = Color.Black;
-                                    keycap.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Acroni\Customização de Teclados\Images\Teclas\{(keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).Name}.png");
+                                    keycap.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Images\Teclas\{(keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).Name}.png");
                                 }
 
                             }

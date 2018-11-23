@@ -19,7 +19,7 @@ namespace AcroniLibrary.FileInfo
 
         public void SendToFile()
         {
-            using (FileStream savearchive = new FileStream($@"{Application.StartupPath}\Acroni\Customização de Teclados\Users\{SQLConnection.nome_usuario}.acr", FileMode.Open))
+            using (FileStream savearchive = new FileStream($@"{Application.StartupPath}\Users\{SQLConnection.nome_usuario}.acr", FileMode.Open))
             {
                 BinaryFormatter objectToByteArray = new BinaryFormatter();
                 objectToByteArray.Serialize(savearchive, Share.User);
@@ -27,15 +27,22 @@ namespace AcroniLibrary.FileInfo
         }
         public void CatchFromFile()
         {
-            using (FileStream savearchive = new FileStream($@"{Application.StartupPath}\Acroni\Customização de Teclados\Users\{SQLConnection.nome_usuario}.acr", FileMode.OpenOrCreate))
+            using (FileStream savearchive = new FileStream($@"{Application.StartupPath}\Users\{SQLConnection.nome_usuario}.acr", FileMode.OpenOrCreate))
             {
                 BinaryFormatter objectToByteArray = new BinaryFormatter();
                 Share.User = (User)objectToByteArray.Deserialize(savearchive);
-                MessageBox.Show(Share.User.UserCollections.Count.ToString());
                 //UserName = (objectToByteArray.Deserialize(savearchive) as User).UserName;
                 //isPremiumAccount = (objectToByteArray.Deserialize(savearchive) as User).isPremiumAccount;
                 //KeyboardQuantity = (objectToByteArray.Deserialize(savearchive) as User).KeyboardQuantity;
 
+            }
+        }
+        public void CatchFromFile(String path)
+        {
+            using (FileStream savearchive = new FileStream(path, FileMode.OpenOrCreate))
+            {
+                BinaryFormatter objectToByteArray = new BinaryFormatter();
+                Share.User = (User)objectToByteArray.Deserialize(savearchive);
             }
         }
         public User()
