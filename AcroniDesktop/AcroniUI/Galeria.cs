@@ -393,6 +393,6 @@ namespace AcroniUI
             btnAdicionarGaleria.Location = new Point(btnAdicionarGaleria.Location.X + (10 / 2), btnAdicionarGaleria.Location.Y + (10 / 2));
         }
 
-
+        
     }
 }

@@ -950,16 +950,21 @@ namespace AcroniUI.Custom
             {
                 if (!String.IsNullOrEmpty(Share.KeyboardNameNotCreated))
                 {
-                    Galeria selectGallery = new Galeria(true);
-                    selectGallery.ShowDialog();
-                    while (selectGallery.Visible)
+                    AcroniMessageBoxConfirm mb = new AcroniMessageBoxConfirm("Agora, aparecerá sua galeria.", "Nela, clique na coleção que deseja salvar seu teclado ^-^");
+                    if (mb.ShowDialog() != DialogResult.Cancel)
                     {
-                        await Task.Delay(100);
-                    }
+                        Galeria selectGallery = new Galeria(true);
+                        selectGallery.Show();
 
-                    if (!String.IsNullOrEmpty(Share.Collection.CollectionName))
-                    {
-                        setPropriedadesTeclado();
+                        while (selectGallery.Visible)
+                        {
+                            await Task.Delay(100);
+                        }
+
+                        if (!String.IsNullOrEmpty(Share.Collection.CollectionName))
+                        {
+                            setPropriedadesTeclado();
+                        }
                     }
                 }
             }
@@ -1145,10 +1150,10 @@ namespace AcroniUI.Custom
                         catch (Exception e) { MessageBox.Show(e.Message); }
                     }
                 else
-                    using (SqlCommand sqlCommand = new SqlCommand($"update tblTecladoCustomizado set imagem_teclado = @img where id_colecao like (select id_colecao from tblColecao where id_cliente = {Share.User.ID}) and id_cliente like "+Share.User.ID+$" and nickname like '{Share.Keyboard.NickName}'", sqlConnection))
+                    using (SqlCommand sqlCommand = new SqlCommand($"update tblTecladoCustomizado set imagem_teclado = @img where id_colecao = (select id_colecao from tblColecao where id_cliente = {Share.User.ID}) and nickname like '{Share.Keyboard.NickName}'", sqlConnection))
                     {
                         sqlCommand.Parameters.AddWithValue("@img", img);
-                        sqlCommand.ExecuteNonQuery();
+                        MessageBox.Show(sqlCommand.ExecuteNonQuery().ToString());
                     }
             }
         }

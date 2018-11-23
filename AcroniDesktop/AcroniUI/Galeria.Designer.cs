@@ -47,7 +47,7 @@
             this.lblBoasVindas.AutoSize = true;
             this.lblBoasVindas.Font = new System.Drawing.Font("Open Sans SemiBold", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBoasVindas.ForeColor = System.Drawing.Color.White;
-            this.lblBoasVindas.Location = new System.Drawing.Point(682, 63);
+            this.lblBoasVindas.Location = new System.Drawing.Point(682, 64);
             this.lblBoasVindas.Name = "lblBoasVindas";
             this.lblBoasVindas.Size = new System.Drawing.Size(183, 30);
             this.lblBoasVindas.TabIndex = 14;
@@ -82,9 +82,9 @@
             this.lblColecoesSalvas2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(80)))), ((int)(((byte)(85)))));
             this.lblColecoesSalvas2.Location = new System.Drawing.Point(780, 104);
             this.lblColecoesSalvas2.Name = "lblColecoesSalvas2";
-            this.lblColecoesSalvas2.Size = new System.Drawing.Size(167, 27);
+            this.lblColecoesSalvas2.Size = new System.Drawing.Size(203, 27);
             this.lblColecoesSalvas2.TabIndex = 18;
-            this.lblColecoesSalvas2.Text = "coleções salvas.";
+            this.lblColecoesSalvas2.Text = "coleção(ões) salvas.";
             // 
             // lblCollectionsQuantity
             // 
@@ -152,14 +152,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1280, 720);
-            this.Controls.Add(this.btnAdicionarGaleria);
             this.Controls.Add(this.lblSelectKeyboard);
+            this.Controls.Add(this.btnAdicionarGaleria);
             this.Controls.Add(this.pnlScroll);
             this.Controls.Add(this.lblCollectionsQuantity);
             this.Controls.Add(this.lblColecoesSalvas2);
             this.Controls.Add(this.lblSavedCollections1);
             this.Controls.Add(this.lblNomeUsuBoasVindas);
             this.Controls.Add(this.lblBoasVindas);
+            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "Galeria";
             this.Text = "Galeria";
             this.Controls.SetChildIndex(this.pnlStripAjuda, 0);
@@ -169,8 +170,8 @@
             this.Controls.SetChildIndex(this.lblColecoesSalvas2, 0);
             this.Controls.SetChildIndex(this.lblCollectionsQuantity, 0);
             this.Controls.SetChildIndex(this.pnlScroll, 0);
-            this.Controls.SetChildIndex(this.lblSelectKeyboard, 0);
             this.Controls.SetChildIndex(this.btnAdicionarGaleria, 0);
+            this.Controls.SetChildIndex(this.lblSelectKeyboard, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
