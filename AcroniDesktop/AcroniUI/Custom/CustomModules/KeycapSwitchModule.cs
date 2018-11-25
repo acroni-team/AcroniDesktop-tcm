@@ -1,4 +1,5 @@
 ﻿using AcroniControls;
+using AcroniLibrary.FileInfo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,55 @@ namespace AcroniUI.Custom.CustomModules
 {
     public partial class KeycapSwitchModule : KeycapParentModule
     {
-        public KeycapSwitchModule()
+        public short chosenSwitch;
+        private string keybuttonName;
+        private void VerifySwitch()
+        {
+            short Switch = 0;
+            foreach (Keycap c in Share.Keyboard.Keycaps)
+                if (c.ID.Equals(keybuttonName))
+                    Switch = c.Switch;
+            switch (Switch)
+            {
+                case 1:
+
+                    picswitch1.Tag = "Chosen";
+                    pnlBtnIconChosen.Visible = true;
+                    pnlBtnIconChosen.Location = new Point(picswitch1.Location.X + picswitch1.Size.Width - 10, picswitch1.Location.Y + picswitch1.Size.Height - 10);
+                    pnlBtnIconChosen.BringToFront();
+                    break;
+                case 2:
+                    picswitch2.Tag = "Chosen";
+                    pnlBtnIconChosen.Visible = true;
+                    pnlBtnIconChosen.Location = new Point(picswitch2.Location.X + picswitch2.Size.Width - 10, picswitch2.Location.Y + picswitch2.Size.Height - 10);
+                    pnlBtnIconChosen.BringToFront();
+                    break;
+                case 3:
+                    picswitch3.Tag = "Chosen";
+                    pnlBtnIconChosen.Visible = true;
+                    pnlBtnIconChosen.Location = new Point(picswitch3.Location.X + picswitch3.Size.Width - 10, picswitch3.Location.Y + picswitch3.Size.Height - 10);
+                    pnlBtnIconChosen.BringToFront();
+                    break;
+                case 4:
+                    picswitch4.Tag = "Chosen";
+                    pnlBtnIconChosen.Visible = true;
+                    pnlBtnIconChosen.Location = new Point(picswitch4.Location.X + picswitch4.Size.Width - 10, picswitch4.Location.Y + picswitch4.Size.Height - 10);
+                    pnlBtnIconChosen.BringToFront();
+                    break;
+                case 5:
+                    picswitch5.Tag = "Chosen";
+                    pnlBtnIconChosen.Visible = true;
+                    pnlBtnIconChosen.Location = new Point(picswitch5.Location.X + picswitch5.Size.Width - 10, picswitch5.Location.Y + picswitch5.Size.Height - 10);
+                    pnlBtnIconChosen.BringToFront();
+                    break;
+
+            }
+        }
+        public KeycapSwitchModule(string keybuttonName)
         {
             InitializeComponent();
+            this.keybuttonName = keybuttonName;
+            VerifySwitch();
             Bunifu.Framework.UI.BunifuElipse e = new Bunifu.Framework.UI.BunifuElipse();
             foreach (Control c in this.Controls)
             {
@@ -89,19 +136,31 @@ namespace AcroniUI.Custom.CustomModules
                     pnlBtnIconChosen.Visible = true;
                     pnlBtnIconChosen.Location = new Point(Switch.Location.X + Switch.Size.Width - 10, Switch.Location.Y + Switch.Size.Height - 10);
                     pnlBtnIconChosen.BringToFront();
-
                     if (Switch == picswitch1)
-                        SwitchColor = Color.Black;
+                        chosenSwitch = 1; 
                     else if (Switch == picswitch2)
-                        SwitchColor = Color.FromArgb(1, 175, 217);
+                        chosenSwitch = 2; 
                     else if (Switch == picswitch3)
-                        SwitchColor = Color.FromArgb(128, 52, 1);
+                        chosenSwitch = 3;
                     else if (Switch == picswitch4)
-                        SwitchColor = Color.FromArgb(51, 181, 78);
+                        chosenSwitch = 4;
                     else if (Switch == picswitch5)
-                        SwitchColor = Color.FromArgb(209, 17, 12);
+                        chosenSwitch = 5;
                 }
             }
+        }
+
+        private void btnOnlyThis_Click(object sender, EventArgs e)
+        {
+            foreach (Keycap c in Share.Keyboard.Keycaps)
+                if (c.ID.Equals(keybuttonName))
+                    c.Switch = chosenSwitch;
+        }
+
+        private void btnAll_Click(object sender, EventArgs e)
+        {
+            foreach (Keycap c in Share.Keyboard.Keycaps)
+                c.Switch = chosenSwitch;
         }
     }
 }

@@ -355,9 +355,8 @@ namespace AcroniUI.Custom
 
             if (btnOpenModuleSwitch.Tag.Equals("active"))
             {
-                KeycapSwitchModule ksm = new KeycapSwitchModule();
+                KeycapSwitchModule ksm = new KeycapSwitchModule(keybutton.Name);
                 OpenModule(ksm);
-
                 if (ksm.DialogResult == DialogResult.Yes)
                 {
                     foreach (Control keycap in pnlWithKeycaps.Controls)
@@ -375,10 +374,6 @@ namespace AcroniUI.Custom
                             //p.MouseMove +=  
                         }
                     }
-                }
-                else if (ksm.DialogResult == DialogResult.No)
-                {
-
                 }
             }
 
@@ -517,12 +512,20 @@ namespace AcroniUI.Custom
         #region Construtor
         public Compacto()
         {
+            BunifuElipse e = new BunifuElipse();
             InitializeComponent();
-
+            foreach (Control c in pnlWithKeycaps.Controls)
+                if (c is Panel)
+                {
+                    e.ApplyElipse(c, 5);
+                    foreach (Control d in c.Controls)
+                        if (d is Label)
+                            e.ApplyElipse(d, 3);
+                }
+            e.ApplyElipse(picBoxKeyboardBackground, 5);
             //Fazendo com que o label do nome do teclado tenha localização exatamente após o label que contém o nome da coleção.
 
             lblKeyboardName.Location = new Point(lblCollectionName.Location.X + lblCollectionName.Size.Width - 5, lblCollectionName.Location.Y);
-
 
             //Eu preciso disso no construtor, sorry. Não dá pra colocar dois estilos na Open Sans logo no designer.
 
@@ -553,8 +556,6 @@ namespace AcroniUI.Custom
                 lblKeyboardName.Text = "Sem Nome";
                 lblCollectionName.Text = "";
             }
-
-
         }
         #endregion
 
@@ -864,7 +865,7 @@ namespace AcroniUI.Custom
                                         (c as Label).TextAlign = (ContentAlignment) k.ContentAlignment;
                                     }
                                 }
-                                ////keycap.Text = k.Text;
+                                //keycap.Text = k.Text;
 
 
                                 break;
@@ -1062,12 +1063,16 @@ namespace AcroniUI.Custom
             Image image = null;
             object textalign = ContentAlignment.TopLeft;
             string name = "";
+            short switch1 = 0;
             foreach (Control tecla in pnlWithKeycaps.Controls)
                 if (tecla.Name.Contains("fundo"))
                 {
                     {
                         foreach (Control c in tecla.Controls)
                         {
+                            foreach (Keycap k in Share.Keyboard.Keycaps)
+                                if (k.ID.Equals(c.Name))
+                                    switch1 = k.Switch;
                             if (c.Name.Contains("lbl"))
                             {
                                 image = (c as Label).Image;
@@ -1083,6 +1088,7 @@ namespace AcroniUI.Custom
                         }
                         keyboard.Keycaps.Add(new Keycap
                         {
+                            Switch = switch1,
                             ForeColor = forecolor,
                             ID = name,
                             Text = text,
