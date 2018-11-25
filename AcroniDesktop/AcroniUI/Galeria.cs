@@ -151,7 +151,6 @@ namespace AcroniUI
             }
             if (!selectMode)
             {
-
                 CollectionSelected openSelectedCollection = new CollectionSelected();
                 openSelectedCollection.Show();
             }
@@ -240,45 +239,51 @@ namespace AcroniUI
 
         private void Exclude(object sender, EventArgs e)
         {
-            AcroniMessageBoxConfirm confirmExclude = new AcroniMessageBoxConfirm("Deseja mesmo excluir esta coleção?","Não terá como reverter o processo O_O");
-            if (confirmExclude.ShowDialog() == DialogResult.Yes)
+            if (!selectMode)
             {
-                foreach (Control c in ((sender as PictureBox).Parent as Panel).Controls)
+                AcroniMessageBoxConfirm confirmExclude = new AcroniMessageBoxConfirm("Deseja mesmo excluir esta coleção?", "Não terá como reverter o processo O_O");
+                if (confirmExclude.ShowDialog() == DialogResult.Yes)
                 {
-                    if (c.Name.Equals("lblColecao1"))
+                    foreach (Control c in ((sender as PictureBox).Parent as Panel).Controls)
                     {
-                        foreach (Collection collection in Share.User.UserCollections)
+                        if (c.Name.Equals("lblColecao1"))
                         {
-                            if (collection.CollectionName.Equals(c.Text))
+                            foreach (Collection collection in Share.User.UserCollections)
                             {
-                                Share.User.UserCollections.Remove(collection);
-                                foreach (Keyboard k in collection.Keyboards)
-                                    Share.User.KeyboardQuantity--;
-                                using (SqlConnection sqlConnection = new SqlConnection("Data Source = " + Environment.MachineName + "\\SQLEXPRESS; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7"))
+                                if (collection.CollectionName.Equals(c.Text))
                                 {
-                                    sqlConnection.Open();
-                                    using (SqlCommand sqlCommand = new SqlCommand($"delete from tblTecladoCustomizado where id_cliente = {Share.User.ID}", sqlConnection))
+                                    Share.User.UserCollections.Remove(collection);
+                                    foreach (Keyboard k in collection.Keyboards)
+                                        Share.User.KeyboardQuantity--;
+                                    using (SqlConnection sqlConnection = new SqlConnection("Data Source = " + Environment.MachineName + "\\SQLEXPRESS; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7"))
                                     {
-                                        sqlCommand.ExecuteNonQuery();
+                                        sqlConnection.Open();
+                                        using (SqlCommand sqlCommand = new SqlCommand($"delete from tblTecladoCustomizado where id_cliente = {Share.User.ID}", sqlConnection))
+                                        {
+                                            sqlCommand.ExecuteNonQuery();
+                                        }
+                                        using (SqlCommand sqlCommand = new SqlCommand("delete from tblColecao where nick_colecao in('" + c.Text + $"') and id_cliente like {Share.User.ID}", sqlConnection))
+                                        {
+                                            sqlCommand.ExecuteNonQuery();
+                                        }
                                     }
-                                    using (SqlCommand sqlCommand = new SqlCommand("delete from tblColecao where nick_colecao in('" + c.Text + $"') and id_cliente like {Share.User.ID}", sqlConnection))
-                                    {
-                                        sqlCommand.ExecuteNonQuery();
-                                    }
+                                    break;
                                 }
-                                break;
                             }
                         }
-                    }
 
+                    }
+                    this.UpdateKeyboardQuantity();
+                    Share.User.SendToFile();
+                    Galeria recharge = new Galeria(false);
+                    recharge.Show();
+                    this.Close();
                 }
-                this.UpdateKeyboardQuantity();
-                Share.User.SendToFile();
-                Galeria recharge = new Galeria(false);
-                recharge.Show();
-                this.Close();
             }
-          
+            else {
+                AcroniMessageBoxConfirm afa = new AcroniMessageBoxConfirm("Não podes excluir a coleção agora", "Sinto muito, mas quando vai salvar o teclado, não há a possibilidade de deletar as coleções");
+                afa.ShowDialog();
+            }
         }
 
         private void OpenKeyboard(object sender, EventArgs e)
@@ -298,7 +303,7 @@ namespace AcroniUI
                                     Share.Keyboard = keyboardToOpen;
                                     Form editarTeclado = null;
                                     Share.EditKeyboard = true;
-
+                                    Share.Collection.CollectionName = keyBoardGallery.CollectionName;
                                     if (keyboardToOpen.KeyboardType.Equals("Compacto"))
                                         editarTeclado = new Compacto();
                                     else if (keyboardToOpen.KeyboardType.Equals("Tenkeyless"))
@@ -306,7 +311,6 @@ namespace AcroniUI
                                     else if (keyboardToOpen.KeyboardType.Equals(("FullSize")))
                                         editarTeclado = new Fullsize();
 
-                                    Share.Collection.CollectionName = keyBoardGallery.CollectionName;
                                     editarTeclado.Show();
                                     this.Close();
                                     break;
@@ -321,57 +325,64 @@ namespace AcroniUI
         bool canclose = false;
         public async void Edit(object sender, EventArgs e)
         {
-            if (canclose)
-                selectColor.Close();
-            else
+            if (!selectMode)
             {
-                foreach (Control itemsGallery in (((sender as PictureBox).Parent as Panel)).Controls)
-                    if (itemsGallery.Name.Equals("lblColecao1"))
-                        selectColor = new SelectColor(itemsGallery.Text);
-                selectColor.Show();
-                canclose = true;
-                while (selectColor.Visible)
+                if (canclose)
+                    selectColor.Close();
+                else
                 {
-                    await Task.Delay(10);
-                    if (selectColor.SettedColor != Color.Empty)
-                        ((sender as PictureBox).Parent as Panel).BackColor = selectColor.SettedColor;
-                }
-                if (selectColor.SettedColor != Color.Empty || !string.IsNullOrEmpty(selectColor.CollectionName))
-                {
-                    foreach (Control c in ((sender as PictureBox).Parent as Panel).Controls)
+                    foreach (Control itemsGallery in (((sender as PictureBox).Parent as Panel)).Controls)
+                        if (itemsGallery.Name.Equals("lblColecao1"))
+                            selectColor = new SelectColor(itemsGallery.Text);
+                    selectColor.Show();
+                    canclose = true;
+                    while (selectColor.Visible)
                     {
-                        if (c.Name.Equals("lblColecao1"))
+                        await Task.Delay(10);
+                        if (selectColor.SettedColor != Color.Empty)
+                            ((sender as PictureBox).Parent as Panel).BackColor = selectColor.SettedColor;
+                    }
+                    if (selectColor.SettedColor != Color.Empty || !string.IsNullOrEmpty(selectColor.CollectionName))
+                    {
+                        foreach (Control c in ((sender as PictureBox).Parent as Panel).Controls)
                         {
-                            foreach (Collection collection in Share.User.UserCollections)
+                            if (c.Name.Equals("lblColecao1"))
                             {
-                                if (collection.CollectionName.Equals(c.Text))
+                                foreach (Collection collection in Share.User.UserCollections)
                                 {
-                                    if (selectColor.SettedColor != Color.Empty)
-                                        collection.CollectionColor = selectColor.SettedColor;
-                                    if (!string.IsNullOrEmpty(selectColor.CollectionName))
+                                    if (collection.CollectionName.Equals(c.Text))
                                     {
-                                        using (SqlConnection sqlConnection = new SqlConnection("Data Source = " + Environment.MachineName + "\\SQLEXPRESS; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7"))
+                                        if (selectColor.SettedColor != Color.Empty)
+                                            collection.CollectionColor = selectColor.SettedColor;
+                                        if (!string.IsNullOrEmpty(selectColor.CollectionName))
                                         {
-                                            sqlConnection.Open();
-
-                                            using (SqlCommand sqlCommand = new SqlCommand($"update tblColecao set nick_colecao = '{selectColor.CollectionName}' where nick_colecao like '" + collection.CollectionName + "' and id_cliente = "+Share.User.ID, sqlConnection))
+                                            using (SqlConnection sqlConnection = new SqlConnection("Data Source = " + Environment.MachineName + "\\SQLEXPRESS; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7"))
                                             {
-                                                sqlCommand.ExecuteNonQuery();
-                                            }                                      
+                                                sqlConnection.Open();
+
+                                                using (SqlCommand sqlCommand = new SqlCommand($"update tblColecao set nick_colecao = '{selectColor.CollectionName}' where nick_colecao like '" + collection.CollectionName + "' and id_cliente = " + Share.User.ID, sqlConnection))
+                                                {
+                                                    sqlCommand.ExecuteNonQuery();
+                                                }
                                             }
-                                        collection.CollectionName = selectColor.CollectionName;
+                                            collection.CollectionName = selectColor.CollectionName;
+                                        }
+                                        Share.User.SendToFile();
+                                        Galeria recharge = new Galeria(false);
+                                        recharge.Show();
+                                        this.Close();
+                                        break;
                                     }
-                                    Share.User.SendToFile();
-                                    Galeria recharge = new Galeria(false);
-                                    recharge.Show();
-                                    this.Close();
-                                    break;
                                 }
                             }
                         }
+                        Share.User.SendToFile();
                     }
-                    Share.User.SendToFile();
                 }
+            }
+            else {
+                AcroniMessageBoxConfirm afa = new AcroniMessageBoxConfirm("Não podes editar a coleção agora", "Sinto muito, mas quando vai salvar o teclado, não há a possibilidade de customizar as coleções");
+                afa.ShowDialog();
             }
         }
         protected override void btnClose_Click(object sender, EventArgs e)

@@ -361,9 +361,9 @@ namespace AcroniUI.Custom
             this.btnSalvar.ForeColor = System.Drawing.Color.White;
             this.btnSalvar.Location = new System.Drawing.Point(1100, 35);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(133, 40);
+            this.btnSalvar.Size = new System.Drawing.Size(153, 40);
             this.btnSalvar.TabIndex = 13;
-            this.btnSalvar.Text = "Salvar e sair";
+            this.btnSalvar.Text = "Salvar Teclado";
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
@@ -383,11 +383,12 @@ namespace AcroniUI.Custom
             // 
             // lblKeyboardName
             // 
+            this.lblKeyboardName.AutoSize = true;
             this.lblKeyboardName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(48)))), ((int)(((byte)(54)))));
             this.lblKeyboardName.Font = new System.Drawing.Font("Open Sans", 17.25F, System.Drawing.FontStyle.Bold);
             this.lblKeyboardName.Location = new System.Drawing.Point(787, 35);
             this.lblKeyboardName.Name = "lblKeyboardName";
-            this.lblKeyboardName.Size = new System.Drawing.Size(307, 35);
+            this.lblKeyboardName.Size = new System.Drawing.Size(259, 32);
             this.lblKeyboardName.TabIndex = 15;
             this.lblKeyboardName.Text = "• <Nome do teclado>";
             // 
@@ -396,7 +397,7 @@ namespace AcroniUI.Custom
             this.lblCollectionName.AutoSize = true;
             this.lblCollectionName.Font = new System.Drawing.Font("Open Sans", 17.25F, System.Drawing.FontStyle.Bold);
             this.lblCollectionName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(59)))));
-            this.lblCollectionName.Location = new System.Drawing.Point(495, 35);
+            this.lblCollectionName.Location = new System.Drawing.Point(510, 35);
             this.lblCollectionName.Name = "lblCollectionName";
             this.lblCollectionName.Size = new System.Drawing.Size(261, 32);
             this.lblCollectionName.TabIndex = 15;
@@ -930,6 +931,7 @@ namespace AcroniUI.Custom
             this.pnlVertAlign.Name = "pnlVertAlign";
             this.pnlVertAlign.Size = new System.Drawing.Size(113, 36);
             this.pnlVertAlign.TabIndex = 14;
+            this.pnlVertAlign.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlVertAlign_Paint);
             // 
             // pnlHorizAlign
             // 
