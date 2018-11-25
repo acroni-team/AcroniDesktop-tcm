@@ -258,27 +258,24 @@ namespace AcroniUI.Custom
                     {
                         lblCb14s.Parent.BackgroundImage = null;
                         lblCb14sExtensao.Parent.BackgroundImage = null;
-                        if (keybutton == lblCb14s)
-                        {
-                            lblCb14sExtensao.BackColor = Color;
-                            lblCb14sExtensao.Parent.BackColor = Color.FromArgb(90, keybutton.BackColor);
-                        }
-                        else
-                        {
-                            lblCb14s.BackColor = Color;
-                            lblCb14s.Parent.BackColor = Color.FromArgb(90, keybutton.BackColor);
-                        }
-                    }
-
-                    else
-                    {
-                        keybutton.Parent.BackgroundImage = null;
-                        keybutton.Parent.BackColor = Color.FromArgb(90, keybutton.BackColor);
+                        lblCb14sExtensao.BackColor = Color;
+                        lblCb14sExtensao.Parent.BackColor = Color.FromArgb(90, Color);
+                        lblCb14s.BackColor = Color;
+                        lblCb14s.Parent.BackColor = Color.FromArgb(90, Color);
                     }
                 }
-
                 else
                 {
+                    if (keybutton == lblCb14sExtensao || keybutton == lblCb14s)
+                    {
+                        lblCb14s.Parent.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Images\Teclas\lblCb14s.png");
+                        lblCb14sExtensao.Parent.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Images\Teclas\lblCb14sExtensao.png");
+                        lblCb14s.BackColor = Color;
+                        lblCb14sExtensao.BackColor = Color;
+                        lblCb14sExtensao.Parent.BackColor = Color.Black;
+                        lblCb14s.Parent.BackColor = Color.Black;
+
+                    }
                     if (keybutton.Size.Equals(new Size(38, 39)))
                         keybutton.Parent.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Images\Teclas\keycapbackgrounddefault.png");
                     else
@@ -288,7 +285,6 @@ namespace AcroniUI.Custom
                     }
                 }
             }
-
             #endregion
 
             #region Atribuição de fonte e estilos de fonte  
@@ -305,7 +301,8 @@ namespace AcroniUI.Custom
             if (__checkIfCanApplyStyle == 4)
             {
                 keybutton.Font = new Font(cmbFontes.Text, float.Parse(cmbFontSize.Text), __fontStyle);
-                keybutton.TextAlign =(ContentAlignment) __contentAlignment;
+                keybutton.TextAlign = (ContentAlignment)__contentAlignment;
+                keybutton.ImageAlign = (ContentAlignment)__contentAlignment;
                 __checkIfCanApplyStyle = 0;
             }
 
@@ -323,19 +320,19 @@ namespace AcroniUI.Custom
                     && keybutton != lblCa10
                     && keybutton != lblCa11
                     && keybutton != lblCa12)
-                    ktm = new KeycapTextIconModule(false, false);
+                    ktm = new KeycapTextIconModule(false, false, keybutton.Text);
 
                 else if (keybutton.Name.Contains("Ca") || keybutton == lblCb12 || keybutton == lblCc12 || keybutton == lblCd2 || keybutton == lblCd10 || keybutton == lblCd11 || keybutton == lblCd12)
-                    ktm = new KeycapTextIconModule(false, true);
+                    ktm = new KeycapTextIconModule(false, true, keybutton.Text);
 
                 else
-                    ktm = new KeycapTextIconModule(true, true);
+                    ktm = new KeycapTextIconModule(true, true, keybutton.Text);
                 OpenModule(ktm);
 
                 if (ktm.DialogResult == DialogResult.OK)
                 {
                     if (string.IsNullOrWhiteSpace(ktm.Maintext))
-                        keybutton.Text = $"{keybutton.Text}";
+                        keybutton.Text = "";
 
                     else if (string.IsNullOrWhiteSpace(ktm.Uppertext) && string.IsNullOrWhiteSpace(ktm.Bottomtext))
                         keybutton.Text = ktm.Maintext;
@@ -349,15 +346,31 @@ namespace AcroniUI.Custom
 
                 if (KeycapTextIconModule.HasChosenAIcon)
                 {
-                    keybutton.Image = ktm.SelectedIcon;
+                    try
+                    {
+                        int width = keybutton.Width - 5;
+                        double razao = (double)keybutton.Width / ktm.SelectedIcon.Width;
+                        int height = (int)Math.Round((ktm.SelectedIcon.Height * razao));
+                        if (height >= keybutton.Height)
+                        {
+                            height = keybutton.Height - 5;
+                            razao = (double)keybutton.Height / ktm.SelectedIcon.Height;
+                            width = (int)Math.Round((ktm.SelectedIcon.Width * razao));
+                        }
+                        // fiz a variável razão, pois colocar direto não tava dando certo devido ao math.round
+                        ImageConverter a = new ImageConverter();
+                        Image icon = new Bitmap(ktm.SelectedIcon, width, height);
+                        keybutton.Image = icon;
+                        keybutton.ImageAlign = ContentAlignment.MiddleCenter;
+                    }
+                    catch (Exception) { }
                 }
             }
 
             if (btnOpenModuleSwitch.Tag.Equals("active"))
             {
-                KeycapSwitchModule ksm = new KeycapSwitchModule();
+                KeycapSwitchModule ksm = new KeycapSwitchModule(keybutton.Name);
                 OpenModule(ksm);
-
                 if (ksm.DialogResult == DialogResult.Yes)
                 {
                     foreach (Control keycap in pnlWithKeycaps.Controls)
@@ -368,17 +381,13 @@ namespace AcroniUI.Custom
                             p.Size = new Size(10, 10);
                             (new BunifuElipse()).ApplyElipse(p, 7);
                             p.BackColor = ksm.SwitchColor;
-                            p.Location = (keycap.Controls[keycap.Name.Replace("fundo","lbl")] as Label).Location;
+                            p.Location = (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).Location;
                             keycap.Controls.Add(p);
                             p.Visible = true;
                             p.BringToFront();
                             //p.MouseMove +=  
                         }
                     }
-                }
-                else if (ksm.DialogResult == DialogResult.No)
-                {
-
                 }
             }
 
@@ -441,7 +450,7 @@ namespace AcroniUI.Custom
         {
             Panel SwitchDialog = new Panel();
             SwitchDialog.Size = new Size(350, 100);
-            (new BunifuElipse()).ApplyElipse(SwitchDialog, 10);
+            (new BunifuElipse()).ApplyElipse(SwitchDialog, 20);
             SwitchDialog.BackColor = Color.FromArgb(45, 46, 47);
             SwitchDialog.Location = new Point(LabelThatHasASwitch.Location.X + 25, LabelThatHasASwitch.Location.Y + 25);
             this.Controls.Add(SwitchDialog);
@@ -948,22 +957,29 @@ namespace AcroniUI.Custom
         {
             if (!Share.EditKeyboard)
             {
-                if (!String.IsNullOrEmpty(Share.KeyboardNameNotCreated))
+                if (!Share.EditKeyboard)
                 {
-                    Galeria selectGallery = new Galeria(true);
-                    selectGallery.ShowDialog();
-                    while (selectGallery.Visible)
+                    if (!String.IsNullOrEmpty(Share.KeyboardNameNotCreated))
                     {
-                        await Task.Delay(100);
-                    }
+                        AcroniMessageBoxConfirm mb = new AcroniMessageBoxConfirm("Agora, aparecerá sua galeria.", "Nela, clique na coleção que deseja salvar seu teclado ^-^");
+                        if (mb.ShowDialog() != DialogResult.Cancel)
+                        {
+                            Galeria selectGallery = new Galeria(true);
+                            selectGallery.Show();
 
-                    if (!String.IsNullOrEmpty(Share.Collection.CollectionName))
-                    {
-                        setPropriedadesTeclado();
+                            while (selectGallery.Visible)
+                            {
+                                await Task.Delay(100);
+                            }
+
+                            if (!String.IsNullOrEmpty(Share.Collection.CollectionName))
+                            {
+                                setPropriedadesTeclado();
+                            }
+                        }
                     }
                 }
             }
-
             else
             {
                 foreach (Collection col in Share.User.UserCollections)
@@ -1118,13 +1134,13 @@ namespace AcroniUI.Custom
             using (SqlConnection sqlConnection = new SqlConnection("Data Source = " + Environment.MachineName + "\\SQLEXPRESS; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7"))
             {
                 sqlConnection.Open();
-                using (SqlCommand sqlCommand = new SqlCommand($"select nickname from tblTecladoCustomizado where id_cliente = {Share.User.ID} and id_colecao = {Share.Collection.CollectionID}", sqlConnection))
+                using (SqlCommand sqlCommand = new SqlCommand($"select nickname from tblTecladoCustomizado where id_cliente = {Share.User.ID}", sqlConnection))
                 {
                     using (SqlDataReader return_value = sqlCommand.ExecuteReader())
                     {
                         if (return_value.HasRows)
                         {
-                            while(return_value.Read())
+                            while (return_value.Read())
                             {
                                 if (return_value[0].ToString().Equals(Share.Keyboard.NickName))
                                 {
@@ -1146,19 +1162,22 @@ namespace AcroniUI.Custom
                         catch (Exception e) { MessageBox.Show(e.Message); }
                     }
                 else
-                    using (SqlCommand sqlCommand = new SqlCommand($"update tblTecladoCustomizado set imagem_teclado = @img where id_colecao like (select id_colecao from tblColecao where id_cliente = {Share.User.ID}) and id_cliente like "+Share.User.ID+$" and nickname like '{Share.Keyboard.NickName}'", sqlConnection))
+                    using (SqlCommand sqlCommand = new SqlCommand($"update tblTecladoCustomizado set imagem_teclado = @img where id_colecao = (select id_colecao from tblColecao where id_cliente = {Share.User.ID}) and nickname like '{Share.Keyboard.NickName}'", sqlConnection))
                     {
                         sqlCommand.Parameters.AddWithValue("@img", img);
-                        sqlCommand.ExecuteNonQuery();
+                        MessageBox.Show(sqlCommand.ExecuteNonQuery().ToString());
                     }
             }
         }
-
         #endregion
 
         private void pnlCustomizingMenu_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+        private void picBoxKeyboardBackground_Click(object sender, EventArgs e)
+        {
+            picBoxKeyboardBackground.BackColor = Color;
         }
     }
 }

@@ -518,7 +518,7 @@ namespace AcroniUI.Custom
             this.apnlBottom.Controls.Add(this.apnlCustomOptionsLeft);
             this.apnlBottom.Controls.Add(this.pnlBtnOpenModules);
             this.apnlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.apnlBottom.Location = new System.Drawing.Point(0, 563);
+            this.apnlBottom.Location = new System.Drawing.Point(0, 568);
             this.apnlBottom.Name = "apnlBottom";
             this.apnlBottom.Size = new System.Drawing.Size(1280, 157);
             this.apnlBottom.TabIndex = 81;
@@ -1926,9 +1926,9 @@ namespace AcroniUI.Custom
             this.fundoCb14sExtensao.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.fundoCb14sExtensao.Controls.Add(this.lblCb14sExtensao);
             this.fundoCb14sExtensao.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.fundoCb14sExtensao.Location = new System.Drawing.Point(779, 132);
+            this.fundoCb14sExtensao.Location = new System.Drawing.Point(776, 124);
             this.fundoCb14sExtensao.Name = "fundoCb14sExtensao";
-            this.fundoCb14sExtensao.Size = new System.Drawing.Size(68, 63);
+            this.fundoCb14sExtensao.Size = new System.Drawing.Size(69, 71);
             this.fundoCb14sExtensao.TabIndex = 147;
             // 
             // lblCb14sExtensao
@@ -1936,9 +1936,9 @@ namespace AcroniUI.Custom
             this.lblCb14sExtensao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.lblCb14sExtensao.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCb14sExtensao.Font = new System.Drawing.Font("Open Sans", 12F);
-            this.lblCb14sExtensao.Location = new System.Drawing.Point(6, 0);
+            this.lblCb14sExtensao.Location = new System.Drawing.Point(19, 0);
             this.lblCb14sExtensao.Name = "lblCb14sExtensao";
-            this.lblCb14sExtensao.Size = new System.Drawing.Size(55, 53);
+            this.lblCb14sExtensao.Size = new System.Drawing.Size(44, 56);
             this.lblCb14sExtensao.TabIndex = 116;
             this.lblCb14sExtensao.Click += new System.EventHandler(this.lblUpperBottom_Click);
             // 
@@ -1948,9 +1948,9 @@ namespace AcroniUI.Custom
             this.fundoCb14s.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fundoCb14s.BackgroundImage")));
             this.fundoCb14s.Controls.Add(this.lblCb14s);
             this.fundoCb14s.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.fundoCb14s.Location = new System.Drawing.Point(765, 78);
+            this.fundoCb14s.Location = new System.Drawing.Point(765, 80);
             this.fundoCb14s.Name = "fundoCb14s";
-            this.fundoCb14s.Size = new System.Drawing.Size(82, 55);
+            this.fundoCb14s.Size = new System.Drawing.Size(80, 46);
             this.fundoCb14s.TabIndex = 146;
             // 
             // lblCb14s
@@ -1960,10 +1960,10 @@ namespace AcroniUI.Custom
             this.lblCb14s.Font = new System.Drawing.Font("Open Sans", 12F);
             this.lblCb14s.Image = ((System.Drawing.Image)(resources.GetObject("lblCb14s.Image")));
             this.lblCb14s.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblCb14s.Location = new System.Drawing.Point(6, 6);
+            this.lblCb14s.Location = new System.Drawing.Point(8, 5);
             this.lblCb14s.Name = "lblCb14s";
             this.lblCb14s.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.lblCb14s.Size = new System.Drawing.Size(71, 48);
+            this.lblCb14s.Size = new System.Drawing.Size(66, 50);
             this.lblCb14s.TabIndex = 117;
             this.lblCb14s.Click += new System.EventHandler(this.lblUpperBottom_Click);
             // 
@@ -3077,13 +3077,15 @@ namespace AcroniUI.Custom
             // 
             // picBoxKeyboardBackground
             // 
-            this.picBoxKeyboardBackground.Image = ((System.Drawing.Image)(resources.GetObject("picBoxKeyboardBackground.Image")));
-            this.picBoxKeyboardBackground.Location = new System.Drawing.Point(-1, 0);
+            this.picBoxKeyboardBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.picBoxKeyboardBackground.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picBoxKeyboardBackground.Location = new System.Drawing.Point(-1, 2);
             this.picBoxKeyboardBackground.Name = "picBoxKeyboardBackground";
             this.picBoxKeyboardBackground.Size = new System.Drawing.Size(866, 328);
             this.picBoxKeyboardBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBoxKeyboardBackground.TabIndex = 98;
             this.picBoxKeyboardBackground.TabStop = false;
+            this.picBoxKeyboardBackground.Click += new System.EventHandler(this.picBoxKeyboardBackground_Click);
             // 
             // Cb1
             // 
@@ -3125,7 +3127,7 @@ namespace AcroniUI.Custom
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.ClientSize = new System.Drawing.Size(1280, 725);
             this.Controls.Add(this.pnlWithKeycaps);
             this.Controls.Add(this.pnlHeadColorpicker);
             this.Controls.Add(this.apnlBottom);
@@ -3409,7 +3411,6 @@ namespace AcroniUI.Custom
         private System.Windows.Forms.Label lblCd12;
         private System.Windows.Forms.Panel fundoCd13;
         private System.Windows.Forms.Label lblCd13;
-        protected System.Windows.Forms.PictureBox picBoxKeyboardBackground;
         private System.Windows.Forms.Panel fundoCb14sExtensao;
         private System.Windows.Forms.Panel fundoCb14s;
         private System.Windows.Forms.Panel fundoCa9;
@@ -3448,6 +3449,6 @@ namespace AcroniUI.Custom
         private System.Windows.Forms.Label lblCb14sExtensao;
         private System.Windows.Forms.Label lblCb14s;
         private System.Windows.Forms.Panel pnlBtnStyleFontColor;
+        protected System.Windows.Forms.PictureBox picBoxKeyboardBackground;
     }
 }
-

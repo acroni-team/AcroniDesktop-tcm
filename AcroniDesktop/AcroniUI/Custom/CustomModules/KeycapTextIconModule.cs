@@ -15,9 +15,10 @@ namespace AcroniUI.Custom.CustomModules
     public partial class KeycapTextIconModule : KeycapParentModule
     {
 
-        public KeycapTextIconModule(bool BlockUpper, bool BlockBottom)
+        public KeycapTextIconModule(bool BlockUpper, bool BlockBottom, string keycaptext)
         {
             InitializeComponent();
+            txt2.Text = keycaptext;
             Bunifu.Framework.UI.BunifuElipse e = new Bunifu.Framework.UI.BunifuElipse();
             e.ApplyElipse(pnlBtnIconChosen, 5);
             e.ApplyElipse(apnlTextbox1, 5);

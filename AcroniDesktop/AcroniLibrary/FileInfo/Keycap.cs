@@ -8,7 +8,7 @@ namespace AcroniLibrary.FileInfo
     {
         public string ID { get; set; }
         public Color Color { get; set; }
-        public Image Switch { get; set; }
+        public short Switch { get; set; }
         public string Text { get; set; }
         public Image Icon { get; set; }
         public Font Font { get; set; }

@@ -52,10 +52,10 @@
             this.pnlBtnIconChosen = new System.Windows.Forms.Panel();
             this.btnNewIcon = new AcroniControls.StyleBtn();
             this.btnAlll = new System.Windows.Forms.Button();
-            this.btnRedefineBackgroundImage = new System.Windows.Forms.Button();
             this.ebtnPlanoDeFundo = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.eBtnVoltarParaPlanoPadrao = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.ebtnNewIcon = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.btnExcludeBackgroundImage = new System.Windows.Forms.Button();
             this.pnlImages.SuspendLayout();
             this.pnlImg6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxImg6)).BeginInit();
@@ -325,33 +325,13 @@
             this.btnAlll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlll.Font = new System.Drawing.Font("Open Sans", 10F);
             this.btnAlll.ForeColor = System.Drawing.Color.White;
-            this.btnAlll.Location = new System.Drawing.Point(658, 288);
+            this.btnAlll.Location = new System.Drawing.Point(658, 282);
             this.btnAlll.Name = "btnAlll";
             this.btnAlll.Padding = new System.Windows.Forms.Padding(5);
-            this.btnAlll.Size = new System.Drawing.Size(161, 58);
+            this.btnAlll.Size = new System.Drawing.Size(161, 64);
             this.btnAlll.TabIndex = 10;
             this.btnAlll.Text = "Usar como plano de fundo do teclado";
             this.btnAlll.UseVisualStyleBackColor = false;
-            // 
-            // btnRedefineBackgroundImage
-            // 
-            this.btnRedefineBackgroundImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(255)))));
-            this.btnRedefineBackgroundImage.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRedefineBackgroundImage.DialogResult = System.Windows.Forms.DialogResult.Yes;
-            this.btnRedefineBackgroundImage.FlatAppearance.BorderSize = 0;
-            this.btnRedefineBackgroundImage.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
-            this.btnRedefineBackgroundImage.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
-            this.btnRedefineBackgroundImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRedefineBackgroundImage.Font = new System.Drawing.Font("Open Sans", 10F);
-            this.btnRedefineBackgroundImage.ForeColor = System.Drawing.Color.White;
-            this.btnRedefineBackgroundImage.Location = new System.Drawing.Point(658, 355);
-            this.btnRedefineBackgroundImage.Name = "btnRedefineBackgroundImage";
-            this.btnRedefineBackgroundImage.Padding = new System.Windows.Forms.Padding(5);
-            this.btnRedefineBackgroundImage.Size = new System.Drawing.Size(161, 58);
-            this.btnRedefineBackgroundImage.TabIndex = 10;
-            this.btnRedefineBackgroundImage.Text = "Voltar para plano de fundo padrão";
-            this.btnRedefineBackgroundImage.UseVisualStyleBackColor = false;
-            this.btnRedefineBackgroundImage.Click += new System.EventHandler(this.btnRedefineBackgroundImage_Click);
             // 
             // ebtnPlanoDeFundo
             // 
@@ -361,20 +341,40 @@
             // eBtnVoltarParaPlanoPadrao
             // 
             this.eBtnVoltarParaPlanoPadrao.ElipseRadius = 5;
-            this.eBtnVoltarParaPlanoPadrao.TargetControl = this.btnRedefineBackgroundImage;
+            this.eBtnVoltarParaPlanoPadrao.TargetControl = this.btnExcludeBackgroundImage;
             // 
             // ebtnNewIcon
             // 
             this.ebtnNewIcon.ElipseRadius = 5;
             this.ebtnNewIcon.TargetControl = this.btnNewIcon;
             // 
+            // btnExcludeBackgroundImage
+            // 
+            this.btnExcludeBackgroundImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(255)))));
+            this.btnExcludeBackgroundImage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExcludeBackgroundImage.DialogResult = System.Windows.Forms.DialogResult.Yes;
+            this.btnExcludeBackgroundImage.FlatAppearance.BorderSize = 0;
+            this.btnExcludeBackgroundImage.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.btnExcludeBackgroundImage.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.btnExcludeBackgroundImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcludeBackgroundImage.Font = new System.Drawing.Font("Open Sans", 10F);
+            this.btnExcludeBackgroundImage.ForeColor = System.Drawing.Color.White;
+            this.btnExcludeBackgroundImage.Location = new System.Drawing.Point(658, 352);
+            this.btnExcludeBackgroundImage.Name = "btnExcludeBackgroundImage";
+            this.btnExcludeBackgroundImage.Padding = new System.Windows.Forms.Padding(5);
+            this.btnExcludeBackgroundImage.Size = new System.Drawing.Size(161, 64);
+            this.btnExcludeBackgroundImage.TabIndex = 19;
+            this.btnExcludeBackgroundImage.Text = "Retirar plano de fundo";
+            this.btnExcludeBackgroundImage.UseVisualStyleBackColor = false;
+            this.btnExcludeBackgroundImage.Click += new System.EventHandler(this.btnExcludeBackgroundImage_Click);
+            // 
             // KeycapBackgroundModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(862, 472);
+            this.Controls.Add(this.btnExcludeBackgroundImage);
             this.Controls.Add(this.pnlBtnIconChosen);
-            this.Controls.Add(this.btnRedefineBackgroundImage);
             this.Controls.Add(this.btnAlll);
             this.Controls.Add(this.btnNewIcon);
             this.Controls.Add(this.pnlImages);
@@ -384,8 +384,8 @@
             this.Controls.SetChildIndex(this.pnlImages, 0);
             this.Controls.SetChildIndex(this.btnNewIcon, 0);
             this.Controls.SetChildIndex(this.btnAlll, 0);
-            this.Controls.SetChildIndex(this.btnRedefineBackgroundImage, 0);
             this.Controls.SetChildIndex(this.pnlBtnIconChosen, 0);
+            this.Controls.SetChildIndex(this.btnExcludeBackgroundImage, 0);
             this.pnlImages.ResumeLayout(false);
             this.pnlImg6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxImg6)).EndInit();
@@ -426,10 +426,10 @@
         private System.Windows.Forms.Label lblPic2;
         private System.Windows.Forms.Label lblPic1;
         private System.Windows.Forms.Panel pnlBtnIconChosen;
-        protected System.Windows.Forms.Button btnRedefineBackgroundImage;
         protected AcroniControls.StyleBtn btnNewIcon;
         private Bunifu.Framework.UI.BunifuElipse ebtnPlanoDeFundo;
         private Bunifu.Framework.UI.BunifuElipse eBtnVoltarParaPlanoPadrao;
         private Bunifu.Framework.UI.BunifuElipse ebtnNewIcon;
+        protected System.Windows.Forms.Button btnExcludeBackgroundImage;
     }
 }

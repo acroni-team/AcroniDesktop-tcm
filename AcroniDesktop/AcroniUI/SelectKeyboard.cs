@@ -63,37 +63,35 @@ namespace AcroniUI
             this.Close();
         }
 
-        private async void picBoxOpenFullSize_MouseLeave(object sender, EventArgs e)
+        private void picBoxOpenFullSize_MouseLeave(object sender, EventArgs e)
         {
-            int contSize;
-            int contLocation;
-            if ((sender as Control) is PictureBox)
-            {
-                if ((sender as Control).Name.Contains("Tenkeyless"))
-                {
-                    contLocation = 2;
-                    contSize = 4;
-                }
-                else if ((sender as Control).Name.Contains("Compacto"))
-                {
-                    contLocation = 1;
-                    contSize = 2;
-                }
-                else
-                {
-                    contSize = 10;
-                    contLocation = 5;
-                }
-                if ((sender as Control).Height > 202)
-                {
-                    while ((sender as Control).Height > 201)
-                    {
-                        await Task.Delay(1);
-                        (sender as Control).Size = new System.Drawing.Size((sender as Control).Size.Width - contSize, (sender as Control).Height - contSize);
-                        (sender as Control).Location = new System.Drawing.Point((sender as Control).Location.X + contLocation, (sender as Control).Location.Y + contLocation);
-                    }
-                }
-            }
+            (sender as PictureBox).Location = new System.Drawing.Point(151, 11);
+            (sender as PictureBox).Size = new System.Drawing.Size(651, 201);
+
+            //int contSize;
+            //int contLocation;
+            //if ((sender as Control) is PictureBox)
+            //{
+            //    if ((sender as Control).Name.Contains("Tenkeyless") || (sender as Control).Name.Contains("Compacto"))
+            //    {
+            //        contLocation = 5;
+            //        contSize = 10;
+            //    }
+            //    else
+            //    {
+            //        contSize = 20;
+            //        contLocation = 10;
+            //    }
+            //    if ((sender as Control).Height > 202)
+            //    {
+            //        while ((sender as Control).Height > 201)
+            //        {
+            //            await Task.Delay(1);
+            //            (sender as Control).Size = new System.Drawing.Size((sender as Control).Size.Width - contSize, (sender as Control).Height - contSize);
+            //            (sender as Control).Location = new System.Drawing.Point((sender as Control).Location.X + contLocation, (sender as Control).Location.Y + contLocation);
+            //        }
+            //    }
+            //}
         }
 
         private void picBoxCompacto_Click(object sender, EventArgs e)
