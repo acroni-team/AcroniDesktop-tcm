@@ -255,27 +255,24 @@ namespace AcroniUI.Custom
                     {
                         lblCb14s.Parent.BackgroundImage = null;
                         lblCb14sExtensao.Parent.BackgroundImage = null;
-                        if (keybutton == lblCb14s)
-                        {
-                            lblCb14sExtensao.BackColor = Color;
-                            lblCb14sExtensao.Parent.BackColor = Color.FromArgb(90, keybutton.BackColor);
-                        }
-                        else
-                        {
-                            lblCb14s.BackColor = Color;
-                            lblCb14s.Parent.BackColor = Color.FromArgb(90, keybutton.BackColor);
-                        }
-                    }
-
-                    else
-                    {
-                        keybutton.Parent.BackgroundImage = null;
-                        keybutton.Parent.BackColor = Color.FromArgb(90, keybutton.BackColor);
+                        lblCb14sExtensao.BackColor = Color;
+                        lblCb14sExtensao.Parent.BackColor = Color.FromArgb(90, Color);
+                        lblCb14s.BackColor = Color;
+                        lblCb14s.Parent.BackColor = Color.FromArgb(90, Color);
                     }
                 }
-
                 else
                 {
+                    if(keybutton == lblCb14sExtensao || keybutton == lblCb14s)
+                    {
+                        lblCb14s.Parent.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\..\..\Images\Teclas\lblCb14s.png");
+                        lblCb14sExtensao.Parent.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\..\..\Images\Teclas\lblCb14sExtensao.png");
+                        lblCb14s.BackColor = Color;
+                        lblCb14sExtensao.BackColor = Color;
+                        lblCb14sExtensao.Parent.BackColor = Color.Black;
+                        lblCb14s.Parent.BackColor = Color.Black;
+                        
+                    }
                     if (keybutton.Size.Equals(new Size(38, 39)))
                         keybutton.Parent.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\..\..\Images\Teclas\keycapbackgrounddefault.png");
                     else
