@@ -37,14 +37,6 @@ namespace AcroniLibrary.FileInfo
 
             }
         }
-        public void CatchFromFile(String path)
-        {
-            using (FileStream savearchive = new FileStream(path, FileMode.OpenOrCreate))
-            {
-                BinaryFormatter objectToByteArray = new BinaryFormatter();
-                Share.User = (User)objectToByteArray.Deserialize(savearchive);
-            }
-        }
         public User()
         {
             using (SqlConnection cnn = new SqlConnection(SQLConnection.nome_conexao))

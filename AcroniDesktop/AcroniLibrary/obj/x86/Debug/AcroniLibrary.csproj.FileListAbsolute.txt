@@ -12,3 +12,4 @@ C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniLibrary\obj\x8
 C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniLibrary\obj\x86\Debug\AcroniLibrary.csproj.CopyComplete
 C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniLibrary\obj\x86\Debug\AcroniLibrary.dll
 C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniLibrary\obj\x86\Debug\AcroniLibrary.pdb
+C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniLibrary\obj\x86\Debug\AcroniLibrary.csprojAssemblyReference.cache

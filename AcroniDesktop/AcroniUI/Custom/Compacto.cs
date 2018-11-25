@@ -1129,7 +1129,6 @@ namespace AcroniUI.Custom
                                 if (return_value[0].ToString().Equals(Share.Keyboard.NickName))
                                 {
                                     alreadyExistsThisKeyboard = true;
-                                    MessageBox.Show("Consulta");
                                     break;
                                 }
                             }

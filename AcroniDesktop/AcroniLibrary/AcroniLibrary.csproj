@@ -98,9 +98,5 @@
     <Compile Include="SQL\SQLMethods.cs" />
     <Compile Include="ValidationOF.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="AcroniLibrary.cd" />
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
