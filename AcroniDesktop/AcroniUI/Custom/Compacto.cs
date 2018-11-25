@@ -8,9 +8,6 @@ using AcroniLibrary.CustomizingMethods.TextFonts;
 using AcroniLibrary.FileInfo;
 using AcroniUI.Custom.CustomModules;
 using System.Threading.Tasks;
-using System.IO;
-using AcroniLibrary.SQL;
-using System.Runtime.Serialization.Formatters.Binary;
 using AcroniLibrary.Drawing;
 using System.Drawing.Imaging;
 using Bunifu.Framework.UI;
@@ -306,6 +303,7 @@ namespace AcroniUI.Custom
             {
                 keybutton.Font = new Font(cmbFontes.Text, float.Parse(cmbFontSize.Text), __fontStyle);
                 keybutton.TextAlign =(ContentAlignment) __contentAlignment;
+                keybutton.ImageAlign = (ContentAlignment)__contentAlignment;
                 __checkIfCanApplyStyle = 0;
             }
 
@@ -323,19 +321,19 @@ namespace AcroniUI.Custom
                     && keybutton != lblCa10
                     && keybutton != lblCa11
                     && keybutton != lblCa12)
-                    ktm = new KeycapTextIconModule(false, false);
+                    ktm = new KeycapTextIconModule(false, false, keybutton.Text);
 
                 else if (keybutton.Name.Contains("Ca") || keybutton == lblCb12 || keybutton == lblCc12 || keybutton == lblCd2 || keybutton == lblCd10 || keybutton == lblCd11 || keybutton == lblCd12)
-                    ktm = new KeycapTextIconModule(false, true);
+                    ktm = new KeycapTextIconModule(false, true,keybutton.Text);
 
                 else
-                    ktm = new KeycapTextIconModule(true, true);
+                    ktm = new KeycapTextIconModule(true, true, keybutton.Text);
                 OpenModule(ktm);
 
                 if (ktm.DialogResult == DialogResult.OK)
                 {
                     if (string.IsNullOrWhiteSpace(ktm.Maintext))
-                        keybutton.Text = $"{keybutton.Text}";
+                        keybutton.Text = "";
 
                     else if (string.IsNullOrWhiteSpace(ktm.Uppertext) && string.IsNullOrWhiteSpace(ktm.Bottomtext))
                         keybutton.Text = ktm.Maintext;
@@ -349,7 +347,23 @@ namespace AcroniUI.Custom
 
                 if (KeycapTextIconModule.HasChosenAIcon)
                 {
-                    keybutton.Image = ktm.SelectedIcon;
+                    try {
+                        int width = keybutton.Width - 5;
+                        double razao = (double)keybutton.Width / ktm.SelectedIcon.Width;
+                        int height = (int)Math.Round((ktm.SelectedIcon.Height * razao));
+                        if (height >= keybutton.Height)
+                        {
+                            height = keybutton.Height - 5;
+                            razao = (double)keybutton.Height / ktm.SelectedIcon.Height;
+                            width = (int)Math.Round((ktm.SelectedIcon.Width * razao));
+                        }
+                        // fiz a variável razão, pois colocar direto não tava dando certo devido ao math.round
+                        ImageConverter a = new ImageConverter();
+                        Image icon = new Bitmap(ktm.SelectedIcon, width, height);
+                        keybutton.Image = icon;
+                        keybutton.ImageAlign = ContentAlignment.MiddleCenter;
+                    }
+                    catch (Exception) { }
                 }
             }
 

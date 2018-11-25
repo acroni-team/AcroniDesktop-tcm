@@ -14,10 +14,10 @@ namespace AcroniUI.Custom.CustomModules
 {
     public partial class KeycapTextIconModule : KeycapParentModule
     {
-
-        public KeycapTextIconModule(bool BlockUpper, bool BlockBottom)
+        public KeycapTextIconModule(bool BlockUpper, bool BlockBottom,string keycaptext)
         {
             InitializeComponent();
+            txt2.Text = keycaptext;
             Bunifu.Framework.UI.BunifuElipse e = new Bunifu.Framework.UI.BunifuElipse();
             e.ApplyElipse(pnlBtnIconChosen, 5);
             e.ApplyElipse(apnlTextbox1, 5);
@@ -62,7 +62,7 @@ namespace AcroniUI.Custom.CustomModules
         {
             TheKhanSoftsWatermarkTextbox.TextboxWithPlaceholder twp = (TheKhanSoftsWatermarkTextbox.TextboxWithPlaceholder)sender;
             twp.ForeColor = Color.FromArgb(114, 137, 218);
-
+        
             if (sender == txt1)
             {
                 if (txt1.Text.Equals("Um único caractere, por favor."))
