@@ -3077,13 +3077,14 @@ namespace AcroniUI.Custom
             // 
             // picBoxKeyboardBackground
             // 
-            this.picBoxKeyboardBackground.Image = ((System.Drawing.Image)(resources.GetObject("picBoxKeyboardBackground.Image")));
+            this.picBoxKeyboardBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.picBoxKeyboardBackground.Location = new System.Drawing.Point(-1, 0);
             this.picBoxKeyboardBackground.Name = "picBoxKeyboardBackground";
             this.picBoxKeyboardBackground.Size = new System.Drawing.Size(866, 328);
             this.picBoxKeyboardBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBoxKeyboardBackground.TabIndex = 98;
             this.picBoxKeyboardBackground.TabStop = false;
+            this.picBoxKeyboardBackground.Click += new System.EventHandler(this.picBoxKeyboardBackground_Click);
             // 
             // Cb1
             // 
@@ -3409,7 +3410,6 @@ namespace AcroniUI.Custom
         private System.Windows.Forms.Label lblCd12;
         private System.Windows.Forms.Panel fundoCd13;
         private System.Windows.Forms.Label lblCd13;
-        protected System.Windows.Forms.PictureBox picBoxKeyboardBackground;
         private System.Windows.Forms.Panel fundoCb14sExtensao;
         private System.Windows.Forms.Panel fundoCb14s;
         private System.Windows.Forms.Panel fundoCa9;
@@ -3448,6 +3448,7 @@ namespace AcroniUI.Custom
         private System.Windows.Forms.Label lblCb14sExtensao;
         private System.Windows.Forms.Label lblCb14s;
         private System.Windows.Forms.Panel pnlBtnStyleFontColor;
+        protected System.Windows.Forms.PictureBox picBoxKeyboardBackground;
     }
 }
 

@@ -536,7 +536,7 @@ namespace AcroniUI.Custom
                         if (d is Label)
                             e.ApplyElipse(d, 3);
                 }
-            e.ApplyElipse(picBoxKeyboardBackground, 5);
+            e.ApplyElipse(picBoxKeyboardBackground, 20);
             //Fazendo com que o label do nome do teclado tenha localização exatamente após o label que contém o nome da coleção.
 
             lblKeyboardName.Location = new Point(lblCollectionName.Location.X + lblCollectionName.Size.Width - 5, lblCollectionName.Location.Y);
@@ -1183,6 +1183,11 @@ namespace AcroniUI.Custom
         private void pnlCustomizingMenu_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void picBoxKeyboardBackground_Click(object sender, EventArgs e)
+        {
+            picBoxKeyboardBackground.BackColor = Color;
         }
     }
 }

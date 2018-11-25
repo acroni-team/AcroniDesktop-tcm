@@ -40,15 +40,6 @@
             this.btnAlll.Location = new System.Drawing.Point(658, 224);
             this.btnAlll.Text = "Usar essa textura em todas as teclas.";
             // 
-            // btnRedefineBackgroundImage
-            // 
-            this.btnRedefineBackgroundImage.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnRedefineBackgroundImage.FlatAppearance.BorderSize = 0;
-            this.btnRedefineBackgroundImage.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
-            this.btnRedefineBackgroundImage.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
-            this.btnRedefineBackgroundImage.Location = new System.Drawing.Point(658, 291);
-            this.btnRedefineBackgroundImage.Text = "Voltar para textura de tecla padrão";
-            // 
             // btnNewIcon
             // 
             this.btnNewIcon.FlatAppearance.BorderSize = 0;
@@ -106,7 +97,6 @@
             this.Opacity = 0D;
             this.Text = "KeycapTextureModule";
             this.Controls.SetChildIndex(this.btnNewIcon, 0);
-            this.Controls.SetChildIndex(this.btnRedefineBackgroundImage, 0);
             this.Controls.SetChildIndex(this.btnAlll, 0);
             this.Controls.SetChildIndex(this.btnThis, 0);
             this.Controls.SetChildIndex(this.btnRedefineAllTextureImage, 0);

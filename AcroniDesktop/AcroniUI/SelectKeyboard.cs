@@ -58,7 +58,7 @@ namespace AcroniUI
             this.Close();
         }
 
-        private async void picBoxOpenFullSize_MouseLeave(object sender, EventArgs e)
+        private void picBoxOpenFullSize_MouseLeave(object sender, EventArgs e)
         {
             (sender as PictureBox).Location = new System.Drawing.Point(151, 11);
             (sender as PictureBox).Size = new System.Drawing.Size(651, 201);
