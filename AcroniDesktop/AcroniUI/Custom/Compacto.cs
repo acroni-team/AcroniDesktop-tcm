@@ -422,21 +422,21 @@ namespace AcroniUI.Custom
                 OpenModule(ksm);
                 if (ksm.DialogResult == DialogResult.Yes)
                 {
-                    foreach (Control keycap in pnlWithKeycaps.Controls)
-                    {
-                        if (keycap is Panel && keycap.HasChildren)
-                        {
-                            Panel p = new Panel();
-                            p.Size = new Size(10, 10);
-                            (new BunifuElipse()).ApplyElipse(p, 7);
-                            p.BackColor = ksm.SwitchColor;
-                            p.Location = (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).Location;
-                            keycap.Controls.Add(p);
-                            p.Visible = true;
-                            p.BringToFront();
-                            //p.MouseMove +=  
-                        }
-                    }
+                    //foreach (Control keycap in pnlWithKeycaps.Controls)
+                    //{
+                    //    if (keycap is Panel && keycap.HasChildren)
+                    //    {
+                    //        Panel p = new Panel();
+                    //        p.Size = new Size(10, 10);
+                    //        (new BunifuElipse()).ApplyElipse(p, 7);
+                    //        p.BackColor = ksm.SwitchColor;
+                    //        p.Location = (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).Location;
+                    //        keycap.Controls.Add(p);
+                    //        p.Visible = true;
+                    //        p.BringToFront();
+                    //        //p.MouseMove +=  
+                    //    }
+                    //}
                 }
             }
 
@@ -908,6 +908,7 @@ namespace AcroniUI.Custom
             lblKeyboardName.Text = Share.Keyboard.NickName;
             lblCollectionName.Text = Share.Collection.CollectionName + " • ";
             lblCollectionName.Visible = true;
+            lblKeyboardName.Visible = true;
             lblKeyboardName.Location = new Point(lblCollectionName.Location.X + lblCollectionName.Width - 6, lblCollectionName.Location.Y);
         }
 
@@ -1010,6 +1011,8 @@ namespace AcroniUI.Custom
                 {
                     canSave = true;
                 }
+            else
+                canSave = true;
             if (canSave)
             {
                 if (!Share.EditKeyboard)

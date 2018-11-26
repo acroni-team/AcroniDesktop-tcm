@@ -79,7 +79,7 @@
             this.alblMessage1.ForeColor = System.Drawing.Color.White;
             this.alblMessage1.Location = new System.Drawing.Point(253, 25);
             this.alblMessage1.Name = "alblMessage1";
-            this.alblMessage1.Size = new System.Drawing.Size(493, 23);
+            this.alblMessage1.Size = new System.Drawing.Size(515, 23);
             this.alblMessage1.TabIndex = 7;
             this.alblMessage1.Text = "Escolha seu switch para essa tecla ou para todas as teclas ";
             // 
@@ -269,6 +269,7 @@
             this.btnAll.TabIndex = 9;
             this.btnAll.Text = "Quero esse switch para todas!";
             this.btnAll.UseVisualStyleBackColor = false;
+            this.btnAll.Click += new System.EventHandler(this.btnAll_Click);
             // 
             // btnOnlyThis
             // 
@@ -288,6 +289,7 @@
             this.btnOnlyThis.TabIndex = 9;
             this.btnOnlyThis.Text = "Quero só pra essa tecla :D";
             this.btnOnlyThis.UseVisualStyleBackColor = false;
+            this.btnOnlyThis.Click += new System.EventHandler(this.btnOnlyThis_Click);
             // 
             // pnlBtnIconChosen
             // 

@@ -56,8 +56,9 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AcroniControls">
-      <HintPath>..\AcroniControls\bin\Debug\AcroniControls.dll</HintPath>
+    <Reference Include="AcroniControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AcroniControls\bin\x86\Debug\AcroniControls.dll</HintPath>
     </Reference>
     <Reference Include="AcroniLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>

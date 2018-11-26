@@ -66,14 +66,14 @@ namespace AcroniControls
                     }
                 }
                 if (!alreadyExistsThisCollection)
-                    using (SqlCommand sqlCommand = new SqlCommand($"insert into tblColecao(id_cliente, nick_colecao, imagem_colecao) values ((select id_cliente from tblCliente where usuario like '{SQLConnection.nome_usuario}'),'{Share.Collection.CollectionName}', @img)", sqlConnection))
+                    using (SqlCommand sqlCommand = new SqlCommand($"insert into tblColecao(id_cliente, nick_colecao, imagem_colecao) values ({Share.User.ID},'{Share.Collection.CollectionName}', @img)", sqlConnection))
                     {
                         sqlCommand.Parameters.AddWithValue("@img", img);
                         sqlCommand.ExecuteNonQuery();
                     }
 
                 else
-                    using (SqlCommand sqlCommand = new SqlCommand("update tblColecao set imagem_colecao = @img where nick_colecao like '" + Share.Collection.CollectionName + "' and id_cliente like (select id_cliente from tblCliente where usuario like '" + SQLConnection.nome_usuario + "')", sqlConnection))
+                    using (SqlCommand sqlCommand = new SqlCommand("update tblColecao set imagem_colecao = @img where nick_colecao like '" + Share.Collection.CollectionName + $"' and id_cliente = {Share.User.ID}", sqlConnection))
                     {
                         sqlCommand.Parameters.AddWithValue("@img", img);
                         sqlCommand.ExecuteNonQuery();
