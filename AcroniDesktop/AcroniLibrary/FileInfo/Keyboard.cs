@@ -18,5 +18,6 @@ namespace AcroniLibrary.FileInfo
         public bool IsMechanicalKeyboard { get; set; }
         public string KeyboardType { get; set; }
         public Image KeyboardImage { get; set; }
+        public Color BackgroundColor { get; set; }
     }
 }

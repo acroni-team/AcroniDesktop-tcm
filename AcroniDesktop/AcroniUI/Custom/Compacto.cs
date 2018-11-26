@@ -8,13 +8,12 @@ using AcroniLibrary.CustomizingMethods.TextFonts;
 using AcroniLibrary.FileInfo;
 using AcroniUI.Custom.CustomModules;
 using System.Threading.Tasks;
-using System.IO;
-using AcroniLibrary.SQL;
-using System.Runtime.Serialization.Formatters.Binary;
 using AcroniLibrary.Drawing;
 using System.Drawing.Imaging;
 using Bunifu.Framework.UI;
 using System.Data.SqlClient;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace AcroniUI.Custom
 {
@@ -58,6 +57,21 @@ namespace AcroniUI.Custom
 
         private void btnStyle_Click(object sender, EventArgs e)
         {
+            if (btnOpenModuleTextIcons.Tag.Equals("active"))
+            {
+                btnOpenModuleTextIcons.BackColor = Color.FromArgb(31, 32, 34);
+                btnOpenModuleTextIcons.Tag = "disable";
+            }
+            else if (btnOpenModuleTexture.Tag.Equals("active"))
+            {
+                btnOpenModuleTexture.BackColor = Color.FromArgb(31, 32, 34);
+                btnOpenModuleTexture.Tag = "disable";
+            }
+            else if (btnOpenModuleSwitch.Tag.Equals("active"))
+            {
+                btnOpenModuleSwitch.BackColor = Color.FromArgb(31, 32, 34);
+                btnOpenModuleSwitch.Tag = "disable";
+            }
             //Isso serve para gerenciar e saber quais estilos foram selecionados.
             Button style = (Button)sender;
 
@@ -128,6 +142,21 @@ namespace AcroniUI.Custom
         #region Alinhamento dos textos
         private void VerticalContentAlignment_Click(object sender, EventArgs e)
         {
+            if (btnOpenModuleTextIcons.Tag.Equals("active"))
+            {
+                btnOpenModuleTextIcons.BackColor = Color.FromArgb(31, 32, 34);
+                btnOpenModuleTextIcons.Tag = "disable";
+            }
+            else if (btnOpenModuleTexture.Tag.Equals("active"))
+            {
+                btnOpenModuleTexture.BackColor = Color.FromArgb(31, 32, 34);
+                btnOpenModuleTexture.Tag = "disable";
+            }
+            else if (btnOpenModuleSwitch.Tag.Equals("active"))
+            {
+                btnOpenModuleSwitch.BackColor = Color.FromArgb(31, 32, 34);
+                btnOpenModuleSwitch.Tag = "disable";
+            }
             foreach (Control alignButton in pnlVertAlign.Controls)
             {
                 if (alignButton == (sender as BunifuImageButton))
@@ -181,6 +210,21 @@ namespace AcroniUI.Custom
 
         private void HorizontalContentAlign_Click(object sender, EventArgs e)
         {
+            if (btnOpenModuleTextIcons.Tag.Equals("active"))
+            {
+                btnOpenModuleTextIcons.BackColor = Color.FromArgb(31, 32, 34);
+                btnOpenModuleTextIcons.Tag = "disable";
+            }
+            else if (btnOpenModuleTexture.Tag.Equals("active"))
+            {
+                btnOpenModuleTexture.BackColor = Color.FromArgb(31, 32, 34);
+                btnOpenModuleTexture.Tag = "disable";
+            }
+            else if (btnOpenModuleSwitch.Tag.Equals("active"))
+            {
+                btnOpenModuleSwitch.BackColor = Color.FromArgb(31, 32, 34);
+                btnOpenModuleSwitch.Tag = "disable";
+            }
             foreach (Control alignButton in pnlHorizAlign.Controls)
             {
                 if (alignButton == (sender as BunifuImageButton))
@@ -244,66 +288,71 @@ namespace AcroniUI.Custom
             keybutton = (Label)sender;
 
             #region Atribuição de cores
+            if (!btnOpenModuleBackground.Tag.Equals("active") && !btnOpenModuleSwitch.Tag.Equals("active") && !btnOpenModuleTexture.Tag.Equals("active") && !btnOpenModuleTextIcons.Tag.Equals("active"))
+                if (btnStyleFontColor.Tag.Equals("active"))
+                    keybutton.ForeColor = FontColor;
 
-            if (btnStyleFontColor.Tag.Equals("active"))
-                keybutton.ForeColor = FontColor;
-
-            else
-            {
-                keybutton.BackColor = Color;
-
-                if (Color != Color.FromArgb(26, 26, 26))
-                {
-                    if (keybutton == lblCb14sExtensao || keybutton == lblCb14s)
-                    {
-                        lblCb14s.Parent.BackgroundImage = null;
-                        lblCb14sExtensao.Parent.BackgroundImage = null;
-                        lblCb14sExtensao.BackColor = Color;
-                        lblCb14sExtensao.Parent.BackColor = Color.FromArgb(90, Color);
-                        lblCb14s.BackColor = Color;
-                        lblCb14s.Parent.BackColor = Color.FromArgb(90, Color);
-                    }
-                }
                 else
                 {
-                    if (keybutton == lblCb14sExtensao || keybutton == lblCb14s)
+                    keybutton.BackColor = Color;
+                    keybutton.Parent.BackColor = Color.FromArgb(90, Color);
+                    keybutton.Parent.BackgroundImage = null;
+                    if (Color != Color.FromArgb(26, 26, 26))
                     {
-                        lblCb14s.Parent.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Images\Teclas\lblCb14s.png");
-                        lblCb14sExtensao.Parent.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Images\Teclas\lblCb14sExtensao.png");
-                        lblCb14s.BackColor = Color;
-                        lblCb14sExtensao.BackColor = Color;
-                        lblCb14sExtensao.Parent.BackColor = Color.Black;
-                        lblCb14s.Parent.BackColor = Color.Black;
-
+                        if (keybutton == lblCb14sExtensao || keybutton == lblCb14s)
+                        {
+                            lblCb14s.Parent.BackgroundImage = null;
+                            lblCb14sExtensao.Parent.BackgroundImage = null;
+                            lblCb14sExtensao.BackColor = Color;
+                            lblCb14sExtensao.Parent.BackColor = Color.FromArgb(90, Color);
+                            lblCb14s.BackColor = Color;
+                            lblCb14s.Parent.BackColor = Color.FromArgb(90, Color);
+                        }
                     }
-                    if (keybutton.Size.Equals(new Size(38, 39)))
-                        keybutton.Parent.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Images\Teclas\keycapbackgrounddefault.png");
                     else
                     {
-                        keybutton.Parent.BackColor = Color.Black;
-                        keybutton.Parent.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Images\Teclas\{keybutton.Name}.png");
+                        if (keybutton == lblCb14sExtensao || keybutton == lblCb14s)
+                        {
+                            lblCb14s.Parent.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Images\Teclas\lblCb14s.png");
+                            lblCb14sExtensao.Parent.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Images\Teclas\lblCb14sExtensao.png");
+                            lblCb14s.BackColor = Color;
+                            lblCb14sExtensao.BackColor = Color;
+                            lblCb14sExtensao.Parent.BackColor = Color.Black;
+                            lblCb14s.Parent.BackColor = Color.Black;
+
+                        }
+                        if (keybutton.Size.Equals(new Size(38, 39)))
+                            keybutton.Parent.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Images\Teclas\keycapbackgrounddefault.png");
+                        else
+                        {
+                            keybutton.Parent.BackColor = Color.Black;
+                            keybutton.Parent.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Images\Teclas\{keybutton.Name}.png");
+                        }
                     }
                 }
-            }
+
             #endregion
 
             #region Atribuição de fonte e estilos de fonte  
             // Isso serve para saber se nenhum botão de módulo foi escolhido. Se nenhum foi, então você pode atribuir a fonte.
-            int __checkIfCanApplyStyle = 0;
-            foreach (Control btn in pnlBtnOpenModules.Controls)
+            if (!btnOpenModuleBackground.Tag.Equals("active") && !btnOpenModuleSwitch.Tag.Equals("active") && !btnOpenModuleTexture.Tag.Equals("active") && !btnOpenModuleTextIcons.Tag.Equals("active"))
             {
-                if (btn.Tag.Equals("disable"))
+                int __checkIfCanApplyStyle = 0;
+                foreach (Control btn in pnlBtnOpenModules.Controls)
                 {
-                    __checkIfCanApplyStyle++;
+                    if (btn.Tag.Equals("disable"))
+                    {
+                        __checkIfCanApplyStyle++;
+                    }
                 }
-            }
 
-            if (__checkIfCanApplyStyle == 4)
-            {
-                keybutton.Font = new Font(cmbFontes.Text, float.Parse(cmbFontSize.Text), __fontStyle);
-                keybutton.TextAlign = (ContentAlignment)__contentAlignment;
-                keybutton.ImageAlign = (ContentAlignment)__contentAlignment;
-                __checkIfCanApplyStyle = 0;
+                if (__checkIfCanApplyStyle == 4)
+                {
+                    keybutton.Font = new Font(cmbFontes.Text, float.Parse(cmbFontSize.Text), __fontStyle);
+                    keybutton.TextAlign = (ContentAlignment)__contentAlignment;
+                    keybutton.ImageAlign = (ContentAlignment)__contentAlignment;
+                    __checkIfCanApplyStyle = 0;
+                }
             }
 
             #endregion
@@ -450,7 +499,7 @@ namespace AcroniUI.Custom
         {
             Panel SwitchDialog = new Panel();
             SwitchDialog.Size = new Size(350, 100);
-            (new BunifuElipse()).ApplyElipse(SwitchDialog, 20);
+            (new BunifuElipse()).ApplyElipse(SwitchDialog, 10);
             SwitchDialog.BackColor = Color.FromArgb(45, 46, 47);
             SwitchDialog.Location = new Point(LabelThatHasASwitch.Location.X + 25, LabelThatHasASwitch.Location.Y + 25);
             this.Controls.Add(SwitchDialog);
@@ -458,7 +507,7 @@ namespace AcroniUI.Custom
             SwitchDialog.BringToFront();
 
             PictureBox pb = new PictureBox();
-            
+
 
         }
 
@@ -497,7 +546,6 @@ namespace AcroniUI.Custom
         private void DisposePanel() => darkenPanel.Dispose();
 
         #endregion
-
         #region btnVoltar
         //Ao clicar no botão de fechar
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -526,12 +574,17 @@ namespace AcroniUI.Custom
         #region Construtor
         public Compacto()
         {
+            BunifuElipse e = new BunifuElipse();
             InitializeComponent();
-
-            //Fazendo com que o label do nome do teclado tenha localização exatamente após o label que contém o nome da coleção.
-
-            lblKeyboardName.Location = new Point(lblCollectionName.Location.X + lblCollectionName.Size.Width - 5, lblCollectionName.Location.Y);
-
+            foreach (Control c in pnlWithKeycaps.Controls)
+                if (c is Panel)
+                {
+                    e.ApplyElipse(c, 5);
+                    foreach (Control d in c.Controls)
+                        if (d is Label)
+                            e.ApplyElipse(d, 3);
+                }
+            e.ApplyElipse(picBoxKeyboardBackground, 20);
 
             //Eu preciso disso no construtor, sorry. Não dá pra colocar dois estilos na Open Sans logo no designer.
 
@@ -554,7 +607,11 @@ namespace AcroniUI.Custom
             }
 
             if (Share.EditKeyboard)
+            {
+                //Fazendo com que o label do nome do teclado tenha localização exatamente após o label que contém o nome da coleção.
+                AtualizarLabels();
                 LoadKeyboard();
+            }
             else
             {
                 lblCollectionName.Visible = false;
@@ -562,8 +619,6 @@ namespace AcroniUI.Custom
                 lblKeyboardName.Text = "Sem Nome";
                 lblCollectionName.Text = "";
             }
-
-
         }
         #endregion
 
@@ -574,6 +629,21 @@ namespace AcroniUI.Custom
         //Clicks que ocorrem ao selecionar uma cor
         private void btnColor_Click(object sender, EventArgs e)
         {
+            if (btnOpenModuleTextIcons.Tag.Equals("active"))
+            {
+                btnOpenModuleTextIcons.BackColor = Color.FromArgb(31, 32, 34);
+                btnOpenModuleTextIcons.Tag = "disable";
+            }
+            else if (btnOpenModuleTexture.Tag.Equals("active"))
+            {
+                btnOpenModuleTexture.BackColor = Color.FromArgb(31, 32, 34);
+                btnOpenModuleTexture.Tag = "disable";
+            }
+            else if (btnOpenModuleSwitch.Tag.Equals("active"))
+            {
+                btnOpenModuleSwitch.BackColor = Color.FromArgb(31, 32, 34);
+                btnOpenModuleSwitch.Tag = "disable";
+            }
             Button b = (Button)sender;
             lblHexaColor.Text = $"#{b.BackColor.R.ToString("X2")}{b.BackColor.G.ToString("X2")}{b.BackColor.B.ToString("X2")}";
 
@@ -648,8 +718,8 @@ namespace AcroniUI.Custom
                     Controls.Find("fundo" + keybutton.Name, true)[0].BackColor = Color.FromArgb(90, keybutton.BackColor);
                 }
             }
-            catch (Exception) {}
-        } 
+            catch (Exception) { }
+        }
 
         #region Hover para cada uma das cores do colorpicker
 
@@ -836,15 +906,16 @@ namespace AcroniUI.Custom
         private void AtualizarLabels()
         {
             lblKeyboardName.Text = Share.Keyboard.NickName;
-            lblCollectionName.Text = Share.Collection.CollectionName;
+            lblCollectionName.Text = Share.Collection.CollectionName + " • ";
+            lblCollectionName.Visible = true;
+            lblKeyboardName.Location = new Point(lblCollectionName.Location.X + lblCollectionName.Width - 6, lblCollectionName.Location.Y);
         }
 
         private void LoadKeyboard()
         {
-            lblKeyboardName.Text = Share.Keyboard.NickName;
-            lblCollectionName.Text = Share.Collection.CollectionName;
             picBoxKeyboardBackground.Image = Share.Keyboard.BackgroundImage;
             picBoxKeyboardBackground.SizeMode = (PictureBoxSizeMode)Share.Keyboard.BackgroundModeSize;
+            picBoxKeyboardBackground.BackColor = Share.Keyboard.BackgroundColor;
 
             foreach (Control keycap in pnlWithKeycaps.Controls)
             {
@@ -870,10 +941,10 @@ namespace AcroniUI.Custom
                                             c.Parent.BackColor = Color.FromArgb(90, k.Color);
                                             c.Parent.BackgroundImage = null;
                                         }
-                                        (c as Label).TextAlign = (ContentAlignment) k.ContentAlignment;
+                                        (c as Label).TextAlign = (ContentAlignment)k.ContentAlignment;
                                     }
                                 }
-                                ////keycap.Text = k.Text;
+                                //keycap.Text = k.Text;
 
 
                                 break;
@@ -935,7 +1006,8 @@ namespace AcroniUI.Custom
                         canSave = true;
                     }
                 }
-                else {
+                else
+                {
                     canSave = true;
                 }
             if (canSave)
@@ -957,29 +1029,27 @@ namespace AcroniUI.Custom
         {
             if (!Share.EditKeyboard)
             {
-                if (!Share.EditKeyboard)
+                if (!String.IsNullOrEmpty(Share.KeyboardNameNotCreated))
                 {
-                    if (!String.IsNullOrEmpty(Share.KeyboardNameNotCreated))
+                    AcroniMessageBoxConfirm mb = new AcroniMessageBoxConfirm("Agora, aparecerá sua galeria.", "Nela, clique na coleção que deseja salvar seu teclado ^-^");
+                    if (mb.ShowDialog() != DialogResult.Cancel)
                     {
-                        AcroniMessageBoxConfirm mb = new AcroniMessageBoxConfirm("Agora, aparecerá sua galeria.", "Nela, clique na coleção que deseja salvar seu teclado ^-^");
-                        if (mb.ShowDialog() != DialogResult.Cancel)
+                        Galeria selectGallery = new Galeria(true);
+                        selectGallery.Show();
+
+                        while (selectGallery.Visible)
                         {
-                            Galeria selectGallery = new Galeria(true);
-                            selectGallery.Show();
+                            await Task.Delay(100);
+                        }
 
-                            while (selectGallery.Visible)
-                            {
-                                await Task.Delay(100);
-                            }
-
-                            if (!String.IsNullOrEmpty(Share.Collection.CollectionName))
-                            {
-                                setPropriedadesTeclado();
-                            }
+                        if (!String.IsNullOrEmpty(Share.Collection.CollectionName))
+                        {
+                            setPropriedadesTeclado();
                         }
                     }
                 }
             }
+
             else
             {
                 foreach (Collection col in Share.User.UserCollections)
@@ -1035,7 +1105,8 @@ namespace AcroniUI.Custom
                 //        }
                 //    }
                 //}
-                Share.User.KeyboardQuantity++;
+                AtualizarLabels();
+                ++Share.User.KeyboardQuantity;
                 AcroniMessageBoxConfirm success = new AcroniMessageBoxConfirm("Teclado adicionado/salvo com sucesso!", "Ele se encontrará na coleção selecionada, em sua galeria :D");
                 success.ShowDialog();
                 Share.EditKeyboard = true;
@@ -1063,9 +1134,9 @@ namespace AcroniUI.Custom
             keyboard.HasRestPads = false;
             keyboard.KeyboardType = this.Name;
             keyboard.BackgroundImage = picBoxKeyboardBackground.Image;
+            keyboard.BackgroundColor = picBoxKeyboardBackground.BackColor;
             keyboard.BackgroundModeSize = picBoxKeyboardBackground.SizeMode;
-            Bitmap keyboardImage = new Bitmap(pnlWithKeycaps.Width, pnlWithKeycaps.Height);
-            pnlWithKeycaps.DrawToBitmap(keyboardImage, pnlWithKeycaps.ClientRectangle);
+            Bitmap keyboardImage = Screenshot.TakeSnapshot(pnlWithKeycaps);
             keyboard.KeyboardImage = keyboardImage;
             string text = "";
             Color backcolor = Color.Empty;
@@ -1074,12 +1145,16 @@ namespace AcroniUI.Custom
             Image image = null;
             object textalign = ContentAlignment.TopLeft;
             string name = "";
+            short switch1 = 0;
             foreach (Control tecla in pnlWithKeycaps.Controls)
                 if (tecla.Name.Contains("fundo"))
                 {
                     {
                         foreach (Control c in tecla.Controls)
                         {
+                            foreach (Keycap k in Share.Keyboard.Keycaps)
+                                if (k.ID.Equals(c.Name))
+                                    switch1 = k.Switch;
                             if (c.Name.Contains("lbl"))
                             {
                                 image = (c as Label).Image;
@@ -1095,6 +1170,7 @@ namespace AcroniUI.Custom
                         }
                         keyboard.Keycaps.Add(new Keycap
                         {
+                            Switch = switch1,
                             ForeColor = forecolor,
                             ID = name,
                             Text = text,
@@ -1169,16 +1245,24 @@ namespace AcroniUI.Custom
                     }
             }
         }
+
         #endregion
 
         private void pnlCustomizingMenu_Paint(object sender, PaintEventArgs e)
         {
 
         }
+
         private void picBoxKeyboardBackground_Click(object sender, EventArgs e)
         {
             picBoxKeyboardBackground.BackColor = Color;
         }
+
+        private void pnlVertAlign_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+
     }
 }
-
