@@ -1241,7 +1241,7 @@ namespace AcroniUI.Custom
                     using (SqlCommand sqlCommand = new SqlCommand($"update tblTecladoCustomizado set imagem_teclado = @img where id_colecao = (select id_colecao from tblColecao where id_cliente = {Share.User.ID}) and nickname like '{Share.Keyboard.NickName}'", sqlConnection))
                     {
                         sqlCommand.Parameters.AddWithValue("@img", img);
-                        MessageBox.Show(sqlCommand.ExecuteNonQuery().ToString());
+                        //MessageBox.Show(sqlCommand.ExecuteNonQuery().ToString());
                     }
             }
         }

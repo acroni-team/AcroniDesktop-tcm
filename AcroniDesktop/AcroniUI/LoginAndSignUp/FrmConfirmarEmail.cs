@@ -61,7 +61,7 @@ namespace AcroniUI.LoginAndSignUp
             senha_public = senha;
             email_public = email;
             tipo_public = tipo;
-            cpf = cpf_public;
+            cpf_public = cpf;
             nome_public = nome;
 
             gerar_string_confirmacao();

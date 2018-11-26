@@ -312,6 +312,7 @@ namespace AcroniUI.LoginAndSignUp
         private void ChangeMessagelblAviso(String message)
         {
             lblAvisoCad.Text = message;
+            lblAvisoCad.Visible = true;
             pnlShowCadError.Location = new Point(apnlApelido.Location.X, 510);
         }
 
@@ -370,6 +371,7 @@ namespace AcroniUI.LoginAndSignUp
                                                 Serializer.Serialize(savearchive, Share.User);
                                             }
                                         }
+                                        pnlCadastro.Location = new Point(800,0);
                                         (new SelectKeyboard()).Show();
                                         this.Hide();
                                         // Checa se existe o arquivo, e se não existe, cria - o
