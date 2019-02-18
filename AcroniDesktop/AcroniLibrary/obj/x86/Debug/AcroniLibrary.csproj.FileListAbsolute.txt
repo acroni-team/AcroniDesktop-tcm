@@ -1,0 +1,8 @@
+E:\Desktop\Concilium\Programacao\TCC-TCM\AcroniDesktop-tcm\AcroniDesktop\AcroniLibrary\bin\x86\Debug\AcroniLibrary.dll
+E:\Desktop\Concilium\Programacao\TCC-TCM\AcroniDesktop-tcm\AcroniDesktop\AcroniLibrary\bin\x86\Debug\AcroniLibrary.pdb
+E:\Desktop\Concilium\Programacao\TCC-TCM\AcroniDesktop-tcm\AcroniDesktop\AcroniLibrary\bin\x86\Debug\Bunifu_UI_v1.52.dll
+E:\Desktop\Concilium\Programacao\TCC-TCM\AcroniDesktop-tcm\AcroniDesktop\AcroniLibrary\obj\x86\Debug\AcroniLibrary.csprojAssemblyReference.cache
+E:\Desktop\Concilium\Programacao\TCC-TCM\AcroniDesktop-tcm\AcroniDesktop\AcroniLibrary\obj\x86\Debug\AcroniLibrary.csproj.CoreCompileInputs.cache
+E:\Desktop\Concilium\Programacao\TCC-TCM\AcroniDesktop-tcm\AcroniDesktop\AcroniLibrary\obj\x86\Debug\AcroniLibrary.csproj.CopyComplete
+E:\Desktop\Concilium\Programacao\TCC-TCM\AcroniDesktop-tcm\AcroniDesktop\AcroniLibrary\obj\x86\Debug\AcroniLibrary.dll
+E:\Desktop\Concilium\Programacao\TCC-TCM\AcroniDesktop-tcm\AcroniDesktop\AcroniLibrary\obj\x86\Debug\AcroniLibrary.pdb

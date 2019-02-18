@@ -56,6 +56,9 @@
     <Reference Include="AcroniControls">
       <HintPath>..\AcroniControls\bin\Debug\AcroniControls.dll</HintPath>
     </Reference>
+    <Reference Include="AcroniDAL">
+      <HintPath>..\..\AcroniDAL\bin\Debug\AcroniDAL.dll</HintPath>
+    </Reference>
     <Reference Include="AcroniLibrary">
       <HintPath>..\AcroniLibrary\bin\Debug\AcroniLibrary.dll</HintPath>
     </Reference>

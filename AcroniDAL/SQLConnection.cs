@@ -3,7 +3,7 @@ using System.Data;
 using System;
 using System.Drawing;
 
-namespace AcroniLibrary.SQL
+namespace AcroniDAL
 {
     public class SQLConnection
     {
@@ -11,6 +11,7 @@ namespace AcroniLibrary.SQL
         private static SqlConnection conexao = new SqlConnection("Data Source = " + Environment.MachineName + "\\SQLEXPRESS; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7");
         public static String nome_conexao = "Data Source = " + Environment.MachineName + "\\SQLEXPRESS; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7";
         public static Image imagem_cliente;
+
         public void AbrirConexao()
         {
             if (conexao.State == ConnectionState.Closed)
@@ -22,6 +23,7 @@ namespace AcroniLibrary.SQL
                 throw new Exception("A conexão com o banco já está aberta");
             }
         }
+
         public void FecharConexao()
         {
             if (conexao.State == ConnectionState.Open)

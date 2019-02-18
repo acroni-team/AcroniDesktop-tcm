@@ -49,6 +49,9 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AcroniDAL">
+      <HintPath>..\..\AcroniDAL\bin\Debug\AcroniDAL.dll</HintPath>
+    </Reference>
     <Reference Include="AcroniLibrary">
       <HintPath>..\AcroniLibrary\bin\Debug\AcroniLibrary.dll</HintPath>
     </Reference>

@@ -1,0 +1,6 @@
+E:\Desktop\Concilium\Programacao\TCC-TCM\AcroniDesktop-tcm\AcroniDAL\bin\Debug\AcroniDAL.dll
+E:\Desktop\Concilium\Programacao\TCC-TCM\AcroniDesktop-tcm\AcroniDAL\bin\Debug\AcroniDAL.pdb
+E:\Desktop\Concilium\Programacao\TCC-TCM\AcroniDesktop-tcm\AcroniDAL\obj\Debug\AcroniDAL.csprojAssemblyReference.cache
+E:\Desktop\Concilium\Programacao\TCC-TCM\AcroniDesktop-tcm\AcroniDAL\obj\Debug\AcroniDAL.csproj.CoreCompileInputs.cache
+E:\Desktop\Concilium\Programacao\TCC-TCM\AcroniDesktop-tcm\AcroniDAL\obj\Debug\AcroniDAL.dll
+E:\Desktop\Concilium\Programacao\TCC-TCM\AcroniDesktop-tcm\AcroniDAL\obj\Debug\AcroniDAL.pdb

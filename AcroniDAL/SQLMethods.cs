@@ -3,9 +3,9 @@ using System.Data;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 
-namespace AcroniLibrary.SQL
+namespace AcroniDAL
 {
-    public class SQLMethods
+    public static class SQLMethods
     {
         public static bool SELECT_HASROWS(String commandSELECT)
         {
