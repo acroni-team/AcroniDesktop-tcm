@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AcroniLibrary.CustomizingMethods
+namespace AcroniBLL.CustomizingMethods
 {
     public class IconsQueue
     {

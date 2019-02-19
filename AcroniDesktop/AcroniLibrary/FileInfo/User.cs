@@ -6,7 +6,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Windows.Forms;
 
-namespace AcroniLibrary.FileInfo
+namespace AcroniBLL.FileInfo
 {
     [Serializable]
     public class User

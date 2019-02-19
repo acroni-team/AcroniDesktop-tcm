@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AcroniLibrary.Drawing
+namespace AcroniBLL.Drawing
 {
     public class Screenshot
     {

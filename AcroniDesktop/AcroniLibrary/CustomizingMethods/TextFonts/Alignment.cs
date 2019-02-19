@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AcroniLibrary.CustomizingMethods.TextFonts
+namespace AcroniBLL.CustomizingMethods.TextFonts
 {
     public class Alignment
     {

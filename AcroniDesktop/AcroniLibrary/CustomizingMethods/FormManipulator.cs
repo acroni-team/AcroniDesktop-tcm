@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AcroniLibrary.CustomizingMethods
+namespace AcroniBLL.CustomizingMethods
 {
     public class FormManipulator
     {

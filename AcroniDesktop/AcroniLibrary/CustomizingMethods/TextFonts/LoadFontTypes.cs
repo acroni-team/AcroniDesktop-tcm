@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Drawing.Text;
 using System.Windows.Forms;
 
-namespace AcroniLibrary.CustomizingMethods.TextFonts
+namespace AcroniBLL.CustomizingMethods.TextFonts
 {
     public class LoadFontTypes
     {

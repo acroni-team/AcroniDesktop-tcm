@@ -1,4 +1,4 @@
-﻿namespace AcroniLibrary.FileInfo
+﻿namespace AcroniBLL.FileInfo
 {
     partial class ControlKeyboard
     {

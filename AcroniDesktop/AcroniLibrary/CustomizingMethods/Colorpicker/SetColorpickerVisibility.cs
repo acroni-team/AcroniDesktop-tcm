@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace AcroniLibrary.CustomizingMethods.Colorpicker
+namespace AcroniBLL.CustomizingMethods.Colorpicker
 {
     class SetColorpickerVisibility : ColorpickerHandlers
     {

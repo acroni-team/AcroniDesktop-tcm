@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace AcroniLibrary.CustomizingMethods.Colorpicker
+namespace AcroniBLL.CustomizingMethods.Colorpicker
 {
     class ColorpickerHandlers
     {

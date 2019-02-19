@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Threading;
-using AcroniLibrary;
+using AcroniBLL;
 using AcroniDAL;
 
 namespace AcroniUI.LoginAndSignUp

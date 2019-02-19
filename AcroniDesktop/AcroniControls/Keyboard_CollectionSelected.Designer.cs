@@ -1,4 +1,4 @@
-﻿using AcroniLibrary.FileInfo;
+﻿using AcroniBLL.FileInfo;
 
 namespace AcroniControls
 {

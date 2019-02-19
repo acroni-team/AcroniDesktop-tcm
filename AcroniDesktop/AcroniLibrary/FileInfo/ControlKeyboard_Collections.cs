@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace AcroniLibrary.FileInfo
+namespace AcroniBLL.FileInfo
 {
     public class ControlKeyboard_Collections
     {

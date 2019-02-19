@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AcroniLibrary
+namespace AcroniBLL
 {
     public class Validator
     {

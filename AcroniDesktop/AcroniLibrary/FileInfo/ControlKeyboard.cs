@@ -1,7 +1,7 @@
 ﻿using System.Windows.Forms;
 
 
-namespace AcroniLibrary.FileInfo
+namespace AcroniBLL.FileInfo
 {
     public partial class ControlKeyboard : Button
     {

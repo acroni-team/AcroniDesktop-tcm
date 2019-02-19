@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using AcroniLibrary.FileInfo;
+using AcroniBLL.FileInfo;
 using AcroniDAL;
-using AcroniLibrary.Drawing;
+using AcroniBLL.Drawing;
 using System.Drawing.Imaging;
 
 namespace AcroniControls

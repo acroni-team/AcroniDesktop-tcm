@@ -1,7 +1,7 @@
 ﻿using AcroniControls;
-using AcroniLibrary;
-using AcroniLibrary.Drawing;
-using AcroniLibrary.FileInfo;
+using AcroniBLL;
+using AcroniBLL.Drawing;
+using AcroniBLL.FileInfo;
 using AcroniDAL;
 using AcroniUI.Custom;
 using System;

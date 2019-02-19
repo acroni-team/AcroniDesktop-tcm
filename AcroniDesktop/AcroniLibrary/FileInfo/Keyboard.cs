@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace AcroniLibrary.FileInfo
+namespace AcroniBLL.FileInfo
 {
     [Serializable]
     public class Keyboard

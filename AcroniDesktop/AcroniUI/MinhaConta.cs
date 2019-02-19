@@ -1,4 +1,4 @@
-﻿using AcroniLibrary.Drawing;
+﻿using AcroniBLL.Drawing;
 using AcroniDAL;
 using System;
 using System.Collections.Generic;
@@ -13,8 +13,8 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using AcroniLibrary.FileInfo;
-using AcroniLibrary;
+using AcroniBLL.FileInfo;
+using AcroniBLL;
 using Bunifu.Framework.UI;
 
 namespace AcroniUI

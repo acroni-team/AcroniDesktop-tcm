@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AcroniLibrary.FileInfo
+namespace AcroniBLL.FileInfo
 {
     public class KeyboardIDGenerator
     {

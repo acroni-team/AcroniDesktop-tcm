@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using AcroniLibrary.DesignMethods;
+using AcroniBLL.DesignMethods;
 
 namespace AcroniUI.Custom.CustomModules
 {

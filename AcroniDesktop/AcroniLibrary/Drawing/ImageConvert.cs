@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AcroniLibrary.Drawing
+namespace AcroniBLL.Drawing
 {
     public class ImageConvert
     {

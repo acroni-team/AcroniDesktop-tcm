@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using AcroniLibrary;
+using AcroniBLL;
 using System.Data.SqlClient;
 using System.IO;
 using System.Drawing.Text;
@@ -16,7 +16,7 @@ using System.Threading;
 using System.Runtime.Serialization.Formatters.Binary;
 using AcroniControls;
 using AcroniDAL;
-using AcroniLibrary.FileInfo;
+using AcroniBLL.FileInfo;
 
 namespace AcroniUI
 {
