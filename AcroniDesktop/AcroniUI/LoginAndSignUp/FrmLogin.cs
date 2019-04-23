@@ -57,11 +57,18 @@ namespace AcroniUI.LoginAndSignUp
         #region Objetos do banco
         //Usuário para lançar o script do banco: (Usuário: Acroni, Senha: acroni7)
         SqlConnection conexão_SQL = new SqlConnection(SQLConnection.nome_conexao);
-        SqlCommand comando_SQL;
+        //SqlCommand comando_SQL;
         #endregion
 
         #region Methods of Design
         static Form layerFadeForm = new Form();
+
+        private void showMessageErrorlabel(String message)
+        {
+            pnlQueDesce.Location = new Point(47, 444);
+            lblAviso.Text = message;
+            lblAviso.Visible = true;
+        }
 
         private Form GetLayerForm()
         {
@@ -140,102 +147,129 @@ namespace AcroniUI.LoginAndSignUp
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            try
+            if (SQLMethods.SELECT_HASROWS("SELECT usuario FROM tblCliente WHERE usuario='" + txtEntrar.Text + "'"))
             {
-                //--Abrindo a conexão
-                if (conexão_SQL.State != ConnectionState.Open)
-                    conexão_SQL.Open();
-
-                //--Criando um comando SELECT e chamando sua resposta
-                String select_usuario = "SELECT usuario FROM tblCliente WHERE usuario='" + txtEntrar.Text + "'";
-                comando_SQL = new SqlCommand(select_usuario, conexão_SQL);
-                SqlDataReader resposta_usuario = comando_SQL.ExecuteReader();
-
-                //--Checando se houve algum valor que retornou
-                if (resposta_usuario.HasRows)
+                if (SQLMethods.SELECT_HASROWS("SELECT senha, tipoConta, quantidade_teclados FROM tblCliente WHERE usuario='" + txtEntrar.Text + "'"))
                 {
-                    resposta_usuario.Close();
-                    try
+                    Object[] resposta = SQLMethods.SELECT("SELECT senha, tipoConta, quantidade_teclados FROM tblCliente WHERE usuario='" + txtEntrar.Text + "'").ToArray();
+                    if (resposta[0].ToString().Equals(txtSenha.Text))
                     {
-                        //--Abrindo a conexão
-                        if (conexão_SQL.State != ConnectionState.Open)
-                            conexão_SQL.Open();
-
-                        //--Criando um comando SELECT e chamando sua resposta
-                        String select = "SELECT senha, tipoConta, quantidade_teclados FROM tblCliente WHERE usuario='" + txtEntrar.Text + "'";
-                        comando_SQL = new SqlCommand(select, conexão_SQL);
-                        SqlDataReader resposta = comando_SQL.ExecuteReader();
-
-                        //--Checando se houve algum valor que retornou
-                        if (resposta.HasRows)
-                        {
-                            //--Lendo a resposta
-                            resposta.Read();
-
-                            //Para pegar os valores, trate a resposta como uma Array
-                            if (resposta[0].ToString().Equals(txtSenha.Text))
-                            {
-                                SQLConnection.nome_usuario = txtEntrar.Text;
-                                Share.User = new User();
-                                if (File.Exists($@"{Application.StartupPath}\Users\{txtEntrar.Text}.acr"))
-                                    Share.User.CatchFromFile();
-                                else
-                                {
-                                    MetodoParaCriarPerfilADM();
-                                }
-                                if (resposta[1].ToString() == "p")
-                                    Share.User.isPremiumAccount = true;
-                                Share.User.SendToFile();
-                                Hide();
-                                selecionarTeclado = new SelectKeyboard();
-                                selecionarTeclado.ShowDialog();
-       
-                            }
-                            else
-                            {
-                                pnlQueDesce.Location = new Point(47, 444);
-                                lblAviso.Text = "A senha está incorreta.";
-                                lblAviso.Visible = true;
-                                resposta.Close();
-                            }
-                        }
+                        SQLConnection.nome_usuario = txtEntrar.Text;
+                        Share.User = new User();
+                        if (File.Exists($@"{Application.StartupPath}\Users\{txtEntrar.Text}.acr"))
+                            Share.User.CatchFromFile();
                         else
                         {
-                            pnlQueDesce.Location = new Point(47, 444);
-                            lblAviso.Text = "A senha está incorreta.";
-                            lblAviso.Visible = true;
-                            resposta.Close();
+                            MetodoParaCriarPerfilADM();
                         }
-
-                        //--Fechando a conexão
-                        conexão_SQL.Close();
-
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                        conexão_SQL.Close();
+                        if (resposta[1].ToString() == "p")
+                            Share.User.isPremiumAccount = true;
+                        Share.User.SendToFile();
+                        Hide();
+                        selecionarTeclado = new SelectKeyboard();
+                        selecionarTeclado.ShowDialog();
                     }
                 }
-                else
-                {
-                    pnlQueDesce.Location = new Point(47, 444);
-                    lblAviso.Text = "Este usuário não existe.";
-                    lblAviso.Visible = true;
-                    resposta_usuario.Close();
-                }
+                else showMessageErrorlabel("A senha está incorreta.");
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                conexão_SQL.Close();
-            }
+            else showMessageErrorlabel("Este usuário não existe.");
+
+            //try
+            //{
+            //    //--Abrindo a conexão
+            //    if (conexão_SQL.State != ConnectionState.Open)
+            //        conexão_SQL.Open();
+
+            //    //--Criando um comando SELECT e chamando sua resposta
+            //    String select_usuario = "SELECT usuario FROM tblCliente WHERE usuario='" + txtEntrar.Text + "'";
+            //    comando_SQL = new SqlCommand(select_usuario, conexão_SQL);
+            //    SqlDataReader resposta_usuario = comando_SQL.ExecuteReader();
+
+            //    //--Checando se houve algum valor que retornou
+            //    if (resposta_usuario.HasRows)
+            //    {
+            //        resposta_usuario.Close();
+            //        try
+            //        {
+            //            //--Abrindo a conexão
+            //            if (conexão_SQL.State != ConnectionState.Open)
+            //                conexão_SQL.Open();
+
+            //            //--Criando um comando SELECT e chamando sua resposta
+            //            String select = "SELECT senha, tipoConta, quantidade_teclados FROM tblCliente WHERE usuario='" + txtEntrar.Text + "'";
+            //            comando_SQL = new SqlCommand(select, conexão_SQL);
+            //            SqlDataReader resposta = comando_SQL.ExecuteReader();
+
+            //            //--Checando se houve algum valor que retornou
+            //            if (resposta.HasRows)
+            //            {
+            //                //--Lendo a resposta
+            //                resposta.Read();
+
+            //                //Para pegar os valores, trate a resposta como uma Array
+            //                if (resposta[0].ToString().Equals(txtSenha.Text))
+            //                {
+            //                    SQLConnection.nome_usuario = txtEntrar.Text;
+            //                    Share.User = new User();
+            //                    if (File.Exists($@"{Application.StartupPath}\Users\{txtEntrar.Text}.acr"))
+            //                        Share.User.CatchFromFile();
+            //                    else
+            //                    {
+            //                        MetodoParaCriarPerfilADM();
+            //                    }
+            //                    if (resposta[1].ToString() == "p")
+            //                        Share.User.isPremiumAccount = true;
+            //                    Share.User.SendToFile();
+            //                    Hide();
+            //                    selecionarTeclado = new SelectKeyboard();
+            //                    selecionarTeclado.ShowDialog();
+       
+            //                }
+            //                else
+            //                {
+            //                    pnlQueDesce.Location = new Point(47, 444);
+            //                    lblAviso.Text = "A senha está incorreta.";
+            //                    lblAviso.Visible = true;
+            //                    resposta.Close();
+            //                }
+            //            }
+            //            else
+            //            {
+            //                pnlQueDesce.Location = new Point(47, 444);
+            //                lblAviso.Text = "A senha está incorreta.";
+            //                lblAviso.Visible = true;
+            //                resposta.Close();
+            //            }
+
+            //            //--Fechando a conexão
+            //            conexão_SQL.Close();
+
+            //        }
+            //        catch (Exception ex)
+            //        {
+            //            MessageBox.Show(ex.Message);
+            //            conexão_SQL.Close();
+            //        }
+            //    }
+            //    else
+            //    {
+            //        pnlQueDesce.Location = new Point(47, 444);
+            //        lblAviso.Text = "Este usuário não existe.";
+            //        lblAviso.Visible = true;
+            //        resposta_usuario.Close();
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //    conexão_SQL.Close();
+            //}
         }
 
         private void lblCadastrar_Click(object sender, EventArgs e)
-        {
+            {
 
-        }
+            }
 
         private void lnklblEsqueceuSenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {

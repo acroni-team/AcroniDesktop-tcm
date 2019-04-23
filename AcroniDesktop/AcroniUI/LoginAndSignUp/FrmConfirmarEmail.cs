@@ -81,7 +81,7 @@ namespace AcroniUI.LoginAndSignUp
             //--Lembrem-se disso como se fosse Excel -> Se () ? então se VERDADEIRO : se FALSO 
             String titulo = (tipo_public.Equals("cadastro")?"Fazendo o seu cadastro":(tipo_public.Equals("senha")?"Atualização de senha":"--Unknown--"));
             //String mensagem = "Olá " + select_usuario() + ". O número certo é " + numero_certo;
-            String mensagem = "Olá " + select_usuario() + ".\nInsira o código para confirmar " + (tipo_public.Equals("cadastro")? "o seu cadastro." : "a sua atualização de senha.") + "\n\n" + String_de_confirmacao;
+            String mensagem = "Olá " + SQLMethods.SELECT("SELECT usuario FROM tblCliente WHERE email = '" + email_public + "'")[0] + ".\nInsira o código para confirmar " + (tipo_public.Equals("cadastro")? "o seu cadastro." : "a sua atualização de senha.") + "\n\n" + String_de_confirmacao;
             try
             {
                 MailMessage objeto_mail = new MailMessage("acroni.acroni7@gmail.com", email_public, titulo, mensagem);
@@ -112,7 +112,6 @@ namespace AcroniUI.LoginAndSignUp
             pnlSquareLeftBorderBtnEnviar.BackColor = Color.DodgerBlue;
             btnEnviar.BackColor = Color.DodgerBlue;
         }
-
 
         //--Inicializando uma conexão e um COMANDO
         SqlConnection conexao_SQL = new SqlConnection(SQLConnection.nome_conexao);
@@ -157,7 +156,7 @@ namespace AcroniUI.LoginAndSignUp
                 if (tipo_public.Equals("cadastro"))
                     SQLMethods.INSERT_INTO($"INSERT INTO tblCliente(nome,usuario,senha,email,cpf,imagem_cliente) VALUES ('{nome_public}','{usuario_public}','{senha_public}','{email_public}','{cpf_public}',@image)", img);
                 else if (tipo_public.Equals("senha"))
-                    update();
+                    SQLMethods.UPDATE("UPDATE tblCliente SET senha = '" + senha_public + "' WHERE email = '" + email_public + "'");
                 Close();
             }
             else
