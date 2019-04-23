@@ -147,9 +147,9 @@ namespace AcroniUI.LoginAndSignUp
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            if (SQLMethods.SELECT_HASROWS("SELECT usuario FROM tblCliente WHERE usuario='" + txtEntrar.Text + "'"))
+            if (SQLMethods.SELECT_HASROWS("SELECT usuario FROM tblCliente WHERE usuario = '" + txtEntrar.Text + "'"))
             {
-                if (SQLMethods.SELECT_HASROWS("SELECT senha, tipoConta, quantidade_teclados FROM tblCliente WHERE usuario='" + txtEntrar.Text + "'"))
+                if (SQLMethods.SELECT_HASROWS("SELECT senha, tipoConta, quantidade_teclados FROM tblCliente WHERE usuario = '" + txtEntrar.Text + "'"))
                 {
                     Object[] resposta = SQLMethods.SELECT("SELECT senha, tipoConta, quantidade_teclados FROM tblCliente WHERE usuario='" + txtEntrar.Text + "'").ToArray();
                     if (resposta[0].ToString().Equals(txtSenha.Text))

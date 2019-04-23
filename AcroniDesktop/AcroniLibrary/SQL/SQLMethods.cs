@@ -13,7 +13,13 @@ namespace AcroniLibrary.SQL
                 using (SqlConnection newConnection = new SqlConnection(SQLConnection.nome_conexao))
                 {
                     newConnection.Open();
-                    return subSELECT_HASROWS(commandSELECT, newConnection);
+                    using (SqlCommand select = new SqlCommand(commandSELECT, newConnection))
+                    {
+                        using (SqlDataReader hasName = select.ExecuteReader())
+                        {
+                            return hasName.HasRows;
+                        }
+                    }
                 }
             }
             catch (Exception)
@@ -21,22 +27,17 @@ namespace AcroniLibrary.SQL
                 using (SqlConnection newConnection = new SqlConnection(SQLConnection.nome_conexao.Replace("\\SQLEXPRESS","")))
                 {
                     newConnection.Open();
-                    return subSELECT_HASROWS(commandSELECT, newConnection);
+                    using (SqlCommand select = new SqlCommand(commandSELECT, newConnection))
+                    {
+                        using (SqlDataReader hasName = select.ExecuteReader())
+                        {
+                            return hasName.HasRows;
+                        }
+                    }
                 }
             }
         }
-
-        private static bool subSELECT_HASROWS(String commandSELECT, SqlConnection newConnection)
-        {
-            using (SqlCommand select = new SqlCommand(commandSELECT, newConnection))
-            {
-                using (SqlDataReader hasName = select.ExecuteReader())
-                {
-                    return hasName.HasRows;
-                }
-            }
-        }
-
+        
         public static List<object> SELECT(string SelectCommand)
         {
             List<object> ret = new List<object> { };
@@ -84,26 +85,24 @@ namespace AcroniLibrary.SQL
                 using (SqlConnection newConnection = new SqlConnection(SQLConnection.nome_conexao))
                 {
                     newConnection.Open();
-                    return subINSERT_INTO(commandINSERT, newConnection);
+                    using (SqlCommand insert = new SqlCommand(commandINSERT, newConnection))
+                    {
+                        return insert.ExecuteNonQuery();
+                    }
                 }
             } catch (Exception)
             {
-                using (SqlConnection newConnection = new SqlConnection(SQLConnection.nome_conexao))
+                using (SqlConnection newConnection = new SqlConnection(SQLConnection.nome_conexao.Replace("//SQLEXPRESS","")))
                 {
                     newConnection.Open();
-                    return subINSERT_INTO(commandINSERT, newConnection);
+                    using (SqlCommand insert = new SqlCommand(commandINSERT, newConnection))
+                    {
+                        return insert.ExecuteNonQuery();
+                    }
                 }
             }
         }
-
-        private static int subINSERT_INTO(String commandINSERT, SqlConnection newConnection)
-        {
-            using (SqlCommand insert = new SqlCommand(commandINSERT, newConnection))
-            {
-                return insert.ExecuteNonQuery();
-            }
-        }
-
+        
         public static int UPDATE(String commandUPDATE)
         {
             try

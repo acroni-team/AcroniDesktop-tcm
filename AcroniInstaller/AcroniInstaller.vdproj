@@ -27,12 +27,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_102FCE972E2C446CA57AA0931FB07EE1"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_1D2788816C7A4510800444BFFC28CBD4"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -64,7 +58,7 @@
         "Entry"
         {
         "MsmKey" = "8:_501510FC2FC5F011FAAFA79EC18C181F"
-        "OwnerKey" = "8:_102FCE972E2C446CA57AA0931FB07EE1"
+        "OwnerKey" = "8:_E06BAEC365A4410B97890BA9AB355A6A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -112,7 +106,7 @@
         "Entry"
         {
         "MsmKey" = "8:_B2E928BF8F50935DAE2F6D2248C424D0"
-        "OwnerKey" = "8:_102FCE972E2C446CA57AA0931FB07EE1"
+        "OwnerKey" = "8:_E06BAEC365A4410B97890BA9AB355A6A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -124,7 +118,7 @@
         "Entry"
         {
         "MsmKey" = "8:_CDB6F25E73D1DA38B21665B7208C26A2"
-        "OwnerKey" = "8:_102FCE972E2C446CA57AA0931FB07EE1"
+        "OwnerKey" = "8:_E06BAEC365A4410B97890BA9AB355A6A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -136,7 +130,7 @@
         "Entry"
         {
         "MsmKey" = "8:_D26031662201B0281806CEF0D487215F"
-        "OwnerKey" = "8:_102FCE972E2C446CA57AA0931FB07EE1"
+        "OwnerKey" = "8:_E06BAEC365A4410B97890BA9AB355A6A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -148,6 +142,12 @@
         "Entry"
         {
         "MsmKey" = "8:_DBD0BA665D0541D3A725F1553366733E"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_E06BAEC365A4410B97890BA9AB355A6A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -184,7 +184,7 @@
         "Entry"
         {
         "MsmKey" = "8:_FBA461AE0B7451FFBC4682A64F3862C0"
-        "OwnerKey" = "8:_102FCE972E2C446CA57AA0931FB07EE1"
+        "OwnerKey" = "8:_E06BAEC365A4410B97890BA9AB355A6A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -208,7 +208,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_102FCE972E2C446CA57AA0931FB07EE1"
+        "OwnerKey" = "8:_E06BAEC365A4410B97890BA9AB355A6A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -1168,7 +1168,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_0F734E1B85E04C8899A71DAFC6C38712"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_8B5CC24AD53343C4A836757B525A90A0"
             {
             "Name" = "8:Acroni"
             "Arguments" = "8:"
@@ -1176,13 +1176,13 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_102FCE972E2C446CA57AA0931FB07EE1"
+            "Target" = "8:_E06BAEC365A4410B97890BA9AB355A6A"
             "Folder" = "8:_47B931B329FF4DA08ADE09CEB83FCC98"
             "WorkingFolder" = "8:_96BD986584044A129A899221C598E3A6"
             "Icon" = "8:_407DC01C58EB4FE48B09AA33A5732C55"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_4485C3ACDFC04068902D75656F30FC6B"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_D60DDB8BC63F4A77B2662069919B245A"
             {
             "Name" = "8:Acroni"
             "Arguments" = "8:"
@@ -1190,7 +1190,7 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_102FCE972E2C446CA57AA0931FB07EE1"
+            "Target" = "8:_E06BAEC365A4410B97890BA9AB355A6A"
             "Folder" = "8:_4EAB41AFE69F48228BA74675D8EB47B3"
             "WorkingFolder" = "8:_96BD986584044A129A899221C598E3A6"
             "Icon" = "8:_407DC01C58EB4FE48B09AA33A5732C55"
@@ -1595,7 +1595,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_102FCE972E2C446CA57AA0931FB07EE1"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_E06BAEC365A4410B97890BA9AB355A6A"
             {
             "SourcePath" = "8:..\\AcroniDesktop\\AcroniUI\\obj\\x86\\Debug\\AcroniUI.exe"
             "TargetName" = "8:"
