@@ -255,18 +255,37 @@ namespace AcroniUI
                                     Share.User.UserCollections.Remove(collection);
                                     foreach (Keyboard k in collection.Keyboards)
                                         Share.User.KeyboardQuantity--;
-                                    using (SqlConnection sqlConnection = new SqlConnection("Data Source = " + Environment.MachineName + "\\SQLEXPRESS; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7"))
+                                    try
                                     {
-                                        sqlConnection.Open();
-                                        using (SqlCommand sqlCommand = new SqlCommand($"delete from tblTecladoCustomizado where id_cliente = {Share.User.ID}", sqlConnection))
+                                        using (SqlConnection sqlConnection = new SqlConnection("Data Source = " + Environment.MachineName + "\\SQLEXPRESS; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7"))
                                         {
-                                            sqlCommand.ExecuteNonQuery();
-                                        }
-                                        using (SqlCommand sqlCommand = new SqlCommand("delete from tblColecao where nick_colecao in('" + c.Text + $"') and id_cliente like {Share.User.ID}", sqlConnection))
-                                        {
-                                            sqlCommand.ExecuteNonQuery();
+                                            sqlConnection.Open();
+                                            using (SqlCommand sqlCommand = new SqlCommand($"delete from tblTecladoCustomizado where id_cliente = {Share.User.ID}", sqlConnection))
+                                            {
+                                                sqlCommand.ExecuteNonQuery();
+                                            }
+                                            using (SqlCommand sqlCommand = new SqlCommand("delete from tblColecao where nick_colecao in('" + c.Text + $"') and id_cliente like {Share.User.ID}", sqlConnection))
+                                            {
+                                                sqlCommand.ExecuteNonQuery();
+                                            }
                                         }
                                     }
+                                    catch (Exception)
+                                    {
+                                        using (SqlConnection sqlConnection = new SqlConnection("Data Source = " + Environment.MachineName + "; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7"))
+                                        {
+                                            sqlConnection.Open();
+                                            using (SqlCommand sqlCommand = new SqlCommand($"delete from tblTecladoCustomizado where id_cliente = {Share.User.ID}", sqlConnection))
+                                            {
+                                                sqlCommand.ExecuteNonQuery();
+                                            }
+                                            using (SqlCommand sqlCommand = new SqlCommand("delete from tblColecao where nick_colecao in('" + c.Text + $"') and id_cliente like {Share.User.ID}", sqlConnection))
+                                            {
+                                                sqlCommand.ExecuteNonQuery();
+                                            }
+                                        }
+                                    }
+                                    
                                     break;
                                 }
                             }
@@ -357,15 +376,7 @@ namespace AcroniUI
                                             collection.CollectionColor = selectColor.SettedColor;
                                         if (!string.IsNullOrEmpty(selectColor.CollectionName))
                                         {
-                                            using (SqlConnection sqlConnection = new SqlConnection("Data Source = " + Environment.MachineName + "\\SQLEXPRESS; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7"))
-                                            {
-                                                sqlConnection.Open();
-
-                                                using (SqlCommand sqlCommand = new SqlCommand($"update tblColecao set nick_colecao = '{selectColor.CollectionName}' where nick_colecao like '" + collection.CollectionName + "' and id_cliente = " + Share.User.ID, sqlConnection))
-                                                {
-                                                    sqlCommand.ExecuteNonQuery();
-                                                }
-                                            }
+                                            SQLMethods.UPDATE($"update tblColecao set nick_colecao = '{selectColor.CollectionName}' where nick_colecao like '" + collection.CollectionName + "' and id_cliente = " + Share.User.ID);
                                             collection.CollectionName = selectColor.CollectionName;
                                         }
                                         Share.User.SendToFile();

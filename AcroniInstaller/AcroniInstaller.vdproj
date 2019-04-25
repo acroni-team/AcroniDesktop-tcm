@@ -27,12 +27,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_0B1C76490139404BBC1FD671AD99B92C"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_1D2788816C7A4510800444BFFC28CBD4"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -64,7 +58,7 @@
         "Entry"
         {
         "MsmKey" = "8:_501510FC2FC5F011FAAFA79EC18C181F"
-        "OwnerKey" = "8:_0B1C76490139404BBC1FD671AD99B92C"
+        "OwnerKey" = "8:_7E866320313140428FE0145EF4C54F7B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -93,6 +87,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_7E866320313140428FE0145EF4C54F7B"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_95664961CD0545ED87E1993702E25CCE"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -112,7 +112,7 @@
         "Entry"
         {
         "MsmKey" = "8:_B2E928BF8F50935DAE2F6D2248C424D0"
-        "OwnerKey" = "8:_0B1C76490139404BBC1FD671AD99B92C"
+        "OwnerKey" = "8:_7E866320313140428FE0145EF4C54F7B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -124,7 +124,7 @@
         "Entry"
         {
         "MsmKey" = "8:_CDB6F25E73D1DA38B21665B7208C26A2"
-        "OwnerKey" = "8:_0B1C76490139404BBC1FD671AD99B92C"
+        "OwnerKey" = "8:_7E866320313140428FE0145EF4C54F7B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -136,7 +136,7 @@
         "Entry"
         {
         "MsmKey" = "8:_D26031662201B0281806CEF0D487215F"
-        "OwnerKey" = "8:_0B1C76490139404BBC1FD671AD99B92C"
+        "OwnerKey" = "8:_7E866320313140428FE0145EF4C54F7B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -184,7 +184,7 @@
         "Entry"
         {
         "MsmKey" = "8:_FBA461AE0B7451FFBC4682A64F3862C0"
-        "OwnerKey" = "8:_0B1C76490139404BBC1FD671AD99B92C"
+        "OwnerKey" = "8:_7E866320313140428FE0145EF4C54F7B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -208,7 +208,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_0B1C76490139404BBC1FD671AD99B92C"
+        "OwnerKey" = "8:_7E866320313140428FE0145EF4C54F7B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -1048,7 +1048,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Customização de Teclados"
         "ProductCode" = "8:{4382093C-8171-401C-8271-8234A868558D}"
-        "PackageCode" = "8:{EE129FE9-34AB-44D3-AC6F-37E42EDD9DDD}"
+        "PackageCode" = "8:{9BE67A58-7F65-4483-B0B7-74EDCEF1C581}"
         "UpgradeCode" = "8:{33E64104-6828-49B2-A384-A707EEC04E82}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -1168,7 +1168,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_57AEECB3760D498EA07E70BE657212F0"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_3E5DBF0AF60C4DADBBDF1718F17E88D8"
             {
             "Name" = "8:Acroni"
             "Arguments" = "8:"
@@ -1176,13 +1176,27 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_0B1C76490139404BBC1FD671AD99B92C"
+            "Target" = "8:_7E866320313140428FE0145EF4C54F7B"
+            "Folder" = "8:_4EAB41AFE69F48228BA74675D8EB47B3"
+            "WorkingFolder" = "8:_96BD986584044A129A899221C598E3A6"
+            "Icon" = "8:_407DC01C58EB4FE48B09AA33A5732C55"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_534D490FC31043F99F982ECE2B08FCAA"
+            {
+            "Name" = "8:Acroni"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_7E866320313140428FE0145EF4C54F7B"
             "Folder" = "8:_47B931B329FF4DA08ADE09CEB83FCC98"
             "WorkingFolder" = "8:_96BD986584044A129A899221C598E3A6"
             "Icon" = "8:_407DC01C58EB4FE48B09AA33A5732C55"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_6119AA2A7A9F4AD1896F495601CFCCF1"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_959DC00C9DA8458382C376C10F20DFAE"
             {
             "Name" = "8:Acroni"
             "Arguments" = "8:"
@@ -1190,8 +1204,8 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_0B1C76490139404BBC1FD671AD99B92C"
-            "Folder" = "8:_4EAB41AFE69F48228BA74675D8EB47B3"
+            "Target" = "8:_7E866320313140428FE0145EF4C54F7B"
+            "Folder" = "8:_8A4CA9C4FDD34272BC0FCC3CEDF58DF5"
             "WorkingFolder" = "8:_96BD986584044A129A899221C598E3A6"
             "Icon" = "8:_407DC01C58EB4FE48B09AA33A5732C55"
             "Feature" = "8:"
@@ -1595,7 +1609,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_0B1C76490139404BBC1FD671AD99B92C"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_7E866320313140428FE0145EF4C54F7B"
             {
             "SourcePath" = "8:..\\AcroniDesktop\\AcroniUI\\obj\\x86\\Debug\\AcroniUI.exe"
             "TargetName" = "8:"

@@ -76,15 +76,7 @@ namespace AcroniUI
                         c.Visible = true;
                     i++;
                 }
-                using (SqlConnection sqlConnection = new SqlConnection("Data Source = " + Environment.MachineName + "\\SQLEXPRESS; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7"))
-                {
-                    sqlConnection.Open();               
-                    using (SqlCommand sqlCommand = new SqlCommand($"update tblCliente set quantidade_teclados = {Share.User.KeyboardQuantity} where id_cliente = {Share.User.ID}", sqlConnection))
-                    {
-                        sqlCommand.ExecuteNonQuery();
-                    }
-                }
-
+                SQLMethods.UPDATE($"update tblCliente set quantidade_teclados = {Share.User.KeyboardQuantity} where id_cliente = {Share.User.ID}");
                         //    if (conexão_SQL.State != ConnectionState.Open)
                         //        conexão_SQL.Open();
 
@@ -141,45 +133,23 @@ namespace AcroniUI
         //    }
         //}
 
-
-
         public Image selecionar_imagem_cliente()
         {
+            SqlConnection conn = new SqlConnection(SQLConnection.nome_conexao);
             try
             {
-                //--Checando se a conexão está aberta e a abrindo
-                if (conexão_SQL.State != ConnectionState.Open)
-                    conexão_SQL.Open();
-
-                //--Criando o comando SELECT e seleciando no SQL
-                String select = "SELECT imagem_cliente FROM tblCliente WHERE usuario IN ('" + SQLConnection.nome_usuario + "')";
-                comando_SQL = new SqlCommand(select, conexão_SQL);
-                SqlDataReader resposta = comando_SQL.ExecuteReader();
+                byte[] img = (byte[])(SQLMethods.SELECT("SELECT imagem_cliente FROM tblCliente WHERE usuario IN ('" + SQLConnection.nome_usuario + "')")[0]);
+                
                 Image imagem_retorno = (Image)resources.GetObject("ImgUsu.Image");
-                //--Checando se tem respostas do SELECT
-                if (resposta.HasRows)
+                if (img != null)
                 {
-                    resposta.Read();
-                    //--Convertendo a variável que está no banco em imagem
-                    byte[] img = (byte[])(resposta[0]);
-
-                    if (img != null)
-                    {
-                        MemoryStream leitor_memoria = new MemoryStream(img);
-                        imagem_retorno = Image.FromStream(leitor_memoria);
-                    }
-
+                    MemoryStream leitor_memoria = new MemoryStream(img);
+                    imagem_retorno = Image.FromStream(leitor_memoria);
                 }
-                //--Fechando a resposta para poder usá-la novamente (NÃO ESQUECER!)
-                resposta.Close();
-                conexão_SQL.Close();
                 return imagem_retorno;
             }
             catch (Exception)
             {
-                //System.Windows.MessageBox.Show(ex.Message);
-                conexão_SQL.Close();
-
                 return (Image)resources.GetObject("ImgUsu.Image");
             }
         }

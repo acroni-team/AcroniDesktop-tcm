@@ -47,3 +47,4 @@ C:\Users\gui_m\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniControls\o
 C:\Users\gui_m\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniControls\obj\x86\Debug\AcroniControls.csproj.CopyComplete
 C:\Users\gui_m\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniControls\obj\x86\Debug\AcroniControls.dll
 C:\Users\gui_m\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniControls\obj\x86\Debug\AcroniControls.pdb
+C:\Users\gui_m\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniControls\obj\x86\Debug\AcroniControls.csprojAssemblyReference.cache

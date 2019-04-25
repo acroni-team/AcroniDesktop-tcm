@@ -52,21 +52,9 @@ namespace AcroniUI
 
         private void ChamarImagemDoBanco()
         {
-
-            using (SqlConnection conn = new SqlConnection(SQLConnection.nome_conexao))
+            using (var ms = new MemoryStream((byte[])SQLMethods.SELECT($"select imagem_cliente from tblCliente where usuario like '{SQLConnection.nome_usuario}'")[0]))
             {
-                conn.Open();
-                using (SqlCommand comm = new SqlCommand($"select imagem_cliente from tblCliente where usuario like '{SQLConnection.nome_usuario}'", conn))
-                {
-                    using (SqlDataReader sdr = comm.ExecuteReader())
-                    {
-                        sdr.Read();
-                        using (var ms = new MemoryStream((byte[])sdr[0]))
-                        {
-                            pnlUserImg.BackgroundImage = new Bitmap(ms);
-                        }
-                    }
-                }
+                pnlUserImg.BackgroundImage = new Bitmap(ms);
             }
         }
 
@@ -224,16 +212,32 @@ namespace AcroniUI
                         SQLMethods.UPDATE("UPDATE tblCliente SET " + (Controls.Find(name, true))[0].Tag + " = '" + (Controls.Find(name, true))[0].Text + "' WHERE id_cliente = " + Share.User.ID);
                     else
                     {
-                        using (SqlConnection conn = new SqlConnection(SQLConnection.nome_conexao))
-                        {
-                            conn.Open();
-                            byte[] img = ImageConvert.ImageToByteArray(bmp, ImageFormat.Bmp);
-
-                            using (SqlCommand comm = new SqlCommand($"update tblCliente set imagem_cliente = @img where usuario like '{SQLConnection.nome_usuario}'", conn))
+                        try {
+                            using (SqlConnection conn = new SqlConnection(SQLConnection.nome_conexao))
                             {
-                                comm.Parameters.AddWithValue("@img", img);
-                                comm.ExecuteNonQuery();
-                                ChangeClientImage(bmp);
+                                conn.Open();
+                                byte[] img = ImageConvert.ImageToByteArray(bmp, ImageFormat.Bmp);
+
+                                using (SqlCommand comm = new SqlCommand($"update tblCliente set imagem_cliente = @img where usuario like '{SQLConnection.nome_usuario}'", conn))
+                                {
+                                    comm.Parameters.AddWithValue("@img", img);
+                                    comm.ExecuteNonQuery();
+                                    ChangeClientImage(bmp);
+                                }
+                            }
+                        } catch (Exception)
+                        {
+                            using (SqlConnection conn = new SqlConnection(SQLConnection.nome_conexao.Replace("\\SQLEXPRESS","")))
+                            {
+                                conn.Open();
+                                byte[] img = ImageConvert.ImageToByteArray(bmp, ImageFormat.Bmp);
+
+                                using (SqlCommand comm = new SqlCommand($"update tblCliente set imagem_cliente = @img where usuario like '{SQLConnection.nome_usuario}'", conn))
+                                {
+                                    comm.Parameters.AddWithValue("@img", img);
+                                    comm.ExecuteNonQuery();
+                                    ChangeClientImage(bmp);
+                                }
                             }
                         }
                     }           

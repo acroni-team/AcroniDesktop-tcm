@@ -1,6 +1,7 @@
 ﻿using AcroniControls;
 using AcroniLibrary.FileInfo;
 using AcroniUI.Custom;
+using AcroniLibrary.SQL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -101,15 +102,8 @@ namespace AcroniUI
                         foreach (Keyboard userKeyboard in userCollection.Keyboards)
                             if (userKeyboard.ID.Equals((sender as PictureBox).Parent.Name))
                             {
-                                using (SqlConnection sqlConnection = new SqlConnection("Data Source = " + Environment.MachineName + "\\SQLEXPRESS; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7"))
-                                {
-                                    sqlConnection.Open();
-                                    using (SqlCommand sqlCommand = new SqlCommand($"delete from tblTecladoCustomizado where nickname like '{userKeyboard.NickName}' and id_cliente like {Share.User.ID}", sqlConnection))
-                                    {
-                                        sqlCommand.ExecuteNonQuery();
-                                    }
-                                }
-                                        userCollection.Keyboards.Remove(userKeyboard);
+                                SQLMethods.UPDATE($"delete from tblTecladoCustomizado where nickname like '{userKeyboard.NickName}' and id_cliente like {Share.User.ID}");
+                                userCollection.Keyboards.Remove(userKeyboard);
                                 Share.User.KeyboardQuantity--;
                                 Share.User.SendToFile();
                                 CollectionSelected recharge = new CollectionSelected();

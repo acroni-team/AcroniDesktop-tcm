@@ -39,22 +39,7 @@ namespace AcroniLibrary.FileInfo
         }
         public User()
         {
-            using (SqlConnection cnn = new SqlConnection(SQLConnection.nome_conexao))
-            {
-                cnn.Open();
-                using (SqlCommand select = new SqlCommand($"select id_cliente from tblCliente where usuario = '{SQLConnection.nome_usuario}'", cnn))
-                {
-                    using (SqlDataReader sdr = select.ExecuteReader())
-                    {
-                        if (sdr.HasRows)
-                        {
-                            sdr.Read();
-                            this.ID = (int)sdr[0];
-                        }
-                    }
-                }
-            }
+            this.ID = (int)SQLMethods.SELECT($"select id_cliente from tblCliente where usuario = '{SQLConnection.nome_usuario}'")[0];
         }
-
     }
 }
