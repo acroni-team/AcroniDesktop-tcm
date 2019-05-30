@@ -39,6 +39,7 @@
             this.eBtnEntrar = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.TimerSlide = new System.Windows.Forms.Timer(this.components);
             this.pnlLogin = new System.Windows.Forms.Panel();
+            this.pnlSlash = new System.Windows.Forms.Panel();
             this.lblAviso = new System.Windows.Forms.Label();
             this.pnlQueDesce = new System.Windows.Forms.Panel();
             this.btnEntrar = new System.Windows.Forms.Button();
@@ -52,7 +53,7 @@
             this.apnlUsuario = new System.Windows.Forms.Panel();
             this.txtEntrar = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.alblSejaBemVindo = new System.Windows.Forms.Label();
-            this.alblEntrar = new System.Windows.Forms.Label();
+            this.lblEntrar = new System.Windows.Forms.Label();
             this.lblAvisoCad = new System.Windows.Forms.Label();
             this.pnlCadastro = new System.Windows.Forms.Panel();
             this.alblCPF = new System.Windows.Forms.Label();
@@ -88,6 +89,7 @@
             this.alblProcurandoPorTeclados = new System.Windows.Forms.Label();
             this.alblAcroni = new System.Windows.Forms.Label();
             this.timerFadeOut = new System.Windows.Forms.Timer(this.components);
+            this.timerSlash = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.btnSair)).BeginInit();
             this.pnlLogin.SuspendLayout();
             this.pnlQueDesce.SuspendLayout();
@@ -150,6 +152,7 @@
             // 
             // pnlLogin
             // 
+            this.pnlLogin.Controls.Add(this.pnlSlash);
             this.pnlLogin.Controls.Add(this.lblAviso);
             this.pnlLogin.Controls.Add(this.pnlQueDesce);
             this.pnlLogin.Controls.Add(this.btnSair);
@@ -158,10 +161,16 @@
             this.pnlLogin.Controls.Add(this.apnlSenha);
             this.pnlLogin.Controls.Add(this.apnlUsuario);
             this.pnlLogin.Controls.Add(this.alblSejaBemVindo);
-            this.pnlLogin.Controls.Add(this.alblEntrar);
+            this.pnlLogin.Controls.Add(this.lblEntrar);
             resources.ApplyResources(this.pnlLogin, "pnlLogin");
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Tag = "Show";
+            // 
+            // pnlSlash
+            // 
+            this.pnlSlash.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.pnlSlash, "pnlSlash");
+            this.pnlSlash.Name = "pnlSlash";
             // 
             // lblAviso
             // 
@@ -292,12 +301,12 @@
             this.alblSejaBemVindo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(118)))), ((int)(((byte)(125)))));
             this.alblSejaBemVindo.Name = "alblSejaBemVindo";
             // 
-            // alblEntrar
+            // lblEntrar
             // 
-            resources.ApplyResources(this.alblEntrar, "alblEntrar");
-            this.alblEntrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(61)))));
-            this.alblEntrar.ForeColor = System.Drawing.Color.White;
-            this.alblEntrar.Name = "alblEntrar";
+            resources.ApplyResources(this.lblEntrar, "lblEntrar");
+            this.lblEntrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(61)))));
+            this.lblEntrar.ForeColor = System.Drawing.Color.White;
+            this.lblEntrar.Name = "lblEntrar";
             // 
             // lblAvisoCad
             // 
@@ -646,6 +655,11 @@
             this.alblAcroni.Name = "alblAcroni";
             this.alblAcroni.Click += new System.EventHandler(this.alblAcroni_Click);
             // 
+            // timerSlash
+            // 
+            this.timerSlash.Interval = 500;
+            this.timerSlash.Tick += new System.EventHandler(this.timerSlash_Tick);
+            // 
             // FrmLogin
             // 
             this.AcceptButton = this.btnEntrar;
@@ -737,7 +751,7 @@
         private System.Windows.Forms.Panel apnlUsuario;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtEntrar;
         private System.Windows.Forms.Label alblSejaBemVindo;
-        private System.Windows.Forms.Label alblEntrar;
+        private System.Windows.Forms.Label lblEntrar;
         private System.Windows.Forms.Panel pnlQueDesce;
         private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.Label alblAindaNaoTemUmaConta;
@@ -747,6 +761,8 @@
         private System.Windows.Forms.Panel pnlLogoCad;
         private System.Windows.Forms.Timer timerFadeOut;
         private System.Windows.Forms.Label lblAvisoCad;
+        private System.Windows.Forms.Panel pnlSlash;
+        private System.Windows.Forms.Timer timerSlash;
     }
 }
 
