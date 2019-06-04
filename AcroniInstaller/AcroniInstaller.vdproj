@@ -33,6 +33,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_1E0FE7E33A734BE2889FE0C56E710CD8"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_31C45BDB923A460FA38D8CAC3446B827"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -51,20 +57,26 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_501510FC2FC5F011FAAFA79EC18C181F"
-        "OwnerKey" = "8:_B2E928BF8F50935DAE2F6D2248C424D0"
+        "MsmKey" = "8:_59489AE8425C453F91CE86ACEC0177C0"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_501510FC2FC5F011FAAFA79EC18C181F"
+        "MsmKey" = "8:_5EB62AE533BECBE7601EFA70CC4BAEC5"
+        "OwnerKey" = "8:_6983B6B240B0A8957329EA519C2AB910"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5EB62AE533BECBE7601EFA70CC4BAEC5"
         "OwnerKey" = "8:_7E866320313140428FE0145EF4C54F7B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_59489AE8425C453F91CE86ACEC0177C0"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_5EB62AE533BECBE7601EFA70CC4BAEC5"
+        "OwnerKey" = "8:_8526F3CADAD8EBEC308BF465644720A1"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -75,13 +87,19 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_76FBE989B6DE462E9D9B62E38BFF7FC6"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_6983B6B240B0A8957329EA519C2AB910"
+        "OwnerKey" = "8:_8526F3CADAD8EBEC308BF465644720A1"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_7CD52EFCD116404CB16D1EC3F6069E0A"
+        "MsmKey" = "8:_6983B6B240B0A8957329EA519C2AB910"
+        "OwnerKey" = "8:_7E866320313140428FE0145EF4C54F7B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_76FBE989B6DE462E9D9B62E38BFF7FC6"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -89,6 +107,12 @@
         {
         "MsmKey" = "8:_7E866320313140428FE0145EF4C54F7B"
         "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_8526F3CADAD8EBEC308BF465644720A1"
+        "OwnerKey" = "8:_7E866320313140428FE0145EF4C54F7B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -111,20 +135,8 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_B2E928BF8F50935DAE2F6D2248C424D0"
-        "OwnerKey" = "8:_7E866320313140428FE0145EF4C54F7B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_C60ABB36B38446F2A1DB84F8AC431437"
         "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_CDB6F25E73D1DA38B21665B7208C26A2"
-        "OwnerKey" = "8:_7E866320313140428FE0145EF4C54F7B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -153,6 +165,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_DCE34E5D0BBF63B6B4EAC2A3DF02A662"
+        "OwnerKey" = "8:_7E866320313140428FE0145EF4C54F7B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_E6BDFF8B1E424A8FA5812E9D98A810CD"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -177,24 +195,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_FBA461AE0B7451FFBC4682A64F3862C0"
-        "OwnerKey" = "8:_501510FC2FC5F011FAAFA79EC18C181F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_FBA461AE0B7451FFBC4682A64F3862C0"
-        "OwnerKey" = "8:_7E866320313140428FE0145EF4C54F7B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_FBA461AE0B7451FFBC4682A64F3862C0"
-        "OwnerKey" = "8:_B2E928BF8F50935DAE2F6D2248C424D0"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_FE9092BF7EB047DDB00367C1477FD72F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -202,37 +202,37 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_D26031662201B0281806CEF0D487215F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_7E866320313140428FE0145EF4C54F7B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_CDB6F25E73D1DA38B21665B7208C26A2"
+        "OwnerKey" = "8:_DCE34E5D0BBF63B6B4EAC2A3DF02A662"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_B2E928BF8F50935DAE2F6D2248C424D0"
+        "OwnerKey" = "8:_8526F3CADAD8EBEC308BF465644720A1"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_501510FC2FC5F011FAAFA79EC18C181F"
+        "OwnerKey" = "8:_6983B6B240B0A8957329EA519C2AB910"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_FBA461AE0B7451FFBC4682A64F3862C0"
+        "OwnerKey" = "8:_5EB62AE533BECBE7601EFA70CC4BAEC5"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_D26031662201B0281806CEF0D487215F"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -390,6 +390,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1E0FE7E33A734BE2889FE0C56E710CD8"
+            {
+            "SourcePath" = "8:..\\..\\..\\..\\..\\Downloads\\topInstaller.ico"
+            "TargetName" = "8:topInstaller.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_5DAFF04D8B074F5583A522FD6B7B8E75"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_31C45BDB923A460FA38D8CAC3446B827"
             {
             "SourcePath" = "8:..\\AcroniDesktop\\AcroniUI\\Images\\Teclas\\keycapbackgrounddefault.png"
@@ -450,14 +470,85 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_501510FC2FC5F011FAAFA79EC18C181F"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_59489AE8425C453F91CE86ACEC0177C0"
+            {
+            "SourcePath" = "8:..\\AcroniDesktop\\AcroniUI\\bin\\Debug\\Images\\pen.png"
+            "TargetName" = "8:pen.png"
+            "Tag" = "8:"
+            "Folder" = "8:_5DAFF04D8B074F5583A522FD6B7B8E75"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5EB62AE533BECBE7601EFA70CC4BAEC5"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_5EB62AE533BECBE7601EFA70CC4BAEC5"
+                    {
+                    "Name" = "8:Bunifu_UI_v1.52.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Bunifu_UI_v1.52.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_96BD986584044A129A899221C598E3A6"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_609BEC7E3F8942C99E5B039B476AD955"
+            {
+            "SourcePath" = "8:..\\AcroniDesktop\\AcroniUI\\Images\\Teclas\\lblCe7.png"
+            "TargetName" = "8:lblCe7.png"
+            "Tag" = "8:"
+            "Folder" = "8:_417BE21D84E24D48B5547F64BF6B320E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6983B6B240B0A8957329EA519C2AB910"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:AcroniLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
-                    "_501510FC2FC5F011FAAFA79EC18C181F"
+                    "_6983B6B240B0A8957329EA519C2AB910"
                     {
                     "Name" = "8:AcroniLibrary.dll"
                     "Attributes" = "3:512"
@@ -481,46 +572,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_59489AE8425C453F91CE86ACEC0177C0"
-            {
-            "SourcePath" = "8:..\\AcroniDesktop\\AcroniUI\\bin\\Debug\\Images\\pen.png"
-            "TargetName" = "8:pen.png"
-            "Tag" = "8:"
-            "Folder" = "8:_5DAFF04D8B074F5583A522FD6B7B8E75"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_609BEC7E3F8942C99E5B039B476AD955"
-            {
-            "SourcePath" = "8:..\\AcroniDesktop\\AcroniUI\\Images\\Teclas\\lblCe7.png"
-            "TargetName" = "8:lblCe7.png"
-            "Tag" = "8:"
-            "Folder" = "8:_417BE21D84E24D48B5547F64BF6B320E"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_76FBE989B6DE462E9D9B62E38BFF7FC6"
             {
             "SourcePath" = "8:..\\AcroniDesktop\\AcroniUI\\Images\\Teclas\\lblCd14s.png"
@@ -541,12 +592,23 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7CD52EFCD116404CB16D1EC3F6069E0A"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_8526F3CADAD8EBEC308BF465644720A1"
             {
-            "SourcePath" = "8:..\\..\\..\\topInstaller.png"
-            "TargetName" = "8:topInstaller.png"
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:AcroniControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
+                "ScatterAssemblies"
+                {
+                    "_8526F3CADAD8EBEC308BF465644720A1"
+                    {
+                    "Name" = "8:AcroniControls.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:AcroniControls.dll"
+            "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_5DAFF04D8B074F5583A522FD6B7B8E75"
+            "Folder" = "8:_96BD986584044A129A899221C598E3A6"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -558,7 +620,7 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_95664961CD0545ED87E1993702E25CCE"
@@ -621,37 +683,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B2E928BF8F50935DAE2F6D2248C424D0"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:AcroniControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
-                "ScatterAssemblies"
-                {
-                    "_B2E928BF8F50935DAE2F6D2248C424D0"
-                    {
-                    "Name" = "8:AcroniControls.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:AcroniControls.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_96BD986584044A129A899221C598E3A6"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C60ABB36B38446F2A1DB84F8AC431437"
             {
             "SourcePath" = "8:..\\AcroniDesktop\\AcroniUI\\Images\\Teclas\\lblCe3.png"
@@ -670,37 +701,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_CDB6F25E73D1DA38B21665B7208C26A2"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Transitions, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_CDB6F25E73D1DA38B21665B7208C26A2"
-                    {
-                    "Name" = "8:Transitions.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Transitions.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_96BD986584044A129A899221C598E3A6"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D20F881F77AF4048B7D9E8BBD6A8B3A9"
@@ -794,6 +794,37 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_DCE34E5D0BBF63B6B4EAC2A3DF02A662"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Transitions, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_DCE34E5D0BBF63B6B4EAC2A3DF02A662"
+                    {
+                    "Name" = "8:Transitions.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Transitions.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_96BD986584044A129A899221C598E3A6"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E6BDFF8B1E424A8FA5812E9D98A810CD"
             {
             "SourcePath" = "8:..\\AcroniDesktop\\AcroniUI\\Images\\Teclas\\lblCc1s.png"
@@ -872,37 +903,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_FBA461AE0B7451FFBC4682A64F3862C0"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_FBA461AE0B7451FFBC4682A64F3862C0"
-                    {
-                    "Name" = "8:Bunifu_UI_v1.52.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Bunifu_UI_v1.52.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_96BD986584044A129A899221C598E3A6"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FE9092BF7EB047DDB00367C1477FD72F"
@@ -1611,7 +1611,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_7E866320313140428FE0145EF4C54F7B"
             {
-            "SourcePath" = "8:..\\AcroniDesktop\\AcroniUI\\obj\\x86\\Debug\\AcroniUI.exe"
+            "SourcePath" = "8:..\\AcroniDesktop\\AcroniUI\\obj\\x86\\Release\\AcroniUI.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_96BD986584044A129A899221C598E3A6"

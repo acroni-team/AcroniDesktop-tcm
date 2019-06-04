@@ -49,7 +49,8 @@ namespace AcroniLibrary.SQL
                 newConn.Dispose();
                 newConn = new SqlConnection(SQLConnection.nome_conexao.Replace("\\SQLEXPRESS", ""));
                 newConn.Open();
-            } finally
+            }
+            finally
             {
                 using (SqlCommand newComm = new SqlCommand((SelectCommand.Contains("SELECT") || SelectCommand.Contains("select")) ? SelectCommand : "SELECT " + SelectCommand, newConn))
                 {

@@ -150,9 +150,10 @@ namespace AcroniUI.LoginAndSignUp
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            timerSlash.Enabled = true;
-            timerSlash.Start();
-            Object[] resposta = SQLMethods.SELECT("SELECT senha, tipoConta, quantidade_teclados FROM tblCliente WHERE usuario='" + txtEntrar.Text + "'").ToArray();
+            //timerSlash.Enabled = true;
+            //timerSlash.Start();
+            //Object[] resposta = SQLMethods.SELECT("SELECT senha, tipoConta, quantidade_teclados FROM tblCliente WHERE usuario='" + txtEntrar.Text + "'").ToArray();
+            Object[] resposta = SQLProcMethods.SELECT("EXEC usp_selUserInfo @usuario='" + txtEntrar.Text + "'").ToArray();
             if (!String.IsNullOrEmpty(resposta[0].ToString()))
             {
                 if (resposta[0].ToString().Equals(txtSenha.Text))
@@ -276,58 +277,58 @@ namespace AcroniUI.LoginAndSignUp
                 ChangeMessagelblAviso($"Ainda há registros vazios!");
             else
             {
-                if (SQLMethods.SELECT_HASROWS($"SELECT usuario FROM tblCliente WHERE usuario LIKE '{txtCadApelido.Text}'"))
-                    ChangeMessagelblAviso($"O apelido já existe!");
-                else
+                Object[] fetch = SQLProcMethods.SELECT($"EXEC usp_selCadUserInfo @usuario='{txtCadApelido.Text}',@email='{txtCadEmail.Text}'").ToArray();
+                if (fetch.Equals(null))
                 {
                     if (!Regex.IsMatch(txtCadEmail.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"))
                         ChangeMessagelblAviso($"O email {txtCadEmail.Text} não está correto");
                     else
                     {
-                        if (SQLMethods.SELECT_HASROWS($"SELECT email FROM tblCliente WHERE email LIKE '{txtCadEmail.Text}'"))
-                            ChangeMessagelblAviso($"O email {txtCadEmail.Text} existe em OUTRA conta");
+                        if (!txtCadPass.Text.Equals(txtCadRepPass.Text))
+                            ChangeMessagelblAviso("As senhas estão erradas");
                         else
                         {
-                            if (!txtCadPass.Text.Equals(txtCadRepPass.Text))
-                                ChangeMessagelblAviso("As senhas estão erradas");
+                            this.AddOwnedForm(GetLayerForm());
+                            TimerFade.Start();
+                            FrmConfirmarEmail confirm = new FrmConfirmarEmail(txtCadUser.Text, txtCadApelido.Text, txtCadPass.Text, txtCadEmail.Text, txtCadCPF.Text, "cadastro");
+                            if (confirm.IsDisposed)
+                                TimerFade.Start();
                             else
                             {
-                                this.AddOwnedForm(GetLayerForm());
-                                TimerFade.Start();
-                                FrmConfirmarEmail confirm = new FrmConfirmarEmail(txtCadUser.Text, txtCadApelido.Text, txtCadPass.Text, txtCadEmail.Text, txtCadCPF.Text, "cadastro");
-                                if (confirm.IsDisposed)
-                                    TimerFade.Start();
+                                confirm.ShowDialog();
+                                Application.OpenForms["LayerFadeForm"].Close();
+                                if (FrmConfirmarEmail.atualizacao_SUCCESS)
+                                {
+                                    SQLConnection.nome_usuario = txtCadApelido.Text;
+                                    Share.User = new User();
+                                    //(new AcroniControls.AcroniMessageBoxConfirm("Cadastro concluido!")).Show();
+                                    if (!File.Exists($@"{Application.StartupPath}\Users\{txtCadApelido.Text}.acr"))
+                                    {
+                                        using (FileStream savearchive = new FileStream($@"{Application.StartupPath}\Users\{txtCadApelido.Text}.acr", FileMode.OpenOrCreate))
+                                        {
+                                            BinaryFormatter Serializer = new BinaryFormatter();
+                                            Serializer.Serialize(savearchive, Share.User);
+                                        }
+                                    }
+                                    pnlCadastro.Location = new Point(800, 0);
+                                    (new SelectKeyboard()).Show();
+                                    this.Hide();
+                                    // Checa se existe o arquivo, e se não existe, cria - o
+                                }
                                 else
                                 {
-                                    confirm.ShowDialog();
-                                    Application.OpenForms["LayerFadeForm"].Close();
-                                    if (FrmConfirmarEmail.atualizacao_SUCCESS)
-                                    {
-                                        SQLConnection.nome_usuario = txtCadApelido.Text;
-                                        Share.User = new User();
-                                        //(new AcroniControls.AcroniMessageBoxConfirm("Cadastro concluido!")).Show();
-                                        if (!File.Exists($@"{Application.StartupPath}\Users\{txtCadApelido.Text}.acr"))
-                                        {
-                                            using (FileStream savearchive = new FileStream($@"{Application.StartupPath}\Users\{txtCadApelido.Text}.acr", FileMode.OpenOrCreate))
-                                            {
-                                                BinaryFormatter Serializer = new BinaryFormatter();
-                                                Serializer.Serialize(savearchive, Share.User);
-                                            }
-                                        }
-                                        pnlCadastro.Location = new Point(800, 0);
-                                        (new SelectKeyboard()).Show();
-                                        this.Hide();
-                                        // Checa se existe o arquivo, e se não existe, cria - o
-                                    }
-                                    else
-                                    {
-                                        TimerFade.Start();
-                                        ChangeMessagelblAviso("Cadastro não concluído");
-                                    }
+                                    TimerFade.Start();
+                                    ChangeMessagelblAviso("Cadastro não concluído");
                                 }
                             }
                         }
                     }
+                }else
+                {
+                    if (fetch[0].Equals(txtCadApelido.Text))
+                        ChangeMessagelblAviso("Este apelido já existe!");
+                    if (fetch[1].Equals(txtCadEmail.Text))
+                        ChangeMessagelblAviso("Este email já existe em outra conta!");
                 }
             }
         }
@@ -360,20 +361,20 @@ namespace AcroniUI.LoginAndSignUp
         {
             if (((Bunifu.Framework.UI.BunifuMaterialTextbox)sender).Equals(txtCadApelido))
             {
-                if (SQLMethods.SELECT_HASROWS($"SELECT usuario FROM tblCliente WHERE usuario LIKE '{txtCadApelido.Text}'"))
-                    ChangeReferencesOnError(ref alblApelido, Color.Firebrick, ref apnlApelido, ref txtCadUser, $"O apelido {txtCadApelido.Text} já existe!");
-                else
-                {
+                //if (SQLMethods.SELECT_HASROWS($"SELECT usuario FROM tblCliente WHERE usuario LIKE '{txtCadApelido.Text}'"))
+                //    ChangeReferencesOnError(ref alblApelido, Color.Firebrick, ref apnlApelido, ref txtCadUser, $"O apelido {txtCadApelido.Text} já existe!");
+                //else
+                //{
                     ChangeReferencesOnError(ref alblApelido, Color.FromArgb(98, 118, 125), ref apnlApelido, ref txtCadUser, "Apelido");
                     apnlApelido.CreateGraphics().Clear(Color.FromArgb(44, 47, 55));
-                }
+                //}
             }
             else if (((Bunifu.Framework.UI.BunifuMaterialTextbox)sender).Equals(txtCadEmail))
             {
                 if (!Regex.IsMatch(txtCadEmail.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"))
                     ChangeReferencesOnError(ref alblEmail, Color.Firebrick, ref apnlEmail, ref txtCadEmail, $"O email está com formato incorreto!");
-                else if (SQLMethods.SELECT_HASROWS($"SELECT email FROM tblCliente WHERE email LIKE '{txtCadEmail.Text}'"))
-                    ChangeReferencesOnError(ref alblEmail, Color.Firebrick, ref apnlEmail, ref txtCadEmail, $"O email já existe em outra conta!");
+                //else if (SQLMethods.SELECT_HASROWS($"SELECT email FROM tblCliente WHERE email LIKE '{txtCadEmail.Text}'"))
+                //    ChangeReferencesOnError(ref alblEmail, Color.Firebrick, ref apnlEmail, ref txtCadEmail, $"O email já existe em outra conta!");
                 else
                 {
                     ChangeReferencesOnError(ref alblEmail, Color.FromArgb(98, 118, 125), ref apnlEmail, ref txtCadEmail, "Email");

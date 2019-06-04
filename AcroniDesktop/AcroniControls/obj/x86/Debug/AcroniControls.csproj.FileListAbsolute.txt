@@ -48,3 +48,20 @@ C:\Users\gui_m\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniControls\o
 C:\Users\gui_m\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniControls\obj\x86\Debug\AcroniControls.dll
 C:\Users\gui_m\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniControls\obj\x86\Debug\AcroniControls.pdb
 C:\Users\gui_m\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniControls\obj\x86\Debug\AcroniControls.csprojAssemblyReference.cache
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop-tcm\AcroniDesktop\AcroniControls\bin\x86\Debug\AcroniControls.dll
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop-tcm\AcroniDesktop\AcroniControls\bin\x86\Debug\AcroniControls.pdb
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop-tcm\AcroniDesktop\AcroniControls\bin\x86\Debug\AcroniLibrary.dll
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop-tcm\AcroniDesktop\AcroniControls\bin\x86\Debug\Bunifu_UI_v1.52.dll
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop-tcm\AcroniDesktop\AcroniControls\bin\x86\Debug\AcroniLibrary.pdb
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop-tcm\AcroniDesktop\AcroniControls\obj\x86\Debug\AcroniControls.csprojAssemblyReference.cache
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop-tcm\AcroniDesktop\AcroniControls\obj\x86\Debug\AcroniControls.AcroniMessageBoxConfirm.resources
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop-tcm\AcroniDesktop\AcroniControls\obj\x86\Debug\AcroniControls.AcroniMessageBoxInput.resources
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop-tcm\AcroniDesktop\AcroniControls\obj\x86\Debug\AcroniControls.SelectColor.resources
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop-tcm\AcroniDesktop\AcroniControls\obj\x86\Debug\TheKhanSoftsWatermarkTextbox.TextboxWithPlaceholder.resources
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop-tcm\AcroniDesktop\AcroniControls\obj\x86\Debug\AcroniControls.MessageBoxSemInternet.resources
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop-tcm\AcroniDesktop\AcroniControls\obj\x86\Debug\AcroniControls.Properties.Resources.resources
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop-tcm\AcroniDesktop\AcroniControls\obj\x86\Debug\AcroniControls.csproj.GenerateResource.cache
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop-tcm\AcroniDesktop\AcroniControls\obj\x86\Debug\AcroniControls.csproj.CoreCompileInputs.cache
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop-tcm\AcroniDesktop\AcroniControls\obj\x86\Debug\AcroniControls.csproj.CopyComplete
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop-tcm\AcroniDesktop\AcroniControls\obj\x86\Debug\AcroniControls.dll
+C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop-tcm\AcroniDesktop\AcroniControls\obj\x86\Debug\AcroniControls.pdb

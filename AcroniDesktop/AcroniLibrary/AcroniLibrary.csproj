@@ -96,6 +96,7 @@
     <Compile Include="DesignMethods\ImageManipulator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQL\SQLMethods.cs" />
+    <Compile Include="SQL\SQLProcMethods.cs" />
     <Compile Include="ValidationOF.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
