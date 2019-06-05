@@ -12,6 +12,8 @@ using AcroniLibrary.Drawing;
 using System.Drawing.Imaging;
 using Bunifu.Framework.UI;
 using System.Data.SqlClient;
+using AcroniLibrary.SQL;
+using System.Data;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
@@ -1210,89 +1212,26 @@ namespace AcroniUI.Custom
         {
             bool alreadyExistsThisKeyboard = false;
             byte[] img = ImageConvert.ImageToByteArray(Screenshot.TakeSnapshot(pnlWithKeycaps), ImageFormat.Bmp);
-
-            SqlConnection sqlConnection = new SqlConnection("Data Source = " + Environment.MachineName + "\\SQLEXPRESS; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7");
             try
             {
-                sqlConnection.Open();
-                using (SqlCommand sqlCommand = new SqlCommand($"select nickname from tblTecladoCustomizado where id_cliente = {Share.User.ID}", sqlConnection))
+                DataTable return_value = SQLProcMethods.SELECT_NicknameTelcadoFrom(Share.User.ID);
+                if (return_value.Rows.Count != 0)
                 {
-                    using (SqlDataReader return_value = sqlCommand.ExecuteReader())
+                    foreach (DataRow value in return_value.Rows)
                     {
-                        if (return_value.HasRows)
+                        if (value[0].ToString().Equals(Share.Keyboard.NickName))
                         {
-                            while (return_value.Read())
-                            {
-                                if (return_value[0].ToString().Equals(Share.Keyboard.NickName))
-                                {
-                                    alreadyExistsThisKeyboard = true;
-                                    break;
-                                }
-                            }
+                            alreadyExistsThisKeyboard = true;
+                            break;
                         }
                     }
                 }
                 if (!alreadyExistsThisKeyboard)
-                    using (SqlCommand sqlCommand = new SqlCommand($"insert into tblTecladoCustomizado(id_colecao, id_cliente,imagem_teclado,nickname,preco) values ((select id_colecao from tblColecao where nick_colecao like '{Share.Collection.CollectionName}' and id_cliente = {Share.User.ID}),{Share.User.ID},@img,'{Share.Keyboard.NickName}',250)", sqlConnection))
-                    {
-                        try
-                        {
-                            sqlCommand.Parameters.AddWithValue("@img", img);
-                            sqlCommand.ExecuteNonQuery();
-                        }
-                        catch (Exception e) { MessageBox.Show(e.Message); }
-                    }
+                    SQLProcMethods.INSERT_TecladoCustomizado(Share.User.ID, img, Share.Collection.CollectionName, Share.Keyboard.NickName, "R$ 250.00");
                 else
-                    using (SqlCommand sqlCommand = new SqlCommand($"update tblTecladoCustomizado set imagem_teclado = @img where id_colecao = (select id_colecao from tblColecao where id_cliente = {Share.User.ID}) and nickname like '{Share.Keyboard.NickName}'", sqlConnection))
-                    {
-                        sqlCommand.Parameters.AddWithValue("@img", img);
-                        //MessageBox.Show(sqlCommand.ExecuteNonQuery().ToString());
-                    }
-
+                    SQLProcMethods.UPDATE_ImgTecladoCustomizado(img, Share.User.ID, Share.Keyboard.NickName);
             }
-            catch (Exception)
-            {
-                sqlConnection.Close();
-                sqlConnection.Dispose();
-                sqlConnection = new SqlConnection("Data Source = " + Environment.MachineName + "; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7");
-                sqlConnection.Open();
-                using (SqlCommand sqlCommand = new SqlCommand($"select nickname from tblTecladoCustomizado where id_cliente = {Share.User.ID}", sqlConnection))
-                {
-                    using (SqlDataReader return_value = sqlCommand.ExecuteReader())
-                    {
-                        if (return_value.HasRows)
-                        {
-                            while (return_value.Read())
-                            {
-                                if (return_value[0].ToString().Equals(Share.Keyboard.NickName))
-                                {
-                                    alreadyExistsThisKeyboard = true;
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                }
-                if (!alreadyExistsThisKeyboard)
-                    using (SqlCommand sqlCommand = new SqlCommand($"insert into tblTecladoCustomizado(id_colecao, id_cliente,imagem_teclado,nickname,preco) values ((select id_colecao from tblColecao where nick_colecao like '{Share.Collection.CollectionName}' and id_cliente = {Share.User.ID}),{Share.User.ID},@img,'{Share.Keyboard.NickName}',250)", sqlConnection))
-                    {
-                        try
-                        {
-                            sqlCommand.Parameters.AddWithValue("@img", img);
-                            sqlCommand.ExecuteNonQuery();
-                        }
-                        catch (Exception e) { MessageBox.Show(e.Message); }
-                    }
-                else
-                    using (SqlCommand sqlCommand = new SqlCommand($"update tblTecladoCustomizado set imagem_teclado = @img where id_colecao = (select id_colecao from tblColecao where id_cliente = {Share.User.ID}) and nickname like '{Share.Keyboard.NickName}'", sqlConnection))
-                    {
-                        sqlCommand.Parameters.AddWithValue("@img", img);
-                        //MessageBox.Show(sqlCommand.ExecuteNonQuery().ToString());
-                    }
-            }finally
-            {
-                sqlConnection.Close();
-                sqlConnection.Dispose();
+            catch (Exception) {
             }
         }
 

@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Text;
 using AcroniLibrary.FileInfo;
+using System.Data;
 
 namespace AcroniLibrary.SQL
 {
@@ -68,6 +69,16 @@ namespace AcroniLibrary.SQL
             return SELECT($"EXEC usp_selMinhaContaInfo @userId = {Share.User.ID}");
         }
 
+        public static DataTable SELECT_NicknameTelcadoFrom(int id_cliente)
+        {
+            return SelectTable($"EXEC usp_selNicknameTecladoCustomizado @id_cliente={id_cliente}");
+        }
+
+        public static DataTable SELECT_NicknameColecaoFrom(int id_cliente)
+        {
+            return SelectTable($"EXEC usp_selNickColecao @id_cliente={id_cliente}");
+        }
+
         public static int UPDATE_QtdeTeclados()
         {
             return DoInsertUpdateDelete($"EXEC usp_updQtdeTeclados @QTDE={Share.User.KeyboardQuantity},@id={Share.User.ID}");
@@ -93,9 +104,29 @@ namespace AcroniLibrary.SQL
             return DoInsertUpdateDelete($"EXEC usp_updImagemCliente @img={img},@id_cliente={id_cliente}");
         }
 
+        public static int UPDATE_ImgTecladoCustomizado(byte[] img, int id_cliente, String nickname_teclado)
+        {
+            return DoInsertUpdateDelete($"EXEC usp_updImagemTecladoCustomizado @nova_imagem={img},@id_cliente={id_cliente},@nickname_teclado='{nickname_teclado}'");
+        }
+
+        public static int UPDATE_ImgColecao(byte[] img, int id_cliente, String nickname_colecao)
+        {
+            return DoInsertUpdateDelete($"EXEC usp_updImagemColecao @nova_img={img},@id_cliente={id_cliente},@nick_colecao='{nickname_colecao}'");
+        }
+
         public static int INSERT_CadastroCliente(String nome, String usuario, String senha, String email, String cpf, byte[] imagem_cliente)
         {
             return DoInsertUpdateDelete($"EXEC usp_insCadTblCliente @nome='{nome}',@usuario='{usuario}',@senha='{senha}',@email='{email}',@cpf='{cpf}',@imagem_cliente={imagem_cliente}");
+        }
+
+        public static int INSERT_TecladoCustomizado(int id_cli, byte[] img, String nickname_colecao, String nickname_teclado,String preco)
+        {
+            return DoInsertUpdateDelete($"EXEC usp_insTecladoCustomizado @id_cli={id_cli},@imagem_teclado={img},@nickname_colecao='{nickname_colecao}',@nickname_teclado='{nickname_teclado}',@preco='{preco}'");
+        }
+
+        public static int INSERT_Colecao(int id_cliente, String nickname_colecao, byte[] img)
+        {
+            return DoInsertUpdateDelete($"EXEC usp_insColecao @id_cliente={Share.User.ID},@nickname_colecao='{nickname_colecao}',@img={img}");
         }
 
         public static int DELETE_TecladosCustomizadosFrom(int id_cliente)
@@ -112,11 +143,12 @@ namespace AcroniLibrary.SQL
         {
             return DoInsertUpdateDelete($"EXEC usp_delTecladoCustomizadoFromName @id_cliente={id_cliente},@nickname='{nickname}'");
         }
+
         #endregion
 
         #region Métodos de procedures gerais
 
-        public static List<object> SELECT(string SelectCommand)
+        private static List<object> SELECT(string SelectCommand)
         {
             List<object> ret = new List<object> { };
             SqlConnection newConn = new SqlConnection(SQLConnection.nome_conexao);
@@ -158,7 +190,43 @@ namespace AcroniLibrary.SQL
             return ret;
         }
 
-        public static int DoInsertUpdateDelete(String SQLCommand)
+        private static DataTable SelectTable(String SelectCommand)
+        {
+            DataTable ret = new DataTable();
+            SqlConnection newConn = new SqlConnection(SQLConnection.nome_conexao);
+            try
+            {
+                newConn.Open();
+            }
+            catch (Exception)
+            {
+                newConn.Close();
+                newConn.Dispose();
+                newConn = new SqlConnection(SQLConnection.nome_conexao.Replace("\\SQLEXPRESS", ""));
+                newConn.Open();
+            }
+            finally
+            {
+                using (SqlCommand newComm = new SqlCommand(SelectCommand, newConn))
+                {
+                    String[] parameters = SelectCommand.Split(new char[] { ' ', ',' });
+                    for (int i = 2; i < parameters.Length - 1; i += 2)
+                    {
+                        String[] eq = parameters[i].Split('=');
+                        newComm.Parameters.AddWithValue("@" + eq[0], eq[1]);
+                    }
+                    using (SqlDataAdapter reader = new SqlDataAdapter(newComm))
+                    {
+                        reader.Fill(ret);
+                    }
+                }
+                newConn.Close();
+                newConn.Dispose();
+            }
+            return ret;
+        }
+
+        private static int DoInsertUpdateDelete(String SQLCommand)
         {
             int ret = 0;
             SqlConnection newConn = new SqlConnection(SQLConnection.nome_conexao);

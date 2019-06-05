@@ -45,81 +45,28 @@ namespace AcroniControls
         {
             Bitmap collectionPicture = new Bitmap(this.Width, this.Height);
             this.DrawToBitmap(collectionPicture, this.ClientRectangle);
-            byte[] img = ImageConvert.ImageToByteArray(collectionPicture,ImageFormat.Bmp);
+            byte[] img = ImageConvert.ImageToByteArray(collectionPicture, ImageFormat.Bmp);
             bool alreadyExistsThisCollection = false;
 
             try
             {
-                using (SqlConnection sqlConnection = new SqlConnection("Data Source = " + Environment.MachineName + "\\SQLEXPRESS; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7"))
-                {
-                    sqlConnection.Open();
-                    using (SqlCommand sqlCommand = new SqlCommand($"select nick_colecao from tblColecao where id_cliente = {Share.User.ID}", sqlConnection))
-                    {
-                        using (SqlDataReader return_value = sqlCommand.ExecuteReader())
-                        {
-                            while (return_value.Read())
-                            {
-                                if (return_value[0].ToString().Equals(this.lblColecao1.Text))
-                                {
-                                    alreadyExistsThisCollection = true;
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                    if (!alreadyExistsThisCollection)
-                        using (SqlCommand sqlCommand = new SqlCommand($"insert into tblColecao(id_cliente, nick_colecao, imagem_colecao) values ({Share.User.ID},'{Share.Collection.CollectionName}', @img)", sqlConnection))
-                        {
-                            sqlCommand.Parameters.AddWithValue("@img", img);
-                            sqlCommand.ExecuteNonQuery();
-                        }
+                DataTable fetch = SQLProcMethods.SELECT_NicknameColecaoFrom(Share.User.ID);
 
-                    else
-                        using (SqlCommand sqlCommand = new SqlCommand("update tblColecao set imagem_colecao = @img where nick_colecao like '" + Share.Collection.CollectionName + $"' and id_cliente = {Share.User.ID}", sqlConnection))
-                        {
-                            sqlCommand.Parameters.AddWithValue("@img", img);
-                            sqlCommand.ExecuteNonQuery();
-                        }
+                foreach (DataRow linha in fetch.Rows) {
+                    if (linha[0].ToString().Equals(this.lblColecao1.Text))
+                    {
+                        alreadyExistsThisCollection = true;
+                        break;
+                    }
                 }
+                if (!alreadyExistsThisCollection)
+                    SQLProcMethods.INSERT_Colecao(Share.User.ID, Share.Collection.CollectionName, img);
+                else
+                    SQLProcMethods.UPDATE_ImgColecao(img,Share.User.ID,Share.Collection.CollectionName);
             }
             catch (Exception)
             {
-                using (SqlConnection sqlConnection = new SqlConnection("Data Source = " + Environment.MachineName + "; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7"))
-                {
-                    sqlConnection.Open();
-                    using (SqlCommand sqlCommand = new SqlCommand($"select nick_colecao from tblColecao where id_cliente = {Share.User.ID}", sqlConnection))
-                    {
-                        using (SqlDataReader return_value = sqlCommand.ExecuteReader())
-                        {
-                            while (return_value.Read())
-                            {
-                                if (return_value[0].ToString().Equals(this.lblColecao1.Text))
-                                {
-                                    alreadyExistsThisCollection = true;
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                    if (!alreadyExistsThisCollection)
-                        using (SqlCommand sqlCommand = new SqlCommand($"insert into tblColecao(id_cliente, nick_colecao, imagem_colecao) values ({Share.User.ID},'{Share.Collection.CollectionName}', @img)", sqlConnection))
-                        {
-                            sqlCommand.Parameters.AddWithValue("@img", img);
-                            sqlCommand.ExecuteNonQuery();
-                        }
-
-                    else
-                        using (SqlCommand sqlCommand = new SqlCommand("update tblColecao set imagem_colecao = @img where nick_colecao like '" + Share.Collection.CollectionName + $"' and id_cliente = {Share.User.ID}", sqlConnection))
-                        {
-                            sqlCommand.Parameters.AddWithValue("@img", img);
-                            sqlCommand.ExecuteNonQuery();
-                        }
-                }
             }
         }
     }
 }
-
-
-
-
