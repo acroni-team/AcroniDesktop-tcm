@@ -29,7 +29,7 @@ namespace AcroniUI
 
             ChamarImagemDoBanco();
 
-            List<object> ret = SQLMethods.SELECT("SELECT nome,cpf,cep,email,usuario,senha FROM tblCliente");
+            List<object> ret = SQLProcMethods.SELECT_Info_MinhaConta();
 
             txtNome.Text = ret[0].ToString();
             txtNome.HintText = ret[0].ToString();
@@ -52,7 +52,7 @@ namespace AcroniUI
 
         private void ChamarImagemDoBanco()
         {
-            using (var ms = new MemoryStream((byte[])SQLMethods.SELECT($"select imagem_cliente from tblCliente where usuario like '{SQLConnection.nome_usuario}'")[0]))
+            using (var ms = new MemoryStream(SQLProcMethods.SELECT_UserImage()))
             {
                 pnlUserImg.BackgroundImage = new Bitmap(ms);
             }
@@ -83,7 +83,7 @@ namespace AcroniUI
             if (((BunifuMaterialTextbox)sender).ForeColor == Color.Firebrick)
             {
                 ((BunifuMaterialTextbox)sender).ForeColor = Color.White;
-                ((BunifuMaterialTextbox)sender).Parent.BackColor = Color.FromArgb(53,56,62);
+                ((BunifuMaterialTextbox)sender).Parent.BackColor = Color.FromArgb(53, 56, 62);
             }
 
             if (!String.IsNullOrEmpty(txtEmail.Text))
@@ -91,8 +91,8 @@ namespace AcroniUI
                 if (!nameofTextbox.Contains(txtEmail.Name))
                     nameofTextbox.Add(txtEmail.Name);
 
-                if (!SQLMethods.SELECT_HASROWS("SELECT email FROM tblCliente WHERE email LIKE '" + txtEmail.Text + "'") && Regex.IsMatch(txtEmail.Text, @"^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"))
-                    txtEmail.AccessibleDescription = "Validated";
+                //if (!SQLMethods.SELECT_HASROWS("SELECT email FROM tblCliente WHERE email LIKE '" + txtEmail.Text + "'") && Regex.IsMatch(txtEmail.Text, @"^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"))
+                txtEmail.AccessibleDescription = "Validated";
             }
             else
             {
@@ -120,8 +120,9 @@ namespace AcroniUI
             {
                 if (!nameofTextbox.Contains(txtPass.Name))
                     nameofTextbox.Add(txtPass.Name);
-                
-            }else
+
+            }
+            else
                 nameofTextbox.Remove(txtPass.Name);
 
             if (!String.IsNullOrEmpty(txtUser.Text))
@@ -129,8 +130,8 @@ namespace AcroniUI
                 if (!nameofTextbox.Contains(txtUser.Name))
                     nameofTextbox.Add(txtUser.Name);
 
-                if (!SQLMethods.SELECT_HASROWS("SELECT usuario FROM tblCliente WHERE usuario LIKE '" + txtUser + "'"))
-                    txtUser.AccessibleDescription = "Validated";
+                //if (!SQLMethods.SELECT_HASROWS("SELECT usuario FROM tblCliente WHERE usuario LIKE '" + txtUser + "'"))
+                txtUser.AccessibleDescription = "Validated";
             }
             else
             {
@@ -156,7 +157,8 @@ namespace AcroniUI
             {
                 if (!nameofTextbox.Contains(txtCEP.Name))
                     nameofTextbox.Add(txtCEP.Name);
-            }else
+            }
+            else
                 nameofTextbox.Remove(txtCEP.Name);
 
             if (nameofTextbox.Count > 0)
@@ -204,43 +206,19 @@ namespace AcroniUI
         }
 
         private void btnSave_Click(object sender, EventArgs e)
-        {   
+        {
             foreach (String name in nameofTextbox)
             {
-                if ((Controls.Find(name, true))[0].AccessibleDescription.Equals("Validated")) {
-                    if (!(Controls.Find(name, true))[0].Name.Equals("pnlUserImg"))
-                        SQLMethods.UPDATE("UPDATE tblCliente SET " + (Controls.Find(name, true))[0].Tag + " = '" + (Controls.Find(name, true))[0].Text + "' WHERE id_cliente = " + Share.User.ID);
+                Control txtBox = (Controls.Find(name, true))[0];
+                if (txtBox.AccessibleDescription.Equals("Validated"))
+                {
+                    if (!txtBox.Name.Equals("pnlUserImg"))
+                        SQLProcMethods.UPDATE_Info_MinhaConta(txtBox.Tag.ToString(), txtBox.Text, Share.User.ID);
                     else
                     {
-                        try {
-                            using (SqlConnection conn = new SqlConnection(SQLConnection.nome_conexao))
-                            {
-                                conn.Open();
-                                byte[] img = ImageConvert.ImageToByteArray(bmp, ImageFormat.Bmp);
-
-                                using (SqlCommand comm = new SqlCommand($"update tblCliente set imagem_cliente = @img where usuario like '{SQLConnection.nome_usuario}'", conn))
-                                {
-                                    comm.Parameters.AddWithValue("@img", img);
-                                    comm.ExecuteNonQuery();
-                                    ChangeClientImage(bmp);
-                                }
-                            }
-                        } catch (Exception)
-                        {
-                            using (SqlConnection conn = new SqlConnection(SQLConnection.nome_conexao.Replace("\\SQLEXPRESS","")))
-                            {
-                                conn.Open();
-                                byte[] img = ImageConvert.ImageToByteArray(bmp, ImageFormat.Bmp);
-
-                                using (SqlCommand comm = new SqlCommand($"update tblCliente set imagem_cliente = @img where usuario like '{SQLConnection.nome_usuario}'", conn))
-                                {
-                                    comm.Parameters.AddWithValue("@img", img);
-                                    comm.ExecuteNonQuery();
-                                    ChangeClientImage(bmp);
-                                }
-                            }
-                        }
-                    }           
+                        byte[] img = ImageConvert.ImageToByteArray(bmp, ImageFormat.Bmp);
+                        SQLProcMethods.UPDATE_ImgCliente(img, Share.User.ID);
+                    }
                 }
                 else
                 {

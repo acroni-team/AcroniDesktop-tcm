@@ -81,7 +81,7 @@ namespace AcroniUI.LoginAndSignUp
             //--Lembrem-se disso como se fosse Excel -> Se () ? então se VERDADEIRO : se FALSO 
             String titulo = (tipo_public.Equals("cadastro")?"Fazendo o seu cadastro":(tipo_public.Equals("senha")?"Atualização de senha":"--Unknown--"));
             //String mensagem = "Olá " + select_usuario() + ". O número certo é " + numero_certo;
-            String mensagem = "Olá " + SQLMethods.SELECT("SELECT usuario FROM tblCliente WHERE email = '" + email_public + "'")[0] + ".\nInsira o código para confirmar " + (tipo_public.Equals("cadastro")? "o seu cadastro." : "a sua atualização de senha.") + "\n\n" + String_de_confirmacao;
+            String mensagem = $"Olá {usuario_public}!\nInsira o código para confirmar " + (tipo_public.Equals("cadastro")? "o seu cadastro." : "a sua atualização de senha.") + "\n\n" + String_de_confirmacao;
             try
             {
                 MailMessage objeto_mail = new MailMessage("acroni.acroni7@gmail.com", email_public, titulo, mensagem);
@@ -151,17 +151,15 @@ namespace AcroniUI.LoginAndSignUp
                 BinaryReader convertedor_binario = new BinaryReader(leitor_imagem);
                 byte[] img = convertedor_binario.ReadBytes((int)leitor_imagem.Length);
                 SQLConnection.nome_usuario = usuario_public;
-                //MessageBox.Show(tipo_public.Equals("cadastro") ? "Cadastro concluido" : "Atualização concluida");
                 atualizacao_SUCCESS = true;
                 if (tipo_public.Equals("cadastro"))
-                    SQLMethods.INSERT_INTO($"INSERT INTO tblCliente(nome,usuario,senha,email,cpf,imagem_cliente) VALUES ('{nome_public}','{usuario_public}','{senha_public}','{email_public}','{cpf_public}',@image)", img);
+                    SQLProcMethods.INSERT_CadastroCliente(nome_public, usuario_public, senha_public, email_public, cpf_public, img);
                 else if (tipo_public.Equals("senha"))
-                    SQLMethods.UPDATE("UPDATE tblCliente SET senha = '" + senha_public + "' WHERE email = '" + email_public + "'");
+                    SQLProcMethods.UPDATE_Senha(senha_public,email_public);
                 Close();
             }
             else
             { 
-                //MessageBox.Show(tipo_public.Equals("cadastro") ? "Cadastro não concluido" : "Atualização não concluida");
                 atualizacao_SUCCESS = false;
                 this.Close();
             }

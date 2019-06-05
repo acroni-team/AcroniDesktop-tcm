@@ -4,6 +4,7 @@ using System.Threading;
 using AcroniUI.Custom;
 using AcroniControls;
 using AcroniUI.LoginAndSignUp;
+using AcroniLibrary.SQL;
 
 namespace AcroniUI
 {
@@ -18,6 +19,7 @@ namespace AcroniUI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Thread.CurrentThread.SetApartmentState(ApartmentState.Unknown);
+            //SQLProcMethods.createProceduresSelect();
             Application.Run(new FrmLogin());
         }
     }

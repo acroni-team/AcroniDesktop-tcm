@@ -25,6 +25,7 @@ namespace AcroniUI.LoginAndSignUp
         public FrmLogin()
         {
             InitializeComponent();
+            SQLProcMethods.createProceduresSelect();
         }
 
         #region Ações dos botões do menuStrip
@@ -152,8 +153,7 @@ namespace AcroniUI.LoginAndSignUp
         {
             //timerSlash.Enabled = true;
             //timerSlash.Start();
-            //Object[] resposta = SQLMethods.SELECT("SELECT senha, tipoConta, quantidade_teclados FROM tblCliente WHERE usuario='" + txtEntrar.Text + "'").ToArray();
-            Object[] resposta = SQLProcMethods.SELECT("EXEC usp_selUserInfo @usuario='" + txtEntrar.Text + "'").ToArray();
+            Object[] resposta = SQLProcMethods.SELECT_UserPartialInfo(txtEntrar.Text).ToArray();
             if (!String.IsNullOrEmpty(resposta[0].ToString()))
             {
                 if (resposta[0].ToString().Equals(txtSenha.Text))
@@ -277,7 +277,7 @@ namespace AcroniUI.LoginAndSignUp
                 ChangeMessagelblAviso($"Ainda há registros vazios!");
             else
             {
-                Object[] fetch = SQLProcMethods.SELECT($"EXEC usp_selCadUserInfo @usuario='{txtCadApelido.Text}',@email='{txtCadEmail.Text}'").ToArray();
+                Object[] fetch = SQLProcMethods.SELECT_Info_UserCad(txtCadApelido.Text,txtCadEmail.Text).ToArray();
                 if (fetch.Equals(null))
                 {
                     if (!Regex.IsMatch(txtCadEmail.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"))
@@ -323,7 +323,8 @@ namespace AcroniUI.LoginAndSignUp
                             }
                         }
                     }
-                }else
+                }
+                else
                 {
                     if (fetch[0].Equals(txtCadApelido.Text))
                         ChangeMessagelblAviso("Este apelido já existe!");
@@ -360,21 +361,15 @@ namespace AcroniUI.LoginAndSignUp
         private void OnLeaveValidation(object sender, EventArgs e)
         {
             if (((Bunifu.Framework.UI.BunifuMaterialTextbox)sender).Equals(txtCadApelido))
-            {
-                //if (SQLMethods.SELECT_HASROWS($"SELECT usuario FROM tblCliente WHERE usuario LIKE '{txtCadApelido.Text}'"))
-                //    ChangeReferencesOnError(ref alblApelido, Color.Firebrick, ref apnlApelido, ref txtCadUser, $"O apelido {txtCadApelido.Text} já existe!");
-                //else
-                //{
-                    ChangeReferencesOnError(ref alblApelido, Color.FromArgb(98, 118, 125), ref apnlApelido, ref txtCadUser, "Apelido");
-                    apnlApelido.CreateGraphics().Clear(Color.FromArgb(44, 47, 55));
-                //}
+            {        
+                ChangeReferencesOnError(ref alblApelido, Color.FromArgb(98, 118, 125), ref apnlApelido, ref txtCadUser, "Apelido");
+                apnlApelido.CreateGraphics().Clear(Color.FromArgb(44, 47, 55));
             }
             else if (((Bunifu.Framework.UI.BunifuMaterialTextbox)sender).Equals(txtCadEmail))
             {
                 if (!Regex.IsMatch(txtCadEmail.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"))
                     ChangeReferencesOnError(ref alblEmail, Color.Firebrick, ref apnlEmail, ref txtCadEmail, $"O email está com formato incorreto!");
-                //else if (SQLMethods.SELECT_HASROWS($"SELECT email FROM tblCliente WHERE email LIKE '{txtCadEmail.Text}'"))
-                //    ChangeReferencesOnError(ref alblEmail, Color.Firebrick, ref apnlEmail, ref txtCadEmail, $"O email já existe em outra conta!");
+
                 else
                 {
                     ChangeReferencesOnError(ref alblEmail, Color.FromArgb(98, 118, 125), ref apnlEmail, ref txtCadEmail, "Email");

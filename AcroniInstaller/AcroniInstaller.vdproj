@@ -87,6 +87,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_6659343A98414B2B81DDD55B1E97F476"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_6983B6B240B0A8957329EA519C2AB910"
         "OwnerKey" = "8:_8526F3CADAD8EBEC308BF465644720A1"
         "MsmSig" = "8:_UNDEFINED"
@@ -531,6 +537,26 @@
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
             "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6659343A98414B2B81DDD55B1E97F476"
+            {
+            "SourcePath" = "8:..\\..\\..\\..\\GitHub\\provisorios-tcc\\Procudures\\SELECT_PROCEDURES.sql"
+            "TargetName" = "8:SELECT_PROCEDURES.sql"
+            "Tag" = "8:"
+            "Folder" = "8:_AD39B38E265E487C91D29A7635774F6F"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:TRUE"
             "Hidden" = "11:FALSE"
             "System" = "11:FALSE"
             "Permanent" = "11:FALSE"
@@ -1025,6 +1051,17 @@
                     "Condition" = "8:"
                     "Transitive" = "11:TRUE"
                     "Property" = "8:_19CA095AA75240439B74A002C580CDAB"
+                        "Folders"
+                        {
+                        }
+                    }
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_AD39B38E265E487C91D29A7635774F6F"
+                    {
+                    "Name" = "8:Procedures"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_D9C522A43D43497790A0059C8856199F"
                         "Folders"
                         {
                         }

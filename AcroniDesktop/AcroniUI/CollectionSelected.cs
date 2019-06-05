@@ -102,7 +102,7 @@ namespace AcroniUI
                         foreach (Keyboard userKeyboard in userCollection.Keyboards)
                             if (userKeyboard.ID.Equals((sender as PictureBox).Parent.Name))
                             {
-                                SQLMethods.UPDATE($"delete from tblTecladoCustomizado where nickname like '{userKeyboard.NickName}' and id_cliente like {Share.User.ID}");
+                                SQLProcMethods.DELETE_TecladoCustomizadoFromName(Share.User.ID, userKeyboard.NickName);
                                 userCollection.Keyboards.Remove(userKeyboard);
                                 Share.User.KeyboardQuantity--;
                                 Share.User.SendToFile();
