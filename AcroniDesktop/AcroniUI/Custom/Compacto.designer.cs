@@ -65,7 +65,7 @@ namespace AcroniUI.Custom
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblPaintedKeycaps = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.apnlCustomOptionsLeft = new System.Windows.Forms.Panel();
             this.pnlBtnStyleFontColor = new System.Windows.Forms.Panel();
@@ -543,7 +543,7 @@ namespace AcroniUI.Custom
             this.apnlCustomOptionsRight.Controls.Add(this.label16);
             this.apnlCustomOptionsRight.Controls.Add(this.label15);
             this.apnlCustomOptionsRight.Controls.Add(this.label14);
-            this.apnlCustomOptionsRight.Controls.Add(this.label13);
+            this.apnlCustomOptionsRight.Controls.Add(this.lblPaintedKeycaps);
             this.apnlCustomOptionsRight.Controls.Add(this.label1);
             this.apnlCustomOptionsRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.apnlCustomOptionsRight.Location = new System.Drawing.Point(878, 0);
@@ -753,18 +753,18 @@ namespace AcroniUI.Custom
             this.label14.TabIndex = 9;
             this.label14.Text = "Open Sans";
             // 
-            // label13
+            // lblPaintedKeycaps
             // 
-            this.label13.AutoSize = true;
-            this.label13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(121, 19);
-            this.label13.Margin = new System.Windows.Forms.Padding(0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(22, 16);
-            this.label13.TabIndex = 9;
-            this.label13.Text = "12";
+            this.lblPaintedKeycaps.AutoSize = true;
+            this.lblPaintedKeycaps.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblPaintedKeycaps.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.lblPaintedKeycaps.ForeColor = System.Drawing.Color.White;
+            this.lblPaintedKeycaps.Location = new System.Drawing.Point(121, 19);
+            this.lblPaintedKeycaps.Margin = new System.Windows.Forms.Padding(0);
+            this.lblPaintedKeycaps.Name = "lblPaintedKeycaps";
+            this.lblPaintedKeycaps.Size = new System.Drawing.Size(15, 16);
+            this.lblPaintedKeycaps.TabIndex = 9;
+            this.lblPaintedKeycaps.Text = "0";
             // 
             // label1
             // 
@@ -3293,7 +3293,7 @@ namespace AcroniUI.Custom
         private System.Windows.Forms.Label lblCollectionName;
         private System.Windows.Forms.Label alblCustomizacao;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblPaintedKeycaps;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;

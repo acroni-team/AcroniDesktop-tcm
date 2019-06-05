@@ -1,16 +1,11 @@
 ﻿using AcroniControls;
-using AcroniLibrary;
-using AcroniLibrary.Drawing;
 using AcroniLibrary.FileInfo;
 using AcroniLibrary.SQL;
 using AcroniUI.Custom;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Diagnostics;
 using System.Drawing;
-using System.Drawing.Imaging;
-using System.Drawing.Text;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text.RegularExpressions;
@@ -255,7 +250,6 @@ namespace AcroniUI
                                     Share.User.UserCollections.Remove(collection);
                                     foreach (Keyboard k in collection.Keyboards)
                                         Share.User.KeyboardQuantity--;
-                                    sqlConnection.Open();
                                     SQLProcMethods.DELETE_TecladosCustomizadosFrom(Share.User.ID);
                                     SQLProcMethods.DELETE_ColecaoFrom(Share.User.ID, c.Text);
                                     break;

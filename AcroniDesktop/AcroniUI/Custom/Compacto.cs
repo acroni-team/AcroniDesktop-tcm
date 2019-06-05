@@ -11,11 +11,8 @@ using System.Threading.Tasks;
 using AcroniLibrary.Drawing;
 using System.Drawing.Imaging;
 using Bunifu.Framework.UI;
-using System.Data.SqlClient;
 using AcroniLibrary.SQL;
 using System.Data;
-using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
 
 namespace AcroniUI.Custom
 {
@@ -25,7 +22,7 @@ namespace AcroniUI.Custom
 
         // Definição do botão de teclado genérico (kbtn)
         Label keybutton;
-
+        int paintedKeycapsCounter = 0;
         // Definição das propriedades de salvamento
         //private bool SetKeyboardProperties;
         Keyboard keyboard = new Keyboard();
@@ -301,6 +298,8 @@ namespace AcroniUI.Custom
                     keybutton.Parent.BackgroundImage = null;
                     if (Color != Color.FromArgb(26, 26, 26))
                     {
+                        paintedKeycapsCounter++;
+                        lblPaintedKeycaps.Text = paintedKeycapsCounter + "";
                         if (keybutton == lblCb14sExtensao || keybutton == lblCb14s)
                         {
                             lblCb14s.Parent.BackgroundImage = null;
@@ -313,6 +312,8 @@ namespace AcroniUI.Custom
                     }
                     else
                     {
+                        paintedKeycapsCounter--;
+                        lblPaintedKeycaps.Text = paintedKeycapsCounter + "";
                         if (keybutton == lblCb14sExtensao || keybutton == lblCb14s)
                         {
                             lblCb14s.Parent.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Images\Teclas\lblCb14s.png");
@@ -916,6 +917,7 @@ namespace AcroniUI.Custom
 
         private void LoadKeyboard()
         {
+            bool addedEnterYet = false;
             picBoxKeyboardBackground.Image = Share.Keyboard.BackgroundImage;
             picBoxKeyboardBackground.SizeMode = (PictureBoxSizeMode)Share.Keyboard.BackgroundModeSize;
             picBoxKeyboardBackground.BackColor = Share.Keyboard.BackgroundColor;
@@ -941,6 +943,10 @@ namespace AcroniUI.Custom
                                         c.BackColor = k.Color;
                                         if (!c.BackColor.Equals(Color.FromArgb(26, 26, 26)))
                                         {
+                                            if(addedEnterYet)
+                                            paintedKeycapsCounter++;
+                                            if (c.Name.Equals(lblCa14s.Name))
+                                                addedEnterYet = true;
                                             c.Parent.BackColor = Color.FromArgb(90, k.Color);
                                             c.Parent.BackgroundImage = null;
                                         }
@@ -957,6 +963,7 @@ namespace AcroniUI.Custom
                     }
                 }
             }
+            lblPaintedKeycaps.Text = paintedKeycapsCounter + "";
         }
 
 
@@ -1128,7 +1135,7 @@ namespace AcroniUI.Custom
 
         private void setPropriedadesTeclado()
         {
-            keyboard.Name = "FX-4370";
+            keyboard.Name = "Acroni-Compacto";
             keyboard.ID = KeyboardIDGenerator.GenerateID('C');
             if (!Share.EditKeyboard)
                 keyboard.NickName = Share.KeyboardNameNotCreated;
