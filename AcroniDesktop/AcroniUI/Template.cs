@@ -158,6 +158,25 @@ namespace AcroniUI
 
         protected virtual void lblSalvar_Click(object sender, EventArgs e)
         {
+
+        }
+
+
+        protected virtual void lblNovo_Click(object sender, EventArgs e)
+        {
+            AcroniMessageBoxConfirm mbc = new AcroniMessageBoxConfirm("Deseja salvar esse arquivo?");
+            if (mbc.ShowDialog() == DialogResult.OK)
+                lblSalvar_Click(sender, e);
+        }
+
+        protected virtual void lblSalvarComo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected virtual void lblAbrir_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

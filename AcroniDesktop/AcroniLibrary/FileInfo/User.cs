@@ -17,12 +17,23 @@ namespace AcroniLibrary.FileInfo
         public int KeyboardQuantity { get; set; } = 0;
         public bool isPremiumAccount { get; set; } = false;
 
-        public void SendToFile()
+        public void SendToFile(string path = "", bool isUsingPersonalSave = false)
         {
-            using (FileStream savearchive = new FileStream($@"{Application.StartupPath}\Users\{SQLConnection.nome_usuario}.acr", FileMode.Open))
+            if (!isUsingPersonalSave)
             {
-                BinaryFormatter objectToByteArray = new BinaryFormatter();
-                objectToByteArray.Serialize(savearchive, Share.User);
+                using (FileStream savearchive = new FileStream($@"{Application.StartupPath}\Users\{SQLConnection.nome_usuario}.acr", FileMode.Open))
+                {
+                    BinaryFormatter objectToByteArray = new BinaryFormatter();
+                    objectToByteArray.Serialize(savearchive, Share.User);
+                }
+            }
+            else
+            {
+                using (FileStream savearchive = new FileStream($@"" + path, FileMode.Open))
+                {
+                    BinaryFormatter objectToByteArray = new BinaryFormatter();
+                    objectToByteArray.Serialize(savearchive, Share.User);
+                }
             }
         }
         public void CatchFromFile()

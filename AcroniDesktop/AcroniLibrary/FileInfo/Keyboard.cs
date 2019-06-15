@@ -11,11 +11,9 @@ namespace AcroniLibrary.FileInfo
         public List<Keycap> Keycaps { get; set; } = new List<Keycap>();
         public string Name { get; set; }
         public string ID { get; set; }
-        public string Material { get; set; }
         public Image BackgroundImage { get; set; }
         public bool HasRestPads { get; set; }
         public string NickName { get; set; }
-        public bool IsMechanicalKeyboard { get; set; }
         public string KeyboardType { get; set; }
         public Image KeyboardImage { get; set; }
         public Color BackgroundColor { get; set; }

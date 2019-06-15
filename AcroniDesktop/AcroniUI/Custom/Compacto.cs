@@ -49,6 +49,37 @@ namespace AcroniUI.Custom
 
         #region Eventos a nível do formulário
 
+        private bool personalSave = false;
+        private int isFirstSave = 0; 
+        protected override void lblSalvar_Click(object sender, EventArgs e)
+        {
+            if (isFirstSave++ == 0)
+            {
+                personalSave = true;
+                btnSalvar_Click(sender, e);
+            }
+            else
+            {
+                personalSave = false;
+                btnSalvar_Click(sender, e);
+            }
+        }
+
+        protected override void lblAbrir_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Title = "Selecione o arquivo de teclado";
+            ofd.Filter = "Acroni Keyboard (*.acrk)|*.acrk";
+            if (ofd.ShowDialog() == DialogResult.OK)
+                LoadKeyboard();
+        }
+
+        protected override void lblSalvarComo_Click(object sender, EventArgs e)
+        {
+            personalSave = true;
+            btnSalvar_Click(sender, e);
+        }
+
         private void lblUpperBottom_Click(object sender, EventArgs e)
         {
             kbtn_Click(sender, e);
@@ -552,6 +583,7 @@ namespace AcroniUI.Custom
         private void DisposePanel() => darkenPanel.Dispose();
 
         #endregion
+
         #region btnVoltar
         //Ao clicar no botão de fechar
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -620,6 +652,15 @@ namespace AcroniUI.Custom
             }
             else
             {
+                if (!Share.User.isPremiumAccount)
+
+                    if (Share.User.KeyboardQuantity == 5)
+                    {
+                        AcroniMessageBoxConfirm mb = new AcroniMessageBoxConfirm("Sinto muito, mas você atingiu o limite de teclados que você " +
+                                        "pode criar usando essa conta.", "Atualize sua conta agora mesmo para uma conta Premium");
+                        mb.ShowDialog();
+                    }
+
                 lblCollectionName.Visible = false;
                 lblKeyboardName.Location = lblCollectionName.Location;
                 lblKeyboardName.Text = "Sem Nome";
@@ -627,10 +668,6 @@ namespace AcroniUI.Custom
             }
         }
 
-        protected override void lblSalvar_Click(object sender, EventArgs e)
-        {
-            btnSalvar_Click(sender, e);
-        }
         #endregion
 
         #region Métodos do Color Picker
@@ -951,8 +988,8 @@ namespace AcroniUI.Custom
                                         c.BackColor = k.Color;
                                         if (!c.BackColor.Equals(Color.FromArgb(26, 26, 26)))
                                         {
-                                            if(addedEnterYet)
-                                            paintedKeycapsCounter++;
+                                            if (addedEnterYet)
+                                                paintedKeycapsCounter++;
                                             if (c.Name.Equals(lblCa14s.Name))
                                                 addedEnterYet = true;
                                             c.Parent.BackColor = Color.FromArgb(90, k.Color);
@@ -1041,11 +1078,14 @@ namespace AcroniUI.Custom
                         await Task.Delay(100);
                     }
                 }
-                SaveKeyboard();
+                if (personalSave != false)
+                {
+                    SaveKeyboard(true);
+                }
             }
         }
 
-        private async void SaveKeyboard()
+        private async void SaveKeyboard(bool isPersonalSave = false)
         {
             if (!Share.EditKeyboard)
             {
@@ -1131,7 +1171,19 @@ namespace AcroniUI.Custom
                 success.ShowDialog();
                 Share.EditKeyboard = true;
                 Share.Keyboard = keyboard;
-                Share.User.SendToFile();
+                if (isPersonalSave)
+                {
+                    SaveFileDialog sfd = new SaveFileDialog();
+                    sfd.InitialDirectory = @"C:\";
+                    sfd.RestoreDirectory = true;
+                    sfd.FileName = "*.acrk";
+                    sfd.DefaultExt = "acrk";
+                    sfd.Filter = "Acroni Keyboard (*.acrk)|*.acrk";
+                    if (sfd.ShowDialog() == DialogResult.OK)
+                        Share.User.SendToFile(sfd.FileName, true);                      
+                }
+                else
+                    Share.User.SendToFile();
                 ExportToWebSite();
             }
             else
@@ -1149,15 +1201,15 @@ namespace AcroniUI.Custom
                 keyboard.NickName = Share.KeyboardNameNotCreated;
             else
                 keyboard.NickName = Share.Keyboard.NickName;
-            keyboard.Material = "Madeira";
-            keyboard.IsMechanicalKeyboard = true;
-            keyboard.HasRestPads = false;
-            keyboard.KeyboardType = this.Name;
+            keyboard.KeyboardType = this.Name.Substring(7);
             keyboard.BackgroundImage = picBoxKeyboardBackground.Image;
             keyboard.BackgroundColor = picBoxKeyboardBackground.BackColor;
             keyboard.BackgroundModeSize = picBoxKeyboardBackground.SizeMode;
             Bitmap keyboardImage = Screenshot.TakeSnapshot(pnlWithKeycaps);
             keyboard.KeyboardImage = keyboardImage;
+
+
+
             string text = "";
             Color backcolor = Color.Empty;
             Color forecolor = Color.Empty;
@@ -1246,7 +1298,8 @@ namespace AcroniUI.Custom
                 else
                     SQLProcMethods.UPDATE_ImgTecladoCustomizado(img, Share.User.ID, Share.Keyboard.NickName);
             }
-            catch (Exception) {
+            catch (Exception)
+            {
             }
         }
 
@@ -1260,11 +1313,6 @@ namespace AcroniUI.Custom
         private void picBoxKeyboardBackground_Click(object sender, EventArgs e)
         {
             base.generalClickCancel(sender, e);
-        }
-
-        private void pnlVertAlign_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void pnlCustomizingMenu_Click(object sender, EventArgs e)

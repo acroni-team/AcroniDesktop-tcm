@@ -361,7 +361,6 @@ namespace AcroniUI.Custom
             this.btnSalvar.TabIndex = 13;
             this.btnSalvar.Text = "Salvar Teclado";
             this.btnSalvar.UseVisualStyleBackColor = false;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // pnlCustomizingMenu
             // 
@@ -846,7 +845,6 @@ namespace AcroniUI.Custom
             this.pnlVertAlign.Name = "pnlVertAlign";
             this.pnlVertAlign.Size = new System.Drawing.Size(113, 36);
             this.pnlVertAlign.TabIndex = 14;
-            this.pnlVertAlign.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlVertAlign_Paint);
             // 
             // pnlHorizAlign
             // 

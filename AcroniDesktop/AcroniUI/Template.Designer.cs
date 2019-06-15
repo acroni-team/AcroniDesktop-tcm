@@ -143,6 +143,7 @@
             this.lblSalvarComo.TabIndex = 20;
             this.lblSalvarComo.Text = "Salvar como...      Ctrl + Shift + S";
             this.lblSalvarComo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSalvarComo.Click += new System.EventHandler(this.lblSalvarComo_Click);
             this.lblSalvarComo.MouseLeave += new System.EventHandler(this.scroll_leave);
             this.lblSalvarComo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.scroll_move);
             // 
@@ -175,6 +176,7 @@
             this.lblNovo.TabIndex = 18;
             this.lblNovo.Text = "Novo                                  Ctrl + N";
             this.lblNovo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblNovo.Click += new System.EventHandler(this.lblNovo_Click);
             this.lblNovo.MouseLeave += new System.EventHandler(this.scroll_leave);
             this.lblNovo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.scroll_move);
             // 
@@ -190,6 +192,7 @@
             this.lblAbrir.TabIndex = 17;
             this.lblAbrir.Text = "Abrir                                   Ctrl + O";
             this.lblAbrir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblAbrir.Click += new System.EventHandler(this.lblAbrir_Click);
             this.lblAbrir.MouseLeave += new System.EventHandler(this.scroll_leave);
             this.lblAbrir.MouseMove += new System.Windows.Forms.MouseEventHandler(this.scroll_move);
             // 

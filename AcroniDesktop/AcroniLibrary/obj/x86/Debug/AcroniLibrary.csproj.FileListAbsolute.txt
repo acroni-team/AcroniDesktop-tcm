@@ -29,3 +29,11 @@ C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop-tcm\AcroniDes
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop-tcm\AcroniDesktop\AcroniLibrary\obj\x86\Debug\AcroniLibrary.csproj.CopyComplete
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop-tcm\AcroniDesktop\AcroniLibrary\obj\x86\Debug\AcroniLibrary.dll
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop-tcm\AcroniDesktop\AcroniLibrary\obj\x86\Debug\AcroniLibrary.pdb
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniLibrary\bin\x86\Debug\AcroniLibrary.dll
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniLibrary\bin\x86\Debug\AcroniLibrary.pdb
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniLibrary\bin\x86\Debug\Bunifu_UI_v1.52.dll
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniLibrary\obj\x86\Debug\AcroniLibrary.csprojAssemblyReference.cache
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniLibrary\obj\x86\Debug\AcroniLibrary.csproj.CoreCompileInputs.cache
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniLibrary\obj\x86\Debug\AcroniLibrary.csproj.CopyComplete
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniLibrary\obj\x86\Debug\AcroniLibrary.dll
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniLibrary\obj\x86\Debug\AcroniLibrary.pdb
