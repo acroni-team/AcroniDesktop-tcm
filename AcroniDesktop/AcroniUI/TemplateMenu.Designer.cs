@@ -317,7 +317,6 @@
             this.Opacity = 1D;
             this.Controls.SetChildIndex(this.pnlAreaUsu, 0);
             this.Controls.SetChildIndex(this.pnlOptions, 0);
-            this.Controls.SetChildIndex(this.pnlStripAjuda, 0);
             this.pnlAreaUsu.ResumeLayout(false);
             this.pnlAreaUsu.PerformLayout();
             this.espacoArmazenamento.ResumeLayout(false);

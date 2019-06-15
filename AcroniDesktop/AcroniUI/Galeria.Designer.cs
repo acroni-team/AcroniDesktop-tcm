@@ -162,7 +162,6 @@
             this.Controls.Add(this.lblBoasVindas);
             this.Name = "Galeria";
             this.Text = "Galeria";
-            this.Controls.SetChildIndex(this.pnlStripAjuda, 0);
             this.Controls.SetChildIndex(this.lblBoasVindas, 0);
             this.Controls.SetChildIndex(this.lblNomeUsuBoasVindas, 0);
             this.Controls.SetChildIndex(this.lblSavedCollections1, 0);

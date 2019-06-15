@@ -458,7 +458,6 @@
             this.Controls.SetChildIndex(this.btnSave, 0);
             this.Controls.SetChildIndex(this.apnlEmail, 0);
             this.Controls.SetChildIndex(this.panel2, 0);
-            this.Controls.SetChildIndex(this.pnlStripAjuda, 0);
             this.Controls.SetChildIndex(this.panel3, 0);
             this.apnlCPF.ResumeLayout(false);
             this.apnlNome.ResumeLayout(false);

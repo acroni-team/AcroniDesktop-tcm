@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using AcroniLibrary.DesignMethods;
 using AcroniControls;
 using AcroniLibrary.FileInfo;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace AcroniUI
 {
@@ -24,7 +26,6 @@ namespace AcroniUI
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(FormDrag.Form_MouseMove);
             
             #endregion
-
         }
 
         #region Ações dos botões do pnlSuperior
@@ -39,29 +40,10 @@ namespace AcroniUI
             FadeOut();
         }
 
-        private void pnlStripAjuda_MouseEnter(object sender, EventArgs e)
-        {
-            lblAjuda.ForeColor = Color.FromArgb(40, 42, 47);
-            lblAjuda.BackColor = Color.White;
-        }
-
-        private void pnlStripAjuda_MouseLeave(object sender, EventArgs e)
-        {
-            lblAjuda.ForeColor = Color.White;
-            lblAjuda.BackColor = Color.FromArgb(40, 42, 47);
-            lblAjuda.MouseLeave += lblMenus_MouseLeave;
-            pnlStripAjuda.Visible = false;
-        }
-
         private void lblMenus_MouseOver(object sender, EventArgs e)
         {
-            ((Label)sender).ForeColor = Color.FromArgb(40, 42, 47);
-            ((Label)sender).BackColor = Color.White;
+            ((Label)sender).BackColor = Color.FromArgb(158, 158, 158);
             ((Label)sender).Tag = "selected";
-            if (((Label)sender).Equals(lblAjuda))
-            {
-                pnlStripAjuda.Visible = true;
-            }
         }
 
         private void lblMenus_MouseLeave(object sender, EventArgs e)
@@ -69,10 +51,6 @@ namespace AcroniUI
             //if (!((Label)sender).Tag.Equals("selected")) {
                 ((Label)sender).ForeColor = Color.White;
                 ((Label)sender).BackColor = Color.FromArgb(40, 42, 47);
-            if (((Label)sender).Equals(lblAjuda))
-            {
-                pnlStripAjuda.Visible = false;
-            }
             //}
         }
         #endregion
@@ -118,15 +96,7 @@ namespace AcroniUI
             }
         }
         #endregion
-        
-        private void pnlStripAjuda_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.Y == 21)
-            {
-                lblAjuda.MouseLeave -= lblMenus_MouseLeave;
-                pnlStripAjuda.Visible = true;
-            }
-        }
+       
 
         #region FadeIn e FadeOut
         public async void FadeOut()
@@ -151,5 +121,43 @@ namespace AcroniUI
         #endregion
 
         private void Template_Load(object sender, EventArgs e) => FadeIn();
+
+        private void lblArquivo_Click(object sender, EventArgs e)
+        {
+            if (pnlArquivos.Visible == false)
+            {
+                foreach (Control c in pnlArquivos.Controls)
+                {
+                    c.Text = "       " + c.Text;
+                    c.Size = new Size(pnlArquivos.Size.Width, (pnlArquivos.Size.Height) / 4);
+                }
+                pnlArquivos.Location = new Point(lblArquivo.Location.X, pnlSuperior.Location.Y + 40);
+                pnlArquivos.Visible = true;
+            }
+            else
+                pnlArquivos.Visible = false;
+            pnlArquivos.BringToFront();
+        }
+
+        protected void generalClickCancel(object sender, EventArgs e)
+        {
+            pnlArquivos.Visible = false;
+        }
+
+        private void scroll_move(object sender, MouseEventArgs e)
+        {
+            Label itemMenuStrip = (Label)sender;
+            itemMenuStrip.BackColor = Color.FromArgb(158, 158, 158);
+        }
+
+        private void scroll_leave(object sender, EventArgs e)
+        {
+            Label itemMenuStrip = (Label)sender;
+            itemMenuStrip.BackColor = Color.FromArgb(40, 42, 47);
+        }
+
+        protected virtual void lblSalvar_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

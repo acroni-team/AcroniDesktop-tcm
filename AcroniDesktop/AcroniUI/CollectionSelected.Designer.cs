@@ -89,7 +89,6 @@
             this.Controls.SetChildIndex(this.lblCollectionName, 0);
             this.Controls.SetChildIndex(this.lblKeyboardsNumber, 0);
             this.Controls.SetChildIndex(this.pnlWithKeyboards, 0);
-            this.Controls.SetChildIndex(this.pnlStripAjuda, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -147,7 +147,6 @@ namespace AcroniUI.LoginAndSignUp
         #endregion
 
         SelectKeyboard selecionarTeclado;
-        Thread WTLog;
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {

@@ -626,6 +626,11 @@ namespace AcroniUI.Custom
                 lblCollectionName.Text = "";
             }
         }
+
+        protected override void lblSalvar_Click(object sender, EventArgs e)
+        {
+            btnSalvar_Click(sender, e);
+        }
         #endregion
 
         #region Métodos do Color Picker
@@ -1254,7 +1259,7 @@ namespace AcroniUI.Custom
 
         private void picBoxKeyboardBackground_Click(object sender, EventArgs e)
         {
-            picBoxKeyboardBackground.BackColor = Color;
+            base.generalClickCancel(sender, e);
         }
 
         private void pnlVertAlign_Paint(object sender, PaintEventArgs e)
@@ -1262,6 +1267,14 @@ namespace AcroniUI.Custom
 
         }
 
+        private void pnlCustomizingMenu_Click(object sender, EventArgs e)
+        {
+            base.generalClickCancel(sender, e);
+        }
 
+        private void generalClicks(object sender, EventArgs e)
+        {
+            base.generalClickCancel(sender, e);
+        }
     }
 }
