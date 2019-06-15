@@ -279,6 +279,21 @@
     <None Include="Images\olhoblock.png" />
     <None Include="Images\olho.png" />
     <None Include="packages.config" />
+    <None Include="Resources\OpenSans-Bold.ttf" />
+    <None Include="Resources\OpenSans-BoldItalic.ttf" />
+    <None Include="Resources\OpenSans-ExtraBold.ttf" />
+    <None Include="Resources\OpenSans-ExtraBoldItalic.ttf" />
+    <None Include="Resources\OpenSans-Italic.ttf" />
+    <None Include="Resources\OpenSans-Light.ttf" />
+    <None Include="Resources\OpenSans-LightItalic.ttf" />
+    <None Include="Resources\OpenSans-Regular.ttf" />
+    <None Include="Resources\OpenSans-SemiBold.ttf" />
+    <None Include="Resources\OpenSans-SemiBoldItalic.ttf" />
+    <None Include="Resources\Qanelas-Black.ttf" />
+    <None Include="Resources\Qanelas-Bold.ttf" />
+    <None Include="Resources\Qanelas-ExtraBold.ttf" />
+    <None Include="Resources\Qanelas-Regular.ttf" />
+    <None Include="Resources\Qanelas-SemiBold.ttf" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="UserImagesIcons\" />

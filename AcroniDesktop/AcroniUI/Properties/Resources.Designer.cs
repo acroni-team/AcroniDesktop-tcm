@@ -111,12 +111,32 @@ namespace AcroniUI.Properties {
         }
         
         /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Byte[].
+        /// </summary>
+        internal static byte[] OpenSans_Bold {
+            get {
+                object obj = ResourceManager.GetObject("OpenSans_Bold", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap padrao {
             get {
                 object obj = ResourceManager.GetObject("padrao", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Byte[].
+        /// </summary>
+        internal static byte[] Qanelas_ExtraBold {
+            get {
+                object obj = ResourceManager.GetObject("Qanelas_ExtraBold", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         

@@ -293,12 +293,14 @@ namespace AcroniUI.Custom
 
                 else
                 {
+                    if (keybutton.BackColor == Color.FromArgb(26, 26, 26) && keybutton.BackColor != Color.FromArgb(90, Color))
+                        paintedKeycapsCounter++;
+
                     keybutton.BackColor = Color;
                     keybutton.Parent.BackColor = Color.FromArgb(90, Color);
                     keybutton.Parent.BackgroundImage = null;
                     if (Color != Color.FromArgb(26, 26, 26))
                     {
-                        paintedKeycapsCounter++;
                         lblPaintedKeycaps.Text = paintedKeycapsCounter + "";
                         if (keybutton == lblCb14sExtensao || keybutton == lblCb14s)
                         {
@@ -312,7 +314,8 @@ namespace AcroniUI.Custom
                     }
                     else
                     {
-                        paintedKeycapsCounter--;
+                        if (paintedKeycapsCounter > 0)
+                            paintedKeycapsCounter--;
                         lblPaintedKeycaps.Text = paintedKeycapsCounter + "";
                         if (keybutton == lblCb14sExtensao || keybutton == lblCb14s)
                         {

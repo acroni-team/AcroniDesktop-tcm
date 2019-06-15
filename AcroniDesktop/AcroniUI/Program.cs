@@ -20,7 +20,7 @@ namespace AcroniUI
             Application.SetCompatibleTextRenderingDefault(false);
             Thread.CurrentThread.SetApartmentState(ApartmentState.Unknown);
             //SQLProcMethods.createProceduresSelect();
-            Application.Run(new FrmLogin());
+            Application.Run(new Compacto());
         }
     }
 }

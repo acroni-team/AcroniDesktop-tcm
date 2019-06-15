@@ -129,3 +129,36 @@ C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop-tcm\AcroniDes
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop-tcm\AcroniDesktop\AcroniUI\obj\x86\Debug\AcroniUI.csproj.CopyComplete
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop-tcm\AcroniDesktop\AcroniUI\obj\x86\Debug\AcroniUI.exe
 C:\Users\gui_m\Documents\Visual Studio 2017\Projects\AcroniDesktop-tcm\AcroniDesktop\AcroniUI\obj\x86\Debug\AcroniUI.pdb
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniUI\bin\x86\Debug\AcroniUI.exe.config
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniUI\bin\x86\Debug\AcroniUI.exe
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniUI\bin\x86\Debug\AcroniUI.pdb
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniUI\bin\x86\Debug\AcroniControls.dll
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniUI\bin\x86\Debug\AcroniLibrary.dll
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniUI\bin\x86\Debug\Bunifu_UI_v1.52.dll
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniUI\bin\x86\Debug\Transitions.dll
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniUI\bin\x86\Debug\AcroniControls.pdb
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniUI\bin\x86\Debug\AcroniLibrary.pdb
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniUI\obj\x86\Debug\AcroniUI.csprojAssemblyReference.cache
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniUI\obj\x86\Debug\AcroniUI.CollectionSelected.resources
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniUI\obj\x86\Debug\AcroniUI.Custom.Compacto.resources
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniUI\obj\x86\Debug\AcroniUI.Custom.CustomModules.KeycapBackgroundModule.resources
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniUI\obj\x86\Debug\AcroniUI.Custom.CustomModules.KeycapParentModule.resources
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniUI\obj\x86\Debug\AcroniUI.Custom.CustomModules.KeycapSwitchModule.resources
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniUI\obj\x86\Debug\AcroniUI.Custom.CustomModules.KeycapTextIconModule.resources
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniUI\obj\x86\Debug\AcroniUI.Custom.CustomModules.KeycapTextureModule.resources
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniUI\obj\x86\Debug\AcroniUI.Custom.Fullsize.resources
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniUI\obj\x86\Debug\AcroniUI.Custom.Tenkeyless.resources
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniUI\obj\x86\Debug\AcroniUI.Galeria.resources
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniUI\obj\x86\Debug\AcroniUI.LoginAndSignUp.FrmConfirmarEmail.resources
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniUI\obj\x86\Debug\AcroniUI.LoginAndSignUp.FrmLogin.resources
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniUI\obj\x86\Debug\AcroniUI.MinhaConta.resources
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniUI\obj\x86\Debug\AcroniUI.TemplateMenu.resources
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniUI\obj\x86\Debug\AcroniUI.Properties.Resources.resources
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniUI\obj\x86\Debug\AcroniUI.SelectKeyboard.resources
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniUI\obj\x86\Debug\AcroniUI.Splash.resources
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniUI\obj\x86\Debug\AcroniUI.Template.resources
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniUI\obj\x86\Debug\AcroniUI.csproj.GenerateResource.cache
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniUI\obj\x86\Debug\AcroniUI.csproj.CoreCompileInputs.cache
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniUI\obj\x86\Debug\AcroniUI.csproj.CopyComplete
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniUI\obj\x86\Debug\AcroniUI.exe
+C:\Users\iwakura\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniUI\obj\x86\Debug\AcroniUI.pdb
