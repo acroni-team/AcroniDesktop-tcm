@@ -16,6 +16,7 @@ namespace AcroniLibrary.FileInfo
         public int ID { get; set; }
         public int KeyboardQuantity { get; set; } = 0;
         public bool isPremiumAccount { get; set; } = false;
+        public bool autoLogAllowed { get; set; } = false;
 
         public void SendToFile(string path = "", bool isUsingPersonalSave = false)
         {

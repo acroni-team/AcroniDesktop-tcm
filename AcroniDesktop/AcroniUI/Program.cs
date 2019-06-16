@@ -5,6 +5,7 @@ using AcroniUI.Custom;
 using AcroniControls;
 using AcroniUI.LoginAndSignUp;
 using AcroniLibrary.SQL;
+using System.IO;
 
 namespace AcroniUI
 {
@@ -20,7 +21,10 @@ namespace AcroniUI
             Application.SetCompatibleTextRenderingDefault(false);
             Thread.CurrentThread.SetApartmentState(ApartmentState.Unknown);
             //SQLProcMethods.createProceduresSelect();
-            Application.Run(new Compacto());
+            if (File.Exists($@"{Application.StartupPath}\Users\{SQLConnection.nome_usuario}.acr"))
+                Application.Run(new SelectKeyboard());
+            else
+                Application.Run(new FrmLogin());
         }
     }
 }
