@@ -40,7 +40,6 @@ namespace AcroniUI.Custom
             this.pnlCustomizingMenu = new System.Windows.Forms.Panel();
             this.lblKeyboardName = new System.Windows.Forms.Label();
             this.lblCollectionName = new System.Windows.Forms.Label();
-            this.alblCustomizacao = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnTextAlignRight = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnTextAlignCenter = new Bunifu.Framework.UI.BunifuImageButton();
@@ -49,6 +48,8 @@ namespace AcroniUI.Custom
             this.cmbFontes = new System.Windows.Forms.ComboBox();
             this.apnlBottom = new System.Windows.Forms.Panel();
             this.apnlCustomOptionsRight = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -243,6 +244,7 @@ namespace AcroniUI.Custom
             this.ebtnOpenModuleTextIcons = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.ebtnOpenModuleBackground = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.ebtnOpenModuleTexture = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.btnMax)).BeginInit();
             this.pnlCustomizingMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignRight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignCenter)).BeginInit();
@@ -326,6 +328,10 @@ namespace AcroniUI.Custom
             ((System.ComponentModel.ISupportInitialize)(this.picBoxKeyboardBackground)).BeginInit();
             this.SuspendLayout();
             // 
+            // btnMax
+            // 
+            this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
+            // 
             // txtSelectFont
             // 
             this.txtSelectFont.Location = new System.Drawing.Point(0, 0);
@@ -367,22 +373,21 @@ namespace AcroniUI.Custom
             this.pnlCustomizingMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(48)))), ((int)(((byte)(54)))));
             this.pnlCustomizingMenu.Controls.Add(this.lblKeyboardName);
             this.pnlCustomizingMenu.Controls.Add(this.lblCollectionName);
-            this.pnlCustomizingMenu.Controls.Add(this.alblCustomizacao);
             this.pnlCustomizingMenu.Controls.Add(this.btnVoltar);
             this.pnlCustomizingMenu.Controls.Add(this.btnSalvar);
+            this.pnlCustomizingMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlCustomizingMenu.Location = new System.Drawing.Point(0, 40);
             this.pnlCustomizingMenu.Name = "pnlCustomizingMenu";
             this.pnlCustomizingMenu.Size = new System.Drawing.Size(1280, 116);
             this.pnlCustomizingMenu.TabIndex = 16;
             this.pnlCustomizingMenu.Click += new System.EventHandler(this.pnlCustomizingMenu_Click);
-            this.pnlCustomizingMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlCustomizingMenu_Paint);
             // 
             // lblKeyboardName
             // 
             this.lblKeyboardName.AutoSize = true;
             this.lblKeyboardName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(48)))), ((int)(((byte)(54)))));
             this.lblKeyboardName.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Bold);
-            this.lblKeyboardName.Location = new System.Drawing.Point(787, 35);
+            this.lblKeyboardName.Location = new System.Drawing.Point(609, 35);
             this.lblKeyboardName.Name = "lblKeyboardName";
             this.lblKeyboardName.Size = new System.Drawing.Size(256, 29);
             this.lblKeyboardName.TabIndex = 15;
@@ -393,23 +398,11 @@ namespace AcroniUI.Custom
             this.lblCollectionName.AutoSize = true;
             this.lblCollectionName.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Bold);
             this.lblCollectionName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(59)))));
-            this.lblCollectionName.Location = new System.Drawing.Point(510, 35);
+            this.lblCollectionName.Location = new System.Drawing.Point(300, 35);
             this.lblCollectionName.Name = "lblCollectionName";
             this.lblCollectionName.Size = new System.Drawing.Size(261, 29);
             this.lblCollectionName.TabIndex = 15;
             this.lblCollectionName.Text = "• <Nome da coleção>";
-            // 
-            // alblCustomizacao
-            // 
-            this.alblCustomizacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(48)))), ((int)(((byte)(54)))));
-            this.alblCustomizacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Bold);
-            this.alblCustomizacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
-            this.alblCustomizacao.Location = new System.Drawing.Point(143, 35);
-            this.alblCustomizacao.Name = "alblCustomizacao";
-            this.alblCustomizacao.Size = new System.Drawing.Size(353, 35);
-            this.alblCustomizacao.TabIndex = 15;
-            this.alblCustomizacao.Text = "Customização";
-            this.alblCustomizacao.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // btnVoltar
             // 
@@ -523,6 +516,8 @@ namespace AcroniUI.Custom
             // apnlCustomOptionsRight
             // 
             this.apnlCustomOptionsRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(34)))));
+            this.apnlCustomOptionsRight.Controls.Add(this.label7);
+            this.apnlCustomOptionsRight.Controls.Add(this.label3);
             this.apnlCustomOptionsRight.Controls.Add(this.label5);
             this.apnlCustomOptionsRight.Controls.Add(this.label6);
             this.apnlCustomOptionsRight.Controls.Add(this.label4);
@@ -541,6 +536,32 @@ namespace AcroniUI.Custom
             this.apnlCustomOptionsRight.Size = new System.Drawing.Size(402, 157);
             this.apnlCustomOptionsRight.TabIndex = 7;
             this.apnlCustomOptionsRight.Click += new System.EventHandler(this.generalClicks);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
+            this.label7.Location = new System.Drawing.Point(16, 45);
+            this.label7.Margin = new System.Windows.Forms.Padding(0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(103, 16);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Fontes usadas: ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(125)))));
+            this.label3.Location = new System.Drawing.Point(16, 19);
+            this.label3.Margin = new System.Windows.Forms.Padding(0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(112, 16);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Teclas coloridas:";
             // 
             // label5
             // 
@@ -911,7 +932,7 @@ namespace AcroniUI.Custom
             this.pnlBtnOpenModules.Controls.Add(this.btnOpenModuleTexture);
             this.pnlBtnOpenModules.Controls.Add(this.btnOpenModuleBackground);
             this.pnlBtnOpenModules.Controls.Add(this.btnOpenModuleTextIcons);
-            this.pnlBtnOpenModules.Location = new System.Drawing.Point(372, 0);
+            this.pnlBtnOpenModules.Location = new System.Drawing.Point(373, 0);
             this.pnlBtnOpenModules.Name = "pnlBtnOpenModules";
             this.pnlBtnOpenModules.Size = new System.Drawing.Size(508, 157);
             this.pnlBtnOpenModules.TabIndex = 8;
@@ -1880,9 +1901,9 @@ namespace AcroniUI.Custom
             this.lblCb14sExtensao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.lblCb14sExtensao.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCb14sExtensao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblCb14sExtensao.Location = new System.Drawing.Point(19, 0);
+            this.lblCb14sExtensao.Location = new System.Drawing.Point(13, 0);
             this.lblCb14sExtensao.Name = "lblCb14sExtensao";
-            this.lblCb14sExtensao.Size = new System.Drawing.Size(44, 56);
+            this.lblCb14sExtensao.Size = new System.Drawing.Size(50, 56);
             this.lblCb14sExtensao.TabIndex = 116;
             this.lblCb14sExtensao.Click += new System.EventHandler(this.lblUpperBottom_Click);
             // 
@@ -3082,11 +3103,13 @@ namespace AcroniUI.Custom
             this.Name = "Compacto";
             this.Opacity = 1D;
             this.Load += new System.EventHandler(this.FormLoad);
+            this.Controls.SetChildIndex(this.pnlArquivos, 0);
             this.Controls.SetChildIndex(this.pnlCustomizingMenu, 0);
             this.Controls.SetChildIndex(this.pnlBodyColorpicker, 0);
             this.Controls.SetChildIndex(this.apnlBottom, 0);
             this.Controls.SetChildIndex(this.pnlHeadColorpicker, 0);
             this.Controls.SetChildIndex(this.pnlWithKeycaps, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.btnMax)).EndInit();
             this.pnlCustomizingMenu.ResumeLayout(false);
             this.pnlCustomizingMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnTextAlignRight)).EndInit();
@@ -3229,7 +3252,6 @@ namespace AcroniUI.Custom
         private System.Windows.Forms.Panel apnlCustomOptionsLeft;
         private System.Windows.Forms.Label lblKeyboardName;
         private System.Windows.Forms.Label lblCollectionName;
-        private System.Windows.Forms.Label alblCustomizacao;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label lblPaintedKeycaps;
         private System.Windows.Forms.Label label18;
@@ -3388,5 +3410,7 @@ namespace AcroniUI.Custom
         private System.Windows.Forms.Label lblCb14s;
         private System.Windows.Forms.Panel pnlBtnStyleFontColor;
         protected System.Windows.Forms.PictureBox picBoxKeyboardBackground;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -82,6 +82,7 @@ namespace AcroniUI
         private void btnMinimize_Click(object sender, EventArgs e) => WindowState = FormWindowState.Minimized;
 
         #endregion
+        
         #region Timers
         private void timerFade_Tick(object sender, EventArgs e)
         {
@@ -177,6 +178,24 @@ namespace AcroniUI
         protected virtual void lblAbrir_Click(object sender, EventArgs e)
         {
             
+        }
+
+        protected virtual void btnMax_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+                btnClose.Location = new Point(1181, 0);
+                btnMax.Location = new Point(1139, 0);
+                btnMinimize.Location = new Point(1097, 0);
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+                btnClose.Location = new Point(this.Width - 33 - btnClose.Size.Width, 0);
+                btnMax.Location = new Point(this.Width - 33 - btnClose.Size.Width - btnMax.Width, 0);
+                btnMinimize.Location = new Point(this.Width - 33 - btnClose.Size.Width - btnMax.Width - btnMinimize.Width, 0);
+            }
         }
     }
 }

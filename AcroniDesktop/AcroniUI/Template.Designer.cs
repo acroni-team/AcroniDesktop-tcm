@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Template));
             this.pnlSuperior = new System.Windows.Forms.Panel();
+            this.btnMax = new System.Windows.Forms.PictureBox();
             this.lblArquivo = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.PictureBox();
             this.btnMinimize = new System.Windows.Forms.PictureBox();
@@ -42,6 +43,7 @@
             this.lblNovo = new System.Windows.Forms.Label();
             this.lblAbrir = new System.Windows.Forms.Label();
             this.pnlSuperior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             this.pnlArquivos.SuspendLayout();
@@ -50,6 +52,7 @@
             // pnlSuperior
             // 
             this.pnlSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(47)))));
+            this.pnlSuperior.Controls.Add(this.btnMax);
             this.pnlSuperior.Controls.Add(this.lblArquivo);
             this.pnlSuperior.Controls.Add(this.btnClose);
             this.pnlSuperior.Controls.Add(this.btnMinimize);
@@ -61,6 +64,17 @@
             this.pnlSuperior.TabIndex = 11;
             this.pnlSuperior.Click += new System.EventHandler(this.generalClickCancel);
             this.pnlSuperior.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlSuperior_Paint);
+            // 
+            // btnMax
+            // 
+            this.btnMax.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMax.Image = ((System.Drawing.Image)(resources.GetObject("btnMax.Image")));
+            this.btnMax.Location = new System.Drawing.Point(1139, 0);
+            this.btnMax.Name = "btnMax";
+            this.btnMax.Size = new System.Drawing.Size(42, 30);
+            this.btnMax.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnMax.TabIndex = 15;
+            this.btnMax.TabStop = false;
             // 
             // lblArquivo
             // 
@@ -82,9 +96,9 @@
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(1182, 0);
+            this.btnClose.Location = new System.Drawing.Point(1181, 0);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(71, 30);
+            this.btnClose.Size = new System.Drawing.Size(66, 30);
             this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.btnClose.TabIndex = 12;
             this.btnClose.TabStop = false;
@@ -94,7 +108,7 @@
             // 
             this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
-            this.btnMinimize.Location = new System.Drawing.Point(1140, 0);
+            this.btnMinimize.Location = new System.Drawing.Point(1097, 0);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(42, 30);
             this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -213,6 +227,7 @@
             this.Click += new System.EventHandler(this.generalClickCancel);
             this.pnlSuperior.ResumeLayout(false);
             this.pnlSuperior.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             this.pnlArquivos.ResumeLayout(false);
@@ -232,5 +247,6 @@
         private System.Windows.Forms.Label lblNovo;
         private System.Windows.Forms.Label lblAbrir;
         protected System.Windows.Forms.Panel pnlArquivos;
+        public System.Windows.Forms.PictureBox btnMax;
     }
 }

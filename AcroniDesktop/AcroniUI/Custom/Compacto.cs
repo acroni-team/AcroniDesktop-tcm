@@ -47,8 +47,8 @@ namespace AcroniUI.Custom
 
         #endregion
 
-        #region Eventos a nível do formulário
 
+        #region Implementações do menu de arquivos
         private bool personalSave = false;
         private int isFirstSave = 0; 
         protected override void lblSalvar_Click(object sender, EventArgs e)
@@ -79,7 +79,39 @@ namespace AcroniUI.Custom
             personalSave = true;
             btnSalvar_Click(sender, e);
         }
+        #endregion
 
+        #region Implementações dos botões do template (pnlSuperior)
+
+        protected override void btnMax_Click(object sender, EventArgs e)
+        {
+            base.btnMax_Click(sender, e);
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                lblCollectionName.Location = new Point(300, 35);
+                lblKeyboardName.Location = new Point(609, 35);
+                btnSalvar.Location = new Point(1100, 35);
+                pnlBodyColorpicker.Location = new Point(915, (this.Height - pnlBodyColorpicker.Height + pnlHeadColorpicker.Height) / 2);
+                pnlHeadColorpicker.Location = new Point(915, (this.Height - pnlHeadColorpicker.Height - pnlBodyColorpicker.Height) / 2);
+                apnlCustomOptionsLeft.Location = new Point(0, 0);
+                apnlCustomOptionsRight.Location = new Point(878, 0);
+            }
+            else
+            {
+                lblCollectionName.Location = new Point((this.Width - (2 * lblCollectionName.Width)) / 2, (pnlCustomizingMenu.Height - lblCollectionName.Height) / 2);
+                lblKeyboardName.Location = new Point((this.Width - (2 * lblKeyboardName.Width)) / 2, (pnlCustomizingMenu.Height - lblKeyboardName.Height) / 2);
+                btnSalvar.Location = new Point(this.Width - btnSalvar.Width - 20, (pnlCustomizingMenu.Height - lblCollectionName.Height) / 2);
+                pnlBodyColorpicker.Location = new Point(this.Width - pnlBodyColorpicker.Width - 60, (this.Height - pnlBodyColorpicker.Height + pnlHeadColorpicker.Height) / 2);
+                pnlHeadColorpicker.Location = new Point(this.Width - pnlHeadColorpicker.Width - 60, (this.Height - pnlHeadColorpicker.Height - pnlBodyColorpicker.Height) / 2);
+                apnlCustomOptionsLeft.Location = new Point(this.Width * 2 / 3, 0);
+                apnlCustomOptionsRight.Location = new Point(this.Width * 2 / 3, 0);
+            }
+            
+        }
+
+        #endregion
+
+        #region Eventos a nível do formulário
         private void lblUpperBottom_Click(object sender, EventArgs e)
         {
             kbtn_Click(sender, e);
@@ -652,14 +684,14 @@ namespace AcroniUI.Custom
             }
             else
             {
-                if (!Share.User.isPremiumAccount)
+                //if (!Share.User.isPremiumAccount)
 
-                    if (Share.User.KeyboardQuantity == 5)
-                    {
-                        AcroniMessageBoxConfirm mb = new AcroniMessageBoxConfirm("Sinto muito, mas você atingiu o limite de teclados que você " +
-                                        "pode criar usando essa conta.", "Atualize sua conta agora mesmo para uma conta Premium");
-                        mb.ShowDialog();
-                    }
+                //    if (Share.User.KeyboardQuantity == 5)
+                //    {
+                //        AcroniMessageBoxConfirm mb = new AcroniMessageBoxConfirm("Sinto muito, mas você atingiu o limite de teclados que você " +
+                //                        "pode criar usando essa conta.", "Atualize sua conta agora mesmo para uma conta Premium");
+                //        mb.ShowDialog();
+                //    }
 
                 lblCollectionName.Visible = false;
                 lblKeyboardName.Location = lblCollectionName.Location;
@@ -1305,10 +1337,7 @@ namespace AcroniUI.Custom
 
         #endregion
 
-        private void pnlCustomizingMenu_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        #region cliques que são usados para cancelar ações de outros botões
 
         private void picBoxKeyboardBackground_Click(object sender, EventArgs e)
         {
@@ -1324,5 +1353,7 @@ namespace AcroniUI.Custom
         {
             base.generalClickCancel(sender, e);
         }
+
+        #endregion
     }
 }
