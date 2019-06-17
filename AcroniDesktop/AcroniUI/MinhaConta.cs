@@ -31,8 +31,8 @@ namespace AcroniUI
 
             List<object> ret = SQLProcMethods.SELECT_Info_MinhaConta();
 
-            txtNome.Text = ret[0].ToString();
-            txtNome.HintText = ret[0].ToString();
+            txtNome.Text = ret[0].ToString().Replace('-',' ');
+            txtNome.HintText = ret[0].ToString().Replace('-', ' ');
             txtCPF.Text = String.IsNullOrEmpty(ret[1].ToString()) ? "NÃO TEMOS O SEU CPF. Informe-o" : ret[1].ToString();
             txtCPF.HintText = String.IsNullOrEmpty(ret[1].ToString()) ? "NÃO TEMOS O SEU CPF. Informe-o" : ret[1].ToString();
             txtCEP.Text = String.IsNullOrEmpty(ret[2].ToString()) ? "Informe o seu CEP :D" : ret[2].ToString();

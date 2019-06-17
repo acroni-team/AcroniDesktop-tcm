@@ -153,7 +153,7 @@ namespace AcroniUI.LoginAndSignUp
             //timerSlash.Enabled = true;
             //timerSlash.Start();
             Object[] resposta = SQLProcMethods.SELECT_UserPartialInfo(txtEntrar.Text).ToArray();
-            if (!String.IsNullOrEmpty(resposta[0].ToString()))
+            if (resposta != null)
             {
                 if (resposta[0].ToString().Equals(txtSenha.Text))
                 {
@@ -250,7 +250,7 @@ namespace AcroniUI.LoginAndSignUp
                 txtCadRepPass.isPassword = true;
         }
 
-        private void txtBoxesCad_OnValueChanged(object sender, EventArgs e) => pnlShowCadError.Location = new Point(94, 508);
+        private void txtBoxesCad_OnValueChanged(object sender, EventArgs e) { pnlShowCadError.Location = new Point(94, 508);  lblAvisoCad.Visible = false; }
 
         private void ChangeMessagelblAviso(String message)
         {
@@ -276,8 +276,8 @@ namespace AcroniUI.LoginAndSignUp
                 ChangeMessagelblAviso($"Ainda há registros vazios!");
             else
             {
-                Object[] fetch = SQLProcMethods.SELECT_Info_UserCad(txtCadApelido.Text,txtCadEmail.Text).ToArray();
-                if (fetch.Equals(null))
+                Object[] fetch = SQLProcMethods.SELECT_Info_UserCad(txtCadApelido.Text, txtCadEmail.Text).ToArray();
+                if (fetch.Length == 0)
                 {
                     if (!Regex.IsMatch(txtCadEmail.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"))
                         ChangeMessagelblAviso($"O email {txtCadEmail.Text} não está correto");
@@ -301,6 +301,7 @@ namespace AcroniUI.LoginAndSignUp
                                     SQLConnection.nome_usuario = txtCadApelido.Text;
                                     Share.User = new User();
                                     //(new AcroniControls.AcroniMessageBoxConfirm("Cadastro concluido!")).Show();
+                                    // Checa se existe o arquivo, e se não existe, cria - o
                                     if (!File.Exists($@"{Application.StartupPath}\Users\{txtCadApelido.Text}.acr"))
                                     {
                                         using (FileStream savearchive = new FileStream($@"{Application.StartupPath}\Users\{txtCadApelido.Text}.acr", FileMode.OpenOrCreate))
@@ -312,7 +313,6 @@ namespace AcroniUI.LoginAndSignUp
                                     pnlCadastro.Location = new Point(800, 0);
                                     (new SelectKeyboard()).Show();
                                     this.Hide();
-                                    // Checa se existe o arquivo, e se não existe, cria - o
                                 }
                                 else
                                 {
@@ -332,7 +332,6 @@ namespace AcroniUI.LoginAndSignUp
                 }
             }
         }
-
 
         private async void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -360,7 +359,7 @@ namespace AcroniUI.LoginAndSignUp
         private void OnLeaveValidation(object sender, EventArgs e)
         {
             if (((Bunifu.Framework.UI.BunifuMaterialTextbox)sender).Equals(txtCadApelido))
-            {        
+            {
                 ChangeReferencesOnError(ref alblApelido, Color.FromArgb(98, 118, 125), ref apnlApelido, ref txtCadUser, "Apelido");
                 apnlApelido.CreateGraphics().Clear(Color.FromArgb(44, 47, 55));
             }
@@ -410,9 +409,16 @@ namespace AcroniUI.LoginAndSignUp
 
         private void alblAcroni_Click(object sender, EventArgs e)
         {
-            txtEntrar.Text = "teste";
-            txtSenha.Text = "teste";
-            btnEntrar_Click(default(object), default(EventArgs));
+            txtCadApelido.Text = "teste";
+            txtCadCPF.Text = "45158208859";
+            txtCadEmail.Text = "guimotapereira25@gmail.com";
+            txtCadPass.Text = "teste";
+            txtCadUser.Text = "Teste dos Santos";
+            txtCadRepPass.Text = "teste";
+            //btnCadastrar_Click(default(object), default(EventArgs));
+            //txtEntrar.Text = "teste";
+            //txtSenha.Text = "teste";
+            //btnEntrar_Click(default(object), default(EventArgs));
         }
 
         #region FadeIn e FadeOut

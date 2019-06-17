@@ -47,7 +47,6 @@ namespace AcroniUI.Custom
 
         #endregion
 
-
         #region Implementações do menu de arquivos
         private bool personalSave = false;
         private int isFirstSave = 0; 
@@ -1337,7 +1336,7 @@ namespace AcroniUI.Custom
 
         #endregion
 
-        #region cliques que são usados para cancelar ações de outros botões
+        #region Cliques que são usados para cancelar ações de outros botões
 
         private void picBoxKeyboardBackground_Click(object sender, EventArgs e)
         {

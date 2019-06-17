@@ -59,7 +59,7 @@
             this.btnEnviar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
             this.btnEnviar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(255)))));
             this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnviar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnEnviar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnEnviar.ForeColor = System.Drawing.Color.White;
             this.btnEnviar.Location = new System.Drawing.Point(398, 109);
             this.btnEnviar.Name = "btnEnviar";
@@ -74,12 +74,12 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(22, 52);
+            this.label1.Location = new System.Drawing.Point(24, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(480, 33);
+            this.label1.Size = new System.Drawing.Size(478, 33);
             this.label1.TabIndex = 73;
             this.label1.Text = "Um código foi enviado para o email da sua conta. Por favor, escreva o código rece" +
     "bido";
@@ -88,7 +88,7 @@
             // lblTitulo
             // 
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitulo.Font = new System.Drawing.Font("Century Gothic", 12.25F, System.Drawing.FontStyle.Bold);
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.lblTitulo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.lblTitulo.Location = new System.Drawing.Point(24, 23);
@@ -102,7 +102,7 @@
             // 
             this.txtCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
             this.txtCodigo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCodigo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.txtCodigo.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.txtCodigo.HintText = "Código";
@@ -114,7 +114,7 @@
             this.txtCodigo.Location = new System.Drawing.Point(24, 109);
             this.txtCodigo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(480, 44);
+            this.txtCodigo.Size = new System.Drawing.Size(383, 44);
             this.txtCodigo.TabIndex = 75;
             this.txtCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -130,11 +130,11 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold);
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
-            this.linkLabel1.Location = new System.Drawing.Point(106, 78);
+            this.linkLabel1.Location = new System.Drawing.Point(113, 80);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(112, 15);
+            this.linkLabel1.Size = new System.Drawing.Size(119, 13);
             this.linkLabel1.TabIndex = 78;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Solicite um reenvio!";
@@ -143,7 +143,7 @@
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label2.Location = new System.Drawing.Point(24, 77);
@@ -160,13 +160,11 @@
             // 
             // pnlSquareLeftBorderBtnEnviar
             // 
-            this.pnlSquareLeftBorderBtnEnviar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
-            this.pnlSquareLeftBorderBtnEnviar.Location = new System.Drawing.Point(394, 109);
+            this.pnlSquareLeftBorderBtnEnviar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.pnlSquareLeftBorderBtnEnviar.Location = new System.Drawing.Point(396, 108);
             this.pnlSquareLeftBorderBtnEnviar.Name = "pnlSquareLeftBorderBtnEnviar";
-            this.pnlSquareLeftBorderBtnEnviar.Size = new System.Drawing.Size(12, 43);
+            this.pnlSquareLeftBorderBtnEnviar.Size = new System.Drawing.Size(12, 45);
             this.pnlSquareLeftBorderBtnEnviar.TabIndex = 80;
-            this.pnlSquareLeftBorderBtnEnviar.MouseEnter += new System.EventHandler(this.btnEnviar_MouseEnter);
-            this.pnlSquareLeftBorderBtnEnviar.MouseLeave += new System.EventHandler(this.btnEnviar_MouseLeave);
             // 
             // FrmConfirmarEmail
             // 
@@ -175,12 +173,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(61)))));
             this.ClientSize = new System.Drawing.Size(530, 180);
+            this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.pnlSquareLeftBorderBtnEnviar);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnImaginario);
-            this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

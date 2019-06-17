@@ -102,14 +102,14 @@ namespace AcroniUI.LoginAndSignUp
 
         private void btnEnviar_MouseEnter(object sender, EventArgs e)
         {
-            pnlSquareLeftBorderBtnEnviar.BackColor = Color.FromArgb(0, 180, 255);
+            //pnlSquareLeftBorderBtnEnviar.BackColor = Color.FromArgb(0, 180, 255);
             btnEnviar.BackColor = Color.FromArgb(0, 180, 255);
             //MessageBox.Show($"{btnEnviar.BackColor}");
         }
 
         private void btnEnviar_MouseLeave(object sender, EventArgs e)
         {
-            pnlSquareLeftBorderBtnEnviar.BackColor = Color.DodgerBlue;
+            //pnlSquareLeftBorderBtnEnviar.BackColor = Color.DodgerBlue;
             btnEnviar.BackColor = Color.DodgerBlue;
         }
 
@@ -117,43 +117,15 @@ namespace AcroniUI.LoginAndSignUp
         SqlConnection conexao_SQL = new SqlConnection(SQLConnection.nome_conexao);
         SqlCommand comando_SQL;
 
-        private void update()
-        {
-            try
-            {
-                //--Abrindo a conexão
-                if (conexao_SQL.State != ConnectionState.Open)
-                    conexao_SQL.Open();
-
-                //--Inicializando um comando UPDATE e execuntando
-                String update = "UPDATE tblCliente SET senha = '" + senha_public + "' WHERE email = '" + email_public + "'";
-                comando_SQL = new SqlCommand(update, conexao_SQL);
-                //--Para executar, utilizo ExecuteNonQuery(), pois ele retorna apenas o numero de linhas afetadas
-                int n_linhas_afetadas = comando_SQL.ExecuteNonQuery();
-
-                //--Fechando a conexão (NÃO ESQUECER!)
-                conexao_SQL.Close();
-            }catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                conexao_SQL.Close();
-            }
-
-        }
-
-
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {            
             if (txtCodigo.Text.ToUpper().Equals(String_de_confirmacao))
             {
-                FileStream leitor_imagem = new FileStream($@"{Application.StartupPath}\Images\PlaceHolder\imagemPadrao.jpg", FileMode.Open, FileAccess.Read);
-                BinaryReader convertedor_binario = new BinaryReader(leitor_imagem);
-                byte[] img = convertedor_binario.ReadBytes((int)leitor_imagem.Length);
                 SQLConnection.nome_usuario = usuario_public;
                 atualizacao_SUCCESS = true;
                 if (tipo_public.Equals("cadastro"))
-                    SQLProcMethods.INSERT_CadastroCliente(nome_public, usuario_public, senha_public, email_public, cpf_public, img);
+                    SQLProcMethods.INSERT_CadastroCliente(nome_public.Replace(' ','-'), usuario_public, senha_public, email_public, cpf_public);
                 else if (tipo_public.Equals("senha"))
                     SQLProcMethods.UPDATE_Senha(senha_public,email_public);
                 Close();

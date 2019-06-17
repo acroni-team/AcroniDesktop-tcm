@@ -152,10 +152,10 @@
             // 
             // pnlLogin
             // 
+            this.pnlLogin.Controls.Add(this.btnSair);
             this.pnlLogin.Controls.Add(this.pnlSlash);
             this.pnlLogin.Controls.Add(this.lblAviso);
             this.pnlLogin.Controls.Add(this.pnlQueDesce);
-            this.pnlLogin.Controls.Add(this.btnSair);
             this.pnlLogin.Controls.Add(this.pnlLogoCad);
             this.pnlLogin.Controls.Add(this.lnklblEsqueceuSenha);
             this.pnlLogin.Controls.Add(this.apnlSenha);
@@ -318,9 +318,9 @@
             // 
             resources.ApplyResources(this.pnlCadastro, "pnlCadastro");
             this.pnlCadastro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(61)))));
+            this.pnlCadastro.Controls.Add(this.lblAvisoCad);
             this.pnlCadastro.Controls.Add(this.pnlLogin);
             this.pnlCadastro.Controls.Add(this.alblCPF);
-            this.pnlCadastro.Controls.Add(this.lblAvisoCad);
             this.pnlCadastro.Controls.Add(this.apnlCPF);
             this.pnlCadastro.Controls.Add(this.apnlRepSenha);
             this.pnlCadastro.Controls.Add(this.apnlEmail);
@@ -667,9 +667,9 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(61)))));
+            this.Controls.Add(this.pnlCadastro);
             this.Controls.Add(this.apnlEsquerdo);
             this.Controls.Add(this.btnImaginario);
-            this.Controls.Add(this.pnlCadastro);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

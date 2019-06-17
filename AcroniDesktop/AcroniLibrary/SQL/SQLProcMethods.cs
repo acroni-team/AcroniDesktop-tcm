@@ -66,7 +66,7 @@ namespace AcroniLibrary.SQL
 
         public static List<object> SELECT_Info_MinhaConta()
         {
-            return SELECT($"EXEC usp_selMinhaContaInfo @userId = {Share.User.ID}");
+            return SELECT($"EXEC usp_selMinhaContaInfo @userId={Share.User.ID}");
         }
 
         public static DataTable SELECT_NicknameTelcadoFrom(int id_cliente)
@@ -114,9 +114,36 @@ namespace AcroniLibrary.SQL
             return DoInsertUpdateDelete($"EXEC usp_updImagemColecao @nova_img={img},@id_cliente={id_cliente},@nick_colecao='{nickname_colecao}'");
         }
 
-        public static int INSERT_CadastroCliente(String nome, String usuario, String senha, String email, String cpf, byte[] imagem_cliente)
-        {
-            return DoInsertUpdateDelete($"EXEC usp_insCadTblCliente @nome='{nome}',@usuario='{usuario}',@senha='{senha}',@email='{email}',@cpf='{cpf}',@imagem_cliente={imagem_cliente}");
+        public static int INSERT_CadastroCliente(String nome, String usuario, String senha, String email, String cpf)        {
+            String SQLCommand = $"EXEC usp_insCadTblCliente @nome='{nome.Replace(' ','-')}',@usuario='{usuario}',@senha='{senha}',@email='{email}',@cpf='{cpf}'";
+            int ret = 0;
+            SqlConnection newConn = new SqlConnection(SQLConnection.nome_conexao);
+            try
+            {
+                newConn.Open();
+            }
+            catch (Exception)
+            {
+                newConn.Close();
+                newConn.Dispose();
+                newConn = new SqlConnection(SQLConnection.nome_conexao.Replace("\\SQLEXPRESS", ""));
+                newConn.Open();
+            }
+            finally
+            {
+                using (SqlCommand newComm = new SqlCommand(SQLCommand, newConn))
+                {
+                    String[] parameters = SQLCommand.Split(new char[] { ' ', ',', '=' });
+                    for (int i = 2; i < parameters.Length - 1; i += 2)
+                    {
+                        newComm.Parameters.AddWithValue(parameters[i], parameters[i+1]);
+                    }
+                    ret = newComm.ExecuteNonQuery();
+                }
+                newConn.Close();
+                newConn.Dispose();
+            }
+            return ret;
         }
 
         public static int INSERT_TecladoCustomizado(int id_cli, byte[] img, String nickname_colecao, String nickname_teclado,String preco)
@@ -146,7 +173,7 @@ namespace AcroniLibrary.SQL
 
         #endregion
 
-        #region Métodos de procedures gerais
+        #region Métodos gerais para Procedures
 
         private static List<object> SELECT(string SelectCommand)
         {
@@ -167,12 +194,11 @@ namespace AcroniLibrary.SQL
             {
                 using (SqlCommand newComm = new SqlCommand(SelectCommand, newConn))
                 {
-                    //newComm.CommandType = CommandType.StoredProcedure;
                     String[] parameters = SelectCommand.Split(new char[] {' ',','});
                     for (int i = 2; i < parameters.Length - 1; i+=2)
                     {
                         String[] eq = parameters[i].Split('=');
-                        newComm.Parameters.AddWithValue("@"+eq[0],eq[1]);
+                        newComm.Parameters.AddWithValue(eq[0],eq[1]);
                     }
                     using (SqlDataReader reader = newComm.ExecuteReader())
                     {   
@@ -213,7 +239,7 @@ namespace AcroniLibrary.SQL
                     for (int i = 2; i < parameters.Length - 1; i += 2)
                     {
                         String[] eq = parameters[i].Split('=');
-                        newComm.Parameters.AddWithValue("@" + eq[0], eq[1]);
+                        newComm.Parameters.AddWithValue(eq[0], (eq[0].Contains("nome")?eq[1].Replace('-',' '):eq[1]));
                     }
                     using (SqlDataAdapter reader = new SqlDataAdapter(newComm))
                     {
@@ -245,11 +271,10 @@ namespace AcroniLibrary.SQL
             {
                 using (SqlCommand newComm = new SqlCommand(SQLCommand, newConn))
                 {
-                    String[] parameters = SQLCommand.Split(new char[] { ' ', ',' });
+                    String[] parameters = SQLCommand.Split(new char[] { ' ', ',', '='});
                     for (int i = 2; i < parameters.Length - 1; i += 2)
                     {
-                        String[] eq = parameters[i].Split('=');
-                        newComm.Parameters.AddWithValue("@" + eq[0], eq[1]);
+                        newComm.Parameters.AddWithValue(parameters[i], parameters[i+1]);
                     }
                     ret = newComm.ExecuteNonQuery();
                 }
