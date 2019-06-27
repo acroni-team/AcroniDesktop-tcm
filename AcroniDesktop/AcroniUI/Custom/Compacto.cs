@@ -1074,7 +1074,6 @@ namespace AcroniUI.Custom
         //        }
         //    }
         //}
-
         private async void btnSalvar_Click(object sender, EventArgs e)
         {
             bool canSave = false;
@@ -1109,14 +1108,11 @@ namespace AcroniUI.Custom
                         await Task.Delay(100);
                     }
                 }
-                if (personalSave != false)
-                {
-                    SaveKeyboard(true);
-                }
+                SaveKeyboard();
             }
         }
 
-        private async void SaveKeyboard(bool isPersonalSave = false)
+        private async void SaveKeyboard()
         {
             if (!Share.EditKeyboard)
             {
@@ -1202,19 +1198,7 @@ namespace AcroniUI.Custom
                 success.ShowDialog();
                 Share.EditKeyboard = true;
                 Share.Keyboard = keyboard;
-                if (isPersonalSave)
-                {
-                    SaveFileDialog sfd = new SaveFileDialog();
-                    sfd.InitialDirectory = @"C:\";
-                    sfd.RestoreDirectory = true;
-                    sfd.FileName = "*.acrk";
-                    sfd.DefaultExt = "acrk";
-                    sfd.Filter = "Acroni Keyboard (*.acrk)|*.acrk";
-                    if (sfd.ShowDialog() == DialogResult.OK)
-                        Share.User.SendToFile(sfd.FileName, true);                      
-                }
-                else
-                    Share.User.SendToFile();
+                Share.User.SendToFile();
                 ExportToWebSite();
             }
             else

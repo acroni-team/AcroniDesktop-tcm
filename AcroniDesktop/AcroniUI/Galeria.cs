@@ -289,13 +289,7 @@ namespace AcroniUI
                                     Form editarTeclado = null;
                                     Share.EditKeyboard = true;
                                     Share.Collection.CollectionName = keyBoardGallery.CollectionName;
-                                    if (keyboardToOpen.KeyboardType.Equals("Compacto"))
                                         editarTeclado = new Compacto();
-                                    else if (keyboardToOpen.KeyboardType.Equals("Tenkeyless"))
-                                        editarTeclado = new Tenkeyless();
-                                    else if (keyboardToOpen.KeyboardType.Equals(("FullSize")))
-                                        editarTeclado = new Fullsize();
-
                                     editarTeclado.Show();
                                     this.Close();
                                     break;

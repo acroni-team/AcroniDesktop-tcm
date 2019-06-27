@@ -38,6 +38,7 @@
             this.picBoxOpenTenkeyless = new System.Windows.Forms.PictureBox();
             this.btnOpenFullSize = new System.Windows.Forms.Panel();
             this.lblFullSize = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMax)).BeginInit();
             this.btnOpenCompacto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxCompacto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxOpenFullSize)).BeginInit();
@@ -52,7 +53,7 @@
             this.btnOpenCompacto.Controls.Add(this.lblCompacto);
             this.btnOpenCompacto.Controls.Add(this.picBoxCompacto);
             this.btnOpenCompacto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnOpenCompacto.Location = new System.Drawing.Point(320, 40);
+            this.btnOpenCompacto.Location = new System.Drawing.Point(320, 265);
             this.btnOpenCompacto.Name = "btnOpenCompacto";
             this.btnOpenCompacto.Size = new System.Drawing.Size(960, 227);
             this.btnOpenCompacto.TabIndex = 16;
@@ -62,11 +63,11 @@
             // 
             this.lblCompacto.AutoSize = true;
             this.lblCompacto.BackColor = System.Drawing.Color.Transparent;
-            this.lblCompacto.Font = new System.Drawing.Font("Qanelas ExtraBold", 33F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCompacto.Font = new System.Drawing.Font("Microsoft Sans Serif", 33F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompacto.ForeColor = System.Drawing.Color.White;
             this.lblCompacto.Location = new System.Drawing.Point(355, 84);
             this.lblCompacto.Name = "lblCompacto";
-            this.lblCompacto.Size = new System.Drawing.Size(233, 55);
+            this.lblCompacto.Size = new System.Drawing.Size(230, 52);
             this.lblCompacto.TabIndex = 5;
             this.lblCompacto.Text = "Compacto";
             this.lblCompacto.Click += new System.EventHandler(this.picBoxCompacto_Click);
@@ -105,20 +106,21 @@
             this.btnOpenTenkeyless.Controls.Add(this.lblTenkeyless);
             this.btnOpenTenkeyless.Controls.Add(this.picBoxOpenTenkeyless);
             this.btnOpenTenkeyless.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnOpenTenkeyless.Location = new System.Drawing.Point(320, 267);
+            this.btnOpenTenkeyless.Location = new System.Drawing.Point(320, 35);
             this.btnOpenTenkeyless.Name = "btnOpenTenkeyless";
             this.btnOpenTenkeyless.Size = new System.Drawing.Size(960, 227);
             this.btnOpenTenkeyless.TabIndex = 17;
+            this.btnOpenTenkeyless.Visible = false;
             // 
             // lblTenkeyless
             // 
             this.lblTenkeyless.AutoSize = true;
             this.lblTenkeyless.BackColor = System.Drawing.Color.Transparent;
-            this.lblTenkeyless.Font = new System.Drawing.Font("Qanelas ExtraBold", 33F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenkeyless.Font = new System.Drawing.Font("Microsoft Sans Serif", 33F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenkeyless.ForeColor = System.Drawing.Color.White;
             this.lblTenkeyless.Location = new System.Drawing.Point(351, 88);
             this.lblTenkeyless.Name = "lblTenkeyless";
-            this.lblTenkeyless.Size = new System.Drawing.Size(237, 55);
+            this.lblTenkeyless.Size = new System.Drawing.Size(254, 52);
             this.lblTenkeyless.TabIndex = 3;
             this.lblTenkeyless.Text = "Tenkeyless";
             // 
@@ -145,17 +147,18 @@
             this.btnOpenFullSize.Name = "btnOpenFullSize";
             this.btnOpenFullSize.Size = new System.Drawing.Size(960, 227);
             this.btnOpenFullSize.TabIndex = 18;
+            this.btnOpenFullSize.Visible = false;
             this.btnOpenFullSize.Click += new System.EventHandler(this.picBoxOpenFullSize_Click);
             // 
             // lblFullSize
             // 
             this.lblFullSize.AutoSize = true;
             this.lblFullSize.BackColor = System.Drawing.Color.Transparent;
-            this.lblFullSize.Font = new System.Drawing.Font("Qanelas ExtraBold", 33F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFullSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 33F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFullSize.ForeColor = System.Drawing.Color.White;
             this.lblFullSize.Location = new System.Drawing.Point(388, 96);
             this.lblFullSize.Name = "lblFullSize";
-            this.lblFullSize.Size = new System.Drawing.Size(168, 55);
+            this.lblFullSize.Size = new System.Drawing.Size(180, 52);
             this.lblFullSize.TabIndex = 1;
             this.lblFullSize.Text = "Fullsize";
             this.lblFullSize.Click += new System.EventHandler(this.picBoxOpenFullSize_Click);
@@ -169,11 +172,14 @@
             this.Controls.Add(this.btnOpenFullSize);
             this.Controls.Add(this.btnOpenTenkeyless);
             this.Controls.Add(this.btnOpenCompacto);
+            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "SelectKeyboard";
             this.Text = "SelecionarTeclado";
+            this.Controls.SetChildIndex(this.pnlArquivos, 0);
             this.Controls.SetChildIndex(this.btnOpenCompacto, 0);
             this.Controls.SetChildIndex(this.btnOpenTenkeyless, 0);
             this.Controls.SetChildIndex(this.btnOpenFullSize, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.btnMax)).EndInit();
             this.btnOpenCompacto.ResumeLayout(false);
             this.btnOpenCompacto.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxCompacto)).EndInit();

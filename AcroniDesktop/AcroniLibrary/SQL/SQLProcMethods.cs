@@ -35,11 +35,9 @@ namespace AcroniLibrary.SQL
                         using (SqlCommand comm = new SqlCommand(s, newConn))
                         {
                             comm.ExecuteNonQuery();
-                            MessageBox.Show($"Procedure func: {s}");
                         }
                     }catch (Exception)
                     {
-                        MessageBox.Show($"Procedure not func: {s}");
                     }
                 }
                 newConn.Close();

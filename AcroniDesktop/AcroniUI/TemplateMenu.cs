@@ -140,8 +140,8 @@ namespace AcroniUI
 
         protected virtual void btnSelectKeyboard_Click(object sender, EventArgs e)
         {
-            SelectKeyboard selectKeyboard = new SelectKeyboard();
-            selectKeyboard.ShowDialog();
+            SelectKeyboard k = new SelectKeyboard();
+            k.ShowDialog();
             this.Close();
         }
 

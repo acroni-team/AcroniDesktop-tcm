@@ -49,6 +49,7 @@
             this.btnEditarMinhaConta = new System.Windows.Forms.Button();
             this.btnSelectKeyboard = new System.Windows.Forms.Button();
             this.btnAbrirGaleria = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMax)).BeginInit();
             this.pnlAreaUsu.SuspendLayout();
             this.espacoArmazenamento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnConfig)).BeginInit();
@@ -74,7 +75,7 @@
             // 
             // lblNomeUsu
             // 
-            this.lblNomeUsu.Font = new System.Drawing.Font("Open Sans SemiBold", 12.3F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeUsu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.3F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomeUsu.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblNomeUsu.Location = new System.Drawing.Point(3, 110);
             this.lblNomeUsu.Name = "lblNomeUsu";
@@ -86,22 +87,22 @@
             // lblQtdDisponivel
             // 
             this.lblQtdDisponivel.AutoSize = true;
-            this.lblQtdDisponivel.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQtdDisponivel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQtdDisponivel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(116)))), ((int)(((byte)(122)))));
             this.lblQtdDisponivel.Location = new System.Drawing.Point(275, 169);
             this.lblQtdDisponivel.Name = "lblQtdDisponivel";
-            this.lblQtdDisponivel.Size = new System.Drawing.Size(13, 15);
+            this.lblQtdDisponivel.Size = new System.Drawing.Size(13, 13);
             this.lblQtdDisponivel.TabIndex = 9;
             this.lblQtdDisponivel.Text = "5";
             // 
             // lblQtdGasta
             // 
             this.lblQtdGasta.AutoSize = true;
-            this.lblQtdGasta.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQtdGasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQtdGasta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(116)))), ((int)(((byte)(122)))));
             this.lblQtdGasta.Location = new System.Drawing.Point(28, 168);
             this.lblQtdGasta.Name = "lblQtdGasta";
-            this.lblQtdGasta.Size = new System.Drawing.Size(13, 15);
+            this.lblQtdGasta.Size = new System.Drawing.Size(13, 13);
             this.lblQtdGasta.TabIndex = 8;
             this.lblQtdGasta.Text = "0";
             // 
@@ -199,7 +200,7 @@
             // lblPlanoUsu
             // 
             this.lblPlanoUsu.BackColor = System.Drawing.Color.Transparent;
-            this.lblPlanoUsu.Font = new System.Drawing.Font("Open Sans SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlanoUsu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlanoUsu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(118)))), ((int)(((byte)(125)))));
             this.lblPlanoUsu.Location = new System.Drawing.Point(3, 131);
             this.lblPlanoUsu.Name = "lblPlanoUsu";
@@ -227,7 +228,7 @@
             this.btnDesconectar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
             this.btnDesconectar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
             this.btnDesconectar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDesconectar.Font = new System.Drawing.Font("Open Sans SemiBold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDesconectar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDesconectar.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnDesconectar.Location = new System.Drawing.Point(42, 351);
             this.btnDesconectar.Name = "btnDesconectar";
@@ -244,7 +245,7 @@
             this.btnQuemSomos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
             this.btnQuemSomos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
             this.btnQuemSomos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuemSomos.Font = new System.Drawing.Font("Open Sans SemiBold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuemSomos.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuemSomos.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnQuemSomos.Location = new System.Drawing.Point(42, 284);
             this.btnQuemSomos.Name = "btnQuemSomos";
@@ -260,7 +261,7 @@
             this.btnEditarMinhaConta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
             this.btnEditarMinhaConta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
             this.btnEditarMinhaConta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditarMinhaConta.Font = new System.Drawing.Font("Open Sans SemiBold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarMinhaConta.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarMinhaConta.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnEditarMinhaConta.Location = new System.Drawing.Point(42, 218);
             this.btnEditarMinhaConta.Name = "btnEditarMinhaConta";
@@ -277,13 +278,13 @@
             this.btnSelectKeyboard.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
             this.btnSelectKeyboard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
             this.btnSelectKeyboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSelectKeyboard.Font = new System.Drawing.Font("Open Sans SemiBold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelectKeyboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSelectKeyboard.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnSelectKeyboard.Location = new System.Drawing.Point(42, 143);
             this.btnSelectKeyboard.Name = "btnSelectKeyboard";
             this.btnSelectKeyboard.Size = new System.Drawing.Size(235, 38);
             this.btnSelectKeyboard.TabIndex = 1;
-            this.btnSelectKeyboard.Text = "Escolher teclado";
+            this.btnSelectKeyboard.Text = "Selecionar teclado";
             this.btnSelectKeyboard.UseVisualStyleBackColor = true;
             this.btnSelectKeyboard.Click += new System.EventHandler(this.btnSelectKeyboard_Click);
             this.btnSelectKeyboard.MouseEnter += new System.EventHandler(this.CursorHand);
@@ -294,7 +295,7 @@
             this.btnAbrirGaleria.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
             this.btnAbrirGaleria.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
             this.btnAbrirGaleria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAbrirGaleria.Font = new System.Drawing.Font("Open Sans SemiBold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAbrirGaleria.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAbrirGaleria.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnAbrirGaleria.Location = new System.Drawing.Point(42, 70);
             this.btnAbrirGaleria.Name = "btnAbrirGaleria";
@@ -315,8 +316,10 @@
             this.Controls.Add(this.pnlAreaUsu);
             this.Name = "TemplateMenu";
             this.Opacity = 1D;
+            this.Controls.SetChildIndex(this.pnlArquivos, 0);
             this.Controls.SetChildIndex(this.pnlAreaUsu, 0);
             this.Controls.SetChildIndex(this.pnlOptions, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.btnMax)).EndInit();
             this.pnlAreaUsu.ResumeLayout(false);
             this.pnlAreaUsu.PerformLayout();
             this.espacoArmazenamento.ResumeLayout(false);

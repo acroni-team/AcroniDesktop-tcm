@@ -367,6 +367,7 @@ namespace AcroniUI.Custom
             this.btnSalvar.TabIndex = 13;
             this.btnSalvar.Text = "Salvar Teclado";
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // pnlCustomizingMenu
             // 
