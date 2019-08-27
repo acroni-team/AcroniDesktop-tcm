@@ -11,40 +11,6 @@ namespace AcroniLibrary.SQL
 {
     public class SQLProcMethods
     {
-
-        public static void createProceduresSelect()
-        {
-            SqlConnection newConn = new SqlConnection(SQLConnection.nome_conexao);
-            try
-            {
-                newConn.Open();
-            }
-            catch (Exception)
-            {
-                newConn.Close();
-                newConn.Dispose();
-                newConn = new SqlConnection(SQLConnection.nome_conexao.Replace("\\SQLEXPRESS", ""));
-                newConn.Open();
-            }
-            finally
-            {
-                foreach (String s in File.ReadAllText($@"{Application.StartupPath}/Procedures/SELECT_PROCEDURES.sql", Encoding.UTF8).Split(new String[] { "GO" }, StringSplitOptions.None))
-                {
-                    try
-                    {
-                        using (SqlCommand comm = new SqlCommand(s, newConn))
-                        {
-                            comm.ExecuteNonQuery();
-                        }
-                    }catch (Exception)
-                    {
-                    }
-                }
-                newConn.Close();
-                newConn.Dispose();
-            }
-        }
-
         #region Procedures Específicas
 
         public static byte[] SELECT_UserImage()
@@ -185,6 +151,7 @@ namespace AcroniLibrary.SQL
             {
                 newConn.Close();
                 newConn.Dispose();
+                MessageBox.Show(SelectCommand);
                 newConn = new SqlConnection(SQLConnection.nome_conexao.Replace("\\SQLEXPRESS", ""));
                 newConn.Open();
             }

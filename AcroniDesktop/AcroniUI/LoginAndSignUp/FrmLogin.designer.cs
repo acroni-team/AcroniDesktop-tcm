@@ -443,8 +443,9 @@
             // 
             // alblSenha
             // 
-            this.alblSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(61)))));
+            this.alblSenha.AutoEllipsis = true;
             resources.ApplyResources(this.alblSenha, "alblSenha");
+            this.alblSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(61)))));
             this.alblSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(118)))), ((int)(((byte)(125)))));
             this.alblSenha.Name = "alblSenha";
             // 
@@ -523,6 +524,7 @@
             this.txtCadPass.Name = "txtCadPass";
             this.txtCadPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtCadPass.OnValueChanged += new System.EventHandler(this.txtBoxesLogin_OnValueChanged);
+            this.txtCadPass.Leave += new System.EventHandler(this.OnLeaveValidation);
             // 
             // apnlNome
             // 

@@ -25,7 +25,6 @@ namespace AcroniUI.LoginAndSignUp
         public FrmLogin()
         {
             InitializeComponent();
-            SQLProcMethods.createProceduresSelect();
         }
 
         #region Ações dos botões do menuStrip
@@ -152,6 +151,9 @@ namespace AcroniUI.LoginAndSignUp
         {
             //timerSlash.Enabled = true;
             //timerSlash.Start();
+            if (String.IsNullOrEmpty(txtSenha.Text) || String.IsNullOrEmpty(txtEntrar.Text))
+                return;
+
             Object[] resposta = SQLProcMethods.SELECT_UserPartialInfo(txtEntrar.Text).ToArray();
             if (resposta != null)
             {
@@ -300,8 +302,6 @@ namespace AcroniUI.LoginAndSignUp
                                 {
                                     SQLConnection.nome_usuario = txtCadApelido.Text;
                                     Share.User = new User();
-                                    //(new AcroniControls.AcroniMessageBoxConfirm("Cadastro concluido!")).Show();
-                                    // Checa se existe o arquivo, e se não existe, cria - o
                                     if (!File.Exists($@"{Application.StartupPath}\Users\{txtCadApelido.Text}.acr"))
                                     {
                                         using (FileStream savearchive = new FileStream($@"{Application.StartupPath}\Users\{txtCadApelido.Text}.acr", FileMode.OpenOrCreate))
@@ -358,12 +358,13 @@ namespace AcroniUI.LoginAndSignUp
 
         private void OnLeaveValidation(object sender, EventArgs e)
         {
-            if (((Bunifu.Framework.UI.BunifuMaterialTextbox)sender).Equals(txtCadApelido))
+            Bunifu.Framework.UI.BunifuMaterialTextbox textbox = ((Bunifu.Framework.UI.BunifuMaterialTextbox)sender);
+            if (textbox.Equals(txtCadApelido))
             {
                 ChangeReferencesOnError(ref alblApelido, Color.FromArgb(98, 118, 125), ref apnlApelido, ref txtCadUser, "Apelido");
                 apnlApelido.CreateGraphics().Clear(Color.FromArgb(44, 47, 55));
             }
-            else if (((Bunifu.Framework.UI.BunifuMaterialTextbox)sender).Equals(txtCadEmail))
+            else if (textbox.Equals(txtCadEmail))
             {
                 if (!Regex.IsMatch(txtCadEmail.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"))
                     ChangeReferencesOnError(ref alblEmail, Color.Firebrick, ref apnlEmail, ref txtCadEmail, $"O email está com formato incorreto!");
@@ -374,7 +375,7 @@ namespace AcroniUI.LoginAndSignUp
                     apnlEmail.CreateGraphics().Clear(Color.FromArgb(44, 47, 55));
                 }
             }
-            else if (((Bunifu.Framework.UI.BunifuMaterialTextbox)sender).Equals(txtCadCPF))
+            else if (textbox.Equals(txtCadCPF))
             {
                 if (!Validator.IsCPF(txtCadCPF.Text))
                     ChangeReferencesOnError(ref alblCPF, Color.Firebrick, ref apnlCPF, ref txtCadCPF, $"O CPF não existe!!");
@@ -383,6 +384,22 @@ namespace AcroniUI.LoginAndSignUp
                     ChangeReferencesOnError(ref alblCPF, Color.FromArgb(98, 118, 125), ref apnlCPF, ref txtCadCPF, "CPF");
                     apnlCPF.CreateGraphics().Clear(Color.FromArgb(44, 47, 55));
                 }
+
+            }else if (textbox.Equals(txtCadPass))
+            {
+                PasswordType passwordStrengh = Validator.CheckPasswordLevel(txtCadPass.Text);
+                if (passwordStrengh.Equals(PasswordType.VERY_WEAK))
+                    ChangeReferencesOnError(ref alblSenha, Color.Firebrick, ref apnlCadSenha, ref txtCadPass, $"A senha é MUITO fraca!");
+
+                else if (passwordStrengh.Equals(PasswordType.WEAK))
+                    ChangeReferencesOnError(ref alblSenha, Color.Orange, ref apnlCadSenha, ref txtCadPass, $"A senha é fraca!");
+
+                else if (passwordStrengh.Equals(PasswordType.OK))
+                    ChangeReferencesOnError(ref alblSenha, Color.Yellow, ref apnlCadSenha, ref txtCadPass, $"Dá pra melhorar!");
+
+                else if (passwordStrengh.Equals(PasswordType.STRONG))
+                    ChangeReferencesOnError(ref alblSenha, Color.Violet, ref apnlCadSenha, ref txtCadPass, $"Boa senha!!");
+
             }
 
         }

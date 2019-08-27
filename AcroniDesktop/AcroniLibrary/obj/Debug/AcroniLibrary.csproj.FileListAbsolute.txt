@@ -11,7 +11,6 @@ E:\Desktop\c\AcroniDesktop\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.c
 E:\Desktop\c\AcroniDesktop\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.csproj.CopyComplete
 E:\Desktop\c\AcroniDesktop\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.dll
 E:\Desktop\c\AcroniDesktop\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.pdb
-<<<<<<< HEAD
 C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniLibrary\bin\Debug\AcroniLibrary.dll
 C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniLibrary\bin\Debug\AcroniLibrary.pdb
 C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniLibrary\bin\Debug\Bunifu_UI_v1.52.dll
@@ -20,5 +19,11 @@ C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniLibrary\obj\De
 C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.csproj.CopyComplete
 C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.dll
 C:\Users\gui_m\Documents\GitHub\AcroniDesktop\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.pdb
-=======
->>>>>>> b259a894d1746191c4e9fc485a4bb970676b7502
+C:\Users\gui_m\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniLibrary\bin\Debug\AcroniLibrary.dll
+C:\Users\gui_m\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniLibrary\bin\Debug\AcroniLibrary.pdb
+C:\Users\gui_m\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniLibrary\bin\Debug\Bunifu_UI_v1.52.dll
+C:\Users\gui_m\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.csproj.CoreCompileInputs.cache
+C:\Users\gui_m\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.csproj.CopyComplete
+C:\Users\gui_m\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.dll
+C:\Users\gui_m\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.pdb
+C:\Users\gui_m\Documents\GitHub\AcroniDesktop-tcm\AcroniDesktop\AcroniLibrary\obj\Debug\AcroniLibrary.csprojAssemblyReference.cache
