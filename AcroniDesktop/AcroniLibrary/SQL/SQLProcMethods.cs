@@ -11,11 +11,17 @@ namespace AcroniLibrary.SQL
 {
     public class SQLProcMethods
     {
+        private static byte[] image;
         #region Procedures Específicas
 
         public static byte[] SELECT_UserImage()
         {
             return (byte[])SELECT($"EXEC usp_selUserImage @usuario='{SQLConnection.nome_usuario}'")[0];
+        }
+
+        public static List<Object> SELECT_IdColecao(String nick_colecao, int id_cliente)
+        {
+            return SELECT($"EXEC usp_selIdColecao @nick_colecao='{nick_colecao}',@id_cliente={id_cliente}");
         }
 
         public static List<Object> SELECT_UserPartialInfo(String usuario)
@@ -58,28 +64,32 @@ namespace AcroniLibrary.SQL
             return DoInsertUpdateDelete($"EXEC usp_updSenhaUsuario @nova_senha='{senha}',@email='{email}'");
         }
 
-        public static int UPDATE_Colecao(String nick_colecao, int id_cliente)
+        public static int UPDATE_Colecao(String nick_colecao, int id_cliente, int id_colecao)
         {
-            return DoInsertUpdateDelete($"EXEC usp_updColecao @nick_colecao='{nick_colecao}',@id_cliente={id_cliente}");
+            return DoInsertUpdateDelete($"EXEC usp_updColecao @nick_colecao='{nick_colecao}',@id_cliente={id_cliente},@id_colecao={id_colecao}");
         }
 
         public static int UPDATE_ImgCliente(byte[] img, int id_cliente)
         {
-            return DoInsertUpdateDelete($"EXEC usp_updImagemCliente @img={img},@id_cliente={id_cliente}");
+            image = img;
+            return DoInsertUpdateDelete($"EXEC usp_updImagemCliente @img=@newimage,@id_cliente={id_cliente}");
         }
 
         public static int UPDATE_ImgTecladoCustomizado(byte[] img, int id_cliente, String nickname_teclado)
         {
-            return DoInsertUpdateDelete($"EXEC usp_updImagemTecladoCustomizado @nova_imagem={img},@id_cliente={id_cliente},@nickname_teclado='{nickname_teclado}'");
+            image = img;
+            return DoInsertUpdateDelete($"EXEC usp_updImagemTecladoCustomizado @nova_imagem=@newimage,@id_cliente={id_cliente},@nickname_teclado='{nickname_teclado}'");
         }
 
         public static int UPDATE_ImgColecao(byte[] img, int id_cliente, String nickname_colecao)
         {
-            return DoInsertUpdateDelete($"EXEC usp_updImagemColecao @nova_img={img},@id_cliente={id_cliente},@nick_colecao='{nickname_colecao}'");
+            image = img;
+            return DoInsertUpdateDelete($"EXEC usp_updImagemColecao @nova_img=@newimage,@id_cliente={id_cliente},@nick_colecao='{nickname_colecao}'");
         }
 
-        public static int INSERT_CadastroCliente(String nome, String usuario, String senha, String email, String cpf)        {
-            String SQLCommand = $"EXEC usp_insCadTblCliente @nome='{nome.Replace(' ','-')}',@usuario='{usuario}',@senha='{senha}',@email='{email}',@cpf='{cpf}'";
+        public static int INSERT_CadastroCliente(String nome, String usuario, String senha, String email, String cpf)
+        {
+            String SQLCommand = $"EXEC usp_insCadTblCliente @nome='{nome.Replace(' ', '-')}',@usuario='{usuario}',@senha='{senha}',@email='{email}',@cpf='{cpf}'";
             int ret = 0;
             SqlConnection newConn = new SqlConnection(SQLConnection.nome_conexao);
             try
@@ -100,7 +110,7 @@ namespace AcroniLibrary.SQL
                     String[] parameters = SQLCommand.Split(new char[] { ' ', ',', '=' });
                     for (int i = 2; i < parameters.Length - 1; i += 2)
                     {
-                        newComm.Parameters.AddWithValue(parameters[i], parameters[i+1]);
+                        newComm.Parameters.AddWithValue(parameters[i], parameters[i + 1]);
                     }
                     ret = newComm.ExecuteNonQuery();
                 }
@@ -110,16 +120,17 @@ namespace AcroniLibrary.SQL
             return ret;
         }
 
-        public static int INSERT_TecladoCustomizado(int id_cli, byte[] img, String nickname_colecao, String nickname_teclado,String preco)
+        public static int INSERT_TecladoCustomizado(int id_cli, byte[] img, String nickname_colecao, String nickname_teclado, Double preco)
         {
-            return DoInsertUpdateDelete($"EXEC usp_insTecladoCustomizado @id_cli={id_cli},@imagem_teclado={img},@nickname_colecao='{nickname_colecao}',@nickname_teclado='{nickname_teclado}',@preco='{preco}'");
+            image = img;
+            return DoInsertUpdateDelete($"EXEC usp_insTecladoCustomizado @id_cli={id_cli},@nickname_colecao='{nickname_colecao}',@nickname_teclado='{nickname_teclado}',@preco={preco},@imagem_teclado=@newimage");
         }
 
         public static int INSERT_Colecao(int id_cliente, String nickname_colecao, byte[] img)
         {
-            return DoInsertUpdateDelete($"EXEC usp_insColecao @id_cliente={Share.User.ID},@nickname_colecao='{nickname_colecao}',@img={img}");
+            image = img;
+            return DoInsertUpdateDelete($"EXEC usp_insColecao @id_cliente={Share.User.ID},@nickname_colecao='{nickname_colecao}',@img=@newimage");
         }
-
         public static int DELETE_TecladosCustomizadosFrom(int id_cliente)
         {
             return DoInsertUpdateDelete($"EXEC usp_delTecladoCustomizado @id={id_cliente}");
@@ -159,14 +170,14 @@ namespace AcroniLibrary.SQL
             {
                 using (SqlCommand newComm = new SqlCommand(SelectCommand, newConn))
                 {
-                    String[] parameters = SelectCommand.Split(new char[] {' ',','});
-                    for (int i = 2; i < parameters.Length - 1; i+=2)
+                    String[] parameters = SelectCommand.Split(new char[] { ' ', ',' });
+                    for (int i = 2; i < parameters.Length - 1; i += 2)
                     {
                         String[] eq = parameters[i].Split('=');
-                        newComm.Parameters.AddWithValue(eq[0],eq[1]);
+                        newComm.Parameters.AddWithValue(eq[0], eq[1]);
                     }
                     using (SqlDataReader reader = newComm.ExecuteReader())
-                    {   
+                    {
                         reader.Read();
                         if (reader.HasRows)
                         {
@@ -204,7 +215,7 @@ namespace AcroniLibrary.SQL
                     for (int i = 2; i < parameters.Length - 1; i += 2)
                     {
                         String[] eq = parameters[i].Split('=');
-                        newComm.Parameters.AddWithValue(eq[0], (eq[0].Contains("nome")?eq[1].Replace('-',' '):eq[1]));
+                        newComm.Parameters.AddWithValue(eq[0], (eq[0].Contains("nome") ? eq[1].Replace('-', ' ') : eq[1]));
                     }
                     using (SqlDataAdapter reader = new SqlDataAdapter(newComm))
                     {
@@ -236,12 +247,21 @@ namespace AcroniLibrary.SQL
             {
                 using (SqlCommand newComm = new SqlCommand(SQLCommand, newConn))
                 {
-                    String[] parameters = SQLCommand.Split(new char[] { ' ', ',', '='});
+                    String[] parameters = SQLCommand.Split(new char[] { ' ', ',', '=' });
                     for (int i = 2; i < parameters.Length - 1; i += 2)
                     {
-                        newComm.Parameters.AddWithValue(parameters[i], parameters[i+1]);
+                        newComm.Parameters.AddWithValue(parameters[i], parameters[i + 1]);
                     }
-                    ret = newComm.ExecuteNonQuery();
+                    try
+                    {
+                        if (newComm.CommandText.Contains("@newimage"))
+                        {
+                            newComm.Parameters.AddWithValue("@newimage", image);
+                        }
+                        ret = newComm.ExecuteNonQuery();
+                    }
+                    catch (Exception e) { MessageBox.Show(e.Message); }
+
                 }
                 newConn.Close();
                 newConn.Dispose();
@@ -249,5 +269,6 @@ namespace AcroniLibrary.SQL
             return ret;
         }
         #endregion
+
     }
 }

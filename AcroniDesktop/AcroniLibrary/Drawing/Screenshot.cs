@@ -10,11 +10,11 @@ namespace AcroniLibrary.Drawing
 {
     public class Screenshot
     {
-        public static Bitmap TakeSnapshot(Control ctl)
+        public static Bitmap TakeSnapshot(Control ctl,Control ctl2)
         {
-            Bitmap bmp = new Bitmap(ctl.Size.Width, ctl.Size.Height);
+            Bitmap bmp = new Bitmap(ctl2.Size.Width, ctl2.Size.Height);
             Graphics g = Graphics.FromImage(bmp);
-            g.CopyFromScreen(ctl.PointToScreen(ctl.ClientRectangle.Location), new Point(0, 0), ctl.ClientRectangle.Size);
+            g.CopyFromScreen(ctl2.PointToScreen(ctl2.ClientRectangle.Location), new Point(-70, -70), ctl2.ClientRectangle.Size);
             return bmp;
         }
     }

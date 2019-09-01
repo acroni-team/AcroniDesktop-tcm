@@ -190,7 +190,7 @@ namespace AcroniUI
                     newCollection.CollectionColor = Color.DimGray;
 
                     Share.User.UserCollections.Add(newCollection);
-
+                    
                     Share.Collection.CollectionName = newCollection.CollectionName;
 
                     AcroniControls.CollectionUI collectionUi = new AcroniControls.CollectionUI();
@@ -335,7 +335,8 @@ namespace AcroniUI
                                             collection.CollectionColor = selectColor.SettedColor;
                                         if (!string.IsNullOrEmpty(selectColor.CollectionName))
                                         {
-                                            SQLProcMethods.UPDATE_Colecao(selectColor.CollectionName,Share.User.ID);
+                                            List<Object> id = SQLProcMethods.SELECT_IdColecao(collection.CollectionName, Share.User.ID);
+                                            SQLProcMethods.UPDATE_Colecao(selectColor.CollectionName, Share.User.ID, (int)id[0]) ;
                                             collection.CollectionName = selectColor.CollectionName;
                                         }
                                         Share.User.SendToFile();

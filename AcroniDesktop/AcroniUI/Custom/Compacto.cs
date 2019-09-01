@@ -1220,11 +1220,7 @@ namespace AcroniUI.Custom
             keyboard.BackgroundImage = picBoxKeyboardBackground.Image;
             keyboard.BackgroundColor = picBoxKeyboardBackground.BackColor;
             keyboard.BackgroundModeSize = picBoxKeyboardBackground.SizeMode;
-            Bitmap keyboardImage = Screenshot.TakeSnapshot(pnlWithKeycaps);
-            keyboard.KeyboardImage = keyboardImage;
-
-
-
+            keyboard.KeyboardImage = Screenshot.TakeSnapshot(picBoxKeyboardBackground,pnlWithKeycaps) ;
             string text = "";
             Color backcolor = Color.Empty;
             Color forecolor = Color.Empty;
@@ -1293,7 +1289,8 @@ namespace AcroniUI.Custom
         private void ExportToWebSite()
         {
             bool alreadyExistsThisKeyboard = false;
-            byte[] img = ImageConvert.ImageToByteArray(Screenshot.TakeSnapshot(pnlWithKeycaps), ImageFormat.Bmp);
+            byte[]img = (Byte[])new ImageConverter().ConvertTo(Screenshot.TakeSnapshot(pnlWithKeycaps,picBoxKeyboardBackground) , typeof(Byte[]));
+
             try
             {
                 DataTable return_value = SQLProcMethods.SELECT_NicknameTelcadoFrom(Share.User.ID);
@@ -1309,7 +1306,7 @@ namespace AcroniUI.Custom
                     }
                 }
                 if (!alreadyExistsThisKeyboard)
-                    SQLProcMethods.INSERT_TecladoCustomizado(Share.User.ID, img, Share.Collection.CollectionName, Share.Keyboard.NickName, "R$ 250.00");
+                    SQLProcMethods.INSERT_TecladoCustomizado(Share.User.ID, img, Share.Collection.CollectionName, Share.Keyboard.NickName, 250.00);
                 else
                     SQLProcMethods.UPDATE_ImgTecladoCustomizado(img, Share.User.ID, Share.Keyboard.NickName);
             }
@@ -1324,6 +1321,7 @@ namespace AcroniUI.Custom
 
         private void picBoxKeyboardBackground_Click(object sender, EventArgs e)
         {
+            picBoxKeyboardBackground.BackColor = Color;
             base.generalClickCancel(sender, e);
         }
 

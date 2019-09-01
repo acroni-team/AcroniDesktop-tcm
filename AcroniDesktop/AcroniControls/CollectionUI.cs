@@ -45,9 +45,8 @@ namespace AcroniControls
         {
             Bitmap collectionPicture = new Bitmap(this.Width, this.Height);
             this.DrawToBitmap(collectionPicture, this.ClientRectangle);
-            byte[] img = ImageConvert.ImageToByteArray(collectionPicture, ImageFormat.Bmp);
+            byte[] img = (Byte[])new ImageConverter().ConvertTo(collectionPicture, typeof(Byte[]));
             bool alreadyExistsThisCollection = false;
-
             try
             {
                 DataTable fetch = SQLProcMethods.SELECT_NicknameColecaoFrom(Share.User.ID);
@@ -64,8 +63,9 @@ namespace AcroniControls
                 else
                     SQLProcMethods.UPDATE_ImgColecao(img,Share.User.ID,Share.Collection.CollectionName);
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                MessageBox.Show(e.Message);
             }
         }
     }

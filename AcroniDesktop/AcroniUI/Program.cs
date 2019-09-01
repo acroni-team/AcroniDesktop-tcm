@@ -17,6 +17,7 @@ namespace AcroniUI
         [STAThread]
         static void Main()
         {
+            System.Diagnostics.Process.GetCurrentProcess().PriorityClass = System.Diagnostics.ProcessPriorityClass.RealTime;
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Thread.CurrentThread.SetApartmentState(ApartmentState.Unknown);
