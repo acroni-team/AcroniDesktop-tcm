@@ -20,7 +20,8 @@ namespace AcroniUI.LoginAndSignUp
         }
 
         private String email_public, senha_public, usuario_public, nome_public,tipo_public, String_de_confirmacao = "",cpf_public = "";
-        
+        Thread t_splash;
+
         public static bool atualizacao_SUCCESS;
 
         #region Construtor em mudança de senha
@@ -49,7 +50,6 @@ namespace AcroniUI.LoginAndSignUp
         #endregion
 
         #region Construtor em cadastro
-        Thread t_splash;
         public FrmConfirmarEmail(String nome, String usuario, String senha, String email, String cpf, String tipo)
         {
             t_splash = new Thread(new ThreadStart(Start_SplashScreen));

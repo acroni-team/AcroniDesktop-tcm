@@ -9,6 +9,7 @@ using System.Drawing;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -20,10 +21,15 @@ namespace AcroniUI
         int countHeightCollection = 0;
         int countWidthKeyboard = 0;
         bool selectMode;
-
+        void Splash()
+        {
+            Application.Run(new Splash());
+        }
         public Galeria(bool selectMode)
         {
             InitializeComponent();
+            Thread spl = new Thread(new ThreadStart(Splash));
+            spl.Start();
             WelcomeUser();
             this.selectMode = selectMode;
 
@@ -56,6 +62,7 @@ namespace AcroniUI
                 }
 
             #endregion
+            spl.Abort();
         }
 
         public void WelcomeUser() => lblNomeUsuBoasVindas.Text = SQLConnection.nome_usuario + "!";

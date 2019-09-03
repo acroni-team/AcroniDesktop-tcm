@@ -26,6 +26,7 @@ namespace AcroniUI
         public TemplateMenu()
         {
             InitializeComponent();
+
             UpdateKeyboardQuantity();
             Bunifu.Framework.UI.BunifuElipse ellipse = new Bunifu.Framework.UI.BunifuElipse();
             foreach (Control c in pnlOptions.Controls)
@@ -34,9 +35,17 @@ namespace AcroniUI
             }
             ImgUsu.SizeMode = PictureBoxSizeMode.Zoom;
             trocar_nome_usuario($"{SQLConnection.nome_usuario}");
-            trocar_imagem_usuario(selecionar_imagem_cliente());
+
+            if (isLoaded)
+                trocar_imagem_usuario(cliente);
+            else
+                trocar_imagem_usuario(selecionar_imagem_cliente());
+            isLoaded = true;
 
         }
+        static bool isLoaded = false;
+        static Image cliente;
+
         #region Obter informações do cliente pelo banco
         public void trocar_nome_usuario(String usuario) => lblNomeUsu.Text = SQLConnection.nome_usuario;
 
@@ -68,7 +77,7 @@ namespace AcroniUI
                             c.Visible = true;
                         i++;
                     }
-                    SQLProcMethods.UPDATE_QtdeTeclados();
+                    //Aqui se insere SqlProcMethods.UPDATE_QtdeTeclados();
                 }
         }
 
@@ -84,6 +93,7 @@ namespace AcroniUI
                     MemoryStream leitor_memoria = new MemoryStream(img);
                     imagem_retorno = Image.FromStream(leitor_memoria);
                 }
+                cliente = imagem_retorno;
                 return imagem_retorno;
             }
             catch (Exception)
@@ -99,7 +109,6 @@ namespace AcroniUI
             Control Hand = (Control)sender;
             Hand.Cursor = Cursors.Hand;
         }
-
         private void ImgUsu_Paint(object sender, PaintEventArgs e)
         {
             using (GraphicsPath ellipse = new GraphicsPath())
@@ -128,14 +137,6 @@ namespace AcroniUI
             galeria.Show();
             this.Close();
 
-        }
-        private void fechaForms()
-        {
-            for (int i = 0; i < Application.OpenForms.Count; i++)
-            {
-                if (!Application.OpenForms[i].Name.Equals("FrmLogin"))
-                    Application.OpenForms[i].Close();
-            }
         }
 
         protected virtual void btnSelectKeyboard_Click(object sender, EventArgs e)

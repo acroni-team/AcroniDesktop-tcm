@@ -12,8 +12,8 @@ namespace AcroniLibrary.SQL
     public class SQLProcMethods
     {
         private static byte[] image;
-        #region Procedures Específicas
 
+        #region Procedures Específicas
         public static byte[] SELECT_UserImage()
         {
             return (byte[])SELECT($"EXEC usp_selUserImage @usuario='{SQLConnection.nome_usuario}'")[0];
@@ -162,7 +162,6 @@ namespace AcroniLibrary.SQL
             {
                 newConn.Close();
                 newConn.Dispose();
-                MessageBox.Show(SelectCommand);
                 newConn = new SqlConnection(SQLConnection.nome_conexao.Replace("\\SQLEXPRESS", ""));
                 newConn.Open();
             }

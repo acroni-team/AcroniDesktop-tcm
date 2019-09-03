@@ -147,14 +147,22 @@ namespace AcroniUI.LoginAndSignUp
 
         SelectKeyboard selecionarTeclado;
 
+        void Splash()
+        {
+            Application.Run(new Splash());
+        }
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            //timerSlash.Enabled = true;
-            //timerSlash.Start();
+            btnEntrar.Enabled = false;
+
             if (String.IsNullOrEmpty(txtSenha.Text) || String.IsNullOrEmpty(txtEntrar.Text))
                 return;
 
+            Thread spl = new Thread(new ThreadStart(Splash));
+            spl.Start();
+
             Object[] resposta = SQLProcMethods.SELECT_UserPartialInfo(txtEntrar.Text).ToArray();
+
             if (resposta != null)
             {
                 if (resposta[0].ToString().Equals(txtSenha.Text))
@@ -169,14 +177,19 @@ namespace AcroniUI.LoginAndSignUp
                     if (resposta[1].ToString() == "p")
                         Share.User.isPremiumAccount = true;
                     Share.User.SendToFile();
+                    spl.Abort();
+                    btnEntrar.Enabled = true;
                     Hide();
-                    timerSlash.Stop();
                     selecionarTeclado = new SelectKeyboard();
                     selecionarTeclado.ShowDialog();
                 }
                 else showLoginErrorlabel("A senha está incorreta.");
             }
             else showLoginErrorlabel("Este usuário não existe.");
+
+            if(spl.IsAlive)
+                spl.Abort();
+            btnEntrar.Enabled = true;
         }
 
         private void lblCadastrar_Click(object sender, EventArgs e)
@@ -312,7 +325,7 @@ namespace AcroniUI.LoginAndSignUp
                                     }
                                     pnlCadastro.Location = new Point(800, 0);
                                     (new SelectKeyboard()).Show();
-                                    this.Hide();
+                                    Hide();
                                 }
                                 else
                                 {
@@ -399,7 +412,6 @@ namespace AcroniUI.LoginAndSignUp
 
                 else if (passwordStrengh.Equals(PasswordType.STRONG))
                     ChangeReferencesOnError(ref alblSenha, Color.Violet, ref apnlCadSenha, ref txtCadPass, $"Boa senha!!");
-
             }
 
         }
@@ -423,7 +435,6 @@ namespace AcroniUI.LoginAndSignUp
         {
             FadeIn();
         }
-
         private void alblAcroni_Click(object sender, EventArgs e)
         {
             txtCadApelido.Text = "teste";

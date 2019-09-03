@@ -13,6 +13,7 @@ using System.Drawing.Imaging;
 using Bunifu.Framework.UI;
 using AcroniLibrary.SQL;
 using System.Data;
+using System.Threading;
 
 namespace AcroniUI.Custom
 {
@@ -1126,12 +1127,13 @@ namespace AcroniUI.Custom
 
                         while (selectGallery.Visible)
                         {
-                            await Task.Delay(100);
+                            await Task.Delay(10);
                         }
 
                         if (!String.IsNullOrEmpty(Share.Collection.CollectionName))
                         {
                             setPropriedadesTeclado();
+                            SQLProcMethods.UPDATE_QtdeTeclados();
                         }
                     }
                 }
@@ -1148,50 +1150,10 @@ namespace AcroniUI.Custom
                         break;
                     }
                 }
-
             }
 
             if ((!String.IsNullOrEmpty(Share.Collection.CollectionName) && !String.IsNullOrEmpty(Share.KeyboardNameNotCreated)) || Share.EditKeyboard)
             {
-                //using (SqlConnection conn = new SqlConnection(SQLConnection.nome_conexao))
-                //{
-                //    conn.Open();
-
-                //    using (SqlCommand com = new SqlCommand($"select quantidade_teclados from tblCliente", conn))
-                //    {
-                //        using (SqlDataReader sd = com.ExecuteReader())
-                //        {
-                //            sd.Read();
-                //            if ((int)sd[0] >= 5)
-                //            {
-                //                AcroniMessageBoxConfirm mb = new AcroniMessageBoxConfirm("Sinto muito, mas você atingiu o limite de teclados que você " +
-                //                    "pode criar usando essa conta.", "Atualize sua conta agora mesmo para uma conta Premium");
-                //                mb.ShowDialog();
-                //            }
-                //        }
-                //    }
-                //}
-
-                //using (SqlConnection conn = new SqlConnection(SQLConnection.nome_conexao))
-                //{
-                //    conn.Open();
-                //    using (SqlCommand cmm = new SqlCommand("select quantidade_teclados from tblCliente", conn))
-                //    {
-                //        using (SqlDataReader sdr = cmm.ExecuteReader())
-                //        {
-                //            sdr.Read();
-                //            if ((int)sdr[0] <= 5)
-                //            {
-                //                goto aGotoExample;
-                //            }
-                //        }
-                //        aGotoExample:
-                //        using (SqlCommand comm = new SqlCommand($"update tblCliente set quantidade_teclados = {Share.User.KeyboardQuantity} where usuario like '{SQLConnection.nome_usuario}'", conn))
-                //        {
-                //            comm.ExecuteNonQuery();
-                //        }
-                //    }
-                //}
                 AtualizarLabels();
                 ++Share.User.KeyboardQuantity;
                 AcroniMessageBoxConfirm success = new AcroniMessageBoxConfirm("Teclado adicionado/salvo com sucesso!", "Ele se encontrará na coleção selecionada, em sua galeria :D");
@@ -1336,5 +1298,6 @@ namespace AcroniUI.Custom
         }
 
         #endregion
+
     }
 }
