@@ -50,7 +50,7 @@ namespace AcroniUI.Custom
 
         #region Implementações do menu de arquivos
         private bool personalSave = false;
-        private int isFirstSave = 0; 
+        private int isFirstSave = 0;
         protected override void lblSalvar_Click(object sender, EventArgs e)
         {
             if (isFirstSave++ == 0)
@@ -106,7 +106,7 @@ namespace AcroniUI.Custom
                 apnlCustomOptionsLeft.Location = new Point(this.Width * 2 / 3, 0);
                 apnlCustomOptionsRight.Location = new Point(this.Width * 2 / 3, 0);
             }
-            
+
         }
 
         #endregion
@@ -365,14 +365,14 @@ namespace AcroniUI.Custom
                     if (Color != Color.FromArgb(26, 26, 26))
                     {
                         lblPaintedKeycaps.Text = paintedKeycapsCounter + "";
-                        if (keybutton == lblCb14sExtensao || keybutton == lblCb14s)
+                        if (/*keybutton == lblCb14sExtensao || */keybutton == lblCc14s)
                         {
-                            lblCb14s.Parent.BackgroundImage = null;
-                            lblCb14sExtensao.Parent.BackgroundImage = null;
-                            lblCb14sExtensao.BackColor = Color;
-                            lblCb14sExtensao.Parent.BackColor = Color.FromArgb(90, Color);
-                            lblCb14s.BackColor = Color;
-                            lblCb14s.Parent.BackColor = Color.FromArgb(90, Color);
+                            lblCc14s.Parent.BackgroundImage = null;
+                            //lblCb14sExtensao.Parent.BackgroundImage = null;
+                            //lblCb14sExtensao.BackColor = Color;
+                            //lblCb14sExtensao.Parent.BackColor = Color.FromArgb(90, Color);
+                            lblCc14s.BackColor = Color;
+                            lblCc14s.Parent.BackColor = Color.FromArgb(90, Color);
                         }
                     }
                     else
@@ -380,14 +380,14 @@ namespace AcroniUI.Custom
                         if (paintedKeycapsCounter > 0)
                             paintedKeycapsCounter--;
                         lblPaintedKeycaps.Text = paintedKeycapsCounter + "";
-                        if (keybutton == lblCb14sExtensao || keybutton == lblCb14s)
+                        if (/*keybutton == lblCb14sExtensao || */keybutton == lblCc14s)
                         {
-                            lblCb14s.Parent.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Images\Teclas\lblCb14s.png");
-                            lblCb14sExtensao.Parent.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Images\Teclas\lblCb14sExtensao.png");
-                            lblCb14s.BackColor = Color;
-                            lblCb14sExtensao.BackColor = Color;
-                            lblCb14sExtensao.Parent.BackColor = Color.Black;
-                            lblCb14s.Parent.BackColor = Color.Black;
+                            lblCc14s.Parent.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Images\Teclas\lblCb14s.png");
+                            //lblCb14sExtensao.Parent.BackgroundImage = Image.FromFile($@"{Application.StartupPath}\Images\Teclas\lblCb14sExtensao.png");
+                            lblCc14s.BackColor = Color;
+                            //lblCb14sExtensao.BackColor = Color;
+                            //lblCb14sExtensao.Parent.BackColor = Color.Black;
+                            lblCc14s.Parent.BackColor = Color.Black;
 
                         }
                         if (keybutton.Size.Equals(new Size(38, 39)))
@@ -440,7 +440,7 @@ namespace AcroniUI.Custom
                     && keybutton != lblCa12)
                     ktm = new KeycapTextIconModule(false, false, keybutton.Text);
 
-                else if (keybutton.Name.Contains("Ca") || keybutton == lblCb12 || keybutton == lblCc12 || keybutton == lblCd2 || keybutton == lblCd10 || keybutton == lblCd11 || keybutton == lblCd12)
+                else if (keybutton.Name.Contains("Ca") || keybutton == lblCb12 ||/* keybutton == lblCc12 ||*/ keybutton == lblCd2 || keybutton == lblCd10 || keybutton == lblCd11/* || keybutton == lblCd12*/)
                     ktm = new KeycapTextIconModule(false, true, keybutton.Text);
 
                 else
@@ -859,20 +859,20 @@ namespace AcroniUI.Custom
 
                             if (Color != Color.FromArgb(26, 26, 26))
                             {
-                                if ((keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label) == lblCb14sExtensao || (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label) == lblCb14s)
+                                if (/*(keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label) == lblCb14sExtensao || */(keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label) == lblCc14s)
                                 {
-                                    lblCb14s.Parent.BackgroundImage = null;
-                                    lblCb14sExtensao.Parent.BackgroundImage = null;
+                                    lblCc14s.Parent.BackgroundImage = null;
+                                    //lblCb14sExtensao.Parent.BackgroundImage = null;
 
-                                    if ((keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label) == lblCb14s)
+                                    if ((keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label) == lblCc14s)
                                     {
-                                        lblCb14sExtensao.BackColor = Color;
-                                        lblCb14sExtensao.Parent.BackColor = Color.FromArgb(90, (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).BackColor);
+                                        //    lblCb14sExtensao.BackColor = Color;
+                                        //    lblCb14sExtensao.Parent.BackColor = Color.FromArgb(90, (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).BackColor);
                                     }
                                     else
                                     {
-                                        lblCb14s.BackColor = Color;
-                                        lblCb14s.Parent.BackColor = Color.FromArgb(90, (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).BackColor);
+                                        lblCc14s.BackColor = Color;
+                                        lblCc14s.Parent.BackColor = Color.FromArgb(90, (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).BackColor);
                                     }
                                 }
 
@@ -1182,7 +1182,7 @@ namespace AcroniUI.Custom
             keyboard.BackgroundImage = picBoxKeyboardBackground.Image;
             keyboard.BackgroundColor = picBoxKeyboardBackground.BackColor;
             keyboard.BackgroundModeSize = picBoxKeyboardBackground.SizeMode;
-            keyboard.KeyboardImage = Screenshot.TakeSnapshot(picBoxKeyboardBackground,pnlWithKeycaps) ;
+            keyboard.KeyboardImage = Screenshot.TakeSnapshot(picBoxKeyboardBackground, pnlWithKeycaps);
             string text = "";
             Color backcolor = Color.Empty;
             Color forecolor = Color.Empty;
@@ -1251,7 +1251,7 @@ namespace AcroniUI.Custom
         private void ExportToWebSite()
         {
             bool alreadyExistsThisKeyboard = false;
-            byte[]img = (Byte[])new ImageConverter().ConvertTo(Screenshot.TakeSnapshot(pnlWithKeycaps,picBoxKeyboardBackground) , typeof(Byte[]));
+            byte[] img = (Byte[])new ImageConverter().ConvertTo(Screenshot.TakeSnapshot(pnlWithKeycaps, picBoxKeyboardBackground), typeof(Byte[]));
 
             try
             {
@@ -1299,5 +1299,18 @@ namespace AcroniUI.Custom
 
         #endregion
 
+        private void btnRemoveIcons_Click(object sender, EventArgs e)
+        {
+            foreach (Control keycap in pnlWithKeycaps.Controls)
+            {
+                if (keycap is Panel && keycap.HasChildren)
+                {
+                    if (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] is Label)
+                    {
+                        (keycap.Controls[keycap.Name.Replace("fundo", "lbl")] as Label).Image = null ;
+                    }
+                }
+            }
+        }
     }
 }
